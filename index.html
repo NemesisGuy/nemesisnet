@@ -10,35 +10,63 @@
 <link rel="stylesheet" href="nemesis-mode.css">
 <link rel="stylesheet" href="aurora-mode.css">
 <style>
-:root {
-  --bg-color: #0a0e27;
+:root{
+  /* Brand tokens (NemesisNet) */
+  --nemesis-blue: #1E88E5; /* Nemesis Blue (primary) */
+  --nemesis-gray: #3B3B3B;
+  --nemesis-black: #1A1A1A;
+  --nemesis-white: #F4F4F4;
+  /* Ignite / Nemesis Orange spectrum */
+  --ignite-base: #FF6F3C; /* Ignite Orange Base */
+  --ignite-flare: #FF8A50; /* Solar Flare - bright hover/highlight */
+  --ignite-ember: #E65100; /* Molten Ember - deep contrast tone */
+  --ignite-hover: var(--ignite-flare);
+  --ignite-glow: rgba(255,138,80,0.12);
+  --nemesis-accent: var(--ignite-base); /* legacy token kept for compatibility */
+
+  /* Theme palettes reference brand tokens */
+  --bg-color: var(--nemesis-black);
   --bg-gradient: linear-gradient(135deg, #0a0e27 0%, #16213e 50%, #0f3460 100%);
-  --text-color: #e8eaf6;
-  --text-muted: #9fa8da;
-  --accent-color: #00e5ff;
-  --accent-glow: rgba(0, 229, 255, 0.4);
-  --secondary-accent: #7c4dff;
-  --secondary-glow: rgba(124, 77, 255, 0.3);
+  --text-color: var(--nemesis-white);
+  --text-muted: rgba(244,244,244,0.65);
+
+  --accent-color: var(--nemesis-blue);
+  --accent-hover: #2979FF; /* Hover/active blue for subtle depth */
+  --accent-glow: rgba(41,121,255,0.14);
+  /* Prefer blue for secondary accents to keep contrast and brand coherence */
+  --secondary-accent: rgba(41,121,255,1);
+  --secondary-glow: rgba(41,121,255,0.07);
+
+  --card: #0f0f10;
   --card-bg: rgba(255, 255, 255, 0.03);
-  --card-border: rgba(255, 255, 255, 0.08);
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --header-bg: linear-gradient(135deg, rgba(0, 229, 255, 0.15), rgba(124, 77, 255, 0.15));
+  --card-border: rgba(255, 255, 255, 0.06);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --header-bg: linear-gradient(135deg, rgba(41,121,255,0.04), rgba(255,111,60,0.03));
 }
-[data-theme="light"] {
-  --bg-color: #f8f9ff;
-  --bg-gradient: linear-gradient(135deg, #f8f9ff 0%, #e3f2fd 50%, #e1f5fe 100%);
-  --text-color: #1a237e;
-  --text-muted: #5c6bc0;
-  --accent-color: #0091ea;
-  --accent-glow: rgba(0, 145, 234, 0.3);
-  --secondary-accent: #651fff;
-  --secondary-glow: rgba(101, 31, 255, 0.2);
-  --card-bg: rgba(255, 255, 255, 0.7);
-  --card-border: rgba(0, 145, 234, 0.15);
-  --glass-bg: rgba(255, 255, 255, 0.6);
-  --glass-border: rgba(0, 145, 234, 0.2);
-  --header-bg: linear-gradient(135deg, rgba(0, 145, 234, 0.1), rgba(101, 31, 255, 0.1));
+
+[data-theme="light"]{
+  --bg-color: var(--nemesis-white);
+  --bg-gradient: linear-gradient(135deg, var(--nemesis-white) 0%, #f0f6ff 50%, #eaf6ff 100%);
+  --text-color: var(--nemesis-black);
+  --text-muted: rgba(26,26,26,0.6);
+
+  --accent-color: var(--nemesis-blue);
+  --accent-hover: #2979FF;
+  --accent-glow: rgba(41,121,255,0.08);
+  /* Use blue instead of bright green in light mode for readability */
+  --secondary-accent: rgba(41,121,255,1);
+  --secondary-glow: rgba(41,121,255,0.04);
+
+  --card: #FFFFFF;
+  --card-bg: rgba(26,26,26,0.04);
+  --card-border: rgba(26,26,26,0.06);
+  --glass-bg: rgba(255,255,255,0.9);
+  --glass-border: rgba(41,121,255,0.08);
+  --header-bg: linear-gradient(135deg, rgba(41,121,255,0.04), rgba(255,111,60,0.03));
+  /* Orange glow adjustments for light mode */
+  --ignite-glow: rgba(255,150,90,0.08);
+  --ignite-hover: #FF8A50;
 }
 
 * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
@@ -183,9 +211,9 @@ header p {
   text-align: center;
 }
 .hero-links a:hover { 
-  background: var(--accent-color); 
+  background: var(--accent-hover); 
   color:#0a0e27; 
-  border-color: var(--accent-color);
+  border-color: var(--accent-hover);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px var(--accent-glow);
 }
@@ -213,7 +241,25 @@ header p {
   box-shadow: 0 8px 24px var(--secondary-glow);
 }
 
-/* Sections with modern spacing and animations */
+  /* Ignite (orange) utility button */
+  .btn--ignite{ background: var(--ignite-base); color: #0a0e27; border: 1px solid transparent; padding:10px 18px; border-radius:10px; font-weight:600; transition: all 0.18s ease; }
+  .btn--ignite:hover{ background: var(--ignite-flare); box-shadow: 0 10px 30px var(--ignite-glow); transform: translateY(-2px); }
+
+  /* Brand guide button styles for base light/dark mode */
+  .btn{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--text-color);cursor:pointer;transition:transform .16s ease,box-shadow .18s ease,background .12s ease}
+  [data-theme='light'] .btn{background:rgba(0,0,0,0.02);border:1px solid rgba(0,0,0,0.1)}
+  .btn:hover{background:rgba(255,255,255,0.04);transform:translateY(-1px)}
+  .btn:active{transform:translateY(0)}
+  /* Disabled variant */
+  .btn[disabled], .btn--disabled{background:rgba(255,255,255,0.01);color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.03);cursor:not-allowed;box-shadow:none;opacity:0.9}
+  [data-theme='light'] .btn[disabled], [data-theme='light'] .btn--disabled{background:rgba(0,0,0,0.05);color:rgba(0,0,0,0.5);border:1px solid rgba(0,0,0,0.1);cursor:not-allowed;box-shadow:none;opacity:0.9}
+  /* Button variants for the guide */
+  .btn--primary{background:var(--nemesis-blue);color:#0a0e27;border:1px solid transparent;padding:10px 14px;border-radius:10px;font-weight:700}
+  .btn--primary:hover{background:#2979FF;box-shadow:0 12px 36px rgba(41,121,255,0.28);transform:translateY(-2px) scale(1.01)}
+  .btn--primary:active{transform:translateY(0)}
+  .btn--dual{background:linear-gradient(90deg,var(--nemesis-blue) 0%, var(--ignite-base) 100%);color:#0a0e27;border:0;padding:10px 14px;border-radius:10px;font-weight:700}
+  .btn--dual:hover{box-shadow:0 14px 48px rgba(41,121,255,0.28), 0 8px 30px rgba(255,138,80,0.22);transform:translateY(-2px) scale(1.01)}
+  .btn--dual:active{transform:translateY(0)}/* Sections with modern spacing and animations */
 section { 
   padding:60px 20px; 
   max-width:1280px; 
@@ -247,10 +293,8 @@ section h2 {
   gap:20px; 
 }
 .card { 
-  background: var(--card-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--card-border);
+  background: var(--card);
+  border: 1px solid rgba(41,121,255,0.07);
   border-radius:16px; 
   padding:20px; 
   text-align:left; 
@@ -259,27 +303,13 @@ section h2 {
   transform: translateY(20px);
   position:relative;
   overflow:hidden;
-}
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, var(--accent-glow) 0%, var(--secondary-glow) 100%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
-}
-.card:hover::before {
-  opacity: 0.1;
+  box-shadow: 0 8px 32px rgba(30,136,229,0.08), 0 2px 8px rgba(0,0,0,0.10);
 }
 .card.visible { opacity:1; transform: translateY(0); transition:0.6s cubic-bezier(0.4, 0, 0.2, 1); }
 .card:hover { 
   transform: translateY(-8px); 
-  border-color: var(--accent-color);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.3), 0 0 0 1px var(--accent-color);
+  border-color: var(--accent-hover);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.3), 0 0 0 1px var(--accent-hover);
 }
 
 .card img { 
@@ -377,9 +407,9 @@ footer {
   transition: all 0.3s ease;
 }
 .skill-tag:hover {
-  background: var(--accent-color);
+  background: var(--accent-hover);
   color: #0a0e27;
-  border-color: var(--accent-color);
+  border-color: var(--accent-hover);
   transform: translateY(-2px);
 }
 .stats-grid {
@@ -821,6 +851,7 @@ section#contact{
     <div class="nav-links">
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
+      <a href="https://brand.nemesisnet.co.za">Brand Guide</a>
       <a href="#contact">Contact</a>
       <button class="theme-toggle" id="aurora-toggle" onclick="toggleAuroraMode()" aria-label="Toggle Aurora Mode" title="Aurora Mode">
         <i class="fas fa-star"></i>
@@ -837,19 +868,20 @@ section#contact{
 
 <header>
   <div class="hero-top">
-    <img class="avatar" src="https://media.licdn.com/dms/image/v2/C4E03AQFJgtEQ-S0FgQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1583509386284?e=1762992000&v=beta&t=MjcfNyV8sN010Ynlzl6SIDwS5HczcaMaY7RuWx1EgXY" alt="Nemesis (profile)" width="96" height="96" loading="lazy">
+    <!-- Use brand logo instead of personal photo -->
+    <img class="avatar" src="assets/nemesis-logo-no-background.png" alt="NemesisNet logo" width="96" height="96" loading="lazy">
     <div>
       <h1>NemesisNet</h1>
       <p id="typing"></p>
     </div>
   </div>
   <div class="hero-content">
-    <p class="hero-intro">I'm <strong>Nemesis</strong>, a full-stack software developer and AI enthusiast with a passion for building robust, scalable, and high-performance applications.</p>
+  <p class="hero-intro"><strong>NemesisNet</strong> builds robust, scalable, and high-performance software solutions — from backend systems to AI‑powered applications. We partner with teams to deliver production-ready, maintainable, and secure products.</p>
     <div class="hero-links">
-      <a href="#projects"><i class="fas fa-briefcase"></i> My Work</a>
-      <a href="https://github.com/NemesisGuy" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="mailto:ReignBuckingham@gmail.com"><i class="fas fa-envelope"></i> Contact Me</a>
-      <a href="https://forkmyfolio.nemesisnet.co.za/nemesis/" target="_blank"><i class="fas fa-external-link-alt"></i> View Full Portfolio</a>
+  <a href="#projects"><i class="fas fa-briefcase"></i> Our Work</a>
+  <a href="https://github.com/NemesisGuy" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+  <a href="mailto:hello@nemesisnet.co.za"><i class="fas fa-envelope"></i> Contact Us</a>
+  <a href="https://forkmyfolio.nemesisnet.co.za/nemesis/" target="_blank"><i class="fas fa-external-link-alt"></i> Our Portfolio</a>
     </div>
   </div>
   <a href="#projects" class="chevron" aria-label="Scroll to projects">
@@ -897,13 +929,13 @@ section#contact{
 </section>
 
 <section id="about">
-  <h2><i class="fas fa-user"></i> About Me</h2>
+  <h2><i class="fas fa-briefcase"></i> About NemesisNet</h2>
   <div class="about-content">
     <div class="about-text">
-              <p>I specialize in Spring Boot APIs, Vue.js frontends, and AI-driven tools, delivering solutions that are production-ready from day one.</p>
+      <p>NemesisNet delivers end-to-end software engineering services: scalable Spring Boot APIs, modern Vue.js frontends, and AI-driven tooling designed for production.</p>
 
-      <p>Over the years, I've contributed to open-source projects, built cutting-edge TTS engines, portfolio management systems, and full-stack web applications. My approach emphasizes clean architecture, maintainable code, and fast iteration.</p>
-      <p>I thrive in environments that challenge me to innovate, optimize, and push the boundaries of software developmentwhether it's designing scalable backends, crafting intuitive frontends, or integrating AI models seamlessly.</p>
+      <p>We partner with businesses to ship maintainable, secure, and high-performance systems. Our work includes text-to-speech models, full-stack product platforms, and developer tooling focused on quality and velocity.</p>
+      <p>Our approach emphasizes clean architecture, automated testing, and continuous delivery so clients get production-ready results quickly and reliably.</p>
     </div>
     
     <div class="about-highlights">
