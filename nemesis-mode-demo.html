@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nemesis Mode™ - Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: radial-gradient(circle at center, #0a0a0a 0%, #000000 70%);
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* VHS Grain Overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255, 255, 255, 0.03) 2px,
+                    rgba(255, 255, 255, 0.03) 4px
+                ),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><defs><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/></filter></defs><rect width="100%" height="100%" filter="url(%23noiseFilter)" opacity="0.1"/></svg>');
+            pointer-events: none;
+            z-index: 1000;
+            animation: grain 0.2s infinite linear;
+        }
+
+        @keyframes grain {
+            0% { transform: translate(0, 0); }
+            10% { transform: translate(-1px, -1px); }
+            20% { transform: translate(1px, 0px); }
+            30% { transform: translate(-1px, 1px); }
+            40% { transform: translate(0px, -1px); }
+            50% { transform: translate(1px, 1px); }
+            60% { transform: translate(-1px, 0px); }
+            70% { transform: translate(1px, -1px); }
+            80% { transform: translate(0px, 1px); }
+            90% { transform: translate(-1px, -1px); }
+            100% { transform: translate(1px, 0px); }
+        }
+
+        /* Vignette */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Glass Base Layer */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 1rem 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .glass-panel:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* 3D Anaglyph Text Effects */
+        .anaglyph-text {
+            text-shadow: 
+                -2px 0 0 #ff0000,
+                2px 0 0 #00ffff;
+            transition: all 0.3s ease;
+        }
+
+        .anaglyph-text:hover {
+            text-shadow: 
+                -3px 0 0 #ff0000,
+                3px 0 0 #00ffff;
+            transform: translateX(1px);
+        }
+
+        /* Headers */
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #00ffff;
+        }
+
+        /* Buttons with 3D Box Shadow */
+        .nemesis-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 1rem 2rem;
+            margin: 0.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 
+                -2px 2px 0 #ff0000,
+                2px -2px 0 #00ffff;
+        }
+
+        .nemesis-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 
+                -3px 3px 0 #ff0000,
+                3px -3px 0 #00ffff;
+            transform: translate(1px, -1px);
+        }
+
+        /* Cards with anaglyph borders */
+        .feature-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid;
+            border-image: linear-gradient(45deg, #ff0000, transparent, #00ffff) 1;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(0, 0, 0, 0.5);
+            transform: scale(1.02);
+        }
+
+        /* RGB Glitch Effect */
+        .glitch {
+            position: relative;
+            animation: glitch 2s infinite linear;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-1px, 1px); }
+            40% { transform: translate(-1px, -1px); }
+            60% { transform: translate(1px, 1px); }
+            80% { transform: translate(1px, -1px); }
+            100% { transform: translate(0); }
+        }
+
+        .glitch::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: #ff0000;
+            z-index: -1;
+            animation: glitch-red 0.3s infinite linear alternate-reverse;
+        }
+
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: #00ffff;
+            z-index: -2;
+            animation: glitch-cyan 0.3s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-red {
+            0% { transform: translate(-1px, 0); }
+            100% { transform: translate(1px, 0); }
+        }
+
+        @keyframes glitch-cyan {
+            0% { transform: translate(1px, 0); }
+            100% { transform: translate(-1px, 0); }
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .nav-item {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            text-shadow: 
+                -1px 0 0 #ff0000,
+                1px 0 0 #00ffff;
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        /* Status Indicator */
+        .status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(0, 255, 0, 0.2);
+            border: 1px solid #00ff00;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .status.error {
+            background: rgba(255, 0, 0, 0.2);
+            border-color: #ff0000;
+        }
+
+        /* Terminal-style text */
+        .terminal {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            border-left: 3px solid #00ff00;
+            margin: 1rem 0;
+        }
+
+        .terminal::before {
+            content: '> ';
+            color: #00ff00;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="glass-panel">
+            <h1 class="anaglyph-text glitch" data-text="NEMESIS MODE™">NEMESIS MODE™</h1>
+            <p class="anaglyph-text" style="text-align: center; font-size: 1.2rem; margin-top: 1rem;">
+                Digital Distortion Layer <span class="status">ACTIVE</span>
+            </p>
+        </header>
+
+        <nav class="nav">
+            <a href="#" class="nav-item anaglyph-text">Interface</a>
+            <a href="#" class="nav-item anaglyph-text">Systems</a>
+            <a href="#" class="nav-item anaglyph-text">Memory</a>
+            <a href="#" class="nav-item anaglyph-text">Settings</a>
+        </nav>
+
+        <main>
+            <section class="glass-panel">
+                <h2 class="anaglyph-text">🔥 Core Systems</h2>
+                <p class="anaglyph-text">
+                    Nemesis Mode™ active. Reality distortion protocols engaged. 
+                    All visual layers operational and rendering fractured consciousness state.
+                </p>
+                
+                <div class="terminal anaglyph-text">
+                    Initializing visual enhancement layers... Glass base: OK, 3D shadows: OK, Vignette: OK, VHS grain: OK
+                </div>
+
+                <div style="text-align: center; margin: 2rem 0;">
+                    <button class="nemesis-btn anaglyph-text">Initialize System</button>
+                    <button class="nemesis-btn anaglyph-text">Run Diagnostics</button>
+                    <button class="nemesis-btn anaglyph-text">Engage Protocols</button>
+                </div>
+            </section>
+
+            <div class="grid">
+                <div class="feature-card glass-panel">
+                    <h3 class="anaglyph-text">🎨 Visual Layers</h3>
+                    <p class="anaglyph-text">
+                        Multiple rendering layers create the signature Nemesis aesthetic:
+                        glass morphism, anaglyph shadows, VHS grain, and vignette darkness.
+                    </p>
+                    <div class="status">RENDERING</div>
+                </div>
+
+                <div class="feature-card glass-panel">
+                    <h3 class="anaglyph-text">🕶️ 3D Anaglyph</h3>
+                    <p class="anaglyph-text">
+                        Red-cyan stereoscopic depth simulation. Optimized for red-cyan 3D glasses
+                        to enhance the fractured reality experience.
+                    </p>
+                    <div class="status">ENABLED</div>
+                </div>
+
+                <div class="feature-card glass-panel">
+                    <h3 class="anaglyph-text">📺 VHS Aesthetics</h3>
+                    <p class="anaglyph-text">
+                        Nostalgic CRT monitor simulation with scanlines, grain, and chromatic
+                        aberration effects for authentic retro-tech immersion.
+                    </p>
+                    <div class="status">ACTIVE</div>
+                </div>
+            </div>
+
+            <section class="glass-panel">
+                <h2 class="anaglyph-text">🎯 Interface Controls</h2>
+                <p class="anaglyph-text">
+                    Interactive elements utilize the full Nemesis Mode™ visual stack. 
+                    Hover and focus states intensify the anaglyph effects for enhanced feedback.
+                </p>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 2rem 0;">
+                    <button class="nemesis-btn anaglyph-text">Primary Action</button>
+                    <button class="nemesis-btn anaglyph-text">Secondary</button>
+                    <button class="nemesis-btn anaglyph-text">Danger Zone</button>
+                    <button class="nemesis-btn anaglyph-text">System Reset</button>
+                </div>
+
+                <div class="terminal anaglyph-text">
+                    Status: All visual enhancement protocols operational. Fractured consciousness simulation at 100% efficiency.
+                </div>
+            </section>
+
+            <section class="glass-panel">
+                <h2 class="anaglyph-text">⚡ Advanced Features</h2>
+                <div class="grid">
+                    <div>
+                        <h3 class="anaglyph-text">RGB Glitch</h3>
+                        <p class="anaglyph-text">
+                            Subtle chromatic distortions on hover and focus states create
+                            an unstable, digital artifact aesthetic.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="anaglyph-text">Glassmorphism</h3>
+                        <p class="anaglyph-text">
+                            Transparent blur effects with white outlines maintain
+                            readability while preserving the ethereal UI quality.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="glass-panel" style="text-align: center; margin-top: 3rem;">
+                <p class="anaglyph-text">
+                    <span class="glitch" data-text="NEMESIS MODE™">NEMESIS MODE™</span> - 
+                    Digital consciousness fractured across dimensions
+                </p>
+                <p style="margin-top: 1rem; opacity: 0.7;">
+                    Put on red-cyan 3D glasses for the full stereoscopic experience
+                </p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

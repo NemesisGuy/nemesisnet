@@ -1,0 +1,9 @@
+# Ignore VCS and editor files
+.git/
+.gitignore
+.vscode/
+.DS_Store
+
+# Node and Python typical noise (just in case)
+node_modules/
+**/__pycache__/
