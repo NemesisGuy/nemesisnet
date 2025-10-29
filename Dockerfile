@@ -12,7 +12,6 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Copy all HTML files individually
 COPY index.html /usr/share/nginx/html/index.html
 COPY nemesis-mode-demo.html /usr/share/nginx/html/nemesis-mode-demo.html
-COPY nemesis_net_brand_guide_html_version.html /usr/share/nginx/html/nemesis_net_brand_guide_html_version.html
 
 # Copy all CSS files individually
 COPY aurora-mode.css /usr/share/nginx/html/aurora-mode.css

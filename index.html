@@ -30,32 +30,77 @@
 <link rel="stylesheet" href="nemesis-mode.css">
 <link rel="stylesheet" href="aurora-mode.css">
 <style>
+.avatar-wrap{
+  width:350px;
+  height:350px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden; /* ensure a clean circular mask */
+  background: rgba(255,255,255,0.03);
+  border:4px solid rgba(255,255,255,0.10);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.06), 0 0 60px var(--accent-glow);
+  transition: transform 0.36s cubic-bezier(0.4,0,0.2,1), box-shadow 0.36s ease;
+}
+.avatar-wrap:hover{ transform: scale(1.03); box-shadow: 0 16px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.12), 0 0 80px var(--accent-glow); }
+.avatar-img{ max-width:86%; max-height:86%; object-fit:contain; display:block; }
+[data-theme='light'] .avatar-wrap{ background: rgba(0,0,0,0.04); border:4px solid rgba(0,0,0,0.06); }
+
+/* Dark-mode explicit pop-out: add a soft halo, stronger shadow and hover lift
+   so the logo visually "pops out" in dark mode similar to the light-mode effect. */
+html:not([data-theme="light"]) .avatar-wrap {
+  /* subtle luminous surface to lift the circular mark off the deep background */
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 4px solid rgba(255,255,255,0.08);
+  position: relative;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.06), 0 0 90px var(--accent-glow);
+  transition: transform 0.36s cubic-bezier(0.4,0,0.2,1), box-shadow 0.36s ease;
+}
+html:not([data-theme="light"]) .avatar-wrap::after{
+  content: '';
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  pointer-events: none;
+  /* faint rim + accent halo to suggest depth */
+  box-shadow: 0 24px 90px rgba(0,0,0,0.65), 0 0 60px rgba(41,121,255,0.05), inset 0 1px 0 rgba(255,255,255,0.03);
+  transition: box-shadow 0.36s ease, opacity 0.36s ease;
+}
+html:not([data-theme="light"]) .avatar-wrap:hover{
+  transform: scale(1.04);
+  box-shadow: 0 26px 90px rgba(0,0,0,0.72), 0 0 0 1px rgba(255,255,255,0.12), 0 0 120px var(--accent-glow);
+}
+html:not([data-theme="light"]) .avatar-wrap:hover::after{
+  box-shadow: 0 30px 120px rgba(0,0,0,0.75), 0 0 120px rgba(41,121,255,0.10), inset 0 2px 0 rgba(255,255,255,0.04);
+}
 :root{
   /* Brand tokens (NemesisNet) */
-  --nemesis-blue: #1E88E5; /* Nemesis Blue (primary) */
-  --nemesis-gray: #3B3B3B;
-  --nemesis-black: #1A1A1A;
-  --nemesis-white: #F4F4F4;
-  /* Ignite / Nemesis Orange spectrum */
-  --ignite-base: #FF6F3C; /* Ignite Orange Base */
-  --ignite-flare: #FF8A50; /* Solar Flare - bright hover/highlight */
-  --ignite-ember: #E65100; /* Molten Ember - deep contrast tone */
-  --ignite-hover: var(--ignite-flare);
-  --ignite-glow: rgba(255,138,80,0.12);
-  --nemesis-accent: var(--ignite-base); /* legacy token kept for compatibility */
+  --nemesis-blue: #1E88E5;
+  --nemesis-blue-bright: #2979FF;
+  --nemesis-blue-deep: #0f4c81;
 
-  /* Theme palettes reference brand tokens */
+  /* Ignite / Nemesis Orange */
+  --ignite-base: #FF6F3C;
+  --ignite-flare: #FF8A50;
+  --ignite-ember: #E65100;
+  --ignite-glow: rgba(255,138,80,0.12);
+  --ignite-hover: var(--ignite-flare);
+
+  --nemesis-gray: #3B3B3B;
+  --nemesis-black: #0a0e27;
+  --nemesis-white: #F4F4F4;
+
+  --accent-color: var(--nemesis-blue);
+  --accent-hover: var(--nemesis-blue-bright);
+  --accent-glow: rgba(41,121,255,0.14);
+  --secondary-accent: rgba(41,121,255,1);
+  --secondary-glow: rgba(41,121,255,0.07);
+
   --bg-color: var(--nemesis-black);
   --bg-gradient: linear-gradient(135deg, #0a0e27 0%, #16213e 50%, #0f3460 100%);
   --text-color: var(--nemesis-white);
   --text-muted: rgba(244,244,244,0.65);
-
-  --accent-color: var(--nemesis-blue);
-  --accent-hover: #2979FF; /* Hover/active blue for subtle depth */
-  --accent-glow: rgba(41,121,255,0.14);
-  /* Prefer blue for secondary accents to keep contrast and brand coherence */
-  --secondary-accent: rgba(41,121,255,1);
-  --secondary-glow: rgba(41,121,255,0.07);
 
   --card: #0f0f10;
   --card-bg: rgba(255, 255, 255, 0.03);
@@ -154,19 +199,7 @@ header::before {
   z-index: 1;
 }
 
-.avatar { 
-  width:350px; 
-  height:350px; 
-  border-radius:50%; 
-  object-fit:cover; 
-  border:4px solid rgba(255,255,255,0.2); 
-  box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.1), 0 0 60px var(--accent-glow);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.avatar:hover {
-  transform: scale(1.05);
-  box-shadow: 0 16px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.2), 0 0 80px var(--accent-glow);
-}
+
 
 header h1 { 
   font-size:3.5rem; 
@@ -312,24 +345,28 @@ section h2 {
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); 
   gap:20px; 
 }
-.card { 
-  background: var(--card);
-  border: 1px solid rgba(41,121,255,0.07);
-  border-radius:16px; 
-  padding:20px; 
-  text-align:left; 
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
-  opacity:0; 
+.card {
+  /* Match the contact form's glass surface so cards read as the same component family */
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.36s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.36s ease, border-color 0.28s ease;
+  opacity: 0;
   transform: translateY(20px);
-  position:relative;
-  overflow:hidden;
-  box-shadow: 0 8px 32px rgba(30,136,229,0.08), 0 2px 8px rgba(0,0,0,0.10);
+  position: relative;
+  overflow: hidden;
+  color: var(--text-color);
+  box-shadow: 0 8px 30px rgba(2,6,23,0.36), 0 2px 8px rgba(0,0,0,0.12);
 }
-.card.visible { opacity:1; transform: translateY(0); transition:0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-.card:hover { 
-  transform: translateY(-8px); 
+.card.visible { opacity:1; transform: translateY(0); transition:0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+.card:hover {
+  transform: translateY(-6px);
   border-color: var(--accent-hover);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.3), 0 0 0 1px var(--accent-hover);
+  box-shadow: 0 20px 70px rgba(2,6,23,0.55), 0 8px 30px rgba(0,0,0,0.4), 0 0 60px var(--accent-glow);
 }
 
 .card img { 
@@ -344,6 +381,37 @@ section h2 {
 }
 .card:hover img {
   transform: scale(1.03);
+}
+
+/* Dark-mode card adjustments: make cards read as part of the same glassy, elevated surface
+   used across the site. Adds a gentle gradient background, lighter edge, deeper shadow,
+   and a subtle image filter to improve contrast on dark surfaces. */
+/* Ensure dark and light themes both render the card as the same glass surface
+   but give the dark theme a slightly deeper shadow for contrast. */
+html:not([data-theme="light"]) .card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 14px 48px rgba(2,6,23,0.55), 0 6px 22px rgba(0,0,0,0.55), 0 0 40px rgba(41,121,255,0.02);
+}
+html:not([data-theme="light"]) .card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 28px 90px rgba(2,6,23,0.75), 0 8px 40px rgba(0,0,0,0.7), 0 0 80px var(--accent-glow);
+  border-color: rgba(41,121,255,0.12);
+}
+html:not([data-theme="light"]) .card img{
+  filter: saturate(1.02) contrast(1.03) brightness(0.98);
+  transition: transform 0.36s ease, filter 0.32s ease;
+}
+html:not([data-theme="light"]) .card:hover img{
+  transform: scale(1.03);
+  filter: saturate(1.06) contrast(1.05) brightness(1);
+}
+
+/* Slightly tighten grid gaps on small screens to keep cards visually balanced */
+@media (max-width: 768px) {
+  .projects-grid { gap: 14px; }
 }
 
 .card h3 { 
@@ -505,7 +573,7 @@ footer {
     font-size: 0.95rem; 
   }
 
-  .avatar { width: 120px; height: 120px; }
+  .avatar-wrap { width: 120px; height: 120px; }
 
   section h2 { font-size: 2rem; margin-bottom: 32px; }
   section { padding: 40px 16px; }
@@ -801,6 +869,22 @@ section#contact{
   box-shadow: 0 0 0 3px var(--accent-glow);
   background: rgba(0,0,0,0.3);
 }
+
+/* Light theme: make form fields use a light glass surface that matches the
+   rest of the site's light-mode tokens (white card with subtle border). */
+[data-theme="light"] .contact-form input,
+[data-theme="light"] .contact-form textarea {
+  background: rgba(255,255,255,0.96);
+  border: 1px solid rgba(10,14,39,0.06);
+  color: var(--text-color);
+  box-shadow: none;
+}
+[data-theme="light"] .contact-form input:focus,
+[data-theme="light"] .contact-form textarea:focus {
+  background: rgba(255,255,255,1);
+  border-color: var(--accent-hover);
+  box-shadow: 0 0 0 4px rgba(41,121,255,0.06);
+}
 .contact-form textarea {
   resize:vertical;
   min-height:120px;
@@ -855,6 +939,35 @@ section#contact{
   /* Hide chevron on mobile */
   .chevron { display: none !important; }
 }
+
+/* Mobile nav overlay and stronger open-state styles */
+/* overlay behind the mobile menu; slightly darker to improve contrast */
+#nav-overlay{ display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:9990; opacity:0; transition:opacity .18s ease; }
+#nav-overlay.visible{ display:block; opacity:1; }
+
+@media (max-width: 768px) {
+  /* When mobile nav is open, prefer a translucent glass look (less opaque) */
+  nav.open .nav-links {
+    display:flex !important;
+    /* Much stronger frosted panel: high alpha tint + heavier blur + deeper shadow */
+    background: rgba(10,14,39,0.88); /* near-opaque dark surface for legibility */
+    backdrop-filter: blur(24px) saturate(160%);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 24px 90px rgba(0,0,0,0.75), inset 0 1px 0 rgba(255,255,255,0.02);
+    padding: 16px;
+    border-radius: 14px;
+  }
+  [data-theme='light'] nav.open .nav-links {
+    background: rgba(255,255,255,0.98); /* near-opaque light surface */
+    backdrop-filter: blur(22px) saturate(120%);
+    -webkit-backdrop-filter: blur(22px) saturate(120%);
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.6);
+    padding: 16px;
+    border-radius: 14px;
+  }
+}
 </style>
   <script type="application/ld+json">
   {
@@ -900,10 +1013,15 @@ section#contact{
   </div>
 </nav>
 
+<!-- Mobile navigation overlay (clicking it will close the menu) -->
+<div id="nav-overlay" tabindex="-1" aria-hidden="true"></div>
+
 <header>
   <div class="hero-top">
-  <!-- Use brand logo instead of personal photo -->
-  <img class="avatar" src="assets/Nemesis_Logo_Icon.png" alt="NemesisNet logo" width="96" height="96" loading="lazy">
+    <!-- Use brand logo instead of personal photo -->
+    <div class="avatar-wrap" aria-hidden="false">
+      <img class="avatar-img" src="assets/Nemesis_Logo_Icon.png" alt="NemesisNet logo" loading="lazy">
+    </div>
     <div>
       <h1>NemesisNet</h1>
       <p id="typing"></p>
@@ -1161,25 +1279,63 @@ window.addEventListener('DOMContentLoaded', setNavHeightVar);
 window.addEventListener('resize', setNavHeightVar);
 
 // Mobile nav toggle
-function toggleNav(){
+// Mobile nav control helpers: open, close, toggle and overlay handling
+function openNav(){
   const nav = document.getElementById('navbar');
   const btn = document.getElementById('nav-toggle');
-  const expanded = btn.getAttribute('aria-expanded') === 'true';
-  btn.setAttribute('aria-expanded', (!expanded).toString());
-  nav.classList.toggle('open');
+  if(!nav) return;
+  nav.classList.add('open');
+  if(btn) btn.setAttribute('aria-expanded','true');
+  const overlay = document.getElementById('nav-overlay');
+  if(overlay){ overlay.style.display = 'block'; setTimeout(()=> overlay.classList.add('visible'),10); }
 }
-// Close mobile menu when a nav link is clicked
+
+function closeNav(){
+  const nav = document.getElementById('navbar');
+  const btn = document.getElementById('nav-toggle');
+  if(!nav) return;
+  nav.classList.remove('open');
+  if(btn) btn.setAttribute('aria-expanded','false');
+  const overlay = document.getElementById('nav-overlay');
+  if(overlay){ overlay.classList.remove('visible'); setTimeout(()=> overlay.style.display = 'none', 220); }
+}
+
+function toggleNav(){
+  const nav = document.getElementById('navbar');
+  if(!nav) return;
+  if(nav.classList.contains('open')) closeNav(); else openNav();
+}
+
+// Close mobile menu when a nav link is clicked, and ensure overlay hides too
 window.addEventListener('DOMContentLoaded', () => {
   const nav = document.getElementById('navbar');
   const btn = document.getElementById('nav-toggle');
+  const overlay = document.getElementById('nav-overlay');
+
+  // Close when clicking any link inside the mobile nav
   document.querySelectorAll('.nav-links a').forEach(a => {
     a.addEventListener('click', () => {
-      if(nav.classList.contains('open')){
-        nav.classList.remove('open');
-        if(btn) btn.setAttribute('aria-expanded','false');
+      if(nav && nav.classList.contains('open')){
+        closeNav();
       }
     });
   });
+
+  // Close when clicking the logo (nav-brand) on mobile as well
+  const navLogo = document.querySelector('.nav-logo');
+  if(navLogo){
+    navLogo.addEventListener('click', (e) => {
+      if(nav && nav.classList.contains('open')){
+        // allow default navigation but ensure menu collapses
+        closeNav();
+      }
+    });
+  }
+
+  // Clicking the overlay closes the mobile nav
+  if(overlay){
+    overlay.addEventListener('click', (e)=>{ e.preventDefault(); closeNav(); });
+  }
 });
 
 // Typing animation
@@ -1188,23 +1344,45 @@ const words = ["Software Engineering", "AI Solutions", "Spring Boot Services", "
 let wordIndex = 0;
 let charIndex = 0;
 let typingForward = true;
+// base speed (ms) — original was 70ms; slow down by ~10%
+const baseTypingSpeed = 70;
+const typingSpeed = Math.max(20, Math.round(baseTypingSpeed * 1.10)); // ~77ms
+const pauseAfterComplete = 1000; // 1s pause after finishing a word
+const pauseBetweenWords = 250; // short pause before next word cycle
+
 function type() {
   const currentWord = words[wordIndex];
+
   if (typingForward) {
+    // add one character
     typingElement.textContent = currentWord.slice(0, charIndex + 1);
     charIndex++;
-    if(charIndex === currentWord.length) typingForward = false;
+
+    // when word is complete, pause for a moment before deleting
+    if (charIndex === currentWord.length) {
+      typingForward = false;
+      setTimeout(type, pauseAfterComplete);
+      return;
+    }
   } else {
+    // remove one character
     typingElement.textContent = currentWord.slice(0, charIndex - 1);
     charIndex--;
-    if(charIndex === 0){
+
+    // when fully erased, advance to next word
+    if (charIndex === 0) {
       typingForward = true;
       wordIndex = (wordIndex + 1) % words.length;
+      setTimeout(type, pauseBetweenWords);
+      return;
     }
   }
-  // faster typing speed for hero text
-  setTimeout(type, 70);
+
+  // schedule next tick
+  setTimeout(type, typingSpeed);
 }
+
+// start the loop
 type();
 
 // Fade-in scroll animations using Intersection Observer
