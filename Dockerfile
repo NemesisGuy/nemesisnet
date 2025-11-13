@@ -17,6 +17,11 @@ COPY nemesis-mode-demo.html /usr/share/nginx/html/nemesis-mode-demo.html
 COPY aurora-mode.css /usr/share/nginx/html/aurora-mode.css
 COPY nemesis-mode.css /usr/share/nginx/html/nemesis-mode.css
 
+# Copy additional root-level assets
+COPY robots.txt /usr/share/nginx/html/robots.txt
+COPY sitemap.xml /usr/share/nginx/html/sitemap.xml
+COPY README.md /usr/share/nginx/html/README.md
+
 # Copy the assets folder recursively
 COPY assets/ /usr/share/nginx/html/assets/
 
