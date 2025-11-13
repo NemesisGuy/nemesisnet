@@ -18,12 +18,31 @@
   <meta property="og:url" content="https://nemesisnet.co.za/">
   <meta property="og:image" content="https://nemesisnet.co.za/assets/Nemesis_Logo_Icon.png">
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@NemesisGuy">
+  <meta name="twitter:creator" content="@NemesisGuy">
+  <meta name="twitter:title" content="NemesisNet — Software Engineering & AI Solutions">
+  <meta name="twitter:description" content="Enterprise-grade software engineering, AI solutions, and production-ready systems from NemesisNet.">
+  <meta name="twitter:image" content="https://nemesisnet.co.za/assets/Nemesis_Logo_Icon.png">
+  <meta name="twitter:image:alt" content="NemesisNet logo">
+  <meta name="twitter:image:width" content="1200">
+  <meta name="twitter:image:height" content="630">
+
   <link rel="icon" type="image/x-icon" href="https://nemesisnet.co.za/assets/Nemesis_Logo_Icon.ico">
   <link rel="icon" type="image/png" href="https://nemesisnet.co.za/assets/Nemesis_Logo_Icon.png">
   <link rel="shortcut icon" href="https://nemesisnet.co.za/assets/Nemesis_Logo_Icon.ico">
   <meta name="theme-color" content="#0a0a0a">
   <meta property="og:locale" content="en_ZA">
   <link rel="apple-touch-icon" sizes="180x180" href="https://nemesisnet.co.za/assets/Nemesis_Logo_Icon.png">
+  
+  <!-- Performance: preconnect to Google Fonts and preload critical assets -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap">
+    <link rel="preload" as="style" href="nemesis-mode.css">
+    <link rel="preload" as="style" href="aurora-mode.css">
+    <link rel="preload" as="image" href="assets/Nemesis_Logo_Icon.ico">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -80,12 +99,12 @@ html:not([data-theme="light"]) .avatar-wrap:hover::after{
   --nemesis-blue-bright: #2979FF;
   --nemesis-blue-deep: #0f4c81;
 
-  /* Ignite / Nemesis Orange */
-  --ignite-base: #FF6F3C;
-  --ignite-flare: #FF8A50;
-  --ignite-ember: #E65100;
-  --ignite-glow: rgba(255,138,80,0.12);
-  --ignite-hover: var(--ignite-flare);
+  /* Aurora Teal (secondary accent replacing orange) */
+  --aurora-base: #00C2A8; /* primary teal */
+  --aurora-flare: #33D6B7; /* lighter / hover */
+  --aurora-ember: #008B6A; /* deeper tone */
+  --aurora-glow: rgba(0,194,168,0.12);
+  --aurora-hover: var(--aurora-flare);
 
   --nemesis-gray: #3B3B3B;
   --nemesis-black: #0a0e27;
@@ -129,9 +148,9 @@ html:not([data-theme="light"]) .avatar-wrap:hover::after{
   --glass-bg: rgba(255,255,255,0.9);
   --glass-border: rgba(41,121,255,0.08);
   --header-bg: linear-gradient(135deg, rgba(41,121,255,0.04), rgba(255,111,60,0.03));
-  /* Orange glow adjustments for light mode */
-  --ignite-glow: rgba(255,150,90,0.08);
-  --ignite-hover: #FF8A50;
+  /* Aurora teal adjustments for light mode */
+  --aurora-glow: rgba(51,214,183,0.08);
+  --aurora-hover: #33D6B7;
 }
 
 * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
@@ -294,9 +313,9 @@ header p {
   box-shadow: 0 8px 24px var(--secondary-glow);
 }
 
-  /* Ignite (orange) utility button */
-  .btn--ignite{ background: var(--ignite-base); color: #0a0e27; border: 1px solid transparent; padding:10px 18px; border-radius:10px; font-weight:600; transition: all 0.18s ease; }
-  .btn--ignite:hover{ background: var(--ignite-flare); box-shadow: 0 10px 30px var(--ignite-glow); transform: translateY(-2px); }
+  /* Aurora (teal) utility button */
+  .btn--ignite{ background: var(--aurora-base); color: #0a0e27; border: 1px solid transparent; padding:10px 18px; border-radius:10px; font-weight:600; transition: all 0.18s ease; }
+  .btn--ignite:hover{ background: var(--aurora-flare); box-shadow: 0 10px 30px var(--aurora-glow); transform: translateY(-2px); }
 
   /* Brand guide button styles for base light/dark mode */
   .btn{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--text-color);cursor:pointer;transition:transform .16s ease,box-shadow .18s ease,background .12s ease}
@@ -310,8 +329,8 @@ header p {
   .btn--primary{background:var(--nemesis-blue);color:#0a0e27;border:1px solid transparent;padding:10px 14px;border-radius:10px;font-weight:700}
   .btn--primary:hover{background:#2979FF;box-shadow:0 12px 36px rgba(41,121,255,0.28);transform:translateY(-2px) scale(1.01)}
   .btn--primary:active{transform:translateY(0)}
-  .btn--dual{background:linear-gradient(90deg,var(--nemesis-blue) 0%, var(--ignite-base) 100%);color:#0a0e27;border:0;padding:10px 14px;border-radius:10px;font-weight:700}
-  .btn--dual:hover{box-shadow:0 14px 48px rgba(41,121,255,0.28), 0 8px 30px rgba(255,138,80,0.22);transform:translateY(-2px) scale(1.01)}
+  .btn--dual{background:linear-gradient(90deg,var(--nemesis-blue) 0%, var(--aurora-base) 100%);color:#0a0e27;border:0;padding:10px 14px;border-radius:10px;font-weight:700}
+  .btn--dual:hover{box-shadow:0 14px 48px rgba(41,121,255,0.28), 0 8px 30px rgba(0,194,168,0.22);transform:translateY(-2px) scale(1.01)}
   .btn--dual:active{transform:translateY(0)}/* Sections with modern spacing and animations */
 section { 
   padding:60px 20px; 
@@ -630,8 +649,128 @@ nav.scrolled {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 [data-theme="light"] nav.scrolled {
-  background: rgba(248, 249, 255, 0.95);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: rgba(248, 249, 255, 0.92);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Ensure custom theme toggles (aurora/nemesis) do not force a dark nav in light mode.
+   Some external theme CSS may set global surfaces which can conflict with our
+   light-mode navigation; these overrides keep the nav readable when data-theme
+   is explicitly set to light while other theme attributes are present. */
+[data-theme="light"][data-aurora] nav,
+[data-theme="light"][data-nemesis] nav,
+[data-theme="light"][data-aurora] nav.scrolled,
+[data-theme="light"][data-nemesis] nav.scrolled {
+  background: rgba(248,249,255,0.95) !important;
+  color: var(--text-color) !important;
+  border-bottom-color: var(--glass-border) !important;
+}
+
+[data-theme="light"][data-aurora] .nav-links a,
+[data-theme="light"][data-nemesis] .nav-links a,
+[data-theme="light"][data-aurora] .nav-logo,
+[data-theme="light"][data-nemesis] .nav-logo {
+  color: var(--text-color) !important;
+}
+
+/* Ensure the active theme button still shows its active tint without inverting
+   the surrounding nav surface in light mode. */
+[data-theme="light"][data-aurora] .theme-toggle.active,
+[data-theme="light"][data-nemesis] .theme-toggle.active {
+  background: var(--accent-color);
+  color: #0a0e27;
+  box-shadow: 0 8px 28px rgba(41,121,255,0.08);
+  border-color: var(--accent-color);
+}
+
+/* Light-mode navbar visual treatment: glass gradient, faint accent rim and
+   a soft glow to tie into the brand accent colors. Keeps text dark and
+   legible while adding a subtle personality that complements the light theme. */
+[data-theme="light"] nav {
+  /* increased translucency: reveal more page depth while keeping legibility */
+  background: linear-gradient(180deg, rgba(255,255,255,0.84) 0%, rgba(245,248,255,0.80) 100%);
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  border-bottom: 1px solid rgba(10,14,39,0.04);
+  box-shadow: 0 6px 28px rgba(10,14,39,0.04), 0 0 18px rgba(41,121,255,0.015) inset;
+  color: var(--text-color);
+}
+
+[data-theme="light"] nav::after{
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -6px;
+  height: 8px;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(41,121,255,0.035), rgba(255,111,60,0.02));
+  filter: blur(8px);
+  opacity: 0.6;
+}
+
+html[data-theme="light"][data-nemesis="on"] {
+  /* Override text color to keep Nemesis light text when both modes are active */
+  --text-color: #e6f7ff;
+}
+
+html[data-theme="light"][data-nemesis="on"] nav {
+  /* Override light nav to keep Nemesis dark theme when both are active */
+  background: linear-gradient(180deg, rgba(5,10,24,0.9) 0%, rgba(5,10,24,0.85) 100%) !important;
+  backdrop-filter: blur(14px) saturate(120%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(120%) !important;
+  border-bottom: 1px solid rgba(0,255,255,0.18) !important;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.3), 0 0 18px rgba(0,255,255,0.1) inset !important;
+}
+
+html[data-theme="light"][data-nemesis="on"] nav .theme-toggle.active {
+  /* Ensure the active Nemesis button uses dark text on cyan for contrast */
+  color: #0a0e27 !important;
+  background: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 8px 28px rgba(41,121,255,0.08) !important;
+}
+
+[data-theme="light"][data-nemesis="on"] nav::after {
+  /* Remove or adjust the accent rim for Nemesis mode */
+  opacity: 0;
+}
+
+/* Ensure scrolled state stays Nemesis-dark when Nemesis is active together with light theme.
+   This must come after the generic nav.scrolled rules so it wins in the cascade. */
+html[data-theme="light"][data-nemesis="on"] nav.scrolled {
+  background: linear-gradient(180deg, rgba(5,10,24,0.95) 0%, rgba(5,10,24,0.92) 100%) !important;
+  color: #e6f7ff !important;
+  border-bottom: 1px solid rgba(0,255,255,0.18) !important;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.35) !important;
+}
+
+/* Also force the mobile/open nav panel to stay dark when Nemesis+Light are active */
+html[data-theme="light"][data-nemesis="on"] nav.open .nav-links,
+html[data-theme="light"][data-nemesis="on"] nav.open .nav-links a {
+  background: rgba(5,10,24,0.95) !important;
+  color: #e6f7ff !important;
+  border-color: rgba(0,255,255,0.08) !important;
+}
+
+/* Ensure individual link colors remain legible */
+html[data-theme="light"][data-nemesis="on"] .nav-links a {
+  color: #e6f7ff !important;
+}
+
+/* Keep the active nav link readable (light text on cyan accent already handled) */
+html[data-theme="light"][data-nemesis="on"] .nav-links a.active {
+  background: var(--accent-color) !important;
+  color: #0a0e27 !important;
+}
+
+[data-theme="light"] .nav-logo img{
+  filter: drop-shadow(0 6px 18px rgba(41,121,255,0.06));
+}
+
+[data-theme="light"] .nav-links a:hover{
+  background: rgba(41,121,255,0.06);
+  color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(41,121,255,0.05);
 }
 .nav-container {
   max-width: 1280px;
@@ -708,7 +847,7 @@ nav.scrolled {
 }
 .theme-toggle.active {
   background: var(--accent-color);
-  color: #0a0e27;
+  color: #0a0e27 !important;
   border-color: var(--accent-color);
 }
 
@@ -998,7 +1137,7 @@ section#contact{
     <div class="nav-links">
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
-      <a href="https://brand.nemesisnet.co.za">Brand Guide</a>
+  <a href="https://brand.nemesisnet.co.za">Brand Guide</a>
       <a href="#contact">Contact</a>
       <button class="theme-toggle" id="aurora-toggle" onclick="toggleAuroraMode()" aria-label="Toggle Aurora Mode" title="Aurora Mode">
         <i class="fas fa-star"></i>
@@ -1046,35 +1185,43 @@ section#contact{
   
   <div class="projects-grid">
   <div class="card">
-    <img src="https://raw.githubusercontent.com/NemesisGuy/Kokoro_TTS_Service/refs/heads/master/assets/screenshots/Kokorotts-service-blender.png" alt="Kokoro TTS Service">
+    <img src="https://raw.githubusercontent.com/NemesisGuy/Kokoro_TTS_Service/refs/heads/master/assets/screenshots/Kokorotts-service-blender.png" alt="Kokoro TTS Service" loading="lazy" width="1200" height="675">
     <h3>Kokoro TTS Service</h3>
     <p>Advanced AI text-to-speech model based on StyleTTS 2 architecture.</p>
     <a href="https://github.com/NemesisGuy/Kokoro_TTS_Service" target="_blank"><i class="fab fa-github"></i> View Project</a>
   </div>
   <div class="card">
-    <img src="https://otgr.nemesisnet.co.za/assets/OntheGoRentals-Logo-Round-Clear-D5t-6qFC.PNG" alt="OntheGoRentals">
+    <img src="https://otgr.nemesisnet.co.za/assets/OntheGoRentals-Logo-Round-Clear-D5t-6qFC.PNG" alt="OntheGoRentals" loading="lazy" width="1200" height="675">
     <h3>OntheGoRentals</h3>
     <p>Rental management platform built with Java and Vue.js.</p>
     <a href="https://github.com/NemesisGuy/OnTheGoRentals" target="_blank"><i class="fab fa-github"></i> View Project</a>
   </div>
   <div class="card">
-    <img src="https://raw.githubusercontent.com/NemesisGuy/CodeCritical/refs/heads/master/image_2025-06-29_144748410.png" alt="CodeCritical">
+    <img src="https://raw.githubusercontent.com/NemesisGuy/CodeCritical/refs/heads/master/image_2025-06-29_144748410.png" alt="CodeCritical" loading="lazy" width="1200" height="675">
     <h3>CodeCritical</h3>
     <p>Java code analysis tool for improving code quality.</p>
     <a href="https://github.com/NemesisGuy/CodeCritical" target="_blank"><i class="fab fa-github"></i> View Project</a>
   </div>
   <div class="card">
-    <img src="https://github.com/NemesisGuy/ForkMyFolio-frontend/blob/master/Snapshotforkmyfolio.nemesisnet.co.za.png?raw=true" alt="ForkMyFolio">
+    <img src="https://github.com/NemesisGuy/ForkMyFolio-frontend/blob/master/Snapshotforkmyfolio.nemesisnet.co.za.png?raw=true" alt="ForkMyFolio" loading="lazy" width="1200" height="675">
     <h3>ForkMyFolio</h3>
     <p>Full-stack portfolio management application.</p>
     <a href="https://github.com/NemesisGuy/ForkMyFolio-frontend" target="_blank"><i class="fab fa-github"></i> View Project</a>
     
   </div>
   <div class="card">
-    <img src="https://raw.githubusercontent.com/NemesisGuy/Vibe-Type/refs/heads/dev/assets/screenshots/VibeType-kokorotts-tab.png" alt="Vibe-Type">
+    <img src="https://raw.githubusercontent.com/NemesisGuy/Vibe-Type/refs/heads/dev/assets/screenshots/VibeType-kokorotts-tab.png" alt="Vibe-Type" loading="lazy" width="1200" height="675">
     <h3>Vibe-Type</h3>
     <p>AI typing and sound project for enhanced user experience.</p>
     <a href="https://github.com/NemesisGuy/Vibe-Type" target="_blank"><i class="fab fa-github"></i> View Project</a>
+  </div>
+
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/NemesisGuy/Bored-Room-Cafe/refs/heads/master/screenshots/boredroomcafe-homescreen-image.png" alt="Bored Room Cafe" loading="lazy" width="1200" height="675">
+    <h3>Bored Room Cafe</h3>
+    <p>An interactive web application for a virtual cafe experience.</p>
+    <a href="https://github.com/NemesisGuy/Bored-Room-Cafe" target="_blank"><i class="fab fa-github"></i> View Project</a>
+    <a href="https://boredroomcafe.nemesisnet.co.za" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
   </div>
 </div>
 

@@ -1,0 +1,10 @@
+# robots.txt for NemesisNet
+# Allow all robots — update later if you want to restrict crawlers.
+User-agent: *
+Disallow:
+
+# Point search engines to the sitemap if/when it's available
+Sitemap: https://nemesisnet.co.za/sitemap.xml
+
+# If you want a crawl-delay for aggressive bots, consider adding:
+# Crawl-delay: 10
