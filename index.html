@@ -445,6 +445,12 @@ html:not([data-theme="light"]) .card:hover img{
   color:var(--text-muted); 
   margin-bottom:14px; 
   line-height:1.6;
+.card .project-link{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;margin-right:10px;margin-top:10px;border-radius:10px;font-weight:600;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.05);transition:transform 0.25s ease,box-shadow 0.25s ease,border-color 0.25s ease;}
+.card .project-link--github{border-color:rgba(41,121,255,0.22);background:rgba(41,121,255,0.12);}
+.card .project-link--demo{border-color:rgba(0,194,168,0.22);background:rgba(0,194,168,0.12);}
+.card .project-link:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(2,6,18,0.26);}
+[data-theme="light"] .card .project-link--github{background:rgba(41,121,255,0.18);border-color:rgba(41,121,255,0.32);}
+[data-theme="light"] .card .project-link--demo{background:rgba(0,194,168,0.2);border-color:rgba(0,194,168,0.3);}
   font-size:0.9rem;
 }
 .card a { 
@@ -1138,10 +1144,10 @@ section#contact{
       <i class="fas fa-bars"></i>
     </button>
     <div class="nav-links">
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-  <a href="https://brand.nemesisnet.co.za">Brand Guide</a>
-      <a href="#contact">Contact</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="https://brand.nemesisnet.co.za">Brand Guide</a>
       <button class="theme-toggle" id="aurora-toggle" onclick="toggleAuroraMode()" aria-label="Toggle Aurora Mode" title="Aurora Mode">
         <i class="fas fa-star"></i>
       </button>
@@ -1191,47 +1197,47 @@ section#contact{
     <img src="https://raw.githubusercontent.com/NemesisGuy/Kokoro_TTS_Service/refs/heads/master/assets/screenshots/Kokorotts-service-blender.png" alt="Kokoro TTS Service" loading="lazy" width="1200" height="675">
     <h3>Kokoro TTS Service</h3>
     <p>Advanced AI text-to-speech model based on StyleTTS 2 architecture.</p>
-    <a href="https://github.com/NemesisGuy/Kokoro_TTS_Service" target="_blank"><i class="fab fa-github"></i> View Project</a>
+  <a class="project-link project-link--github" href="https://github.com/NemesisGuy/Kokoro_TTS_Service" target="_blank"><i class="fab fa-github"></i> View Project</a>
   </div>
   <div class="card">
     <img src="https://otgr.nemesisnet.co.za/assets/OntheGoRentals-Logo-Round-Clear-D5t-6qFC.PNG" alt="OntheGoRentals" loading="lazy" width="1200" height="675">
     <h3>OntheGoRentals</h3>
     <p>Rental management platform built with Java and Vue.js.</p>
-    <a href="https://github.com/NemesisGuy/OnTheGoRentals" target="_blank"><i class="fab fa-github"></i> View Project</a>
+  <a class="project-link project-link--github" href="https://github.com/NemesisGuy/OnTheGoRentals" target="_blank"><i class="fab fa-github"></i> View Project</a>
   </div>
   <div class="card">
     <img src="https://nkassessments.nemesisnet.co.za/assets/images/Nk-logo.jpeg" alt="nkassessments portal" loading="lazy" width="1200" height="675">
     <h3>Naadirah Kagee Assessments</h3>
     <p>Client-facing static portal built with HTML5, Bootstrap, and Dockerized Nginx—designed, shipped, and deployed in under 24 hours.</p>
-    <a href="https://github.com/NemesisGuy/NKAssessments" target="_blank"><i class="fab fa-github"></i> Source</a>
-    <a href="https://nkassessments.nemesisnet.co.za" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+  <a class="project-link project-link--github" href="https://github.com/NemesisGuy/NKAssessments" target="_blank"><i class="fab fa-github"></i> Source</a>
+  <a class="project-link project-link--demo" href="https://nkassessments.nemesisnet.co.za" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
   </div>
   <div class="card">
     <img src="https://raw.githubusercontent.com/NemesisGuy/CodeCritical/refs/heads/master/image_2025-06-29_144748410.png" alt="CodeCritical" loading="lazy" width="1200" height="675">
     <h3>CodeCritical</h3>
     <p>Java code analysis tool for improving code quality.</p>
-    <a href="https://github.com/NemesisGuy/CodeCritical" target="_blank"><i class="fab fa-github"></i> View Project</a>
+  <a class="project-link project-link--github" href="https://github.com/NemesisGuy/CodeCritical" target="_blank"><i class="fab fa-github"></i> View Project</a>
   </div>
   <div class="card">
     <img src="https://github.com/NemesisGuy/ForkMyFolio-frontend/blob/master/Snapshotforkmyfolio.nemesisnet.co.za.png?raw=true" alt="ForkMyFolio" loading="lazy" width="1200" height="675">
     <h3>ForkMyFolio</h3>
     <p>Full-stack portfolio management application.</p>
-    <a href="https://github.com/NemesisGuy/ForkMyFolio-frontend" target="_blank"><i class="fab fa-github"></i> View Project</a>
+  <a class="project-link project-link--github" href="https://github.com/NemesisGuy/ForkMyFolio-frontend" target="_blank"><i class="fab fa-github"></i> View Project</a>
     
   </div>
   <div class="card">
     <img src="https://raw.githubusercontent.com/NemesisGuy/Vibe-Type/refs/heads/dev/assets/screenshots/VibeType-kokorotts-tab.png" alt="Vibe-Type" loading="lazy" width="1200" height="675">
     <h3>Vibe-Type</h3>
     <p>AI typing and sound project for enhanced user experience.</p>
-    <a href="https://github.com/NemesisGuy/Vibe-Type" target="_blank"><i class="fab fa-github"></i> View Project</a>
+  <a class="project-link project-link--github" href="https://github.com/NemesisGuy/Vibe-Type" target="_blank"><i class="fab fa-github"></i> View Project</a>
   </div>
 
   <div class="card">
     <img src="https://raw.githubusercontent.com/NemesisGuy/Bored-Room-Cafe/refs/heads/master/screenshots/boredroomcafe-homescreen-image.png" alt="Bored Room Cafe" loading="lazy" width="1200" height="675">
     <h3>Bored Room Cafe</h3>
     <p>An interactive web application for a virtual cafe experience.</p>
-    <a href="https://github.com/NemesisGuy/Bored-Room-Cafe" target="_blank"><i class="fab fa-github"></i> View Project</a>
-    <a href="https://boredroomcafe.nemesisnet.co.za" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+  <a class="project-link project-link--github" href="https://github.com/NemesisGuy/Bored-Room-Cafe" target="_blank"><i class="fab fa-github"></i> View Project</a>
+  <a class="project-link project-link--demo" href="https://boredroomcafe.nemesisnet.co.za" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
   </div>
 </div>
 
