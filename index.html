@@ -6,8 +6,11 @@
 <title>NemesisNet — Software Engineering & AI Solutions</title>
 
   <meta name="description" content="NemesisNet provides enterprise-grade software engineering, AI solutions, and production-ready systems. We partner with teams to deliver scalable, secure, and maintainable products.">
-  <meta name="keywords" content="NemesisNet, Nemesis net, Nemesis, NemesisGuy, software development, AI solutions, Spring Boot, Vue.js, full-stack developer, Java, backend, frontend, Docker, DevOps, RESTful APIs, MySQL, design systems, brand guide, UI design, UX, Cape Town developer">
+  <meta name="keywords" content="NemesisNet, Nemesis net, Nemesis, NemesisGuy, Nemesis Guy, software development, AI solutions, Spring Boot, Vue.js, full-stack developer, Java, backend, frontend, Docker, DevOps, RESTful APIs, MySQL, design systems, brand guide, UI design, UX, Cape Town developer, Peter Buckingham, Reign Buckingham">
+  <meta name="author" content="NemesisGuy">
+  <meta name="publisher" content="NemesisNet">
   <link rel="canonical" href="https://nemesisnet.co.za/">
+  <link rel="alternate" href="https://nemesisnet.co.za/" hreflang="en-ZA">
   <meta name="robots" content="index,follow">
 
   <!-- Open Graph / Social -->
@@ -17,11 +20,13 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nemesisnet.co.za/">
   <meta property="og:image" content="https://nemesisnet.co.za/assets/Nemesis_Logo_Icon.png">
+  <meta property="og:image:secure_url" content="https://nemesisnet.co.za/assets/Nemesis_Logo_Icon.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@NemesisGuy">
   <meta name="twitter:creator" content="@NemesisGuy">
+  <meta name="twitter:url" content="https://nemesisnet.co.za/">
   <meta name="twitter:title" content="NemesisNet — Software Engineering & AI Solutions">
   <meta name="twitter:description" content="Enterprise-grade software engineering, AI solutions, and production-ready systems from NemesisNet.">
   <meta name="twitter:image" content="https://nemesisnet.co.za/assets/Nemesis_Logo_Icon.png">
@@ -382,6 +387,8 @@ section h2 {
   overflow: hidden;
   color: var(--text-color);
   box-shadow: 0 8px 30px rgba(2,6,23,0.36), 0 2px 8px rgba(0,0,0,0.12);
+  display:flex;
+  flex-direction:column;
 }
 .card.visible { opacity:1; transform: translateY(0); transition:0.5s cubic-bezier(0.4, 0, 0.2, 1); }
 .card:hover {
@@ -445,13 +452,59 @@ html:not([data-theme="light"]) .card:hover img{
   color:var(--text-muted); 
   margin-bottom:14px; 
   line-height:1.6;
-.card .project-link{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;margin-right:10px;margin-top:10px;border-radius:10px;font-weight:600;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.05);transition:transform 0.25s ease,box-shadow 0.25s ease,border-color 0.25s ease;}
-.card .project-link--github{border-color:rgba(41,121,255,0.22);background:rgba(41,121,255,0.12);}
-.card .project-link--demo{border-color:rgba(0,194,168,0.22);background:rgba(0,194,168,0.12);}
-.card .project-link:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(2,6,18,0.26);}
-[data-theme="light"] .card .project-link--github{background:rgba(41,121,255,0.18);border-color:rgba(41,121,255,0.32);}
-[data-theme="light"] .card .project-link--demo{background:rgba(0,194,168,0.2);border-color:rgba(0,194,168,0.3);}
   font-size:0.9rem;
+}
+.card .project-links{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-top:auto;
+  padding-top:18px;
+  width:100%;
+  align-items:stretch;
+}
+.card .project-link{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:12px 28px;
+  border-radius:12px;
+  font-weight:500;
+  font-size:0.95rem;
+  border:1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color:var(--text-color);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration:none;
+  width:100%;
+  max-width:280px;
+  text-align:center;
+}
+.card .project-link--github i,
+.card .project-link--demo i{
+  font-size:0.9rem;
+}
+.card .project-link:hover{
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color:#0a0e27;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--accent-glow);
+}
+.card .project-link:focus-visible{
+  outline:2px solid var(--accent-color);
+  outline-offset:3px;
+}
+[data-theme="light"] .card .project-link{
+  background: rgba(255,255,255,0.92);
+  border-color: rgba(10,14,39,0.08);
+  color: var(--text-color);
+}
+[data-theme="light"] .card .project-link:hover{
+  color:#0a0e27;
 }
 .card a { 
   text-decoration:none; 
@@ -465,15 +518,37 @@ html:not([data-theme="light"]) .card:hover img{
   text-decoration:none;
 }
 
-footer { 
+.site-footer { 
   text-align:center; 
-  padding:20px 0; 
-  background: transparent;
+  padding:32px 20px; 
+  background: var(--glass-bg);
+  border-top:1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color:var(--text-muted); 
   font-size:0.85rem;
-  margin-top: auto;
-  opacity: 0.7;
+  margin-top: 80px;
+  scroll-snap-align:start;
+  scroll-snap-stop:always;
+ }
+.footer-line {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  justify-content:center;
+  align-items:center;
+  font-size:0.85rem;
 }
+.footer-line a {
+  color:var(--secondary-accent);
+  text-decoration:none;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+.footer-line a:hover { color: var(--accent-color); }
+.footer-line .footer-divider { opacity:0.6; }
 
 /* About Section */
 .about-content {
@@ -1123,11 +1198,24 @@ section#contact{
     "name": "NemesisNet",
     "url": "https://nemesisnet.co.za",
     "logo": "https://nemesisnet.co.za/assets/Nemesis_Logo_Icon.png",
-    "email": "hello@nemesisnet.co.za",
+  "email": "realnemesisnet@gmail.com",
     "sameAs": [
       "https://github.com/NemesisGuy",
       "https://www.linkedin.com/in/peter-buckingham-65438757"
     ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "NemesisNet",
+    "url": "https://nemesisnet.co.za",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://nemesisnet.co.za/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   }
   </script>
 <script defer src="https://metrics.nemesisnet.co.za/script.js" data-website-id="9a0683f9-2a7e-41fc-aee8-8d1150dea50c"></script>
@@ -1180,7 +1268,7 @@ section#contact{
     <div class="hero-links">
   <a href="#projects"><i class="fas fa-briefcase"></i> Our Work</a>
   <a href="https://github.com/NemesisGuy" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-  <a href="mailto:hello@nemesisnet.co.za"><i class="fas fa-envelope"></i> Contact Us</a>
+  <a href="mailto:realnemesisnet@gmail.com"><i class="fas fa-envelope"></i> Contact Us</a>
   <a href="https://forkmyfolio.nemesisnet.co.za/nemesis/" target="_blank"><i class="fas fa-external-link-alt"></i> Our Portfolio</a>
     </div>
   </div>
@@ -1197,47 +1285,64 @@ section#contact{
     <img src="https://raw.githubusercontent.com/NemesisGuy/Kokoro_TTS_Service/refs/heads/master/assets/screenshots/Kokorotts-service-blender.png" alt="Kokoro TTS Service" loading="lazy" width="1200" height="675">
     <h3>Kokoro TTS Service</h3>
     <p>Advanced AI text-to-speech model based on StyleTTS 2 architecture.</p>
-  <a class="project-link project-link--github" href="https://github.com/NemesisGuy/Kokoro_TTS_Service" target="_blank"><i class="fab fa-github"></i> View Project</a>
+    <div class="project-links">
+      <a class="project-link project-link--github" href="https://github.com/NemesisGuy/Kokoro_TTS_Service" target="_blank"><i class="fab fa-github"></i> View Project</a>
+      <a class="project-link project-link--demo" href="https://kokoro-gui.nemesisnet.co.za" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+    </div>
   </div>
   <div class="card">
     <img src="https://otgr.nemesisnet.co.za/assets/OntheGoRentals-Logo-Round-Clear-D5t-6qFC.PNG" alt="OntheGoRentals" loading="lazy" width="1200" height="675">
     <h3>OntheGoRentals</h3>
     <p>Rental management platform built with Java and Vue.js.</p>
-  <a class="project-link project-link--github" href="https://github.com/NemesisGuy/OnTheGoRentals" target="_blank"><i class="fab fa-github"></i> View Project</a>
+    <div class="project-links">
+      <a class="project-link project-link--github" href="https://github.com/NemesisGuy/OnTheGoRentals" target="_blank"><i class="fab fa-github"></i> View Project</a>
+      <a class="project-link project-link--demo" href="https://otgr.nemesisnet.co.za" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+    </div>
   </div>
   <div class="card">
     <img src="https://nkassessments.nemesisnet.co.za/assets/images/Nk-logo.jpeg" alt="nkassessments portal" loading="lazy" width="1200" height="675">
-    <h3>Naadirah Kagee Assessments</h3>
+    <h3>NK Assessments</h3>
     <p>Client-facing static portal built with HTML5, Bootstrap, and Dockerized Nginx—designed, shipped, and deployed in under 24 hours.</p>
-  <a class="project-link project-link--github" href="https://github.com/NemesisGuy/NKAssessments" target="_blank"><i class="fab fa-github"></i> Source</a>
-  <a class="project-link project-link--demo" href="https://nkassessments.nemesisnet.co.za" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+    <div class="project-links">
+      <a class="project-link project-link--github" href="https://github.com/NemesisGuy/NKAssessments" target="_blank"><i class="fab fa-github"></i> Source</a>
+      <a class="project-link project-link--demo" href="https://nkassessments.nemesisnet.co.za" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+    </div>
   </div>
   <div class="card">
     <img src="https://raw.githubusercontent.com/NemesisGuy/CodeCritical/refs/heads/master/image_2025-06-29_144748410.png" alt="CodeCritical" loading="lazy" width="1200" height="675">
     <h3>CodeCritical</h3>
     <p>Java code analysis tool for improving code quality.</p>
-  <a class="project-link project-link--github" href="https://github.com/NemesisGuy/CodeCritical" target="_blank"><i class="fab fa-github"></i> View Project</a>
+    <div class="project-links">
+      <a class="project-link project-link--github" href="https://github.com/NemesisGuy/CodeCritical" target="_blank"><i class="fab fa-github"></i> View Project</a>
+    </div>
   </div>
   <div class="card">
     <img src="https://github.com/NemesisGuy/ForkMyFolio-frontend/blob/master/Snapshotforkmyfolio.nemesisnet.co.za.png?raw=true" alt="ForkMyFolio" loading="lazy" width="1200" height="675">
     <h3>ForkMyFolio</h3>
     <p>Full-stack portfolio management application.</p>
-  <a class="project-link project-link--github" href="https://github.com/NemesisGuy/ForkMyFolio-frontend" target="_blank"><i class="fab fa-github"></i> View Project</a>
+    <div class="project-links">
+      <a class="project-link project-link--github" href="https://github.com/NemesisGuy/ForkMyFolio-frontend" target="_blank"><i class="fab fa-github"></i> View Project</a>
+      <a class="project-link project-link--demo" href="https://forkmyfolio.nemesisnet.co.za" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+    </div>
     
   </div>
   <div class="card">
     <img src="https://raw.githubusercontent.com/NemesisGuy/Vibe-Type/refs/heads/dev/assets/screenshots/VibeType-kokorotts-tab.png" alt="Vibe-Type" loading="lazy" width="1200" height="675">
     <h3>Vibe-Type</h3>
     <p>AI typing and sound project for enhanced user experience.</p>
-  <a class="project-link project-link--github" href="https://github.com/NemesisGuy/Vibe-Type" target="_blank"><i class="fab fa-github"></i> View Project</a>
+    <div class="project-links">
+      <a class="project-link project-link--github" href="https://github.com/NemesisGuy/Vibe-Type" target="_blank"><i class="fab fa-github"></i> View Project</a>
+    </div>
   </div>
 
   <div class="card">
     <img src="https://raw.githubusercontent.com/NemesisGuy/Bored-Room-Cafe/refs/heads/master/screenshots/boredroomcafe-homescreen-image.png" alt="Bored Room Cafe" loading="lazy" width="1200" height="675">
     <h3>Bored Room Cafe</h3>
     <p>An interactive web application for a virtual cafe experience.</p>
-  <a class="project-link project-link--github" href="https://github.com/NemesisGuy/Bored-Room-Cafe" target="_blank"><i class="fab fa-github"></i> View Project</a>
-  <a class="project-link project-link--demo" href="https://boredroomcafe.nemesisnet.co.za" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+    <div class="project-links">
+      <a class="project-link project-link--github" href="https://github.com/NemesisGuy/Bored-Room-Cafe" target="_blank"><i class="fab fa-github"></i> View Project</a>
+      <a class="project-link project-link--demo" href="https://boredroomcafe.nemesisnet.co.za" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+    </div>
   </div>
 </div>
 
@@ -1276,11 +1381,11 @@ section#contact{
         <h3>Quick Stats</h3>
         <div class="stats-grid">
           <div class="stat-item">
-            <div class="stat-number">2+</div>
+            <div class="stat-number">4+</div>
             <div class="stat-label">Years Experience</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">40+</div>
+            <div class="stat-number">20+</div>
             <div class="stat-label">Projects Built</div>
           </div>
           <div class="stat-item">
@@ -1305,7 +1410,7 @@ section#contact{
   <p>We'd love to hear from you. Drop us a message and we'll get back to you as soon as possible.</p>
         
         <div class="contact-links">
-          <a href="mailto:hello@nemesisnet.co.za" target="_blank">
+          <a href="mailto:realnemesisnet@gmail.com" target="_blank">
             <i class="fas fa-envelope"></i> Email
           </a>
           <a href="https://github.com/NemesisGuy" target="_blank">
@@ -1336,10 +1441,19 @@ section#contact{
     </div>
   </div>
 
-  <footer>
-    &copy; <span id="footer-year"></span> NemesisNet. All rights reserved.
-  </footer>
 </section>
+
+<footer class="site-footer">
+  <div class="footer-line">
+    <span>@ <span id="footer-year"></span></span>
+    <span class="footer-divider">|</span>
+    <span>Built by <a href="https://github.com/NemesisGuy" target="_blank" rel="noopener"><i class="fab fa-github"></i> NemesisGuy</a></span>
+    <span class="footer-divider">|</span>
+    <span>Powered by <a href="https://nemesisnet.co.za" target="_blank" rel="noopener">NemesisNet.co.za</a></span>
+    <span class="footer-divider">|</span>
+    <span>All rights reserved.</span>
+  </div>
+</footer>
 
 <script>
 // Update footer with current year and month
@@ -1654,7 +1768,7 @@ function handleContact(e){
   const message = document.getElementById('cmessage').value.trim();
   const subject = encodeURIComponent(`Website contact from ${name}`);
   const body = encodeURIComponent(`Name: ${name}%0AEmail: ${email}%0A%0A${message}`);
-  const mailto = `mailto:hello@nemesisnet.co.za?subject=${subject}&body=${body}`;
+  const mailto = `mailto:realnemesisnet@gmail.com?subject=${subject}&body=${body}`;
   // open mail client
   window.location.href = mailto;
 }
