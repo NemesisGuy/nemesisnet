@@ -10,16 +10,17 @@ A small, elegant static site showcasing NemesisNet's services, open-source proje
 ## Repository layout
 
 ```
-public/
-	index.html                # Main landing page
+src/
+	index.html                # Main landing page (authoring source)
 	nemesis-mode-demo.html    # Visual concept sandbox
-	styles/                   # Aurora + Nemesis theme stylesheets
+	styles/                   # Theme stylesheets
 	assets/                   # Brand + project imagery (mirrored + optimized)
 	robots.txt, sitemap.xml   # SEO helpers
+dist/                       # Build output consumed by Docker/nginx
 config/nginx/default.conf   # Container/server configuration
-scripts/                    # Utility automation (e.g., image optimizer)
+scripts/                    # Utility automation (build + image optimizer)
 docs/                       # Asset inventory and other documentation
-Dockerfile                  # Ships the public/ bundle via nginx
+Dockerfile                  # Ships the dist/ bundle via nginx
 ```
 
 Why this repo
@@ -38,28 +39,44 @@ Highlights / Features
 - SEO + JSON-LD Organization markup included in the document head.
 
 Files of interest
-- `public/index.html` — Main site, includes inline critical CSS and JS helpers.
-- `public/styles/nemesis-mode.css` — Nemesis-mode variables and accents.
-- `public/styles/aurora-mode.css` — Aurora-mode variables and accents.
-- `public/assets/` — Logo, icons, and screenshots used across the page.
+- `src/index.html` — Main site, includes inline critical CSS and JS helpers.
+- `src/styles/nemesis-mode.css` — Nemesis-mode variables and accents.
+- `src/styles/aurora-mode.css` — Aurora-mode variables and accents.
+- `src/assets/` — Logo, icons, and screenshots used across the page.
 
-Local preview (Windows / PowerShell)
-1. Open a PowerShell terminal in the repo root.
-2. Serve the `public/` directory (choose either approach):
+### Build + preview workflow (Windows / PowerShell)
+
+1. Build the distributable bundle (copies `src/` → `dist/`):
+
+```powershell
+python scripts/build_static.py
+```
+
+2. Serve the generated `dist/` directory (choose either approach):
 
 ```powershell
 # Change into the static bundle then serve
-cd public
+cd dist
 python -m http.server 8000
 
-# OR keep the shell at repo root and point http.server at ./public
-python -m http.server 8000 --directory public
+# OR keep the shell at repo root and point http.server at ./dist
+python -m http.server 8000 --directory dist
 ```
 
 3. Open http://localhost:8000 in your browser.
 
+### Docker image workflow
+
+```powershell
+python scripts/build_static.py
+wsl docker build -t nemesisguy/nemesisnet:latest .
+```
+
+Run the build script first so the `dist/` folder exists before Docker copies it
+into the nginx image.
+
 Asset workflow & media hygiene
-- Every externally hosted project screenshot now lives under `public/assets/images/projects/<slug>/{original,optimized}`.
+- Every externally hosted project screenshot now lives under `src/assets/images/projects/<slug>/{original,optimized}`.
 - Originals keep their source format; run `python scripts/optimize_assets.py` to regenerate the 72 DPI, max-1600px WebP copies inside each `optimized/` folder plus the brand logo.
 - `docs/asset-inventory.md` tracks the source URL, local storage path, and status for each asset so we can audit media drift quickly.
 
@@ -69,7 +86,7 @@ Theme controls & troubleshooting
 
 Developer notes
 - No build step: edit `index.html` and the CSS files directly.
-- Critical CSS is inlined for convenience; longer mode-specific CSS lives in `public/styles/nemesis-mode.css` and `public/styles/aurora-mode.css`.
+- Critical CSS is inlined for convenience; longer mode-specific CSS lives in `src/styles/nemesis-mode.css` and `src/styles/aurora-mode.css`.
 - JS helpers (in `index.html`) manage theme persistence, mobile menu overlay, and a small typing animation.
 
 Accessibility
