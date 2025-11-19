@@ -16,11 +16,10 @@ src/
 	styles/                   # Theme stylesheets
 	assets/                   # Brand + project imagery (mirrored + optimized)
 	robots.txt, sitemap.xml   # SEO helpers
-dist/                       # Build output consumed by Docker/nginx
 config/nginx/default.conf   # Container/server configuration
-scripts/                    # Utility automation (build + image optimizer)
+scripts/                    # Utility automation (image optimizer)
 docs/                       # Asset inventory and other documentation
-Dockerfile                  # Ships the dist/ bundle via nginx
+Dockerfile                  # Ships the src/ bundle via nginx
 ```
 
 Why this repo
@@ -46,34 +45,20 @@ Files of interest
 
 ### Build + preview workflow (Windows / PowerShell)
 
-1. Build the distributable bundle (copies `src/` → `dist/`):
-
 ```powershell
-python scripts/build_static.py
+# Serve the authoring source directly
+python -m http.server 8000 --directory src
 ```
 
-2. Serve the generated `dist/` directory (choose either approach):
-
-```powershell
-# Change into the static bundle then serve
-cd dist
-python -m http.server 8000
-
-# OR keep the shell at repo root and point http.server at ./dist
-python -m http.server 8000 --directory dist
-```
-
-3. Open http://localhost:8000 in your browser.
+Then open http://localhost:8000 in your browser.
 
 ### Docker image workflow
 
 ```powershell
-python scripts/build_static.py
 wsl docker build -t nemesisguy/nemesisnet:latest .
 ```
 
-Run the build script first so the `dist/` folder exists before Docker copies it
-into the nginx image.
+The container now copies the `src/` tree directly into the nginx image.
 
 Asset workflow & media hygiene
 - Every externally hosted project screenshot now lives under `src/assets/images/projects/<slug>/{original,optimized}`.
