@@ -48,14 +48,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
-  <link rel="preload" as="style" href="styles/nemesis-mode.css">
-  <link rel="preload" as="style" href="styles/aurora-mode.css">
+    <link rel="preload" as="style" href="nemesis-mode.css">
+    <link rel="preload" as="style" href="aurora-mode.css">
   <link rel="preload" as="image" href="assets/images/brand/Nemesis_Logo_Icon.png">
 
 <!-- Fonts are preloaded above; noscript fallback covers non-JS browsers -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="styles/nemesis-mode.css">
-<link rel="stylesheet" href="styles/aurora-mode.css">
+<link rel="stylesheet" href="nemesis-mode.css">
+<link rel="stylesheet" href="aurora-mode.css">
 <style>
 .avatar-wrap{
   width:350px;
@@ -462,7 +462,7 @@ html:not([data-theme="light"]) .card:hover img{
   margin-top:auto;
   padding-top:18px;
   width:100%;
-  align-items:center;
+  align-items:stretch;
 }
 .card .project-link{
   display:flex;
@@ -480,15 +480,9 @@ html:not([data-theme="light"]) .card:hover img{
   color:var(--text-color);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration:none;
-  width:95%;
-  max-width:none;
-  margin:0 auto;
+  width:100%;
+  max-width:280px;
   text-align:center;
-}
-@media (max-width: 600px) {
-  .card .project-link {
-    width:100%;
-  }
 }
 .card .project-link--github i,
 .card .project-link--demo i{
@@ -1388,7 +1382,7 @@ section#contact{
         <h3>Quick Stats</h3>
         <div class="stats-grid">
           <div class="stat-item">
-            <div class="stat-number">3+</div>
+            <div class="stat-number">4+</div>
             <div class="stat-label">Years Experience</div>
           </div>
           <div class="stat-item">
