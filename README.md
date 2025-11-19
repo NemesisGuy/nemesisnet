@@ -7,6 +7,21 @@ NemesisNet — Software Engineering & AI Solutions
 
 A small, elegant static site showcasing NemesisNet's services, open-source projects, and brand guide. Built with static HTML/CSS and a few lightweight JavaScript helpers. The site includes multiple visual themes (Nemesis / Aurora / Light) and glassmorphic, responsive components.
 
+## Repository layout
+
+```
+public/
+	index.html                # Main landing page
+	nemesis-mode-demo.html    # Visual concept sandbox
+	styles/                   # Aurora + Nemesis theme stylesheets
+	assets/                   # Brand + project imagery (mirrored + optimized)
+	robots.txt, sitemap.xml   # SEO helpers
+config/nginx/default.conf   # Container/server configuration
+scripts/                    # Utility automation (e.g., image optimizer)
+docs/                       # Asset inventory and other documentation
+Dockerfile                  # Ships the public/ bundle via nginx
+```
+
 Why this repo
 - Lightweight, privacy-first static site (no build step required).
 - Demonstrates theme toggles and glassmorphism style tokens.
@@ -23,23 +38,30 @@ Highlights / Features
 - SEO + JSON-LD Organization markup included in the document head.
 
 Files of interest
-- `index.html` — Main site, includes inline critical CSS and JS helpers.
-- `nemesis-mode.css` — Nemesis-mode variables and accents.
-- `aurora-mode.css` — Aurora-mode variables and accents.
-- `assets/` — Logo, icons, and screenshots used across the page.
+- `public/index.html` — Main site, includes inline critical CSS and JS helpers.
+- `public/styles/nemesis-mode.css` — Nemesis-mode variables and accents.
+- `public/styles/aurora-mode.css` — Aurora-mode variables and accents.
+- `public/assets/` — Logo, icons, and screenshots used across the page.
 
 Local preview (Windows / PowerShell)
-1. Open a PowerShell terminal in the repo root (where `index.html` lives).
-2. Start a tiny static server (Python is the easiest):
+1. Open a PowerShell terminal in the repo root.
+2. Serve the `public/` directory (choose either approach):
 
 ```powershell
-# If you have Python 3 installed
-py -3 -m http.server 8000
-# or, if python maps to Python 3
+# Change into the static bundle then serve
+cd public
 python -m http.server 8000
+
+# OR keep the shell at repo root and point http.server at ./public
+python -m http.server 8000 --directory public
 ```
 
 3. Open http://localhost:8000 in your browser.
+
+Asset workflow & media hygiene
+- Every externally hosted project screenshot now lives under `public/assets/images/projects/<slug>/{original,optimized}`.
+- Originals keep their source format; run `python scripts/optimize_assets.py` to regenerate the 72 DPI, max-1600px WebP copies inside each `optimized/` folder plus the brand logo.
+- `docs/asset-inventory.md` tracks the source URL, local storage path, and status for each asset so we can audit media drift quickly.
 
 Theme controls & troubleshooting
 - Toggle themes with the round buttons in the navbar (Aurora / Nemesis) and the sun/moon theme-button.
@@ -47,7 +69,7 @@ Theme controls & troubleshooting
 
 Developer notes
 - No build step: edit `index.html` and the CSS files directly.
-- Critical CSS is inlined for convenience; longer mode-specific CSS lives in `nemesis-mode.css` and `aurora-mode.css`.
+- Critical CSS is inlined for convenience; longer mode-specific CSS lives in `public/styles/nemesis-mode.css` and `public/styles/aurora-mode.css`.
 - JS helpers (in `index.html`) manage theme persistence, mobile menu overlay, and a small typing animation.
 
 Accessibility
