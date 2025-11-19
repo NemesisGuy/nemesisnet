@@ -461,7 +461,7 @@ html:not([data-theme="light"]) .card:hover img{
   margin-top:auto;
   padding-top:18px;
   width:100%;
-  align-items:stretch;
+  align-items:center;
 }
 .card .project-link{
   display:flex;
@@ -479,9 +479,15 @@ html:not([data-theme="light"]) .card:hover img{
   color:var(--text-color);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration:none;
-  width:100%;
-  max-width:280px;
+  width:95%;
+  max-width:none;
+  margin:0 auto;
   text-align:center;
+}
+@media (max-width: 600px) {
+  .card .project-link {
+    width:100%;
+  }
 }
 .card .project-link--github i,
 .card .project-link--demo i{
@@ -1381,7 +1387,7 @@ section#contact{
         <h3>Quick Stats</h3>
         <div class="stats-grid">
           <div class="stat-item">
-            <div class="stat-number">4+</div>
+            <div class="stat-number">3+</div>
             <div class="stat-label">Years Experience</div>
           </div>
           <div class="stat-item">
