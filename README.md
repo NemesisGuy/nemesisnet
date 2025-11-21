@@ -36,6 +36,7 @@ Highlights / Features
 - Glassmorphic UI components (cards, contact form, hero) tuned for light/dark.
 - Mobile-friendly navigation with overlay and auto-close behaviors.
 - SEO + JSON-LD Organization markup included in the document head.
+- Nemesis-on-light mode adds pulsing hero + nav branding and neon button treatments for better contrast.
 
 Files of interest
 - `src/index.html` — Main site, includes inline critical CSS and JS helpers.
@@ -59,6 +60,14 @@ wsl docker build -t nemesisguy/nemesisnet:latest .
 ```
 
 The container now copies the `src/` tree directly into the nginx image.
+
+### Tests
+
+```powershell
+python -m unittest tests.test_structure
+```
+
+These structural checks ensure the single-source layout, favicon paths, and Nemesis visual overrides stay intact.
 
 Asset workflow & media hygiene
 - Every externally hosted project screenshot now lives under `src/assets/images/projects/<slug>/{original,optimized}`.

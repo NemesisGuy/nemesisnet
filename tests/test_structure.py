@@ -33,6 +33,33 @@ class StructureTests(unittest.TestCase):
         self.assertNotIn('href="/assets', html)
         self.assertIn('href="assets/images/brand/Nemesis_Logo_Icon.png"', html)
 
+    def test_nemesis_light_buttons_have_override(self) -> None:
+        """Ensure Nemesis-on-light mode has bespoke card button styling."""
+
+        html = (ROOT / "src" / "index.html").read_text(encoding="utf-8")
+        self.assertIn('html[data-theme="light"][data-nemesis="on"] .card .project-link', html)
+
+    def test_nemesis_logo_pulse_present(self) -> None:
+        """Nemesis-on-light should animate the nav logo with a pulse effect."""
+
+        html = (ROOT / "src" / "index.html").read_text(encoding="utf-8")
+        self.assertIn('@keyframes nemesis-logo-pulse', html)
+        self.assertIn('html[data-theme="light"][data-nemesis="on"] .nav-logo img', html)
+
+    def test_nemesis_hero_logo_pulse_present(self) -> None:
+        """Nemesis-on-light should pulse the hero avatar as well."""
+
+        html = (ROOT / "src" / "index.html").read_text(encoding="utf-8")
+        self.assertIn('@keyframes nemesis-hero-pulse', html)
+        self.assertIn('html[data-theme="light"][data-nemesis="on"] .avatar-img', html)
+
+    def test_nemesis_hero_ring_pulse_present(self) -> None:
+        """Ensure the hero outer ring pulse animation exists for Nemesis mode."""
+
+        html = (ROOT / "src" / "index.html").read_text(encoding="utf-8")
+        self.assertIn('@keyframes nemesis-hero-ring', html)
+        self.assertIn('html[data-theme="light"][data-nemesis="on"] .avatar-wrap::after', html)
+
 
 if __name__ == "__main__":
     unittest.main()
