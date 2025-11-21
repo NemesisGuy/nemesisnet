@@ -43,6 +43,7 @@ Files of interest
 - `src/styles/nemesis-mode.css` — Nemesis-mode variables and accents.
 - `src/styles/aurora-mode.css` — Aurora-mode variables and accents.
 - `src/assets/` — Logo, icons, and screenshots used across the page.
+- `docs/AI_PROFILE.md` — AI/LLM profile block used across NemesisNet properties.
 
 ### Build + preview workflow (Windows / PowerShell)
 
@@ -105,4 +106,4 @@ Contact
 
 ---
 
-If you want the README to include screenshots, badges (CI), or a short animated GIF showing theme toggles, tell me where to place the image and I’ll add them to the README.
+
