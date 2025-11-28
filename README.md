@@ -58,6 +58,11 @@ Then open http://localhost:8000 in your browser.
 
 ```powershell
 wsl docker build -t nemesisguy/nemesisnet:latest .
+
+
+ cd /Projects/NemesisNet; docker build --no-cache -t nemesisnet:latest .; docker tag nemesisnet:latest nemesisguy/nemesisnet:latest; docker push nemesisguy/nemesisnet:latest
+
+
 ```
 
 The container now copies the `src/` tree directly into the nginx image.
