@@ -67,6 +67,25 @@ wsl docker build -t nemesisguy/nemesisnet:latest .
 
 The container now copies the `src/` tree directly into the nginx image.
 
+### Latest Docker Hub release
+
+Published tags:
+- `nemesisguy/nemesisnet:latest`
+- `nemesisguy/nemesisnet:9eb220d`
+
+```powershell
+# Pull image
+docker pull nemesisguy/nemesisnet:latest
+docker pull nemesisguy/nemesisnet:9eb220d
+
+# Run locally
+docker run --rm -p 8080:80 nemesisguy/nemesisnet:latest
+# or pin to this release
+docker run --rm -p 8080:80 nemesisguy/nemesisnet:9eb220d
+```
+
+Then open http://localhost:8080.
+
 ### Tests
 
 ```powershell
