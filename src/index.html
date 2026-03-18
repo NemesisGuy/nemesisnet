@@ -129,7 +129,6 @@
   <meta name="theme-color" content="#0a0a0a">
   <meta property="og:locale" content="en_ZA">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://metrics.nemesisnet.co.za https://static.cloudflareinsights.com; connect-src 'self' https://metrics.nemesisnet.co.za https://cloudflareinsights.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' https: data:;">
-  <script defer src="https://metrics.nemesisnet.co.za/script.js" data-website-id="9a0683f9-2a7e-41fc-aee8-8d1150dea50c"></script>
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/brand/Nemesis_Logo_Icon.png">
   
   <!-- Performance: preconnect to Google Fonts and preload critical assets -->
@@ -284,7 +283,7 @@ html:not([data-theme="light"]) .avatar-wrap:hover::after{
   --bg-color: var(--nemesis-white);
   --bg-gradient: linear-gradient(135deg, var(--nemesis-white) 0%, #f0f6ff 50%, #eaf6ff 100%);
   --text-color: var(--nemesis-black);
-  --text-muted: rgba(26,26,26,0.6);
+  --text-muted: rgba(26,26,26,0.72);
 
   --accent-color: var(--nemesis-blue);
   --accent-hover: #2979FF;
@@ -1672,7 +1671,6 @@ section#contact{
     "name": "NemesisNet",
     "url": "https://nemesisnet.co.za",
     "logo": "https://nemesisnet.co.za/assets/Nemesis_Logo_Icon.png",
-  "email": "admin@nemesisnet.co.za",
     "sameAs": [
       "https://github.com/NemesisGuy",
       "https://www.linkedin.com/in/peter-buckingham-65438757"
@@ -1790,7 +1788,7 @@ section#contact{
   <div class="hero-top">
     <!-- Use brand logo instead of personal photo -->
     <div class="avatar-wrap" aria-hidden="false">
-  <img class="avatar-img" src="assets/images/brand/Nemesis_Logo_Icon.webp" alt="NemesisNet logo" loading="lazy" width="256" height="256">
+  <img class="avatar-img" src="assets/images/brand/Nemesis_Logo_Icon.webp" alt="NemesisNet logo" loading="eager" fetchpriority="high" decoding="async" width="256" height="256">
     </div>
     <div>
       <h1>NemesisNet</h1>
@@ -1804,7 +1802,7 @@ section#contact{
     <a href="https://blog.nemesisnet.co.za/" target="_blank" rel="noopener noreferrer" title="Visit the NemesisNet Blog" aria-label="NemesisNet Blog"><i class="fas fa-book"></i> Our Blog</a>
 
   <a href="https://github.com/NemesisGuy" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-  <a href="mailto:admin@nemesisnet.co.za"><i class="fas fa-envelope"></i> Contact Us</a>
+  <a href="#contact" data-email-link="primary"><i class="fas fa-envelope"></i> Contact Us</a>
   <a href="https://forkmyfolio.nemesisnet.co.za/nemesis/" target="_blank"><i class="fas fa-external-link-alt"></i> Our Portfolio</a>
     </div>
   </div>
@@ -1821,7 +1819,7 @@ section#contact{
   
   <div class="projects-grid">
   <div class="card">
-    <img src="assets/images/projects/wordpress-mcp/optimized/hero.webp" alt="WordPress MCP Server" loading="lazy" width="900" height="506" decoding="async">
+    <img src="assets/images/projects/wordpress-mcp/optimized/hero.webp" srcset="assets/images/projects/wordpress-mcp/optimized/hero-480.webp 480w, assets/images/projects/wordpress-mcp/optimized/hero-640.webp 640w, assets/images/projects/wordpress-mcp/optimized/hero.webp 900w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px" alt="WordPress MCP Server" loading="lazy" width="900" height="506" decoding="async">
     <h3>WordPress MCP Server</h3>
     <p>Lightweight MCP bridge that lets AI agents read, update, and manage WordPress content securely via a local-first server.</p>
     <div class="project-links">
@@ -1830,7 +1828,9 @@ section#contact{
     </div>
   </div>
   <div class="card">
-  <img src="assets/images/projects/kokoro-tts-service/optimized/hero.webp"
+    <img src="assets/images/projects/kokoro-tts-service/optimized/hero.webp"
+      srcset="assets/images/projects/kokoro-tts-service/optimized/hero-480.webp 480w, assets/images/projects/kokoro-tts-service/optimized/hero-640.webp 640w, assets/images/projects/kokoro-tts-service/optimized/hero.webp 900w"
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px"
        alt="Kokoro TTS Service"
        loading="lazy" width="900" height="483" decoding="async">
   <h3>Kokoro TTS Service</h3>
@@ -1848,7 +1848,7 @@ section#contact{
 </div>
 
   <div class="card">
-    <img src="assets/images/projects/onthegorentals/optimized/hero.webp" alt="OntheGoRentals" loading="lazy" width="202" height="188" decoding="async">
+    <img src="assets/images/projects/onthegorentals/optimized/hero.webp" srcset="assets/images/projects/onthegorentals/optimized/hero-480.webp 480w, assets/images/projects/onthegorentals/optimized/hero-640.webp 640w, assets/images/projects/onthegorentals/optimized/hero.webp 900w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px" alt="OntheGoRentals" loading="lazy" width="202" height="188" decoding="async">
     <h3>OntheGoRentals</h3>
 <p>A full-stack car rental platform with Vue.js frontend and Java Spring Boot backend, featuring user bookings, rental history management, and admin dashboards for fleet management, user roles, analytics, and content control, with secure JWT and Google OAuth2 authentication.</p>
     <div class="project-links">
@@ -1857,7 +1857,7 @@ section#contact{
     </div>
   </div>
   <div class="card">
-    <img src="assets/images/projects/nk-assessments/optimized/hero.webp" alt="nkassessments portal" loading="lazy" width="900" height="900" decoding="async">
+    <img src="assets/images/projects/nk-assessments/optimized/hero.webp" srcset="assets/images/projects/nk-assessments/optimized/hero-480.webp 480w, assets/images/projects/nk-assessments/optimized/hero-640.webp 640w, assets/images/projects/nk-assessments/optimized/hero.webp 900w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px" alt="nkassessments portal" loading="lazy" width="900" height="900" decoding="async">
     <h3>NK Assessments</h3>
     <p>Client-facing static portal built with HTML5, Bootstrap, and Dockerized Nginx—designed, shipped, and deployed in under 48 hours.</p>
     <div class="project-links">
@@ -1866,7 +1866,7 @@ section#contact{
     </div>
   </div>
   <div class="card">
-    <img src="assets/images/projects/codecritical/optimized/hero.webp" alt="CodeCritical" loading="lazy" width="900" height="615" decoding="async">
+    <img src="assets/images/projects/codecritical/optimized/hero.webp" srcset="assets/images/projects/codecritical/optimized/hero-480.webp 480w, assets/images/projects/codecritical/optimized/hero-640.webp 640w, assets/images/projects/codecritical/optimized/hero.webp 900w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px" alt="CodeCritical" loading="lazy" width="900" height="615" decoding="async">
     <h3>CodeCritical</h3>
     <p>Static Java code analysis tool designed to detect quality issues and improve maintainability.</p>
     <div class="project-links">
@@ -1874,7 +1874,9 @@ section#contact{
     </div>
   </div>
   <div class="card">
-  <img src="assets/images/projects/forkmyfolio/optimized/hero.webp"
+    <img src="assets/images/projects/forkmyfolio/optimized/hero.webp"
+      srcset="assets/images/projects/forkmyfolio/optimized/hero-480.webp 480w, assets/images/projects/forkmyfolio/optimized/hero-640.webp 640w, assets/images/projects/forkmyfolio/optimized/hero.webp 900w"
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px"
        alt="ForkMyFolio"
        loading="lazy" width="900" height="459" decoding="async">
   <h3>ForkMyFolio</h3>
@@ -1892,7 +1894,9 @@ section#contact{
 </div>
 
   <div class="card">
-  <img src="assets/images/projects/vibetype/optimized/hero.webp"
+    <img src="assets/images/projects/vibetype/optimized/hero.webp"
+      srcset="assets/images/projects/vibetype/optimized/hero-480.webp 480w, assets/images/projects/vibetype/optimized/hero-640.webp 640w, assets/images/projects/vibetype/optimized/hero.webp 900w"
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px"
        alt="Vibe‑Type"
        loading="lazy" width="900" height="611" decoding="async">
   <h3>Vibe‑Type</h3>
@@ -1914,7 +1918,7 @@ section#contact{
 
 
   <div class="card">
-  <img src="assets/images/projects/bored-room-cafe/optimized/hero.webp" alt="Bored Room Cafe" loading="lazy" width="900" height="445" decoding="async">
+  <img src="assets/images/projects/bored-room-cafe/optimized/hero.webp" srcset="assets/images/projects/bored-room-cafe/optimized/hero-480.webp 480w, assets/images/projects/bored-room-cafe/optimized/hero-640.webp 640w, assets/images/projects/bored-room-cafe/optimized/hero.webp 900w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px" alt="Bored Room Cafe" loading="lazy" width="900" height="445" decoding="async">
   <h3>Bored Room Cafe</h3>
   <p>A local homestyle takeaway and food‑service spot based in Ferness Estate — showcasing local flavour and simple ordering for busy families.</p>
   <div class="project-links">
@@ -2131,7 +2135,7 @@ section#contact{
   <p>We'd love to hear from you. Drop us a message and we'll get back to you as soon as possible.</p>
         
         <div class="contact-links">
-          <a href="mailto:admin@nemesisnet.co.za" target="_blank">
+          <a href="#contact" data-email-link="primary">
             <i class="fas fa-envelope"></i> Email
           </a>
           <a href="https://github.com/NemesisGuy" target="_blank">
@@ -2235,6 +2239,7 @@ function toggleTheme() {
 
 // Set initial icon based on current theme
 window.addEventListener('DOMContentLoaded', () => {
+  bindPrimaryEmailLinks();
   let saved = 'dark';
   try { saved = localStorage.getItem('theme') || 'dark'; } catch(e) {}
   setTheme(saved);
@@ -2290,15 +2295,46 @@ function toggleAuroraMode(){
   setAurora(!on);
 }
 
+function getPrimaryEmail(){
+  return `admin${String.fromCharCode(64)}nemesisnet.co.za`;
+}
+
+function bindPrimaryEmailLinks(){
+  const email = getPrimaryEmail();
+  document.querySelectorAll('[data-email-link="primary"]').forEach((link) => {
+    link.setAttribute('href', `mailto:${email}`);
+  });
+}
+
 // Keep CSS --nav-height in sync with actual navbar height
+let navHeightRaf = 0;
+let navObserver;
+
 function setNavHeightVar(){
   const nav = document.getElementById('navbar');
   if(!nav) return;
-  const h = nav.offsetHeight;
+  const h = Math.round(nav.getBoundingClientRect().height);
   document.documentElement.style.setProperty('--nav-height', h + 'px');
 }
-window.addEventListener('DOMContentLoaded', setNavHeightVar);
-window.addEventListener('resize', setNavHeightVar);
+
+function queueNavHeightUpdate(){
+  if(navHeightRaf) return;
+  navHeightRaf = window.requestAnimationFrame(() => {
+    navHeightRaf = 0;
+    setNavHeightVar();
+  });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  queueNavHeightUpdate();
+  const nav = document.getElementById('navbar');
+  if(nav && 'ResizeObserver' in window){
+    navObserver = new ResizeObserver(() => queueNavHeightUpdate());
+    navObserver.observe(nav);
+  }
+});
+window.addEventListener('resize', queueNavHeightUpdate, { passive: true });
+window.addEventListener('orientationchange', queueNavHeightUpdate, { passive: true });
 
 // Mobile nav toggle
 // Mobile nav control helpers: open, close, toggle and overlay handling
@@ -2513,7 +2549,7 @@ function handleContact(e){
   const message = document.getElementById('cmessage').value.trim();
   const subject = encodeURIComponent(`Website contact from ${name}`);
   const body = encodeURIComponent(`Name: ${name}%0AEmail: ${email}%0A%0A${message}`);
-  const mailto = `mailto:admin@nemesisnet.co.za?subject=${subject}&body=${body}`;
+  const mailto = `mailto:${getPrimaryEmail()}?subject=${subject}&body=${body}`;
   // open mail client
   window.location.href = mailto;
 }
