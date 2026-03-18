@@ -137,13 +137,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
-  <link rel="preload" as="style" href="styles/nemesis-mode.css">
-  <link rel="preload" as="style" href="styles/aurora-mode.css">
+  <link rel="preload" as="style" href="styles/nemesis-mode.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="styles/aurora-mode.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles/nemesis-mode.css"></noscript>
+  <noscript><link rel="stylesheet" href="styles/aurora-mode.css"></noscript>
 
 <!-- Fonts are preloaded above; noscript fallback covers non-JS browsers -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="styles/nemesis-mode.css">
-<link rel="stylesheet" href="styles/aurora-mode.css">
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 <style>
 .avatar-wrap{
   width:350px;
@@ -725,6 +726,22 @@ html[data-theme="light"][data-nemesis="on"] .card .project-link:hover{
 }
 .footer-line a:hover { color: var(--accent-color); }
 .footer-line .footer-divider { opacity:0.6; }
+
+[data-theme="light"] .site-footer {
+  color: rgba(26,26,26,0.82);
+  background: rgba(255,255,255,0.92);
+  border-top-color: rgba(10,14,39,0.12);
+}
+[data-theme="light"] .footer-line a {
+  color: #1a4da6;
+}
+[data-theme="light"] .footer-line a:hover {
+  color: #12397d;
+}
+[data-theme="light"] .footer-line .footer-divider {
+  color: rgba(26,26,26,0.72);
+  opacity: 1;
+}
 
 /* About Section */
 .about-content {
@@ -1369,6 +1386,27 @@ html[data-theme="light"][data-nemesis="on"] .nav-logo img {
   border-color: var(--accent-color);
 }
 
+.skip-link {
+  position: absolute;
+  top: -48px;
+  left: 12px;
+  background: var(--accent-color);
+  color: #0a0e27;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 20000;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 12px;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
 /* Sexy glassmorphic chevron */
 .chevron { 
   position:fixed; 
@@ -1713,10 +1751,12 @@ section#contact{
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <nav id="navbar">
   <div class="nav-container">
     <a href="#" class="nav-logo">
-  <img src="assets/images/brand/Nemesis_Logo_Icon_nav.webp" alt="NemesisNet Logo" width="48" height="48" loading="lazy" decoding="async">
+  <img src="assets/images/brand/Nemesis_Logo_Icon_nav.webp" alt="NemesisNet Logo" width="48" height="48" loading="eager" decoding="async" fetchpriority="high">
       <span>NemesisNet</span>
     </a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="toggleNav()">
@@ -1736,7 +1776,7 @@ section#contact{
       <button class="theme-toggle" id="nemesis-toggle" onclick="toggleNemesisMode()" aria-label="Toggle Nemesis Mode" title="Nemesis Mode">
         <i class="fas fa-robot"></i>
       </button>
-      <button class="theme-toggle" onclick="toggleTheme()">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light and dark theme" title="Toggle light and dark theme">
         <i class="fas fa-sun" id="theme-icon"></i>
       </button>
     </div>
@@ -1772,6 +1812,8 @@ section#contact{
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16.5l-6-6 1.4-1.4L12 13.7l4.6-4.6L18 10.5z"/></svg>
   </a>
 </header>
+
+<main id="main-content">
 
 <section id="projects">
   <h2><i class="fas fa-code"></i> Highlighted Projects</h2>
@@ -2122,6 +2164,8 @@ section#contact{
   </div>
 
 </section>
+
+</main>
 
 <footer class="site-footer">
   <div class="footer-line">
