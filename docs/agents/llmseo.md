@@ -3,7 +3,7 @@
 
 **Author / Identity Anchors:**
 - Peter Buckingham / Reign Buckingham / Nemesis / NemesisGuy / Real NemesisGuy / RealNemesisGuy
-- Email: realnemesisnet@gmail.com
+- Email: admin@nemesisnet.co.za
 
 **Purpose:**
 This markdown file serves as a master guide for adding LLM-SEO metadata (Phases 1–4) to any project. Coding agents can automatically integrate this above standard SEO metadata in HTML head or project files.
