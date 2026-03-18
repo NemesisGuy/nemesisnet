@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -128,7 +128,7 @@
   <link rel="shortcut icon" href="assets/images/brand/Nemesis_Logo_Icon.ico">
   <meta name="theme-color" content="#0a0a0a">
   <meta property="og:locale" content="en_ZA">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://metrics.nemesisnet.co.za https://static.cloudflareinsights.com; connect-src 'self' https://metrics.nemesisnet.co.za https://cloudflareinsights.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' https: data:;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://metrics.nemesisnet.co.za https://static.cloudflareinsights.com; connect-src 'self' https://metrics.nemesisnet.co.za https://cloudflareinsights.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' https: data:;">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/brand/Nemesis_Logo_Icon.png">
   
   <!-- Performance: preconnect to Google Fonts and preload critical assets -->
@@ -142,8 +142,6 @@
   <noscript><link rel="stylesheet" href="styles/aurora-mode.css"></noscript>
 
 <!-- Fonts are preloaded above; noscript fallback covers non-JS browsers -->
-<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 <style>
 .avatar-wrap{
   width:350px;
@@ -330,7 +328,7 @@ body {
   background-attachment: fixed; 
   color:var(--text-color); 
   line-height:1.7; 
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+  transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
   /* Offset page content so the fixed nav doesn't overlap */
   padding-top: var(--nav-height, 60px);
 }
@@ -697,11 +695,11 @@ html[data-theme="light"][data-nemesis="on"] .card .project-link:hover{
 .site-footer { 
   text-align:center; 
   padding:32px 20px; 
-  background: var(--glass-bg);
-  border-top:1px solid var(--glass-border);
+  background: rgba(8,12,28,0.78);
+  border-top:1px solid rgba(255,255,255,0.16);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  color:var(--text-muted); 
+  color:rgba(244,244,244,0.9); 
   font-size:0.85rem;
   margin-top: 80px;
   scroll-snap-align:start;
@@ -716,15 +714,15 @@ html[data-theme="light"][data-nemesis="on"] .card .project-link:hover{
   font-size:0.85rem;
 }
 .footer-line a {
-  color:var(--secondary-accent);
+  color:#8cc4ff;
   text-decoration:none;
   font-weight:600;
   display:inline-flex;
   align-items:center;
   gap:6px;
 }
-.footer-line a:hover { color: var(--accent-color); }
-.footer-line .footer-divider { opacity:0.6; }
+.footer-line a:hover { color: #c7e3ff; }
+.footer-line .footer-divider { color: rgba(244,244,244,0.8); opacity:1; }
 
 [data-theme="light"] .site-footer {
   color: rgba(26,26,26,0.82);
@@ -1353,6 +1351,18 @@ html[data-theme="light"][data-nemesis="on"] .nav-logo img {
   background: var(--glass-bg);
   color: var(--accent-color);
 }
+
+.glyph-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-size: 1.05rem;
+}
+
+.nav-toggle .glyph-icon {
+  font-size: 1.2rem;
+}
 .nav-links a {
   padding: 8px 16px;
   background: transparent;
@@ -1758,7 +1768,7 @@ section#contact{
       <span>NemesisNet</span>
     </a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="toggleNav()">
-      <i class="fas fa-bars"></i>
+      <span class="glyph-icon" aria-hidden="true">☰</span>
     </button>
     <div class="nav-links">
     <a href="#projects">Projects</a>
@@ -1769,13 +1779,13 @@ section#contact{
     <a href="https://brand.nemesisnet.co.za">Brand Guide</a>
     <a href="https://blog.nemesisnet.co.za/" target="_blank" rel="noopener noreferrer" title="Visit the NemesisNet Blog" aria-label="NemesisNet Blog">Blog</a>
       <button class="theme-toggle" id="aurora-toggle" onclick="toggleAuroraMode()" aria-label="Toggle Aurora Mode" title="Aurora Mode">
-        <i class="fas fa-star"></i>
+        <span class="glyph-icon" aria-hidden="true">✦</span>
       </button>
       <button class="theme-toggle" id="nemesis-toggle" onclick="toggleNemesisMode()" aria-label="Toggle Nemesis Mode" title="Nemesis Mode">
-        <i class="fas fa-robot"></i>
+        <span class="glyph-icon" aria-hidden="true">⚙</span>
       </button>
       <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light and dark theme" title="Toggle light and dark theme">
-        <i class="fas fa-sun" id="theme-icon"></i>
+        <span class="glyph-icon" id="theme-icon" aria-hidden="true">☀</span>
       </button>
     </div>
   </div>
@@ -1798,12 +1808,12 @@ section#contact{
   <div class="hero-content">
   <p class="hero-intro"><strong>NemesisNet</strong> engineers AI-powered platforms, backend systems, and automation infrastructure — from self-hosted AI pipelines and agent integrations to production-grade full-stack systems.</p>
     <div class="hero-links">
-  <a href="#projects"><i class="fas fa-briefcase"></i> Our Work</a>
-    <a href="https://blog.nemesisnet.co.za/" target="_blank" rel="noopener noreferrer" title="Visit the NemesisNet Blog" aria-label="NemesisNet Blog"><i class="fas fa-book"></i> Our Blog</a>
+  <a href="#projects">Our Work</a>
+    <a href="https://blog.nemesisnet.co.za/" target="_blank" rel="noopener noreferrer" title="Visit the NemesisNet Blog" aria-label="NemesisNet Blog">Our Blog</a>
 
-  <a href="https://github.com/NemesisGuy" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-  <a href="#contact" data-email-link="primary"><i class="fas fa-envelope"></i> Contact Us</a>
-  <a href="https://forkmyfolio.nemesisnet.co.za/nemesis/" target="_blank"><i class="fas fa-external-link-alt"></i> Our Portfolio</a>
+  <a href="https://github.com/NemesisGuy" target="_blank">GitHub</a>
+  <a href="#contact" data-email-link="primary">Contact Us</a>
+  <a href="https://forkmyfolio.nemesisnet.co.za/nemesis/" target="_blank">Our Portfolio</a>
     </div>
   </div>
   <a href="#projects" class="chevron" aria-label="Scroll to projects">
@@ -1814,7 +1824,7 @@ section#contact{
 <main id="main-content">
 
 <section id="projects">
-  <h2><i class="fas fa-code"></i> Highlighted Projects</h2>
+  <h2>Highlighted Projects</h2>
   
   
   <div class="projects-grid">
@@ -1823,8 +1833,8 @@ section#contact{
     <h3>WordPress MCP Server</h3>
     <p>Lightweight MCP bridge that lets AI agents read, update, and manage WordPress content securely via a local-first server.</p>
     <div class="project-links">
-      <a class="project-link project-link--github" href="https://github.com/NemesisGuy/WordPress-MCP" target="_blank"><i class="fab fa-github"></i> View Project</a>
-      <a class="project-link project-link--demo" href="https://blog.nemesisnet.co.za/bring-wordpress-into-your-agent-workflows-with-the-wordpress-mcp-server" target="_blank"><i class="fas fa-book-open"></i> Deep Dive</a>
+      <a class="project-link project-link--github" href="https://github.com/NemesisGuy/WordPress-MCP" target="_blank">View Project</a>
+      <a class="project-link project-link--demo" href="https://blog.nemesisnet.co.za/bring-wordpress-into-your-agent-workflows-with-the-wordpress-mcp-server" target="_blank">Deep Dive</a>
     </div>
   </div>
   <div class="card">
@@ -1838,11 +1848,11 @@ section#contact{
   <div class="project-links">
     <a class="project-link project-link--github"
        href="https://github.com/NemesisGuy/Kokoro_TTS_Service" target="_blank">
-       <i class="fab fa-github"></i> View Project
+       View Project
     </a>
     <a class="project-link project-link--demo"
        href="https://kokoro-gui.nemesisnet.co.za" target="_blank">
-       <i class="fas fa-external-link-alt"></i> Live Demo
+       Live Demo
     </a>
   </div>
 </div>
@@ -1852,8 +1862,8 @@ section#contact{
     <h3>OntheGoRentals</h3>
 <p>A full-stack car rental platform with Vue.js frontend and Java Spring Boot backend, featuring user bookings, rental history management, and admin dashboards for fleet management, user roles, analytics, and content control, with secure JWT and Google OAuth2 authentication.</p>
     <div class="project-links">
-      <a class="project-link project-link--github" href="https://github.com/NemesisGuy/OnTheGoRentals" target="_blank"><i class="fab fa-github"></i> View Project</a>
-      <a class="project-link project-link--demo" href="https://otgr.nemesisnet.co.za" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+      <a class="project-link project-link--github" href="https://github.com/NemesisGuy/OnTheGoRentals" target="_blank">View Project</a>
+      <a class="project-link project-link--demo" href="https://otgr.nemesisnet.co.za" target="_blank">Live Demo</a>
     </div>
   </div>
   <div class="card">
@@ -1861,8 +1871,8 @@ section#contact{
     <h3>NK Assessments</h3>
     <p>Client-facing static portal built with HTML5, Bootstrap, and Dockerized Nginx—designed, shipped, and deployed in under 48 hours.</p>
     <div class="project-links">
-      <a class="project-link project-link--github" href="https://github.com/NemesisGuy/NKAssessments" target="_blank"><i class="fab fa-github"></i> Source</a>
-      <a class="project-link project-link--demo" href="https://nkassessments.nemesisnet.co.za" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+      <a class="project-link project-link--github" href="https://github.com/NemesisGuy/NKAssessments" target="_blank">Source</a>
+      <a class="project-link project-link--demo" href="https://nkassessments.nemesisnet.co.za" target="_blank">Live Demo</a>
     </div>
   </div>
   <div class="card">
@@ -1870,7 +1880,7 @@ section#contact{
     <h3>CodeCritical</h3>
     <p>Static Java code analysis tool designed to detect quality issues and improve maintainability.</p>
     <div class="project-links">
-      <a class="project-link project-link--github" href="https://github.com/NemesisGuy/CodeCritical" target="_blank"><i class="fab fa-github"></i> View Project</a>
+      <a class="project-link project-link--github" href="https://github.com/NemesisGuy/CodeCritical" target="_blank">View Project</a>
     </div>
   </div>
   <div class="card">
@@ -1884,11 +1894,11 @@ section#contact{
   <div class="project-links">
     <a class="project-link project-link--github"
        href="https://github.com/NemesisGuy/ForkMyFolio-frontend" target="_blank">
-       <i class="fab fa-github"></i> View Project
+       View Project
     </a>
     <a class="project-link project-link--demo"
        href="https://forkmyfolio.nemesisnet.co.za" target="_blank">
-       <i class="fas fa-external-link-alt"></i> Live Demo
+       Live Demo
     </a>
   </div>
 </div>
@@ -1904,14 +1914,14 @@ section#contact{
   <div class="project-links">
     <a class="project-link project-link--github"
        href="https://github.com/NemesisGuy/Vibe-Type" target="_blank">
-       <i class="fab fa-github"></i> View Project
+       View Project
     </a>
     <a class="project-link project-link--blog"
        href="https://blog.nemesisnet.co.za/vibetype-building-a-local-first-voice-coding-companion/"
        target="_blank" rel="noopener noreferrer"
        title="Read about Vibe‑Type on the NemesisNet Blog"
        aria-label="Vibe‑Type Blog Post">
-       <i class="fas fa-book-open"></i> Deep Dive
+       Deep Dive
     </a>
   </div>
 </div>
@@ -1922,15 +1932,15 @@ section#contact{
   <h3>Bored Room Cafe</h3>
   <p>A local homestyle takeaway and food‑service spot based in Ferness Estate — showcasing local flavour and simple ordering for busy families.</p>
   <div class="project-links">
-    <a class="project-link project-link--github" href="https://github.com/NemesisGuy/Bored-Room-Cafe" target="_blank"><i class="fab fa-github"></i> View Project</a>
-    <a class="project-link project-link--demo" href="https://boredroomcafe.nemesisnet.co.za" target="_blank"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+    <a class="project-link project-link--github" href="https://github.com/NemesisGuy/Bored-Room-Cafe" target="_blank">View Project</a>
+    <a class="project-link project-link--demo" href="https://boredroomcafe.nemesisnet.co.za" target="_blank">Visit Site</a>
   </div>
 </div>
 
 </section>
 
 <section id="about">
-  <h2><i class="fas fa-briefcase"></i> About NemesisNet</h2>
+  <h2>About NemesisNet</h2>
   <div class="about-content">
     <div class="about-text">
       <p>NemesisNet builds real AI infrastructure — not API wrappers. Our work includes self-hosted AI runtimes, text-to-speech pipelines, MCP integrations, agent automation backends, and production-grade full-stack platforms.</p>
@@ -1998,7 +2008,7 @@ section#contact{
 </section>
 
 <section id="process">
-  <h2><i class="fas fa-diagram-project"></i> How Projects Work</h2>
+  <h2>How Projects Work</h2>
   <p class="process-intro">A structured process keeps delivery predictable, technical risk visible, and decisions aligned before engineering time is burned.</p>
   <p class="process-intro-secondary">Without proper scoping, projects usually drift into scope creep, deadline slips, and expensive rework.</p>
   <div class="process-grid">
@@ -2026,7 +2036,7 @@ section#contact{
 </section>
 
 <section id="pricing">
-  <h2><i class="fas fa-receipt"></i> Pricing Guide</h2>
+  <h2>Pricing Guide</h2>
   <p class="pricing-trust">Most projects begin with a short discovery call to clarify scope, architecture, and timelines.</p>
   <p class="pricing-intro">Transparent starting-from pricing to help with planning. Final quotes are confirmed after a short discovery call and technical scoping session.</p>
 
@@ -2042,14 +2052,14 @@ section#contact{
         <li>Nginx and Docker deployment baseline included.</li>
       </ul>
       <div class="pricing-foot">
-        <a class="project-link pricing-cta" href="#contact"><i class="fas fa-paper-plane"></i> Start A Project</a>
+        <a class="project-link pricing-cta" href="#contact">Start A Project</a>
       </div>
     </article>
 
     <article class="card pricing-card pricing-card--featured">
       <div class="pricing-title-row">
         <h3 class="pricing-title">Pro Full-Stack Platform</h3>
-        <span class="pricing-badge"><i class="fas fa-star" aria-hidden="true"></i> Most Popular</span>
+        <span class="pricing-badge">Most Popular</span>
       </div>
       <div class="pricing-price">R110,000</div>
       <div class="pricing-unit">Starting from</div>
@@ -2060,7 +2070,7 @@ section#contact{
         <li>Built to ship and scale, not just to demo.</li>
       </ul>
       <div class="pricing-foot">
-        <a class="project-link pricing-cta" href="#contact"><i class="fas fa-paper-plane"></i> Discuss Scope</a>
+        <a class="project-link pricing-cta" href="#contact">Discuss Scope</a>
       </div>
     </article>
 
@@ -2075,7 +2085,7 @@ section#contact{
         <li>Final quote is set after discovery and technical scoping.</li>
       </ul>
       <div class="pricing-foot">
-        <a class="project-link pricing-cta" href="#contact"><i class="fas fa-paper-plane"></i> Plan AI Build</a>
+        <a class="project-link pricing-cta" href="#contact">Plan AI Build</a>
       </div>
     </article>
 
@@ -2090,7 +2100,7 @@ section#contact{
         <li>Multi-system automation without fragile glue-code sprawl.</li>
       </ul>
       <div class="pricing-foot">
-        <a class="project-link pricing-cta" href="#contact"><i class="fas fa-paper-plane"></i> Design Integration</a>
+        <a class="project-link pricing-cta" href="#contact">Design Integration</a>
       </div>
     </article>
 
@@ -2104,7 +2114,7 @@ section#contact{
         <li>Managed Retainer: from R4,500/month for CI/CD, monitoring, fixes, and continuous improvement.</li>
       </ul>
       <div class="pricing-foot">
-        <a class="project-link pricing-cta" href="#contact"><i class="fas fa-paper-plane"></i> Choose Support Tier</a>
+        <a class="project-link pricing-cta" href="#contact">Choose Support Tier</a>
       </div>
     </article>
 
@@ -2119,7 +2129,7 @@ section#contact{
         <li>Best before you build, not after something breaks.</li>
       </ul>
       <div class="pricing-foot">
-        <a class="project-link pricing-cta" href="#contact"><i class="fas fa-paper-plane"></i> Book Session</a>
+        <a class="project-link pricing-cta" href="#contact">Book Session</a>
       </div>
     </article>
   </div>
@@ -2129,23 +2139,23 @@ section#contact{
 
 <section id="contact">
   <div class="contact-inner">
-    <h2><i class="fas fa-paper-plane"></i> Get In Touch</h2>
+    <h2>Get In Touch</h2>
     <div class="contact-grid">
       <div class="contact-info">
   <p>We'd love to hear from you. Drop us a message and we'll get back to you as soon as possible.</p>
         
         <div class="contact-links">
           <a href="#contact" data-email-link="primary">
-            <i class="fas fa-envelope"></i> Email
+            Email
           </a>
           <a href="https://github.com/NemesisGuy" target="_blank">
-            <i class="fab fa-github"></i> GitHub
+            GitHub
           </a>
           <a href="https://www.linkedin.com/in/peter-buckingham-65438757" target="_blank">
-            <i class="fab fa-linkedin"></i> LinkedIn
+            LinkedIn
           </a>
           <a href="https://forkmyfolio.nemesisnet.co.za/nemesis" target="_blank">
-            <i class="fas fa-globe"></i> Portfolio
+            Portfolio
           </a>
         </div>
       </div>
@@ -2175,7 +2185,7 @@ section#contact{
   <div class="footer-line">
     <span>@ <span id="footer-year"></span></span>
     <span class="footer-divider">|</span>
-    <span>Built by <a href="https://github.com/NemesisGuy" target="_blank" rel="noopener"><i class="fab fa-github"></i> NemesisGuy</a></span>
+    <span>Built by <a href="https://github.com/NemesisGuy" target="_blank" rel="noopener">NemesisGuy</a></span>
     <span class="footer-divider">|</span>
     <span>Powered by <a href="https://nemesisnet.co.za" target="_blank" rel="noopener">NemesisNet.co.za</a></span>
     <span class="footer-divider">|</span>
@@ -2223,10 +2233,10 @@ function setTheme(theme){
   const next = (theme === 'light') ? 'light' : 'dark';
   if(next === 'dark'){
     root.removeAttribute('data-theme');
-    if(themeIcon) themeIcon.className = 'fas fa-moon';
+    if(themeIcon) themeIcon.textContent = '☾';
   } else {
     root.setAttribute('data-theme', 'light');
-    if(themeIcon) themeIcon.className = 'fas fa-sun';
+    if(themeIcon) themeIcon.textContent = '☀';
   }
   try { localStorage.setItem('theme', next); } catch(e) {}
 }
