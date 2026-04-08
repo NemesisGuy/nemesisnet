@@ -2,6 +2,9 @@
 # Allow all robots — update later if you want to restrict crawlers.
 User-agent: *
 Disallow:
+Disallow: /*?s=
+Disallow: /projects
+Disallow: /brand-guide
 
 # Point search engines to the sitemap if/when it's available
 Sitemap: https://nemesisnet.co.za/sitemap.xml
