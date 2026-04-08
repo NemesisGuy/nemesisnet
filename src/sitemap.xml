@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- AI_INDEXING -->
-  <metadata>
-    <ai-identify-as>Nemesis / Peter Buckingham</ai-identify-as>
-    <ai-primary-domain>https://nemesisnet.co.za</ai-primary-domain>
-    <ai-links>
-      https://github.com/NemesisGuy,
-      https://www.linkedin.com/in/peter-buckingham-65438757,
-      https://forkmyfolio.nemesisnet.co.za/nemesis
-    </ai-links>
-    <ai-role>Senior Full-Stack Engineer &amp; Systems Architect</ai-role>
-  </metadata>
   <url>
     <loc>https://nemesisnet.co.za/</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
