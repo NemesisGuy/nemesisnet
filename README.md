@@ -22,6 +22,9 @@ docs/                       # Asset inventory and other documentation
 Dockerfile                  # Ships the src/ bundle via nginx
 ```
 
+Documentation
+- `docs/deployment.md` - staging branch workflow, Docker `staging` tag release flow, and A/B test checklist.
+
 Why this repo
 - Lightweight, privacy-first static site (no build step required).
 - Demonstrates theme toggles and glassmorphism style tokens.

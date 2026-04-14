@@ -1057,6 +1057,197 @@ html[data-theme="light"][data-nemesis="on"] .footer-line .footer-divider {
   font-size: 0.92rem;
 }
 
+.policy-doc {
+  max-width: 960px;
+  margin: 18px auto 0;
+  text-align: left;
+}
+
+.policy-block {
+  margin-bottom: 18px;
+  padding: 16px 18px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+}
+
+.policy-block h3 {
+  margin: 0 0 8px;
+  color: var(--accent-color);
+  font-size: 1rem;
+}
+
+.policy-block p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.policy-block ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.policy-block li {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 4px 0;
+}
+
+.service-doc {
+  max-width: 1200px;
+  margin: 20px auto 0;
+  text-align: left;
+}
+
+.service-heading {
+  margin: 0 0 10px;
+  color: var(--accent-color);
+  font-size: 1.05rem;
+}
+
+.service-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+  margin-bottom: 24px;
+}
+
+.service-block {
+  padding: 14px 16px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.service-block h4 {
+  margin: 0 0 10px;
+  color: var(--accent-color);
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.service-list {
+  margin: 8px 0 16px;
+  padding-left: 18px;
+}
+
+.service-list li {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 6px 0;
+}
+
+.service-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+@media (max-width: 900px) {
+  .service-columns {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+.service-links a {
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--glass-border);
+  background: color-mix(in srgb, var(--glass-bg) 84%, transparent);
+  color: var(--text-color);
+  font-weight: 600;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.service-links a:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #0a0e27;
+  transform: translateY(-1px);
+}
+
+section[id] {
+  scroll-margin-top: 96px;
+}
+
+.footer-links-grid {
+  max-width: 1100px;
+  margin: 0 auto 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  text-align: left;
+}
+
+.footer-group {
+  padding: 0;
+}
+
+.footer-group h4 {
+  margin: 0 0 10px;
+  color: var(--accent-color);
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.footer-group a {
+  display: block;
+  margin: 6px 0;
+  width: fit-content;
+  color: #8cc4ff;
+  text-decoration: none;
+  font-weight: 550;
+  font-size: 0.9rem;
+  position: relative;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-group a:hover {
+  color: #c7e3ff;
+  transform: translateX(2px);
+}
+
+.footer-group a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.2s ease;
+}
+
+.footer-group a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .footer-links-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .footer-group a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+[data-theme="light"] .footer-group a {
+  color: #1a4da6;
+}
+
+[data-theme="light"] .footer-group a:hover {
+  color: #12397d;
+}
+
 .pricing-note strong {
   color: var(--text-color);
 }
@@ -1187,18 +1378,18 @@ html[data-theme="light"][data-nemesis="on"] .footer-line .footer-divider {
   .nav-logo img { width: 24px; height: 24px; }
 
   .nav-toggle { display: inline-flex; }
-  .nav-links { 
-    display: none; 
-    position: absolute; 
-    top: 100%; 
-    right: 16px; 
-    left: 16px; 
-    flex-direction: column; 
-    background: var(--glass-bg); 
-    border: 1px solid var(--glass-border); 
-    border-radius: 12px; 
-    padding: 8px; 
-    gap: 8px; 
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 16px;
+    left: 16px;
+    flex-direction: column;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 8px;
+    gap: 8px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.2);
   }
   nav.open .nav-links { display: flex; }
@@ -1870,12 +2061,9 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
       <span class="glyph-icon" aria-hidden="true">☰</span>
     </button>
     <div class="nav-links">
-    <a href="/#projects">Projects</a>
-    <a href="/#about">About</a>
-    <a href="/#process">How We Work</a>
-    <a href="/#pricing">Pricing</a>
-    <a href="/#contact">Contact</a>
-    <a href="https://brand.nemesisnet.co.za">Brand Guide</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
     <a href="https://blog.nemesisnet.co.za/" target="_blank" rel="noopener noreferrer" title="Visit the NemesisNet Blog" aria-label="NemesisNet Blog">Blog</a>
       <button class="theme-toggle" id="aurora-toggle" onclick="toggleAuroraMode()" aria-label="Toggle Aurora Mode" title="Aurora Mode">
         <span class="glyph-icon" aria-hidden="true">✦</span>
@@ -1907,20 +2095,95 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
   <div class="hero-content">
   <p class="hero-intro"><strong>NemesisNet</strong> builds AI infrastructure and full-stack systems for real production workloads.</p>
     <div class="hero-links">
-  <a href="/#projects">Our Work</a>
+  <a href="#projects">Our Work</a>
     <a href="https://blog.nemesisnet.co.za/" target="_blank" rel="noopener noreferrer" title="Visit the NemesisNet Blog" aria-label="NemesisNet Blog">Our Blog</a>
 
   <a href="https://github.com/NemesisGuy" target="_blank">GitHub</a>
-  <a href="/#contact" data-email-link="primary">Contact Us</a>
+  <a href="#contact" data-email-link="primary">Contact Us</a>
   <a href="https://forkmyfolio.nemesisnet.co.za/nemesis/" target="_blank">Our Portfolio</a>
     </div>
   </div>
-  <a href="/#projects" class="chevron" aria-label="Scroll to projects">
+  <a href="#projects" class="chevron" aria-label="Scroll to projects">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16.5l-6-6 1.4-1.4L12 13.7l4.6-4.6L18 10.5z"/></svg>
   </a>
 </header>
 
 <main id="main-content">
+
+<section id="services">
+  <h2>Software Engineering And Systems Development</h2>
+  <p class="process-intro">NemesisNet provides backend systems, SaaS platforms, and scalable infrastructure for businesses and startups.</p>
+  <div class="service-doc">
+    <h3 class="service-heading">Core Services</h3>
+    <div class="service-columns">
+      <article class="service-block">
+        <h4>1. Custom Software Development</h4>
+        <ul class="service-list">
+          <li>Full-stack application development</li>
+          <li>REST APIs (Spring Boot, Java)</li>
+          <li>Secure authentication (JWT, RBAC)</li>
+          <li>Database design (MySQL, JPA)</li>
+        </ul>
+      </article>
+      <article class="service-block">
+        <h4>2. SaaS Development</h4>
+        <ul class="service-list">
+          <li>Multi-tenant systems</li>
+          <li>Subscription-based platforms</li>
+          <li>API-driven architectures</li>
+          <li>Scalable deployments</li>
+        </ul>
+      </article>
+      <article class="service-block">
+        <h4>3. Backend And Infrastructure Engineering</h4>
+        <ul class="service-list">
+          <li>High-performance backend systems</li>
+          <li>Redis caching and queue patterns</li>
+          <li>Dockerized deployments</li>
+          <li>Nginx reverse proxy setups</li>
+        </ul>
+      </article>
+      <article class="service-block">
+        <h4>4. System Design And Consulting</h4>
+        <ul class="service-list">
+          <li>Architecture planning (DDD, Clean Architecture)</li>
+          <li>Performance optimization</li>
+          <li>Codebase restructuring</li>
+          <li>Technical advisory</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="service-columns">
+      <article class="service-block">
+        <h3 class="service-heading">Engagement Model</h3>
+        <ul class="service-list">
+          <li>Fixed-price projects (defined scope)</li>
+          <li>Hourly consulting</li>
+          <li>Monthly SaaS subscriptions</li>
+          <li>Custom enterprise solutions</li>
+        </ul>
+      </article>
+      <article class="service-block">
+        <h3 class="service-heading">How We Work</h3>
+        <ol class="service-list">
+          <li>Initial consultation</li>
+          <li>Requirements analysis</li>
+          <li>Proposal and agreement</li>
+          <li>Development and iteration</li>
+          <li>Delivery and support</li>
+        </ol>
+        <p>Clients are typically acquired through referrals, direct outreach, and online presence.</p>
+      </article>
+    </div>
+
+    <div class="service-links">
+      <a href="#projects">View Projects</a>
+      <a href="#contact">Request A Quote</a>
+      <a href="#refund-policy">Refund Policy</a>
+    </div>
+  </div>
+</section>
 
 <section id="projects">
   <h2>Highlighted Projects</h2>
@@ -2151,7 +2414,7 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
         <li>Nginx and Docker deployment baseline included.</li>
       </ul>
       <div class="pricing-foot">
-        <a class="project-link pricing-cta" href="/#contact">Start A Project</a>
+        <a class="project-link pricing-cta" href="#contact">Start A Project</a>
       </div>
     </article>
 
@@ -2169,7 +2432,7 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
         <li>Built to ship and scale, not just to demo.</li>
       </ul>
       <div class="pricing-foot">
-        <a class="project-link pricing-cta" href="/#contact">Discuss Scope</a>
+        <a class="project-link pricing-cta" href="#contact">Discuss Scope</a>
       </div>
     </article>
 
@@ -2184,7 +2447,7 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
         <li>Final quote is set after discovery and technical scoping.</li>
       </ul>
       <div class="pricing-foot">
-        <a class="project-link pricing-cta" href="/#contact">Plan AI Build</a>
+        <a class="project-link pricing-cta" href="#contact">Plan AI Build</a>
       </div>
     </article>
 
@@ -2199,7 +2462,7 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
         <li>Multi-system automation without fragile glue-code sprawl.</li>
       </ul>
       <div class="pricing-foot">
-        <a class="project-link pricing-cta" href="/#contact">Design Integration</a>
+        <a class="project-link pricing-cta" href="#contact">Design Integration</a>
       </div>
     </article>
 
@@ -2213,7 +2476,7 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
         <li>Managed Retainer: from R4,500/month for CI/CD, monitoring, fixes, and continuous improvement.</li>
       </ul>
       <div class="pricing-foot">
-        <a class="project-link pricing-cta" href="/#contact">Choose Support Tier</a>
+        <a class="project-link pricing-cta" href="#contact">Choose Support Tier</a>
       </div>
     </article>
 
@@ -2228,12 +2491,127 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
         <li>Best before you build, not after something breaks.</li>
       </ul>
       <div class="pricing-foot">
-        <a class="project-link pricing-cta" href="/#contact">Book Session</a>
+        <a class="project-link pricing-cta" href="#contact">Book Session</a>
       </div>
     </article>
   </div>
 
   <p class="pricing-note"><strong>Note:</strong> prices are starting-from benchmarks for South Africa/Cape Town market context. Final pricing depends on scope, delivery timeline, integrations, and support requirements.</p>
+</section>
+
+<section id="refund-policy">
+  <h2>Refund And Cancellation Policy</h2>
+  <p class="pricing-trust">Effective Date: 14 April 2026</p>
+  <div class="policy-doc">
+    <article class="policy-block">
+      <h3>1. Overview</h3>
+      <p>NemesisNet provides custom software development, consulting, and SaaS-based services. Due to the nature of digital and custom-built solutions, refunds are handled case-by-case under the terms below.</p>
+    </article>
+    <article class="policy-block">
+      <h3>2. Eligibility For Refunds</h3>
+      <ul>
+        <li>Project has not yet started.</li>
+        <li>Service cannot be delivered due to technical or operational constraints.</li>
+        <li>Mutual written agreement between NemesisNet and the client.</li>
+        <li>For subscriptions, requests must be submitted within 14 days of initial purchase and before substantial use.</li>
+      </ul>
+    </article>
+    <article class="policy-block">
+      <h3>3. Non-Refundable Services</h3>
+      <ul>
+        <li>Completed or partially completed custom development work.</li>
+        <li>Delivered digital products, source code, or deployments.</li>
+        <li>Consultation or advisory sessions already conducted.</li>
+        <li>Any service where significant time or resources have been allocated.</li>
+      </ul>
+    </article>
+    <article class="policy-block">
+      <h3>4. Partial Refunds</h3>
+      <p>If a project is cancelled mid-way, partial refunds may be issued based on the percentage of work completed and at NemesisNet's discretion.</p>
+    </article>
+    <article class="policy-block">
+      <h3>5. Refund Process</h3>
+      <ul>
+        <li>Contact: admin@nemesisnet.co.za</li>
+        <li>Include project or transaction reference.</li>
+        <li>Include reason for request.</li>
+      </ul>
+      <p>Approved refunds are processed via the original payment method. Processing fees may not be refundable where retained by payment providers.</p>
+    </article>
+    <article class="policy-block">
+      <h3>6. Processing Time And Cancellations</h3>
+      <ul>
+        <li>Refunds may take 3-10 business days after approval.</li>
+        <li>Before project start: full refund.</li>
+        <li>After project start: billed proportionally to completed work.</li>
+      </ul>
+      <p>Subscription services can be cancelled at any time, but cancellations do not guarantee retroactive refunds.</p>
+    </article>
+  </div>
+  <p class="pricing-note"><strong>Disputes:</strong> clients are encouraged to contact us first to resolve concerns before initiating chargebacks or formal disputes.</p>
+</section>
+
+<section id="terms-of-service">
+  <h2>Terms Of Service</h2>
+  <p class="pricing-trust">Effective Date: 14 April 2026</p>
+  <div class="policy-doc">
+    <article class="policy-block">
+      <h3>1. Scope Of Services</h3>
+      <p>NemesisNet provides software engineering, consulting, and subscription-based technical services as agreed in written proposals, statements of work, or approved communications.</p>
+    </article>
+    <article class="policy-block">
+      <h3>2. Quotations And Payment</h3>
+      <ul>
+        <li>Quotes are valid for 14 days unless otherwise stated.</li>
+        <li>Work starts after written acceptance and any required upfront payment.</li>
+        <li>Recurring services are billed on the selected cycle.</li>
+      </ul>
+    </article>
+    <article class="policy-block">
+      <h3>3. Client Responsibilities</h3>
+      <ul>
+        <li>Provide timely access to required accounts, content, and technical inputs.</li>
+        <li>Review deliverables and provide feedback within agreed timelines.</li>
+        <li>Use delivered systems lawfully.</li>
+      </ul>
+    </article>
+    <article class="policy-block">
+      <h3>4. Intellectual Property And Liability</h3>
+      <p>Ownership and licensing are defined per project agreement. Third-party tools remain subject to their original licenses. To the maximum extent permitted by law, NemesisNet is not liable for indirect, incidental, or consequential damages.</p>
+    </article>
+  </div>
+  <p class="pricing-note">For termination, either party may terminate in writing. Outstanding invoices for completed work remain payable. Refund handling follows the Refund Policy section above.</p>
+</section>
+
+<section id="privacy-policy">
+  <h2>Privacy Policy</h2>
+  <p class="pricing-trust">Effective Date: 14 April 2026</p>
+  <div class="policy-doc">
+    <article class="policy-block">
+      <h3>1. Information Collected</h3>
+      <ul>
+        <li>Contact information provided through forms or direct communication.</li>
+        <li>Operational and analytics data related to website usage.</li>
+        <li>Transaction information needed for payment processing.</li>
+      </ul>
+    </article>
+    <article class="policy-block">
+      <h3>2. How Information Is Used</h3>
+      <ul>
+        <li>To deliver requested services and support.</li>
+        <li>To communicate about projects, billing, and updates.</li>
+        <li>To improve reliability, security, and user experience.</li>
+      </ul>
+    </article>
+    <article class="policy-block">
+      <h3>3. Data Sharing And Security</h3>
+      <p>NemesisNet does not sell personal data. Data may be shared only with trusted processors where necessary to deliver services. Reasonable technical and organizational safeguards are used to protect data.</p>
+    </article>
+    <article class="policy-block">
+      <h3>4. Retention And Rights</h3>
+      <p>Data is retained only as needed for service delivery, compliance, and operations. You may request access, correction, or deletion by emailing admin@nemesisnet.co.za.</p>
+    </article>
+  </div>
 </section>
 
 <section id="contact">
@@ -2244,7 +2622,7 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
   <p>We'd love to hear from you. Drop us a message and we'll get back to you as soon as possible.</p>
         
         <div class="contact-links">
-          <a href="/#contact" data-email-link="primary">
+          <a href="#contact" data-email-link="primary">
             Email
           </a>
           <a href="https://github.com/NemesisGuy" target="_blank">
@@ -2281,6 +2659,26 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
 </main>
 
 <footer class="site-footer">
+  <div class="footer-links-grid">
+    <div class="footer-group">
+      <h4>Business</h4>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-group">
+      <h4>Legal</h4>
+      <a href="#refund-policy">Refund Policy</a>
+      <a href="#terms-of-service">Terms of Service</a>
+      <a href="#privacy-policy">Privacy Policy</a>
+    </div>
+    <div class="footer-group">
+      <h4>Links</h4>
+      <a href="https://blog.nemesisnet.co.za/" target="_blank" rel="noopener noreferrer">Blog</a>
+      <a href="https://brand.nemesisnet.co.za" target="_blank" rel="noopener noreferrer">Brand Guide</a>
+      <a href="https://github.com/NemesisGuy" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </div>
   <div class="footer-line">
     <span>@ <span id="footer-year"></span></span>
     <span class="footer-divider">|</span>
