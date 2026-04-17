@@ -26,17 +26,19 @@ git commit -m "chore: fix anchor links and add staging deployment playbook"
 git push -u origin staging
 ```
 
-## Build And Push Docker Staging Tag
+# Build And Push Docker Staging Tag
+
+> **Note:** On Windows, always prefix Docker commands with `wsl` to ensure compatibility with Docker Desktop.
 
 ```powershell
 # Build current code
 wsl docker build -t nemesisnet:staging .
 
 # Tag for Docker Hub
-docker tag nemesisnet:staging nemesisguy/nemesisnet:staging
+wsl docker tag nemesisnet:staging nemesisguy/nemesisnet:staging
 
 # Push staging image
-docker push nemesisguy/nemesisnet:staging
+wsl docker push nemesisguy/nemesisnet:staging
 ```
 
 ## Suggested A/B Test Plan
@@ -65,9 +67,9 @@ git merge --ff-only staging
 git push origin master
 
 # Re-tag staging build as latest if using same artifact
-docker pull nemesisguy/nemesisnet:staging
-docker tag nemesisguy/nemesisnet:staging nemesisguy/nemesisnet:latest
-docker push nemesisguy/nemesisnet:latest
+wsl docker pull nemesisguy/nemesisnet:staging
+wsl docker tag nemesisguy/nemesisnet:staging nemesisguy/nemesisnet:latest
+wsl docker push nemesisguy/nemesisnet:latest
 ```
 
 ## Pre-Push Checklist
