@@ -523,6 +523,20 @@ section h2 {
   letter-spacing:-0.01em;
 }
 
+.section-pill {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(0,212,255,0.1);
+  border: 1px solid rgba(0,212,255,0.3);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 12px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
 /* Glassmorphic project cards */
 .projects-grid { 
   display:grid; 
@@ -2488,6 +2502,7 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
 </section>
 
 <section id="service-tiers">
+  <span class="section-pill">How We Work</span>
   <h2>How We Scope Projects</h2>
   <p class="process-intro">Every system is classified based on complexity, business risk, data sensitivity, and workflow requirements. We build right-sized solutions — no overengineering, no underbuilding.</p>
   
@@ -2572,10 +2587,10 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
   <div class="pricing-grid">
     <article class="card pricing-card">
       <h3 class="pricing-title">Starter / Rapid Delivery</h3>
-      <div class="pricing-price">R18,000</div>
-      <div class="pricing-unit">Starting from</div>
+      <div class="pricing-price">R7,000 – R20,000</div>
+      <div class="pricing-unit">Range</div>
       <p class="pricing-description">Fast-tracked static portals, MVPs, and Dockerized deployments built to be production-ready from day one.</p>
-      <p class="pricing-timeline">Typically 1-4 weeks depending on scope</p>
+      <p class="pricing-timeline">Delivery: 7–14 days</p>
       <ul class="pricing-points">
         <li>Hand-coded, zero-bloat frontend with practical SEO baseline.</li>
         <li>Nginx and Docker deployment baseline included.</li>
