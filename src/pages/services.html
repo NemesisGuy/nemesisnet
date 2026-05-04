@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | NemesisNet — Software Engineering & Systems Development</title>
+
+  <meta name="description" content="NemesisNet services: Custom Software Development, SaaS Development, Backend Engineering, System Design, Consulting, and AI Infrastructure.">
+  <meta name="keywords" content="NemesisNet, services, custom software, SaaS, backend, infrastructure, consulting, AI">
+  <meta name="author" content="NemesisGuy">
+  <meta name="publisher" content="NemesisNet">
+  <link rel="canonical" href="https://nemesisnet.co.za/pages/services.html">
+  <meta name="robots" content="index,follow">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+
+  <link rel="icon" type="image/x-icon" href="/assets/images/brand/Nemesis_Logo_Icon.ico">
+  <link rel="icon" type="image/png" href="/assets/images/brand/Nemesis_Logo_Icon.png">
+  <link rel="shortcut icon" href="/assets/images/brand/Nemesis_Logo_Icon.ico">
+  <meta name="theme-color" content="#0a0e27">
+
+  <link rel="stylesheet" href="/styles/nemesis-mode.css">
+  <link rel="stylesheet" href="/styles/aurora-mode.css">
+  <link rel="stylesheet" href="/styles/main.css">
+
+  <style>
+    :root{
+      --nemesis-blue: #1E88E5;
+      --nemesis-blue-bright: #2979FF;
+      --nemesis-black: #0a0e27;
+      --nemesis-white: #F4F4F4;
+      --accent-color: var(--nemesis-blue);
+      --accent-hover: var(--nemesis-blue-bright);
+      --bg-color: var(--nemesis-black);
+      --bg-gradient: linear-gradient(135deg, #0a0e27 0%, #16213e 50%, #0f3460 100%);
+      --text-color: var(--nemesis-white);
+      --text-muted: rgba(244,244,244,0.65);
+      --glass-bg: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.06);
+    }
+    [data-theme="light"]{
+      --bg-color: var(--nemesis-white);
+      --bg-gradient: linear-gradient(135deg, var(--nemesis-white) 0%, #f0f6ff 50%, #eaf6ff 100%);
+      --text-color: var(--nemesis-black);
+      --text-muted: rgba(26,26,26,0.72);
+      --glass-bg: rgba(255,255,255,0.9);
+      --glass-border: rgba(41,121,255,0.08);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background: var(--bg-gradient); background-attachment: fixed; color:var(--text-color); line-height:1.7; padding-top: 60px; font-family: "Segoe UI", sans-serif; }
+    main { max-width: 1200px; margin: auto; padding: 40px 20px; text-align: left; }
+    h1 { font-size: 2.5rem; margin-bottom: 16px; background: linear-gradient(135deg, #fff 0%, var(--accent-color) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    h2 { font-size: 2rem; margin: 32px 0 16px; color: var(--accent-color); }
+    .service-doc { text-align: left; }
+    .service-heading { color: var(--accent-color); font-size: 1.05rem; margin: 20px 0 10px; }
+    .service-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; margin-bottom: 24px; }
+    .service-block { padding: 14px 16px; border-top: 1px solid var(--glass-border); }
+    .service-block h4 { margin: 0 0 10px; color: var(--accent-color); font-size: 1.02rem; font-weight: 700; }
+    .service-list { margin: 8px 0 16px; padding-left: 18px; }
+    .service-list li { color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin: 6px 0; }
+    .service-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+    .service-links a { padding: 10px 16px; border-radius: 999px; border: 1px solid var(--glass-border); background: color-mix(in srgb, var(--glass-bg) 84%, transparent); color: var(--text-color); font-weight: 600; text-decoration: none; transition: all 0.2s ease; }
+    .service-links a:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #0a0e27; transform: translateY(-1px); }
+    .process-intro { max-width: 860px; margin: 0 auto 10px; color: var(--text-muted); font-size: 1rem; line-height: 1.8; }
+    @media (max-width: 900px) {
+      .service-columns { grid-template-columns: 1fr; gap: 14px; }
+    }
+  </style>
+
+  <script defer src="https://metrics.nemesisnet.co.za/script.js" data-website-id="9a0683f9-2a7e-41fc-aee8-8d1150dea50c"></script>
+</head>
+<body>
+
+<!-- Full Nav (same as landing page) -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">
+      <img src="/assets/images/brand/Nemesis_Logo_Icon_nav.webp" alt="NemesisNet Logo" width="48" height="48" loading="eager">
+      <span>NemesisNet</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="toggleNav()">
+      <span class="glyph-icon" aria-hidden="true">☰</span>
+    </button>
+    <div class="nav-links">
+      <a href="/#services">Services</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#testimonials">Testimonials</a>
+      <a href="/#contact">Contact</a>
+      <a href="https://blog.nemesisnet.co.za/" target="_blank">Blog</a>
+      <button class="theme-toggle" id="aurora-toggle" onclick="toggleAuroraMode()" aria-label="Toggle Aurora Mode">✦</button>
+      <button class="theme-toggle" id="nemesis-toggle" onclick="toggleNemesisMode()" aria-label="Toggle Nemesis Mode">⚙</button>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light and dark theme">☀</button>
+    </div>
+  </div>
+</nav>
+<div id="nav-overlay" tabindex="-1" aria-hidden="true"></div>
+
+<main>
+  <h1>Software Engineering And Systems Development</h1>
+  <p class="process-intro">NemesisNet provides backend systems, SaaS platforms, and scalable infrastructure for businesses and startups.</p>
+
+  <div class="service-doc">
+    <h3 class="service-heading">Core Services</h3>
+    <div class="service-columns">
+      <article class="service-block">
+        <h4>1. Custom Software Development</h4>
+        <ul class="service-list">
+          <li>Full-stack application development (Vue, React)</li>
+          <li>REST APIs (Spring Boot, Java)</li>
+          <li>Secure authentication (JWT, RBAC)</li>
+          <li>Database design (MySQL, PostgreSQL, SQLite)</li>
+        </ul>
+      </article>
+      <article class="service-block">
+        <h4>2. SaaS Development</h4>
+        <ul class="service-list">
+          <li>Multi-tenant systems</li>
+          <li>Subscription-based platforms</li>
+          <li>API-driven architectures</li>
+          <li>Scalable deployments (PocketBase, Docker)</li>
+        </ul>
+      </article>
+      <article class="service-block">
+        <h4>3. Backend And Infrastructure Engineering</h4>
+        <ul class="service-list">
+          <li>High-performance backend systems</li>
+          <li>Redis caching and queue patterns</li>
+          <li>Dockerized deployments</li>
+          <li>Nginx reverse proxy setups</li>
+        </ul>
+      </article>
+      <article class="service-block">
+        <h4>4. System Design And Consulting</h4>
+        <ul class="service-list">
+          <li>Architecture planning (DDD, Clean Architecture)</li>
+          <li>Performance optimization</li>
+          <li>Codebase restructuring</li>
+          <li>Technical advisory</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="service-columns">
+      <article class="service-block">
+        <h3>Engagement Model</h3>
+        <ul class="service-list">
+          <li>Fixed-price projects (defined scope)</li>
+          <li>Hourly consulting</li>
+          <li>Monthly SaaS subscriptions</li>
+          <li>Custom enterprise solutions</li>
+        </ul>
+      </article>
+      <article class="service-block">
+        <h3>How We Work</h3>
+        <ol class="service-list">
+          <li>Initial consultation</li>
+          <li>Requirements analysis</li>
+          <li>Proposal and agreement</li>
+          <li>Development and iteration</li>
+          <li>Delivery and support</li>
+        </ol>
+        <p>Clients are typically acquired through referrals, direct outreach, and online presence.</p>
+      </article>
+    </div>
+
+    <div class="service-links">
+      <a href="/#projects">View Projects</a>
+      <a href="/#contact">Request A Quote</a>
+      <a href="/pages/legal/refund.html">Refund Policy</a>
+    </div>
+  </div>
+
+  <section id="service-tiers">
+    <h2>How We Scope Projects</h2>
+    <p class="process-intro">Every system is classified based on complexity, business risk, data sensitivity, and workflow requirements. We build right-sized solutions — no overengineering, no underbuilding.</p>
+
+    <div class="tiers-grid">
+      <article class="tier-card tier-1">
+        <div class="tier-header">
+          <span class="tier-badge tier-badge-green">Tier 1</span>
+          <h3>Lightweight Systems</h3>
+        </div>
+        <p class="tier-desc">Fast build for MVPs, internal tools, automation, and simple workflows.</p>
+        <div class="tier-details">
+          <div class="tier-detail"><strong>Stack</strong><span>Vue/React + PocketBase + SQLite</span></div>
+          <div class="tier-detail"><strong>Complexity</strong><span>Low — single dev maintainable</span></div>
+          <div class="tier-detail"><strong>Delivery</strong><span>1–5 days</span></div>
+          <div class="tier-detail"><strong>Examples</strong><span>Forms, Dashboards, CRUD, Simple Auth</span></div>
+        </div>
+      </article>
+
+      <article class="tier-card tier-2">
+        <div class="tier-header">
+          <span class="tier-badge tier-badge-yellow">Tier 2</span>
+          <h3>Business Systems</h3>
+        </div>
+        <p class="tier-desc">Standard engineering for multi-user tools, permissions, and API integrations.</p>
+        <div class="tier-details">
+          <div class="tier-detail"><strong>Stack</strong><span>Spring Boot + MySQL/PostgreSQL + Vue</span></div>
+          <div class="tier-detail"><strong>Complexity</strong><span>Medium — structured architecture</span></div>
+          <div class="tier-detail"><strong>Delivery</strong><span>1–3 weeks</span></div>
+          <div class="tier-detail"><strong>Examples</strong><span>Client Portals, CMS, Business Tools</span></div>
+        </div>
+      </article>
+
+      <article class="tier-card tier-3">
+        <div class="tier-header">
+          <span class="tier-badge tier-badge-red">Tier 3</span>
+          <h3>Core / Enterprise</h3>
+        </div>
+        <p class="tier-desc">High complexity for financial systems, CRMs, and scalable enterprise platforms.</p>
+        <div class="tier-details">
+          <div class="tier-detail"><strong>Stack</strong><span>Spring Boot DDD + Redis + Message Queues</span></div>
+          <div class="tier-detail"><strong>Complexity</strong><span>High — full CI/CD, microservices</span></div>
+          <div class="tier-detail"><strong>Delivery</strong><span>1–3+ months</span></div>
+          <div class="tier-detail"><strong>Examples</strong><span>CRMs, Billing, Financial Systems</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="process">
+    <h2>How Projects Work</h2>
+    <p class="process-intro">A structured process keeps delivery predictable, technical risk visible, and decisions aligned before engineering time is burned.</p>
+    <p class="process-intro-secondary">Without proper scoping, projects usually drift into scope creep, deadline slips, and expensive rework.</p>
+    <div class="process-grid">
+      <article class="card process-step">
+        <span class="step-index">Step 1</span>
+        <h3>Get In Touch</h3>
+        <p>Reach out via the contact form, email us directly, or submit your full project brief at scope.nemesisnet.co.za. We respond to every enquiry within 72 hours.</p>
+      </article>
+      <article class="card process-step">
+        <span class="step-index">Step 2</span>
+        <h3>Requirements & Review</h3>
+        <p>We review your brief and assess scope, architecture fit, and delivery timeline. If needed, we schedule a short discovery call to clarify requirements before any engineering time is spent.</p>
+      </article>
+      <article class="card process-step">
+        <span class="step-index">Step 3</span>
+        <h3>Proposal & Agreement</h3>
+        <p>We send a tailored proposal with a fixed price, milestones, and delivery timeline. Once agreed, we get started immediately.</p>
+      </article>
+      <article class="card process-step">
+        <span class="step-index">Step 4</span>
+        <h3>Build & Deliver</h3>
+        <p>Development starts with testing and CI/CD from day one. Regular checkpoints keep delivery aligned with scope until production handoff.</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-links-grid">
+    <div class="footer-group">
+      <h4>Business</h4>
+      <a href="/#services">Services</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#testimonials">Testimonials</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="footer-group">
+      <h4>Legal</h4>
+      <a href="/pages/legal/refund.html">Refund Policy</a>
+      <a href="/pages/legal/terms.html">Terms of Service</a>
+      <a href="/pages/legal/privacy.html">Privacy Policy</a>
+    </div>
+    <div class="footer-group">
+      <h4>Links</h4>
+      <a href="https://blog.nemesisnet.co.za/" target="_blank">Blog</a>
+      <a href="https://brand.nemesisnet.co.za" target="_blank">Brand Guide</a>
+      <a href="https://github.com/NemesisGuy" target="_blank">GitHub</a>
+    </div>
+  </div>
+  <div class="footer-line">
+    <span>@ <span id="footer-year"></span></span>
+    <span class="footer-divider">|</span>
+    <span>Built by <a href="https://github.com/NemesisGuy" target="_blank">NemesisGuy</a></span>
+    <span class="footer-divider">|</span>
+    <span>Powered by <a href="https://nemesisnet.co.za" target="_blank">NemesisNet.co.za</a></span>
+    <span class="footer-divider">|</span>
+    <span>All rights reserved.</span>
+  </div>
+</footer>
+
+<script defer src="/scripts/main.js"></script>
+</body>
+</html>

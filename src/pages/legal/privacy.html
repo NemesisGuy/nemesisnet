@@ -52,15 +52,29 @@
 </head>
 <body>
 
-<!-- Nav -->
+<!-- Full Nav -->
 <nav id="navbar">
   <div class="nav-container">
     <a href="/" class="nav-logo">
-      <img src="/assets/images/brand/Nemesis_Logo_Icon_nav.webp" alt="NemesisNet Logo" width="48" height="48">
+      <img src="/assets/images/brand/Nemesis_Logo_Icon_nav.webp" alt="NemesisNet Logo" width="48" height="48" loading="eager">
       <span>NemesisNet</span>
     </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="toggleNav()">
+      <span class="glyph-icon" aria-hidden="true">☰</span>
+    </button>
+    <div class="nav-links">
+      <a href="/#services">Services</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#testimonials">Testimonials</a>
+      <a href="/#contact">Contact</a>
+      <a href="https://blog.nemesisnet.co.za/" target="_blank">Blog</a>
+      <button class="theme-toggle" id="aurora-toggle" onclick="toggleAuroraMode()" aria-label="Toggle Aurora Mode">✦</button>
+      <button class="theme-toggle" id="nemesis-toggle" onclick="toggleNemesisMode()" aria-label="Toggle Nemesis Mode">⚙</button>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light and dark theme">☀</button>
+    </div>
   </div>
 </nav>
+<div id="nav-overlay" tabindex="-1" aria-hidden="true"></div>
 
 <main>
   <h1>Privacy Policy</h1>
