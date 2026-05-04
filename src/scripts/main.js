@@ -1,3 +1,4 @@
+
 // Update footer with current year and month
 (function updateFooter() {
   const now = new Date();
