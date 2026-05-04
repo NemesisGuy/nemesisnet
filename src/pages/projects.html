@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | NemesisNet — AI Infrastructure & Platform Engineering</title>
+
+  <meta name="description" content="Full portfolio of NemesisNet projects: WordPress MCP Server, Kokoro TTS Service, OntheGoRentals, NK Assessments, CodeCritical, ForkMyFolio, Vibe-Type, Bored Room Cafe.">
+  <meta name="keywords" content="NemesisNet, projects, portfolio, WordPress MCP, Kokoro TTS, OntheGoRentals, ForkMyFolio, AI infrastructure">
+  <meta name="author" content="NemesisGuy">
+  <meta name="publisher" content="NemesisNet">
+  <link rel="canonical" href="https://nemesisnet.co.za/pages/projects.html">
+  <meta name="robots" content="index,follow">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+
+  <link rel="icon" type="image/x-icon" href="/assets/images/brand/Nemesis_Logo_Icon.ico">
+  <link rel="icon" type="image/png" href="/assets/images/brand/Nemesis_Logo_Icon.png">
+  <link rel="shortcut icon" href="/assets/images/brand/Nemesis_Logo_Icon.ico">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <link rel="stylesheet" href="/styles/nemesis-mode.css">
+  <link rel="stylesheet" href="/styles/aurora-mode.css">
+  <link rel="stylesheet" href="/styles/main.css">
+
+  <style>
+    :root{
+      --nemesis-blue: #1E88E5;
+      --nemesis-blue-bright: #2979FF;
+      --aurora-base: #00C2A8;
+      --nemesis-black: #0a0e27;
+      --nemesis-white: #F4F4F4;
+      --accent-color: var(--nemesis-blue);
+      --accent-hover: var(--nemesis-blue-bright);
+      --bg-color: var(--nemesis-black);
+      --bg-gradient: linear-gradient(135deg, #0a0e27 0%, #16213e 50%, #0f3460 100%);
+      --text-color: var(--nemesis-white);
+      --text-muted: rgba(244,244,244,0.65);
+      --glass-bg: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.06);
+    }
+    [data-theme="light"]{
+      --bg-color: var(--nemesis-white);
+      --bg-gradient: linear-gradient(135deg, var(--nemesis-white) 0%, #f0f6ff 50%, #eaf6ff 100%);
+      --text-color: var(--nemesis-black);
+      --text-muted: rgba(26,26,26,0.72);
+      --glass-bg: rgba(255,255,255,0.9);
+      --glass-border: rgba(41,121,255,0.08);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; }
+    html { height:100%; scroll-behavior:smooth; }
+    body { height:100%; background: var(--bg-gradient); background-attachment: fixed; color:var(--text-color); line-height:1.7; padding-top: 60px; }
+  </style>
+
+  <script defer src="https://metrics.nemesisnet.co.za/script.js" data-website-id="9a0683f9-2a7e-41fc-aee8-8d1150dea50c"></script>
+</head>
+<body>
+
+<!-- Nav (same as partial) -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">
+      <img src="/assets/images/brand/Nemesis_Logo_Icon_nav.webp" alt="NemesisNet Logo" width="48" height="48" loading="eager">
+      <span>NemesisNet</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="toggleNav()">
+      <span class="glyph-icon" aria-hidden="true">☰</span>
+    </button>
+    <div class="nav-links">
+      <a href="/#services">Services</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#testimonials">Testimonials</a>
+      <a href="/#contact">Contact</a>
+      <a href="https://blog.nemesisnet.co.za/" target="_blank">Blog</a>
+      <button class="theme-toggle" id="aurora-toggle" onclick="toggleAuroraMode()" aria-label="Toggle Aurora Mode">✦</button>
+      <button class="theme-toggle" id="nemesis-toggle" onclick="toggleNemesisMode()" aria-label="Toggle Nemesis Mode">⚙</button>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light and dark theme">☀</button>
+    </div>
+  </div>
+</nav>
+<div id="nav-overlay" tabindex="-1" aria-hidden="true"></div>
+
+<main style="max-width:1280px; margin:auto; padding:40px 20px;">
+  <section id="projects">
+    <h2>All Projects</h2>
+    <div class="projects-grid">
+      <div class="card">
+        <img src="/assets/images/projects/wordpress-mcp/optimized/hero.webp"
+          srcset="/assets/images/projects/wordpress-mcp/optimized/hero-480.webp 480w, /assets/images/projects/wordpress-mcp/optimized/hero-640.webp 640w, /assets/images/projects/wordpress-mcp/optimized/hero.webp 900w"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px"
+          alt="WordPress MCP Server" loading="lazy" width="900" height="506" decoding="async">
+        <h3>WordPress MCP Server</h3>
+        <p>Lightweight MCP bridge that lets AI agents read, update, and manage WordPress content securely via a local-first server.</p>
+        <div class="project-links">
+          <a class="project-link project-link--github" href="https://github.com/NemesisGuy/WordPress-MCP" target="_blank">View Project</a>
+          <a class="project-link project-link--demo" href="https://blog.nemesisnet.co.za/bring-wordpress-into-your-agent-workflows-with-the-wordpress-mcp-server" target="_blank">Deep Dive</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/assets/images/projects/kokoro-tts-service/optimized/hero.webp"
+          srcset="/assets/images/projects/kokoro-tts-service/optimized/hero-480.webp 480w, /assets/images/projects/kokoro-tts-service/optimized/hero-640.webp 640w, /assets/images/projects/kokoro-tts-service/optimized/hero.webp 900w"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px"
+          alt="Kokoro TTS Service" loading="lazy" width="900" height="483" decoding="async">
+        <h3>Kokoro TTS Service</h3>
+        <p>A self-hosted AI text-to-speech web service built on top of the open-source Kokoro TTS engine — enabling natural-sounding speech synthesis via a user-friendly web interface.</p>
+        <div class="project-links">
+          <a class="project-link project-link--github" href="https://github.com/NemesisGuy/Kokoro_TTS_Service" target="_blank">View Project</a>
+          <a class="project-link project-link--demo" href="https://kokoro-gui.nemesisnet.co.za" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/assets/images/projects/onthegorentals/optimized/hero.webp"
+          srcset="/assets/images/projects/onthegorentals/optimized/hero-480.webp 480w, /assets/images/projects/onthegorentals/optimized/hero-640.webp 640w, /assets/images/projects/onthegorentals/optimized/hero.webp 900w"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px"
+          alt="OntheGoRentals" loading="lazy" width="202" height="188" decoding="async">
+        <h3>OntheGoRentals</h3>
+        <p>A full-stack car rental platform with Vue.js frontend and Java Spring Boot backend, featuring user bookings, rental history management, and admin dashboards.</p>
+        <div class="project-links">
+          <a class="project-link project-link--github" href="https://github.com/NemesisGuy/OnTheGoRentals" target="_blank">View Project</a>
+          <a class="project-link project-link--demo" href="https://otgr.nemesisnet.co.za" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/assets/images/projects/nk-assessments/optimized/hero.webp"
+          srcset="/assets/images/projects/nk-assessments/optimized/hero-480.webp 480w, /assets/images/projects/nk-assessments/optimized/hero-640.webp 640w, /assets/images/projects/nk-assessments/optimized/hero.webp 900w"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px"
+          alt="NK Assessments" loading="lazy" width="900" height="900" decoding="async">
+        <h3>NK Assessments</h3>
+        <p>Client-facing static portal built with HTML5, Bootstrap, and Dockerized Nginx — designed, shipped, and deployed in under 48 hours.</p>
+        <div class="project-links">
+          <a class="project-link project-link--github" href="https://github.com/NemesisGuy/NKAssessments" target="_blank">Source</a>
+          <a class="project-link project-link--demo" href="https://nkassessments.nemesisnet.co.za" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/assets/images/projects/codecritical/optimized/hero.webp"
+          srcset="/assets/images/projects/codecritical/optimized/hero-480.webp 480w, /assets/images/projects/codecritical/optimized/hero-640.webp 640w, /assets/images/projects/codecritical/optimized/hero.webp 900w"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px"
+          alt="CodeCritical" loading="lazy" width="900" height="615" decoding="async">
+        <h3>CodeCritical</h3>
+        <p>Static Java code analysis tool designed to detect quality issues and improve maintainability.</p>
+        <div class="project-links">
+          <a class="project-link project-link--github" href="https://github.com/NemesisGuy/CodeCritical" target="_blank">View Project</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/assets/images/projects/forkmyfolio/optimized/hero.webp"
+          srcset="/assets/images/projects/forkmyfolio/optimized/hero-480.webp 480w, /assets/images/projects/forkmyfolio/optimized/hero-640.webp 640w, /assets/images/projects/forkmyfolio/optimized/hero.webp 900w"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px"
+          alt="ForkMyFolio" loading="lazy" width="900" height="459" decoding="async">
+        <h3>ForkMyFolio</h3>
+        <p>A fully-featured, production-ready personal portfolio management system with dynamic project tracking, skill management, PDF export, and backup & restore capabilities.</p>
+        <div class="project-links">
+          <a class="project-link project-link--github" href="https://github.com/NemesisGuy/ForkMyFolio-frontend" target="_blank">View Project</a>
+          <a class="project-link project-link--demo" href="https://forkmyfolio.nemesisnet.co.za" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/assets/images/projects/vibetype/optimized/hero.webp"
+          srcset="/assets/images/projects/vibetype/optimized/hero-480.webp 480w, /assets/images/projects/vibetype/optimized/hero-640.webp 640w, /assets/images/projects/vibetype/optimized/hero.webp 900w"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px"
+          alt="Vibe-Type" loading="lazy" width="900" height="611" decoding="async">
+        <h3>Vibe-Type</h3>
+        <p>An experimental AI-powered coding/typing assistant — offering voice or smart-typing support, to speed up coding and writing workflows.</p>
+        <div class="project-links">
+          <a class="project-link project-link--github" href="https://github.com/NemesisGuy/Vibe-Type" target="_blank">View Project</a>
+          <a class="project-link project-link--blog" href="https://blog.nemesisnet.co.za/vibetype-building-a-local-first-voice-coding-companion/" target="_blank">Deep Dive</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/assets/images/projects/bored-room-cafe/optimized/hero.webp"
+          srcset="/assets/images/projects/bored-room-cafe/optimized/hero-480.webp 480w, /assets/images/projects/bored-room-cafe/optimized/hero-640.webp 640w, /assets/images/projects/bored-room-cafe/optimized/hero.webp 900w"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px"
+          alt="Bored Room Cafe" loading="lazy" width="900" height="445" decoding="async">
+        <h3>Bored Room Cafe</h3>
+        <p>A local homestyle takeaway and food-service spot based in Ferness Estate — showcasing local flavour and simple ordering for busy families.</p>
+        <div class="project-links">
+          <a class="project-link project-link--github" href="https://github.com/NemesisGuy/Bored-Room-Cafe" target="_blank">View Project</a>
+          <a class="project-link project-link--demo" href="https://boredroomcafe.nemesisnet.co.za" target="_blank">Visit Site</a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="/#projects" style="text-decoration: none; padding: 12px 24px; border-radius: 999px; border: 1px solid var(--glass-border); background: color-mix(in srgb, var(--glass-bg) 84%, transparent); color: var(--text-color); font-weight: 600; display: inline-block;">← Back to Home</a>
+    </div>
+  </section>
+</main>
+
+<!-- Footer (same as partial) -->
+<footer class="site-footer">
+  <div class="footer-links-grid">
+    <div class="footer-group">
+      <h4>Business</h4>
+      <a href="/#services">Services</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#testimonials">Testimonials</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="footer-group">
+      <h4>Legal</h4>
+      <a href="/pages/legal/refund.html">Refund Policy</a>
+      <a href="/pages/legal/terms.html">Terms of Service</a>
+      <a href="/pages/legal/privacy.html">Privacy Policy</a>
+    </div>
+    <div class="footer-group">
+      <h4>Links</h4>
+      <a href="https://blog.nemesisnet.co.za/" target="_blank">Blog</a>
+      <a href="https://brand.nemesisnet.co.za" target="_blank">Brand Guide</a>
+      <a href="https://github.com/NemesisGuy" target="_blank">GitHub</a>
+    </div>
+  </div>
+  <div class="footer-line">
+    <span>@ <span id="footer-year"></span></span>
+    <span class="footer-divider">|</span>
+    <span>Built by <a href="https://github.com/NemesisGuy" target="_blank">NemesisGuy</a></span>
+    <span class="footer-divider">|</span>
+    <span>Powered by <a href="https://nemesisnet.co.za" target="_blank">NemesisNet.co.za</a></span>
+    <span class="footer-divider">|</span>
+    <span>All rights reserved.</span>
+  </div>
+</footer>
+
+<script defer src="/scripts/main.js"></script>
+</body>
+</html>
