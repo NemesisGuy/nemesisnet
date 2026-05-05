@@ -40,7 +40,8 @@ def main():
 
     # 2. Docker Operations
     # Note: Using 'wsl' prefix for docker as per current environment config
-    run_command(f"wsl docker build -t {image_name} .", f"Building Docker image {image_name}")
+    # Added --no-cache to ensure absolute freshness of the image
+    run_command(f"wsl docker build --no-cache -t {image_name} .", f"Building Docker image {image_name} (NO CACHE)")
     run_command(f"wsl docker push {image_name}", f"Pushing image {image_name} to Docker Hub")
 
     print(f"--- Deployment to [{branch}] Complete! ---")
