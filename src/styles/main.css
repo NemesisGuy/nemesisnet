@@ -161,8 +161,7 @@ html:not([data-theme="light"]) .avatar-wrap:hover::after{
 html { 
   height:100%; 
   scroll-behavior:smooth; 
-  scroll-snap-type: y mandatory; 
-  /* Use the actual navbar height for anchor offsets */
+  /* Removed scroll-snap-type to fix the 'stuck' scrolling issue */
   scroll-padding-top: var(--nav-height, 60px);
 }
 
@@ -351,17 +350,17 @@ header p {
   .btn--dual:hover{box-shadow:0 14px 48px rgba(41,121,255,0.28), 0 8px 30px rgba(0,194,168,0.22);transform:translateY(-2px) scale(1.01)}
   .btn--dual:active{transform:translateY(0)}/* Sections with modern spacing and animations */
 section { 
-  padding:60px 20px; 
+  padding:80px 20px; 
   max-width:1280px; 
   margin:auto; 
   text-align:center; 
-  min-height:100vh;
-  min-height:100svh;
-  scroll-snap-align:start;
+  min-height: auto; /* Changed from 100vh to allow natural content flow */
   display:flex;
   flex-direction:column;
   justify-content:center;
+  align-items: center;
 }
+
 .js section {
   opacity:0; 
   transform: none; 
@@ -392,6 +391,20 @@ section h2 {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+section { 
+  padding:60px 20px; 
+  max-width:1280px; 
+  margin:auto; 
+  text-align:center; 
+  min-height:100vh;
+  min-height:100svh;
+  scroll-snap-align:start;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center; /* Center the content including the pill */
+}
+
 
 /* Glassmorphic project cards */
 .projects-grid { 
