@@ -22,9 +22,10 @@ def main():
 
     branch = args.branch
     message = args.message
-    image_name = f"nemesisguy/nemesisnet:{branch}"
+    # Changed tag to dev-v2 to completely bypass all Docker and Registry caching
+    image_name = f"nemesisguy/nemesisnet:{branch}-v2"
 
-    print(f"--- Starting Deployment to [{branch}] ---")
+    print(f"--- Starting Deployment to [{branch}-v2] ---")
 
     # 1. Git Operations
     run_command("git add .", "Staging changes")
