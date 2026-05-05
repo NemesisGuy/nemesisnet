@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NK Assessments | NemesisNet — AI Infrastructure & Platform Engineering</title>
+  <link rel="stylesheet" href="/styles/main.css?v=1">
+  <style>
+    .detail-hero { padding: 120px 20px 60px; text-align: center; background: var(--bg-gradient); }
+    .detail-hero h1 { font-size: 3.5rem; margin-bottom: 20px; background: linear-gradient(135deg, #fff 0%, var(--accent-color) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .detail-container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; display: grid; grid-template-columns: 1fr 300px; gap: 60px; }
+    .detail-main { text-align: left; line-height: 1.8; }
+    .detail-main h2 { font-size: 2rem; margin: 40px 0 20px; text-align: left; }
+    .detail-main p { color: var(--text-muted); margin-bottom: 20px; }
+    .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; backdrop-filter: blur(10px); }
+    .sidebar-card h4 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+    .sidebar-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
+    .sidebar-list li { margin-bottom: 10px; color: var(--text-muted); display: flex; justify-content: space-between; }
+    .sidebar-list li strong { color: var(--text-color); }
+    .detail-image { width: 100%; border-radius: 20px; border: 1px solid var(--glass-border); margin: 30px 0; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+    @media (max-width: 900px) { .detail-container { grid-template-columns: 1fr; } .detail-hero h1 { font-size: 2.5rem; } .detail-sidebar { position: static; } }
+  </style>
+  <script defer src="/scripts/main.js"></script>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/assets/images/brand/Nemesis_Logo_Icon_nav.webp" alt="NemesisNet Logo" width="48" height="48">
+        <span>NemesisNet</span>
+      </a>
+      <div class="nav-links">
+        <a href="/services">Services</a>
+        <a href="/projects">Projects</a>
+        <a href="/#testimonials">Testimonials</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://blog.nemesisnet.co.za/" target="_blank">Blog</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="detail-hero">
+    <h1>NK Assessments</h1>
+    <p>High-speed deployment of a professional client-facing portal.</p>
+  </div>
+
+  <div class="detail-container">
+    <div class="detail-main">
+      <img src="/assets/images/projects/nk-assessments/optimized/hero.webp" class="detail-image" alt="NK Assessments">
+      
+      <h2>The Challenge</h2>
+      <p>The client needed a professional, secure, and highly available static portal to present their assessment services. The primary constraint was a critical timeline—the site needed to be live and fully functional in under 48 hours.</p>
+      
+      <h2>The Solution</h2>
+      <p>I architected a lightweight, static portal using HTML5 and Bootstrap, ensuring maximum load speeds and perfect mobile responsiveness. By leveraging a Dockerized Nginx configuration, I was able to deploy the site to a production environment with zero downtime and instant global availability.</p>
+      
+      <h2>Technical Implementation</h2>
+      <p>The focus was on stability and speed. I used a clean, semantic HTML structure and optimized assets to ensure a near-perfect Lighthouse score. The Docker deployment allowed for an immutable infrastructure approach, making updates and scaling effortless.</p>
+      
+      <div style="margin-top: 60px; display: flex; gap: 15px;">
+        <a href="https://github.com/NemesisGuy/NKAssessments" target="_blank" class="btn--primary" style="text-decoration:none; padding: 12px 24px; border-radius: 12px; background: var(--accent-color); color: #0a0e27; font-weight: 700;">View Source</a>
+        <a href="https://nkassessments.nemesisnet.co.za" target="_blank" class="btn--dual" style="text-decoration:none; padding: 12px 24px; border-radius: 12px; background: linear-gradient(90deg, var(--accent-color), var(--aurora-base)); color: #0a0e27; font-weight: 700;">Live Demo</a>
+      </div>
+    </div>
+
+    <div class="detail-sidebar">
+      <div class="sidebar-card">
+        <h4>Project Details</h4>
+        <ul class="sidebar-list">
+          <li><span>Timeline:</span> <strong>48 Hours</strong></li>
+          <li><span>Stack:</span> <strong>HTML5, Bootstrap, Nginx, Docker</strong></li>
+          <li><span>Role:</span> <strong>Lead Engineer</strong></li>
+          <li><span>Status:</span> <strong>Live</strong></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h4>Quick Links</h4>
+        <ul class="sidebar-list">
+          <li><a href="/projects" style="color: var(--accent-color); text-decoration: none;">← Back to Portfolio</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-line">
+      <span>@ 2026 | Built by NemesisGuy | Powered by NemesisNet.co.za</span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -30,25 +30,28 @@ Shift from monolithic single-page site to a **composable static system with expl
 ### 1.1 Landing Page Scope (Keep High-Conversion Content)
 Retain only these sections in `src/index.template.html` (template, not final built file):
 - Hero (typing animation)
-- Core services (3-4 short summaries)
-- Featured projects (3-4 top items) + **"View All Projects →" button** linking to `/pages/projects.html`
+- Core services (3-4 short summaries) $\rightarrow$ Link to `/services`
+- Featured projects (3-4 top items) $\rightarrow$ Link to `/projects`
 - Testimonials (short, 2-3 items)
 - CTA
+- **"View All Projects →" button** linking to `/pages/projects.html`
 
 ### 1.2 Dedicated Sub-Pages (Create in `src/pages/`)
 | Page | Status | Content |
 |------|--------|---------|
-| `projects.html` | [Mandatory] | Full portfolio, deep dives, all project entries |
-| `legal/` | [Mandatory] | Subdirectory with `refund.html`, `terms.html`, `privacy.html` (split from single legal page) |
-| `services.html` | [Optional] | Detailed service offerings (if summary on landing is insufficient) |
-| `pricing.html` | [Optional] | Full pricing breakdown (if summary on landing is insufficient) |
+| `projects.html` | [Mandatory] | **Portfolio Directory**: High-level grid of all projects |
+| `projects/[project].html` | [Mandatory] | **Case Studies**: Deep dives for each project (Challenge, Solution, Stack, Results) |
+| `services.html` | [Mandatory] | **Services Overview**: Summary of offerings and engagement models |
+| `services/[service].html` | [Mandatory] | **Service Details**: Deep dives into specific offerings (Capabilities, Tiers, Pricing) |
+| `legal/` | [Mandatory] | Subdirectory with `refund.html`, `terms.html`, `privacy.html` |
+| `pricing.html` | [Optional] | Full pricing breakdown |
 
 ### 1.3 Hybrid Navigation (Explicit Consistency Rules)
 Define link mapping upfront to avoid broken scrolls/links:
 | Context | Services Link | Projects Link |
 |---------|---------------|---------------|
 | Landing page nav | `/#services` | `/#projects` |
-| Sub-pages nav | `/index.html#services` | `/pages/projects.html` |
+| Sub-pages nav | `/services` | `/projects` |
 
 Reuse same `nav.html` partial across landing and all sub-pages.
 
@@ -70,12 +73,14 @@ Reuse same `nav.html` partial across landing and all sub-pages.
 src/                          # Source (never deployed directly)
   index.template.html         # Landing page template with {{placeholders}}
   /pages/                     # Sub-page templates
-    projects.html
+    projects.html             # Portfolio Directory
+    /projects/                # Project Case Studies (e.g., wordpress-mcp.html)
+    services.html             # Services Overview
+    /services/                # Service Detail Pages (e.g., custom-software.html)
     legal/
       refund.html
       terms.html
       privacy.html
-    services.html (optional)
     pricing.html (optional)
   /partials/                  # Reusable static partials
     nav.html                  # Shared navbar
@@ -156,6 +161,7 @@ with open("dist/index.html", "w") as f:
 ---
 
 ## Success Criteria
+- **Content Parity**: 100% of original technical depth preserved and mapped to detail pages
 - `/src` contains only source templates/partials; `/dist` contains built deployable files
 - `dist/index.html` reduced from ~3267 to <500 lines
 - All README roadmap items (preconnect, lazy load, srcset, CLS fixes) implemented
@@ -164,9 +170,10 @@ with open("dist/index.html", "w") as f:
 - Hybrid navigation follows explicit consistency rules, no broken links
 - Shared nav/footer partials reused across all pages
 - Build script uses explicit `{{key}}` placeholder injection
-- Dockerfile updated to copy `/dist/` instead of `/src/`
+- Dockerfile updated to copy `/dist/` to nginx html directory instead of `/src/`
 - Lighthouse 90+ for performance, accessibility, SEO
 - All tests pass
+
 
 ---
 

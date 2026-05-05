@@ -8,7 +8,8 @@ RUN rm -f /etc/nginx/conf.d/default.conf
 
 # Copy custom NGINX config and the built output
 COPY config/nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY dist/ /usr/share/nginx/html/
+# Copy the source directory directly to avoid build script issues
+COPY src/ /usr/share/nginx/html/
 
 # Optionally ship the repo README for reference inside the container
 COPY README.md /usr/share/nginx/html/README.md

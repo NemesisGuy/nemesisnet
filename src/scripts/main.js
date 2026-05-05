@@ -1,4 +1,7 @@
 
+// Mark that JavaScript is enabled for CSS targeting
+document.documentElement.classList.add('js');
+
 // Update footer with current year and month
 (function updateFooter() {
   const now = new Date();
@@ -213,53 +216,55 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Typing animation
 const typingElement = document.getElementById('typing');
-const words = ["Platform Engineering", "AI Systems & Infrastructure", "Automation & Agent Integrations", "Full-Stack Product Development"];
-let wordIndex = 0;
-let charIndex = 0;
-let typingForward = true;
-// base speed (ms) — original was 70ms; slow down by ~10%
-const baseTypingSpeed = 70;
-const typingSpeed = Math.max(20, Math.round(baseTypingSpeed * 1.10)); // ~77ms
-const pauseAfterComplete = 1000; // 1s pause after finishing a word
-const pauseBetweenWords = 250; // short pause before next word cycle
+if (typingElement) {
+  const words = ["Platform Engineering", "AI Systems & Infrastructure", "Automation & Agent Integrations", "Full-Stack Product Development"];
+  let wordIndex = 0;
+  let charIndex = 0;
+  let typingForward = true;
+  // base speed (ms) — original was 70ms; slow down by ~10%
+  const baseTypingSpeed = 70;
+  const typingSpeed = Math.max(20, Math.round(baseTypingSpeed * 1.10)); // ~77ms
+  const pauseAfterComplete = 1000; // 1s pause after finishing a word
+  const pauseBetweenWords = 250; // short pause before next word cycle
 
-function type() {
-  const currentWord = words[wordIndex];
+  function type() {
+    const currentWord = words[wordIndex];
 
-  if (typingForward) {
-    // add one character
-    typingElement.textContent = currentWord.slice(0, charIndex + 1);
-    charIndex++;
+    if (typingForward) {
+      // add one character
+      typingElement.textContent = currentWord.slice(0, charIndex + 1);
+      charIndex++;
 
-    // when word is complete, pause for a moment before deleting
-    if (charIndex === currentWord.length) {
-      typingForward = false;
-      setTimeout(type, pauseAfterComplete);
-      return;
+      // when word is complete, pause for a moment before deleting
+      if (charIndex === currentWord.length) {
+        typingForward = false;
+        setTimeout(type, pauseAfterComplete);
+        return;
+      }
+    } else {
+      // remove one character
+      typingElement.textContent = currentWord.slice(0, charIndex - 1);
+      charIndex--;
+
+      // when fully erased, advance to next word
+      if (charIndex === 0) {
+        typingForward = true;
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(type, pauseBetweenWords);
+        return;
+      }
     }
-  } else {
-    // remove one character
-    typingElement.textContent = currentWord.slice(0, charIndex - 1);
-    charIndex--;
 
-    // when fully erased, advance to next word
-    if (charIndex === 0) {
-      typingForward = true;
-      wordIndex = (wordIndex + 1) % words.length;
-      setTimeout(type, pauseBetweenWords);
-      return;
-    }
+    // schedule next tick
+    setTimeout(type, typingSpeed);
   }
 
-  // schedule next tick
-  setTimeout(type, typingSpeed);
-}
-
-// Keep headline stable on smaller screens to reduce layout churn and improve paint timing.
-if (window.matchMedia('(max-width: 768px)').matches) {
-  typingElement.textContent = words[0];
-} else {
-  type();
+  // Keep headline stable on smaller screens to reduce layout churn and improve paint timing.
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    typingElement.textContent = words[0];
+  } else {
+    type();
+  }
 }
 
 // Fade-in scroll animations using Intersection Observer
