@@ -378,19 +378,7 @@ section h2 {
   letter-spacing:-0.01em;
 }
 
-.section-pill {
-  display: inline-block;
-  padding: 6px 14px;
-  background: rgba(0,212,255,0.1);
-  border: 1px solid rgba(0,212,255,0.3);
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--accent-color);
-  margin-bottom: 12px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
+/* REMOVED: .section-pill styles to ensure they never render */
 section { 
   padding:60px 20px; 
   max-width:1280px; 
