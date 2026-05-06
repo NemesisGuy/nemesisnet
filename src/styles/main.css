@@ -307,6 +307,146 @@ header p {
   box-shadow: 0 8px 24px var(--accent-glow);
 }
 
+/* Glass button - YOUR inline style exactly */
+a.btn-page,
+.card a.btn-page {
+  text-align: center !important;
+  text-decoration: none !important;
+  color: var(--accent-color) !important;
+  font-weight: 600 !important;
+  display: block !important;
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 12px !important;
+  padding: 10px 20px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+a.btn-page:hover,
+.card a.btn-page:hover {
+  background: var(--accent-color) !important;
+  color: #0a0e27 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px var(--accent-glow) !important;
+}
+
+/* Card-specific */
+.card a.btn-page {
+  width: 95% !important;
+  margin: 8px auto 0 !important;
+}
+@media (max-width: 600px) {
+  .card a.btn-page {
+    width: 100% !important;
+  }
+}
+@media (max-width: 600px) {
+  .card a.btn-page {
+    width: 100%;
+  }
+}
+
+/* Centralized button styles - matches hero section buttons */
+.btn-glass {
+  padding: 12px 28px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--text-color);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  min-width: 180px;
+  font-size: 1.1rem;
+}
+.btn-glass:hover {
+  background: var(--accent-hover);
+  color: #0a0e27;
+  border-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--accent-glow);
+}
+.btn-glass:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+}
+.card a.btn-glass {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 95%;
+  margin: 8px auto 0;
+  font-size: 0.95rem;
+}
+@media (max-width: 600px) {
+  .card a.btn-glass {
+    width: 100%;
+  }
+}
+.section-cta {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Keep btn-hero for backward compatibility */
+.btn-hero {
+  padding: 12px 28px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--text-color);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  min-width: 180px;
+  font-size: 1.1rem;
+}
+.btn-hero:hover {
+  background: var(--accent-hover);
+  color: #0a0e27;
+  border-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--accent-glow);
+}
+.btn-hero:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+}
+/* btn-hero inside cards */
+.card .btn-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 95%;
+  margin: 8px auto 0;
+  font-size: 0.95rem;
+}
+@media (max-width: 600px) {
+  .card .btn-hero {
+    width: 100%;
+  }
+}
+/* Button inside card containers */
+.card .btn-hero {
+  display: block;
+  margin: 8px auto 0;
+  width: 95%;
+}
+@media (max-width: 600px) {
+  .card .btn-hero {
+    width: 100%;
+  }
+}
+
 .theme-toggle { 
   margin-top:24px; 
   padding:10px 24px; 
@@ -362,15 +502,15 @@ section {
 }
 
 .js section {
-  opacity:0; 
-  transform: none; 
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); 
+  opacity: 1 !important;
+  transform: none !important;
 }
-.js section.visible { opacity:1; transform: translateY(0); }
-section h2 { 
-  font-size:2.5rem; 
-  font-weight:700; 
-  margin-bottom:40px; 
+.js section.visible { opacity: 1 !important; transform: none !important; }
+
+section h2 {
+  font-size:2.5rem;
+  font-weight:700;
+  margin-bottom:40px;
   background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -390,21 +530,43 @@ section {
   display:flex;
   flex-direction:column;
   justify-content:center;
-  align-items: center; /* Center the content including the pill */
+align-items: center; /* Center the content including the pill */
 }
 
+/* Services section - override flex to allow margins */
+#services {
+  padding-top: 80px !important;
+  justify-content: flex-start !important;
+  display: block !important;
+  min-height: auto !important;
+}
+#services .projects-grid {
+  margin-top: 60px !important;
+}
+
+.services-intro {
+  margin-bottom: 24px !important;
+}
+
+@media (max-width: 768px) {
+  .services-intro {
+    margin-bottom: 24px !important;
+  }
+}
+
+/* Glassmorphic project cards */
 
 /* Glassmorphic project cards */
 .projects-grid { 
-  display:grid; 
-  grid-template-columns: repeat(4, 1fr); 
+  display:grid !important; 
+  grid-template-columns: repeat(4, 1fr) !important; 
   gap:20px; 
 }
 @media (max-width: 1100px) {
-  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .projects-grid { grid-template-columns: repeat(2, 1fr) !important; }
 }
 @media (max-width: 768px) {
-  .projects-grid { grid-template-columns: 1fr; gap: 14px; }
+  .projects-grid { grid-template-columns: 1fr !important; gap: 14px; }
 }
 
 .card {
@@ -596,14 +758,14 @@ html[data-theme="light"][data-nemesis="on"] .card .project-link:hover{
   border-color: rgba(0,255,255,0.6);
   box-shadow: 0 14px 44px rgba(0,255,255,0.35), 0 10px 30px rgba(255,0,80,0.25);
 }
-.card a { 
+.card a:not(.btn-hero):not(.btn-page):not(.btn-glass) { 
   text-decoration:none; 
   color:var(--secondary-accent); 
   font-weight:600;
   transition: all 0.3s ease;
   font-size:0.9rem;
 }
-.card a:hover { 
+.card a:not(.btn-hero):not(.btn-page):not(.btn-glass):hover { 
   color: var(--accent-color);
   text-decoration:none;
 }
