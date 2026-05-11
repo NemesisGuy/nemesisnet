@@ -1,0 +1,19 @@
+{
+  "name": "nemesisnet",
+  "version": "1.0.0",
+  "description": "NemesisNet - AI Infrastructure & Platform Engineering",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "build:docker": "npm run generate && wsl docker build --no-cache -t nemesisguy/nemesisnet:dev . && wsl docker push nemesisguy/nemesisnet:dev"
+  },
+  "dependencies": {
+    "nuxt": "^4.4.4"
+  },
+  "devDependencies": {
+    "lighthouse": "^13.3.0",
+    "puppeteer": "^24.43.1"
+  }
+}

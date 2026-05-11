@@ -1,0 +1,149 @@
+<template>
+  <nav id="navbar">
+    <div class="nav-container">
+      <NuxtLink to="/" class="nav-logo">
+        <img :src="'/images/brand/Nemesis_Logo_Icon_nav.webp'" alt="NemesisNet Logo" width="48" height="48" loading="eager" decoding="async" fetchpriority="high">
+        <span>NemesisNet</span>
+      </NuxtLink>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" @click="toggleNav">
+        <span class="glyph-icon" aria-hidden="true">☰</span>
+      </button>
+      <div class="nav-links">
+        <NuxtLink to="/services">Services</NuxtLink>
+        <NuxtLink to="/projects">Projects</NuxtLink>
+        <NuxtLink to="/about">About</NuxtLink>
+        <a href="/#testimonials">Testimonials</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://blog.nemesisnet.co.za/" target="_blank" rel="noopener noreferrer" title="Visit the NemesisNet Blog" aria-label="NemesisNet Blog">Blog</a>
+        <button class="theme-toggle" id="aurora-toggle" @click="toggleAuroraMode" aria-label="Toggle Aurora Mode" title="Aurora Mode">
+          <span class="glyph-icon" aria-hidden="true">✦</span>
+        </button>
+        <button class="theme-toggle" id="nemesis-toggle" @click="toggleNemesisMode" aria-label="Toggle Nemesis Mode" title="Nemesis Mode">
+          <span class="glyph-icon" aria-hidden="true">⚙</span>
+        </button>
+        <button class="theme-toggle" @click="toggleTheme" aria-label="Toggle light and dark theme" title="Toggle light and dark theme">
+          <span class="glyph-icon" id="theme-icon" aria-hidden="true">☀</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <ClientOnly>
+    <div id="nav-overlay" aria-hidden="true" @click="closeNav"></div>
+  </ClientOnly>
+</template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const isMenuOpen = ref(false)
+const currentTheme = ref('dark')
+const isAurora = ref(false)
+const isNemesis = ref(false)
+
+onMounted(() => {
+  try {
+    const saved = localStorage.getItem('theme') || 'dark'
+    currentTheme.value = saved
+    applyTheme(saved)
+    const aur = localStorage.getItem('aurora') || 'off'
+    const nem = localStorage.getItem('nemesis') || 'off'
+    if (aur === 'on') { isAurora.value = true; isNemesis.value = false }
+    else if (nem === 'on') { isNemesis.value = true; isAurora.value = false }
+    applyMode()
+  } catch(e) {}
+})
+
+function applyTheme(themeValue) {
+  const themeIcon = document.getElementById('theme-icon')
+  const root = document.documentElement
+  const next = (themeValue === 'light') ? 'light' : 'dark'
+  if (next === 'dark') {
+    root.removeAttribute('data-theme')
+    if (themeIcon) themeIcon.textContent = '☾'
+  } else {
+    root.setAttribute('data-theme', 'light')
+    if (themeIcon) themeIcon.textContent = '☀'
+  }
+  currentTheme.value = next
+  try { localStorage.setItem('theme', next) } catch(e) {}
+}
+
+function toggleTheme() {
+  const next = currentTheme.value === 'dark' ? 'light' : 'dark'
+  applyTheme(next)
+}
+
+function applyMode() {
+  const root = document.documentElement
+  const aurBtn = document.getElementById('aurora-toggle')
+  const nemBtn = document.getElementById('nemesis-toggle')
+  
+  if (isAurora.value) {
+    isNemesis.value = false
+    root.setAttribute('data-aurora','on')
+    root.removeAttribute('data-nemesis')
+    if (aurBtn) { aurBtn.classList.add('active'); aurBtn.setAttribute('aria-pressed','true') }
+    if (nemBtn) { nemBtn.classList.remove('active'); nemBtn.setAttribute('aria-pressed','false') }
+    try { localStorage.setItem('aurora','on') } catch(e) {}
+  } else if (isNemesis.value) {
+    isAurora.value = false
+    root.setAttribute('data-nemesis','on')
+    root.removeAttribute('data-aurora')
+    if (nemBtn) { nemBtn.classList.add('active'); nemBtn.setAttribute('aria-pressed','true') }
+    if (aurBtn) { aurBtn.classList.remove('active'); aurBtn.setAttribute('aria-pressed','false') }
+    try { localStorage.setItem('nemesis','on') } catch(e) {}
+  } else {
+    root.removeAttribute('data-aurora')
+    root.removeAttribute('data-nemesis')
+    if (aurBtn) { aurBtn.classList.remove('active'); aurBtn.setAttribute('aria-pressed','false') }
+    if (nemBtn) { nemBtn.classList.remove('active'); nemBtn.setAttribute('aria-pressed','false') }
+    try { localStorage.setItem('aurora','off'); localStorage.setItem('nemesis','off') } catch(e) {}
+  }
+}
+
+function setNemesis(on) {
+  if (on) { isNemesis.value = true; isAurora.value = false }
+  else { isNemesis.value = false }
+  applyMode()
+}
+
+function toggleNemesisMode() {
+  setNemesis(!isNemesis.value)
+}
+
+function setAurora(on) {
+  if (on) { isAurora.value = true; isNemesis.value = false }
+  else { isAurora.value = false }
+  applyMode()
+}
+
+function toggleAuroraMode() {
+  setAurora(!isAurora.value)
+}
+
+function openNav() {
+  const nav = document.getElementById('navbar')
+  const btn = document.getElementById('nav-toggle')
+  if (!nav) return
+  nav.classList.add('open')
+  if (btn) btn.setAttribute('aria-expanded','true')
+  isMenuOpen.value = true
+  const overlay = document.getElementById('nav-overlay')
+  if (overlay) { overlay.style.display = 'block'; setTimeout(() => overlay.classList.add('visible'), 10) }
+}
+
+function closeNav() {
+  const nav = document.getElementById('navbar')
+  const btn = document.getElementById('nav-toggle')
+  if (!nav) return
+  nav.classList.remove('open')
+  if (btn) btn.setAttribute('aria-expanded','false')
+  isMenuOpen.value = false
+  const overlay = document.getElementById('nav-overlay')
+  if (overlay) { overlay.classList.remove('visible'); setTimeout(() => overlay.style.display = 'none', 220) }
+}
+
+function toggleNav() {
+  if (isMenuOpen.value) closeNav(); else openNav()
+}
+</script>

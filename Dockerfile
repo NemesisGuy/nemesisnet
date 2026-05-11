@@ -1,21 +1,10 @@
-# ===============================
-# Static site container using NGINX (Alpine)
-# ===============================
 FROM nginx:1.27-alpine
 
-# Remove default NGINX config
-RUN rm -f /etc/nginx/conf.d/default.conf
+# Copy Nuxt static output to nginx
+COPY .output/public/ /usr/share/nginx/html/
 
-# Copy custom NGINX config and the built output
+# Copy nginx config
 COPY config/nginx/default.conf /etc/nginx/conf.d/default.conf
-# Copy the built output to the nginx html directory
-COPY dist/ /usr/share/nginx/html/
 
-# Optionally ship the repo README for reference inside the container
-COPY README.md /usr/share/nginx/html/README.md
-
-# Expose HTTP port
 EXPOSE 80
-
-# Run NGINX in foreground
 CMD ["nginx", "-g", "daemon off;"]
