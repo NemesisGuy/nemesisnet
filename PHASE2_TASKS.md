@@ -112,6 +112,7 @@
 - Homepage: "AI infrastructure and platform engineering"
 - Services: Custom Software, SaaS, Infrastructure, Consulting
 - Projects: 11 projects showcasing various technologies
+- Blog: https://blog.nemesisnet.co.za (existing content for reference)
 
 ### Keywords to Target
 **High Priority:**
