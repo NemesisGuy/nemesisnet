@@ -135,48 +135,66 @@ Need BOTH to satisfy technical credibility AND search discoverability.
 
 ## Phase 2 Status: Architecture Complete, Authority Layer Next
 
-**Classification**: "SEO-Ready Service Shell" — structurally complete, content-realization pending.
+**Classification**: "SEO-Ready Service Shell" — structurally complete, content-realization pending. Core messaging is excellent ("We build real infrastructure — not API wrappers"). What's missing is depth and authority signals.
+
+**SEO Audit Scores**:
+- JSON-LD: MISS | Canonical: WEAK | OG: WEAK | Sitemap: MISS | H1: WEAK
+- Copy depth: WEAK | Internal linking: FAIR | Local SEO: MISS | Contact form: MISS
+- About page: FAIR | Testimonials: FAIR | Image optimisation: GOOD
 
 **What's done**:
 - Service architecture (3 core money pages: AI Dev, Self-hosted AI, SaaS Development)
-- Schema coverage (Organization + Service + FAQ + LocalBusiness)
-- Clean routing structure, keyword direction, technical SEO foundation
+- Service schema on 6 service pages
+- Organization + LocalBusiness schema in nuxt.config.ts
+- Person schema on About page
+- FAQ schema on /services page
+- WebP + AVIF image optimisation
 
 **What's missing** (Phase 2.8 priorities):
-- Semantic authority signals (proof layer, decision-layer content)
-- Internal linking for authority distribution (reinstated T5)
-- Homepage explicit messaging
-- Breadcrumbs for crawl structure
+- Homepage JSON-LD (WebSite + SearchAction — highest ROI fix)
+- Canonical tags on Services, About, all projects
+- OG tags on all inner pages
+- Sitemap.xml + robots.txt + GSC submission
+- Homepage H1 expansion (currently just "NemesisNet")
+- Service pages expanded to 600-1000+ words each
+- Local SEO signals (Cape Town, ZAR, POPIA throughout)
+- Contact form fix (mailto → backend)
+- About page: founder story depth + photo
+- Testimonials: location context + project links
+- Internal linking (T5 reinstated)
+- Breadcrumbs (T3 reinstated)
 
-**Phase shift**: Adding more pages ≠ more SEO. Improving semantic clarity = ranking boost.
+**Phase shift**: Adding more pages ≠ more SEO. Improving semantic clarity + authority signals = ranking boost.
 
 ---
 
 ## Technical SEO Improvements
 
-### Immediate Wins
-- [x] Add FAQ schema to service pages
-- [ ] Add "Who this is for" sections
-- [x] Improve page titles (include keywords)
-- [x] Improve meta descriptions (action-oriented)
-- [x] Add structured headings (H2, H3 hierarchy)
-- [ ] Improve internal linking **(REINSTATED - was incorrectly skipped)**
-- [x] Add location relevance ("Cape Town", "South Africa")
-
 ### Phase 2.8 Authority Layer (HIGHEST PRIORITY)
-- [ ] Homepage hero rewrite — explicit: AI systems + self-hosted infra + SaaS dev + outcomes
-- [ ] "What we build" section on homepage (3-5 bullet systems)
-- [ ] "Related Services" section on each service page (T5)
-- [ ] Decision-layer content on service pages (use cases, outcomes, architecture hints)
-- [ ] Proof layer on each service page (architecture descriptions, deployment flow)
-- [ ] Breadcrumb schema on primary pages (T3 — reinstated)
+
+- [ ] Homepage JSON-LD — WebSite + Organization + SearchAction (enables sitelinks searchbox in Google)
+- [ ] Fix contact form — mailto: kills mobile conversion; use backend or Resend
+- [ ] Expand service pages to 600-1000+ words each (use cases, non-inclusions, FAQ, process, pricing)
+- [ ] Homepage H1 expansion — "AI Infrastructure & Platform Engineering in Cape Town"
+- [ ] Add canonicals + OG tags to all inner pages (Services, About, projects)
+- [ ] Sitemap.xml + robots.txt verification + submit to Google Search Console
+- [ ] Local SEO — Cape Town + ZAR pricing + POPIA mention throughout
+- [ ] About page — expand founder story + add photo
+- [ ] Testimonials — add location context + project links
+- [ ] Internal linking — "Related Services" on all pages (T5)
+- [ ] Breadcrumbs on primary pages (T3)
 
 ### Schema Markup To Add
+- [ ] WebSite + SearchAction on homepage *(highest ROI)*
 - [x] Organization schema
 - [x] Service schema
-- [x] FAQ schema
 - [ ] Breadcrumb schema *(reinstated)*
 - [x] LocalBusiness schema
+- [x] FAQ schema on /services
+- [x] Person schema on About
+
+### Blog Subdomain Note
+blog.nemesisnet.co.za is a separate subdomain — blog authority doesn't flow to main site. **Deferred** to future. Mitigation: add rel="canonical" on blog posts + aggressive cross-linking.
 
 ## Landing Page Templates
 

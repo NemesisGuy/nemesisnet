@@ -2,19 +2,88 @@
 
 ## Classification: "SEO-Ready Service Shell Complete"
 
-The site is now a structurally sound, schema-rich service architecture. Google sees it as "a real service site, not a portfolio." But it is still "content-realization incomplete" — meaning the proof signals, decision-layer content, and semantic authority are missing.
+The site is structurally sound, schema-rich, and has excellent core messaging ("We build real infrastructure — not API wrappers"). What's missing is depth — and depth is what SEO actually rewards.
 
-**Current state**: Technically correct, structured, schema-rich, but thin on proof signals.
+**Current state**: Technically correct, structurally solid, but: thin content, missing homepage schema, weak local SEO, broken mobile contact form, weak testimonials.
+
+---
+
+## SEO Audit Scorecard
+
+| Area | Score | Notes |
+|------|-------|-------|
+| Meta titles & descriptions | FAIR | Inner service pages have thin/no keywords |
+| Canonical tags | WEAK | Missing on Services, About, project pages — duplicate content risk |
+| Structured data / JSON-LD | MISS | No JSON-LD found anywhere — highest ROI fix |
+| Open Graph tags | WEAK | Homepage has them; inner pages missing entirely |
+| robots.txt / sitemap.xml | MISS | Not confirmed present — essential for crawling |
+| Heading hierarchy | WEAK | Homepage H1 is just "NemesisNet" — no keywords |
+| Keyword targeting / copy depth | FAIR | Each service page ~200 words — needs 600-1000+ |
+| Internal linking | FAIR | Homepage linked; service pages don't cross-link |
+| Image optimisation | GOOD | WebP + AVIF, optimized/ folder — solid |
+| Core messaging | SOLID | "Not API wrappers" = excellent differentiator |
+| About page depth | FAIR | Thin — needs founder story, photo, differentiators |
+| Services pricing detail | WEAK | Only "Custom Quote" — even ranges help qualify leads |
+| Testimonials | FAIR | Both unnamed, no links, no logos — weak credibility |
+| Projects portfolio | GOOD | 11 projects, VoxNemesis framing is excellent |
+| Location signals | MISS | "Cape Town" once on About; no ZAR, no POPIA, no local keywords |
+| Contact form UX | MISS | mailto: kills conversion on mobile |
+| Blog integration | MISS | blog.nemesisnet.co.za = subdomain split; authority doesn't flow |
 
 ---
 
 ## Priority Gap Analysis (Rank Impact Order)
 
-### 🥇 Priority 1 — Homepage Messaging Clarity (CRITICAL)
+### 🔴 Priority 1 — JSON-LD on Every Page (HIGHEST ROI)
 
-The homepage is the highest-authority page. It must explicitly answer: "What does NemesisNet DO in one sentence?"
+**No JSON-LD found on any page.** This is the single highest-ROI task.
 
-**Current gap**: Slightly abstract — close but not fully clear.
+**Required schemas**:
+- **Homepage**: WebSite + Organization + SearchAction (enables sitelinks searchbox)
+- **Service pages**: Service schema (already done on 6 pages)
+- **About page**: Person schema (already added)
+- **All pages**: Article schema for future blog posts
+
+**Also needed**:
+- Canonical tags on Services, About, all project detail pages
+- OG tags on all inner pages (Services, About, projects)
+- Sitemap.xml + robots.txt verification
+
+**Task**: Add JSON-LD to homepage (WebSite + SearchAction), canonicals + OG to all inner pages.
+
+### 🔴 Priority 2 — Contact Form: mailto → Backend (CONVERSION KILLER)
+
+**Problem**: mailto: works on desktop with configured mail client. On mobile (large traffic segment) it tries to open the mail app — most people haven't configured one. You lose that lead.
+
+**Solution**: Route through backend (Spring Boot endpoint) or a service like Resend/Brevo. You're already self-hosting infrastructure — this is trivial.
+
+**Task**: Replace mailto: contact form with backend form submission.
+
+### 🔴 Priority 3 — Service Pages: Expand to 600-1000+ Words
+
+Each service page is ~200 words. Google won't rank a 200-word page against a competitor's 1500-word page with real examples, FAQs, and specifics.
+
+**Each service page must include**:
+- What the service includes (specifics, not just vibes)
+- What it doesn't include (sets expectations, reduces unqualified enquiries)
+- A real-world use case or two (even anonymised)
+- An FAQ section (FAQ schema is gold for voice search and featured snippets)
+- Actual process steps (the 4-step flow from Services index — adapt for each subpage)
+- Pricing ranges (e.g. "from R15,000") — even ranges reduce bounce from tyre-kickers
+
+**The VoxNemesis project page** with Challenge / Solution / Technical Implementation structure is the right template — replicate on every service page.
+
+**Task**: Expand each service page to 600-1000+ words with: use cases, non-inclusions, FAQ, process steps, pricing ranges.
+
+### 🟠 Priority 4 — Homepage H1 + Hero Rewrite
+
+**Problem**: H1 is just "NemesisNet" — no keywords, wastes the most important heading.
+
+**Required change**: Expand to include target keywords.
+
+**Example**: "NemesisNet — AI Infrastructure & Platform Engineering in Cape Town"
+
+**Also**: Rewrite hero to explicitly answer: "What does NemesisNet DO in one sentence?"
 
 **Required structure**:
 - Who you help
@@ -24,116 +93,152 @@ The homepage is the highest-authority page. It must explicitly answer: "What doe
 **Example direction**:
 > "We build custom AI systems, self-hosted infrastructure, and SaaS platforms for businesses that need control, scalability, and engineering-grade reliability."
 
-**Task**: Rewrite homepage hero and add "What we build" section (3-5 bullet systems: AI platforms, SaaS systems, automation pipelines, self-hosted LLM systems).
+**Task**: Expand H1 + rewrite hero + add "What we build" section (3-5 bullet systems).
 
-### 🥈 Priority 2 — Service Pages Need "Decision Layer Content"
+### 🟠 Priority 5 — Local SEO (ZERO RIGHT NOW)
 
-Service pages exist and are schema-rich, but they are descriptive rather than decision-making pages.
+**Problem**: "Cape Town" appears once on the About page. No ZAR pricing, no POPIA, no African market mention, no local keywords.
 
-**Each service page must answer**:
-- When do you need this?
-- What problem does it solve?
-- What breaks without it?
-- What does success look like?
-- What stack is typically used?
-- What do you actually deliver?
+**Required additions everywhere**:
+- "Based in Cape Town, South Africa — available for remote engagements globally" in footer
+- "Cape Town software engineer", "South Africa AI development" keywords on homepage, About, Services
+- ZAR pricing prominently displayed
+- POPIA mention as a differentiator (implemented on KayaStays, can reference)
+- African time zone advantage: "Work in your timezone, overlap with European hours"
+- Google Business Profile (if not already)
 
-**Gap**: Currently "descriptive" — needs to become "decision-making"
+**Task**: Add location keywords throughout + footer tagline + GMB setup.
 
-**Task**: Add use cases, outcomes, and architecture hints to each service page.
+### 🟠 Priority 6 — About Page: Beef Up Founder Story
 
-### 🥉 Priority 3 — Internal Linking (PREVIOUSLY SKIPPED — BIG IMPACT)
+**Problem**: "20+ systems delivered" with no context feels like a placeholder.
 
-**Re-evaluation**: T5 (Related Services links) was marked "low impact" — this was incorrect. Internal linking is medium-high for SEO authority distribution.
+**What would actually work**:
+- Named kind of work (multi-tenant SaaS platforms, self-hosted AI infra on commodity hardware, TTS pipelines at sub-150ms latency)
+- Academic background (BTech research)
+- Self-hosted homelab angle
+- Self-sufficiency story: architect, build, deploy, and operate the whole stack (genuinely rare at solo level — clients who've been burned by devs who can't do DevOps will respond to this)
+- **A photo** — even a clean, slightly-dark headshot fits the brand aesthetic
 
-**Why it matters**:
-- Google needs to understand related services, clusters, primary vs secondary intent
-- Without it, pages rank weaker individually
+**Task**: Expand founder bio with specifics + add photo.
 
-**Required links**:
+### 🟡 Priority 7 — Testimonials: Add Credibility Weight
+
+**Problem**: "Business Owner" tells a visitor nothing. No photo, no company logo, no URL to client site.
+
+**Required additions**:
+- Client location: "Business Owner, Cape Town" or "Business Owner, financial services"
+- Link to the live demo site of the work ("See the work" link)
+- Client logo if available
+- Named clients if happy to be named and linked (massively better)
+
+**Task**: Add location context + project links to all testimonials.
+
+### 🟡 Priority 8 — Internal Linking (T5 REINSTATED)
+
+**Why it matters**: Google needs to understand related services, clusters, primary vs secondary intent. Without it, pages rank weaker individually.
+
+**Required links on each service page**:
 - AI Dev → Self-hosted AI
 - Self-hosted AI → SaaS dev
 - SaaS dev → AI Dev
-- All service pages → homepage
+- All → homepage
+- Related project links
 
-**Task**: Add "Related Services" section to bottom of each service page (reinstated from skipped T5).
+**Task**: Add "Related Services" + "Related Projects" sections to all service pages.
 
-### 🧪 Priority 4 — Breadcrumbs (Minor but not useless)
+### 🟡 Priority 9 — Breadcrumbs (T3 REINSTATED)
 
-T3 was marked low impact — true it won't rank you, but it improves crawl structure and UX clarity.
+Improves crawl structure and UX. Cheap win, not critical.
 
-**Task**: Add breadcrumb schema to primary pages (cheap win, not critical).
+**Task**: Add breadcrumb schema to primary pages.
 
-### ⚠️ Priority 5 — "Proof Layer" (Biggest Long-Term Gap)
+### ⚠️ Blog Subdomain (DEFERRED)
 
-This is NOT blog content. This is evidence of competence:
+**Problem**: blog.nemesisnet.co.za is a separate subdomain. Google treats subdomains as separate sites — all blog authority accrues to the subdomain, not the main site.
 
-Required per service:
-- 1-2 system diagrams or architecture descriptions
-- "Example architecture" section
-- "Real deployment flow" hint
-- "Stack transparency" section
+**Recommendation**: Move to nemesisnet.co.za/blog (future).
 
-Even conceptual is fine. Google and humans both respond to visual proof.
+**Current mitigation**: Add rel="canonical" on every blog post pointing back to main domain + cross-link aggressively from main site.
 
-**Task**: Add architecture/flow content to each service page.
+**Priority**: Low — deferred to future. Above tasks are higher priority.
 
 ---
 
-## Semantic Authority Signals (What Google Now Asks)
+## Quick Wins (This Week)
 
-Google now evaluates:
-- [ ] Why should I trust this entity?
-- [ ] Is this a real operator or just pages?
-- [ ] Does it demonstrate experience?
-- [ ] Does it match real-world intent?
-
-**Current score**:
-- Technical correctness: ✔
-- Structure: ✔
-- Schema coverage: ✔
-- Proof signals: ⚠️ MISSING
+1. Homepage JSON-LD (WebSite + Organization + SearchAction schema)
+2. Add canonicals + OG tags to Services, About, and every project detail page
+3. Add sitemap.xml and verify robots.txt
+4. Submit sitemap to Google Search Console (set up if not already)
+5. Expand homepage H1 to include keywords
+6. Add "Based in Cape Town, South Africa" to footer
+7. Fix contact form (mailto → backend)
 
 ---
 
-## Strategic Insight: Phase Shift
+## Implementation Plan
 
-**Old priority**: adding more pages, more schema, more structure
-**New priority**: improving semantic clarity, stronger page relationships, stronger intent signaling
+### 🔴 Immediate (this sprint)
 
-**Phase classification**: Phase 2.8 — "SEO Architecture Complete, Authority Layer Missing"
+1. Homepage JSON-LD: WebSite + Organization + SearchAction
+2. Canonical tags on all inner pages (Services, About, projects)
+3. OG tags on all inner pages
+4. Sitemap.xml + robots.txt check + GSC submission
+5. Homepage H1 expansion + hero rewrite
+6. Fix contact form (mailto → backend)
+7. Add "Cape Town, South Africa" to footer + local SEO elements
 
-**What unlocks ranking**: The last 20% — authority signals, decision-layer content, proof layer, internal linking.
+### 🟠 Next sprint
 
----
+8. Expand service pages to 600-1000+ words each
+9. Add FAQ sections to service pages with FAQ schema
+10. Add pricing ranges to service pages
+11. Add "Related Services" + "Related Projects" links
+12. About page: expand founder bio + add photo
+13. Testimonials: add location context + project links
 
-## Implementation Plan (No Blog Required)
+### 🟡 Later
 
-### 🔴 Immediate
-1. Rewrite homepage hero (explicit: AI systems + self-hosted infra + SaaS dev + outcomes)
-2. Add "What we build" section (3-5 bullet systems on homepage)
-3. Add internal linking to all service pages (reinstated T5)
-
-### 🟠 Next
-4. Expand service pages with decision-layer content (use cases, outcomes, architecture hints)
-5. Add proof layer to each service page (architecture descriptions, deployment flow)
-
-### 🟡 Optional Polish
-6. Breadcrumbs on primary pages
+14. Breadcrumbs on primary pages
+15. Blog canonical + aggressive cross-linking
+16. Google Business Profile setup
 
 ---
 
 ## What's Already Done (Don't Re-do)
 
 - Service architecture (3 core money pages)
-- Schema coverage (service + org + FAQ + local business)
-- Clean routing structure
-- Keyword direction
-- Technical SEO foundation
+- Service schema on 6 service pages
+- Organization schema in nuxt.config.ts
+- LocalBusiness schema in nuxt.config.ts
+- Person schema on About page
+- FAQ schema on /services page
+- /services/saas-development renamed from /saas-dev
 
 ---
 
-*Document Version: 1.1*
-*Status: Phase 2.8 — Authority Layer*
+## SEO Scoring Breakdown
+
+| Signal | Score | Action |
+|--------|-------|--------|
+| JSON-LD | MISS | Add WebSite + SearchAction to homepage |
+| Canonical tags | WEAK | Add to Services, About, all projects |
+| OG tags | WEAK | Add to all inner pages |
+| Sitemap/robots | MISS | Verify + submit to GSC |
+| Homepage H1 | WEAK | Expand with keywords |
+| Copy depth | WEAK | Expand service pages to 600-1000+ words |
+| Internal linking | FAIR | Add Related Services to all pages |
+| Local SEO | MISS | Add Cape Town + ZAR throughout |
+| Contact form | MISS | Replace mailto with backend |
+| About page | FAIR | Expand founder story + add photo |
+| Testimonials | FAIR | Add location + project links |
+| Blog | MISS | Add canonicals + cross-link |
+
+---
+
+*Document Version: 1.3*
+*Status: Phase 2.8 — Authority Layer (Full integration: SEO audit + Claude's deep-dive + authority gap analysis)*
 *Last Updated: May 2026*
-*Source: Strategic correction based on SEO authority gap analysis*
+*Sources: SEO scorecard audit + Claude full-site crawl feedback + authority gap analysis*
+*Note: Blog subdomain migration deferred — not current priority*
