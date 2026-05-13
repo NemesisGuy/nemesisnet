@@ -59,9 +59,14 @@
 
 <script setup>
 useHead({
-  title: 'Custom Software Development | NemesisNet',
+  title: 'Custom Software Development | NemesisNet — Spring Boot, Vue 3, Enterprise Grade',
   meta: [
-    { name: 'description', content: 'Enterprise-grade backend systems and high-performance full-stack applications with Vue 3, Spring Boot, and secure authentication. Cape Town, South Africa.' }
+    { name: 'description', content: 'Custom software development in South Africa: enterprise-grade backend systems and full-stack applications with Vue 3, Spring Boot, secure auth. Cape Town.' },
+    { property: 'og:title', content: 'Custom Software Development | NemesisNet' },
+    { property: 'og:description', content: 'Enterprise-grade backend and full-stack applications. Vue 3, Spring Boot, secure authentication. Based in Cape Town, South Africa.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://dev.nemesisnet.co.za/services/custom-software' },
+    { property: 'og:image', content: 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
     { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services/custom-software' }

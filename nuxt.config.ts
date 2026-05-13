@@ -55,6 +55,26 @@ export default defineNuxtConfig({
           type: 'application/ld+json',
           children: JSON.stringify({
             '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            'name': 'NemesisNet',
+            'url': 'https://nemesisnet.co.za',
+            'description': 'AI infrastructure, self-hosted AI, and full-stack SaaS development in Cape Town, South Africa.',
+            'inLanguage': 'en-ZA',
+            'publisher': { '@id': 'https://nemesisnet.co.za/#organization' },
+            'potentialAction': {
+              '@type': 'SearchAction',
+              'target': {
+                '@type': 'EntryPoint',
+                'urlTemplate': 'https://nemesisnet.co.za/?q={search_term_string}'
+              },
+              'query-input': 'required name=search_term_string'
+            }
+          })
+        },
+        {
+          type: 'application/ld+json',
+          children: JSON.stringify({
+            '@context': 'https://schema.org',
             '@type': 'Organization',
             '@id': 'https://nemesisnet.co.za/#organization',
             'name': 'NemesisNet',

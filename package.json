@@ -10,6 +10,7 @@
     "build:docker": "npm run generate && wsl docker build --no-cache -t nemesisguy/nemesisnet:dev . && wsl docker push nemesisguy/nemesisnet:dev"
   },
   "dependencies": {
+    "nodemailer": "^8.0.7",
     "nuxt": "^4.4.4"
   },
   "devDependencies": {

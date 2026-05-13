@@ -89,9 +89,14 @@
 
 <script setup>
 useHead({
-  title: 'Self-Hosted AI Infrastructure | NemesisNet',
+  title: 'Self-Hosted AI Infrastructure | NemesisNet — GGUF, GPU, No Vendor Lock-in',
   meta: [
-    { name: 'description', content: 'Self-hosted AI infrastructure: GGUF models, Docker, GPU deployment, vector databases. Cape Town, South Africa.' }
+    { name: 'description', content: 'Self-hosted AI infrastructure in South Africa: GGUF models, Docker deployment, GPU setup, and vector databases. Real AI — not API wrappers. Cape Town.' },
+    { property: 'og:title', content: 'Self-Hosted AI Infrastructure | NemesisNet' },
+    { property: 'og:description', content: 'GGUF models, Docker, GPU deployment, and vector databases. No vendor lock-in. Based in Cape Town, South Africa.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://dev.nemesisnet.co.za/services/self-hosted-ai' },
+    { property: 'og:image', content: 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
     { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services/self-hosted-ai' }

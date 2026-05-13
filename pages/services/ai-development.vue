@@ -82,9 +82,14 @@
 
 <script setup>
 useHead({
-  title: 'AI Development | NemesisNet',
+  title: 'Custom AI Development | NemesisNet — MCP Agents, TTS, Agent Workflows',
   meta: [
-    { name: 'description', content: 'Custom AI development: MCP agents, self-hosted TTS pipelines, multi-agent coding harnesses. Cape Town, South Africa.' }
+    { name: 'description', content: 'Custom AI development in South Africa: MCP agents, self-hosted TTS pipelines, multi-agent coding harnesses, and AI integration for production systems. Cape Town.' },
+    { property: 'og:title', content: 'Custom AI Development | NemesisNet' },
+    { property: 'og:description', content: 'MCP agents, self-hosted TTS pipelines, and AI integration. Based in Cape Town, South Africa.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://dev.nemesisnet.co.za/services/ai-development' },
+    { property: 'og:image', content: 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
     { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services/ai-development' }

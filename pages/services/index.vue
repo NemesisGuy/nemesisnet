@@ -240,9 +240,14 @@
 
 <script setup>
 useHead({
-  title: 'Services | NemesisNet',
+  title: 'Services & Pricing | NemesisNet — AI Infrastructure, SaaS, and Software Development Cape Town',
   meta: [
-    { name: 'description', content: 'NemesisNet services: Custom Software, SaaS Development, AI Infrastructure, Infrastructure, Consulting. Cape Town, South Africa.' }
+    { name: 'description', content: 'NemesisNet services: Custom Software, SaaS Development, AI Infrastructure, Infrastructure & DevOps, Consulting. Starting from R7,000. Cape Town, South Africa.' },
+    { property: 'og:title', content: 'Services & Pricing | NemesisNet' },
+    { property: 'og:description', content: 'Custom software, AI infrastructure, and SaaS development. Starting from R7,000. Based in Cape Town, South Africa.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://dev.nemesisnet.co.za/services' },
+    { property: 'og:image', content: 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
     { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services' }

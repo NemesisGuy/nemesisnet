@@ -58,9 +58,14 @@
 
 <script setup>
 useHead({
-  title: 'System Design & Consulting | NemesisNet',
+  title: 'System Design & Consulting | NemesisNet — Technical Roadmapping, Architecture',
   meta: [
-    { name: 'description', content: 'Technical roadmapping, architectural optimization, and strategic guidance for software teams. Cape Town, South Africa.' }
+    { name: 'description', content: 'Technical consulting and system design in South Africa: architectural optimization, technical roadmapping, and strategic guidance for software teams. Cape Town.' },
+    { property: 'og:title', content: 'System Design & Consulting | NemesisNet' },
+    { property: 'og:description', content: 'Technical roadmapping and architectural guidance. Based in Cape Town, South Africa.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://dev.nemesisnet.co.za/services/consulting' },
+    { property: 'og:image', content: 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
     { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services/consulting' }

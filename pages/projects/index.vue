@@ -155,9 +155,14 @@
 
 <script setup>
 useHead({
-  title: 'Projects | NemesisNet',
+  title: 'Projects | NemesisNet — Production-Grade AI, SaaS, and Infrastructure Builds',
   meta: [
-    { name: 'description', content: 'Full portfolio of NemesisNet projects: VoxNemesis Supertonic, Kokoro TTS, NK Assessments, ForkMyFolio, WordPress MCP Server, OntheGoRentals, CodeCritical, Vibe-Type, Bored Room Cafe.' }
+    { name: 'description', content: 'Full portfolio of production systems built by NemesisNet: AI agents, TTS pipelines, multi-tenant SaaS platforms, MCP integrations, and DevOps infrastructure. Cape Town, South Africa.' },
+    { property: 'og:title', content: 'Projects | NemesisNet' },
+    { property: 'og:description', content: 'Production-grade AI, SaaS, and infrastructure builds. VoxNemesis, Kokoro TTS, Since, ForkMyFolio, and more.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://dev.nemesisnet.co.za/projects' },
+    { property: 'og:image', content: 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
     { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/projects' }

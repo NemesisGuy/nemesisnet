@@ -6,12 +6,18 @@
         <img :src="'/images/brand/Nemesis_Logo_Icon.webp'" class="avatar-img" alt="NemesisNet logo" loading="eager" fetchpriority="high" decoding="async" width="256" height="256">
       </div>
       <div>
-        <h1>NemesisNet</h1>
+        <h1>NemesisNet — AI Infrastructure & Platform Engineering in Cape Town</h1>
         <p class="hero-subtitle">We build real infrastructure — not API wrappers.</p>
       </div>
     </div>
     <div class="hero-content">
-      <p class="hero-intro"><strong>NemesisNet</strong> builds AI infrastructure and full-stack systems for real production workloads.</p>
+      <p class="hero-intro"><strong>NemesisNet</strong> builds custom AI systems, self-hosted infrastructure, and SaaS platforms for businesses that need control, scalability, and engineering-grade reliability. Based in Cape Town, South Africa — serving clients globally.</p>
+      <ul class="hero-what-we-build">
+        <li>AI agents &amp; MCP integrations</li>
+        <li>Self-hosted LLM &amp; TTS pipelines</li>
+        <li>Multi-tenant SaaS platforms</li>
+        <li>Production automation &amp; infrastructure</li>
+      </ul>
       <div class="hero-links">
         <NuxtLink to="/projects">Our Work</NuxtLink>
         <a href="https://blog.nemesisnet.co.za/" target="_blank" rel="noopener noreferrer" title="Visit the NemesisNet Blog" aria-label="NemesisNet Blog">Our Blog</a>
@@ -170,16 +176,22 @@
         </div>
         <form class="contact-form" @submit="handleContact">
           <label for="cname">Name</label>
-          <input id="cname" v-model="formName" type="text" placeholder="Your name" required>
+          <input id="cname" v-model="formName" type="text" placeholder="Your name" required :disabled="formStatus === 'sending'">
           <label for="cemail">Email</label>
-          <input id="cemail" v-model="formEmail" type="email" placeholder="you@domain.com" required>
+          <input id="cemail" v-model="formEmail" type="email" placeholder="you@domain.com" required :disabled="formStatus === 'sending'">
           <label for="cmessage">Message</label>
-          <textarea id="cmessage" v-model="formMessage" placeholder="How can I help?" required></textarea>
-          <button type="submit">Send Message</button>
-          <small style="color:var(--text-muted); text-align:center; margin-top:-8px;">Messages are sent via your email client.</small>
+          <textarea id="cmessage" v-model="formMessage" placeholder="How can I help?" required :disabled="formStatus === 'sending'"></textarea>
+          <button type="submit" :disabled="formStatus === 'sending'">
+            <span v-if="formStatus === 'sending'">Sending...</span>
+            <span v-else-if="formStatus === 'success'">Sent!</span>
+            <span v-else>Send Message</span>
+          </button>
+          <small v-if="formStatus === 'success'" style="color: var(--success, #4ade80); text-align: center; margin-top: -8px;">Message sent — I'll respond within 24 hours.</small>
+          <small v-else-if="formStatus === 'error'" style="color: #f87171; text-align: center; margin-top: -8px;">{{ formError }}</small>
+          <small v-else style="color: var(--text-muted); text-align: center; margin-top: -8px;">Direct delivery — no third-party tracking.</small>
         </form>
       </div>
-      <p class="contact-subnote">Also available for WordPress, WooCommerce, and CMS projects - enquire directly.</p>
+      <p class="contact-subnote">Based in Cape Town, South Africa — available for remote engagements globally. Also available for WordPress, WooCommerce, and CMS projects — enquire directly.</p>
     </div>
   </section>
 </template>
@@ -190,24 +202,39 @@ import { ref } from 'vue'
 const formName = ref('')
 const formEmail = ref('')
 const formMessage = ref('')
+const formStatus = ref('idle')
+const formError = ref('')
 
-const handleContact = (e) => {
+const handleContact = async (e) => {
   e.preventDefault()
+  formStatus.value = 'sending'
+  formError.value = ''
+
   const name = formName.value.trim()
   const email = formEmail.value.trim()
   const message = formMessage.value.trim()
-  const subject = encodeURIComponent(`Website contact from ${name}`)
-  const body = encodeURIComponent(`Name: ${name}%0AEmail: ${email}%0A%0A${message}`)
-  const mailto = `mailto:admin@nemesisnet.co.za?subject=${subject}&body=${body}`
-  window.location.href = mailto
+
+  try {
+    const res = await $fetch('/api/contact', {
+      method: 'POST',
+      body: { name, email, message }
+    })
+    formStatus.value = 'success'
+    formName.value = ''
+    formEmail.value = ''
+    formMessage.value = ''
+  } catch (err) {
+    formStatus.value = 'error'
+    formError.value = 'Something went wrong. Please try again or email directly.'
+  }
 }
 
 useHead({
-  title: 'NemesisNet — AI Infrastructure & Platform Engineering',
+  title: 'NemesisNet — AI Infrastructure & Platform Engineering in Cape Town, South Africa',
   meta: [
-    { name: 'description', content: 'NemesisNet engineers AI-powered platforms, backend systems, and automation infrastructure.' },
-    { property: 'og:title', content: 'NemesisNet — AI Infrastructure & Platform Engineering' },
-    { property: 'og:description', content: 'Engineering AI-powered platforms, backend systems, and automation infrastructure.' },
+    { name: 'description', content: 'NemesisNet builds custom AI systems, self-hosted infrastructure, and SaaS platforms for businesses in South Africa. Control, scalability, and engineering-grade reliability.' },
+    { property: 'og:title', content: 'NemesisNet — AI Infrastructure & Platform Engineering in Cape Town' },
+    { property: 'og:description', content: 'Custom AI systems, self-hosted infrastructure, and SaaS platforms built for production. Based in Cape Town, South Africa.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://dev.nemesisnet.co.za/' },
     { property: 'og:image', content: 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
@@ -228,6 +255,8 @@ useHead({
 @media (max-width: 768px) { .projects-grid { grid-template-columns: 1fr !important; gap: 14px; } }
 
 .hero-subtitle { font-size: 1.3rem; color: var(--text-muted); margin-top: 4px; }
+.hero-what-we-build { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.hero-what-we-build li { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 8px; padding: 6px 14px; font-size: 0.85rem; color: var(--text-muted); }
 
 .pill { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
 .pill-ai { background: rgba(99, 102, 241, 0.2); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); }

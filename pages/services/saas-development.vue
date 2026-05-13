@@ -59,9 +59,14 @@
 
 <script setup>
 useHead({
-  title: 'SaaS Development | NemesisNet',
+  title: 'SaaS Development | NemesisNet — Multi-Tenant Platforms, Spring Boot + Vue 3',
   meta: [
-    { name: 'description', content: 'Scalable multi-tenant SaaS platforms with Spring Boot + Vue 3, authentication, billing, and API-first architecture. Cape Town, South Africa.' }
+    { name: 'description', content: 'Scalable multi-tenant SaaS development in South Africa with Spring Boot + Vue 3, authentication, billing, and API-first architecture. Cape Town.' },
+    { property: 'og:title', content: 'SaaS Development | NemesisNet' },
+    { property: 'og:description', content: 'Scalable multi-tenant SaaS platforms with Spring Boot + Vue 3. Based in Cape Town, South Africa.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://dev.nemesisnet.co.za/services/saas-development' },
+    { property: 'og:image', content: 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
     { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services/saas-development' }

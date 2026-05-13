@@ -59,9 +59,14 @@
 
 <script setup>
 useHead({
-  title: 'Infrastructure Engineering | NemesisNet',
+  title: 'Infrastructure Engineering & DevOps | NemesisNet — Docker, CI/CD, Production Runtimes',
   meta: [
-    { name: 'description', content: 'Docker, CI/CD, Redis, Nginx, and production AI runtimes. High-performance backend infrastructure for South African businesses.' }
+    { name: 'description', content: 'Infrastructure engineering and DevOps in South Africa: Docker, CI/CD, Redis, Nginx, and production AI runtimes. High-performance backend for Cape Town businesses.' },
+    { property: 'og:title', content: 'Infrastructure Engineering & DevOps | NemesisNet' },
+    { property: 'og:description', content: 'Docker, CI/CD, Redis, Nginx, and production AI runtimes. Based in Cape Town, South Africa.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://dev.nemesisnet.co.za/services/infrastructure' },
+    { property: 'og:image', content: 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
     { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services/infrastructure' }

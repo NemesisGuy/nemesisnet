@@ -69,12 +69,14 @@
 
 <script setup>
 useHead({
-  title: 'About | NemesisNet',
+  title: 'About | NemesisNet — AI Infrastructure Engineer in Cape Town, South Africa',
   meta: [
-    { name: 'description', content: 'About NemesisNet — AI infrastructure, platform engineering, and full-stack development by Peter Buckingham. Cape Town, South Africa.' }
-  ],
-  link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/about' }
+    { name: 'description', content: 'About NemesisNet — AI infrastructure, platform engineering, and full-stack development by Peter Buckingham. Based in Cape Town, South Africa.' },
+    { property: 'og:title', content: 'About | NemesisNet' },
+    { property: 'og:description', content: 'Systems architect specializing in AI infrastructure, TTS pipelines, and production full-stack platforms. Based in Cape Town, South Africa.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://dev.nemesisnet.co.za/about' },
+    { property: 'og:image', content: 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   script: [{
     type: 'application/ld+json',
