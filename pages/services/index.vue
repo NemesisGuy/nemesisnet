@@ -17,6 +17,16 @@
             <NuxtLink to="/services/saas-dev" class="btn-glass">Learn More</NuxtLink>
           </div>
           <div class="card">
+            <h3>AI Development</h3>
+            <p>MCP agents, self-hosted TTS pipelines, and multi-agent coding harnesses.</p>
+            <NuxtLink to="/services/ai-development" class="btn-glass">Learn More</NuxtLink>
+          </div>
+          <div class="card">
+            <h3>Self-Hosted AI Infrastructure</h3>
+            <p>GGUF models, GPU deployment, and vector databases — no vendor lock-in.</p>
+            <NuxtLink to="/services/self-hosted-ai" class="btn-glass">Learn More</NuxtLink>
+          </div>
+          <div class="card">
             <h3>Infrastructure & DevOps</h3>
             <p>Docker, CI/CD, cloud networking, and infrastructure automation.</p>
             <NuxtLink to="/services/infrastructure" class="btn-glass">Learn More</NuxtLink>
@@ -232,11 +242,60 @@
 useHead({
   title: 'Services | NemesisNet',
   meta: [
-    { name: 'description', content: 'NemesisNet services: Custom Software, SaaS Development, Infrastructure, Consulting.' }
+    { name: 'description', content: 'NemesisNet services: Custom Software, SaaS Development, AI Infrastructure, Infrastructure, Consulting. Cape Town, South Africa.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services' }
-  ]
+  ],
+  script: [{
+    type: 'application/ld+json',
+    children: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'What technologies does NemesisNet use?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'NemesisNet works with Vue 3, React, Spring Boot, Python, PocketBase, Docker, PostgreSQL, Redis, and AI frameworks including MCP, GGUF models, and CUDA-accelerated inference.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How does pricing work?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Most projects start at R7,000 for rapid delivery and range up to R220,000 for AI-powered builds.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does NemesisNet work with clients outside Cape Town?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. While based in Cape Town, South Africa, NemesisNet works with clients remotely across the country and internationally. Discovery calls and scoping sessions are conducted online.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is the typical delivery timeline?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Lightweight systems ship in 1-5 days. Business systems typically take 1-3 weeks. AI-powered platforms and enterprise builds range from 8-16 weeks. All timelines are scoped during the discovery phase.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can NemesisNet integrate with existing systems?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. NemesisNet builds API integrations, MCP servers, and data pipelines that connect to existing CMS, CRM, and database systems. Custom MCP agents can automate workflows across multiple platforms.'
+          }
+        }
+      ]
+    })
+  }]
 })
 </script>
 

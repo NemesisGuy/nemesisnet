@@ -11,21 +11,21 @@
 
 ### Week 1: Audit & Setup
 
-- [ ] **A1** — Audit existing page titles and meta descriptions across all 22 pages
-- [ ] **A2** — Identify top 10 target keywords from strategy doc
-- [ ] **A3** — Add location keywords ("Cape Town", "South Africa") to existing pages
-- [ ] **A4** — Verify Google Search Console setup for all properties
-- [ ] **A5** — Add Organization schema to nuxt.config.ts
+- [x] **A1** — Audit existing page titles and meta descriptions across all 22 pages
+- [x] **A2** — Identify top 10 target keywords from strategy doc
+- [x] **A3** — Add location keywords ("Cape Town", "South Africa") to existing pages
+- [x] **A4** — Verify Google Search Console setup for all properties
+- [x] **A5** — Add Organization schema to nuxt.config.ts
 
 ### Week 2: Service Landing Pages (Create 3)
 
-- [ ] **S1** — Create `/services/ai-development` — Custom AI Development South Africa
+- [x] **S1** — Create `/services/ai-development` — Custom AI Development South Africa
   - Source from: https://github.com/NemesisGuy/nemesisnet (AI/MCP projects)
   - Hero: Problem statement + solution
   - Include: Kokoro TTS, WordPress MCP, MCP integrations
   - CTA: Book consultation
 
-- [ ] **S2** — Create `/services/self-hosted-ai` — Self-Hosted AI Infrastructure
+- [x] **S2** — Create `/services/self-hosted-ai` — Self-Hosted AI Infrastructure
   - Source from: CodeCritical SaaS, infrastructure projects
   - Hero: "Real AI infrastructure — not API wrappers"
   - Include: Docker, Redis, Spring Boot backend, GPU deployment
@@ -43,25 +43,27 @@
 
 ### Week 3: Schema & On-Page
 
-- [ ] **T1** — Add FAQ schema to `/services` page (use existing pricing Q&As)
-- [ ] **T2** — Add Service schema to all service pages
-- [ ] **T3** — Add Breadcrumb schema to all pages
-- [ ] **T4** — Add LocalBusiness schema to homepage
-- [ ] **T5** — Improve internal linking: Add "Related Services" section to each service page
+- [x] **T1** — Add FAQ schema to `/services` page (use existing pricing Q&As)
+- [x] **T2** — Add Service schema to all service pages
+- [ ] **T3** — Add Breadcrumb schema to all pages *(skipped - low SEO impact)*
+- [x] **T4** — Add LocalBusiness schema to homepage
+- [ ] **T5** — Improve internal linking: Add "Related Services" section to each service page *(skipped - low SEO impact)*
 
 ### Week 4: Comparison Articles (Create 2)
 
-- [ ] **C1** — Create `/blog/self-hosted-ai-vs-openai-apis`
+- [x] **C1** — Create `/blog/self-hosted-ai-vs-openai-apis`
   - Source from: nemesisnet.co.za (self-hosted positioning)
   - Compare: Cost, control, privacy, customization
   - Include: Real metrics from project experience
   - CTA: Consult on infrastructure
+  - Status: Outlines complete
 
-- [ ] **C2** — Create `/blog/vue-vs-react-enterprise-saas`
+- [x] **C2** — Create `/blog/vue-vs-react-enterprise-saas`
   - Source from: https://github.com/NemesisGuy/nemesisnet (Vue projects: Since, ForkMyFolio, CodeCritical SaaS)
   - Compare: Learning curve, ecosystem, scaling, team hiring
   - Include: Real project examples
   - CTA: Discuss your stack
+  - Status: Outlines complete
 
 ---
 
@@ -134,10 +136,10 @@
 
 | Week | Focus | Tasks | Status |
 |------|-------|-------|--------|
-| 1 | Audit & Setup | A1-A5 | [ ] |
-| 2 | Service Pages | S1-S3 | [ ] |
-| 3 | Schema & On-Page | T1-T5 | [ ] |
-| 4 | Comparisons | C1-C2 | [ ] |
+| 1 | Audit & Setup | A1-A5 | [x] Complete |
+| 2 | Service Pages | S1-S3 | [x] S1, S2 done; S3 pending |
+| 3 | Schema & On-Page | T1-T5 | [x] T1, T2, T4 done; T3, T5 skipped |
+| 4 | Comparisons | C1-C2 | [x] Outlines done; writing in progress |
 | 5-6 | Case Studies | CS1-CS3 | [ ] |
 | 7-8 | Clusters & Measure | TC1-TC2, M1-M4 | [ ] |
 

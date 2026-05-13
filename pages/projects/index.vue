@@ -29,6 +29,16 @@
           </div>
 
           <div class="card">
+            <img :src="'/images/projects/pockettts-mcp/optimized/hero-480.webp'" alt="PocketTTS-MCP" loading="lazy" width="480" height="487" srcset="/images/projects/pockettts-mcp/optimized/hero-480.webp 480w, /images/projects/pockettts-mcp/optimized/hero.webp 800w" sizes="(max-width: 640px) 480px, 800px">
+            <h3>PocketTTS-MCP</h3>
+            <p>MCP server wrapping Kyutai Labs' Pocket TTS — local, open-source neural text-to-speech for AI agent workflows.</p>
+            <div class="project-links">
+              <a class="btn-glass" href="https://github.com/NemesisGuy/PocketTTS-MCP" target="_blank">Source</a>
+              <NuxtLink class="btn-glass" to="/projects/pockettts-mcp">Detail</NuxtLink>
+            </div>
+          </div>
+
+          <div class="card">
             <img :src="'/images/projects/vibetype/optimized/hero.webp'" alt="Vibe-Type" loading="lazy" width="900" height="611">
             <h3>Vibe-Type</h3>
             <p>An experimental AI-powered coding/typing assistant — offering voice or smart-typing support, to speed up coding and writing workflows.</p>

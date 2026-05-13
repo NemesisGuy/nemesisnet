@@ -17,7 +17,10 @@ export default defineNuxtConfig({
         '/projects/bored-room-cafe',
         '/projects/voxnemesis-supertonic',
         '/projects/since',
+        '/projects/pockettts-mcp',
         '/services',
+        '/services/ai-development',
+        '/services/self-hosted-ai',
         '/services/custom-software',
         '/services/saas-dev',
         '/services/infrastructure',
@@ -46,6 +49,68 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: '/css/main.css' },
         { rel: 'stylesheet', href: '/css/aurora-mode.css' },
         { rel: 'stylesheet', href: '/css/nemesis-mode.css' }
+      ],
+      script: [
+        {
+          type: 'application/ld+json',
+          children: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            '@id': 'https://nemesisnet.co.za/#organization',
+            'name': 'NemesisNet',
+            'url': 'https://nemesisnet.co.za',
+            'logo': 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png',
+            'description': 'NemesisNet engineers AI-powered platforms, backend systems, and automation infrastructure for production workloads.',
+            'founder': {
+              '@type': 'Person',
+              'name': 'Peter Buckingham'
+            },
+            'address': {
+              '@type': 'PostalAddress',
+              'addressLocality': 'Cape Town',
+              'addressRegion': 'Western Cape',
+              'addressCountry': 'ZA'
+            },
+            'sameAs': [
+              'https://github.com/NemesisGuy',
+              'https://www.linkedin.com/in/peter-buckingham-65438757'
+            ]
+          })
+        },
+        {
+          type: 'application/ld+json',
+          children: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'LocalBusiness',
+            '@id': 'https://nemesisnet.co.za/#localbusiness',
+            'name': 'NemesisNet',
+            'description': 'Software engineering and AI infrastructure services based in Cape Town, South Africa.',
+            'url': 'https://nemesisnet.co.za',
+            'image': 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png',
+            'areaServed': {
+              '@type': 'Country',
+              'name': 'South Africa'
+            },
+            'address': {
+              '@type': 'PostalAddress',
+              'addressLocality': 'Cape Town',
+              'addressRegion': 'Western Cape',
+              'addressCountry': 'ZA'
+            },
+            'priceRange': 'R7,000 - R220,000+',
+            'openingHoursSpecification': {
+              '@type': 'OpeningHoursSpecification',
+              'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+              'opens': '09:00',
+              'closes': '17:00'
+            },
+            'contactPoint': {
+              '@type': 'ContactPoint',
+              'email': 'admin@nemesisnet.co.za',
+              'contactType': 'customer service'
+            }
+          })
+        }
       ]
     }
   },

@@ -40,6 +40,16 @@
         <NuxtLink to="/services/saas-dev" class="btn-glass">Learn More</NuxtLink>
       </div>
       <div class="card">
+        <h3>AI Development</h3>
+        <p>MCP agents, self-hosted TTS pipelines, and multi-agent coding harnesses.</p>
+        <NuxtLink to="/services/ai-development" class="btn-glass">Learn More</NuxtLink>
+      </div>
+      <div class="card">
+        <h3>Self-Hosted AI Infrastructure</h3>
+        <p>GGUF models, GPU deployment, and vector databases — no vendor lock-in.</p>
+        <NuxtLink to="/services/self-hosted-ai" class="btn-glass">Learn More</NuxtLink>
+      </div>
+      <div class="card">
         <h3>Infrastructure & DevOps</h3>
         <p>Docker, CI/CD, cloud networking, and infrastructure automation.</p>
         <NuxtLink to="/services/infrastructure" class="btn-glass">Learn More</NuxtLink>
@@ -87,6 +97,16 @@
         <div class="card-links">
           <NuxtLink to="/projects/forkmyfolio" class="btn-glass">Detail</NuxtLink>
           <a href="https://forkmyfolio.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
+        </div>
+      </div>
+      <div class="card">
+        <span class="pill pill-tools">MCP + TTS</span>
+        <img :src="'/images/projects/pockettts-mcp/optimized/hero-480.webp'" alt="PocketTTS-MCP" loading="lazy" width="480" height="487" srcset="/images/projects/pockettts-mcp/optimized/hero-480.webp 480w, /images/projects/pockettts-mcp/optimized/hero.webp 800w" sizes="(max-width: 640px) 480px, 800px">
+        <h3>PocketTTS-MCP</h3>
+        <p>Local, open-source neural TTS via MCP — Kyutai Pocket TTS for AI agent workflows.</p>
+        <div class="card-links">
+          <NuxtLink to="/projects/pockettts-mcp" class="btn-glass">Detail</NuxtLink>
+          <a href="https://github.com/NemesisGuy/PocketTTS-MCP" target="_blank" class="btn-glass">Source</a>
         </div>
       </div>
       <div class="card">
