@@ -133,23 +133,50 @@ Need BOTH to satisfy technical credibility AND search discoverability.
 - Real project examples
 - Measurable outcomes
 
+## Phase 2 Status: Architecture Complete, Authority Layer Next
+
+**Classification**: "SEO-Ready Service Shell" — structurally complete, content-realization pending.
+
+**What's done**:
+- Service architecture (3 core money pages: AI Dev, Self-hosted AI, SaaS Development)
+- Schema coverage (Organization + Service + FAQ + LocalBusiness)
+- Clean routing structure, keyword direction, technical SEO foundation
+
+**What's missing** (Phase 2.8 priorities):
+- Semantic authority signals (proof layer, decision-layer content)
+- Internal linking for authority distribution (reinstated T5)
+- Homepage explicit messaging
+- Breadcrumbs for crawl structure
+
+**Phase shift**: Adding more pages ≠ more SEO. Improving semantic clarity = ranking boost.
+
+---
+
 ## Technical SEO Improvements
 
 ### Immediate Wins
-- [ ] Add FAQ schema to service pages
+- [x] Add FAQ schema to service pages
 - [ ] Add "Who this is for" sections
-- [ ] Improve page titles (include keywords)
-- [ ] Improve meta descriptions (action-oriented)
-- [ ] Add structured headings (H2, H3 hierarchy)
-- [ ] Improve internal linking
-- [ ] Add location relevance ("Cape Town", "South Africa")
+- [x] Improve page titles (include keywords)
+- [x] Improve meta descriptions (action-oriented)
+- [x] Add structured headings (H2, H3 hierarchy)
+- [ ] Improve internal linking **(REINSTATED - was incorrectly skipped)**
+- [x] Add location relevance ("Cape Town", "South Africa")
+
+### Phase 2.8 Authority Layer (HIGHEST PRIORITY)
+- [ ] Homepage hero rewrite — explicit: AI systems + self-hosted infra + SaaS dev + outcomes
+- [ ] "What we build" section on homepage (3-5 bullet systems)
+- [ ] "Related Services" section on each service page (T5)
+- [ ] Decision-layer content on service pages (use cases, outcomes, architecture hints)
+- [ ] Proof layer on each service page (architecture descriptions, deployment flow)
+- [ ] Breadcrumb schema on primary pages (T3 — reinstated)
 
 ### Schema Markup To Add
-- Organization schema
-- Service schema
-- FAQ schema
-- Breadcrumb schema
-- LocalBusiness schema
+- [x] Organization schema
+- [x] Service schema
+- [x] FAQ schema
+- [ ] Breadcrumb schema *(reinstated)*
+- [x] LocalBusiness schema
 
 ## Landing Page Templates
 

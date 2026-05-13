@@ -46,9 +46,9 @@
 
 - [x] **T1** — Add FAQ schema to `/services` page (use existing pricing Q&As)
 - [x] **T2** — Add Service schema to all service pages
-- [ ] **T3** — Add Breadcrumb schema to all pages *(skipped - low SEO impact)*
+- [ ] **T3** — Add Breadcrumb schema to all pages *(cheap win - improves crawl structure + UX, not critical)*
 - [x] **T4** — Add LocalBusiness schema to homepage
-- [ ] **T5** — Improve internal linking: Add "Related Services" section to each service page *(skipped - low SEO impact)*
+- [ ] **T5** — Internal linking: Add "Related Services" section to each service page *(REINSTATED - medium-high SEO impact for authority distribution)*
 
 ### Week 4: Comparison Articles (Create 2)
 
@@ -138,11 +138,19 @@
 | Week | Focus | Tasks | Status |
 |------|-------|-------|--------|
 | 1 | Audit & Setup | A1-A5 | [x] Complete |
-| 2 | Service Pages | S1-S3 | [x] S1, S2 done; S3 pending |
-| 3 | Schema & On-Page | T1-T5 | [x] T1, T2, T4 done; T3, T5 skipped |
+| 2 | Service Pages | S1-S3 | [x] S1, S2, S3 done (renamed to saas-development) |
+| 3 | Schema & On-Page | T1-T5 | [x] T1, T2, T4 done; T3, T5 skipped → T3, T5 reinstated (medium-high impact) |
 | 4 | Comparisons | C1-C2 | [x] Outlines done; writing in progress |
 | 5-6 | Case Studies | CS1-CS3 | [ ] |
 | 7-8 | Clusters & Measure | TC1-TC2, M1-M4 | [ ] |
+| 2.8 | Authority Injection | Homepage, Decision-layer, Internal links | [ ] |
+
+**Phase 2.8 Authority Injection (Highest Impact):**
+- [ ] Rewrite homepage hero + add "What we build" section
+- [ ] Expand service pages with decision-layer content (use cases, outcomes, architecture hints)
+- [ ] Add "Related Services" links to all service pages (T5 — reinstated)
+- [ ] Add proof layer to each service page (architecture descriptions)
+- [ ] Breadcrumbs on primary pages (T3 — reinstated)
 
 ---
 
