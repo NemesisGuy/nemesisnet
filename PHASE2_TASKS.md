@@ -147,24 +147,27 @@
 
 **Phase 2.8 Authority Injection — SEO Scorecard Tasks:**
 
-SEO Audit Scores: JSON-LD [MISS], Canonical [WEAK], OG [WEAK], Sitemap [MISS], H1 [WEAK], Copy [WEAK], Local SEO [MISS], Contact [MISS], About [FAIR], Testimonials [FAIR]
+SEO Audit Scores: JSON-LD [MISS→DONE], Canonical [WEAK→DONE], OG [WEAK→DONE], Sitemap [DONE], H1 [WEAK→DONE], Copy [WEAK], Local SEO [MISS], Contact [MISS→DONE], About [FAIR], Testimonials [FAIR]
 
-### 🔴 Immediate (this sprint)
-- [ ] P1: Homepage JSON-LD — WebSite + Organization + SearchAction (sitelinks searchbox)
-- [ ] P2: Fix contact form — mailto: → backend (Resend/Spring Boot endpoint)
+### ✅ Completed this session
+- [x] P1: Homepage JSON-LD — WebSite + Organization + SearchAction (sitelinks searchbox)
+- [x] P5: Canonical + OG tags on all inner pages (Services, About, Projects, 6 service subpages)
+- [x] P4: Homepage H1 expansion — "AI Infrastructure & Platform Engineering in Cape Town" + "What we build" bullet list
+- [x] P2: Fix contact form — mailto: → Nitro server route (SMTP/sendmail)
+- [x] P6: Sitemap.xml fixed (saas-dev → saas-development, added ai-development + self-hosted-ai)
+- [x] Sitemap verified, robots.txt verified
+
+### 🔴 Immediate (next sprint)
+- [ ] P7: Local SEO — add Cape Town/ZAR/POPIA keywords throughout + footer tagline
 - [ ] P3: Expand service pages to 600-1000+ words (use cases, non-inclusions, FAQ, process, pricing)
-- [ ] P4: Homepage H1 expansion — add "AI Infrastructure & Platform Engineering in Cape Town"
-- [ ] P5: Canonical + OG tags on all inner pages (Services, About, all projects)
-- [ ] P6: Sitemap.xml + robots.txt verification + GSC submission
+- [ ] P10: Internal linking — "Related Services" + "Related Projects" on all service pages (T5)
 
 ### 🟠 Next sprint
-- [ ] P7: Local SEO — add Cape Town/ZAR/POPIA keywords throughout + footer tagline
 - [ ] P8: About page — expand founder story (types of work, BTech, homelab, self-sufficiency) + add photo
 - [ ] P9: Testimonials — add location context, project links, client logos
-- [ ] P10: Internal linking — "Related Services" + "Related Projects" on all service pages (T5)
-- [ ] P11: Breadcrumbs on primary pages (T3)
 
 ### 🟡 Later
+- [ ] P11: Breadcrumbs on primary pages (T3)
 - [ ] P12: Blog — add canonicals on all posts + aggressive cross-linking from main site
 - [ ] P13: Google Business Profile setup
 - [ ] P14: Image alt text audit
