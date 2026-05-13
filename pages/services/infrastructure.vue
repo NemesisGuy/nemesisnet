@@ -25,8 +25,9 @@
           <p>Deploying local AI models and TTS pipelines for privacy and speed, bypassing expensive cloud dependencies.</p>
         </div>        <h2>Relevant Projects</h2>
         <div class="relevant-projects">
-          <NuxtLink to="/projects/kokoro-tts" class="btn-glass">Kokoro TTS</NuxtLink>
-          <NuxtLink to="/projects/wordpress-mcp" class="btn-glass">WordPress MCP</NuxtLink>
+          <NuxtLink to="/projects/kokoro-tts" class="btn-glass">Kokoro TTS — AI Runtime</NuxtLink>
+          <NuxtLink to="/projects/voxnemesis-supertonic" class="btn-glass">VoxNemesis Supertonic — WebGPU TTS</NuxtLink>
+          <NuxtLink to="/projects/pockettts-mcp" class="btn-glass">PocketTTS-MCP — MCP Server</NuxtLink>
         </div>
 
         
@@ -59,8 +60,32 @@
 <script setup>
 useHead({
   title: 'Infrastructure Engineering | NemesisNet',
-  meta: [    { name: 'description', content: 'High-performance backends and production-ready AI runtimes.' }
-  ]
+  meta: [
+    { name: 'description', content: 'Docker, CI/CD, Redis, Nginx, and production AI runtimes. High-performance backend infrastructure for South African businesses.' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services/infrastructure' }
+  ],
+  script: [{
+    type: 'application/ld+json',
+    children: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      'name': 'Infrastructure Engineering',
+      'description': 'Docker-based infrastructure, CI/CD pipelines, Redis caching, Nginx reverse proxy, and production AI runtime deployment.',
+      'provider': { '@type': 'Organization', 'name': 'NemesisNet', 'url': 'https://nemesisnet.co.za' },
+      'areaServed': { '@type': 'Country', 'name': 'South Africa' },
+      'hasOfferCatalog': {
+        '@type': 'OfferCatalog',
+        'name': 'Infrastructure Services',
+        'itemListElement': [
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Docker Infrastructure Setup' }, 'price': '20000', 'priceCurrency': 'ZAR' },
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'CI/CD Pipeline' }, 'price': '15000', 'priceCurrency': 'ZAR' },
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Production AI Runtime' }, 'price': '55000', 'priceCurrency': 'ZAR' }
+        ]
+      }
+    })
+  }]
 })
 </script>
 

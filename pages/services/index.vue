@@ -14,7 +14,7 @@
           <div class="card">
             <h3>SaaS Development</h3>
             <p>Scalable multi-tenant platforms with authentication, billing, and APIs.</p>
-            <NuxtLink to="/services/saas-dev" class="btn-glass">Learn More</NuxtLink>
+            <NuxtLink to="/services/saas-development" class="btn-glass">Learn More</NuxtLink>
           </div>
           <div class="card">
             <h3>AI Development</h3>

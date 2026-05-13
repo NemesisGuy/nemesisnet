@@ -22,7 +22,7 @@ export default defineNuxtConfig({
         '/services/ai-development',
         '/services/self-hosted-ai',
         '/services/custom-software',
-        '/services/saas-dev',
+        '/services/saas-development',
         '/services/infrastructure',
         '/services/consulting',
         '/about',

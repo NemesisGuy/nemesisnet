@@ -71,11 +71,36 @@
 useHead({
   title: 'About | NemesisNet',
   meta: [
-    { name: 'description', content: 'About NemesisNet — AI infrastructure, platform engineering, and full-stack development by Peter Buckingham.' }
+    { name: 'description', content: 'About NemesisNet — AI infrastructure, platform engineering, and full-stack development by Peter Buckingham. Cape Town, South Africa.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/about' }
-  ]
+  ],
+  script: [{
+    type: 'application/ld+json',
+    children: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      '@id': 'https://nemesisnet.co.za/#person',
+      'name': 'Peter Buckingham',
+      'jobTitle': 'Systems Architect & Engineer',
+      'worksFor': { '@type': 'Organization', 'name': 'NemesisNet', 'url': 'https://nemesisnet.co.za' },
+      'url': 'https://nemesisnet.co.za/about',
+      'image': 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png',
+      'description': 'Self-taught systems architect specializing in AI infrastructure, TTS pipelines, and production full-stack platforms.',
+      'knowsAbout': ['Python', 'Spring Boot', 'Vue 3', 'Docker', 'AI Infrastructure', 'TTS', 'MCP', 'PostgreSQL', 'Redis'],
+      'address': {
+        '@type': 'PostalAddress',
+        'addressLocality': 'Cape Town',
+        'addressRegion': 'Western Cape',
+        'addressCountry': 'ZA'
+      },
+      'sameAs': [
+        'https://github.com/NemesisGuy',
+        'https://www.linkedin.com/in/peter-buckingham-65438757'
+      ]
+    })
+  }]
 })
 </script>
 

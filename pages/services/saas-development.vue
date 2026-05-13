@@ -25,8 +25,9 @@
           <p>Leveraging Docker, Nginx, and cloud-neutral infrastructure to ensure your platform is always online and scales horizontally.</p>
         </div>        <h2>Relevant Projects</h2>
         <div class="relevant-projects">
-          <NuxtLink to="/projects/kokoro-tts" class="btn-glass">Kokoro TTS</NuxtLink>
-          <NuxtLink to="/projects/nk-assessments" class="btn-glass">NK Assessments</NuxtLink>
+          <NuxtLink to="/projects/since" class="btn-glass">Since — Temporal Claim Registry</NuxtLink>
+          <NuxtLink to="/projects/codecritical-saas" class="btn-glass">CodeCritical SaaS — Security Scanner</NuxtLink>
+          <NuxtLink to="/projects/forkmyfolio" class="btn-glass">ForkMyFolio — Portfolio Platform</NuxtLink>
         </div>
 
         
@@ -59,8 +60,32 @@
 <script setup>
 useHead({
   title: 'SaaS Development | NemesisNet',
-  meta: [    { name: 'description', content: 'Scalable multi-tenant platforms built for rapid growth.' }
-  ]
+  meta: [
+    { name: 'description', content: 'Scalable multi-tenant SaaS platforms with Spring Boot + Vue 3, authentication, billing, and API-first architecture. Cape Town, South Africa.' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services/saas-development' }
+  ],
+  script: [{
+    type: 'application/ld+json',
+    children: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      'name': 'SaaS Development',
+      'description': 'Scalable multi-tenant SaaS platforms with Spring Boot backend, Vue 3 frontend, JWT authentication, Stripe billing, and API-first architecture.',
+      'provider': { '@type': 'Organization', 'name': 'NemesisNet', 'url': 'https://nemesisnet.co.za' },
+      'areaServed': { '@type': 'Country', 'name': 'South Africa' },
+      'hasOfferCatalog': {
+        '@type': 'OfferCatalog',
+        'name': 'SaaS Development Services',
+        'itemListElement': [
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Multi-Tenant Platform Build' }, 'price': '110000', 'priceCurrency': 'ZAR' },
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'API-First SaaS Architecture' }, 'price': '110000', 'priceCurrency': 'ZAR' },
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Billing & Subscription Integration' }, 'price': '55000', 'priceCurrency': 'ZAR' }
+        ]
+      }
+    })
+  }]
 })
 </script>
 

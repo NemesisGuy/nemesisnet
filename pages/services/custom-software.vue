@@ -25,8 +25,9 @@
           <p>Designing optimized schemas for MySQL, PostgreSQL, and SQLite to ensure data integrity and lightning-fast query performance.</p>
         </div>        <h2>Relevant Projects</h2>
         <div class="relevant-projects">
-          <NuxtLink to="/projects/onthegorentals" class="btn-glass">OntheGoRentals</NuxtLink>
-          <NuxtLink to="/projects/forkmyfolio" class="btn-glass">ForkMyFolio</NuxtLink>
+          <NuxtLink to="/projects/onthegorentals" class="btn-glass">OnTheGoRentals — Full-Stack Booking</NuxtLink>
+          <NuxtLink to="/projects/forkmyfolio" class="btn-glass">ForkMyFolio — Multi-User Platform</NuxtLink>
+          <NuxtLink to="/projects/since" class="btn-glass">Since — Temporal Registry</NuxtLink>
         </div>
 
         
@@ -59,8 +60,32 @@
 <script setup>
 useHead({
   title: 'Custom Software Development | NemesisNet',
-  meta: [    { name: 'description', content: 'Enterprise-grade backend systems and high-performance full-stack applications.' }
-  ]
+  meta: [
+    { name: 'description', content: 'Enterprise-grade backend systems and high-performance full-stack applications with Vue 3, Spring Boot, and secure authentication. Cape Town, South Africa.' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services/custom-software' }
+  ],
+  script: [{
+    type: 'application/ld+json',
+    children: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      'name': 'Custom Software Development',
+      'description': 'Enterprise-grade backend systems and high-performance full-stack applications with Vue 3 frontend, Spring Boot backend, JWT auth, and database architecture.',
+      'provider': { '@type': 'Organization', 'name': 'NemesisNet', 'url': 'https://nemesisnet.co.za' },
+      'areaServed': { '@type': 'Country', 'name': 'South Africa' },
+      'hasOfferCatalog': {
+        '@type': 'OfferCatalog',
+        'name': 'Custom Software Services',
+        'itemListElement': [
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Full-Stack Application' }, 'price': '110000', 'priceCurrency': 'ZAR' },
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'REST API Development' }, 'price': '55000', 'priceCurrency': 'ZAR' },
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Security & Auth Implementation' }, 'price': '20000', 'priceCurrency': 'ZAR' }
+        ]
+      }
+    })
+  }]
 })
 </script>
 

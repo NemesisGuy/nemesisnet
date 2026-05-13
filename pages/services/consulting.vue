@@ -25,7 +25,8 @@
           <p>Strategic guidance on tool selection, cloud migration, and AI integration strategies for your business.</p>
         </div>        <h2>Relevant Projects</h2>
         <div class="relevant-projects">
-          <NuxtLink to="/projects/codecritical" class="btn-glass">CodeCritical</NuxtLink>
+          <NuxtLink to="/projects/codecritical" class="btn-glass">CodeCritical — Java Analysis Tool</NuxtLink>
+          <NuxtLink to="/projects/codecritical-saas" class="btn-glass">CodeCritical SaaS — Enterprise Scanner</NuxtLink>
         </div>
 
         
@@ -58,8 +59,32 @@
 <script setup>
 useHead({
   title: 'System Design & Consulting | NemesisNet',
-  meta: [    { name: 'description', content: 'Technical roadmapping and architectural optimization for scale.' }
-  ]
+  meta: [
+    { name: 'description', content: 'Technical roadmapping, architectural optimization, and strategic guidance for software teams. Cape Town, South Africa.' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services/consulting' }
+  ],
+  script: [{
+    type: 'application/ld+json',
+    children: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      'name': 'System Design & Consulting',
+      'description': 'Technical roadmapping, architecture planning, performance optimization, and code restructuring for software teams and CTOs.',
+      'provider': { '@type': 'Organization', 'name': 'NemesisNet', 'url': 'https://nemesisnet.co.za' },
+      'areaServed': { '@type': 'Country', 'name': 'South Africa' },
+      'hasOfferCatalog': {
+        '@type': 'OfferCatalog',
+        'name': 'Consulting Services',
+        'itemListElement': [
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Architecture Planning Session' }, 'price': '10000', 'priceCurrency': 'ZAR' },
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Performance Audit' }, 'price': '15000', 'priceCurrency': 'ZAR' },
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Codebase Restructuring' }, 'price': '55000', 'priceCurrency': 'ZAR' }
+        ]
+      }
+    })
+  }]
 })
 </script>
 
