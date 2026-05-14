@@ -1,9 +1,8 @@
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
+  const resend = new Resend(config.resendApiKey)
   const body = await readBody(event)
 
   const { token, name, email, message } = body
@@ -34,19 +33,32 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, message: 'Message must be at least 10 characters.' })
   }
 
+  const sanitizedName = trimmedName
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+  const sanitizedEmail = trimmedEmail
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+  const sanitizedMessage = trimmedMessage
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+
   try {
     await resend.emails.send({
       from: 'contact@send.nemesisnet.co.za',
       to: 'reignbuckingham@gmail.com',
-      subject: `New Contact: ${trimmedName}`,
+      subject: `New Contact: ${sanitizedName}`,
       text: `Name: ${trimmedName}\nEmail: ${trimmedEmail}\n\n${trimmedMessage}`,
       html: `
         <h2>New Contact from Website</h2>
-        <p><strong>Name:</strong> ${trimmedName}</p>
-        <p><strong>Email:</strong> <a href="mailto:${trimmedEmail}">${trimmedEmail}</a></p>
+        <p><strong>Name:</strong> ${sanitizedName}</p>
+        <p><strong>Email:</strong> <a href="mailto:${sanitizedEmail}">${sanitizedEmail}</a></p>
         <hr>
         <p><strong>Message:</strong></p>
-        <p>${trimmedMessage.replace(/\n/g, '<br>')}</p>
+        <p>${sanitizedMessage.replace(/\n/g, '<br>')}</p>
       `
     })
 

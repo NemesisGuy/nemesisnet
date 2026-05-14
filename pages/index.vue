@@ -77,13 +77,13 @@
     <h2>Featured Projects</h2>
     <div class="projects-grid">
       <div class="card">
-        <span class="pill pill-ai">AI & TTS</span>
-        <img :src="'/images/projects/voxnemesis-supertonic/optimized/hero.webp'" alt="VoxNemesis Supertonic" loading="lazy">
-        <h3>VoxNemesis Supertonic</h3>
-        <p>Local-first TTS browser extension with WebGPU.</p>
+        <span class="pill pill-client">Enterprise SaaS</span>
+        <img :src="'/images/projects/codecritical-saas/optimized/hero.webp'" alt="CodeCritical SaaS" loading="lazy">
+        <h3>CodeCritical SaaS</h3>
+        <p>Enterprise B2B platform with role-based access, client portals, and automated billing.</p>
         <div class="card-links">
-          <NuxtLink to="/projects/voxnemesis-supertonic" class="btn-glass">Detail</NuxtLink>
-          <a href="https://blog.nemesisnet.co.za/voxnemesis-supertonic-building-a-local-first-gpu-aware-tts-browser-extension/" target="_blank" class="btn-glass">Blog</a>
+          <NuxtLink to="/projects/codecritical-saas" class="btn-glass">Detail</NuxtLink>
+          <a href="https://codecritical.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
         </div>
       </div>
       <div class="card">
@@ -107,13 +107,13 @@
         </div>
       </div>
       <div class="card">
-        <span class="pill pill-tools">MCP + TTS</span>
-        <img :src="'/images/projects/pockettts-mcp/optimized/hero-480.webp'" alt="PocketTTS-MCP" loading="lazy" width="480" height="487" srcset="/images/projects/pockettts-mcp/optimized/hero-480.webp 480w, /images/projects/pockettts-mcp/optimized/hero.webp 800w" sizes="(max-width: 640px) 480px, 800px">
-        <h3>PocketTTS-MCP</h3>
-        <p>Local, open-source neural TTS via MCP — Kyutai Pocket TTS for AI agent workflows.</p>
+        <span class="pill pill-client">Real Client Work</span>
+        <img :src="'/images/projects/nk-assessments/optimized/hero.webp'" alt="NK Assessments" loading="lazy">
+        <h3>NK Assessments</h3>
+        <p>Fast-delivered client project with automated scoring, PDF reports, and admin dashboard.</p>
         <div class="card-links">
-          <NuxtLink to="/projects/pockettts-mcp" class="btn-glass">Detail</NuxtLink>
-          <a href="https://github.com/NemesisGuy/PocketTTS-MCP" target="_blank" class="btn-glass">Source</a>
+          <NuxtLink to="/projects/nk-assessments" class="btn-glass">Detail</NuxtLink>
+          <a href="https://nk.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
         </div>
       </div>
       <div class="card">
@@ -298,6 +298,7 @@ const handleContact = async (e) => {
     formName.value = ''
     formEmail.value = ''
     formMessage.value = ''
+    turnstileToken.value = ''
   } catch (err) {
     formStatus.value = 'error'
     formError.value = err.data?.message || 'Something went wrong. Please try again or email directly.'

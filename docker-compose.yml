@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  nemesisnet-dev:
+    image: nemesisguy/nemesisnet:dev
+    container_name: nemesisnet-dev
+    restart: unless-stopped
+    ports:
+      - "9114:80"
+    environment:
+      - RESEND_API_KEY=YOUR_RESEND_API_KEY
+      - TURNSTILE_SITE_KEY=YOUR_TURNSTILE_SITE_KEY
+      - TURNSTILE_SECRET_KEY=YOUR_TURNSTILE_SECRET_KEY
