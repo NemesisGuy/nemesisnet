@@ -1,4 +1,7 @@
 <template>
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <span aria-current="page">Home</span>
+  </nav>
   <!-- Hero Section -->
   <header>
     <div class="hero-top">

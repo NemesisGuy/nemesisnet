@@ -1,5 +1,10 @@
 <template>
   <div>
+    <nav class="breadcrumbs" aria-label="Breadcrumb" style="margin-bottom: 24px;">
+      <NuxtLink to="/">Home</NuxtLink>
+      <span>/</span>
+      <span aria-current="page">Services</span>
+    </nav>
     <PageHeader title="Services" subtitle="Engineering platforms, systems, and infrastructure for real production workloads." />
 
     <div class="detail-container">
