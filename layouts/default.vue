@@ -1,7 +1,7 @@
 <template>
   <div>
     <AppHeader />
-    <main style="padding-top: 80px;">
+    <main style="padding-top: 0;">
       <slot />
     </main>
     <AppFooter />

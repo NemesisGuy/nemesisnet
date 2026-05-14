@@ -2383,3 +2383,7 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
 .about-container {
   padding-top: 24px;
 }
+
+.breadcrumbs {
+  margin-top: 70px;
+}
