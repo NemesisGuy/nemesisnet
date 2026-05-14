@@ -46,9 +46,9 @@
 
 - [x] **T1** — Add FAQ schema to `/services` page (use existing pricing Q&As)
 - [x] **T2** — Add Service schema to all service pages
-- [ ] **T3** — Add Breadcrumb schema to all pages *(cheap win - improves crawl structure + UX, not critical)*
+- [x] **T3** — Add Breadcrumb schema to all pages *(JSON-LD added to all pages; visual breadcrumbs in template)*
 - [x] **T4** — Add LocalBusiness schema to homepage
-- [ ] **T5** — Internal linking: Add "Related Services" section to each service page *(REINSTATED - medium-high SEO impact for authority distribution)*
+- [x] **T5** — Internal linking: Add "Related Services" + "Related Projects" sections to each service page *(Completed in P3/P8 — each page now has Related Services grid and related project cards)*
 
 ### Week 4: Comparison Articles (Create 2)
 
@@ -158,16 +158,16 @@ SEO Audit Scores: JSON-LD [MISS→DONE], Canonical [WEAK→DONE], OG [WEAK→DON
 - [x] Sitemap verified, robots.txt verified
 
 ### 🔴 Immediate (next sprint)
-- [ ] P7: Local SEO — add Cape Town/ZAR/POPIA keywords throughout + footer tagline
-- [ ] P3: Expand service pages to 600-1000+ words (use cases, non-inclusions, FAQ, process, pricing)
-- [ ] P10: Internal linking — "Related Services" + "Related Projects" on all service pages (T5)
+- [x] P7: Local SEO — Cape Town/ZAR/POPIA keywords throughout + footer tagline (done prev session)
+- [x] P3: Expand service pages to 600-1000+ words (done this session)
+- [ ] P10: Internal linking — "Related Services" + "Related Projects" on all service pages (T5) *(partial — Related Services added, verify Related Projects links)*
 
 ### 🟠 Next sprint
-- [ ] P8: About page — expand founder story (types of work, BTech, homelab, self-sufficiency) + add photo
+- [x] P8: About page — expand founder story (types of work, BTech, homelab, self-sufficiency) + add photo (done this session)
 - [ ] P9: Testimonials — add location context, project links, client logos
 
 ### 🟡 Later
-- [ ] P11: Breadcrumbs on primary pages (T3)
+- [ ] P11: Breadcrumbs on primary pages (T3) *(JSON-LD added; visual breadcrumbs added to service pages + about)*
 - [ ] P12: Blog — add canonicals on all posts + aggressive cross-linking from main site
 - [ ] P13: Google Business Profile setup
 - [ ] P14: Image alt text audit

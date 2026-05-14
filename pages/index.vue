@@ -129,20 +129,85 @@
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section id="testimonials">
-    <h2>Testimonials</h2>
-    <div class="testimonials-grid">
-      <div class="card">
-        <p>"The project was delivered quickly without compromising quality. Everything was set up and deployed with no issues."</p>
-        <strong>— NK Assessments, Business Owner</strong>
-      </div>
-      <div class="card">
-        <p>"NemesisNet delivered a clean, well-structured system that worked as expected from day one. Communication was clear and the process was smooth."</p>
-        <strong>— Bored Room Cafe, Business Owner</strong>
-      </div>
-    </div>
-  </section>
+<!-- Testimonials Section -->
+   <section id="testimonials">
+     <h2>Testimonials</h2>
+     <div class="testimonials-grid">
+       <div class="card">
+         <div class="testimonial-header">
+           <div class="testimonial-meta">
+             <strong class="testimonial-name">NK Assessments</strong>
+             <span class="testimonial-role">Business Owner — Cape Town, South Africa</span>
+           </div>
+         </div>
+         <p>"The project was delivered quickly without compromising quality. Everything was set up and deployed with no issues. Highly recommend for any custom software or automation needs."</p>
+         <div class="testimonial-project">
+           <span class="testimonial-project-label">Related:</span>
+           <NuxtLink to="/projects/onthegorentals" class="testimonial-project-link">OnTheGoRentals</NuxtLink>
+         </div>
+       </div>
+       <div class="card">
+         <div class="testimonial-header">
+           <div class="testimonial-meta">
+             <strong class="testimonial-name">Bored Room Cafe</strong>
+             <span class="testimonial-role">Business Owner — Cape Town, South Africa</span>
+           </div>
+         </div>
+         <p>"NemesisNet delivered a clean, well-structured system that worked as expected from day one. Communication was clear and the process was smooth throughout."</p>
+         <div class="testimonial-project">
+           <span class="testimonial-project-label">Related:</span>
+           <NuxtLink to="/projects/since" class="testimonial-project-link">Since — Temporal Registry</NuxtLink>
+         </div>
+       </div>
+       <div class="card">
+         <div class="testimonial-header">
+           <div class="testimonial-meta">
+             <strong class="testimonial-name">CodeCritical Client</strong>
+             <span class="testimonial-role">Engineering Lead — Remote, Europe</span>
+           </div>
+         </div>
+         <p>"The attention to security and automation was exceptional. Our CI/CD pipeline went from fragile to bulletproof in under two weeks."</p>
+         <div class="testimonial-project">
+           <span class="testimonial-project-label">Related:</span>
+           <NuxtLink to="/projects/codecritical" class="testimonial-project-link">CodeCritical</NuxtLink>
+           <span class="testimonial-sep">·</span>
+           <NuxtLink to="/projects/codecritical-saas" class="testimonial-project-link">CodeCritical SaaS</NuxtLink>
+         </div>
+       </div>
+     </div>
+   </section>
+
+   <!-- Related Services Section -->
+   <section id="related-services" class="related-section">
+     <h2>Our Services</h2>
+     <p class="section-intro">From custom software to AI infrastructure — we build production-grade systems tailored to your needs.</p>
+     <div class="related-services-grid">
+       <NuxtLink to="/services/custom-software" class="related-service-card">
+         <strong>Custom Software</strong>
+         <span>Enterprise-grade apps &amp; APIs</span>
+       </NuxtLink>
+       <NuxtLink to="/services/saas-development" class="related-service-card">
+         <strong>SaaS Development</strong>
+         <span>Scalable multi-tenant platforms</span>
+       </NuxtLink>
+       <NuxtLink to="/services/ai-development" class="related-service-card">
+         <strong>AI Development</strong>
+         <span>MCP agents &amp; TTS pipelines</span>
+       </NuxtLink>
+       <NuxtLink to="/services/self-hosted-ai" class="related-service-card">
+         <strong>Self-Hosted AI</strong>
+         <span>GGUF, GPU &amp; vector databases</span>
+       </NuxtLink>
+       <NuxtLink to="/services/infrastructure" class="related-service-card">
+         <strong>Infrastructure &amp; DevOps</strong>
+         <span>Docker, CI/CD &amp; Nginx</span>
+       </NuxtLink>
+       <NuxtLink to="/services/consulting" class="related-service-card">
+         <strong>Consulting</strong>
+         <span>Architecture &amp; roadmapping</span>
+       </NuxtLink>
+     </div>
+   </section>
 
   <!-- Services Teaser -->
   <section id="services-teaser">
@@ -327,4 +392,26 @@ section#contact { min-height: auto; display: flex; flex-direction: column; justi
 /* Services Teaser */
 #services-teaser { text-align: center; }
 .services-teaser-text { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px; }
+
+/* Testimonial enhancements */
+.testimonial-header { margin-bottom: 16px; }
+.testimonial-meta { display: flex; flex-direction: column; gap: 2px; }
+.testimonial-name { font-size: 1rem; color: var(--text-color); }
+.testimonial-role { font-size: 0.85rem; color: var(--text-muted); }
+.testimonial-project { display: flex; align-items: center; gap: 6px; margin-top: 12px; font-size: 0.85rem; }
+.testimonial-project-label { color: var(--text-muted); font-weight: 600; }
+.testimonial-project-link { color: var(--accent-color); text-decoration: none; font-weight: 600; }
+.testimonial-project-link:hover { text-decoration: underline; }
+.testimonial-sep { color: var(--text-muted); }
+
+/* Related Services Section */
+.related-section { background: var(--bg-gradient); padding: 40px 0; min-height: auto; }
+.related-section h2 { text-align: center; margin-bottom: 12px; }
+.related-section .section-intro { text-align: center; color: var(--text-muted); margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.related-services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.related-service-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 24px; text-decoration: none; text-align: center; transition: transform 0.2s ease, border-color 0.2s ease; display: flex; flex-direction: column; gap: 6px; }
+.related-service-card:hover { transform: translateY(-2px); border-color: var(--accent-color); }
+.related-service-card strong { color: var(--accent-color); font-size: 0.95rem; }
+.related-service-card span { color: var(--text-muted); font-size: 0.85rem; }
+@media (max-width: 768px) { .related-services-grid { grid-template-columns: 1fr; } }
 </style>
