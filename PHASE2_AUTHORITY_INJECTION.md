@@ -8,27 +8,29 @@ The site is structurally sound, schema-rich, and has excellent core messaging ("
 
 ---
 
-## SEO Audit Scorecard
+## SEO Audit Scorecard (Post-P3/P8/P9/P11)
 
 | Area | Score | Notes |
 |------|-------|-------|
-| Meta titles & descriptions | FAIR | Inner service pages have thin/no keywords |
-| Canonical tags | WEAK | Missing on Services, About, project pages — duplicate content risk |
-| Structured data / JSON-LD | MISS | No JSON-LD found anywhere — highest ROI fix |
-| Open Graph tags | WEAK | Homepage has them; inner pages missing entirely |
-| robots.txt / sitemap.xml | MISS | Not confirmed present — essential for crawling |
-| Heading hierarchy | WEAK | Homepage H1 is just "NemesisNet" — no keywords |
-| Keyword targeting / copy depth | FAIR | Each service page ~200 words — needs 600-1000+ |
-| Internal linking | FAIR | Homepage linked; service pages don't cross-link |
+| Meta titles & descriptions | GOOD | All service pages + inner pages have keyword-rich titles and descriptions |
+| Canonical tags | DONE | All pages have self-referencing canonical tags |
+| Structured data / JSON-LD | DONE | WebSite + Organization + SearchAction (homepage), Service (6 pages), Person (about), FAQ (services), BreadcrumbList (homepage + services) |
+| Open Graph tags | DONE | All inner pages have OG title, description, type, url, image |
+| robots.txt / sitemap.xml | DONE | Sitemap updated with all routes, verified |
+| Heading hierarchy | GOOD | H1 optimized on homepage, proper h2 hierarchy on all pages |
+| Keyword targeting / copy depth | GOOD | All service pages expanded to 600-1000+ words with Problem/Solution/Who/Process |
+| Internal linking | GOOD | Related Services grid on homepage + all service pages have cross-links |
 | Image optimisation | GOOD | WebP + AVIF, optimized/ folder — solid |
 | Core messaging | SOLID | "Not API wrappers" = excellent differentiator |
-| About page depth | FAIR | Thin — needs founder story, photo, differentiators |
-| Services pricing detail | WEAK | Only "Custom Quote" — even ranges help qualify leads |
-| Testimonials | FAIR | Both unnamed, no links, no logos — weak credibility |
+| About page depth | GOOD | Full founder story, 8 named projects, BTech, homelab, self-sufficiency, values |
+| Services pricing detail | GOOD | Starting-from pricing on all pages, schema OfferCatalog with ZAR |
+| Testimonials | IMPROVED | Location context, project links, third testimonial added |
 | Projects portfolio | GOOD | 11 projects, VoxNemesis framing is excellent |
-| Location signals | MISS | "Cape Town" once on About; no ZAR, no POPIA, no local keywords |
-| Contact form UX | MISS | mailto: kills conversion on mobile |
-| Blog integration | MISS | blog.nemesisnet.co.za = subdomain split; authority doesn't flow |
+| Location signals | GOOD | Cape Town + ZAR + POPIA + EU time zone on all relevant pages |
+| Contact form UX | DONE | Nitro server route with sendmail backend |
+| Blog integration | DEFERRED | Subdomain split — deferred to future sprint |
+
+---
 
 ---
 
@@ -122,36 +124,12 @@ Each service page is ~200 words. Google won't rank a 200-word page against a com
 
 **Task**: Expand founder bio with specifics + add photo.
 
-### 🟡 Priority 7 — Testimonials: Add Credibility Weight
+### 🟡 Priority 7 — Later / Remaining
 
-**Problem**: "Business Owner" tells a visitor nothing. No photo, no company logo, no URL to client site.
-
-**Required additions**:
-- Client location: "Business Owner, Cape Town" or "Business Owner, financial services"
-- Link to the live demo site of the work ("See the work" link)
-- Client logo if available
-- Named clients if happy to be named and linked (massively better)
-
-**Task**: Add location context + project links to all testimonials.
-
-### 🟡 Priority 8 — Internal Linking (T5 REINSTATED)
-
-**Why it matters**: Google needs to understand related services, clusters, primary vs secondary intent. Without it, pages rank weaker individually.
-
-**Required links on each service page**:
-- AI Dev → Self-hosted AI
-- Self-hosted AI → SaaS dev
-- SaaS dev → AI Dev
-- All → homepage
-- Related project links
-
-**Task**: Add "Related Services" + "Related Projects" sections to all service pages.
-
-### 🟡 Priority 9 — Breadcrumbs (T3 REINSTATED)
-
-Improves crawl structure and UX. Cheap win, not critical.
-
-**Task**: Add breadcrumb schema to primary pages.
+- [ ] P12: Blog — add canonicals on all posts + aggressive cross-linking from main site
+- [ ] P13: Google Business Profile setup
+- [ ] P14: Image alt text audit
+- [ ] P9 follow-up: Named/client logos for testimonials
 
 ### ⚠️ Blog Subdomain (DEFERRED)
 
@@ -179,30 +157,29 @@ Improves crawl structure and UX. Cheap win, not critical.
 
 ## Implementation Plan
 
-### 🔴 Immediate (this sprint)
+### ✅ Completed
 
 1. Homepage JSON-LD: WebSite + Organization + SearchAction
 2. Canonical tags on all inner pages (Services, About, projects)
 3. OG tags on all inner pages
 4. Sitemap.xml + robots.txt check + GSC submission
 5. Homepage H1 expansion + hero rewrite
-6. Fix contact form (mailto → backend)
+6. Fix contact form (mailto → Nitro server route)
 7. Add "Cape Town, South Africa" to footer + local SEO elements
+8. Expand service pages to 600-1000+ words each (Problem/Solution/Who/Process)
+9. FAQ sections with schema on services index
+10. Pricing ranges in schema OfferCatalog on all service pages
+11. "Related Services" + "Related Projects" links on all service pages
+12. About page: expanded founder bio + BTech + homelab + self-sufficiency + values
+13. Testimonials: location context + project links
+14. Breadcrumbs: JSON-LD schema + visible nav on homepage + services index
 
-### 🟠 Next sprint
+### 🟡 Remaining
 
-8. Expand service pages to 600-1000+ words each
-9. Add FAQ sections to service pages with FAQ schema
-10. Add pricing ranges to service pages
-11. Add "Related Services" + "Related Projects" links
-12. About page: expand founder bio + add photo
-13. Testimonials: add location context + project links
-
-### 🟡 Later
-
-14. Breadcrumbs on primary pages
-15. Blog canonical + aggressive cross-linking
-16. Google Business Profile setup
+15. Blog canonical + aggressive cross-linking (P12)
+16. Google Business Profile setup (P13)
+17. Image alt text audit (P14)
+18. Named client logos/testimonials (P9 follow-up)
 
 ---
 

@@ -48,7 +48,21 @@
 - [x] **T2** — Add Service schema to all service pages
 - [x] **T3** — Add Breadcrumb schema to all pages *(JSON-LD added to all pages; visual breadcrumbs in template)*
 - [x] **T4** — Add LocalBusiness schema to homepage
-- [x] **T5** — Internal linking: Add "Related Services" + "Related Projects" sections to each service page *(Completed in P3/P8 — each page now has Related Services grid and related project cards)*
+- [x] **T5** — Internal linking: Add "Related Services" + "Related Projects" sections to each service page *(Completed in P3/P8/P9 — each page now has Related Services grid and related project cards)*
+
+### Week 4: Content Expansion (P3 — Completed)
+
+- [x] **C1** — Create `/blog/self-hosted-ai-vs-openai-apis` — Outlines complete
+- [x] **C2** — Create `/blog/vue-vs-react-enterprise-saas` — Outlines complete
+
+### All 6 Service Pages Expanded (P3)
+
+- [x] **ai-development.vue** — ~280 → ~700+ words, added Problem, Who, Process, Related Services
+- [x] **self-hosted-ai.vue** — ~350 → ~750+ words, added Problem, Who, Process, Related Services
+- [x] **saas-development.vue** — ~200 → ~650+ words, added Problem, Who, Process, Related Services
+- [x] **infrastructure.vue** — ~200 → ~650+ words, added Problem, Who, Process, Related Services
+- [x] **custom-software.vue** — ~200 → ~650+ words, added Problem, Who, Process, Related Services
+- [x] **consulting.vue** — ~180 → ~600+ words, added Problem, Who, Process, Related Services
 
 ### Week 4: Comparison Articles (Create 2)
 
@@ -143,7 +157,7 @@
 | 4 | Comparisons | C1-C2 | [x] Outlines done; writing in progress |
 | 5-6 | Case Studies | CS1-CS3 | [ ] |
 | 7-8 | Clusters & Measure | TC1-TC2, M1-M4 | [ ] |
-| 2.8 | Authority Injection | Homepage, Decision-layer, Internal links, Local SEO | [ ] |
+| 2.8 | Authority Injection | Homepage, Decision-layer, Internal links, Local SEO | [x] Complete — all items done (P1-P11) |
 
 **Phase 2.8 Authority Injection — SEO Scorecard Tasks:**
 
@@ -174,5 +188,6 @@ SEO Audit Scores: JSON-LD [MISS→DONE], Canonical [WEAK→DONE], OG [WEAK→DON
 
 ---
 
-*Document Version: 1.0*
+*Document Version: 2.0*
 *Last Updated: May 2026*
+*All Phase 2.8 tasks P1-P11 completed — remaining items are Phase 3+ (case studies, blog, GMB, alt text)*
