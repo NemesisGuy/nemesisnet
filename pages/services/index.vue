@@ -80,7 +80,7 @@
         <h2>Pricing Guide</h2>
         <p class="pricing-trust">Most projects begin with a short discovery call to clarify scope, architecture, and timelines.</p>
         <p class="pricing-intro">Transparent starting-from pricing to help with planning. Final quotes are confirmed after a short discovery call and technical scoping session.</p>
-        
+
         <div class="pricing-grid">
           <div class="card pricing-card">
             <h3 class="pricing-title">Starter / Rapid Delivery</h3>
@@ -219,37 +219,66 @@
             </div>
           </div>
         </div>
-<div class="section-cta">
-           <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Not sure which tier fits? → Let's scope it together</a>
-         </div>
+        <div class="section-cta">
+          <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Not sure which tier fits? → Let's scope it together</a>
+        </div>
 
-         <h2>South Africa-Based, Globally Remote</h2>
-         <p class="section-intro">NemesisNet is based in Cape Town, South Africa and works with clients across the country and internationally. All engagements are conducted remotely with structured online scoping, daily async updates, and regular video check-ins. South African clients benefit from local business context, POPIA compliance awareness, and SLA-friendly time zone alignment. International clients — particularly those in European time zones — benefit from overlapping working hours and cost-effective ZAR pricing.</p>
+        <h2>South Africa-Based, Globally Remote</h2>
+        <p class="section-intro">NemesisNet is based in Cape Town, South Africa and works with clients across the country and internationally. All engagements are conducted remotely with structured online scoping, daily async updates, and regular video check-ins. South African clients benefit from local business context, POPIA compliance awareness, and SLA-friendly time zone alignment. International clients — particularly those in European time zones — benefit from overlapping working hours and cost-effective ZAR pricing.</p>
 
-         <div class="local-signals">
-           <div class="local-card">
-             <strong>📍 Cape Town, South Africa</strong>
-             <span>Registered and operating from the Western Cape</span>
-           </div>
-           <div class="local-card">
-             <strong>🇬🇧🇪🇺 European Time Zone Overlap</strong>
-             <span>CAT (UTC+2) aligns with CET — real-time collaboration</span>
-           </div>
-           <div class="local-card">
-             <strong>🔒 POPIA-Aware</strong>
-             <span>Data protection aligned with SA Protection of Personal Information Act</span>
-           </div>
-           <div class="local-card">
-             <strong>💰 ZAR Pricing</strong>
-             <span>Transparency from R7,000 to R220,000+ — no hidden fees</span>
-           </div>
-         </div>
+        <div class="local-signals">
+          <div class="local-card">
+            <strong>📍 Cape Town, South Africa</strong>
+            <span>Registered and operating from the Western Cape</span>
+          </div>
+          <div class="local-card">
+            <strong>🇬🇧🇪🇺 European Time Zone Overlap</strong>
+            <span>CAT (UTC+2) aligns with CET — real-time collaboration</span>
+          </div>
+          <div class="local-card">
+            <strong>🔒 POPIA-Aware</strong>
+            <span>Data protection aligned with SA Protection of Personal Information Act</span>
+          </div>
+          <div class="local-card">
+            <strong>💰 ZAR Pricing</strong>
+            <span>Transparency from R7,000 to R220,000+ — no hidden fees</span>
+          </div>
+        </div>
 
         <h2>Delivery Rhythm</h2>
         <p class="section-intro">A structured process keeps delivery predictable and technical risk visible. Discovery comes first — requirements, constraints, and success metrics are mapped before any code is written. Architecture and scope are locked early to protect timelines. Build happens with testing and CI/CD from day one, with regular checkpoints to keep delivery aligned with intent. Deployment includes hardening, monitoring, and optional support retainers for stability after launch. Without proper scoping, projects drift into scope creep, deadline slips, and expensive rework. NemesisNet's process prevents that.</p>
 
         <div class="section-cta">
           <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Ready to scope your project? →</a>
+        </div>
+
+        <h2>Related Services</h2>
+        <p class="section-intro">Explore our full service offering to find the right solution for your business.</p>
+        <div class="related-services-grid">
+          <NuxtLink to="/services/custom-software" class="related-service-card">
+            <strong>Custom Software Development</strong>
+            <span>Enterprise-grade backend &amp; full-stack apps</span>
+          </NuxtLink>
+          <NuxtLink to="/services/saas-development" class="related-service-card">
+            <strong>SaaS Development</strong>
+            <span>Scalable multi-tenant platforms</span>
+          </NuxtLink>
+          <NuxtLink to="/services/ai-development" class="related-service-card">
+            <strong>AI Development</strong>
+            <span>MCP agents, TTS, multi-agent systems</span>
+          </NuxtLink>
+          <NuxtLink to="/services/self-hosted-ai" class="related-service-card">
+            <strong>Self-Hosted AI Infrastructure</strong>
+            <span>GGUF models, GPU, vector databases</span>
+          </NuxtLink>
+          <NuxtLink to="/services/infrastructure" class="related-service-card">
+            <strong>Infrastructure Engineering</strong>
+            <span>Docker, CI/CD, Redis, Nginx</span>
+          </NuxtLink>
+          <NuxtLink to="/services/consulting" class="related-service-card">
+            <strong>System Design &amp; Consulting</strong>
+            <span>Technical roadmapping &amp; architecture</span>
+          </NuxtLink>
         </div>
 
         <div class="back-link">
@@ -274,58 +303,68 @@ useHead({
   link: [
     { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services' }
   ],
-  link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services' }
-  ],
-  script: [{
-    type: 'application/ld+json',
-    children: JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'mainEntity': [
-        {
-          '@type': 'Question',
-          'name': 'What technologies does NemesisNet use?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'NemesisNet works with Vue 3, React, Spring Boot, Python, PocketBase, Docker, PostgreSQL, Redis, and AI frameworks including MCP, GGUF models, and CUDA-accelerated inference.'
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'What technologies does NemesisNet use?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'NemesisNet works with Vue 3, React, Spring Boot, Python, PocketBase, Docker, PostgreSQL, Redis, and AI frameworks including MCP, GGUF models, and CUDA-accelerated inference.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How does pricing work?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Most projects start at R7,000 for rapid delivery and range up to R220,000 for AI-powered builds.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does NemesisNet work with clients outside Cape Town?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. While based in Cape Town, South Africa, NemesisNet works with clients remotely across the country and internationally. Discovery calls and scoping sessions are conducted online.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the typical delivery timeline?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Lightweight systems ship in 1-5 days. Business systems typically take 1-3 weeks. AI-powered platforms and enterprise builds range from 8-16 weeks. All timelines are scoped during the discovery phase.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can NemesisNet integrate with existing systems?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. NemesisNet builds API integrations, MCP servers, and data pipelines that connect to existing CMS, CRM, and database systems. Custom MCP agents can automate workflows across multiple platforms.'
+            }
           }
-        },
-        {
-          '@type': 'Question',
-          'name': 'How does pricing work?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Most projects start at R7,000 for rapid delivery and range up to R220,000 for AI-powered builds.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'Does NemesisNet work with clients outside Cape Town?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Yes. While based in Cape Town, South Africa, NemesisNet works with clients remotely across the country and internationally. Discovery calls and scoping sessions are conducted online.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'What is the typical delivery timeline?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Lightweight systems ship in 1-5 days. Business systems typically take 1-3 weeks. AI-powered platforms and enterprise builds range from 8-16 weeks. All timelines are scoped during the discovery phase.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'Can NemesisNet integrate with existing systems?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Yes. NemesisNet builds API integrations, MCP servers, and data pipelines that connect to existing CMS, CRM, and database systems. Custom MCP agents can automate workflows across multiple platforms.'
-          }
-        }
-      ]
-    })
-  }]
+        ]
+      })
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://nemesisnet.co.za/' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Services', 'item': 'https://nemesisnet.co.za/services' }
+        ]
+      })
+    }
+  ]
 })
 </script>
 
@@ -343,10 +382,16 @@ useHead({
 .local-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; text-align: center; }
 .local-card strong { display: block; font-size: 0.95rem; margin-bottom: 6px; color: var(--accent-color); }
 .local-card span { font-size: 0.85rem; color: var(--text-muted); }
-@media (max-width: 1100px) { .service-columns, .process-steps { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 768px) { 
+.related-services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+.related-service-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 6px; text-align: center; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease; }
+.related-service-card:hover { transform: translateY(-2px); border-color: var(--accent-color); }
+.related-service-card strong { color: var(--accent-color); font-size: 0.95rem; }
+.related-service-card span { color: var(--text-muted); font-size: 0.85rem; }
+@media (max-width: 1100px) { .service-columns, .process-steps { grid-template-columns: repeat(2, 1fr); } .related-services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) {
   .service-columns, .process-steps { grid-template-columns: 1fr; gap: 16px; }
   .detail-container { padding: 24px 16px 32px; }
   .detail-main h2 { font-size: 1.8rem; margin: 36px 0 20px; }
+  .related-services-grid { grid-template-columns: 1fr; }
 }
 </style>
