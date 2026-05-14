@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="breadcrumbs" aria-label="Breadcrumb" style="padding-top: 60px; margin-bottom: 24px;">
+    <nav class="breadcrumbs" aria-label="Breadcrumb" style="margin-bottom: 24px;">
       <NuxtLink to="/">Home</NuxtLink>
       <span>/</span>
       <span aria-current="page">Services</span>

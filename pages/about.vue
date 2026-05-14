@@ -4,7 +4,7 @@
 
     <div class="detail-container about-container">
       <div class="detail-main">
-        <nav class="breadcrumbs" aria-label="Breadcrumb" style="padding-top: 60px;">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
           <NuxtLink to="/">Home</NuxtLink>
           <span>/</span>
           <NuxtLink to="/services">Services</NuxtLink>
