@@ -1,5 +1,5 @@
 <template>
-  <nav class="breadcrumbs" aria-label="Breadcrumb">
+  <nav class="breadcrumbs" aria-label="Breadcrumb" style="padding-top: 60px;">
     <span aria-current="page">Home</span>
   </nav>
   <!-- Hero Section -->
@@ -247,6 +247,7 @@
           <input id="cemail" v-model="formEmail" type="email" placeholder="you@domain.com" required :disabled="formStatus === 'sending'">
           <label for="cmessage">Message</label>
           <textarea id="cmessage" v-model="formMessage" placeholder="How can I help?" required :disabled="formStatus === 'sending'"></textarea>
+          <NuxtTurnstile v-model="turnstileToken" />
           <button type="submit" :disabled="formStatus === 'sending'">
             <span v-if="formStatus === 'sending'">Sending...</span>
             <span v-else-if="formStatus === 'success'">Sent!</span>
@@ -270,9 +271,17 @@ const formEmail = ref('')
 const formMessage = ref('')
 const formStatus = ref('idle')
 const formError = ref('')
+const { token: turnstileToken } = useTurnstile()
 
 const handleContact = async (e) => {
   e.preventDefault()
+
+  if (!turnstileToken.value) {
+    formStatus.value = 'error'
+    formError.value = 'Please complete the verification first.'
+    return
+  }
+
   formStatus.value = 'sending'
   formError.value = ''
 
@@ -283,7 +292,7 @@ const handleContact = async (e) => {
   try {
     const res = await $fetch('/api/contact', {
       method: 'POST',
-      body: { name, email, message }
+      body: { token: turnstileToken.value, name, email, message }
     })
     formStatus.value = 'success'
     formName.value = ''
@@ -291,7 +300,7 @@ const handleContact = async (e) => {
     formMessage.value = ''
   } catch (err) {
     formStatus.value = 'error'
-    formError.value = 'Something went wrong. Please try again or email directly.'
+    formError.value = err.data?.message || 'Something went wrong. Please try again or email directly.'
   }
 }
 

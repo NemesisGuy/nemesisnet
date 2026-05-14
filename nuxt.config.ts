@@ -1,5 +1,15 @@
 export default defineNuxtConfig({
   ssr: true,
+  modules: ['@nuxtjs/turnstile'],
+  turnstile: {
+    siteKey: process.env.TURNSTILE_SITE_KEY
+  },
+  runtimeConfig: {
+    turnstile: {
+      secretKey: process.env.TURNSTILE_SECRET_KEY
+    },
+    resendApiKey: process.env.RESEND_API_KEY
+  },
   nitro: {
     prerender: {
       crawlLinks: true,

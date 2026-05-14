@@ -10,8 +10,10 @@
     "build:docker": "npm run generate && wsl docker build --no-cache -t nemesisguy/nemesisnet:dev . && wsl docker push nemesisguy/nemesisnet:dev"
   },
   "dependencies": {
+    "@nuxtjs/turnstile": "^1.1.3",
     "nodemailer": "^8.0.7",
-    "nuxt": "^4.4.4"
+    "nuxt": "^4.4.4",
+    "resend": "^6.12.3"
   },
   "devDependencies": {
     "lighthouse": "^13.3.0",

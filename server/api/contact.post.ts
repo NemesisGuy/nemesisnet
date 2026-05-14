@@ -1,45 +1,52 @@
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export default defineEventHandler(async (event) => {
+  const config = useRuntimeConfig()
   const body = await readBody(event)
 
-  const name = (body.name || '').trim()
-  const email = (body.email || '').trim()
-  const message = (body.message || '').trim()
+  const { token, name, email, message } = body
 
-  if (!name || !email || !message) {
+  if (!token) {
+    throw createError({ statusCode: 400, message: 'Turnstile token required.' })
+  }
+
+  const isValid = await verifyTurnstileToken(token, config.turnstile.secretKey)
+  if (!isValid) {
+    throw createError({ statusCode: 400, message: 'Bot detected.' })
+  }
+
+  const trimmedName = (name || '').trim()
+  const trimmedEmail = (email || '').trim()
+  const trimmedMessage = (message || '').trim()
+
+  if (!trimmedName || !trimmedEmail || !trimmedMessage) {
     throw createError({ statusCode: 400, message: 'Name, email, and message are required.' })
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  if (!emailRegex.test(email)) {
+  if (!emailRegex.test(trimmedEmail)) {
     throw createError({ statusCode: 400, message: 'Invalid email address.' })
   }
 
-  if (message.length < 10) {
+  if (trimmedMessage.length < 10) {
     throw createError({ statusCode: 400, message: 'Message must be at least 10 characters.' })
   }
 
-  const transporter = nodemailer.createTransport({
-    sendmail: true,
-    path: '/usr/sbin/sendmail',
-    args: ['-t', '-i']
-  })
-
   try {
-    await transporter.sendMail({
-      from: 'noreply@nemesisnet.co.za',
-      to: 'admin@nemesisnet.co.za',
-      replyTo: email,
-      subject: `Website contact from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
+    await resend.emails.send({
+      from: 'contact@send.nemesisnet.co.za',
+      to: 'reignbuckingham@gmail.com',
+      subject: `New Contact: ${trimmedName}`,
+      text: `Name: ${trimmedName}\nEmail: ${trimmedEmail}\n\n${trimmedMessage}`,
       html: `
         <h2>New Contact from Website</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+        <p><strong>Name:</strong> ${trimmedName}</p>
+        <p><strong>Email:</strong> <a href="mailto:${trimmedEmail}">${trimmedEmail}</a></p>
         <hr>
         <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, '<br>')}</p>
+        <p>${trimmedMessage.replace(/\n/g, '<br>')}</p>
       `
     })
 
