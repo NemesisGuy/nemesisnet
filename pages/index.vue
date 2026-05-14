@@ -6,24 +6,22 @@
         <img :src="'/images/brand/Nemesis_Logo_Icon.webp'" class="avatar-img" alt="NemesisNet logo" loading="eager" fetchpriority="high" decoding="async" width="256" height="256">
       </div>
       <div>
-        <h1>NemesisNet — AI Infrastructure & Platform Engineering in Cape Town</h1>
+        <h1>AI Infrastructure &amp; Platform Engineering</h1>
         <p class="hero-subtitle">We build real infrastructure — not API wrappers.</p>
+        <p class="hero-location">Based in Cape Town, South Africa</p>
       </div>
     </div>
     <div class="hero-content">
-      <p class="hero-intro"><strong>NemesisNet</strong> builds custom AI systems, self-hosted infrastructure, and SaaS platforms for businesses that need control, scalability, and engineering-grade reliability. Based in Cape Town, South Africa — serving clients globally.</p>
-      <ul class="hero-what-we-build">
-        <li>AI agents &amp; MCP integrations</li>
-        <li>Self-hosted LLM &amp; TTS pipelines</li>
-        <li>Multi-tenant SaaS platforms</li>
-        <li>Production automation &amp; infrastructure</li>
-      </ul>
+      <p class="hero-intro"><strong>NemesisNet</strong> builds custom AI systems, self-hosted infrastructure, and SaaS platforms for businesses that need control, scalability, and engineering-grade reliability.</p>
+      <div class="hero-what-we-build">
+        <span class="hero-tag">AI agents &amp; MCP integrations</span>
+        <span class="hero-tag">Self-hosted LLM &amp; TTS pipelines</span>
+        <span class="hero-tag">Multi-tenant SaaS platforms</span>
+        <span class="hero-tag">Production automation &amp; infrastructure</span>
+      </div>
       <div class="hero-links">
-        <NuxtLink to="/projects">Our Work</NuxtLink>
-        <a href="https://blog.nemesisnet.co.za/" target="_blank" rel="noopener noreferrer" title="Visit the NemesisNet Blog" aria-label="NemesisNet Blog">Our Blog</a>
-        <a href="https://github.com/NemesisGuy" target="_blank">GitHub</a>
-        <a href="/#contact" data-email-link="primary">Contact Us</a>
-        <a href="https://forkmyfolio.nemesisnet.co.za/nemesis/" target="_blank">Our Portfolio</a>
+        <NuxtLink to="/projects" class="btn-glass">See Our Work</NuxtLink>
+        <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass btn-primary">Scope Your Project</a>
       </div>
     </div>
     <a href="/projects" class="chevron" aria-label="Scroll to projects">
@@ -254,9 +252,18 @@ useHead({
 @media (max-width: 1100px) { .projects-grid { grid-template-columns: repeat(2, 1fr) !important; } }
 @media (max-width: 768px) { .projects-grid { grid-template-columns: 1fr !important; gap: 14px; } }
 
-.hero-subtitle { font-size: 1.3rem; color: var(--text-muted); margin-top: 4px; }
-.hero-what-we-build { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-wrap: wrap; gap: 8px 16px; }
-.hero-what-we-build li { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 8px; padding: 6px 14px; font-size: 0.85rem; color: var(--text-muted); }
+.hero-top { gap: 20px; margin-bottom: 24px; }
+.avatar-wrap { width: 100px !important; height: 100px !important; border-width: 2px !important; box-shadow: 0 8px 30px rgba(0,0,0,0.4), 0 0 40px var(--accent-glow) !important; }
+.avatar-wrap .avatar-img { max-width: 80%; max-height: 80%; }
+.hero-top h1 { font-size: 2.4rem; line-height: 1.2; margin-bottom: 4px; }
+.hero-subtitle { font-size: 1.3rem; color: var(--text-muted); margin-top: 8px; }
+.hero-location { font-size: 0.9rem; color: var(--accent-color); margin-top: 4px; opacity: 0.8; }
+.hero-what-we-build { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0; }
+.hero-tag { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; color: var(--text-muted); }
+.hero-links { display: flex; justify-content: center; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+.hero-links a, .hero-links .nuxt-link { padding: 14px 28px; }
+.btn-primary { background: var(--accent-color); color: #0a0e27; font-weight: 700; }
+.btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 8px 24px var(--accent-glow); }
 
 .pill { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
 .pill-ai { background: rgba(99, 102, 241, 0.2); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); }
