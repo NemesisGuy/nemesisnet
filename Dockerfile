@@ -1,10 +1,7 @@
-FROM nginx:1.27-alpine
+FROM node:20-alpine
 
-# Copy Nuxt static output to nginx
-COPY .output/public/ /usr/share/nginx/html/
+COPY .output/ /app/
+WORKDIR /app
 
-# Copy nginx config
-COPY config/nginx/default.conf /etc/nginx/conf.d/default.conf
-
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 3000
+CMD ["node", "server/index.mjs"]

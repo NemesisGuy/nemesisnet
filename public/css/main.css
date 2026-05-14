@@ -2385,5 +2385,7 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
 }
 
 .breadcrumbs {
-  margin-top: 48px;
+  margin-top: 70px;
+  padding: 4px 0;
+  font-size: 0.8rem;
 }

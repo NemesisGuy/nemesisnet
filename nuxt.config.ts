@@ -11,6 +11,18 @@ export default defineNuxtConfig({
     resendApiKey: process.env.RESEND_API_KEY
   },
   nitro: {
+    routeRules: {
+      '/**': {
+        headers: {
+          'Strict-Transport-Security': 'max-age=31536000',
+          'X-Content-Type-Options': 'nosniff',
+          'X-Frame-Options': 'SAMEORIGIN',
+          'Referrer-Policy': 'strict-origin-when-cross-origin',
+          'Permissions-Policy': 'geolocation=(), camera=(), microphone=(), xr-spatial-tracking=()',
+          'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' https://metrics.nemesisnet.co.za https://static.cloudflareinsights.com https://challenges.cloudflare.com; connect-src 'self' https://metrics.nemesisnet.co.za https://cloudflareinsights.com https://static.cloudflareinsights.com https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' https: data:; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self' mailto:; upgrade-insecure-requests"
+        }
+      }
+    },
     prerender: {
       crawlLinks: true,
       routes: [
