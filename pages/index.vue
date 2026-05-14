@@ -247,7 +247,9 @@
           <input id="cemail" v-model="formEmail" type="email" placeholder="you@domain.com" required :disabled="formStatus === 'sending'">
           <label for="cmessage">Message</label>
           <textarea id="cmessage" v-model="formMessage" placeholder="How can I help?" required :disabled="formStatus === 'sending'"></textarea>
-          <NuxtTurnstile v-model="turnstileToken" />
+          <ClientOnly>
+            <NuxtTurnstile v-model="turnstileToken" />
+          </ClientOnly>
           <button type="submit" :disabled="formStatus === 'sending'">
             <span v-if="formStatus === 'sending'">Sending...</span>
             <span v-else-if="formStatus === 'success'">Sent!</span>
@@ -264,14 +266,22 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
 const formName = ref('')
 const formEmail = ref('')
 const formMessage = ref('')
 const formStatus = ref('idle')
 const formError = ref('')
-const { token: turnstileToken } = useTurnstile()
+const turnstileToken = ref('')
+
+if (import.meta.client) {
+  try {
+    const { token } = useTurnstile()
+    turnstileToken.value = token.value || ''
+    watch(token, (v) => { turnstileToken.value = v })
+  } catch {}
+}
 
 const handleContact = async (e) => {
   e.preventDefault()
