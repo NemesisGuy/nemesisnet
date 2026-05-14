@@ -9,8 +9,8 @@
         <p>Most studios offering "AI services" are connecting third-party APIs and calling it integration. <strong>NemesisNet architects, deploys, and operates the underlying systems:</strong> local AI runtimes, agent pipelines, automation infrastructure, and cloud-neutral deployments running on hardware that is physically controlled.</p>
         <p>Every system ships to production standards — clean architecture, automated testing, Dockerized deployment, and continuous delivery.</p>
 
-        <h2>The Engineer</h2>
-        <p>NemesisNet is run by Peter Buckingham — a self-taught engineer and systems architect based in Cape Town. He completed night school before earning a BTech in IT at CPUT, and has been building production systems from first principles since the GPT-2 era. His specialisation in text-to-speech infrastructure dates back to 2013, years before it became an industry trend. He operates a 14-node Dell rack homelab that serves as the production backbone for NemesisNet's own products — the systems on this site run on hardware he physically owns and maintains, not rented cloud capacity.</p>
+<h2>The Engineer</h2>
+         <p>NemesisNet is run by Peter Buckingham — a self-taught engineer and systems architect based in Cape Town, South Africa. He completed night school before earning a BTech in IT at CPUT, and has been building production systems from first principles since the GPT-2 era. His specialisation in text-to-speech infrastructure dates back to 2013, years before it became an industry trend. He operates a 14-node Dell rack homelab that serves as the production backbone for NemesisNet's own products — the systems on this site run on hardware he physically owns and maintains, not rented cloud capacity. All NemesisNet engagements leverage this hands-on infrastructure expertise, with a Cape Town-based team delivering remotely to clients across South Africa and internationally.</p>
 
         <h2>Track Record</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin:40px 0;">

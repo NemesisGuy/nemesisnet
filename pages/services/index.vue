@@ -219,9 +219,31 @@
             </div>
           </div>
         </div>
-        <div class="section-cta">
-          <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Not sure which tier fits? → Let's scope it together</a>
-        </div>
+<div class="section-cta">
+           <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Not sure which tier fits? → Let's scope it together</a>
+         </div>
+
+         <h2>South Africa-Based, Globally Remote</h2>
+         <p class="section-intro">NemesisNet is based in Cape Town, South Africa and works with clients across the country and internationally. All engagements are conducted remotely with structured online scoping, daily async updates, and regular video check-ins. South African clients benefit from local business context, POPIA compliance awareness, and SLA-friendly time zone alignment. International clients — particularly those in European time zones — benefit from overlapping working hours and cost-effective ZAR pricing.</p>
+
+         <div class="local-signals">
+           <div class="local-card">
+             <strong>📍 Cape Town, South Africa</strong>
+             <span>Registered and operating from the Western Cape</span>
+           </div>
+           <div class="local-card">
+             <strong>🇬🇧🇪🇺 European Time Zone Overlap</strong>
+             <span>CAT (UTC+2) aligns with CET — real-time collaboration</span>
+           </div>
+           <div class="local-card">
+             <strong>🔒 POPIA-Aware</strong>
+             <span>Data protection aligned with SA Protection of Personal Information Act</span>
+           </div>
+           <div class="local-card">
+             <strong>💰 ZAR Pricing</strong>
+             <span>Transparency from R7,000 to R220,000+ — no hidden fees</span>
+           </div>
+         </div>
 
         <h2>Delivery Rhythm</h2>
         <p class="section-intro">A structured process keeps delivery predictable and technical risk visible. Discovery comes first — requirements, constraints, and success metrics are mapped before any code is written. Architecture and scope are locked early to protect timelines. Build happens with testing and CI/CD from day one, with regular checkpoints to keep delivery aligned with intent. Deployment includes hardening, monitoring, and optional support retainers for stability after launch. Without proper scoping, projects drift into scope creep, deadline slips, and expensive rework. NemesisNet's process prevents that.</p>
@@ -240,14 +262,17 @@
 
 <script setup>
 useHead({
-  title: 'Services & Pricing | NemesisNet — AI Infrastructure, SaaS, and Software Development Cape Town',
+  title: 'IT Services Cape Town — Software, SaaS, AI & Infrastructure | NemesisNet',
   meta: [
-    { name: 'description', content: 'NemesisNet services: Custom Software, SaaS Development, AI Infrastructure, Infrastructure & DevOps, Consulting. Starting from R7,000. Cape Town, South Africa.' },
-    { property: 'og:title', content: 'Services & Pricing | NemesisNet' },
-    { property: 'og:description', content: 'Custom software, AI infrastructure, and SaaS development. Starting from R7,000. Based in Cape Town, South Africa.' },
+    { name: 'description', content: 'IT services in Cape Town, South Africa: Custom software, SaaS development, AI infrastructure, DevOps. ZAR pricing from R7,000. Cape Town-based engineering.' },
+    { property: 'og:title', content: 'IT Services Cape Town | Software, SaaS, AI & Infrastructure' },
+    { property: 'og:description', content: 'Custom software, SaaS, and AI infrastructure services based in Cape Town, South Africa. Starting from R7,000.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://dev.nemesisnet.co.za/services' },
     { property: 'og:image', content: 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services' }
   ],
   link: [
     { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services' }
@@ -314,6 +339,10 @@ useHead({
 .pricing-grid, .tiers-grid { justify-items: center; }
 
 .back-link { text-align: center; margin-top: 48px; }
+.local-signals { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 32px 0 24px; }
+.local-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; text-align: center; }
+.local-card strong { display: block; font-size: 0.95rem; margin-bottom: 6px; color: var(--accent-color); }
+.local-card span { font-size: 0.85rem; color: var(--text-muted); }
 @media (max-width: 1100px) { .service-columns, .process-steps { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 768px) { 
   .service-columns, .process-steps { grid-template-columns: 1fr; gap: 16px; }

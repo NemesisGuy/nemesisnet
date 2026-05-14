@@ -22,15 +22,19 @@
         <a href="https://github.com/NemesisGuy" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
-    <div class="footer-line">
-      <span>&copy; {{ currentYear }}</span>
-      <span class="footer-divider">|</span>
-      <span>Built by <a href="https://github.com/NemesisGuy" target="_blank" rel="noopener" aria-label="NemesisGuy on GitHub"><svg class="footer-github-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.57.1.78-.25.78-.55v-1.94c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.45.11-3.03 0 0 .97-.31 3.17 1.19a10.9 10.9 0 0 1 5.78 0c2.2-1.5 3.17-1.19 3.17-1.19.62 1.58.23 2.74.11 3.03.74.81 1.18 1.85 1.18 3.11 0 4.43-2.69 5.4-5.26 5.69.41.35.78 1.03.78 2.07v3.07c0 .3.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>NemesisGuy</a></span>
-      <span class="footer-divider">|</span>
-      <span>Powered by <a href="https://nemesisnet.co.za" target="_blank" rel="noopener">NemesisNet.co.za</a></span>
-      <span class="footer-divider">|</span>
-      <span>All rights reserved.</span>
-    </div>
+<div class="footer-line">
+       <span>&copy; {{ currentYear }} NemesisNet</span>
+       <span class="footer-divider">|</span>
+       <span>Based in Cape Town, South Africa</span>
+       <span class="footer-divider">|</span>
+       <span>Remote engagements globally</span>
+       <span class="footer-divider">|</span>
+       <span>Built by <a href="https://github.com/NemesisGuy" target="_blank" rel="noopener" aria-label="NemesisGuy on GitHub"><svg class="footer-github-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.57.1.78-.25.78-.55v-1.94c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.45.11-3.03 0 0 .97-.31 3.17 1.19a10.9 10.9 0 0 1 5.78 0c2.2-1.5 3.17-1.19 3.17-1.19.62 1.58.23 2.74.11 3.03.74.81 1.18 1.85 1.18 3.11 0 4.43-2.69 5.4-5.26 5.69.41.35.78 1.03.78 2.07v3.07c0 .3.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>NemesisGuy</a></span>
+       <span class="footer-divider">|</span>
+       <span>Powered by <a href="https://nemesisnet.co.za" target="_blank" rel="noopener">NemesisNet.co.za</a></span>
+       <span class="footer-divider">|</span>
+       <span>All rights reserved.</span>
+     </div>
   </footer>
 </template>
 

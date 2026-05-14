@@ -230,7 +230,7 @@ const handleContact = async (e) => {
 useHead({
   title: 'NemesisNet — AI Infrastructure & Platform Engineering in Cape Town, South Africa',
   meta: [
-    { name: 'description', content: 'NemesisNet builds custom AI systems, self-hosted infrastructure, and SaaS platforms for businesses in South Africa. Control, scalability, and engineering-grade reliability.' },
+    { name: 'description', content: 'AI infrastructure, SaaS development, and self-hosted systems built for production. Based in Cape Town, South Africa. Engineering-grade reliability, ZAR pricing, and POPIA-aware data handling.' },
     { property: 'og:title', content: 'NemesisNet — AI Infrastructure & Platform Engineering in Cape Town' },
     { property: 'og:description', content: 'Custom AI systems, self-hosted infrastructure, and SaaS platforms built for production. Based in Cape Town, South Africa.' },
     { property: 'og:type', content: 'website' },
