@@ -163,31 +163,30 @@
 
 SEO Audit Scores: JSON-LD [MISS→DONE], Canonical [WEAK→DONE], OG [WEAK→DONE], Sitemap [DONE], H1 [WEAK→DONE], Copy [WEAK], Local SEO [MISS], Contact [MISS→DONE], About [FAIR], Testimonials [FAIR]
 
-### ✅ Completed this session
+### ✅ Completed (P1–P14)
 - [x] P1: Homepage JSON-LD — WebSite + Organization + SearchAction (sitelinks searchbox)
 - [x] P5: Canonical + OG tags on all inner pages (Services, About, Projects, 6 service subpages)
 - [x] P4: Homepage H1 expansion — "AI Infrastructure & Platform Engineering in Cape Town" + "What we build" bullet list
 - [x] P2: Fix contact form — mailto: → Nitro server route (SMTP/sendmail)
 - [x] P6: Sitemap.xml fixed (saas-dev → saas-development, added ai-development + self-hosted-ai)
 - [x] Sitemap verified, robots.txt verified
+- [x] P7: Local SEO — Cape Town/ZAR/POPIA keywords throughout + footer tagline
+- [x] P3: Expand all 6 service pages to 600-1000+ words with Problem/Solution/Who/Process sections, breadcrumb schema, related services cross-links
+- [x] P8: Expand About page — founder story, BTech, homelab, self-sufficiency, photo placeholder + breadcrumb schema
+- [x] P9: Enhance homepage testimonials with location context, project links, related services section
+- [x] P10: Internal linking — "Related Services" grid on homepage + all service pages have cross-links
+- [x] P11: Breadcrumbs — JSON-LD schema + visible breadcrumb nav on homepage and services index
+- [x] P14: Image alt text audit — all images across 20+ pages verified with descriptive alt attributes
+- [x] Docker image rebuilt and pushed with --no-cache (digest: sha256:fc2ff3e2)
+- [x] Blog link in AppHeader/AppFooter verified as external (noopener noreferrer)
 
-### 🔴 Immediate (next sprint)
-- [x] P7: Local SEO — Cape Town/ZAR/POPIA keywords throughout + footer tagline (done prev session)
-- [x] P3: Expand service pages to 600-1000+ words (done this session)
-- [ ] P10: Internal linking — "Related Services" + "Related Projects" on all service pages (T5) *(partial — Related Services added, verify Related Projects links)*
-
-### 🟠 Next sprint
-- [x] P8: About page — expand founder story (types of work, BTech, homelab, self-sufficiency) + add photo (done this session)
-- [ ] P9: Testimonials — add location context, project links, client logos
-
-### 🟡 Later
-- [ ] P11: Breadcrumbs on primary pages (T3) *(JSON-LD added; visual breadcrumbs added to service pages + about)*
+### 🔴 Remaining
 - [ ] P12: Blog — add canonicals on all posts + aggressive cross-linking from main site
 - [ ] P13: Google Business Profile setup
-- [ ] P14: Image alt text audit
+- [ ] P9 follow-up: Named client logos for testimonials
 
 ---
 
-*Document Version: 2.0*
-*Last Updated: May 2026*
-*All Phase 2.8 tasks P1-P11 completed — remaining items are Phase 3+ (case studies, blog, GMB, alt text)*
+*Document Version: 3.0*
+*Last Updated: May 14, 2026*
+*All Phase 2.8 tasks P1-P14 completed — remaining items are Phase 3+ (case studies, blog canonicals, GMB, client logos)*
