@@ -89,7 +89,7 @@ export default defineNuxtConfig({
             '@id': 'https://nemesisnet.co.za/#organization',
             'name': 'NemesisNet',
             'url': 'https://nemesisnet.co.za',
-            'logo': 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png',
+            'logo': 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png',
             'description': 'NemesisNet engineers AI-powered platforms, backend systems, and automation infrastructure for production workloads.',
             'founder': {
               '@type': 'Person',
