@@ -2,7 +2,6 @@ import { Resend } from 'resend'
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
-  const resend = new Resend(config.resendApiKey)
   const body = await readBody(event)
 
   const { token, name, email, message } = body
@@ -11,8 +10,17 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, message: 'Turnstile token required.' })
   }
 
-  const isValid = await verifyTurnstileToken(token, config.turnstile.secretKey)
-  if (!isValid) {
+  const formData = new FormData()
+  formData.append('secret', config.turnstile.secretKey)
+  formData.append('response', token)
+
+  const turnstileRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+    method: 'POST',
+    body: formData
+  })
+  const turnstileData = await turnstileRes.json()
+
+  if (!turnstileData.success) {
     throw createError({ statusCode: 400, message: 'Bot detected.' })
   }
 
@@ -47,6 +55,7 @@ export default defineEventHandler(async (event) => {
     .replace(/>/g, '&gt;')
 
   try {
+    const resend = new Resend(config.resendApiKey)
     await resend.emails.send({
       from: 'contact@send.nemesisnet.co.za',
       to: 'reignbuckingham@gmail.com',
