@@ -20,7 +20,8 @@ steps:
     image: docker:27
     pull: true
     commands:
-      - echo $${DOCKER_PASSWORD} | docker login -u $${DOCKER_USERNAME} --password-stdin
+      - echo "Logging in..."
+      - echo "$$DOCKER_PASSWORD" | docker login -u "$$DOCKER_USERNAME" --password-stdin
       - docker build --no-cache -t nemesisguy/nemesisnet:dev .
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
@@ -32,7 +33,7 @@ steps:
     image: docker:27
     pull: true
     commands:
-      - echo $${DOCKER_PASSWORD} | docker login -u $${DOCKER_USERNAME} --password-stdin
+      - echo "$$DOCKER_PASSWORD" | docker login -u "$$DOCKER_USERNAME" --password-stdin
       - docker push nemesisguy/nemesisnet:dev
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
