@@ -1,0 +1,6 @@
+steps:
+  - name: test
+    image: node:20
+    commands:
+      - echo "CI TRIGGER WORKS"
+      - node -v
