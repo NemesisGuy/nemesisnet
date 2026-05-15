@@ -2,5 +2,5 @@ steps:
   - name: test
     image: node:20
     commands:
-      - echo "CI TRIGGER WORKS - Test 6"
+      - echo "CI TRIGGER WORKS - Test 7"
       - node -v
