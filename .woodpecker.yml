@@ -1,6 +1,26 @@
 steps:
-  test:
+  build:
     image: node:20
     commands:
-      - echo "CI TRIGGER WORKS"
-      - node -v
+      - npm ci
+      - npm run build
+
+  lighthouse:
+    image: node:20
+    commands:
+      - npm ci
+      - node lighthouse-audit.js
+
+  docker-build:
+    image: docker:latest
+    commands:
+      - wsl docker build --no-cache -t nemesisguy/nemesisnet:dev .
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  docker-push:
+    image: docker:latest
+    commands:
+      - wsl docker push nemesisguy/nemesisnet:dev
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
