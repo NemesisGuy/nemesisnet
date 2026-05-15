@@ -12,15 +12,22 @@ steps:
       - node lighthouse-audit.js
 
   docker-build:
-    image: docker:latest
+    image: docker:27
+    pull: true
     commands:
-      - wsl docker build --no-cache -t nemesisguy/nemesisnet:dev .
+      - docker build --no-cache -t nemesisguy/nemesisnet:dev .
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    when:
+      event: [push, tag, manual]
 
   docker-push:
-    image: docker:latest
+    image: docker:27
+    pull: true
     commands:
-      - wsl docker push nemesisguy/nemesisnet:dev
+      - docker push nemesisguy/nemesisnet:dev
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    when:
+      event: [push, tag, manual]
+      branch: main
