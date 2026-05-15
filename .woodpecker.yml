@@ -30,4 +30,4 @@ steps:
       - /var/run/docker.sock:/var/run/docker.sock
     when:
       event: [push, tag, manual]
-      branch: main
+      branch: dev
