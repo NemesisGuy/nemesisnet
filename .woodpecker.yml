@@ -52,17 +52,12 @@ steps:
       branch: dev
 
   deploy:
-    image: curlimages/curl
+    image: docker:27
     commands:
-      - |
-        curl -s -o /dev/null -w "%{http_code}" \
-          -X PUT "https://portainer.nemesisnet.co.za/api/stacks/82?endpointId=3" \
-          -H "X-API-Key: $${PORTAINER_API_KEY}" \
-          -H "Content-Type: application/json" \
-          -d '{"pullImage":true,"prune":true}'
-    environment:
-      PORTAINER_API_KEY:
-        from_secret: portainer_api_key
+      - docker pull nemesisguy/nemesisnet:dev
+      - docker restart nemesisnet-dev
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     when:
       event: [push, tag, manual]
       branch: dev
@@ -70,7 +65,7 @@ steps:
   cleanup:
     image: docker:27
     commands:
-      - docker images nemesisguy/nemesisnet --format "{{.Tag}}" | grep -v dev | sort -r | tail -n +3 | xargs -I {} docker rmi nemesisguy/nemesisnet:{} || true
+      - docker images nemesisguy/nemesisnet --format "{{.Tag}}" | grep -v dev | grep -v "<none>" | sort -r | tail -n +3 | xargs -I {} docker rmi nemesisguy/nemesisnet:{} || true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     when:
