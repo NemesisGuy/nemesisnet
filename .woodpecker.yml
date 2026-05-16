@@ -20,7 +20,7 @@ steps:
     image: docker:27
     pull: true
     commands:
-      - echo "Attempt 2 - Docker Hub login..."
+      - echo "Docker Hub login..."
       - echo $${DOCKER_PASSWORD} | docker login -u $${DOCKER_USERNAME} --password-stdin
       - docker build --no-cache -t nemesisguy/nemesisnet:dev .
     environment:
@@ -46,6 +46,22 @@ steps:
         from_secret: DOCKER_PASSWORD
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    when:
+      event: [push, tag, manual]
+      branch: dev
+
+  deploy:
+    image: curlimages/curl
+    commands:
+      - |
+        curl -s -o /dev/null -w "%{http_code}" \
+          -X POST "https://portainer.nemesisnet.co.za/api/stacks/82/git/redeploy" \
+          -H "X-API-Key: $${PORTAINER_API_KEY}" \
+          -H "Content-Type: application/json" \
+          -d '{"pullImage":true,"prune":false}'
+    environment:
+      PORTAINER_API_KEY:
+        from_secret: portainer_api_key
     when:
       event: [push, tag, manual]
       branch: dev
