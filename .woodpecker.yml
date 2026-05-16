@@ -20,7 +20,7 @@ steps:
     image: docker:27
     pull: true
     commands:
-      - echo "Logging in to Docker Hub..."
+      - echo "Attempt 2 - Docker Hub login..."
       - echo $${DOCKER_PASSWORD} | docker login -u $${DOCKER_USERNAME} --password-stdin
       - docker build --no-cache -t nemesisguy/nemesisnet:dev .
     environment:
