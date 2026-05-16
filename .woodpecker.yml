@@ -7,20 +7,11 @@ steps:
     when:
       event: [push, tag, manual]
 
-  lighthouse:
-    image: node:22
-    commands:
-      - apt-get update && apt-get install -y libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2 libpango-1.0-0 libcairo2
-      - npm ci
-      - node lighthouse-audit.js
-    when:
-      event: [push, tag, manual]
-
   docker-build:
     image: docker:27
     pull: true
     commands:
-      - echo "Docker Hub login v2..."
+      - echo "Docker Hub login..."
       - echo $${DOCKER_PASSWORD} | docker login -u $${DOCKER_USERNAME} --password-stdin
       - docker build --no-cache -t nemesisguy/nemesisnet:dev -t nemesisguy/nemesisnet:$${CI_COMMIT_SHA} .
     environment:
@@ -58,6 +49,16 @@ steps:
       - docker restart nemesisnet-dev
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    when:
+      event: [push, tag, manual]
+      branch: dev
+
+  lighthouse:
+    image: node:22
+    commands:
+      - apt-get update && apt-get install -y libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2 libpango-1.0-0 libcairo2
+      - npm ci
+      - node lighthouse-audit.js
     when:
       event: [push, tag, manual]
       branch: dev
