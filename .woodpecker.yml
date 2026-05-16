@@ -22,7 +22,7 @@ steps:
     commands:
       - echo "Docker Hub login..."
       - echo $${DOCKER_PASSWORD} | docker login -u $${DOCKER_USERNAME} --password-stdin
-      - docker build --no-cache -t nemesisguy/nemesisnet:dev .
+      - docker build --no-cache -t nemesisguy/nemesisnet:dev -t nemesisguy/nemesisnet:$${CI_COMMIT_SHA} .
     environment:
       DOCKER_USERNAME:
         from_secret: DOCKER_USERNAME
@@ -39,6 +39,7 @@ steps:
     commands:
       - echo $${DOCKER_PASSWORD} | docker login -u $${DOCKER_USERNAME} --password-stdin
       - docker push nemesisguy/nemesisnet:dev
+      - docker push nemesisguy/nemesisnet:$${CI_COMMIT_SHA}
     environment:
       DOCKER_USERNAME:
         from_secret: DOCKER_USERNAME
