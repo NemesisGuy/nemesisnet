@@ -1,5 +1,5 @@
 <template>
-  <nav class="breadcrumbs" aria-label="Breadcrumb">
+  <nav class="breadcrumbs" aria-label="Breadcrumb" style="padding-left: 24px;">
     <span aria-current="page">Home</span>
   </nav>
   <!-- Hero Section -->
@@ -97,23 +97,21 @@
         </div>
       </div>
       <div class="card">
-        <span class="pill pill-saas">SaaS Platform</span>
-        <img :src="'/images/projects/forkmyfolio/optimized/hero.webp'" alt="ForkMyFolio" loading="lazy">
-        <h3>ForkMyFolio</h3>
-        <p>Portfolio-as-a-service platform for developers.</p>
+        <span class="pill pill-saas">AI/ML</span>
+        <img :src="'/images/projects/voxnemesis-supertonic/original/hero.png'" alt="VoxNemesis Supertonic" loading="lazy">
+        <h3>VoxNemesis Supertonic</h3>
+        <p>WebGPU-powered local voice cloning with ONNX inference, real-time TTS, and zero cloud dependencies.</p>
         <div class="card-links">
-          <NuxtLink to="/projects/forkmyfolio" class="btn-glass">Detail</NuxtLink>
-          <a href="https://forkmyfolio.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
+          <NuxtLink to="/projects/voxnemesis-supertonic" class="btn-glass">Detail</NuxtLink>
         </div>
       </div>
       <div class="card">
-        <span class="pill pill-client">Real Client Work</span>
-        <img :src="'/images/projects/nk-assessments/optimized/hero.webp'" alt="NK Assessments" loading="lazy">
-        <h3>NK Assessments</h3>
-        <p>Fast-delivered client project with automated scoring, PDF reports, and admin dashboard.</p>
+        <span class="pill pill-saas">AI/Tooling</span>
+        <img :src="'/images/projects/pockettts-mcp/optimized/hero.webp'" alt="PocketTTS-MCP" loading="lazy">
+        <h3>PocketTTS-MCP</h3>
+        <p>Model Context Protocol server for local LLM-powered text-to-speech with audio streaming and voice cloning.</p>
         <div class="card-links">
-          <NuxtLink to="/projects/nk-assessments" class="btn-glass">Detail</NuxtLink>
-          <a href="https://nk.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
+          <NuxtLink to="/projects/pockettts-mcp" class="btn-glass">Detail</NuxtLink>
         </div>
       </div>
       <div class="card">
