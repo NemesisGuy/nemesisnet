@@ -56,13 +56,23 @@ steps:
     commands:
       - |
         curl -s -o /dev/null -w "%{http_code}" \
-          -X POST "https://portainer.nemesisnet.co.za/api/stacks/82/git/redeploy" \
+          -X PUT "https://portainer.nemesisnet.co.za/api/stacks/82?endpointId=3" \
           -H "X-API-Key: $${PORTAINER_API_KEY}" \
           -H "Content-Type: application/json" \
-          -d '{"pullImage":true,"prune":false}'
+          -d '{"pullImage":true,"prune":true}'
     environment:
       PORTAINER_API_KEY:
         from_secret: portainer_api_key
+    when:
+      event: [push, tag, manual]
+      branch: dev
+
+  cleanup:
+    image: docker:27
+    commands:
+      - docker images nemesisguy/nemesisnet --format "{{.Tag}}" | grep -v dev | sort -r | tail -n +3 | xargs -I {} docker rmi nemesisguy/nemesisnet:{} || true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     when:
       event: [push, tag, manual]
       branch: dev
