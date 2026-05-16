@@ -23,9 +23,13 @@ steps:
       - echo "Logging in to Docker Hub..."
       - echo $${DOCKER_PASSWORD} | docker login -u $${DOCKER_USERNAME} --password-stdin
       - docker build --no-cache -t nemesisguy/nemesisnet:dev .
+    environment:
+      DOCKER_USERNAME:
+        from_secret: DOCKER_USERNAME
+      DOCKER_PASSWORD:
+        from_secret: DOCKER_PASSWORD
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    secrets: [DOCKER_USERNAME, DOCKER_PASSWORD]
     when:
       event: [push, tag, manual]
 
@@ -35,9 +39,13 @@ steps:
     commands:
       - echo $${DOCKER_PASSWORD} | docker login -u $${DOCKER_USERNAME} --password-stdin
       - docker push nemesisguy/nemesisnet:dev
+    environment:
+      DOCKER_USERNAME:
+        from_secret: DOCKER_USERNAME
+      DOCKER_PASSWORD:
+        from_secret: DOCKER_PASSWORD
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    secrets: [DOCKER_USERNAME, DOCKER_PASSWORD]
     when:
       event: [push, tag, manual]
       branch: dev
