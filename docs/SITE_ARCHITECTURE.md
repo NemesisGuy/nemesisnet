@@ -47,18 +47,18 @@ flowchart TD
     end
 
     subgraph "Services Branch"
-        HS --> SV[/services]
-        SV --> SVCS[Custom Software]
-        SV --> SVSS[SaaS Development]
-        SV --> SVAI[AI Development]
-        SV --> SVSH[Self-Hosted AI]
-        SV --> SVID[Infrastructure]
-        SV --> SVC[Consulting]
+        HS --> SV["/services"]
+        SV --> SVCS["Custom Software"]
+        SV --> SVSS["SaaS Development"]
+        SV --> SVAI["AI Development"]
+        SV --> SVSH["Self-Hosted AI"]
+        SV --> SVID["Infrastructure"]
+        SV --> SVC["Consulting"]
     end
 
     subgraph "Projects Branch"
-        HPJ --> PJ[/projects]
-        PJ --> PJ1[CodeCritical SaaS]
+        HPJ --> PJ["/projects"]
+        PJ --> PJ1["CodeCritical SaaS"]
         PJ --> PJ2[Since]
         PJ --> PJ3[VoxNemesis Supertonic]
         PJ --> PJ4[PocketTTS-MCP]
@@ -71,10 +71,10 @@ flowchart TD
     end
 
     subgraph "Legal Branch"
-        H --> LG[/legal]
-        LG --> LGP[Privacy]
-        LGT[Terms]
-        LGR[Refund]
+        H --> LG["/legal"]
+        LG --> LGP["Privacy"]
+        LGT["Terms"]
+        LGR["Refund"]
     end
 ```
 
@@ -83,24 +83,24 @@ flowchart TD
 ```mermaid
 flowchart TB
     subgraph "Internal Navigation"
-        HOME[/] --> SVC[Services]
-        HOME --> PJH[Projects]
-        HOME --> ABT[About]
-        HOME --> CNT[Contact]
+        HOME["/"] --> SVC["Services"]
+        HOME --> PJH["Projects"]
+        HOME --> ABT["About"]
+        HOME --> CNT["Contact"]
     end
 
     subgraph "External Outbound"
-        SVC --> SCOPE[scope.nemesisnet.co.za]
-        PJH --> DEMO1[codecritical.nemesisnet.co.za]
-        PJH --> DEMO2[since.nemesisnet.co.za]
-        PJH --> DEMO3[forkmyfolio.nemesisnet.co.za]
-        PJH --> DEMO4[otgr.nemesisnet.co.za]
-        PJH --> DEMO5[nkassessments.nemesisnet.co.za]
-        HOME --> BLOG[blog.nemesisnet.co.za]
-        HOME --> BRAND[brand.nemesisnet.co.za]
-        ABT --> GH[github.com/NemesisGuy]
-        ABT --> LI[linkedin.com/in/peter-buckingham]
-        CNT --> EMAIL[admin@nemesisnet.co.za]
+        SVC --> SCOPE["scope.nemesisnet.co.za"]
+        PJH --> DEMO1["codecritical.nemesisnet.co.za"]
+        PJH --> DEMO2["since.nemesisnet.co.za"]
+        PJH --> DEMO3["forkmyfolio.nemesisnet.co.za"]
+        PJH --> DEMO4["otgr.nemesisnet.co.za"]
+        PJH --> DEMO5["nkassessments.nemesisnet.co.za"]
+        HOME --> BLOG["blog.nemesisnet.co.za"]
+        HOME --> BRAND["brand.nemesisnet.co.za"]
+        ABT --> GH["github.com/NemesisGuy"]
+        ABT --> LI["linkedin.com/in/peter-buckingham"]
+        CNT --> EMAIL["admin@nemesisnet.co.za"]
     end
 ```
 
@@ -162,14 +162,14 @@ flowchart LR
     end
 
     subgraph "Form Submission"
-        C1 --> POST[/api/contact]
-        POST --> RESEND[Resend API]
-        POST --> Cloudflare[Cloudflare Turnstile]
+        C1 --> POST["/api/contact"]
+        POST --> RESEND["Resend API"]
+        POST --> Cloudflare["Cloudflare Turnstile"]
     end
 
     subgraph "Response"
-        RESEND --> EMAIL[admin@nemesisnet.co.za]
-        POST --> SUCCESS[Thank You Page]
+        RESEND --> EMAIL["admin@nemesisnet.co.za"]
+        POST --> SUCCESS["Thank You Page"]
     end
 ```
 
@@ -178,17 +178,17 @@ flowchart LR
 ```mermaid
 flowchart TB
     subgraph "Mobile Nav"
-        HAM[ Hamburger Menu]
-        DROP[ Dropdown Nav]
+        HAM["Hamburger Menu"]
+        DROP["Dropdown Nav"]
     end
 
     subgraph "Mobile Pages"
-        DROP --> HOME_M[/]
-        DROP --> SVC_M[/services]
-        DROP --> PJ_M[/projects]
-        DROP --> ABT_M[/about]
-        DROP --> TST_M[#testimonials]
-        DROP --> CNT_M[#contact]
+        DROP --> HOME_M["/"]
+        DROP --> SVC_M["/services"]
+        DROP --> PJ_M["/projects"]
+        DROP --> ABT_M["/about"]
+        DROP --> TST_M["#testimonials"]
+        DROP --> CNT_M["#contact"]
     end
 ```
 
