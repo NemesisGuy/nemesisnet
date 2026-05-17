@@ -98,7 +98,7 @@
       </div>
       <div class="card">
         <span class="pill pill-saas">AI/ML</span>
-        <img :src="'/images/projects/voxnemesis-supertonic/original/hero.png'" alt="VoxNemesis Supertonic" loading="lazy">
+        <img :src="'/images/projects/voxnemesis-supertonic/optimized/hero.webp'" alt="VoxNemesis Supertonic" loading="lazy">
         <h3>VoxNemesis Supertonic</h3>
         <p>WebGPU-powered local voice cloning with ONNX inference, real-time TTS, and zero cloud dependencies.</p>
         <div class="card-links">
@@ -310,11 +310,11 @@ useHead({
     { property: 'og:title', content: 'NemesisNet — AI Infrastructure & Platform Engineering in Cape Town' },
     { property: 'og:description', content: 'Custom AI systems, self-hosted infrastructure, and SaaS platforms built for production. Based in Cape Town, South Africa.' },
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://dev.nemesisnet.co.za/' },
-    { property: 'og:image', content: 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { property: 'og:url', content: 'https://nemesisnet.co.za/' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/' }
   ]
 })
 </script>

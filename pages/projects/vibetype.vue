@@ -49,12 +49,52 @@
 
 <script setup>
 useHead({
-  title: 'Vibe-Type | NemesisNet',
+  title: 'Vibe-Type | AI-Powered Voice Coding Companion | NemesisNet',
   meta: [
-    { name: 'description', content: 'Experimental AI-powered coding and typing assistant.' }
+    { name: 'description', content: 'Vibe-Type is an experimental AI-powered voice coding companion and typing assistant built with Python, OpenAI, and local LLMs.' },
+    { property: 'og:title', content: 'Vibe-Type | AI-Powered Voice Coding Companion | NemesisNet' },
+    { property: 'og:description', content: 'Vibe your way through code using voice conceptualization, smart suggestion systems, and local LLM acceleration.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://nemesisnet.co.za/projects/vibetype' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/vibetype/optimized/hero.webp' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/projects/vibetype' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/vibetype' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        'name': 'Vibe-Type',
+        'operatingSystem': 'Linux, Windows, macOS',
+        'applicationCategory': 'DeveloperApplication',
+        'offers': {
+          '@type': 'Offer',
+          'price': '0',
+          'priceCurrency': 'USD'
+        },
+        'description': 'An experimental AI-powered voice coding companion and typing assistant built with Python, OpenAI, and local LLMs.',
+        'author': {
+          '@type': 'Person',
+          'name': 'Peter Buckingham',
+          'url': 'https://nemesisnet.co.za/about'
+        }
+      })
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://nemesisnet.co.za/' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Projects', 'item': 'https://nemesisnet.co.za/projects' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Vibe-Type', 'item': 'https://nemesisnet.co.za/projects/vibetype' }
+        ]
+      })
+    }
   ]
 })
 </script>

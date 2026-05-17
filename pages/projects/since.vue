@@ -74,12 +74,52 @@
 
 <script setup>
 useHead({
-  title: 'Since | NemesisNet',
+  title: 'Since | Temporal Claim & Accountability Engine | NemesisNet',
   meta: [
-    { name: 'description', content: 'Temporal claim registry — track claims, verify outcomes, hold people accountable.' }
+    { name: 'description', content: 'Since is a self-hosted temporal accountability and claim registry engine built using React, Express, and PocketBase.' },
+    { property: 'og:title', content: 'Since | Temporal Claim & Accountability Engine | NemesisNet' },
+    { property: 'og:description', content: 'Self-hosted prediction registry and outcome verification engine with automated dispute and outcome tracking.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://nemesisnet.co.za/projects/since' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/since/optimized/hero.webp' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/projects/since' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/since' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        'name': 'Since',
+        'operatingSystem': 'Linux, Windows, macOS',
+        'applicationCategory': 'SocialApplication',
+        'offers': {
+          '@type': 'Offer',
+          'price': '0',
+          'priceCurrency': 'USD'
+        },
+        'description': 'A self-hosted temporal accountability and claim registry engine built using React, Express, and PocketBase.',
+        'author': {
+          '@type': 'Person',
+          'name': 'Peter Buckingham',
+          'url': 'https://nemesisnet.co.za/about'
+        }
+      })
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://nemesisnet.co.za/' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Projects', 'item': 'https://nemesisnet.co.za/projects' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Since', 'item': 'https://nemesisnet.co.za/projects/since' }
+        ]
+      })
+    }
   ]
 })
 </script>

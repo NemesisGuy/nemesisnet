@@ -49,12 +49,52 @@
 
 <script setup>
 useHead({
-  title: 'ForkMyFolio | NemesisNet',
+  title: 'ForkMyFolio | Dynamic Portfolio & CV CMS Platform | NemesisNet',
   meta: [
-    { name: 'description', content: 'The ultimate production-ready personal portfolio management system.' }
+    { name: 'description', content: 'ForkMyFolio is a dynamic personal portfolio and resume content management system built with Spring Boot, Vue 3, MySQL, and Redis.' },
+    { property: 'og:title', content: 'ForkMyFolio | Dynamic Portfolio & CV CMS Platform | NemesisNet' },
+    { property: 'og:description', content: 'A complete developer portfolio content management system for tracking projects, skills, PDF generation, and automated database backups.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://nemesisnet.co.za/projects/forkmyfolio' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/forkmyfolio/optimized/hero.webp' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/projects/forkmyfolio' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/forkmyfolio' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        'name': 'ForkMyFolio',
+        'operatingSystem': 'Linux, Windows, macOS',
+        'applicationCategory': 'BusinessApplication',
+        'offers': {
+          '@type': 'Offer',
+          'price': '0',
+          'priceCurrency': 'USD'
+        },
+        'description': 'A dynamic personal portfolio and resume content management system built with Spring Boot, Vue 3, MySQL, and Redis.',
+        'author': {
+          '@type': 'Person',
+          'name': 'Peter Buckingham',
+          'url': 'https://nemesisnet.co.za/about'
+        }
+      })
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://nemesisnet.co.za/' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Projects', 'item': 'https://nemesisnet.co.za/projects' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'ForkMyFolio', 'item': 'https://nemesisnet.co.za/projects/forkmyfolio' }
+        ]
+      })
+    }
   ]
 })
 </script>

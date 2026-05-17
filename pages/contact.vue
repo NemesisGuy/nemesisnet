@@ -173,9 +173,17 @@ async function handleSubmit() {
 }
 
 useHead({
-  title: 'Contact - NemesisNet',
+  title: 'Contact | NemesisNet',
   meta: [
-    { name: 'description', content: 'Get in touch with NemesisNet for custom software, AI development, and infrastructure projects.' }
+    { name: 'description', content: 'Get in touch with NemesisNet for custom software, AI development, and self-hosted infrastructure projects.' },
+    { property: 'og:title', content: 'Contact | NemesisNet' },
+    { property: 'og:description', content: 'Get in touch with NemesisNet for custom software, AI development, and self-hosted infrastructure projects.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://nemesisnet.co.za/contact' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/contact' }
   ]
 })
 </script>

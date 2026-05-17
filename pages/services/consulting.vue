@@ -138,11 +138,11 @@ useHead({
     { property: 'og:title', content: 'System Design & Consulting | NemesisNet' },
     { property: 'og:description', content: 'Technical roadmapping and architectural guidance. Based in Cape Town, South Africa.' },
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://dev.nemesisnet.co.za/services/consulting' },
-    { property: 'og:image', content: 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { property: 'og:url', content: 'https://nemesisnet.co.za/services/consulting' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services/consulting' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/services/consulting' }
   ],
   script: [
     {
@@ -165,7 +165,7 @@ useHead({
         },
         'mainEntityOfPage': {
           '@type': 'WebPage',
-          '@id': 'https://dev.nemesisnet.co.za/services/consulting'
+          '@id': 'https://nemesisnet.co.za/services/consulting'
         }
       })
     },

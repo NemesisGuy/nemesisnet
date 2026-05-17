@@ -140,11 +140,11 @@ useHead({
     { property: 'og:title', content: 'SaaS Development | NemesisNet' },
     { property: 'og:description', content: 'Scalable multi-tenant SaaS platforms with Spring Boot + Vue 3. Based in Cape Town, South Africa.' },
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://dev.nemesisnet.co.za/services/saas-development' },
-    { property: 'og:image', content: 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { property: 'og:url', content: 'https://nemesisnet.co.za/services/saas-development' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services/saas-development' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/services/saas-development' }
   ],
   script: [
     {
@@ -167,7 +167,7 @@ useHead({
         },
         'mainEntityOfPage': {
           '@type': 'WebPage',
-          '@id': 'https://dev.nemesisnet.co.za/services/saas-development'
+          '@id': 'https://nemesisnet.co.za/services/saas-development'
         }
       })
     },

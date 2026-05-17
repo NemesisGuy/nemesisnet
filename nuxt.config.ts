@@ -31,7 +31,7 @@ export default defineNuxtConfig({
         '/projects/kokoro-tts',
         '/projects/wordpress-mcp',
         '/projects/nk-assessments',
-        '/projects/codecritical',
+        '/projects/codecritical-cli',
         '/projects/codecritical-saas',
         '/projects/vibetype',
         '/projects/forkmyfolio',
@@ -128,7 +128,7 @@ export default defineNuxtConfig({
             'name': 'NemesisNet',
             'description': 'Software engineering and AI infrastructure services based in Cape Town, South Africa.',
             'url': 'https://nemesisnet.co.za',
-            'image': 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png',
+            'image': 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png',
             'areaServed': {
               '@type': 'Country',
               'name': 'South Africa'

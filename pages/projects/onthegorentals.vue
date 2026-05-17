@@ -49,12 +49,52 @@
 
 <script setup>
 useHead({
-  title: 'OntheGoRentals | NemesisNet',
+  title: 'OntheGoRentals | Car Rental Fleet Management Platform | NemesisNet',
   meta: [
-    { name: 'description', content: 'A full-stack car rental platform for seamless fleet management.' }
+    { name: 'description', content: 'A full-stack car rental and fleet management platform built using Spring Boot, Java, Vue, and MySQL.' },
+    { property: 'og:title', content: 'OntheGoRentals | Car Rental Fleet Management Platform | NemesisNet' },
+    { property: 'og:description', content: 'Robust real-time vehicle booking, administrative dashboard management, secure JWT authentication, and MySQL tracking.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://nemesisnet.co.za/projects/onthegorentals' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/onthegorentals/optimized/hero.webp' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/projects/onthegorentals' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/onthegorentals' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        'name': 'OntheGoRentals',
+        'operatingSystem': 'Linux, Windows, macOS',
+        'applicationCategory': 'BusinessApplication',
+        'offers': {
+          '@type': 'Offer',
+          'price': '0',
+          'priceCurrency': 'USD'
+        },
+        'description': 'A full-stack car rental and fleet management platform built using Spring Boot, Java, Vue, and MySQL.',
+        'author': {
+          '@type': 'Person',
+          'name': 'Peter Buckingham',
+          'url': 'https://nemesisnet.co.za/about'
+        }
+      })
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://nemesisnet.co.za/' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Projects', 'item': 'https://nemesisnet.co.za/projects' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'OntheGoRentals', 'item': 'https://nemesisnet.co.za/projects/onthegorentals' }
+        ]
+      })
+    }
   ]
 })
 </script>

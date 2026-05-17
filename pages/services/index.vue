@@ -302,11 +302,11 @@ useHead({
     { property: 'og:title', content: 'IT Services Cape Town | Software, SaaS, AI & Infrastructure' },
     { property: 'og:description', content: 'Custom software, SaaS, and AI infrastructure services based in Cape Town, South Africa. Starting from R7,000.' },
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://dev.nemesisnet.co.za/services' },
-    { property: 'og:image', content: 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { property: 'og:url', content: 'https://nemesisnet.co.za/services' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/services' }
   ],
   script: [
     {

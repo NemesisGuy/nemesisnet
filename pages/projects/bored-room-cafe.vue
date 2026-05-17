@@ -49,12 +49,46 @@
 
 <script setup>
 useHead({
-  title: 'Bored Room Cafe | NemesisNet',
+  title: 'Bored Room Cafe | Local Takeaway & Food-Service Site | NemesisNet',
   meta: [
-    { name: 'description', content: 'A local homestyle takeaway and food-service spot in Ferness Estate.' }
+    { name: 'description', content: 'A local homestyle takeaway and food-service spot in Ferness Estate, built for digital ordering and high-performance mobile speed.' },
+    { property: 'og:title', content: 'Bored Room Cafe | Local Takeaway & Food-Service Site | NemesisNet' },
+    { property: 'og:description', content: 'High-performance digital ordering spot showcasing local home-style takeaway in Ferness Estate, Cape Town.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://nemesisnet.co.za/projects/bored-room-cafe' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/bored-room-cafe/optimized/hero.webp' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/projects/bored-room-cafe' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/bored-room-cafe' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        'name': 'Bored Room Cafe',
+        'url': 'https://boredroomcafe.nemesisnet.co.za',
+        'description': 'A local homestyle takeaway and food-service spot in Ferness Estate, Cape Town.',
+        'author': {
+          '@type': 'Person',
+          'name': 'Peter Buckingham',
+          'url': 'https://nemesisnet.co.za/about'
+        }
+      })
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://nemesisnet.co.za/' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Projects', 'item': 'https://nemesisnet.co.za/projects' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Bored Room Cafe', 'item': 'https://nemesisnet.co.za/projects/bored-room-cafe' }
+        ]
+      })
+    }
   ]
 })
 </script>

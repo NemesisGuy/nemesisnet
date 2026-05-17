@@ -49,12 +49,52 @@
 
 <script setup>
 useHead({
-  title: 'Kokoro TTS Service | NemesisNet',
+  title: 'Kokoro TTS Service | Self-Hosted AI Text-To-Speech | NemesisNet',
   meta: [
-    { name: 'description', content: 'Self-hosted, high-fidelity AI text-to-speech infrastructure.' }
+    { name: 'description', content: 'Self-hosted, high-fidelity AI text-to-speech API and web UI infrastructure built using Python, FastAPI, PyTorch, and Vue.' },
+    { property: 'og:title', content: 'Kokoro TTS Service | Self-Hosted AI Text-To-Speech | NemesisNet' },
+    { property: 'og:description', content: 'Low-latency, self-hosted, private and open-source neural text-to-speech web service and REST API built on the Kokoro model.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://nemesisnet.co.za/projects/kokoro-tts' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/kokoro-tts-service/optimized/hero.webp' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/projects/kokoro-tts' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/kokoro-tts' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        'name': 'Kokoro TTS Service',
+        'operatingSystem': 'Linux, Windows, macOS',
+        'applicationCategory': 'MultimediaApplication',
+        'offers': {
+          '@type': 'Offer',
+          'price': '0',
+          'priceCurrency': 'USD'
+        },
+        'description': 'A self-hosted, high-fidelity AI text-to-speech API and web user interface built with FastAPI, PyTorch, and Vue.',
+        'author': {
+          '@type': 'Person',
+          'name': 'Peter Buckingham',
+          'url': 'https://nemesisnet.co.za/about'
+        }
+      })
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://nemesisnet.co.za/' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Projects', 'item': 'https://nemesisnet.co.za/projects' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Kokoro TTS Service', 'item': 'https://nemesisnet.co.za/projects/kokoro-tts' }
+        ]
+      })
+    }
   ]
 })
 </script>

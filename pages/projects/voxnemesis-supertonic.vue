@@ -49,12 +49,52 @@
 
 <script setup>
 useHead({
-  title: 'VoxNemesis Supertonic | NemesisNet',
+  title: 'VoxNemesis Supertonic | GPU-Aware Local-First TTS Browser Extension | NemesisNet',
   meta: [
-    { name: 'description', content: 'Local-first, GPU-aware TTS browser extension with 100% privacy.' }
+    { name: 'description', content: 'VoxNemesis Supertonic is a GPU-aware local-first TTS Chrome Extension built using ONNX Runtime Web, WebGPU, WASM and Manifest V3.' },
+    { property: 'og:title', content: 'VoxNemesis Supertonic | GPU-Aware Local-First TTS Browser Extension | NemesisNet' },
+    { property: 'og:description', content: 'Run high-fidelity Kokoro neural speech synthesis 100% privately in the browser with WebGPU hardware acceleration.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://nemesisnet.co.za/projects/voxnemesis-supertonic' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/voxnemesis-supertonic/optimized/hero.webp' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/projects/voxnemesis-supertonic' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/voxnemesis-supertonic' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        'name': 'VoxNemesis Supertonic',
+        'operatingSystem': 'Chrome, Edge, Chromium Browsers',
+        'applicationCategory': 'MultimediaApplication',
+        'offers': {
+          '@type': 'Offer',
+          'price': '0',
+          'priceCurrency': 'USD'
+        },
+        'description': 'A GPU-aware local-first TTS Chrome Extension built using ONNX Runtime Web, WebGPU, WASM and Manifest V3.',
+        'author': {
+          '@type': 'Person',
+          'name': 'Peter Buckingham',
+          'url': 'https://nemesisnet.co.za/about'
+        }
+      })
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://nemesisnet.co.za/' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Projects', 'item': 'https://nemesisnet.co.za/projects' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'VoxNemesis Supertonic', 'item': 'https://nemesisnet.co.za/projects/voxnemesis-supertonic' }
+        ]
+      })
+    }
   ]
 })
 </script>

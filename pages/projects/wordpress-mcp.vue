@@ -49,12 +49,52 @@
 
 <script setup>
 useHead({
-  title: 'WordPress MCP Server | NemesisNet',
+  title: 'WordPress MCP Server | Local-First AI Agent Content Tool | NemesisNet',
   meta: [
-    { name: 'description', content: 'Empowering AI agents with secure, local-first WordPress management.' }
+    { name: 'description', content: 'WordPress MCP Server is a local-first Model Context Protocol bridge allowing AI agents to securely manage WordPress content, posts, and media.' },
+    { property: 'og:title', content: 'WordPress MCP Server | Local-First AI Agent Content Tool | NemesisNet' },
+    { property: 'og:description', content: 'Connect AI tools securely to WordPress to read, publish, edit posts, and manage media via Model Context Protocol.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://nemesisnet.co.za/projects/wordpress-mcp' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/wordpress-mcp/optimized/hero.webp' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/projects/wordpress-mcp' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/wordpress-mcp' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        'name': 'WordPress MCP Server',
+        'operatingSystem': 'Linux, Windows, macOS',
+        'applicationCategory': 'DeveloperApplication',
+        'offers': {
+          '@type': 'Offer',
+          'price': '0',
+          'priceCurrency': 'USD'
+        },
+        'description': 'WordPress MCP Server is a local-first Model Context Protocol bridge allowing AI agents to securely manage WordPress content, posts, and media.',
+        'author': {
+          '@type': 'Person',
+          'name': 'Peter Buckingham',
+          'url': 'https://nemesisnet.co.za/about'
+        }
+      })
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://nemesisnet.co.za/' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Projects', 'item': 'https://nemesisnet.co.za/projects' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'WordPress MCP Server', 'item': 'https://nemesisnet.co.za/projects/wordpress-mcp' }
+        ]
+      })
+    }
   ]
 })
 </script>

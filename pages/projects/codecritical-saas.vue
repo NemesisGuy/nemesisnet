@@ -71,12 +71,57 @@
 
 <script setup>
 useHead({
-  title: 'CodeCritical SaaS | NemesisNet',
+  title: 'CodeCritical SaaS | Enterprise Security Scanning Platform | NemesisNet',
   meta: [
-    { name: 'description', content: 'Enterprise-grade security scanning SaaS with multi-tenant architecture, JWT auth, and async scan pipeline.' }
+    { name: 'description', content: 'Enterprise-grade security scanning SaaS with multi-tenant architecture, custom JWT authentication, and high-performance async scan pipelines.' },
+    { property: 'og:title', content: 'CodeCritical SaaS | Enterprise Security Scanning Platform | NemesisNet' },
+    { property: 'og:description', content: 'Multi-tenant security scanning platform with container vulnerability checks, static analysis, and custom architectural validation.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://nemesisnet.co.za/projects/codecritical-saas' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/codecritical-saas/optimized/hero.webp' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/projects/codecritical-saas' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/codecritical-saas' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        'name': 'CodeCritical SaaS',
+        'operatingSystem': 'Linux, Windows, macOS',
+        'applicationCategory': 'DeveloperApplication',
+        'offers': {
+          '@type': 'Offer',
+          'price': '0',
+          'priceCurrency': 'USD'
+        },
+        'description': 'Enterprise-grade security scanning SaaS with multi-tenant architecture, custom JWT authentication, and high-performance async scan pipelines.',
+        'author': {
+          '@type': 'Person',
+          'name': 'Peter Buckingham',
+          'url': 'https://nemesisnet.co.za/about'
+        },
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'NemesisNet',
+          'url': 'https://nemesisnet.co.za'
+        }
+      })
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://nemesisnet.co.za/' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Projects', 'item': 'https://nemesisnet.co.za/projects' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'CodeCritical SaaS', 'item': 'https://nemesisnet.co.za/projects/codecritical-saas' }
+        ]
+      })
+    }
   ]
 })
 </script>

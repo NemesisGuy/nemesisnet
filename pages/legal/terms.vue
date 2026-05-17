@@ -74,7 +74,16 @@
 <script setup>
 useHead({
   title: 'Terms Of Service | NemesisNet',
-  meta: [    { name: 'description', content: 'NemesisNet terms of service for software engineering, consulting, and subscription-based technical services.' }
+  meta: [
+    { name: 'description', content: 'NemesisNet terms of service for software engineering, consulting, and subscription-based technical services.' },
+    { property: 'og:title', content: 'Terms Of Service | NemesisNet' },
+    { property: 'og:description', content: 'NemesisNet terms of service for software engineering, consulting, and subscription-based technical services.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://nemesisnet.co.za/legal/terms' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/legal/terms' }
   ]
 })
 </script>

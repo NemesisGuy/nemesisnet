@@ -145,11 +145,11 @@ useHead({
     { property: 'og:title', content: 'Custom Software Development | NemesisNet' },
     { property: 'og:description', content: 'Enterprise-grade backend and full-stack applications. Vue 3, Spring Boot, secure authentication. Based in Cape Town, South Africa.' },
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://dev.nemesisnet.co.za/services/custom-software' },
-    { property: 'og:image', content: 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { property: 'og:url', content: 'https://nemesisnet.co.za/services/custom-software' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/services/custom-software' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/services/custom-software' }
   ],
   script: [
     {
@@ -172,7 +172,7 @@ useHead({
         },
         'mainEntityOfPage': {
           '@type': 'WebPage',
-          '@id': 'https://dev.nemesisnet.co.za/services/custom-software'
+          '@id': 'https://nemesisnet.co.za/services/custom-software'
         }
       })
     },

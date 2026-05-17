@@ -46,7 +46,16 @@
 <script setup>
 useHead({
   title: 'Privacy Policy | NemesisNet',
-  meta: [    { name: 'description', content: 'NemesisNet privacy policy covering information collected, usage, sharing, and data rights.' }
+  meta: [
+    { name: 'description', content: 'NemesisNet privacy policy covering information collected, usage, sharing, and data rights.' },
+    { property: 'og:title', content: 'Privacy Policy | NemesisNet' },
+    { property: 'og:description', content: 'NemesisNet privacy policy covering information collected, usage, sharing, and data rights.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://nemesisnet.co.za/legal/privacy' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/legal/privacy' }
   ]
 })
 </script>

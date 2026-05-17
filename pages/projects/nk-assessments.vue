@@ -49,12 +49,46 @@
 
 <script setup>
 useHead({
-  title: 'NK Assessments | NemesisNet',
+  title: 'NK Assessments | High-Speed Client-Facing Portal | NemesisNet',
   meta: [
-    { name: 'description', content: 'High-speed deployment of a professional client-facing portal.' }
+    { name: 'description', content: 'Professional, high-speed, secure client-facing portal deployed in under 48 hours with Dockerized Nginx infrastructure.' },
+    { property: 'og:title', content: 'NK Assessments | High-Speed Client-Facing Portal | NemesisNet' },
+    { property: 'og:description', content: 'Lightweight static portal designed for extreme performance and deployed using containerized Nginx with zero downtime.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://nemesisnet.co.za/projects/nk-assessments' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/nk-assessments/optimized/hero.webp' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/projects/nk-assessments' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/nk-assessments' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        'name': 'NK Assessments',
+        'url': 'https://nkassessments.nemesisnet.co.za',
+        'description': 'A professional client-facing portal built with HTML5, Bootstrap, Nginx, and Docker.',
+        'author': {
+          '@type': 'Person',
+          'name': 'Peter Buckingham',
+          'url': 'https://nemesisnet.co.za/about'
+        }
+      })
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://nemesisnet.co.za/' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Projects', 'item': 'https://nemesisnet.co.za/projects' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'NK Assessments', 'item': 'https://nemesisnet.co.za/projects/nk-assessments' }
+        ]
+      })
+    }
   ]
 })
 </script>

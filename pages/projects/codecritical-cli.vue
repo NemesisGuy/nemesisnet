@@ -55,12 +55,52 @@
 
 <script setup>
 useHead({
-  title: 'CodeCritical CLI | NemesisNet',
+  title: 'CodeCritical CLI | Java Code Analysis & Quality Metric Tool | NemesisNet',
   meta: [
-    { name: 'description', content: 'Comprehensive Java code analysis CLI tool for measuring quality, maintainability, and code duplication.' }
+    { name: 'description', content: 'Comprehensive Java code analysis CLI tool for measuring LOC, class complexity, code duplication, and maintainability index scores.' },
+    { property: 'og:title', content: 'CodeCritical CLI | Java Code Analysis & Quality Metric Tool | NemesisNet' },
+    { property: 'og:description', content: 'Measure Java code maintainability, duplication, complexity and LOC using a professional, local static analysis CLI.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://nemesisnet.co.za/projects/codecritical-cli' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/codecritical/optimized/hero.webp' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/projects/codecritical-cli' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/codecritical-cli' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        'name': 'CodeCritical CLI',
+        'operatingSystem': 'Windows, Linux, macOS',
+        'applicationCategory': 'DeveloperApplication',
+        'offers': {
+          '@type': 'Offer',
+          'price': '0',
+          'priceCurrency': 'USD'
+        },
+        'description': 'Comprehensive Java static analysis CLI tool to inspect code duplications, line counting metrics, and calculate maintainability index scores.',
+        'author': {
+          '@type': 'Person',
+          'name': 'Peter Buckingham',
+          'url': 'https://nemesisnet.co.za/about'
+        }
+      })
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://nemesisnet.co.za/' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Projects', 'item': 'https://nemesisnet.co.za/projects' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'CodeCritical CLI', 'item': 'https://nemesisnet.co.za/projects/codecritical-cli' }
+        ]
+      })
+    }
   ]
 })
 </script>

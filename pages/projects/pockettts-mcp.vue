@@ -66,12 +66,52 @@
 
 <script setup>
 useHead({
-  title: 'PocketTTS-MCP | NemesisNet',
+  title: 'PocketTTS-MCP | Local AI Neural TTS MCP Server | NemesisNet',
   meta: [
-    { name: 'description', content: 'MCP server for Kyutai Pocket TTS — local, open-source neural text-to-speech for AI agents.' }
+    { name: 'description', content: 'PocketTTS-MCP is an open-source Model Context Protocol server wrapping Kyutai Labs Pocket TTS for local neural speech generation in AI agents.' },
+    { property: 'og:title', content: 'PocketTTS-MCP | Local AI Neural TTS MCP Server | NemesisNet' },
+    { property: 'og:description', content: 'Expose local-first neural text-to-speech to AI agents and tools using Python, FastMCP, and GGUF quantization.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://nemesisnet.co.za/projects/pockettts-mcp' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/pockettts-mcp/optimized/hero.webp' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/projects/pockettts-mcp' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/pockettts-mcp' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        'name': 'PocketTTS-MCP',
+        'operatingSystem': 'Linux, Windows, macOS',
+        'applicationCategory': 'DeveloperApplication',
+        'offers': {
+          '@type': 'Offer',
+          'price': '0',
+          'priceCurrency': 'USD'
+        },
+        'description': 'PocketTTS-MCP is an open-source Model Context Protocol server wrapping Kyutai Labs Pocket TTS for local neural speech generation.',
+        'author': {
+          '@type': 'Person',
+          'name': 'Peter Buckingham',
+          'url': 'https://nemesisnet.co.za/about'
+        }
+      })
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://nemesisnet.co.za/' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Projects', 'item': 'https://nemesisnet.co.za/projects' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'PocketTTS-MCP', 'item': 'https://nemesisnet.co.za/projects/pockettts-mcp' }
+        ]
+      })
+    }
   ]
 })
 </script>

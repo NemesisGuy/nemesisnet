@@ -12,7 +12,7 @@
         <h2 class="project-group-title">AI & TTS</h2>
         <div class="projects-grid">
           <div class="card">
-            <img :src="'/images/projects/voxnemesis-supertonic/original/hero.png'" alt="VoxNemesis Supertonic" loading="lazy" width="900" height="483">
+            <img :src="'/images/projects/voxnemesis-supertonic/optimized/hero.webp'" alt="VoxNemesis Supertonic" loading="lazy" width="900" height="483">
             <h3>VoxNemesis Supertonic</h3>
             <p>A local-first, GPU-aware TTS browser extension that runs entirely in the browser using ONNX Runtime Web with WebGPU acceleration.</p>
             <div class="project-links">
@@ -166,11 +166,11 @@ useHead({
     { property: 'og:title', content: 'Projects | NemesisNet' },
     { property: 'og:description', content: 'Production-grade AI, SaaS, and infrastructure builds. VoxNemesis, Kokoro TTS, Since, ForkMyFolio, and more.' },
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://dev.nemesisnet.co.za/projects' },
-    { property: 'og:image', content: 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { property: 'og:url', content: 'https://nemesisnet.co.za/projects' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/projects' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/projects' }
   ]
 })
 </script>

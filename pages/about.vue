@@ -154,11 +154,11 @@ useHead({
     { property: 'og:title', content: 'About | NemesisNet' },
     { property: 'og:description', content: 'Systems architect specializing in AI infrastructure, TTS pipelines, and production full-stack platforms. Based in Cape Town, South Africa.' },
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://dev.nemesisnet.co.za/about' },
-    { property: 'og:image', content: 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { property: 'og:url', content: 'https://nemesisnet.co.za/about' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/about' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/about' }
   ],
   script: [
     {
@@ -171,7 +171,7 @@ useHead({
         'jobTitle': 'Systems Architect & Engineer',
         'worksFor': { '@type': 'Organization', 'name': 'NemesisNet', 'url': 'https://nemesisnet.co.za' },
         'url': 'https://nemesisnet.co.za/about',
-        'image': 'https://dev.nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png',
+        'image': 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png',
         'description': 'Self-taught systems architect specializing in AI infrastructure, TTS pipelines, and production full-stack platforms. BTech in IT from CPUT, Cape Town.',
         'knowsAbout': ['Python', 'Spring Boot', 'Vue 3', 'Docker', 'AI Infrastructure', 'TTS', 'MCP', 'PostgreSQL', 'Redis', 'Kubernetes', 'CI/CD', 'Linux Systems Administration'],
         'alumniOf': {
