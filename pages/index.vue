@@ -133,28 +133,28 @@
            </div>
          </div>
          <p>"The project was delivered quickly without compromising quality. Everything was set up and deployed with no issues. Highly recommend for any custom software or automation needs."</p>
-         <div class="testimonial-project">
-           <span class="testimonial-project-label">Related:</span>
-           <NuxtLink to="/projects/onthegorentals" class="testimonial-project-link">OnTheGoRentals</NuxtLink>
-         </div>
-       </div>
-       <div class="card">
-         <div class="testimonial-header">
-           <div class="testimonial-meta">
-             <strong class="testimonial-name">Bored Room Cafe</strong>
+<div class="testimonial-project">
+            <span class="testimonial-project-label">Related:</span>
+            <NuxtLink to="/projects/nk-assessments" class="testimonial-project-link">NK Assessments</NuxtLink>
+          </div>
+        </div>
+        <div class="card">
+          <div class="testimonial-header">
+            <div class="testimonial-meta">
+              <strong class="testimonial-name">Bored Room Cafe</strong>
              <span class="testimonial-role">Business Owner — Cape Town, South Africa</span>
            </div>
          </div>
          <p>"NemesisNet delivered a clean, well-structured system that worked as expected from day one. Communication was clear and the process was smooth throughout."</p>
-         <div class="testimonial-project">
-           <span class="testimonial-project-label">Related:</span>
-           <NuxtLink to="/projects/since" class="testimonial-project-link">Since — Temporal Registry</NuxtLink>
-         </div>
-       </div>
-       <div class="card">
-         <div class="testimonial-header">
-           <div class="testimonial-meta">
-             <strong class="testimonial-name">CodeCritical Client</strong>
+<div class="testimonial-project">
+            <span class="testimonial-project-label">Related:</span>
+            <NuxtLink to="/projects/bored-room-cafe" class="testimonial-project-link">Bored Room Cafe</NuxtLink>
+          </div>
+        </div>
+        <div class="card">
+          <div class="testimonial-header">
+            <div class="testimonial-meta">
+              <strong class="testimonial-name">Since</strong>
              <span class="testimonial-role">Engineering Lead — Remote, Europe</span>
            </div>
          </div>
@@ -249,7 +249,7 @@
           <small v-else style="color: var(--text-muted); text-align: center; margin-top: -8px;">Direct delivery — no third-party tracking.</small>
         </form>
       </div>
-      <p class="contact-subnote">Based in Cape Town, South Africa — available for remote engagements globally. Also available for WordPress, WooCommerce, and CMS projects — enquire directly.</p>
+      <p class="contact-subnote">Available for remote engagements globally. Also available for WordPress, WooCommerce, and CMS projects — enquire directly.</p>
     </div>
   </section>
 </template>
