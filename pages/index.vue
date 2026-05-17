@@ -417,7 +417,7 @@ section#contact { min-height: auto; display: flex; flex-direction: column; justi
 .testimonial-sep { color: var(--text-muted); }
 
 /* Related Services Section */
-.related-section { background: var(--bg-gradient); padding: 40px 0; min-height: auto; }
+.related-section { padding: 40px 0; min-height: auto; }
 .related-section h2 { text-align: center; margin-bottom: 12px; }
 .related-section .section-intro { text-align: center; color: var(--text-muted); margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto; }
 .related-services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
