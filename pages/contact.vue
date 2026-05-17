@@ -109,7 +109,7 @@
               <span>LinkedIn</span>
             </a>
             <NuxtLink to="/projects" class="social-link">
-              <span>View Portfolio</NuxtLink>
+              <span>View Portfolio</span>
             </NuxtLink>
           </div>
         </div>
