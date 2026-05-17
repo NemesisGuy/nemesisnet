@@ -1739,7 +1739,7 @@ html[data-theme="light"][data-nemesis="on"] .footer-line .footer-divider {
   }
 
   .page-header {
-    padding: 90px 16px 32px;
+    padding: 75px 16px 15px;
   }
   
   .page-header h1 {
@@ -2358,7 +2358,7 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
 }
 
 .page-header {
-  padding: 100px 20px 16px;
+  padding: 80px 20px 10px;
   text-align: center;
 }
 .page-header h1 {

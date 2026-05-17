@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="breadcrumbs" aria-label="Breadcrumb">
-      <NuxtLink to="/">Home</NuxtLink>
-      <span>/</span>
-      <span aria-current="page">Services</span>
-    </div>
     <PageHeader title="Services" subtitle="Engineering platforms, systems, and infrastructure for real production workloads." />
 
     <div class="detail-container">
       <div class="detail-main">
+        <div class="breadcrumbs" aria-label="Breadcrumb">
+          <NuxtLink to="/">Home</NuxtLink>
+          <span>/</span>
+          <span aria-current="page">Services</span>
+        </div>
         <h2>Core Services</h2>
         <div class="service-columns">
           <div class="card">

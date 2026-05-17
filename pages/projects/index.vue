@@ -1,15 +1,15 @@
 <template>
   <div>
-    <div class="breadcrumbs" aria-label="Breadcrumb">
-      <NuxtLink to="/">Home</NuxtLink>
-      <span aria-hidden="true"> / </span>
-      <span aria-current="page">Projects</span>
-    </div>
     <PageHeader title="Projects" subtitle="A portfolio of production-grade systems, platforms, and infrastructure builds." />
     <div class="projects-container">
       <main>
         <section id="projects">
-        <h2 class="project-group-title">AI & TTS</h2>
+          <div class="breadcrumbs" aria-label="Breadcrumb">
+            <NuxtLink to="/">Home</NuxtLink>
+            <span aria-hidden="true"> / </span>
+            <span aria-current="page">Projects</span>
+          </div>
+          <h2 class="project-group-title">AI & TTS</h2>
         <div class="projects-grid">
           <div class="card">
             <img :src="'/images/projects/voxnemesis-supertonic/optimized/hero.webp'" alt="VoxNemesis Supertonic" loading="lazy" width="900" height="483">
