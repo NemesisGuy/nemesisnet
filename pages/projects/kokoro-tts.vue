@@ -4,7 +4,7 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/kokoro-tts-service/optimized/hero.webp'" class="detail-image" alt="Kokoro TTS Service" width="900" height="600" fetchpriority="high" loading="eager">
+        <img :src="'/images/projects/kokoro-tts-service/optimized/hero.webp'" class="detail-image" alt="Kokoro TTS Service" fetchpriority="high" loading="eager">
         
         <h2>The Challenge</h2>
         <p>Most high-quality text-to-speech services are locked behind expensive monthly subscriptions and restrictive APIs, with significant latency and zero privacy. For production workloads, a local, low-latency, and high-fidelity alternative was needed.</p>
@@ -65,7 +65,7 @@ useHead({
 .detail-main { text-align: left; line-height: 1.8; }
 .detail-main h2 { font-size: 2rem; margin: 40px 0 20px; text-align: left; }
 .detail-main p { color: var(--text-muted); margin-bottom: 20px; }
-.detail-image { width: 100%; border-radius: 20px; border: 1px solid var(--glass-border); margin: 30px 0; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+.detail-image { width: 100%; height: auto; border-radius: 20px; border: 1px solid var(--glass-border); margin: 30px 0; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; backdrop-filter: blur(10px); }
 .sidebar-card h4 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }

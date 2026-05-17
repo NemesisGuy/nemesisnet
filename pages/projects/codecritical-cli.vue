@@ -4,7 +4,7 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/codecritical/optimized/hero.webp'" class="detail-image" alt="CodeCritical CLI" width="900" height="600" fetchpriority="high" loading="eager">
+        <img :src="'/images/projects/codecritical/optimized/hero.webp'" class="detail-image" alt="CodeCritical CLI" fetchpriority="high" loading="eager">
         
         <h2>The Challenge</h2>
         <p>In large Java codebases, technical debt accumulates rapidly. Manual code reviews are time-consuming and often miss subtle structural issues that lead to long-term maintainability problems.</p>
@@ -73,7 +73,7 @@ useHead({
 .detail-main p { color: var(--text-muted); margin-bottom: 20px; }
 .detail-main ul { margin: 15px 0 25px 20px; color: var(--text-muted); }
 .detail-main li { margin-bottom: 8px; }
-.detail-image { width: 100%; border-radius: 20px; border: 1px solid var(--glass-border); margin: 30px 0; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+.detail-image { width: 100%; height: auto; border-radius: 20px; border: 1px solid var(--glass-border); margin: 30px 0; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; backdrop-filter: blur(10px); }
 .sidebar-card h4 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }

@@ -4,7 +4,7 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/wordpress-mcp/optimized/hero.webp'" class="detail-image" alt="WordPress MCP Server" width="900" height="600" fetchpriority="high" loading="eager">
+        <img :src="'/images/projects/wordpress-mcp/optimized/hero.webp'" class="detail-image" alt="WordPress MCP Server" fetchpriority="high" loading="eager">
         
         <h2>The Challenge</h2>
         <p>Connecting AI agents to WordPress usually requires exposing sensitive API keys or opening precarious webhooks that increase the attack surface of a website. There was a need for a bridge that allows agents to manage content without compromising the security of the WordPress installation.</p>
@@ -111,6 +111,7 @@ useHead({
 
 .detail-image {
   width: 100%;
+  height: auto;
   border-radius: 20px;
   border: 1px solid var(--glass-border);
   margin: 30px 0;
