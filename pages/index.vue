@@ -114,17 +114,6 @@
           <NuxtLink to="/projects/pockettts-mcp" class="btn-glass">Detail</NuxtLink>
         </div>
       </div>
-      <div class="card">
-        <span class="pill pill-client">Showcase</span>
-        <img :src="'/images/projects/onthegorentals/optimized/hero.webp'" alt="OnTheGoRentals" loading="lazy">
-        <h3>OnTheGoRentals</h3>
-        <p>Full-stack reference build with bookings, admin dashboard, and rental management.</p>
-        <div class="card-links">
-          <NuxtLink to="/projects/onthegorentals" class="btn-glass">Detail</NuxtLink>
-          <a href="https://onthegorentals.co.za" target="_blank" class="btn-glass">Live Demo</a>
-        </div>
-      </div>
-    </div>
     <div style="text-align:center; margin-top:40px;">
       <NuxtLink to="/projects" class="btn-glass">View All Projects</NuxtLink>
     </div>
