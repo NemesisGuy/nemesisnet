@@ -104,12 +104,12 @@
           </div>
 
           <div class="card">
-            <img :src="'/images/projects/codecritical/optimized/hero.webp'" alt="CodeCritical" loading="lazy" width="900" height="615">
-            <h3>CodeCritical</h3>
+            <img :src="'/images/projects/codecritical/optimized/hero.webp'" alt="CodeCritical CLI" loading="lazy" width="900" height="615">
+            <h3>CodeCritical CLI</h3>
             <p>Java code analysis tool — measures LOC, functions, classes, duplication, and maintainability index with markdown reports.</p>
             <div class="project-links">
               <a class="btn-glass" href="https://github.com/NemesisGuy/CodeCritical" target="_blank">Source</a>
-              <NuxtLink class="btn-glass" to="/projects/codecritical">Detail</NuxtLink>
+              <NuxtLink class="btn-glass" to="/projects/codecritical-cli">Detail</NuxtLink>
             </div>
           </div>
         </div>

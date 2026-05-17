@@ -20,7 +20,7 @@
           <a href="https://otgr.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
         </div>
         <div class="next-project">
-          <NuxtLink to="/projects/codecritical" class="btn-glass">Next Project → CodeCritical</NuxtLink>
+          <NuxtLink to="/projects/codecritical-cli" class="btn-glass">Next Project → CodeCritical CLI</NuxtLink>
         </div>
       </div>
 

@@ -1,10 +1,10 @@
 <template>
   <div class="detail-page">
-    <PageHeader title="CodeCritical" subtitle="Comprehensive Java code analysis tool for measuring quality and maintainability." />
+    <PageHeader title="CodeCritical CLI" subtitle="Comprehensive Java code analysis CLI tool for measuring quality and maintainability." />
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/codecritical/optimized/hero.webp'" class="detail-image" alt="CodeCritical" width="900" height="600" fetchpriority="high" loading="eager">
+        <img :src="'/images/projects/codecritical/optimized/hero.webp'" class="detail-image" alt="CodeCritical CLI" width="900" height="600" fetchpriority="high" loading="eager">
         
         <h2>The Challenge</h2>
         <p>In large Java codebases, technical debt accumulates rapidly. Manual code reviews are time-consuming and often miss subtle structural issues that lead to long-term maintainability problems.</p>
@@ -55,12 +55,12 @@
 
 <script setup>
 useHead({
-  title: 'CodeCritical | NemesisNet',
+  title: 'CodeCritical CLI | NemesisNet',
   meta: [
-    { name: 'description', content: 'Comprehensive Java code analysis tool for measuring quality, maintainability, and code duplication.' }
+    { name: 'description', content: 'Comprehensive Java code analysis CLI tool for measuring quality, maintainability, and code duplication.' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/projects/codecritical' }
+    { rel: 'canonical', href: 'https://dev.nemesisnet.co.za/projects/codecritical-cli' }
   ]
 })
 </script>

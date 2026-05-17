@@ -79,9 +79,9 @@
         <h2>Related Projects</h2>
         <div class="related-projects">
           <div class="related-card">
-            <h4>CodeCritical — Java Analysis Tool</h4>
+            <h4>CodeCritical CLI — Java Analysis Tool</h4>
             <p>Static analysis tool for enterprise Java codebases.</p>
-            <NuxtLink to="/projects/codecritical" class="btn-glass">View Project</NuxtLink>
+            <NuxtLink to="/projects/codecritical-cli" class="btn-glass">View Project</NuxtLink>
           </div>
           <div class="related-card">
             <h4>CodeCritical SaaS — Enterprise Scanner</h4>

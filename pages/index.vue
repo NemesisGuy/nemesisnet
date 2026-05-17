@@ -161,7 +161,7 @@
          <p>"The attention to security and automation was exceptional. Our CI/CD pipeline went from fragile to bulletproof in under two weeks."</p>
          <div class="testimonial-project">
            <span class="testimonial-project-label">Related:</span>
-           <NuxtLink to="/projects/codecritical" class="testimonial-project-link">CodeCritical</NuxtLink>
+           <NuxtLink to="/projects/codecritical-cli" class="testimonial-project-link">CodeCritical CLI</NuxtLink>
            <span class="testimonial-sep">·</span>
            <NuxtLink to="/projects/codecritical-saas" class="testimonial-project-link">CodeCritical SaaS</NuxtLink>
          </div>

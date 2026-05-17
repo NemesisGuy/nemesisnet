@@ -19,10 +19,7 @@
         <h2>The Engineer Behind NemesisNet</h2>
         <div class="founder-grid">
           <div class="founder-photo">
-            <div class="photo-placeholder">
-              <span class="photo-icon">📷</span>
-              <span class="photo-label">Peter Buckingham</span>
-            </div>
+            <img src="/images/about/founder.webp" alt="Peter Buckingham" class="founder-img" width="400" height="400" fetchpriority="high" loading="eager">
             <p class="photo-caption">Self-taught systems architect &amp; founder of NemesisNet, based in Cape Town.</p>
           </div>
           <div class="founder-bio">
@@ -233,6 +230,7 @@ useHead({
 
 .founder-grid { display: grid; grid-template-columns: 280px 1fr; gap: 32px; margin: 24px 0; align-items: start; }
 .founder-photo { position: sticky; top: 100px; }
+.founder-img { width: 100%; border-radius: 20px; border: 1px solid var(--glass-border); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
 .photo-placeholder { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 40px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .photo-icon { font-size: 3rem; }
 .photo-label { font-size: 0.9rem; color: var(--text-muted); font-weight: 600; }
