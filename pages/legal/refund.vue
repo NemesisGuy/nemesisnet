@@ -3,11 +3,11 @@
     <PageHeader title="Refund And Cancellation Policy" subtitle="Updated: 14 April 2026" />
     <div class="legal-container">
       <main>
-        <nav class="breadcrumbs" aria-label="Breadcrumb" style="padding-left: 0; margin-bottom: 24px;">
+        <div class="breadcrumbs" aria-label="Breadcrumb">
           <NuxtLink to="/">Home</NuxtLink>
           <span>/</span>
           <span aria-current="page">Refund Policy</span>
-        </nav>
+        </div>
 
         <div class="policy-doc">
           <article class="policy-block">
@@ -129,6 +129,14 @@ useHead({
   margin-top: 20px;
   color: var(--text-muted);
   font-size: 0.92rem;
+}
+
+.breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; padding-left: 20px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.breadcrumbs a { color: var(--accent-color); text-decoration: none; }
+.breadcrumbs a:hover { text-decoration: underline; }
+.breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
+@media (max-width: 768px) {
+  .breadcrumbs { display: none !important; }
 }
 
 .back-link {

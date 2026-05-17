@@ -1,10 +1,10 @@
 <template>
   <div>
-    <nav class="breadcrumbs" aria-label="Breadcrumb" style="padding-left: 24px;">
+    <div class="breadcrumbs" aria-label="Breadcrumb">
       <NuxtLink to="/">Home</NuxtLink>
       <span aria-hidden="true"> / </span>
       <span aria-current="page">Projects</span>
-    </nav>
+    </div>
     <PageHeader title="Projects" subtitle="A portfolio of production-grade systems, platforms, and infrastructure builds." />
     <div class="projects-container">
       <main>
@@ -228,6 +228,14 @@ useHead({
   .project-links :deep(.btn-glass) {
     width: 100%;
   }
+}
+
+.breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; padding-left: 20px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.breadcrumbs a { color: var(--accent-color); text-decoration: none; }
+.breadcrumbs a:hover { text-decoration: underline; }
+.breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
+@media (max-width: 768px) {
+  .breadcrumbs { display: none !important; }
 }
 
 .back-link {

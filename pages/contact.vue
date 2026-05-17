@@ -5,11 +5,11 @@
       <p class="page-intro">Have a project in mind? Let's talk about how we can help build it.</p>
     </div>
 
-    <nav class="breadcrumbs" aria-label="Breadcrumb" style="padding-left: 24px; margin-bottom: 24px;">
+    <div class="breadcrumbs" aria-label="Breadcrumb">
       <NuxtLink to="/">Home</NuxtLink>
       <span>/</span>
       <span aria-current="page">Contact</span>
-    </nav>
+    </div>
 
     <div class="contact-container">
       <div class="contact-form-section">
@@ -404,5 +404,13 @@ useHead({
 .social-link:hover {
   border-color: var(--accent-color);
   transform: translateY(-2px);
+}
+
+.breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; padding-left: 20px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.breadcrumbs a { color: var(--accent-color); text-decoration: none; }
+.breadcrumbs a:hover { text-decoration: underline; }
+.breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
+@media (max-width: 768px) {
+  .breadcrumbs { display: none !important; }
 }
 </style>

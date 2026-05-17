@@ -1,10 +1,10 @@
 <template>
   <div>
-    <nav class="breadcrumbs" aria-label="Breadcrumb" style="margin-bottom: 24px; padding-left: 24px;">
+    <div class="breadcrumbs" aria-label="Breadcrumb">
       <NuxtLink to="/">Home</NuxtLink>
       <span>/</span>
       <span aria-current="page">Services</span>
-    </nav>
+    </div>
     <PageHeader title="Services" subtitle="Engineering platforms, systems, and infrastructure for real production workloads." />
 
     <div class="detail-container">
@@ -393,7 +393,12 @@ useHead({
 .related-service-card strong { color: var(--accent-color); font-size: 0.95rem; }
 .related-service-card span { color: var(--text-muted); font-size: 0.85rem; }
 @media (max-width: 1100px) { .service-columns, .process-steps { grid-template-columns: repeat(2, 1fr); } .related-services-grid { grid-template-columns: repeat(2, 1fr); } }
+.breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; padding-left: 20px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.breadcrumbs a { color: var(--accent-color); text-decoration: none; }
+.breadcrumbs a:hover { text-decoration: underline; }
+.breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
 @media (max-width: 768px) {
+  .breadcrumbs { display: none !important; }
   .service-columns, .process-steps { grid-template-columns: 1fr; gap: 16px; }
   .detail-container { padding: 24px 16px 32px; }
   .detail-main h2 { font-size: 1.8rem; margin: 36px 0 20px; }
