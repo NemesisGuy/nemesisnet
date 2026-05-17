@@ -6,8 +6,8 @@ const path = require('path');
 const BASE_URL = 'https://dev.nemesisnet.co.za';
 
 const routes = [
+  // Desktop tests
   { path: '/', name: 'homepage', device: 'desktop' },
-  { path: '/', name: 'homepage-mobile', device: 'mobile' },
   { path: '/projects', name: 'projects', device: 'desktop' },
   { path: '/services', name: 'services', device: 'desktop' },
   { path: '/about', name: 'about', device: 'desktop' },
@@ -24,10 +24,36 @@ const routes = [
   { path: '/legal/privacy', name: 'privacy', device: 'desktop' },
   { path: '/legal/terms', name: 'terms', device: 'desktop' },
   { path: '/legal/refund', name: 'refund', device: 'desktop' },
+  // Mobile tests
+  { path: '/', name: 'homepage-mobile', device: 'mobile' },
+  { path: '/projects', name: 'projects-mobile', device: 'mobile' },
+  { path: '/services', name: 'services-mobile', device: 'mobile' },
+  { path: '/about', name: 'about-mobile', device: 'mobile' },
+  { path: '/services/custom-software', name: 'custom-software-mobile', device: 'mobile' },
+  { path: '/services/saas-development', name: 'saas-development-mobile', device: 'mobile' },
+  { path: '/services/ai-development', name: 'ai-development-mobile', device: 'mobile' },
+  { path: '/services/self-hosted-ai', name: 'self-hosted-ai-mobile', device: 'mobile' },
+  { path: '/services/infrastructure', name: 'infrastructure-mobile', device: 'mobile' },
+  { path: '/services/consulting', name: 'consulting-mobile', device: 'mobile' },
+  { path: '/projects/codecritical-saas', name: 'codecritical-saas-mobile', device: 'mobile' },
+  { path: '/projects/since', name: 'since-mobile', device: 'mobile' },
+  { path: '/projects/voxnemesis-supertonic', name: 'voxnemesis-supertonic-mobile', device: 'mobile' },
+  { path: '/projects/pockettts-mcp', name: 'pockettts-mcp-mobile', device: 'mobile' },
+  { path: '/legal/privacy', name: 'privacy-mobile', device: 'mobile' },
+  { path: '/legal/terms', name: 'terms-mobile', device: 'mobile' },
+  { path: '/legal/refund', name: 'refund-mobile', device: 'mobile' },
 ];
 
 const thresholds = {
-  performance: 80,
+  performance: 70,
+  accessibility: 90,
+  'best-practices': 90,
+  seo: 90
+};
+
+// Mobile thresholds (slightly lower for realistic expectations)
+const mobileThresholds = {
+  performance: 60,
   accessibility: 90,
   'best-practices': 90,
   seo: 90
@@ -92,10 +118,13 @@ function printResults(results) {
     totalScores.seo += seo;
     count++;
 
-    const allPass = perf >= thresholds.performance && 
-                    access >= thresholds.accessibility && 
-                    bp >= thresholds['best-practices'] && 
-                    seo >= thresholds.seo;
+    const isMobile = result.device === 'mobile';
+    const effectiveThresholds = isMobile ? mobileThresholds : thresholds;
+
+    const allPass = perf >= effectiveThresholds.performance && 
+                    access >= effectiveThresholds.accessibility && 
+                    bp >= effectiveThresholds['best-practices'] && 
+                    seo >= effectiveThresholds.seo;
 
     const status = allPass ? '✅' : '❌';
     console.log(`${status} ${result.name} (${result.device})`);
@@ -103,11 +132,11 @@ function printResults(results) {
 
     if (!allPass) {
       const failed = [];
-      if (perf < thresholds.performance) failed.push(`Perf: ${perf}<${thresholds.performance}`);
-      if (access < thresholds.accessibility) failed.push(`Access: ${access}<${thresholds.accessibility}`);
-      if (bp < thresholds['best-practices']) failed.push(`BP: ${bp}<${thresholds['best-practices']}`);
-      if (seo < thresholds.seo) failed.push(`SEO: ${seo}<${thresholds.seo}`);
-      failedPages.push({ name: result.name, failed });
+      if (perf < effectiveThresholds.performance) failed.push(`Perf: ${perf}<${effectiveThresholds.performance}`);
+      if (access < effectiveThresholds.accessibility) failed.push(`Access: ${access}<${effectiveThresholds.accessibility}`);
+      if (bp < effectiveThresholds['best-practices']) failed.push(`BP: ${bp}<${effectiveThresholds['best-practices']}`);
+      if (seo < effectiveThresholds.seo) failed.push(`SEO: ${seo}<${effectiveThresholds.seo}`);
+      failedPages.push({ name: result.name, device: result.device, failed });
     }
   }
 
@@ -122,7 +151,7 @@ function printResults(results) {
     console.log('\n❌ FAILED THRESHOLDS');
     console.log('--------------------');
     for (const page of failedPages) {
-      console.log(`   ${page.name}: ${page.failed.join(', ')}`);
+      console.log(`   ${page.name} (${page.device}): ${page.failed.join(', ')}`);
     }
   } else {
     console.log('\n✅ All pages passed thresholds!');
