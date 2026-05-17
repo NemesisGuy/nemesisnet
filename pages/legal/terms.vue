@@ -3,6 +3,12 @@
     <PageHeader title="Terms Of Service" subtitle="Updated: 14 April 2026" />
     <div class="legal-container">
       <main>
+        <nav class="breadcrumbs" aria-label="Breadcrumb" style="padding-left: 0; margin-bottom: 24px;">
+          <NuxtLink to="/">Home</NuxtLink>
+          <span>/</span>
+          <span aria-current="page">Terms of Service</span>
+        </nav>
+
         <div class="policy-doc">
           <article class="policy-block">
             <h3>1. Scope Of Services</h3>

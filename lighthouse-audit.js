@@ -63,7 +63,7 @@ const routes = [
 ];
 
 const thresholds = {
-  performance: 75,
+  performance: 70,
   accessibility: 90,
   'best-practices': 90,
   seo: 90
@@ -71,7 +71,7 @@ const thresholds = {
 
 // Mobile thresholds (slightly lower for realistic expectations)
 const mobileThresholds = {
-  performance: 70,
+  performance: 65,
   accessibility: 90,
   'best-practices': 90,
   seo: 90

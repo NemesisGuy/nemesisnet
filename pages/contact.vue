@@ -5,6 +5,12 @@
       <p class="page-intro">Have a project in mind? Let's talk about how we can help build it.</p>
     </div>
 
+    <nav class="breadcrumbs" aria-label="Breadcrumb" style="padding-left: 24px; margin-bottom: 24px;">
+      <NuxtLink to="/">Home</NuxtLink>
+      <span>/</span>
+      <span aria-current="page">Contact</span>
+    </nav>
+
     <div class="contact-container">
       <div class="contact-form-section">
         <h2>Send a Message</h2>
