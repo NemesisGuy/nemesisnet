@@ -1,77 +1,28 @@
-# NemesisNet Portfolio
+# NemesisNet
 
 AI Infrastructure & Platform Engineering - [dev.nemesisnet.co.za](https://dev.nemesisnet.co.za)
 
-## About
+## Badges
+
+[![Build Status](https://ci.nemesisnet.co.za/api/badges/Nemesis/nemesisnet/status.svg)](https://ci.nemesisnet.co.za/Nemesis/nemesisnet)
+[![Lighthouse Performance](https://img.shields.io/badge/Lighthouse-Performance-91-green)](https://dev.nemesisnet.co.za)
+[![Lighthouse Accessibility](https://img.shields.io/badge/Lighthouse-Accessibility-98-green)](https://dev.nemesisnet.co.za)
+[![Lighthouse SEO](https://img.shields.io/badge/Lighthouse-SEO-99-green)](https://dev.nemesisnet.co.za)
+
+## Overview
 
 NemesisNet builds AI-powered platforms, backend systems, and automation infrastructure for real production workloads. This is the source code for our portfolio website, built with Nuxt 4 using Server-Side Rendering (SSR) and static prerendering.
 
 ## Tech Stack
 
 - **Framework:** Nuxt 4.4.4
-- **Rendering:** SSR + Static Prerendering (22 pages)
+- **Rendering:** SSR + Static Prerendering (25 pages)
 - **Styling:** Custom CSS with glassmorphic UI
 - **Deployment:** Docker + nginx:1.27-alpine
+- **CI/CD:** Woodpecker CI
+- **Contact:** Resend + Cloudflare Turnstile
 
-## Site Map
-
-```mermaid
-graph TD
-    Home[Home] --> Projects
-    Home --> Services
-    Home --> About
-    
-    Projects --> KokoroTTS[Kokoro TTS]
-    Projects --> WordPressMCP[WordPress MCP]
-    Projects --> NKAssessments[NK Assessments]
-    Projects --> CodeCritical[CodeCritical CLI]
-    Projects --> CodeCriticalSaaS[CodeCritical SaaS]
-    Projects --> VibeType[VibeType]
-    Projects --> ForkMyFolio[ForkMyFolio]
-    Projects --> OnTheGoRentals[OnTheGoRentals]
-    Projects --> BoredRoomCafe[Bored Room Cafe]
-    Projects --> VoxNemesis[VoxNemesis Supertonic]
-    Projects --> Since[Since]
-    
-    Services --> CustomSoftware[Custom Software]
-    Services --> SaaSDev[SaaS Development]
-    Services --> Infrastructure[Infrastructure & DevOps]
-    Services --> Consulting[Consulting & Architecture]
-    
-    Home --> Legal
-    Legal --> Privacy[Privacy Policy]
-    Legal --> Terms[Terms of Service]
-    Legal --> Refund[Refund Policy]
-```
-
-## Pages (22 Total)
-
-| Route | Description |
-|-------|-------------|
-| `/` | Homepage - hero, services, projects, testimonials |
-| `/projects` | All projects grid |
-| `/projects/kokoro-tts` | Kokoro TTS Service |
-| `/projects/wordpress-mcp` | WordPress MCP Server |
-| `/projects/nk-assessments` | NK Assessments |
-| `/projects/codecritical` | CodeCritical CLI |
-| `/projects/codecritical-saas` | CodeCritical SaaS |
-| `/projects/vibetype` | VibeType |
-| `/projects/forkmyfolio` | ForkMyFolio |
-| `/projects/onthegorentals` | OnTheGoRentals |
-| `/projects/bored-room-cafe` | Bored Room Cafe |
-| `/projects/voxnemesis-supertonic` | VoxNemesis Supertonic |
-| `/projects/since` | Since |
-| `/services` | Services overview |
-| `/services/custom-software` | Custom Software Development |
-| `/services/saas-dev` | SaaS Development |
-| `/services/infrastructure` | Infrastructure & DevOps |
-| `/services/consulting` | Consulting & Architecture |
-| `/about` | About page |
-| `/legal/privacy` | Privacy Policy |
-| `/legal/terms` | Terms of Service |
-| `/legal/refund` | Refund Policy |
-
-## Development
+## Quick Start
 
 ```bash
 # Install dependencies
@@ -84,7 +35,9 @@ npm run dev
 npm run build
 ```
 
-## Docker Deployment
+## Deployment
+
+### Docker (Local)
 
 ```bash
 # Build Docker image
@@ -93,6 +46,63 @@ wsl docker build --no-cache -t nemesisguy/nemesisnet:dev .
 # Push to Docker Hub
 wsl docker push nemesisguy/nemesisnet:dev
 ```
+
+### CI/CD Pipeline
+
+The site automatically deploys via Woodpecker CI when pushing to the `dev` branch:
+
+1. **Build** - npm ci && npm run build
+2. **Docker Build** - Build and tag image
+3. **Docker Push** - Push to Docker Hub
+4. **Deploy** - Portainer pulls and redeploys
+5. **Lighthouse** - Audit deployed site
+6. **Cleanup** - Remove old local images
+
+See [CI Pipeline Documentation](./docs/CI_PIPELINE.md) for details.
+
+## Site Architecture
+
+```mermaid
+graph TD
+    Home[Homepage] --> Services
+    Home --> Projects
+    Home --> About
+    Home --> Contact
+    
+    Services --> CustomSoftware[Custom Software]
+    Services --> SaaS[SaaS Development]
+    Services --> AI[AI Development]
+    Services --> SelfHosted[Self-Hosted AI]
+    Services --> Infra[Infrastructure]
+    Services --> Consulting[Consulting]
+    
+    Projects --> Featured[Featured Projects]
+    Projects --> All[All Projects]
+```
+
+For detailed architecture diagrams and user flows, see [Site Architecture Documentation](./docs/SITE_ARCHITECTURE.md).
+
+## Documentation
+
+Detailed documentation is available in the `/docs` directory:
+
+| Document | Description |
+|----------|-------------|
+| [SITE_ARCHITECTURE.md](./docs/SITE_ARCHITECTURE.md) | Navigation flows, diagrams, ecosystem |
+| [USER_FLOW.md](./docs/USER_FLOW.md) | User journeys and conversion paths |
+| [LIGHTHOUSE_TESTING.md](./docs/LIGHTHOUSE_TESTING.md) | Testing config, thresholds, debugging |
+| [CI_PIPELINE.md](./docs/CI_PIPELINE.md) | Pipeline steps, troubleshooting |
+
+## Lighthouse Scores
+
+| Category | Score |
+|----------|-------|
+| Performance | 91/100 |
+| Accessibility | 98/100 |
+| Best Practices | 81/100 |
+| SEO | 99/100 |
+
+See [Lighthouse Testing](./docs/LIGHTHOUSE_TESTING.md) for multi-page testing details.
 
 ## Image Optimization
 
@@ -104,14 +114,26 @@ wsl docker push nemesisguy/nemesisnet:dev
 ./optimize-images.sh codecritical-saas
 ```
 
-## Lighthouse Scores
+## Pages (25 Total)
 
-| Category | Score |
-|----------|-------|
-| Performance | 91/100 |
-| Accessibility | 98/100 |
-| Best Practices | 81/100 |
-| SEO | 99/100 |
+- Homepage (`/`)
+- Projects (`/projects`) + 12 project pages
+- Services (`/services`) + 6 service pages
+- About (`/about`)
+- Legal (`/legal/privacy`, `/legal/terms`, `/legal/refund`)
+
+## External Sites
+
+| Site | URL |
+|------|-----|
+| Production | nemesisnet.co.za |
+| Dev | dev.nemesisnet.co.za |
+| Blog | blog.nemesisnet.co.za |
+| Brand Guide | brand.nemesisnet.co.za |
+| Scope Form | scope.nemesisnet.co.za |
+| CodeCritical Demo | codecritical.nemesisnet.co.za |
+| Since Demo | since.nemesisnet.co.za |
+| ForkMyFolio | forkmyfolio.nemesisnet.co.za |
 
 ## License
 
@@ -121,3 +143,4 @@ Proprietary - All rights reserved
 
 - Email: admin@nemesisnet.co.za
 - GitHub: https://github.com/NemesisGuy
+- LinkedIn: https://linkedin.com/in/peter-buckingham
