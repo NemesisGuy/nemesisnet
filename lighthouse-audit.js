@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-const lighthouse = require('lighthouse');
+const lighthouse = require('lighthouse').default || require('lighthouse');
 const fs = require('fs');
 const path = require('path');
 
