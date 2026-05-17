@@ -75,6 +75,7 @@
   <!-- Featured Projects Section -->
   <section id="projects">
     <h2>Featured Projects</h2>
+    <!-- v3 -->
     <div class="projects-grid">
       <div class="card">
         <span class="pill pill-client">Enterprise SaaS</span>
