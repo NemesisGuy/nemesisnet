@@ -7,7 +7,7 @@
         <NuxtLink to="/projects">Projects</NuxtLink>
         <NuxtLink to="/about">About</NuxtLink>
         <a href="/#testimonials">Testimonials</a>
-        <a href="/#contact">Contact</a>
+        <NuxtLink to="/contact">Contact</NuxtLink>
       </div>
       <div class="footer-group">
         <h4>Legal</h4>

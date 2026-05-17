@@ -13,7 +13,7 @@
         <NuxtLink to="/projects">Projects</NuxtLink>
         <NuxtLink to="/about">About</NuxtLink>
         <a href="/#testimonials">Testimonials</a>
-        <a href="/#contact">Contact</a>
+        <NuxtLink to="/contact">Contact</NuxtLink>
         <a href="https://blog.nemesisnet.co.za/" target="_blank" rel="noopener noreferrer" title="Visit the NemesisNet Blog" aria-label="NemesisNet Blog">Blog</a>
         <button class="theme-toggle" id="aurora-toggle" @click="toggleAuroraMode" aria-label="Toggle Aurora Mode" title="Aurora Mode">
           <span class="glyph-icon" aria-hidden="true">✦</span>

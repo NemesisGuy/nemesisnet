@@ -9,6 +9,7 @@ const routes = [
   // Desktop tests
   { path: '/', name: 'homepage', device: 'desktop' },
   { path: '/projects', name: 'projects', device: 'desktop' },
+  { path: '/contact', name: 'contact', device: 'desktop' },
   { path: '/services', name: 'services', device: 'desktop' },
   { path: '/about', name: 'about', device: 'desktop' },
   { path: '/services/custom-software', name: 'custom-software', device: 'desktop' },
@@ -17,6 +18,14 @@ const routes = [
   { path: '/services/self-hosted-ai', name: 'self-hosted-ai', device: 'desktop' },
   { path: '/services/infrastructure', name: 'infrastructure', device: 'desktop' },
   { path: '/services/consulting', name: 'consulting', device: 'desktop' },
+  { path: '/projects/kokoro-tts', name: 'kokoro-tts', device: 'desktop' },
+  { path: '/projects/wordpress-mcp', name: 'wordpress-mcp', device: 'desktop' },
+  { path: '/projects/nk-assessments', name: 'nk-assessments', device: 'desktop' },
+  { path: '/projects/codecritical', name: 'codecritical', device: 'desktop' },
+  { path: '/projects/vibetype', name: 'vibetype', device: 'desktop' },
+  { path: '/projects/forkmyfolio', name: 'forkmyfolio', device: 'desktop' },
+  { path: '/projects/onthegorentals', name: 'onthegorentals', device: 'desktop' },
+  { path: '/projects/bored-room-cafe', name: 'bored-room-cafe', device: 'desktop' },
   { path: '/projects/codecritical-saas', name: 'codecritical-saas', device: 'desktop' },
   { path: '/projects/since', name: 'since', device: 'desktop' },
   { path: '/projects/voxnemesis-supertonic', name: 'voxnemesis-supertonic', device: 'desktop' },
@@ -27,6 +36,7 @@ const routes = [
   // Mobile tests
   { path: '/', name: 'homepage-mobile', device: 'mobile' },
   { path: '/projects', name: 'projects-mobile', device: 'mobile' },
+  { path: '/contact', name: 'contact-mobile', device: 'mobile' },
   { path: '/services', name: 'services-mobile', device: 'mobile' },
   { path: '/about', name: 'about-mobile', device: 'mobile' },
   { path: '/services/custom-software', name: 'custom-software-mobile', device: 'mobile' },
@@ -35,6 +45,14 @@ const routes = [
   { path: '/services/self-hosted-ai', name: 'self-hosted-ai-mobile', device: 'mobile' },
   { path: '/services/infrastructure', name: 'infrastructure-mobile', device: 'mobile' },
   { path: '/services/consulting', name: 'consulting-mobile', device: 'mobile' },
+  { path: '/projects/kokoro-tts', name: 'kokoro-tts-mobile', device: 'mobile' },
+  { path: '/projects/wordpress-mcp', name: 'wordpress-mcp-mobile', device: 'mobile' },
+  { path: '/projects/nk-assessments', name: 'nk-assessments-mobile', device: 'mobile' },
+  { path: '/projects/codecritical', name: 'codecritical-mobile', device: 'mobile' },
+  { path: '/projects/vibetype', name: 'vibetype-mobile', device: 'mobile' },
+  { path: '/projects/forkmyfolio', name: 'forkmyfolio-mobile', device: 'mobile' },
+  { path: '/projects/onthegorentals', name: 'onthegorentals-mobile', device: 'mobile' },
+  { path: '/projects/bored-room-cafe', name: 'bored-room-cafe-mobile', device: 'mobile' },
   { path: '/projects/codecritical-saas', name: 'codecritical-saas-mobile', device: 'mobile' },
   { path: '/projects/since', name: 'since-mobile', device: 'mobile' },
   { path: '/projects/voxnemesis-supertonic', name: 'voxnemesis-supertonic-mobile', device: 'mobile' },
@@ -45,7 +63,7 @@ const routes = [
 ];
 
 const thresholds = {
-  performance: 70,
+  performance: 75,
   accessibility: 90,
   'best-practices': 90,
   seo: 90
@@ -53,7 +71,7 @@ const thresholds = {
 
 // Mobile thresholds (slightly lower for realistic expectations)
 const mobileThresholds = {
-  performance: 60,
+  performance: 70,
   accessibility: 90,
   'best-practices': 90,
   seo: 90
