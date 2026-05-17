@@ -43,14 +43,17 @@ steps:
       branch: dev
 
   deploy:
-    image: docker:27
+    image: curlimages/curl
     commands:
-      - docker pull nemesisguy/nemesisnet:dev
-      - docker stop nemesisnet-dev || true
-      - docker rm nemesisnet-dev || true
-      - docker run -d --name nemesisnet-dev --restart always -p 9114:3000 nemesisguy/nemesisnet:dev
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - |
+        curl -s -w "%{http_code}" \
+          -X PUT "https://portainer.nemesisnet.co.za/api/stacks/82?endpointId=3" \
+          -H "X-API-Key: $${PORTAINER_API_KEY}" \
+          -H "Content-Type: application/json" \
+          -d '{"prune":false,"pullImage":true,"stackFileContent":"version: \"3.9\"\nservices:\n  nemesisnet-dev:\n    image: nemesisguy/nemesisnet:dev\n    container_name: nemesisnet-dev\n    restart: unless-stopped\n    ports:\n      - \"9114:3000\""}'
+    environment:
+      PORTAINER_API_KEY:
+        from_secret: portainer_api_key
     when:
       event: [push, tag, manual]
       branch: dev
