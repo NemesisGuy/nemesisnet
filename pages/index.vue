@@ -114,6 +114,7 @@
           <NuxtLink to="/projects/pockettts-mcp" class="btn-glass">Detail</NuxtLink>
         </div>
       </div>
+    </div>
     <div style="text-align:center; margin-top:40px;">
       <NuxtLink to="/projects" class="btn-glass">View All Projects</NuxtLink>
     </div>
