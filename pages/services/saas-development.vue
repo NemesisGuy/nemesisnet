@@ -74,7 +74,7 @@
         </div>
 
         <h2>Related Projects</h2>
-        <div class="relevant-projects">
+        <div class="related-projects">
           <div class="related-card">
             <h4>Since — Temporal Claim Registry</h4>
             <p>Full-stack platform for managing temporal claims with multi-tenant architecture.</p>
@@ -220,7 +220,7 @@ useHead({
 .related-card p { color: var(--text-muted); font-size: 0.85rem; margin: 0; flex: 1; }
 .related-card .btn-glass { font-size: 0.8rem; padding: 8px 16px; display: block; text-align: center; }
 .related-services { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
-.cta-wrapper { margin-top: 60px; text-align: center; }
+.cta-wrapper { margin-top: 60px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
 .next-project { margin-top: 20px; }
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; backdrop-filter: blur(10px); }
