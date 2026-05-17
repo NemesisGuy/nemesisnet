@@ -4,7 +4,7 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/onthegorentals/optimized/hero.webp'" class="detail-image" alt="OntheGoRentals">
+        <img :src="'/images/projects/onthegorentals/optimized/hero.webp'" class="detail-image" alt="OntheGoRentals" width="900" height="600" fetchpriority="high" loading="eager">
         
         <h2>The Challenge</h2>
         <p>Managing a car rental fleet requires a complex intersection of user-facing booking flows and heavy-duty admin backends. The goal was to create a system that handles real-time availability, diverse user roles, and secure payment/auth flows without friction.</p>

@@ -4,7 +4,7 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/voxnemesis-supertonic/original/hero.png'" class="detail-image" alt="VoxNemesis Supertonic">
+        <img :src="'/images/projects/voxnemesis-supertonic/optimized/hero.webp'" class="detail-image" alt="VoxNemesis Supertonic" width="900" height="600" fetchpriority="high" loading="eager">
         
         <h2>The Challenge</h2>
         <p>High-quality text-to-speech usually requires cloud APIs, sending user data to third-party servers. Users needed a private, fast, and truly local alternative that runs entirely in the browser without compromising on audio quality or latency.</p>

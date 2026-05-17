@@ -4,7 +4,7 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/kokoro-tts-service/optimized/hero.webp'" class="detail-image" alt="Kokoro TTS Service">
+        <img :src="'/images/projects/kokoro-tts-service/optimized/hero.webp'" class="detail-image" alt="Kokoro TTS Service" width="900" height="600" fetchpriority="high" loading="eager">
         
         <h2>The Challenge</h2>
         <p>Most high-quality text-to-speech services are locked behind expensive monthly subscriptions and restrictive APIs, with significant latency and zero privacy. For production workloads, a local, low-latency, and high-fidelity alternative was needed.</p>

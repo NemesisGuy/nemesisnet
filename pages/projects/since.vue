@@ -4,7 +4,7 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/since/optimized/hero.webp'" class="detail-image" alt="Since">
+        <img :src="'/images/projects/since/optimized/hero.webp'" class="detail-image" alt="Since" width="900" height="600" fetchpriority="high" loading="eager">
         
         <h2>The Challenge</h2>
         <p>Claims, predictions, and deadlines are easy to make but hard to track. Without a system to record and verify outcomes over time, accountability fades. People forget what was said, when it was said, and whether it actually came true.</p>
