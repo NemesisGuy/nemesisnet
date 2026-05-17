@@ -4,13 +4,13 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="breadcrumbs" aria-label="Breadcrumb">
           <NuxtLink to="/">Home</NuxtLink>
           <span>/</span>
           <NuxtLink to="/services">Services</NuxtLink>
           <span>/</span>
           <span aria-current="page">System Design & Consulting</span>
-        </nav>
+        </div>
 
         <h2>The Problem: Expensive Software Built on Bad Foundations</h2>
         <p>The most expensive mistake in software is building the wrong thing. Teams ship features for months only to discover the architecture can't support the next 10x of growth. Technical debt compounds — each quick fix makes the next one harder. By the time a CTO brings in outside help, the system is held together by workarounds and the team is burning out.</p>
@@ -195,6 +195,9 @@ useHead({
 .breadcrumbs a { color: var(--accent-color); text-decoration: none; }
 .breadcrumbs a:hover { text-decoration: underline; }
 .breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
+@media (max-width: 768px) {
+  .breadcrumbs { display: none !important; }
+}
 .service-feature { background: var(--glass-bg); border: 1px solid var(--glass-border); padding: 20px; border-radius: 15px; margin-bottom: 15px; transition: transform 0.3s ease; }
 .service-feature:hover { transform: translateX(10px); border-color: var(--accent-color); }
 .service-feature h3 { color: var(--accent-color); margin-bottom: 5px; font-size: 1.1rem; }

@@ -4,13 +4,13 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="breadcrumbs" aria-label="Breadcrumb">
           <NuxtLink to="/">Home</NuxtLink>
           <span>/</span>
           <NuxtLink to="/services">Services</NuxtLink>
           <span>/</span>
           <span aria-current="page">Self-Hosted AI</span>
-        </nav>
+        </div>
 
         <h2>The Problem: When AI Doesn't Belong in Someone Else's Cloud</h2>
         <p>Cloud AI APIs are convenient at the prototype stage but become a liability in production. Latency spikes during peak hours, API cost inflation that outpaces revenue growth, data privacy concerns that block enterprise deals, and the inability to customize model behavior for specific domains — all compound into systems that are harder to maintain and harder to trust.</p>
@@ -110,6 +110,7 @@
 
         <div class="cta-wrapper">
           <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Discuss Infrastructure</a>
+          <a href="https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/" target="_blank" class="btn-glass">Read Cost Analysis</a>
         </div>
         <div class="next-project">
           <NuxtLink to="/services" class="btn-glass">← Back to Services</NuxtLink>
@@ -131,6 +132,7 @@
           <h4>Quick Links</h4>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
+            <a href="https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/" target="_blank" class="btn-glass">Read Cost Analysis</a>
             <NuxtLink to="/services/ai-development" class="btn-glass">AI Development</NuxtLink>
             <NuxtLink to="/services/infrastructure" class="btn-glass">Infrastructure</NuxtLink>
             <NuxtLink to="/projects" class="btn-glass">View Projects</NuxtLink>
@@ -206,6 +208,9 @@ useHead({
 .breadcrumbs a { color: var(--accent-color); text-decoration: none; }
 .breadcrumbs a:hover { text-decoration: underline; }
 .breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
+@media (max-width: 768px) {
+  .breadcrumbs { display: none !important; }
+}
 .service-list { margin: 16px 0 24px 20px; color: var(--text-muted); line-height: 1.8; }
 .process-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }

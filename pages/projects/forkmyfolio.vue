@@ -18,6 +18,7 @@
         <div class="cta-wrapper">
           <a href="https://github.com/NemesisGuy/ForkMyFolio-frontend" target="_blank" class="btn-glass">View Source</a>
           <a href="https://forkmyfolio.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
+          <a href="https://blog.nemesisnet.co.za/forkmyfolio-backend-designing-a-modern-multi-user-portfolio-platform-in-spring-boot/" target="_blank" class="btn-glass">Deep Dive</a>
         </div>
         <div class="next-project">
           <NuxtLink to="/projects/codecritical-cli" class="btn-glass">Next Project → CodeCritical CLI</NuxtLink>
@@ -40,6 +41,7 @@
             <NuxtLink to="/projects" class="btn-glass">← Back to Portfolio</NuxtLink>
             <a href="https://github.com/NemesisGuy/ForkMyFolio-frontend" target="_blank" class="btn-glass">View Source</a>
             <a href="https://forkmyfolio.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
+            <a href="https://blog.nemesisnet.co.za/forkmyfolio-backend-designing-a-modern-multi-user-portfolio-platform-in-spring-boot/" target="_blank" class="btn-glass">Deep Dive</a>
           </div>
         </div>
       </div>

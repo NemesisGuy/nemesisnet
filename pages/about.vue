@@ -4,13 +4,13 @@
 
     <div class="detail-container about-container">
       <div class="detail-main">
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="breadcrumbs" aria-label="Breadcrumb">
           <NuxtLink to="/">Home</NuxtLink>
           <span>/</span>
           <NuxtLink to="/services">Services</NuxtLink>
           <span>/</span>
           <span aria-current="page">About</span>
-        </nav>
+        </div>
 
         <h2>What NemesisNet Builds</h2>
         <p>NemesisNet builds AI infrastructure and full-stack systems for real production workloads. The portfolio includes self-hosted AI runtimes, text-to-speech pipelines, MCP integrations, agent automation backends, and production-grade full-stack platforms.</p>
@@ -224,6 +224,9 @@ useHead({
 .breadcrumbs a { color: var(--accent-color); text-decoration: none; }
 .breadcrumbs a:hover { text-decoration: underline; }
 .breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
+@media (max-width: 768px) {
+  .breadcrumbs { display: none !important; }
+}
 .back-link { text-align: center; margin-top: 40px; }
 .stack-tags { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 24px; }
 .stack-tag { padding: 8px 16px; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; color: var(--text-color); font-size: 0.9rem; }

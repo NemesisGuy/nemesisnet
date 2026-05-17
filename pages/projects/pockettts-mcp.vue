@@ -36,6 +36,7 @@
 
         <div class="cta-wrapper">
           <a href="https://github.com/NemesisGuy/PocketTTS-MCP" target="_blank" class="btn-glass">View Source</a>
+          <a href="https://blog.nemesisnet.co.za/bringing-gpu-support-to-neutts-air-a-dev-diary/" target="_blank" class="btn-glass">Read Dev Diary</a>
         </div>
         <div class="next-project">
           <NuxtLink to="/projects/kokoro-tts" class="btn-glass">Next Project → Kokoro TTS Service</NuxtLink>
@@ -56,6 +57,7 @@
           <h4>Quick Links</h4>
           <div class="quick-links">
             <NuxtLink to="/projects" class="btn-glass">← Back to Portfolio</NuxtLink>
+            <a href="https://blog.nemesisnet.co.za/bringing-gpu-support-to-neutts-air-a-dev-diary/" target="_blank" class="btn-glass">Read Dev Diary</a>
             <a href="https://github.com/NemesisGuy/PocketTTS-MCP" target="_blank" class="btn-glass">View Source</a>
           </div>
         </div>

@@ -4,13 +4,13 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="breadcrumbs" aria-label="Breadcrumb">
           <NuxtLink to="/">Home</NuxtLink>
           <span>/</span>
           <NuxtLink to="/services">Services</NuxtLink>
           <span>/</span>
           <span aria-current="page">Custom Software</span>
-        </nav>
+        </div>
 
         <h2>The Problem: Off-the-Shelf Software Doesn't Fit</h2>
         <p>Every business has processes that don't map cleanly to generic software. The CRM doesn't capture your workflow. The ERP requires workarounds that cost more time than they save. And every integration between systems becomes a fragile, manual bridge maintained by spreadsheets and tribal knowledge.</p>
@@ -107,6 +107,7 @@
 
         <div class="cta-wrapper">
           <NuxtLink to="/#contact" class="btn-glass">Discuss This Service →</NuxtLink>
+          <a href="https://blog.nemesisnet.co.za/from-rebuilding-authentication-in-every-app-to-a-shared-identity-layer/" target="_blank" class="btn-glass">Read Auth Deep Dive</a>
         </div>
         <div class="next-project">
           <NuxtLink to="/services" class="btn-glass">← Back to Services</NuxtLink>
@@ -127,6 +128,7 @@
           <h4>Quick Links</h4>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
+            <a href="https://blog.nemesisnet.co.za/from-rebuilding-authentication-in-every-app-to-a-shared-identity-layer/" target="_blank" class="btn-glass">Auth Deep Dive</a>
             <NuxtLink to="/services/saas-development" class="btn-glass">SaaS Development</NuxtLink>
             <NuxtLink to="/services/infrastructure" class="btn-glass">Infrastructure</NuxtLink>
             <NuxtLink to="/projects" class="btn-glass">View Projects</NuxtLink>
@@ -202,6 +204,9 @@ useHead({
 .breadcrumbs a { color: var(--accent-color); text-decoration: none; }
 .breadcrumbs a:hover { text-decoration: underline; }
 .breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
+@media (max-width: 768px) {
+  .breadcrumbs { display: none !important; }
+}
 .service-feature { background: var(--glass-bg); border: 1px solid var(--glass-border); padding: 20px; border-radius: 15px; margin-bottom: 15px; transition: transform 0.3s ease; }
 .service-feature:hover { transform: translateX(10px); border-color: var(--accent-color); }
 .service-feature h3 { color: var(--accent-color); margin-bottom: 5px; font-size: 1.1rem; }

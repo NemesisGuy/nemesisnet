@@ -4,13 +4,13 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="breadcrumbs" aria-label="Breadcrumb">
           <NuxtLink to="/">Home</NuxtLink>
           <span>/</span>
           <NuxtLink to="/services">Services</NuxtLink>
           <span>/</span>
           <span aria-current="page">AI Development</span>
-        </nav>
+        </div>
 
         <h2>The Problem: AI That Doesn't Ship to Production</h2>
         <p>Most businesses experimenting with AI hit the same wall: prototype demos that never make it to production. Generic API wrappers around OpenAI or Anthropic work in a demo but fail under real constraints — unpredictable latency, data privacy violations, vendor lock-in, and runaway costs the moment traffic scales. The gap between "it works in a sandbox" and "it works at 3 AM on a Friday under peak load" is where most AI projects die.</p>
@@ -100,6 +100,7 @@
 
         <div class="cta-wrapper">
           <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Scope an AI Build</a>
+          <a href="https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/" target="_blank" class="btn-glass">Read Cost Analysis</a>
         </div>
         <div class="next-project">
           <NuxtLink to="/services/self-hosted-ai" class="btn-glass">Next: Self-Hosted AI Infrastructure →</NuxtLink>
@@ -121,6 +122,7 @@
           <h4>Quick Links</h4>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
+            <a href="https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/" target="_blank" class="btn-glass">Read Cost Analysis</a>
             <NuxtLink to="/services/self-hosted-ai" class="btn-glass">Self-Hosted AI</NuxtLink>
             <NuxtLink to="/services/infrastructure" class="btn-glass">Infrastructure</NuxtLink>
             <NuxtLink to="/projects" class="btn-glass">View Projects</NuxtLink>
@@ -196,6 +198,9 @@ useHead({
 .breadcrumbs a { color: var(--accent-color); text-decoration: none; }
 .breadcrumbs a:hover { text-decoration: underline; }
 .breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
+@media (max-width: 768px) {
+  .breadcrumbs { display: none !important; }
+}
 .process-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }
 .process-step .step-number { display: inline-block; background: var(--accent-color); color: #000; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; }
