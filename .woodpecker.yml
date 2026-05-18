@@ -66,15 +66,19 @@ steps:
     image: curlimages/curl
     commands:
       - |
+        STACK_DATA=$(curl -s \
+          "https://portainer.nemesisnet.co.za/api/stacks/82" \
+          -H "X-API-Key: $${PORTAINER_API_KEY}")
         STACK_FILE=$(curl -s \
           "https://portainer.nemesisnet.co.za/api/stacks/82/file" \
           -H "X-API-Key: $${PORTAINER_API_KEY}" | \
-          sed 's/.*"StackFileContent":"\(.*\)".*/\1/')
+          grep -o '"StackFileContent":"[^"]*"' | cut -d'"' -f4)
+        ENV_VARS=$(echo $STACK_DATA | grep -o '"Env":\[[^]]*\]' | cut -d: -f2-)
         curl -s -w "%{http_code}" \
           -X PUT "https://portainer.nemesisnet.co.za/api/stacks/82?endpointId=3" \
           -H "X-API-Key: $${PORTAINER_API_KEY}" \
           -H "Content-Type: application/json" \
-          -d "{\"prune\":false,\"pullImage\":true,\"stackFileContent\":\"${STACK_FILE}\"}"
+          -d "{\"prune\":false,\"pullImage\":true,\"stackFileContent\":\"${STACK_FILE}\",\"env\":${ENV_VARS}}"
     environment:
       PORTAINER_API_KEY:
         from_secret: portainer_api_key
@@ -106,15 +110,19 @@ steps:
     image: curlimages/curl
     commands:
       - |
+        STACK_DATA=$(curl -s \
+          "https://portainer.nemesisnet.co.za/api/stacks/32" \
+          -H "X-API-Key: $${PORTAINER_API_KEY}")
         STACK_FILE=$(curl -s \
           "https://portainer.nemesisnet.co.za/api/stacks/32/file" \
           -H "X-API-Key: $${PORTAINER_API_KEY}" | \
-          sed 's/.*"StackFileContent":"\(.*\)".*/\1/')
+          grep -o '"StackFileContent":"[^"]*"' | cut -d'"' -f4)
+        ENV_VARS=$(echo $STACK_DATA | grep -o '"Env":\[[^]]*\]' | cut -d: -f2-)
         curl -s -w "%{http_code}" \
           -X PUT "https://portainer.nemesisnet.co.za/api/stacks/32?endpointId=3" \
           -H "X-API-Key: $${PORTAINER_API_KEY}" \
           -H "Content-Type: application/json" \
-          -d "{\"prune\":false,\"pullImage\":true,\"stackFileContent\":\"${STACK_FILE}\"}"
+          -d "{\"prune\":false,\"pullImage\":true,\"stackFileContent\":\"${STACK_FILE}\",\"env\":${ENV_VARS}}"
     environment:
       PORTAINER_API_KEY:
         from_secret: portainer_api_key
