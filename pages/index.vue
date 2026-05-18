@@ -329,7 +329,7 @@ useHead({
 @media (max-width: 768px) { .projects-grid { grid-template-columns: 1fr !important; gap: 14px; } }
 
 .hero-top { gap: 20px; margin-bottom: 24px; }
-.avatar-wrap { width: 220px !important; height: 220px !important; border-width: 3px !important; box-shadow: 0 8px 30px rgba(0,0,0,0.4), 0 0 40px var(--accent-glow) !important; padding: 12px; }
+.avatar-wrap { width: 290px !important; height: 290px !important; border-width: 3px !important; box-shadow: 0 8px 30px rgba(0,0,0,0.4), 0 0 40px var(--accent-glow) !important; padding: 12px; }
 .avatar-wrap .avatar-img { max-width: 100%; max-height: 100%; width: 100%; height: 100%; object-fit: contain; }
 .hero-top h1 { font-size: 2.4rem; line-height: 1.2; margin-bottom: 4px; }
 .hero-subtitle { font-size: 1.3rem; color: var(--text-muted); margin-top: 8px; }
