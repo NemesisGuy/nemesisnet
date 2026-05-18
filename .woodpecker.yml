@@ -68,7 +68,7 @@ steps:
       - apk add --no-cache curl jq
       - |
         jq -n \
-          --arg sf "version: '3.9'\nservices:\n  nemesisnet-dev:\n    image: nemesisguy/nemesisnet:dev\n    container_name: nemesisnet-dev\n    restart: unless-stopped\n    ports:\n      - '9114:3000'\n    environment:\n      - RESEND_API_KEY=$${RESEND_API_KEY}\n      - TURNSTILE_SITE_KEY=$${TURNSTILE_SITE_KEY}\n      - TURNSTILE_SECRET_KEY=$${TURNSTILE_SECRET_KEY}" \
+          --arg sf "version: \"3.9\"\nservices:\n  nemesisnet-dev:\n    image: nemesisguy/nemesisnet:dev\n    container_name: nemesisnet-dev\n    restart: unless-stopped\n    ports:\n      - \"9114:3000\"\n    environment:\n      - RESEND_API_KEY=$${RESEND_API_KEY}\n      - TURNSTILE_SITE_KEY=$${TURNSTILE_SITE_KEY}\n      - TURNSTILE_SECRET_KEY=$${TURNSTILE_SECRET_KEY}" \
           '{"prune":true,"pullImage":true,"stackFileContent":$sf}' | \
         curl -s -w "%{http_code}" \
           -X PUT "https://portainer.nemesisnet.co.za/api/stacks/82?endpointId=3" \
@@ -114,7 +114,7 @@ steps:
       - apk add --no-cache curl jq
       - |
         jq -n \
-          --arg sf "version: '3.9'\nservices:\n  nemesisnet:\n    image: nemesisguy/nemesisnet:latest\n    container_name: nemesisnet\n    restart: unless-stopped\n    ports:\n      - '9111:80'\n    environment:\n      - RESEND_API_KEY=$${RESEND_API_KEY}\n      - TURNSTILE_SITE_KEY=$${TURNSTILE_SITE_KEY}\n      - TURNSTILE_SECRET_KEY=$${TURNSTILE_SECRET_KEY}" \
+          --arg sf "version: \"3.9\"\nservices:\n  nemesisnet:\n    image: nemesisguy/nemesisnet:latest\n    container_name: nemesisnet\n    restart: unless-stopped\n    ports:\n      - \"9111:80\"\n    environment:\n      - RESEND_API_KEY=$${RESEND_API_KEY}\n      - TURNSTILE_SITE_KEY=$${TURNSTILE_SITE_KEY}\n      - TURNSTILE_SECRET_KEY=$${TURNSTILE_SECRET_KEY}" \
           '{"prune":true,"pullImage":true,"stackFileContent":$sf}' | \
         curl -s -w "%{http_code}" \
           -X PUT "https://portainer.nemesisnet.co.za/api/stacks/32?endpointId=3" \
