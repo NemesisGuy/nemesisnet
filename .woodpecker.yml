@@ -63,24 +63,23 @@ steps:
       branch: master
 
   deploy:
-    image: alpine
+    image: curlimages/curl
     commands:
-      - apk add --no-cache curl jq
       - |
-        STACK_FILE=$(curl -s \
-          "https://portainer.nemesisnet.co.za/api/stacks/82/file" \
-          -H "X-API-Key: $${PORTAINER_API_KEY}" | jq -r '.StackFileContent')
-        ENV_VARS=$(curl -s \
-          "https://portainer.nemesisnet.co.za/api/stacks/82" \
-          -H "X-API-Key: $${PORTAINER_API_KEY}" | jq '.Env')
         curl -s -w "%{http_code}" \
           -X PUT "https://portainer.nemesisnet.co.za/api/stacks/82?endpointId=3" \
           -H "X-API-Key: $${PORTAINER_API_KEY}" \
           -H "Content-Type: application/json" \
-          -d "{\"prune\":false,\"pullImage\":true,\"stackFileContent\":$(echo "$STACK_FILE" | jq -Rs .),\"env\":${ENV_VARS}}"
+          -d "{\"prune\":true,\"pullImage\":true,\"forceRecreate\":true,\"stackFileContent\":\"version: \\\"3.9\\\"\\nservices:\\n  nemesisnet-dev:\\n    image: nemesisguy/nemesisnet:dev\\n    container_name: nemesisnet-dev\\n    restart: unless-stopped\\n    ports:\\n      - \\\"9114:3000\\\"\\n    environment:\\n      - RESEND_API_KEY=$${RESEND_API_KEY}\\n      - TURNSTILE_SITE_KEY=$${TURNSTILE_SITE_KEY}\\n      - TURNSTILE_SECRET_KEY=$${TURNSTILE_SECRET_KEY}\"}"
     environment:
       PORTAINER_API_KEY:
         from_secret: portainer_api_key
+      RESEND_API_KEY:
+        from_secret: resend_api_key
+      TURNSTILE_SITE_KEY:
+        from_secret: turnstile_site_key
+      TURNSTILE_SECRET_KEY:
+        from_secret: turnstile_secret_key
     when:
       event: [push, tag, manual]
       branch: dev
@@ -106,24 +105,23 @@ steps:
       branch: dev
 
   deploy-prod:
-    image: alpine
+    image: curlimages/curl
     commands:
-      - apk add --no-cache curl jq
       - |
-        STACK_FILE=$(curl -s \
-          "https://portainer.nemesisnet.co.za/api/stacks/32/file" \
-          -H "X-API-Key: $${PORTAINER_API_KEY}" | jq -r '.StackFileContent')
-        ENV_VARS=$(curl -s \
-          "https://portainer.nemesisnet.co.za/api/stacks/32" \
-          -H "X-API-Key: $${PORTAINER_API_KEY}" | jq '.Env')
         curl -s -w "%{http_code}" \
           -X PUT "https://portainer.nemesisnet.co.za/api/stacks/32?endpointId=3" \
           -H "X-API-Key: $${PORTAINER_API_KEY}" \
           -H "Content-Type: application/json" \
-          -d "{\"prune\":false,\"pullImage\":true,\"stackFileContent\":$(echo "$STACK_FILE" | jq -Rs .),\"env\":${ENV_VARS}}"
+          -d "{\"prune\":true,\"pullImage\":true,\"forceRecreate\":true,\"stackFileContent\":\"version: \\\"3.9\\\"\\nservices:\\n  nemesisnet:\\n    image: nemesisguy/nemesisnet:latest\\n    container_name: nemesisnet\\n    restart: unless-stopped\\n    ports:\\n      - \\\"9111:80\\\"\\n    environment:\\n      - RESEND_API_KEY=$${RESEND_API_KEY}\\n      - TURNSTILE_SITE_KEY=$${TURNSTILE_SITE_KEY}\\n      - TURNSTILE_SECRET_KEY=$${TURNSTILE_SECRET_KEY}\"}"
     environment:
       PORTAINER_API_KEY:
         from_secret: portainer_api_key
+      RESEND_API_KEY:
+        from_secret: resend_api_key
+      TURNSTILE_SITE_KEY:
+        from_secret: turnstile_site_key
+      TURNSTILE_SECRET_KEY:
+        from_secret: turnstile_secret_key
     when:
       event: [push, tag, manual]
       branch: master

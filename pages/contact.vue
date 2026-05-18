@@ -71,7 +71,11 @@
             >
           </div>
           
-          <button type="submit" class="btn-primary" :disabled="submitting">
+          <div class="form-group">
+            <NuxtTurnstile v-model="turnstileToken" />
+          </div>
+          
+          <button type="submit" class="btn-primary" :disabled="submitting || !turnstileToken">
             {{ submitting ? 'Sending...' : 'Send Message' }}
           </button>
           
@@ -133,6 +137,7 @@ const form = reactive({
   message: ''
 })
 
+const turnstileToken = ref('')
 const submitting = ref(false)
 const success = ref(false)
 const error = ref('')
@@ -140,6 +145,11 @@ const error = ref('')
 async function handleSubmit() {
   if (!form.name || !form.email || !form.subject || !form.message) {
     error.value = 'Please fill in all required fields'
+    return
+  }
+
+  if (!turnstileToken.value) {
+    error.value = 'Please complete the verification'
     return
   }
 
@@ -153,6 +163,7 @@ async function handleSubmit() {
     const response = await $fetch('/api/contact', {
       method: 'POST',
       body: {
+        token: turnstileToken.value,
         name: form.name,
         email: form.email,
         subject,
@@ -165,6 +176,7 @@ async function handleSubmit() {
     form.subject = ''
     form.otherSubject = ''
     form.message = ''
+    turnstileToken.value = ''
   } catch (e) {
     error.value = e.data?.message || 'Failed to send message. Please try again or email directly.'
   } finally {
