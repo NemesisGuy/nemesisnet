@@ -7,7 +7,5 @@ services:
     restart: unless-stopped
     ports:
       - "9114:3000"
-    environment:
-      - RESEND_API_KEY=YOUR_RESEND_API_KEY
-      - TURNSTILE_SITE_KEY=YOUR_TURNSTILE_SITE_KEY
-      - TURNSTILE_SECRET_KEY=YOUR_TURNSTILE_SECRET_KEY
+    env_file:
+      - .env
