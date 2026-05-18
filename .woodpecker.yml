@@ -42,6 +42,26 @@ steps:
       event: [push, tag, manual]
       branch: dev
 
+  docker-push-prod:
+    image: docker:27
+    pull: true
+    commands:
+      - echo "Building and pushing prod image..."
+      - echo $${DOCKER_PASSWORD} | docker login -u $${DOCKER_USERNAME} --password-stdin
+      - docker build --no-cache -t nemesisguy/nemesisnet:latest .
+      - docker push nemesisguy/nemesisnet:latest
+      - docker push nemesisguy/nemesisnet:$${CI_COMMIT_SHA}
+    environment:
+      DOCKER_USERNAME:
+        from_secret: DOCKER_USERNAME
+      DOCKER_PASSWORD:
+        from_secret: DOCKER_PASSWORD
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    when:
+      event: [push, tag, manual]
+      branch: master
+
   deploy:
     image: curlimages/curl
     commands:
@@ -77,3 +97,19 @@ steps:
     when:
       event: [push, tag, manual]
       branch: dev
+
+  deploy-prod:
+    image: curlimages/curl
+    commands:
+      - |
+        curl -s -w "%{http_code}" \
+          -X PUT "https://portainer.nemesisnet.co.za/api/stacks/32?endpointId=3" \
+          -H "X-API-Key: $${PORTAINER_API_KEY}" \
+          -H "Content-Type: application/json" \
+          -d '{"prune":true,"pullImage":true,"forceRecreate":true,"stackFileContent":"version: \"3.9\"\nservices:\n  nemesisnet:\n    image: nemesisguy/nemesisnet:latest\n    container_name: nemesisnet\n    restart: unless-stopped\n    ports:\n      - \"9111:80\""}'
+    environment:
+      PORTAINER_API_KEY:
+        from_secret: portainer_api_key
+    when:
+      event: [push, tag, manual]
+      branch: master
