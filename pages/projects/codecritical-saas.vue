@@ -4,7 +4,7 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/codecritical-saas/optimized/hero.webp'" class="detail-image" alt="CodeCritical SaaS" fetchpriority="high" loading="eager">
+        <img :src="'/images/projects/codecritical-saas/optimized/hero.webp'" class="detail-image" alt="CodeCritical SaaS" loading="lazy">
         
         <h2>The Challenge</h2>
         <p>In large codebases, technical debt accumulates rapidly. Manual code reviews are time-consuming and often miss subtle structural issues that lead to long-term maintainability problems. Enterprise teams needed a unified platform that combines security scanning, static analysis, and architecture validation.</p>

@@ -4,7 +4,7 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/vibetype/optimized/hero.webp'" class="detail-image" alt="Vibe-Type" fetchpriority="high" loading="eager">
+        <img :src="'/images/projects/vibetype/optimized/hero.webp'" class="detail-image" alt="Vibe-Type" loading="lazy">
         
         <h2>The Challenge</h2>
         <p>Coding and writing often involve a mental friction between thought and typing. Standard keyboards are a bottleneck for high-speed conceptualization, and existing voice-to-text tools are too generic for technical coding workflows.</p>

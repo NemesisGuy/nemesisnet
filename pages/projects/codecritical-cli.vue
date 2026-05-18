@@ -4,7 +4,7 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/codecritical/optimized/hero.webp'" class="detail-image" alt="CodeCritical CLI" fetchpriority="high" loading="eager">
+        <img :src="'/images/projects/codecritical/optimized/hero.webp'" class="detail-image" alt="CodeCritical CLI" loading="lazy">
         
         <h2>The Challenge</h2>
         <p>In large Java codebases, technical debt accumulates rapidly. Manual code reviews are time-consuming and often miss subtle structural issues that lead to long-term maintainability problems.</p>

@@ -2,13 +2,13 @@
   <div>
     <PageHeader title="Projects" subtitle="A portfolio of production-grade systems, platforms, and infrastructure builds." />
     <div class="projects-container">
+      <div class="breadcrumbs" aria-label="Breadcrumb">
+        <NuxtLink to="/">Home</NuxtLink>
+        <span aria-hidden="true"> / </span>
+        <span aria-current="page">Projects</span>
+      </div>
       <main>
         <section id="projects">
-          <div class="breadcrumbs" aria-label="Breadcrumb">
-            <NuxtLink to="/">Home</NuxtLink>
-            <span aria-hidden="true"> / </span>
-            <span aria-current="page">Projects</span>
-          </div>
           <h2 class="project-group-title">AI & TTS</h2>
         <div class="projects-grid">
           <div class="card">
@@ -117,7 +117,7 @@
         <h2 class="project-group-title">Client Work / Full-Stack Builds</h2>
         <div class="projects-grid">
           <div class="card">
-            <img :src="'/images/projects/onthegorentals/optimized/hero.webp'" alt="OntheGoRentals" loading="lazy" width="202" height="188">
+            <img :src="'/images/projects/onthegorentals/optimized/hero-v2.webp'" alt="OntheGoRentals" loading="lazy" width="202" height="188">
             <h3>OntheGoRentals</h3>
             <p>Full-stack reference build — bookings, rental history, admin dashboard, and rental management with Spring Boot and Vue.</p>
             <div class="project-links">

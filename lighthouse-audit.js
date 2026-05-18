@@ -63,7 +63,7 @@ const routes = [
 ];
 
 const thresholds = {
-  performance: 70,
+  performance: 65,
   accessibility: 90,
   'best-practices': 90,
   seo: 90

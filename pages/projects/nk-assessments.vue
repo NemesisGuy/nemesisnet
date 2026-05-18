@@ -4,7 +4,7 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/nk-assessments/optimized/hero.webp'" class="detail-image" alt="NK Assessments" fetchpriority="high" loading="eager">
+        <img :src="'/images/projects/nk-assessments/optimized/hero.webp'" class="detail-image" alt="NK Assessments" loading="lazy">
         
         <h2>The Challenge</h2>
         <p>The client needed a professional, secure, and highly available static portal to present their assessment services. The primary constraint was a critical timeline—the site needed to be live and fully functional in under 48 hours.</p>

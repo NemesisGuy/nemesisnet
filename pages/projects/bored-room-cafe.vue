@@ -4,7 +4,7 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/bored-room-cafe/optimized/hero.webp'" class="detail-image" alt="Bored Room Cafe" fetchpriority="high" loading="eager">
+        <img :src="'/images/projects/bored-room-cafe/optimized/hero.webp'" class="detail-image" alt="Bored Room Cafe" loading="lazy">
         
         <h2>The Challenge</h2>
         <p>Small local businesses often struggle with digital visibility and streamlined ordering. The goal was to build a professional online presence that showcases the local flavor while providing a simple, effective way for families to order food.</p>

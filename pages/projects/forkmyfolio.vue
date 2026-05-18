@@ -4,7 +4,7 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/forkmyfolio/optimized/hero.webp'" class="detail-image" alt="ForkMyFolio" fetchpriority="high" loading="eager">
+        <img :src="'/images/projects/forkmyfolio/optimized/hero.webp'" class="detail-image" alt="ForkMyFolio" loading="lazy">
         
         <h2>The Challenge</h2>
         <p>Most developers struggle to keep their portfolios up to date. Manually editing HTML for every new project is tedious, and existing "portfolio builders" are often too generic or lack the technical depth needed to showcase real engineering work.</p>

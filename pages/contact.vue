@@ -5,13 +5,14 @@
       <p class="page-intro">Have a project in mind? Let's talk about how we can help build it.</p>
     </div>
 
+    <div class="breadcrumbs" aria-label="Breadcrumb">
+      <NuxtLink to="/">Home</NuxtLink>
+      <span>/</span>
+      <span aria-current="page">Contact</span>
+    </div>
+
     <div class="contact-container">
       <div class="contact-form-section">
-        <div class="breadcrumbs" aria-label="Breadcrumb">
-          <NuxtLink to="/">Home</NuxtLink>
-          <span>/</span>
-          <span aria-current="page">Contact</span>
-        </div>
         <h2>Send a Message</h2>
         <form @submit.prevent="handleSubmit" class="contact-form">
           <div class="form-group">

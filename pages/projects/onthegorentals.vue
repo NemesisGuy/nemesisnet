@@ -4,7 +4,7 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/onthegorentals/optimized/hero.webp'" class="detail-image" alt="OntheGoRentals" fetchpriority="high" loading="eager">
+        <img :src="'/images/projects/onthegorentals/optimized/hero-v2.webp'" class="detail-image" alt="OntheGoRentals" loading="lazy">
         
         <h2>The Challenge</h2>
         <p>Managing a car rental fleet requires a complex intersection of user-facing booking flows and heavy-duty admin backends. The goal was to create a system that handles real-time availability, diverse user roles, and secure payment/auth flows without friction.</p>
@@ -56,7 +56,7 @@ useHead({
     { property: 'og:description', content: 'Robust real-time vehicle booking, administrative dashboard management, secure JWT authentication, and MySQL tracking.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/onthegorentals' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/onthegorentals/optimized/hero.webp' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/onthegorentals/optimized/hero-v2.webp' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/onthegorentals' }
