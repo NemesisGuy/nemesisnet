@@ -70,7 +70,7 @@ steps:
           -X PUT "https://portainer.nemesisnet.co.za/api/stacks/82?endpointId=3" \
           -H "X-API-Key: $${PORTAINER_API_KEY}" \
           -H "Content-Type: application/json" \
-          -d '{"pullImage":true}'
+          -d '{"prune":false,"pullImage":true,"stackFileContent":""}'
     environment:
       PORTAINER_API_KEY:
         from_secret: portainer_api_key
@@ -106,7 +106,7 @@ steps:
           -X PUT "https://portainer.nemesisnet.co.za/api/stacks/32?endpointId=3" \
           -H "X-API-Key: $${PORTAINER_API_KEY}" \
           -H "Content-Type: application/json" \
-          -d '{"pullImage":true}'
+          -d '{"prune":false,"pullImage":true,"stackFileContent":""}'
     environment:
       PORTAINER_API_KEY:
         from_secret: portainer_api_key
