@@ -84,7 +84,19 @@ steps:
       - |
         PAYLOAD=$(jq -n \
           --rawfile sf /tmp/compose.yml \
-          '{"prune":true,"pullImage":true,"stackFileContent":$sf}')
+          --arg resend "$RESEND_API_KEY" \
+          --arg ts_site "$TURNSTILE_SITE_KEY" \
+          --arg ts_secret "$TURNSTILE_SECRET_KEY" \
+          '{
+            "prune": true,
+            "pullImage": true,
+            "stackFileContent": $sf,
+            "env": [
+              {"name": "RESEND_API_KEY", "value": $resend},
+              {"name": "TURNSTILE_SITE_KEY", "value": $ts_site},
+              {"name": "TURNSTILE_SECRET_KEY", "value": $ts_secret}
+            ]
+          }')
         curl -s -w "%{http_code}" \
           -X PUT "https://portainer.nemesisnet.co.za/api/stacks/82?endpointId=3" \
           -H "X-API-Key: $${PORTAINER_API_KEY}" \
@@ -94,11 +106,11 @@ steps:
       PORTAINER_API_KEY:
         from_secret: portainer_api_key
       RESEND_API_KEY:
-        from_secret: resend_api_key
+        from_secret: RESEND_API_KEY
       TURNSTILE_SITE_KEY:
-        from_secret: turnstile_site_key
+        from_secret: TURNSTILE_SITE_KEY
       TURNSTILE_SECRET_KEY:
-        from_secret: turnstile_secret_key
+        from_secret: TURNSTILE_SECRET_KEY
     when:
       event: [push, tag, manual]
       branch: dev
@@ -145,7 +157,19 @@ steps:
       - |
         PAYLOAD=$(jq -n \
           --rawfile sf /tmp/compose.yml \
-          '{"prune":true,"pullImage":true,"stackFileContent":$sf}')
+          --arg resend "$RESEND_API_KEY" \
+          --arg ts_site "$TURNSTILE_SITE_KEY" \
+          --arg ts_secret "$TURNSTILE_SECRET_KEY" \
+          '{
+            "prune": true,
+            "pullImage": true,
+            "stackFileContent": $sf,
+            "env": [
+              {"name": "RESEND_API_KEY", "value": $resend},
+              {"name": "TURNSTILE_SITE_KEY", "value": $ts_site},
+              {"name": "TURNSTILE_SECRET_KEY", "value": $ts_secret}
+            ]
+          }')
         curl -s -w "%{http_code}" \
           -X PUT "https://portainer.nemesisnet.co.za/api/stacks/32?endpointId=3" \
           -H "X-API-Key: $${PORTAINER_API_KEY}" \
@@ -155,11 +179,11 @@ steps:
       PORTAINER_API_KEY:
         from_secret: portainer_api_key
       RESEND_API_KEY:
-        from_secret: resend_api_key
+        from_secret: RESEND_API_KEY
       TURNSTILE_SITE_KEY:
-        from_secret: turnstile_site_key
+        from_secret: TURNSTILE_SITE_KEY
       TURNSTILE_SECRET_KEY:
-        from_secret: turnstile_secret_key
+        from_secret: TURNSTILE_SECRET_KEY
     when:
       event: [push, tag, manual]
       branch: master
