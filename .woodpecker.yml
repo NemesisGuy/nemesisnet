@@ -77,9 +77,9 @@ steps:
             ports:
               - "9114:3000"
             environment:
-              - RESEND_API_KEY=$${RESEND_API_KEY}
+              - NUXT_RESEND_API_KEY=${RESEND_API_KEY}
               - TURNSTILE_SITE_KEY=$${TURNSTILE_SITE_KEY}
-              - TURNSTILE_SECRET_KEY=$${TURNSTILE_SECRET_KEY}
+              - NUXT_TURNSTILE_SECRET_KEY=${TURNSTILE_SECRET_KEY}
         EOF
       - |
         PAYLOAD=$(jq -n \
@@ -92,9 +92,9 @@ steps:
             "pullImage": true,
             "stackFileContent": $sf,
             "env": [
-              {"name": "RESEND_API_KEY", "value": $resend},
+              {"name": "NUXT_RESEND_API_KEY", "value": $resend},
               {"name": "TURNSTILE_SITE_KEY", "value": $ts_site},
-              {"name": "TURNSTILE_SECRET_KEY", "value": $ts_secret}
+              {"name": "NUXT_TURNSTILE_SECRET_KEY", "value": $ts_secret}
             ]
           }')
         curl -s -w "%{http_code}" \
@@ -150,9 +150,9 @@ steps:
             ports:
               - "9111:3000"
             environment:
-              - RESEND_API_KEY=$${RESEND_API_KEY}
+              - NUXT_RESEND_API_KEY=${RESEND_API_KEY}
               - TURNSTILE_SITE_KEY=$${TURNSTILE_SITE_KEY}
-              - TURNSTILE_SECRET_KEY=$${TURNSTILE_SECRET_KEY}
+              - NUXT_TURNSTILE_SECRET_KEY=${TURNSTILE_SECRET_KEY}
         EOF
       - |
         PAYLOAD=$(jq -n \
@@ -165,9 +165,9 @@ steps:
             "pullImage": true,
             "stackFileContent": $sf,
             "env": [
-              {"name": "RESEND_API_KEY", "value": $resend},
+              {"name": "NUXT_RESEND_API_KEY", "value": $resend},
               {"name": "TURNSTILE_SITE_KEY", "value": $ts_site},
-              {"name": "TURNSTILE_SECRET_KEY", "value": $ts_secret}
+              {"name": "NUXT_TURNSTILE_SECRET_KEY", "value": $ts_secret}
             ]
           }')
         curl -s -w "%{http_code}" \
