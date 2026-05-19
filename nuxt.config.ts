@@ -5,6 +5,9 @@ export default defineNuxtConfig({
     siteKey: '0x4AAAAAADPNJc2ObjAJrmVf'
   },
   runtimeConfig: {
+    public: {
+      noIndex: process.env.NUXT_PUBLIC_NO_INDEX === 'true'
+    },
     turnstile: {
       secretKey: process.env.TURNSTILE_SECRET_KEY || ''
     },
