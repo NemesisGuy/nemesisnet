@@ -11,7 +11,7 @@ export default defineEventHandler(async (event) => {
   }
 
   const formData = new FormData()
-  formData.append('secret', config.turnstile.secretKey)
+  formData.append('secret', process.env.TURNSTILE_SECRET_KEY || config.turnstile.secretKey)
   formData.append('response', token)
 
   const turnstileRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
@@ -55,7 +55,11 @@ export default defineEventHandler(async (event) => {
     .replace(/>/g, '&gt;')
 
   try {
-    const resend = new Resend(config.resendApiKey)
+    const resendApiKey = process.env.RESEND_API_KEY || config.resendApiKey;
+    if (!resendApiKey) {
+      throw createError({ statusCode: 500, message: 'Server configuration error: missing email provider API key.' })
+    }
+    const resend = new Resend(resendApiKey)
     await resend.emails.send({
       from: 'contact@send.nemesisnet.co.za',
       to: 'reignbuckingham@gmail.com',

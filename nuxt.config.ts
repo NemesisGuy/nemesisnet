@@ -6,9 +6,9 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     turnstile: {
-      secretKey: '' // set from NUXT_TURNSTILE_SECRET_KEY env var at runtime
+      secretKey: process.env.TURNSTILE_SECRET_KEY || ''
     },
-    resendApiKey: '' // set from NUXT_RESEND_API_KEY env var at runtime
+    resendApiKey: process.env.RESEND_API_KEY || ''
   },
   nitro: {
     routeRules: {
