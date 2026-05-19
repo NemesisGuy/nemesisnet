@@ -283,12 +283,12 @@ useHead({
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color-scheme: dark;
+  color-scheme: inherit;
 }
 
 .form-group select option {
-  background-color: #0a0e27;
-  color: #ffffff;
+  background-color: var(--bg-color, #0a0e27);
+  color: var(--text-color, #ffffff);
 }
 
 .form-group input:focus,
