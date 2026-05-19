@@ -77,9 +77,9 @@ steps:
             ports:
               - "9114:3000"
             environment:
-              - RESEND_API_KEY=${RESEND_API_KEY}
+              - RESEND_API_KEY=$${RESEND_API_KEY}
               - TURNSTILE_SITE_KEY=$${TURNSTILE_SITE_KEY}
-              - TURNSTILE_SECRET_KEY=${TURNSTILE_SECRET_KEY}
+              - TURNSTILE_SECRET_KEY=$${TURNSTILE_SECRET_KEY}
         EOF
       - |
         PAYLOAD=$(jq -n \
@@ -150,9 +150,9 @@ steps:
             ports:
               - "9111:3000"
             environment:
-              - RESEND_API_KEY=${RESEND_API_KEY}
+              - RESEND_API_KEY=$${RESEND_API_KEY}
               - TURNSTILE_SITE_KEY=$${TURNSTILE_SITE_KEY}
-              - TURNSTILE_SECRET_KEY=${TURNSTILE_SECRET_KEY}
+              - TURNSTILE_SECRET_KEY=$${TURNSTILE_SECRET_KEY}
         EOF
       - |
         PAYLOAD=$(jq -n \
