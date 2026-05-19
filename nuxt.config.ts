@@ -19,7 +19,7 @@ export default defineNuxtConfig({
           'X-Frame-Options': 'SAMEORIGIN',
           'Referrer-Policy': 'strict-origin-when-cross-origin',
           'Permissions-Policy': 'geolocation=(), camera=(), microphone=(), xr-spatial-tracking=()',
-          'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' https://metrics.nemesisnet.co.za https://static.cloudflareinsights.com https://challenges.cloudflare.com; connect-src 'self' https://metrics.nemesisnet.co.za https://cloudflareinsights.com https://static.cloudflareinsights.com https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' https: data:; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self' mailto:; upgrade-insecure-requests"
+          'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://metrics.nemesisnet.co.za https://static.cloudflareinsights.com https://challenges.cloudflare.com; worker-src 'self' blob:; connect-src 'self' https://metrics.nemesisnet.co.za https://cloudflareinsights.com https://static.cloudflareinsights.com https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' https: data:; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self' mailto:; upgrade-insecure-requests"
         }
       }
     },
