@@ -80,6 +80,7 @@ steps:
               - RESEND_API_KEY=$${RESEND_API_KEY}
               - TURNSTILE_SITE_KEY=$${TURNSTILE_SITE_KEY}
               - TURNSTILE_SECRET_KEY=$${TURNSTILE_SECRET_KEY}
+              - NUXT_PUBLIC_NO_INDEX=true
         EOF
       - |
         PAYLOAD=$(jq -n \
@@ -94,7 +95,8 @@ steps:
             "env": [
               {"name": "RESEND_API_KEY", "value": $resend},
               {"name": "TURNSTILE_SITE_KEY", "value": $ts_site},
-              {"name": "TURNSTILE_SECRET_KEY", "value": $ts_secret}
+              {"name": "TURNSTILE_SECRET_KEY", "value": $ts_secret},
+              {"name": "NUXT_PUBLIC_NO_INDEX", "value": "true"}
             ]
           }')
         curl -s -w "%{http_code}" \
