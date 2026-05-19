@@ -2,13 +2,13 @@ export default defineNuxtConfig({
   ssr: true,
   modules: ['@nuxtjs/turnstile'],
   turnstile: {
-    siteKey: process.env.TURNSTILE_SITE_KEY
+    siteKey: '0x4AAAAAADPNJc2ObjAJrmVf'
   },
   runtimeConfig: {
     turnstile: {
-      secretKey: process.env.TURNSTILE_SECRET_KEY
+      secretKey: '' // set from NUXT_TURNSTILE_SECRET_KEY env var at runtime
     },
-    resendApiKey: process.env.RESEND_API_KEY
+    resendApiKey: '' // set from NUXT_RESEND_API_KEY env var at runtime
   },
   nitro: {
     routeRules: {
