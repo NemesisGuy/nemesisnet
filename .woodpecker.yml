@@ -148,7 +148,7 @@ steps:
             container_name: nemesisnet
             restart: unless-stopped
             ports:
-              - "9111:80"
+              - "9111:3000"
             environment:
               - RESEND_API_KEY=$${RESEND_API_KEY}
               - TURNSTILE_SITE_KEY=$${TURNSTILE_SITE_KEY}
