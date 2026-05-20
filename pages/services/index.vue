@@ -10,7 +10,7 @@
           <span aria-current="page">Services</span>
         </div>
         <h2>Core Services</h2>
-        <div class="service-columns">
+        <div class="services-grid">
           <div class="card">
             <h3>Custom Software Development</h3>
             <p>End-to-end application development with clean architecture and modern frameworks.</p>
@@ -379,8 +379,6 @@ useHead({
 .detail-main p, .detail-main h2, .detail-main h3, .detail-main h4, .detail-main li { text-align: left !important; }
 .section-cta { text-align: center !important; }
 .btn-glass { display: inline-block; }
-.service-columns:not(.sdlc-columns) { display: flex !important; flex-wrap: wrap; gap: 20px; justify-content: center; }
-.service-columns:not(.sdlc-columns) .card { flex: 0 1 calc(25% - 20px); min-width: 220px; max-width: 260px; }
 .sdlc-columns { grid-template-columns: repeat(2, 1fr) !important; justify-items: center; }
 .pricing-grid, .tiers-grid { justify-items: center; }
 
@@ -394,16 +392,14 @@ useHead({
 .related-service-card:hover { transform: translateY(-2px); border-color: var(--accent-color); }
 .related-service-card strong { color: var(--accent-color); font-size: 0.95rem; }
 .related-service-card span { color: var(--text-muted); font-size: 0.85rem; }
-@media (max-width: 1100px) { .service-columns, .process-steps { grid-template-columns: repeat(2, 1fr); } .related-services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 1100px) { .process-steps { grid-template-columns: repeat(2, 1fr); } .related-services-grid { grid-template-columns: repeat(2, 1fr); } }
 .breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; padding-left: 20px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
 .breadcrumbs a { color: var(--accent-color); text-decoration: none; }
 .breadcrumbs a:hover { text-decoration: underline; }
 .breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
 @media (max-width: 768px) {
   .breadcrumbs { display: none !important; }
-  .service-columns:not(.sdlc-columns) { flex-direction: column; gap: 14px; }
-  .service-columns:not(.sdlc-columns) .card { flex: none; max-width: none; }
-  .service-columns, .process-steps { grid-template-columns: 1fr; gap: 16px; }
+  .process-steps { grid-template-columns: 1fr; gap: 16px; }
   .detail-container { padding: 24px 16px 32px; }
   .detail-main h2 { font-size: 1.8rem; margin: 36px 0 20px; }
   .related-services-grid { grid-template-columns: 1fr; }
