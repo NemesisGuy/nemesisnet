@@ -374,6 +374,10 @@ useHead({
 </script>
 
 <style>
+.services-grid { display: flex !important; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.services-grid .card { flex: 0 1 calc(25% - 20px); min-width: 250px; max-width: 300px; }
+@media (max-width: 1100px) { .services-grid .card { flex: 0 1 calc(50% - 20px); max-width: none; } }
+@media (max-width: 768px) { .services-grid { flex-direction: column; gap: 14px; } .services-grid .card { flex: none; } }
 .detail-container { max-width: 1100px; margin: 0 auto; padding: 24px 24px 40px; }
 .detail-main { text-align: left !important; line-height: 1.8; }
 .detail-main p, .detail-main h2, .detail-main h3, .detail-main h4, .detail-main li { text-align: left !important; }
