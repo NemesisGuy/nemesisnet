@@ -153,21 +153,15 @@
       </div>
     </section>
 
-   <!-- Related Services Section -->
-
-  <!-- Services Teaser -->
-  <section id="services-teaser">
-    <h2>Pricing & Scoping</h2>
-    <p class="services-teaser-text">Every system is classified by complexity, risk, and workflow requirements — then right-sized with transparent starting-from pricing.</p>
-    <NuxtLink to="/services" class="btn-glass">View Services & Pricing →</NuxtLink>
-  </section>
-
-  <!-- CTA Section -->
-  <section id="cta">
-    <h2>Ready to Start Your Project?</h2>
-    <p class="services-teaser-text">Let's discuss how NemesisNet can engineer your next platform, infrastructure, or automation system.</p>
-    <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Scope Your Project</a>
-  </section>
+   <!-- CTA Section -->
+   <section id="cta">
+     <h2>Ready to Start Your Project?</h2>
+     <p class="services-teaser-text">Every system is scoped by complexity and workflow requirements — then right-sized with transparent pricing. Let's talk.</p>
+     <div class="cta-buttons">
+       <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Scope Your Project</a>
+       <NuxtLink to="/services" class="btn-glass">View Pricing →</NuxtLink>
+     </div>
+   </section>
 
   <!-- Contact Section -->
   <section id="contact">
@@ -323,11 +317,12 @@ useHead({
 .testimonials-grid .card strong { margin-top: auto; }
 
 .section-cta { text-align: center; }
-#services, #projects, #testimonials, #services-teaser, #cta, #contact { max-width: 1200px; margin: 0 auto; padding: 40px 20px; min-height: auto !important; justify-content: flex-start !important; }
+#services, #projects, #testimonials, #cta, #contact { max-width: 1200px; margin: 0 auto; padding: 40px 20px; min-height: auto !important; justify-content: flex-start !important; }
+.cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
 
 /* Mobile fixes */
 @media (max-width: 768px) {
-  #services, #projects, #testimonials, #services-teaser, #cta, #contact {
+  #services, #projects, #testimonials, #cta, #contact {
     padding: 32px 16px;
     min-height: auto !important;
   }
@@ -356,8 +351,6 @@ section#contact { min-height: auto; display: flex; flex-direction: column; justi
 .contact-subnote { margin-top: 24px; color: var(--text-muted); font-size: 0.9rem; }
 @media (max-width: 900px) { .contact-inner { padding: 0; } .contact-info, .contact-form { padding: 24px; } .contact-links { flex-direction: column; gap: 10px; } .contact-links a { width: 100%; text-align: center; } }
 
-/* Services Teaser */
-#services-teaser { text-align: center; }
 .services-teaser-text { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px; }
 
 /* Testimonial enhancements */
