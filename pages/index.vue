@@ -182,6 +182,16 @@
           <input id="cname" v-model="formName" type="text" placeholder="Your name" required :disabled="formStatus === 'sending'">
           <label for="cemail">Email</label>
           <input id="cemail" v-model="formEmail" type="email" placeholder="you@domain.com" required :disabled="formStatus === 'sending'">
+          <label for="csubject">Subject</label>
+          <select id="csubject" v-model="formSubject" required :disabled="formStatus === 'sending'">
+            <option value="" disabled>Select a subject</option>
+            <option value="custom-software">Custom Software Development</option>
+            <option value="saas-development">SaaS Platform Development</option>
+            <option value="ai-development">AI/ML Development</option>
+            <option value="infrastructure">Infrastructure & DevOps</option>
+            <option value="consulting">Technical Consulting</option>
+            <option value="other">Other</option>
+          </select>
           <label for="cmessage">Message</label>
           <textarea id="cmessage" v-model="formMessage" placeholder="How can I help?" required :disabled="formStatus === 'sending'"></textarea>
           <ClientOnly>
@@ -207,6 +217,7 @@ import { ref, watch } from 'vue'
 
 const formName = ref('')
 const formEmail = ref('')
+const formSubject = ref('')
 const formMessage = ref('')
 const formStatus = ref('idle')
 const formError = ref('')
@@ -234,16 +245,18 @@ const handleContact = async (e) => {
 
   const name = formName.value.trim()
   const email = formEmail.value.trim()
+  const subject = formSubject.value === 'other' ? 'Other' : formSubject.value
   const message = formMessage.value.trim()
 
   try {
     const res = await $fetch('/api/contact', {
       method: 'POST',
-      body: { token: turnstileToken.value, name, email, message }
+      body: { token: turnstileToken.value, name, email, subject, message }
     })
     formStatus.value = 'success'
     formName.value = ''
     formEmail.value = ''
+    formSubject.value = ''
     formMessage.value = ''
     turnstileToken.value = ''
   } catch (err) {
@@ -343,7 +356,9 @@ section#contact { min-height: auto; display: flex; flex-direction: column; justi
 .contact-links a:hover { background: var(--accent-color); color: #0a0e27; transform: translateY(-2px); box-shadow: 0 8px 24px var(--accent-glow); }
 .contact-form { display: flex; flex-direction: column; gap: 16px; padding: 32px; background: var(--glass-bg); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--glass-border); border-radius: 20px; }
 .contact-form label { font-weight: 600; color: var(--text-color); text-align: left; font-size: 0.9rem; margin-bottom: -10px; }
-.contact-form input, .contact-form textarea { width: 100%; padding: 14px 16px; border-radius: 12px; border: 1px solid var(--glass-border); background: rgba(0,0,0,0.2); color: var(--text-color); font-size: 0.95rem; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); font-family: inherit; }
+.contact-form input, .contact-form textarea, .contact-form select { width: 100%; padding: 14px 16px; border-radius: 12px; border: 1px solid var(--glass-border); background: rgba(0,0,0,0.2); color: var(--text-color); font-size: 0.95rem; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); font-family: inherit; }
+.contact-form select { padding-right: 40px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23c0c8d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+.contact-form select option { background-color: #0a0e27; color: #ffffff; }
 .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent-color); box-shadow: 0 0 0 3px var(--accent-glow); background: rgba(0,0,0,0.3); }
 .contact-form textarea { resize: vertical; min-height: 120px; }
 .contact-form button { cursor: pointer; background: linear-gradient(135deg, var(--accent-color), var(--secondary-accent)); color: white; border: none; padding: 14px 32px; border-radius: 12px; font-weight: 700; font-size: 1rem; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 24px var(--accent-glow); margin-top: 4px; }

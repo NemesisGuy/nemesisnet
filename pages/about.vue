@@ -138,6 +138,15 @@
           <span class="stack-tag">ESPHome</span>
         </div>
 
+        <div class="about-cta">
+          <h2>Ready to Work Together?</h2>
+          <p>Every engagement is scoped by complexity and workflow requirements — then right-sized with transparent pricing starting from R7,000.</p>
+          <div class="about-cta-buttons">
+            <NuxtLink to="/services" class="btn-glass">View Services & Pricing →</NuxtLink>
+            <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Scope Your Project</a>
+          </div>
+        </div>
+
         <div class="back-link">
           <NuxtLink to="/projects" class="btn-glass">See the Work →</NuxtLink>
         </div>
@@ -228,6 +237,10 @@ useHead({
   .breadcrumbs { display: none !important; }
 }
 .back-link { text-align: center; margin-top: 40px; }
+.about-cta { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 32px; text-align: center; margin: 40px 0 20px; }
+.about-cta h2 { font-size: 1.5rem; margin: 0 0 12px; color: var(--accent-color); }
+.about-cta p { color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem; }
+.about-cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .stack-tags { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 24px; }
 .stack-tag { padding: 8px 16px; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; color: var(--text-color); font-size: 0.9rem; }
 
