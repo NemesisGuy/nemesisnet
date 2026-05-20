@@ -148,7 +148,8 @@
 <div class="testimonial-project">
             <span class="testimonial-project-label">Related:</span>
             <NuxtLink to="/projects/bored-room-cafe" class="testimonial-project-link">Bored Room Cafe</NuxtLink>
-        </div>
+         </div>
+       </div>
       </div>
     </section>
 
