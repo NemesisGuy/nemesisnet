@@ -148,25 +148,9 @@
 <div class="testimonial-project">
             <span class="testimonial-project-label">Related:</span>
             <NuxtLink to="/projects/bored-room-cafe" class="testimonial-project-link">Bored Room Cafe</NuxtLink>
-          </div>
         </div>
-        <div class="card">
-          <div class="testimonial-header">
-            <div class="testimonial-meta">
-              <strong class="testimonial-name">Since</strong>
-             <span class="testimonial-role">Engineering Lead — Remote, Europe</span>
-           </div>
-         </div>
-         <p>"The attention to security and automation was exceptional. Our CI/CD pipeline went from fragile to bulletproof in under two weeks."</p>
-         <div class="testimonial-project">
-           <span class="testimonial-project-label">Related:</span>
-           <NuxtLink to="/projects/codecritical-cli" class="testimonial-project-link">CodeCritical CLI</NuxtLink>
-           <span class="testimonial-sep">·</span>
-           <NuxtLink to="/projects/codecritical-saas" class="testimonial-project-link">CodeCritical SaaS</NuxtLink>
-         </div>
-       </div>
-     </div>
-   </section>
+      </div>
+    </section>
 
    <!-- Related Services Section -->
    <section id="related-services" class="related-section">
