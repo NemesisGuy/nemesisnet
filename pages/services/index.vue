@@ -380,7 +380,7 @@ useHead({
 .section-cta { text-align: center !important; }
 .btn-glass { display: inline-block; }
 .service-columns:not(.sdlc-columns) { display: flex !important; flex-wrap: wrap; gap: 20px; justify-content: center; }
-.service-columns:not(.sdlc-columns) .card { flex: 0 1 calc(25% - 20px); min-width: 250px; max-width: 300px; }
+.service-columns:not(.sdlc-columns) .card { flex: 0 1 calc(25% - 20px); min-width: 220px; max-width: 260px; }
 .sdlc-columns { grid-template-columns: repeat(2, 1fr) !important; justify-items: center; }
 .pricing-grid, .tiers-grid { justify-items: center; }
 
