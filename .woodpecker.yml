@@ -137,6 +137,16 @@ steps:
       event: [push, tag, manual]
       branch: dev
 
+  cleanup-prod:
+    image: docker:27
+    commands:
+      - docker images nemesisguy/nemesisnet --format "{{.Tag}}" | grep -v latest | grep -v "<none>" | sort -r | tail -n +3 | xargs -I {} docker rmi nemesisguy/nemesisnet:{} || true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    when:
+      event: [push, tag, manual]
+      branch: master
+
   deploy-prod:
     image: alpine
     commands:
