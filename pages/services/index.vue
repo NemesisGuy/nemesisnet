@@ -374,11 +374,11 @@ useHead({
 </script>
 
 <style>
-.services-grid { display: flex !important; flex-wrap: wrap; gap: 20px; justify-content: center; }
-.services-grid .card { flex: 0 1 calc(25% - 20px); min-width: 240px; max-width: 280px; display: flex; flex-direction: column; }
-.services-grid .card .btn-glass { margin-top: auto; }
-@media (max-width: 1100px) { .services-grid .card { flex: 0 1 calc(50% - 20px); max-width: none; } }
-@media (max-width: 768px) { .services-grid { flex-direction: column; gap: 14px; } .services-grid .card { flex: none; } }
+.services-grid { display: flex !important; flex-wrap: wrap; gap: 16px !important; justify-content: center !important; }
+.services-grid .card { flex: 0 1 calc(25% - 16px) !important; min-width: 220px !important; max-width: 250px !important; display: flex !important; flex-direction: column !important; }
+.services-grid .card .btn-glass { margin-top: auto !important; }
+@media (max-width: 1100px) { .services-grid .card { flex: 0 1 calc(50% - 16px) !important; max-width: none !important; } }
+@media (max-width: 768px) { .services-grid { flex-direction: column !important; gap: 14px !important; } .services-grid .card { flex: none !important; } }
 .detail-container { max-width: 1100px; margin: 0 auto; padding: 24px 24px 40px; }
 .detail-main { text-align: left !important; line-height: 1.8; }
 .detail-main p, .detail-main h2, .detail-main h3, .detail-main h4, .detail-main li { text-align: left !important; }
