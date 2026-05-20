@@ -154,36 +154,6 @@
     </section>
 
    <!-- Related Services Section -->
-   <section id="related-services" class="related-section">
-     <h2>Our Services</h2>
-     <p class="section-intro">From custom software to AI infrastructure — we build production-grade systems tailored to your needs.</p>
-     <div class="related-services-grid">
-       <NuxtLink to="/services/custom-software" class="related-service-card">
-         <strong>Custom Software</strong>
-         <span>Enterprise-grade apps &amp; APIs</span>
-       </NuxtLink>
-       <NuxtLink to="/services/saas-development" class="related-service-card">
-         <strong>SaaS Development</strong>
-         <span>Scalable multi-tenant platforms</span>
-       </NuxtLink>
-       <NuxtLink to="/services/ai-development" class="related-service-card">
-         <strong>AI Development</strong>
-         <span>MCP agents &amp; TTS pipelines</span>
-       </NuxtLink>
-       <NuxtLink to="/services/self-hosted-ai" class="related-service-card">
-         <strong>Self-Hosted AI</strong>
-         <span>GGUF, GPU &amp; vector databases</span>
-       </NuxtLink>
-       <NuxtLink to="/services/infrastructure" class="related-service-card">
-         <strong>Infrastructure &amp; DevOps</strong>
-         <span>Docker, CI/CD &amp; Nginx</span>
-       </NuxtLink>
-       <NuxtLink to="/services/consulting" class="related-service-card">
-         <strong>Consulting</strong>
-         <span>Architecture &amp; roadmapping</span>
-       </NuxtLink>
-     </div>
-   </section>
 
   <!-- Services Teaser -->
   <section id="services-teaser">
@@ -305,7 +275,7 @@ useHead({
 </script>
 
 <style scoped>
-.services-grid { display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 20px; }
+.services-grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 20px; }
 @media (max-width: 1100px) { .services-grid { grid-template-columns: repeat(2, 1fr) !important; } }
 @media (max-width: 768px) { .services-grid { grid-template-columns: 1fr !important; gap: 14px; } }
 
@@ -400,14 +370,5 @@ section#contact { min-height: auto; display: flex; flex-direction: column; justi
 .testimonial-project-link:hover { text-decoration: underline; }
 .testimonial-sep { color: var(--text-muted); }
 
-/* Related Services Section */
-.related-section { padding: 40px 0; min-height: auto; }
-.related-section h2 { text-align: center; margin-bottom: 12px; }
-.related-section .section-intro { text-align: center; color: var(--text-muted); margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto; }
-.related-services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-.related-service-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 24px; text-decoration: none; text-align: center; transition: transform 0.2s ease, border-color 0.2s ease; display: flex; flex-direction: column; gap: 6px; }
-.related-service-card:hover { transform: translateY(-2px); border-color: var(--accent-color); }
-.related-service-card strong { color: var(--accent-color); font-size: 0.95rem; }
-.related-service-card span { color: var(--text-muted); font-size: 0.85rem; }
-@media (max-width: 768px) { .related-services-grid { grid-template-columns: 1fr; } }
+
 </style>
