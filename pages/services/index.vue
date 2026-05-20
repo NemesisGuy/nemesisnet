@@ -379,6 +379,8 @@ useHead({
 .detail-main p, .detail-main h2, .detail-main h3, .detail-main h4, .detail-main li { text-align: left !important; }
 .section-cta { text-align: center !important; }
 .btn-glass { display: inline-block; }
+.service-columns { display: flex !important; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.service-columns .card { flex: 0 1 calc(25% - 20px); min-width: 250px; max-width: 300px; }
 .sdlc-columns { grid-template-columns: repeat(2, 1fr) !important; justify-items: center; }
 .pricing-grid, .tiers-grid { justify-items: center; }
 
@@ -399,6 +401,8 @@ useHead({
 .breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
 @media (max-width: 768px) {
   .breadcrumbs { display: none !important; }
+  .service-columns { flex-direction: column; gap: 14px; }
+  .service-columns .card { flex: none; max-width: none; }
   .service-columns, .process-steps { grid-template-columns: 1fr; gap: 16px; }
   .detail-container { padding: 24px 16px 32px; }
   .detail-main h2 { font-size: 1.8rem; margin: 36px 0 20px; }
