@@ -275,9 +275,10 @@ useHead({
 </script>
 
 <style scoped>
-.services-grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 20px; }
-@media (max-width: 1100px) { .services-grid { grid-template-columns: repeat(2, 1fr) !important; } }
-@media (max-width: 768px) { .services-grid { grid-template-columns: 1fr !important; gap: 14px; } }
+.services-grid { display: flex !important; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.services-grid .card { flex: 0 1 calc(25% - 20px); min-width: 250px; max-width: 300px; }
+@media (max-width: 1100px) { .services-grid .card { flex: 0 1 calc(50% - 20px); max-width: none; } }
+@media (max-width: 768px) { .services-grid { flex-direction: column; gap: 14px; } .services-grid .card { flex: none; } }
 
 .projects-grid { display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 20px; }
 @media (max-width: 1100px) { .projects-grid { grid-template-columns: repeat(2, 1fr) !important; } }
