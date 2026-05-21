@@ -22,6 +22,7 @@ export default defineNuxtConfig({
     routeRules: {
       '/**': {
         headers: {
+          'Cache-Control': process.env.NUXT_PUBLIC_NO_INDEX === 'true' ? 'no-cache, no-store, must-revalidate' : 'public, max-age=31536000, immutable',
           'Strict-Transport-Security': 'max-age=31536000',
           'X-Content-Type-Options': 'nosniff',
           'X-Frame-Options': 'SAMEORIGIN',
