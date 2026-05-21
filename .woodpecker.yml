@@ -4,8 +4,20 @@ steps:
     commands:
       - npm ci
       - npm run build
+    environment:
+      NUXT_PUBLIC_NO_INDEX: "true"
     when:
       event: [push, tag, manual]
+      branch: dev
+
+  build-prod:
+    image: node:22
+    commands:
+      - npm ci
+      - npm run build
+    when:
+      event: [push, tag, manual]
+      branch: master
 
   docker-build:
     image: docker:27

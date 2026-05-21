@@ -4,6 +4,11 @@ export default defineNuxtConfig({
   turnstile: {
     siteKey: '0x4AAAAAADPNJc2ObjAJrmVf'
   },
+  app: {
+    head: {
+      meta: process.env.NUXT_PUBLIC_NO_INDEX === 'true' ? [{ name: 'robots', content: 'noindex, nofollow' }] : []
+    }
+  },
   runtimeConfig: {
     public: {
       noIndex: process.env.NUXT_PUBLIC_NO_INDEX === 'true'
