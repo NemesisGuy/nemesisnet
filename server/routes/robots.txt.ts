@@ -1,4 +1,6 @@
 export default defineEventHandler((event) => {
+  setHeader(event, 'Content-Type', 'text/plain')
+
   const host = getRequestHeader(event, 'host') || ''
   const isDev = host.includes('dev.')
 
