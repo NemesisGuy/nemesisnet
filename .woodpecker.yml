@@ -137,7 +137,7 @@ steps:
       - node lighthouse-audit.js
     when:
       event: [push, tag, manual]
-      branch: dev
+      branch: master
 
   cleanup:
     image: docker:27

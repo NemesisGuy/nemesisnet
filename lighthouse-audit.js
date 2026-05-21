@@ -3,7 +3,7 @@ const lighthouse = require('lighthouse').default || require('lighthouse');
 const fs = require('fs');
 const path = require('path');
 
-const BASE_URL = 'https://dev.nemesisnet.co.za';
+const BASE_URL = 'https://nemesisnet.co.za';
 
 const routes = [
   // Desktop tests
