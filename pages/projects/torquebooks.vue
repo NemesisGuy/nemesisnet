@@ -13,17 +13,17 @@
         <p>TorqueBooks is a purpose-built, all-in-one workshop management platform designed specifically for South African auto repair shops. It streamlines the entire workflow — from job card creation and mechanic assignment to invoicing, payment tracking, and customer CRM — all in one professional platform with real-time status updates and analytics.</p>
         
         <h2>Technical Implementation</h2>
-        <p>The platform uses React 19 with TypeScript and Vite 6 on the frontend, backed by PocketBase (SQLite) for the API and database layer. The frontend communicates directly with PocketBase via raw <code>fetch</code> calls through a custom <code>db.ts</code> helper — no SDK dependency. Authentication is handled through Keycloak OAuth2 SSO with email/password fallback, and authorization is enforced via PocketBase Row-Level Security rules at the collection level.</p>
+        <p>The platform uses React with TypeScript on the frontend, backed by PocketBase (SQLite) for the API and database layer. The frontend communicates directly with PocketBase via raw <code>fetch</code> calls through a custom <code>db.ts</code> helper — no SDK dependency. Authentication is handled through OAuth2 SSO (IAM) with email/password fallback, and authorization is enforced via PocketBase Row-Level Security rules at the collection level.</p>
 
         <h3>Architecture Highlights</h3>
         <ul class="arch-list">
-          <li><strong>Frontend:</strong> React 19 + Vite 6 + TypeScript with Zustand state management</li>
+          <li><strong>Frontend:</strong> React + TypeScript + Vite with Zustand state management</li>
           <li><strong>Backend:</strong> PocketBase (SQLite) — direct API via raw fetch, no SDK</li>
-          <li><strong>Auth:</strong> Keycloak OAuth2 SSO (auth.nemesisnet.co.za) + email/password fallback</li>
+          <li><strong>Auth:</strong> OAuth2 SSO (IAM) + email/password fallback</li>
           <li><strong>Roles:</strong> Four-tier RBAC — superadmin, shop_owner, clerk, mechanic</li>
-          <li><strong>Invoicing:</strong> Automated VAT (15%) with @react-pdf/renderer PDF generation</li>
+          <li><strong>Invoicing:</strong> Automated VAT (15%) with React PDF renderer</li>
           <li><strong>CRM:</strong> Full customer profiles with vehicle fleet management, service intervals, and job history</li>
-          <li><strong>Styling:</strong> Tailwind CSS v4 with dark-first theme and light toggle</li>
+          <li><strong>Styling:</strong> Tailwind CSS with dark-first theme and light toggle</li>
           <li><strong>Infra:</strong> nginx SPA server with runtime env injection via entrypoint.sh</li>
         </ul>
 
@@ -49,7 +49,7 @@
         <div class="sidebar-card">
           <h4>Project Details</h4>
           <ul class="sidebar-list">
-            <li><span>Stack:</span> <strong>React 19, PocketBase, SQLite</strong></li>
+            <li><span>Stack:</span> <strong>React, PocketBase, SQLite</strong></li>
             <li><span>Role:</span> <strong>Architect & Developer</strong></li>
             <li><span>Status:</span> <strong>Live — Public Beta</strong></li>
             <li><span>Deploy:</span> <strong>Docker (Frontend 8020, PB 8021)</strong></li>
@@ -58,12 +58,12 @@
         <div class="sidebar-card">
           <h4>Components</h4>
           <ul class="sidebar-list">
-            <li><span>Frontend:</span> <strong>React 19 + Vite 6 + TypeScript</strong></li>
+            <li><span>Frontend:</span> <strong>React + TypeScript + Vite</strong></li>
             <li><span>Backend:</span> <strong>PocketBase (SQLite)</strong></li>
-            <li><span>Auth:</span> <strong>Keycloak OAuth2 + email/password</strong></li>
-            <li><span>PDF:</span> <strong>@react-pdf/renderer</strong></li>
+            <li><span>Auth:</span> <strong>OAuth2 SSO (IAM) + email/password</strong></li>
+            <li><span>PDF:</span> <strong>React PDF renderer</strong></li>
             <li><span>State:</span> <strong>Zustand</strong></li>
-            <li><span>Styling:</span> <strong>Tailwind CSS v4</strong></li>
+            <li><span>Styling:</span> <strong>Tailwind CSS</strong></li>
           </ul>
         </div>
         <div class="sidebar-card">
@@ -82,9 +82,9 @@
 useHead({
   title: 'TorqueBooks | Workshop Management for Auto Shops | NemesisNet',
   meta: [
-    { name: 'description', content: 'TorqueBooks is a workshop management system for South African auto shops — React 19, PocketBase, Keycloak SSO, PDF invoicing, job cards, and CRM.' },
+    { name: 'description', content: 'TorqueBooks is a workshop management system for South African auto shops — React, PocketBase, PDF invoicing, job cards, and CRM.' },
     { property: 'og:title', content: 'TorqueBooks | Workshop Management for Auto Shops | NemesisNet' },
-    { property: 'og:description', content: 'React 19 + PocketBase workshop management with job cards, vehicle CRM, PDF invoicing, and Keycloak SSO.' },
+    { property: 'og:description', content: 'React + PocketBase workshop management with job cards, vehicle CRM, PDF invoicing, and OAuth2 SSO.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/torquebooks' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/torquebooks/optimized/hero.webp' }

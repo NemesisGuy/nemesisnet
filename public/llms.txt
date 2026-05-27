@@ -37,7 +37,7 @@ NemesisNet operates on the principle of digital sovereignty and architectural pu
 - **Kokoro TTS:** High-performance, local-first text-to-speech pipeline optimized for CPU inference with multilingual support.
 
 ### Custom SaaS & Frameworks
-- **TorqueBooks:** Workshop management system for auto shops — React 19, PocketBase (SQLite), Keycloak OAuth2 SSO, Zustand state, Tailwind CSS v4, PDF invoicing with @react-pdf/renderer, four-tier RBAC, and vehicle CRM. Live at torquebooks.nemesisnet.co.za.
+- **TorqueBooks:** Workshop management system for auto shops — React + TypeScript + Vite, PocketBase (SQLite), OAuth2 SSO (IAM), Zustand state, Tailwind CSS, PDF invoicing, four-tier RBAC, and vehicle CRM. Live at torquebooks.nemesisnet.co.za.
 - **Since:** Temporal claim registry for tracking predictions, recording events, setting deadlines, and verifying outcomes over time. Built with React, Express, and PocketBase for self-hosted accountability.
 - **ForkMyFolio:** A full-featured, enterprise-tested portfolio management engine complete with integration, unit, Playwright E2E, and k6 load-testing suites.
 - **CodeCritical:** Advanced SaaS platform for container security scanning, CVE tracking, and CI/CD vulnerability auditing.
