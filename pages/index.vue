@@ -90,7 +90,7 @@
         <span class="pill pill-client">SaaS Platform</span>
         <img :src="'/images/projects/torquebooks/optimized/hero.webp'" alt="TorqueBooks" loading="lazy">
         <h3>TorqueBooks</h3>
-        <p>Workshop management platform for South African auto shops — job cards, invoicing, CRM, and analytics.</p>
+        <p>Workshop management for auto shops — job cards, invoicing, CRM, vehicle tracking. React 19 + PocketBase + Keycloak SSO.</p>
         <div class="card-links">
           <NuxtLink to="/projects/torquebooks" class="btn-glass">Detail</NuxtLink>
           <a href="https://torquebooks.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>

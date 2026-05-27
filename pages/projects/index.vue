@@ -119,7 +119,7 @@
           <div class="card">
             <img :src="'/images/projects/torquebooks/optimized/hero.webp'" alt="TorqueBooks" loading="lazy" width="1200" height="683">
             <h3>TorqueBooks</h3>
-            <p>All-in-one workshop management platform for South African auto shops — job cards, invoicing, CRM, and analytics.</p>
+            <p>Workshop management for auto shops — job cards, invoicing, CRM, vehicle tracking. React 19 + PocketBase + Keycloak SSO.</p>
             <div class="project-links">
               <NuxtLink class="btn-glass" to="/projects/torquebooks">Detail</NuxtLink>
               <a class="btn-glass" href="https://torquebooks.nemesisnet.co.za" target="_blank">Live Demo</a>

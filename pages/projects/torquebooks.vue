@@ -13,17 +13,28 @@
         <p>TorqueBooks is a purpose-built, all-in-one workshop management platform designed specifically for South African auto repair shops. It streamlines the entire workflow — from job card creation and mechanic assignment to invoicing, payment tracking, and customer CRM — all in one professional platform with real-time status updates and analytics.</p>
         
         <h2>Technical Implementation</h2>
-        <p>The platform uses a modern full-stack architecture with a Vue 3 frontend, secure authentication, and a robust backend handling job cards, customer management, vehicle tracking, and invoicing. The database supports relational data with full history tracking for vehicles, services, and customer interactions.</p>
+        <p>The platform uses React 19 with TypeScript and Vite 6 on the frontend, backed by PocketBase (SQLite) for the API and database layer. The frontend communicates directly with PocketBase via raw <code>fetch</code> calls through a custom <code>db.ts</code> helper — no SDK dependency. Authentication is handled through Keycloak OAuth2 SSO with email/password fallback, and authorization is enforced via PocketBase Row-Level Security rules at the collection level.</p>
 
         <h3>Architecture Highlights</h3>
         <ul class="arch-list">
-          <li><strong>Frontend:</strong> Vue 3 SPA with responsive dashboard</li>
-          <li><strong>Backend:</strong> REST API with job card lifecycle management</li>
-          <li><strong>Database:</strong> Relational store with vehicle service history</li>
-          <li><strong>Auth:</strong> Secure authentication with workshop-level multi-user support</li>
-          <li><strong>Invoicing:</strong> Automated VAT calculations with PDF export</li>
-          <li><strong>CRM:</strong> Full customer and vehicle profiles with service intervals</li>
-          <li><strong>Analytics:</strong> Real-time dashboard with revenue and job tracking</li>
+          <li><strong>Frontend:</strong> React 19 + Vite 6 + TypeScript with Zustand state management</li>
+          <li><strong>Backend:</strong> PocketBase (SQLite) — direct API via raw fetch, no SDK</li>
+          <li><strong>Auth:</strong> Keycloak OAuth2 SSO (auth.nemesisnet.co.za) + email/password fallback</li>
+          <li><strong>Roles:</strong> Four-tier RBAC — superadmin, shop_owner, clerk, mechanic</li>
+          <li><strong>Invoicing:</strong> Automated VAT (15%) with @react-pdf/renderer PDF generation</li>
+          <li><strong>CRM:</strong> Full customer profiles with vehicle fleet management, service intervals, and job history</li>
+          <li><strong>Styling:</strong> Tailwind CSS v4 with dark-first theme and light toggle</li>
+          <li><strong>Infra:</strong> nginx SPA server with runtime env injection via entrypoint.sh</li>
+        </ul>
+
+        <h3>Key Features</h3>
+        <ul class="arch-list">
+          <li><strong>Job Card Lifecycle:</strong> Pending → In Progress → Completed → Invoiced with dynamic parts tracking and labour costing</li>
+          <li><strong>Invite System:</strong> Shareable 32-char token links for adding mechanics and clerks</li>
+          <li><strong>WhatsApp Integration:</strong> One-click service reminders via wa.me links</li>
+          <li><strong>Financials:</strong> Revenue dashboard with time-period filtering and payment tracking</li>
+          <li><strong>Onboarding:</strong> New-user workshop creation flow with auto-redirect to dashboard</li>
+          <li><strong>Runtime Config:</strong> VITE_PB_URL injected into window.__RUNTIME_CONFIG__ at container start</li>
         </ul>
 
         <div class="cta-wrapper">
@@ -38,20 +49,21 @@
         <div class="sidebar-card">
           <h4>Project Details</h4>
           <ul class="sidebar-list">
-            <li><span>Stack:</span> <strong>Vue 3, REST API, Relational DB</strong></li>
+            <li><span>Stack:</span> <strong>React 19, PocketBase, SQLite</strong></li>
             <li><span>Role:</span> <strong>Architect & Developer</strong></li>
             <li><span>Status:</span> <strong>Live — Public Beta</strong></li>
-            <li><span>Deploy:</span> <strong>Docker</strong></li>
+            <li><span>Deploy:</span> <strong>Docker (Frontend 8020, PB 8021)</strong></li>
           </ul>
         </div>
         <div class="sidebar-card">
           <h4>Components</h4>
           <ul class="sidebar-list">
-            <li><span>Frontend:</span> <strong>Vue 3 SPA</strong></li>
-            <li><span>Backend:</span> <strong>REST API</strong></li>
-            <li><span>Database:</span> <strong>Relational</strong></li>
-            <li><span>Auth:</span> <strong>Multi-user workshop accounts</strong></li>
-            <li><span>Deploy:</span> <strong>Docker</strong></li>
+            <li><span>Frontend:</span> <strong>React 19 + Vite 6 + TypeScript</strong></li>
+            <li><span>Backend:</span> <strong>PocketBase (SQLite)</strong></li>
+            <li><span>Auth:</span> <strong>Keycloak OAuth2 + email/password</strong></li>
+            <li><span>PDF:</span> <strong>@react-pdf/renderer</strong></li>
+            <li><span>State:</span> <strong>Zustand</strong></li>
+            <li><span>Styling:</span> <strong>Tailwind CSS v4</strong></li>
           </ul>
         </div>
         <div class="sidebar-card">
@@ -70,9 +82,9 @@
 useHead({
   title: 'TorqueBooks | Workshop Management for Auto Shops | NemesisNet',
   meta: [
-    { name: 'description', content: 'TorqueBooks is a purpose-built workshop management platform for South African auto repair shops — job cards, invoicing, CRM, and analytics.' },
+    { name: 'description', content: 'TorqueBooks is a workshop management system for South African auto shops — React 19, PocketBase, Keycloak SSO, PDF invoicing, job cards, and CRM.' },
     { property: 'og:title', content: 'TorqueBooks | Workshop Management for Auto Shops | NemesisNet' },
-    { property: 'og:description', content: 'Streamline job cards, manage customers, track vehicles, and generate invoices — built for South African workshops.' },
+    { property: 'og:description', content: 'React 19 + PocketBase workshop management with job cards, vehicle CRM, PDF invoicing, and Keycloak SSO.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/torquebooks' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/torquebooks/optimized/hero.webp' }
