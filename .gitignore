@@ -7,3 +7,6 @@ legacy/
 Thumbs.db
 .env
 .env.*
+.playwright-mcp/
+*-screenshot.png
+*-screenshot.jpg
