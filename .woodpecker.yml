@@ -129,16 +129,6 @@ steps:
       event: [push, tag, manual]
       branch: dev
 
-  lighthouse:
-    image: node:22
-    commands:
-      - apt-get update && apt-get install -y libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2 libpango-1.0-0 libcairo2
-      - npm ci
-      - node lighthouse-audit.js
-    when:
-      event: [push, tag, manual]
-      branch: master
-
   cleanup:
     image: docker:27
     commands:
@@ -148,16 +138,6 @@ steps:
     when:
       event: [push, tag, manual]
       branch: dev
-
-  cleanup-prod:
-    image: docker:27
-    commands:
-      - docker images nemesisguy/nemesisnet --format "{{.Tag}}" | grep -v latest | grep -v "<none>" | sort -r | tail -n +3 | xargs -I {} docker rmi nemesisguy/nemesisnet:{} || true
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    when:
-      event: [push, tag, manual]
-      branch: master
 
   deploy-prod:
     image: alpine
@@ -208,6 +188,26 @@ steps:
         from_secret: TURNSTILE_SITE_KEY
       TURNSTILE_SECRET_KEY:
         from_secret: TURNSTILE_SECRET_KEY
+    when:
+      event: [push, tag, manual]
+      branch: master
+
+  lighthouse:
+    image: node:22
+    commands:
+      - apt-get update && apt-get install -y libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2 libpango-1.0-0 libcairo2
+      - npm ci
+      - node lighthouse-audit.js
+    when:
+      event: [push, tag, manual]
+      branch: master
+
+  cleanup-prod:
+    image: docker:27
+    commands:
+      - docker images nemesisguy/nemesisnet --format "{{.Tag}}" | grep -v latest | grep -v "<none>" | sort -r | tail -n +3 | xargs -I {} docker rmi nemesisguy/nemesisnet:{} || true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     when:
       event: [push, tag, manual]
       branch: master
