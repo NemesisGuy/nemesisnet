@@ -52,7 +52,7 @@
             <li><span>Stack:</span> <strong>React, PocketBase, SQLite</strong></li>
             <li><span>Role:</span> <strong>Architect & Developer</strong></li>
             <li><span>Status:</span> <strong>Live — Public Beta</strong></li>
-            <li><span>Deploy:</span> <strong>Docker (Frontend 8020, PB 8021)</strong></li>
+            <li><span>Deploy:</span> <strong>Docker</strong></li>
           </ul>
         </div>
         <div class="sidebar-card">
