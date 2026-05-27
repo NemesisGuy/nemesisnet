@@ -87,6 +87,16 @@
         </div>
       </div>
       <div class="card">
+        <span class="pill pill-client">SaaS Platform</span>
+        <img :src="'/images/projects/torquebooks/optimized/hero.webp'" alt="TorqueBooks" loading="lazy">
+        <h3>TorqueBooks</h3>
+        <p>Workshop management platform for South African auto shops — job cards, invoicing, CRM, and analytics.</p>
+        <div class="card-links">
+          <NuxtLink to="/projects/torquebooks" class="btn-glass">Detail</NuxtLink>
+          <a href="https://torquebooks.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
+        </div>
+      </div>
+      <div class="card">
         <span class="pill pill-saas">SaaS Platform</span>
         <img :src="'/images/projects/since/optimized/hero.webp'" alt="Since" loading="lazy">
         <h3>Since</h3>

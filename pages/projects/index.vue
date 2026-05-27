@@ -117,6 +117,16 @@
         <h2 class="project-group-title">Client Work / Full-Stack Builds</h2>
         <div class="projects-grid">
           <div class="card">
+            <img :src="'/images/projects/torquebooks/optimized/hero.webp'" alt="TorqueBooks" loading="lazy" width="1200" height="683">
+            <h3>TorqueBooks</h3>
+            <p>All-in-one workshop management platform for South African auto shops — job cards, invoicing, CRM, and analytics.</p>
+            <div class="project-links">
+              <NuxtLink class="btn-glass" to="/projects/torquebooks">Detail</NuxtLink>
+              <a class="btn-glass" href="https://torquebooks.nemesisnet.co.za" target="_blank">Live Demo</a>
+            </div>
+          </div>
+
+          <div class="card">
             <img :src="'/images/projects/onthegorentals/optimized/hero-v2.webp'" alt="OntheGoRentals" loading="lazy" width="202" height="188">
             <h3>OntheGoRentals</h3>
             <p>Full-stack reference build — bookings, rental history, admin dashboard, and rental management with Spring Boot and Vue.</p>

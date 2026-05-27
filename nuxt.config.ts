@@ -49,6 +49,7 @@ export default defineNuxtConfig({
         '/projects/voxnemesis-supertonic',
         '/projects/since',
         '/projects/pockettts-mcp',
+        '/projects/torquebooks',
         '/services',
         '/services/ai-development',
         '/services/self-hosted-ai',

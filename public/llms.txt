@@ -37,6 +37,7 @@ NemesisNet operates on the principle of digital sovereignty and architectural pu
 - **Kokoro TTS:** High-performance, local-first text-to-speech pipeline optimized for CPU inference with multilingual support.
 
 ### Custom SaaS & Frameworks
+- **TorqueBooks:** All-in-one workshop management platform for South African auto repair shops — job cards, invoicing, CRM, vehicle tracking, and analytics.
 - **Since:** Temporal claim registry for tracking predictions, recording events, setting deadlines, and verifying outcomes over time. Built with React, Express, and PocketBase for self-hosted accountability.
 - **ForkMyFolio:** A full-featured, enterprise-tested portfolio management engine complete with integration, unit, Playwright E2E, and k6 load-testing suites.
 - **CodeCritical:** Advanced SaaS platform for container security scanning, CVE tracking, and CI/CD vulnerability auditing.
