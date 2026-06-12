@@ -12,7 +12,7 @@
           <h2 class="project-group-title">AI & TTS</h2>
         <div class="projects-grid">
           <div class="card">
-            <img :src="'/images/projects/voxnemesis-supertonic/optimized/hero.webp'" alt="VoxNemesis Supertonic" loading="lazy" width="900" height="483">
+            <img src="/images/projects/voxnemesis-supertonic/optimized/hero.webp" srcset="/images/projects/voxnemesis-supertonic/optimized/hero-480.webp 480w, /images/projects/voxnemesis-supertonic/optimized/hero-640.webp 640w, /images/projects/voxnemesis-supertonic/optimized/hero.webp 800w" sizes="(max-width: 640px) 480px, 280px" alt="VoxNemesis Supertonic" loading="lazy" width="900" height="483">
             <h3>VoxNemesis Supertonic</h3>
             <p>A local-first, GPU-aware TTS browser extension that runs entirely in the browser using ONNX Runtime Web with WebGPU acceleration.</p>
             <div class="project-links">
@@ -23,7 +23,7 @@
           </div>
 
           <div class="card">
-            <img :src="'/images/projects/kokoro-tts-service/optimized/hero.webp'" alt="Kokoro TTS Service" loading="lazy" width="900" height="483">
+            <img src="/images/projects/kokoro-tts-service/optimized/hero.webp" srcset="/images/projects/kokoro-tts-service/optimized/hero-480.webp 480w, /images/projects/kokoro-tts-service/optimized/hero-640.webp 640w, /images/projects/kokoro-tts-service/optimized/hero.webp 900w" sizes="(max-width: 640px) 480px, 280px" alt="Kokoro TTS Service" loading="lazy" width="900" height="483">
             <h3>Kokoro TTS Service</h3>
             <p>A self-hosted AI text-to-speech web service built on top of the open-source Kokoro TTS engine — enabling natural-sounding speech synthesis via a user-friendly web interface.</p>
             <div class="project-links">
@@ -34,7 +34,7 @@
           </div>
 
           <div class="card">
-            <img :src="'/images/projects/pockettts-mcp/optimized/hero-480.webp'" alt="PocketTTS-MCP" loading="lazy" width="480" height="487" srcset="/images/projects/pockettts-mcp/optimized/hero-480.webp 480w, /images/projects/pockettts-mcp/optimized/hero.webp 800w" sizes="(max-width: 640px) 480px, 800px">
+            <img src="/images/projects/pockettts-mcp/optimized/hero.webp" srcset="/images/projects/pockettts-mcp/optimized/hero-480.webp 480w, /images/projects/pockettts-mcp/optimized/hero-640.webp 640w, /images/projects/pockettts-mcp/optimized/hero.webp 800w" sizes="(max-width: 640px) 480px, 280px" alt="PocketTTS-MCP" loading="lazy" width="480" height="487">
             <h3>PocketTTS-MCP</h3>
             <p>MCP server wrapping Kyutai Labs' Pocket TTS — local, open-source neural text-to-speech for AI agent workflows.</p>
             <div class="project-links">
@@ -44,7 +44,7 @@
           </div>
 
           <div class="card">
-            <img :src="'/images/projects/vibetype/optimized/hero.webp'" alt="Vibe-Type" loading="lazy" width="900" height="611">
+            <img src="/images/projects/vibetype/optimized/hero.webp" srcset="/images/projects/vibetype/optimized/hero-480.webp 480w, /images/projects/vibetype/optimized/hero-640.webp 640w, /images/projects/vibetype/optimized/hero.webp 900w" sizes="(max-width: 640px) 480px, 280px" alt="Vibe-Type" loading="lazy" width="900" height="611">
             <h3>Vibe-Type</h3>
             <p>An experimental AI-powered coding/typing assistant — offering voice or smart-typing support, to speed up coding and writing workflows.</p>
             <div class="project-links">
@@ -58,7 +58,7 @@
         <h2 class="project-group-title">SaaS Platforms</h2>
         <div class="projects-grid">
           <div class="card">
-            <img :src="'/images/projects/codecritical-saas/optimized/hero.webp'" alt="CodeCritical SaaS" loading="lazy" width="900" height="615">
+            <img src="/images/projects/codecritical-saas/optimized/hero.webp" srcset="/images/projects/codecritical-saas/optimized/hero-480.webp 480w, /images/projects/codecritical-saas/optimized/hero-640.webp 640w, /images/projects/codecritical-saas/optimized/hero.webp 1103w" sizes="(max-width: 640px) 480px, 280px" alt="CodeCritical SaaS" loading="lazy" width="900" height="615">
             <h3>CodeCritical SaaS</h3>
             <p>Enterprise security scanning SaaS with multi-tenant architecture, JWT auth, Redis job queue, and static analysis pipeline.</p>
             <div class="project-links">
@@ -68,7 +68,7 @@
           </div>
 
           <div class="card">
-            <img :src="'/images/projects/forkmyfolio/optimized/hero.webp'" alt="ForkMyFolio" loading="lazy" width="900" height="459">
+            <img src="/images/projects/forkmyfolio/optimized/hero.webp" srcset="/images/projects/forkmyfolio/optimized/hero-480.webp 480w, /images/projects/forkmyfolio/optimized/hero-640.webp 640w, /images/projects/forkmyfolio/optimized/hero.webp 900w" sizes="(max-width: 640px) 480px, 280px" alt="ForkMyFolio" loading="lazy" width="900" height="459">
             <h3>ForkMyFolio</h3>
             <p>A fully-featured, production-ready personal portfolio management system with dynamic project tracking, skill management, PDF export, and backup & restore capabilities.</p>
             <div class="project-links">
@@ -79,7 +79,7 @@
           </div>
 
           <div class="card">
-            <img :src="'/images/projects/since/optimized/hero.webp'" alt="Since" loading="lazy" width="900" height="615">
+            <img src="/images/projects/since/optimized/hero.webp" srcset="/images/projects/since/optimized/hero-480.webp 480w, /images/projects/since/optimized/hero-640.webp 640w, /images/projects/since/optimized/hero.webp 1200w" sizes="(max-width: 640px) 480px, 280px" alt="Since" loading="lazy" width="900" height="615">
             <h3>Since</h3>
             <p>Temporal claim registry — track predictions, record events, set deadlines, and verify outcomes over time.</p>
             <div class="project-links">
@@ -93,7 +93,7 @@
         <h2 class="project-group-title">Tools & Open Source</h2>
         <div class="projects-grid">
           <div class="card">
-            <img :src="'/images/projects/wordpress-mcp/optimized/hero.webp'" alt="WordPress MCP Server" loading="lazy" width="900" height="506">
+            <img src="/images/projects/wordpress-mcp/optimized/hero.webp" srcset="/images/projects/wordpress-mcp/optimized/hero-480.webp 480w, /images/projects/wordpress-mcp/optimized/hero-640.webp 640w, /images/projects/wordpress-mcp/optimized/hero.webp 800w" sizes="(max-width: 640px) 480px, 280px" alt="WordPress MCP Server" loading="lazy" width="900" height="506">
             <h3>WordPress MCP Server</h3>
             <p>Lightweight MCP bridge that lets AI agents read, update, and manage WordPress content securely via a local-first server.</p>
             <div class="project-links">
@@ -104,7 +104,7 @@
           </div>
 
           <div class="card">
-            <img :src="'/images/projects/codecritical/optimized/hero.webp'" alt="CodeCritical CLI" loading="lazy" width="900" height="615">
+            <img src="/images/projects/codecritical/optimized/hero.webp" srcset="/images/projects/codecritical/optimized/hero-480.webp 480w, /images/projects/codecritical/optimized/hero-640.webp 640w, /images/projects/codecritical/optimized/hero.webp 1170w" sizes="(max-width: 640px) 480px, 280px" alt="CodeCritical CLI" loading="lazy" width="900" height="615">
             <h3>CodeCritical CLI</h3>
             <p>Java code analysis tool — measures LOC, functions, classes, duplication, and maintainability index with markdown reports.</p>
             <div class="project-links">
@@ -117,7 +117,7 @@
         <h2 class="project-group-title">Client Work / Full-Stack Builds</h2>
         <div class="projects-grid">
           <div class="card">
-            <img :src="'/images/projects/torquebooks/optimized/hero.webp'" alt="TorqueBooks" loading="lazy" width="1200" height="683">
+            <img src="/images/projects/torquebooks/optimized/hero.webp" srcset="/images/projects/torquebooks/optimized/hero-480.webp 480w, /images/projects/torquebooks/optimized/hero-640.webp 640w, /images/projects/torquebooks/optimized/hero.webp 929w" sizes="(max-width: 640px) 480px, 280px" alt="TorqueBooks" loading="lazy" width="1200" height="683">
             <h3>TorqueBooks</h3>
             <p>Workshop management for auto shops — job cards, invoicing, CRM, vehicle tracking. React + PocketBase + OAuth2 SSO.</p>
             <div class="project-links">
@@ -127,7 +127,7 @@
           </div>
 
           <div class="card">
-            <img :src="'/images/projects/onthegorentals/optimized/hero-v2.webp'" alt="OntheGoRentals" loading="lazy" width="202" height="188">
+            <img src="/images/projects/onthegorentals/optimized/hero-v2.webp" srcset="/images/projects/onthegorentals/optimized/hero-480-v2.webp 480w, /images/projects/onthegorentals/optimized/hero-640-v2.webp 640w, /images/projects/onthegorentals/optimized/hero-v2.webp 1024w" sizes="(max-width: 640px) 480px, 280px" alt="OntheGoRentals" loading="lazy" width="202" height="188">
             <h3>OntheGoRentals</h3>
             <p>Full-stack reference build — bookings, rental history, admin dashboard, and rental management with Spring Boot and Vue.</p>
             <div class="project-links">
@@ -138,7 +138,7 @@
           </div>
 
           <div class="card">
-            <img :src="'/images/projects/nk-assessments/optimized/hero.webp'" alt="NK Assessments" loading="lazy" width="900" height="900">
+            <img src="/images/projects/nk-assessments/optimized/hero.webp" srcset="/images/projects/nk-assessments/optimized/hero-480.webp 480w, /images/projects/nk-assessments/optimized/hero-640.webp 640w, /images/projects/nk-assessments/optimized/hero.webp 900w" sizes="(max-width: 640px) 480px, 280px" alt="NK Assessments" loading="lazy" width="900" height="900">
             <h3>NK Assessments</h3>
             <p>Client-facing static portal built with HTML5, Bootstrap, and Dockerized Nginx — designed, shipped, and deployed in under 48 hours.</p>
             <div class="project-links">
@@ -149,7 +149,7 @@
           </div>
 
           <div class="card">
-            <img :src="'/images/projects/bored-room-cafe/optimized/hero.webp'" alt="Bored Room Cafe" loading="lazy" width="900" height="445">
+            <img src="/images/projects/bored-room-cafe/optimized/hero.webp" srcset="/images/projects/bored-room-cafe/optimized/hero-480.webp 480w, /images/projects/bored-room-cafe/optimized/hero-640.webp 640w, /images/projects/bored-room-cafe/optimized/hero.webp 900w" sizes="(max-width: 640px) 480px, 280px" alt="Bored Room Cafe" loading="lazy" width="900" height="445">
             <h3>Bored Room Cafe</h3>
             <p>A local homestyle takeaway and food-service spot based in Ferness Estate — showcasing local flavour and simple ordering for busy families.</p>
             <div class="project-links">
