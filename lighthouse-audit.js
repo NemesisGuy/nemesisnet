@@ -77,38 +77,51 @@ const mobileThresholds = {
   seo: 90
 };
 
-async function runLighthouse(url, name, device) {
-  const browser = await puppeteer.launch({
-    headless: 'new',
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--disable-dev-shm-usage',
-      '--disable-gpu'
-    ],
-    defaultViewport: device === 'mobile' ? { width: 375, height: 667 } : { width: 1920, height: 1080 }
-  });
+async function runLighthouse(url, name, device, retries = 2) {
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    if (attempt > 0) {
+      console.log(`   Retry ${attempt}/${retries} for ${name}...`);
+      await new Promise(r => setTimeout(r, 2000));
+    }
 
-  try {
-    const port = new URL(browser.wsEndpoint()).port;
-    
-    const { lhr } = await lighthouse(url, {
-      port,
-      output: 'json',
-      outputPath: path.join(__dirname, `lighthouse-report-${name}.json`),
-      onlyCategories: ['performance', 'accessibility', 'best-practices', 'seo'],
-      emulatedFormFactor: device === 'mobile' ? 'mobile' : 'desktop'
+    const browser = await puppeteer.launch({
+      headless: 'new',
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-gpu',
+        '--disable-extensions',
+        '--no-first-run',
+        '--single-process'
+      ],
+      defaultViewport: device === 'mobile' ? { width: 375, height: 667 } : { width: 1920, height: 1080 }
     });
 
-    return {
-      name,
-      device,
-      url,
-      categories: lhr.categories,
-      audits: lhr.audits
-    };
-  } finally {
-    await browser.close();
+    try {
+      const port = new URL(browser.wsEndpoint()).port;
+      
+      const { lhr } = await lighthouse(url, {
+        port,
+        output: 'json',
+        outputPath: path.join(__dirname, `lighthouse-report-${name}.json`),
+        onlyCategories: ['performance', 'accessibility', 'best-practices', 'seo'],
+        emulatedFormFactor: device === 'mobile' ? 'mobile' : 'desktop'
+      });
+
+      return {
+        name,
+        device,
+        url,
+        categories: lhr.categories,
+        audits: lhr.audits
+      };
+    } catch (err) {
+      console.error(`   Attempt ${attempt + 1} failed for ${name}: ${err.message}`);
+      if (attempt === retries) throw err;
+    } finally {
+      try { await browser.close(); } catch {}
+    }
   }
 }
 
@@ -193,6 +206,7 @@ async function main() {
     } catch (error) {
       console.error(`   Error testing ${route.name}: ${error.message}`);
     }
+    await new Promise(r => setTimeout(r, 1000));
   }
 
   const allPassed = printResults(results);
