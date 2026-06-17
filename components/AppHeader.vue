@@ -5,7 +5,7 @@
         <img :src="'/images/brand/Nemesis_Logo_Icon_nav.webp'" alt="NemesisNet Logo" width="48" height="48" loading="eager" decoding="async" fetchpriority="high">
         <span>NemesisNet</span>
       </NuxtLink>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" @click="toggleNav">
+      <button id="nav-toggle" class="nav-toggle" aria-label="Menu" aria-expanded="false" @click="toggleNav">
         <span class="glyph-icon" aria-hidden="true">☰</span>
       </button>
       <div class="nav-links">
@@ -15,20 +15,20 @@
         <a href="/#testimonials">Testimonials</a>
         <NuxtLink to="/contact">Contact</NuxtLink>
         <a href="https://blog.nemesisnet.co.za/" target="_blank" rel="noopener noreferrer" title="Visit the NemesisNet Blog" aria-label="NemesisNet Blog">Blog</a>
-        <button class="theme-toggle" id="aurora-toggle" @click="toggleAuroraMode" aria-label="Toggle Aurora Mode" title="Aurora Mode">
+        <button id="aurora-toggle" class="theme-toggle" aria-label="Toggle Aurora Mode" title="Aurora Mode" @click="toggleAuroraMode">
           <span class="glyph-icon" aria-hidden="true">✦</span>
         </button>
-        <button class="theme-toggle" id="nemesis-toggle" @click="toggleNemesisMode" aria-label="Toggle Nemesis Mode" title="Nemesis Mode">
+        <button id="nemesis-toggle" class="theme-toggle" aria-label="Toggle Nemesis Mode" title="Nemesis Mode" @click="toggleNemesisMode">
           <span class="glyph-icon" aria-hidden="true">⚙</span>
         </button>
-        <button class="theme-toggle" @click="toggleTheme" aria-label="Toggle light and dark theme" title="Toggle light and dark theme">
-          <span class="glyph-icon" id="theme-icon" aria-hidden="true">☀</span>
+        <button class="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle light and dark theme" @click="toggleTheme">
+          <span id="theme-icon" class="glyph-icon" aria-hidden="true">☀</span>
         </button>
       </div>
     </div>
   </nav>
   <ClientOnly>
-    <div id="nav-overlay" aria-hidden="true" @click="closeNav"></div>
+    <div id="nav-overlay" aria-hidden="true" @click="closeNav"/>
   </ClientOnly>
 </template>
 
@@ -50,7 +50,7 @@ onMounted(() => {
     if (aur === 'on') { isAurora.value = true; isNemesis.value = false }
     else if (nem === 'on') { isNemesis.value = true; isAurora.value = false }
     applyMode()
-  } catch(e) {}
+  } catch { /* localStorage unavailable */ }
 })
 
 function applyTheme(themeValue) {
@@ -65,7 +65,7 @@ function applyTheme(themeValue) {
     if (themeIcon) themeIcon.textContent = '☀'
   }
   currentTheme.value = next
-  try { localStorage.setItem('theme', next) } catch(e) {}
+  try { localStorage.setItem('theme', next) } catch { /* ignore */ }
 }
 
 function toggleTheme() {
@@ -84,20 +84,20 @@ function applyMode() {
     root.removeAttribute('data-nemesis')
     if (aurBtn) { aurBtn.classList.add('active'); aurBtn.setAttribute('aria-pressed','true') }
     if (nemBtn) { nemBtn.classList.remove('active'); nemBtn.setAttribute('aria-pressed','false') }
-    try { localStorage.setItem('aurora','on') } catch(e) {}
+    try { localStorage.setItem('aurora','on') } catch { /* ignore */ }
   } else if (isNemesis.value) {
     isAurora.value = false
     root.setAttribute('data-nemesis','on')
     root.removeAttribute('data-aurora')
     if (nemBtn) { nemBtn.classList.add('active'); nemBtn.setAttribute('aria-pressed','true') }
     if (aurBtn) { aurBtn.classList.remove('active'); aurBtn.setAttribute('aria-pressed','false') }
-    try { localStorage.setItem('nemesis','on') } catch(e) {}
+    try { localStorage.setItem('nemesis','on') } catch { /* ignore */ }
   } else {
     root.removeAttribute('data-aurora')
     root.removeAttribute('data-nemesis')
     if (aurBtn) { aurBtn.classList.remove('active'); aurBtn.setAttribute('aria-pressed','false') }
     if (nemBtn) { nemBtn.classList.remove('active'); nemBtn.setAttribute('aria-pressed','false') }
-    try { localStorage.setItem('aurora','off'); localStorage.setItem('nemesis','off') } catch(e) {}
+    try { localStorage.setItem('aurora','off'); localStorage.setItem('nemesis','off') } catch { /* ignore */ }
   }
 }
 

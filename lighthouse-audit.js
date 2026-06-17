@@ -1,6 +1,5 @@
 const puppeteer = require('puppeteer');
 const lighthouse = require('lighthouse').default || require('lighthouse');
-const fs = require('fs');
 const path = require('path');
 
 const BASE_URL = 'https://nemesisnet.co.za';
@@ -120,7 +119,7 @@ async function runLighthouse(url, name, device, retries = 2) {
       console.error(`   Attempt ${attempt + 1} failed for ${name}: ${err.message}`);
       if (attempt === retries) throw err;
     } finally {
-      try { await browser.close(); } catch {}
+      try { await browser.close(); } catch { /* already closed */ }
     }
   }
 }

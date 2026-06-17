@@ -7,6 +7,8 @@
     "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "build:docker": "npm run generate && wsl docker build --no-cache -t nemesisguy/nemesisnet:dev . && wsl docker push nemesisguy/nemesisnet:dev"
   },
   "dependencies": {
@@ -17,6 +19,8 @@
     "resend": "^6.12.3"
   },
   "devDependencies": {
+    "@nuxt/eslint-config": "^1.16.0",
+    "eslint": "^10.5.0",
     "lighthouse": "^13.3.0",
     "puppeteer": "^24.43.1",
     "sharp": "^0.34.5"
