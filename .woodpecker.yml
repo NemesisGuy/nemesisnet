@@ -3,6 +3,7 @@ steps:
     image: node:22
     commands:
       - npm ci
+      - npm run lint
       - npm run build
     environment:
       NUXT_PUBLIC_NO_INDEX: "true"
@@ -14,6 +15,7 @@ steps:
     image: node:22
     commands:
       - npm ci
+      - npm run lint
       - npm run build
     when:
       event: [push, tag, manual]

@@ -1,7 +1,5 @@
 <template>
-
-
-
+<div>
   <!-- Hero Section -->
   <header>
     <div class="hero-top">
@@ -193,7 +191,7 @@
             <option value="other">Other</option>
           </select>
           <label for="cmessage">Message</label>
-          <textarea id="cmessage" v-model="formMessage" placeholder="How can I help?" required :disabled="formStatus === 'sending'"></textarea>
+          <textarea id="cmessage" v-model="formMessage" placeholder="How can I help?" required :disabled="formStatus === 'sending'"/>
           <ClientOnly>
             <NuxtTurnstile v-model="turnstileToken" />
           </ClientOnly>
@@ -210,6 +208,7 @@
       <p class="contact-subnote">Available for remote engagements globally. Also available for WordPress, WooCommerce, and CMS projects — enquire directly.</p>
     </div>
   </section>
+</div>
 </template>
 
 <script setup>
@@ -228,7 +227,7 @@ if (import.meta.client) {
     const { token } = useTurnstile()
     turnstileToken.value = token.value || ''
     watch(token, (v) => { turnstileToken.value = v })
-  } catch {}
+  } catch { /* turnstile not available */ }
 }
 
 const handleContact = async (e) => {
@@ -249,7 +248,7 @@ const handleContact = async (e) => {
   const message = formMessage.value.trim()
 
   try {
-    const res = await $fetch('/api/contact', {
+    await $fetch('/api/contact', {
       method: 'POST',
       body: { token: turnstileToken.value, name, email, subject, message }
     })

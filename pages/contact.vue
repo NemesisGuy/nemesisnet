@@ -14,13 +14,13 @@
     <div class="contact-container">
       <div class="contact-form-section">
         <h2>Send a Message</h2>
-        <form @submit.prevent="handleSubmit" class="contact-form">
+        <form class="contact-form" @submit.prevent="handleSubmit">
           <div class="form-group">
             <label for="name">Name</label>
             <input 
-              type="text" 
               id="name" 
               v-model="form.name" 
+              type="text" 
               required 
               placeholder="Your name"
             >
@@ -29,9 +29,9 @@
           <div class="form-group">
             <label for="email">Email</label>
             <input 
-              type="email" 
               id="email" 
               v-model="form.email" 
+              type="email" 
               required 
               placeholder="your@email.com"
             >
@@ -58,15 +58,15 @@
               required 
               placeholder="Tell us about your project..."
               rows="6"
-            ></textarea>
+            />
           </div>
           
           <div v-if="form.subject === 'other'" class="form-group">
             <label for="other-subject">Other Subject</label>
             <input 
-              type="text" 
               id="other-subject" 
               v-model="form.otherSubject" 
+              type="text" 
               placeholder="What is this about?"
             >
           </div>
@@ -160,7 +160,7 @@ async function handleSubmit() {
   success.value = false
 
   try {
-    const response = await $fetch('/api/contact', {
+    await $fetch('/api/contact', {
       method: 'POST',
       body: {
         token: turnstileToken.value,

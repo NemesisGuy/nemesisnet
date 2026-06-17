@@ -1,9 +1,0 @@
-# Build artifacts
-.nuxt/
-.output/
-dist/
-node_modules/
-
-# Audit scripts (CLI tools, not production code)
-lighthouse-audit.js
-lighthouse-full-audit.js

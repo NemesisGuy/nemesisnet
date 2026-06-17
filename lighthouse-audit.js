@@ -1,6 +1,5 @@
 const puppeteer = require('puppeteer');
 const lighthouse = require('lighthouse').default || require('lighthouse');
-const fs = require('fs');
 const path = require('path');
 
 const BASE_URL = process.env.LIGHTHOUSE_URL || 'https://nemesisnet.co.za';
@@ -74,7 +73,7 @@ async function runLighthouse(url, name, retries = 2) {
         return { name, url, categories: null, error: err.message };
       }
     } finally {
-      if (browser) try { await browser.close(); } catch {}
+      if (browser) try { await browser.close(); } catch { /* already closed */ }
     }
   }
 }
