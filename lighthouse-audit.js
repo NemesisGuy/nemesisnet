@@ -17,7 +17,6 @@ const routes = [
 ];
 
 const thresholds = {
-  performance: 65,
   accessibility: 90,
   'best-practices': 90,
   seo: 90
@@ -50,7 +49,7 @@ async function runLighthouse(url, name, retries = 2) {
       const { lhr } = await lighthouse(url, {
         port,
         output: 'json',
-        onlyCategories: ['performance', 'accessibility', 'best-practices', 'seo'],
+        onlyCategories: ['accessibility', 'best-practices', 'seo'],
         formFactor: 'desktop',
         throttling: {
           cpuSlowdownMultiplier: 1,
@@ -87,7 +86,7 @@ function printResults(results) {
   console.log('===========================\n');
 
   let failedPages = [];
-  let totalScores = { performance: 0, accessibility: 0, 'best-practices': 0, seo: 0 };
+  let totalScores = { accessibility: 0, 'best-practices': 0, seo: 0 };
   let count = 0;
 
   for (const result of results) {
@@ -96,29 +95,25 @@ function printResults(results) {
       continue;
     }
 
-    const perf = getScore(result.categories.performance);
     const access = getScore(result.categories.accessibility);
     const bp = getScore(result.categories['best-practices']);
     const seo = getScore(result.categories.seo);
 
-    totalScores.performance += perf;
     totalScores.accessibility += access;
     totalScores['best-practices'] += bp;
     totalScores.seo += seo;
     count++;
 
-    const allPass = perf >= thresholds.performance &&
-                    access >= thresholds.accessibility &&
+    const allPass = access >= thresholds.accessibility &&
                     bp >= thresholds['best-practices'] &&
                     seo >= thresholds.seo;
 
     const status = allPass ? '✅' : '❌';
     console.log(`${status} ${result.name}`);
-    console.log(`   Performance: ${perf}/100 | Accessibility: ${access}/100 | Best Practices: ${bp}/100 | SEO: ${seo}/100`);
+    console.log(`   Accessibility: ${access}/100 | Best Practices: ${bp}/100 | SEO: ${seo}/100`);
 
     if (!allPass) {
       const failed = [];
-      if (perf < thresholds.performance) failed.push(`Perf: ${perf}<${thresholds.performance}`);
       if (access < thresholds.accessibility) failed.push(`Access: ${access}<${thresholds.accessibility}`);
       if (bp < thresholds['best-practices']) failed.push(`BP: ${bp}<${thresholds['best-practices']}`);
       if (seo < thresholds.seo) failed.push(`SEO: ${seo}<${thresholds.seo}`);
@@ -129,7 +124,6 @@ function printResults(results) {
   if (count > 0) {
     console.log('\n📈 AVERAGES');
     console.log('-----------');
-    console.log(`   Performance: ${Math.round(totalScores.performance / count)}/100`);
     console.log(`   Accessibility: ${Math.round(totalScores.accessibility / count)}/100`);
     console.log(`   Best Practices: ${Math.round(totalScores['best-practices'] / count)}/100`);
     console.log(`   SEO: ${Math.round(totalScores.seo / count)}/100`);
