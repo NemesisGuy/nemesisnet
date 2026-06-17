@@ -93,7 +93,7 @@ async function auditPage(pageUrl, pageName, retries = 2) {
         return { name: pageName, url: pageUrl, error: err.message };
       }
     } finally {
-      if (browser) try { await browser.close(); } catch {}
+      if (browser) try { await browser.close(); } catch { /* already closed */ }
     }
   }
 }

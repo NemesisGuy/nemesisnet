@@ -1,6 +1,5 @@
 const puppeteer = require('puppeteer');
 const lighthouse = require('lighthouse').default || require('lighthouse');
-const path = require('path');
 
 const BASE_URL = process.env.LIGHTHOUSE_URL || 'https://nemesisnet.co.za';
 
