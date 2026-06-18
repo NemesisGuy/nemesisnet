@@ -16,9 +16,9 @@ NemesisNet builds AI-powered platforms, backend systems, and automation infrastr
 ## Tech Stack
 
 - **Framework:** Nuxt 4.4.4
-- **Rendering:** SSR + Static Prerendering (25 pages)
+- **Rendering:** SSR + Static Prerendering (28 pages)
 - **Styling:** Custom CSS with glassmorphic UI
-- **Deployment:** Docker + nginx:1.27-alpine
+- **Deployment:** Docker + Node.js (Nitro SSR server)
 - **CI/CD:** Woodpecker CI
 - **Contact:** Resend + Cloudflare Turnstile
 
@@ -95,14 +95,11 @@ Detailed documentation is available in the `/docs` directory:
 
 ## Lighthouse Scores
 
-| Category | Score |
-|----------|-------|
-| Performance | 91/100 |
-| Accessibility | 98/100 |
-| Best Practices | 81/100 |
-| SEO | 99/100 |
+Target scores: Performance >90, Accessibility >90, Best Practices >90, SEO >90
 
-See [Lighthouse Testing](./docs/LIGHTHOUSE_TESTING.md) for multi-page testing details.
+Run audits with `node lighthouse-audit.js` (single page) or `node lighthouse-full-audit.js` (full site).
+
+See [Lighthouse Testing](./docs/LIGHTHOUSE_TESTING.md) for details.
 
 ## Image Optimization
 
@@ -114,12 +111,13 @@ See [Lighthouse Testing](./docs/LIGHTHOUSE_TESTING.md) for multi-page testing de
 ./optimize-images.sh codecritical-saas
 ```
 
-## Pages (25 Total)
+## Pages (28 Total)
 
 - Homepage (`/`)
-- Projects (`/projects`) + 12 project pages
+- Projects (`/projects`) + 14 project pages
 - Services (`/services`) + 6 service pages
 - About (`/about`)
+- Contact (`/contact`)
 - Legal (`/legal/privacy`, `/legal/terms`, `/legal/refund`)
 
 ## External Sites
@@ -134,6 +132,8 @@ See [Lighthouse Testing](./docs/LIGHTHOUSE_TESTING.md) for multi-page testing de
 | CodeCritical Demo | codecritical.nemesisnet.co.za |
 | Since Demo | since.nemesisnet.co.za |
 | ForkMyFolio | forkmyfolio.nemesisnet.co.za |
+| OnTheGoRentals | otgr.nemesisnet.co.za |
+| NK Assessments | nkassessments.nemesisnet.co.za |
 
 ## License
 

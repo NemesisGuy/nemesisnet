@@ -3,7 +3,20 @@
 .gitignore
 .vscode/
 .DS_Store
+Thumbs.db
 
-# Node and Python typical noise (just in case)
+# Ignore dev/CI artifacts
 node_modules/
-**/__pycache__/
+*.log
+.playwright-mcp/
+.pytest_cache/
+test-*.png
+*-screenshot.png
+*-screenshot.jpg
+full-site-audit.json
+lighthouse-new-report.json
+
+# Only include what the Dockerfile needs
+!public/
+!server/
+!.output/

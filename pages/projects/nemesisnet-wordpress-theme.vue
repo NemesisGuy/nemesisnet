@@ -6,16 +6,16 @@
       <div class="detail-main">
         <img :src="'/images/projects/nemesisnet-wordpress-theme/optimized/hero.webp'" class="detail-image" alt="NemesisNet WordPress Theme" loading="lazy">
 
-        <div class="demo-carousel" ref="carouselRef">
+        <div ref="carouselRef" class="demo-carousel">
           <div class="carousel-track" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
-            <div class="carousel-slide" v-for="(slide, i) in slides" :key="i">
+            <div v-for="(slide, i) in slides" :key="i" class="carousel-slide">
               <img :src="slide.src" :alt="slide.alt" loading="lazy" @click="openLightbox(i)">
             </div>
           </div>
-          <button class="carousel-btn carousel-btn--prev" @click="prevSlide" aria-label="Previous slide">&#8249;</button>
-          <button class="carousel-btn carousel-btn--next" @click="nextSlide" aria-label="Next slide">&#8250;</button>
+          <button class="carousel-btn carousel-btn--prev" aria-label="Previous slide" @click="prevSlide">&#8249;</button>
+          <button class="carousel-btn carousel-btn--next" aria-label="Next slide" @click="nextSlide">&#8250;</button>
           <div class="carousel-dots">
-            <button v-for="(_, i) in slides" :key="i" :class="['dot', { active: currentSlide === i }]" @click="currentSlide = i" :aria-label="'Slide ' + (i + 1)" />
+            <button v-for="(_, i) in slides" :key="i" :class="['dot', { active: currentSlide === i }]" :aria-label="'Slide ' + (i + 1)" @click="currentSlide = i" />
           </div>
         </div>
 
@@ -73,10 +73,10 @@
     </div>
 
     <div v-if="lightboxOpen" class="lightbox" @click.self="lightboxOpen = false">
-      <button class="lightbox-close" @click="lightboxOpen = false" aria-label="Close">&times;</button>
-      <button class="lightbox-prev" @click="lightboxPrev" aria-label="Previous">&#8249;</button>
+      <button class="lightbox-close" aria-label="Close" @click="lightboxOpen = false">&times;</button>
+      <button class="lightbox-prev" aria-label="Previous" @click="lightboxPrev">&#8249;</button>
       <img :src="slides[lightboxIndex].src" :alt="slides[lightboxIndex].alt" class="lightbox-img">
-      <button class="lightbox-next" @click="lightboxNext" aria-label="Next">&#8250;</button>
+      <button class="lightbox-next" aria-label="Next" @click="lightboxNext">&#8250;</button>
     </div>
   </div>
 </template>

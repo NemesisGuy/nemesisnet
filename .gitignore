@@ -8,6 +8,9 @@ Thumbs.db
 .env
 .env.*
 .playwright-mcp/
+.pytest_cache/
 *-screenshot.png
 *-screenshot.jpg
 test-*.png
+full-site-audit.json
+lighthouse-new-report.json

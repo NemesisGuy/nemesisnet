@@ -4,21 +4,21 @@ This document details the Lighthouse CI configuration, testing approach, and how
 
 ## Overview
 
-Lighthouse testing is integrated into the Woodpecker CI pipeline to ensure performance, accessibility, best practices, and SEO quality across all important pages.
+Lighthouse testing is integrated into the Woodpecker CI pipeline to ensure accessibility, best practices, and SEO quality across all important pages. Performance is not audited in CI because network latency skews results.
 
 ## Current Configuration
 
-### Test Categories
-- **Performance** - Page load speed, Core Web Vitals
+### Test Categories (CI Only)
 - **Accessibility** - ARIA, contrast, keyboard navigation
 - **Best Practices** - Security, HTTPS, modern APIs
 - **SEO** - Meta tags, mobile-friendliness, crawlability
+
+> **Note**: Performance is intentionally excluded from CI audits. Cloudflare proxy + VPS latency makes performance scores unreliable. Run performance audits locally instead.
 
 ### Thresholds (Fail if below)
 
 | Category | Threshold |
 |----------|-----------|
-| Performance | 80 |
 | Accessibility | 90 |
 | Best Practices | 90 |
 | SEO | 90 |
@@ -29,10 +29,11 @@ Lighthouse testing is integrated into the Woodpecker CI pipeline to ensure perfo
 
 | Route | Priority | Device |
 |-------|----------|--------|
-| `/` | Critical | Desktop + Mobile |
+| `/` | Critical | Desktop |
 | `/projects` | High | Desktop |
 | `/services` | High | Desktop |
 | `/about` | Medium | Desktop |
+| `/contact` | Medium | Desktop |
 | `/services/custom-software` | High | Desktop |
 | `/services/saas-development` | High | Desktop |
 | `/services/ai-development` | High | Desktop |
@@ -48,6 +49,7 @@ Lighthouse testing is integrated into the Woodpecker CI pipeline to ensure perfo
 | `/projects/since` | High | Desktop |
 | `/projects/voxnemesis-supertonic` | High | Desktop |
 | `/projects/pockettts-mcp` | High | Desktop |
+| `/projects/nemesisnet-wordpress-theme` | High | Desktop |
 
 ### Legal Pages
 
@@ -59,46 +61,28 @@ Lighthouse testing is integrated into the Woodpecker CI pipeline to ensure perfo
 
 ## Route Manifest
 
-Routes are defined in a JSON manifest for easy maintenance:
-
-```json
-[
-  { "path": "/", "priority": "critical", "device": "desktop, mobile" },
-  { "path": "/projects", "priority": "high", "device": "desktop" }
-]
-```
+Routes are defined directly in `lighthouse-audit.js`. No external JSON file is needed.
 
 ## Adding New Routes
 
-### Option A: Add to Route Manifest
-
-1. Open `lighthouse-routes.json` in project root
-2. Add new route entry:
-
-```json
-{
-  "path": "/new-page",
-  "priority": "high",
-  "device": "desktop"
-}
-```
-
-3. Commit changes - CI will automatically test the new route
-
-### Option B: Update Lighthouse Script
+### Option A: Update Lighthouse Script
 
 1. Open `lighthouse-audit.js`
 2. Add URL to the routes array:
 
 ```javascript
 const routes = [
-  'https://dev.nemesisnet.co.za/',
-  'https://dev.nemesisnet.co.za/projects',
+  'https://nemesisnet.co.za/',
+  'https://nemesisnet.co.za/projects',
   // Add new route here
 ];
 ```
 
-3. Commit changes
+3. Commit changes - CI will automatically test the new route
+
+### Option B: Create a Dedicated Script
+
+For specialized audits, create a new script that imports the shared config from `lighthouse-audit.js`.
 
 ## Understanding Results
 
@@ -119,14 +103,6 @@ const routes = [
 
 ## Debugging Failures
 
-### Performance Issues
-
-1. Check Lighthouse report in CI artifacts
-2. Review specific audit failures:
-   - **Render-blocking resources** - Minify CSS/JS
-   - **Large layouts** - Optimize images
-   - **Slow server response** - Check hosting
-
 ### Accessibility Issues
 
 1. Review failed accessibility audits
@@ -145,6 +121,12 @@ const routes = [
    - Viewport meta tag
    - Document has lang attribute
 
+### Best Practices Issues
+
+1. Check for mixed content (HTTP on HTTPS)
+2. Verify console errors
+3. Review deprecated APIs
+
 ## CI Artifacts
 
 Lighthouse reports are saved as CI artifacts:
@@ -154,19 +136,9 @@ Lighthouse reports are saved as CI artifacts:
 
 Access via Woodpecker CI artifacts section after build.
 
-## Skipping Tests
+## Performance Budget (Local Testing)
 
-To skip Lighthouse for a specific commit:
-
-```bash
-git commit --allow-empty -m "chore: skip lighthouse"
-```
-
-Or add `[skip lighthouse]` to commit message.
-
-## Performance Budget
-
-Recommended budgets:
+Recommended budgets for local performance audits:
 
 | Resource | Budget |
 |----------|--------|
@@ -181,11 +153,11 @@ Recommended budgets:
 2. **Address regressions** - Fix before deploying
 3. **Optimize images** - Use WebP with srcset
 4. **Lazy load** - Defer off-screen content
-5. **Cache headers** - Configure nginx caching
+5. **Cache headers** - Configure Cloudflare caching
 
 ## Integration with Woodpecker
 
-The Lighthouse step runs after deployment to test the live version:
+The Lighthouse step runs after deployment to test the live version on master:
 
 ```yaml
 lighthouse:
@@ -195,7 +167,7 @@ lighthouse:
     - node lighthouse-audit.js
   when:
     event: [push, tag, manual]
-    branch: dev
+    branch: master
 ```
 
 ### Failure Handling
@@ -203,10 +175,3 @@ lighthouse:
 - Pipeline fails if any threshold not met
 - Review artifacts for detailed report
 - Fix issues in code and redeploy
-
-## Questions?
-
-For issues or questions about Lighthouse testing:
-1. Check CI logs for specific failures
-2. Review Lighthouse documentation
-3. Examine browser DevTools

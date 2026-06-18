@@ -4,14 +4,6 @@ export default defineNuxtConfig({
   turnstile: {
     siteKey: '0x4AAAAAADPNJc2ObjAJrmVf'
   },
-  app: {
-    head: {
-      meta: [
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        ...(process.env.NUXT_PUBLIC_NO_INDEX === 'true' ? [{ name: 'robots', content: 'noindex, nofollow' }] : [])
-      ]
-    }
-  },
   runtimeConfig: {
     public: {
       noIndex: process.env.NUXT_PUBLIC_NO_INDEX === 'true'
@@ -76,7 +68,8 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-        { name: 'description', content: 'NemesisNet engineers AI-powered platforms, backend systems, and automation infrastructure.' }
+        { name: 'description', content: 'NemesisNet engineers AI-powered platforms, backend systems, and automation infrastructure.' },
+        ...(process.env.NUXT_PUBLIC_NO_INDEX === 'true' ? [{ name: 'robots', content: 'noindex, nofollow' }] : [])
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/images/brand/Nemesis_Logo_Icon.ico' },

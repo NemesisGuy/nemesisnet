@@ -30,20 +30,20 @@ wsl docker push nemesisguy/nemesisnet:dev
 ```bash
 docker pull nemesisguy/nemesisnet:dev
 docker stop nemesisnet && docker rm nemesisnet
-docker run -d --name nemesisnet -p 80:80 nemesisguy/nemesisnet:dev
+docker run -d --name nemesisnet -p 80:3000 nemesisguy/nemesisnet:dev
 ```
 
 ## Project Structure
 
 - **Framework**: Nuxt 4 (SSR + static prerendering)
-- **Output**: Static files in `.output/public/` served by nginx
-- **Dockerfile**: Uses `nginx:1.27-alpine` to serve static output
+- **Output**: `.output/` directory served by Node.js (Nitro SSR server)
+- **Dockerfile**: Uses `node:20-alpine` with Nitro SSR server
 - **Docker Hub**: `nemesisguy/nemesisnet:dev`
 
 ## Common Mistakes to Avoid
 
 1. **Never run `docker` directly in PowerShell** - it will fail. Always prefix with `wsl`.
-2. **Always run `npm run build` before `docker build`** - the Dockerfile copies `.output/public/` which must exist.
+2. **Always run `npm run build` before `docker build`** - the Dockerfile copies `.output/` which must exist.
 3. **Always use `--no-cache` for Docker builds** - ensures fresh static assets are included.
 
 ## Image Optimization (ImageMagick in WSL)
@@ -99,7 +99,7 @@ Run site-wide Lighthouse audits to check performance:
 # Single page audit
 node lighthouse-audit.js
 
-# Full site audit (all 22 pages)
+# Full site audit (all 27 pages)
 node lighthouse-full-audit.js
 ```
 

@@ -59,22 +59,22 @@ flowchart TD
     subgraph "Projects Branch"
         HPJ --> PJ["/projects"]
         PJ --> PJ1["CodeCritical SaaS"]
-        PJ --> PJ2[Since]
-        PJ --> PJ3[VoxNemesis Supertonic]
-        PJ --> PJ4[PocketTTS-MCP]
-        PJ --> PJ5[Kokoro TTS]
-        PJ --> PJ6[WordPress MCP]
-        PJ --> PJ7[Vibe-Type]
-        PJ --> PJ8[ForkMyFolio]
-        PJ --> PJ9[OnTheGoRentals]
-        PJ --> PJ10[NK Assessments]
+        PJ --> PJ2["Since"]
+        PJ --> PJ3["VoxNemesis Supertonic"]
+        PJ --> PJ4["PocketTTS-MCP"]
+        PJ --> PJ5["Kokoro TTS"]
+        PJ --> PJ6["WordPress MCP"]
+        PJ --> PJ7["Vibe-Type"]
+        PJ --> PJ8["ForkMyFolio"]
+        PJ --> PJ9["OnTheGoRentals"]
+        PJ --> PJ10["NK Assessments"]
+        PJ --> PJ11["NemesisNet WordPress Theme"]
     end
 
     subgraph "Legal Branch"
-        H --> LG["/legal"]
-        LG --> LGP["Privacy"]
-        LGT["Terms"]
-        LGR["Refund"]
+        H --> LGP["/legal/privacy"]
+        H --> LGT["/legal/terms"]
+        H --> LGR["/legal/refund"]
     end
 ```
 
@@ -240,24 +240,28 @@ flowchart TB
 
     subgraph "CI/CD"
         WP[Woodpecker CI]
-        BUILD[Build & Test]
-        LH[Lighthouse Audit]
+        LINT[Lint]
+        BUILD[Build]
         DOCKER[Docker Build & Push]
+        DEPLOY[Portainer Deploy]
+        LH[Lighthouse Audit]
+        CLEAN[Cleanup]
     end
 
     subgraph "Production"
         DH[Docker Hub]
         PORT[Portainer]
-        NGINX[Nginx Reverse Proxy]
-        PROD[Production Server]
+        PROD[VPS Server]
     end
 
     DEV --> GITHUB
     GITHUB --> WP
-    WP --> BUILD
-    BUILD --> LH
-    LH --> DOCKER
-    DOCKER --> DH
+    WP --> LINT
+    LINT --> BUILD
+    BUILD --> DOCKER
+    DOCKER --> DEPLOY
+    DEPLOY --> LH
+    LH --> CLEAN
     DH --> PORT
     PORT --> PROD
 ```
@@ -266,10 +270,10 @@ flowchart TB
 
 | Component | Technology | Version |
 |-----------|------------|---------|
-| Framework | Nuxt | 4.4.4 |
+| Framework | Nuxt | 4.4.8 |
 | Runtime | Node.js | 22 |
 | Styling | Custom CSS | - |
-| Deployment | Docker + nginx | 1.27-alpine |
+| Deployment | Docker + Nitro SSR | node:20-alpine |
 | CI/CD | Woodpecker | - |
 | Contact | Resend + Turnstile | - |
 | Hosting | Self-hosted VPS | - |

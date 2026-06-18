@@ -4,52 +4,63 @@ This document details the Woodpecker CI pipeline configuration, deployment proce
 
 ## Pipeline Overview
 
+The CI has two parallel pipelines: **dev** and **prod**, triggered by pushes to their respective branches.
+
 ```mermaid
 flowchart TB
-    subgraph "Woodpecker CI"
-        TRIGGER[Git Push]
-        BUILD[Build - npm ci && npm run build]
-        DOCKER_BUILD[Docker Build]
-        DOCKER_PUSH[Docker Push to Hub]
-        DEPLOY[Portainer Deploy]
-        LH[Lighthouse Audit]
-        CLEAN[Cleanup Old Images]
+    subgraph "Dev Pipeline"
+        DEV_PUSH[Push to dev]
+        DEV_LINT[Lint]
+        DEV_BUILD[Build]
+        DEV_DOCKER[Docker Build & Push]
+        DEV_DEPLOY[Deploy to Dev]
+        DEV_CLEAN[Cleanup]
+
+        DEV_PUSH --> DEV_LINT --> DEV_BUILD --> DEV_DOCKER --> DEV_DEPLOY --> DEV_CLEAN
     end
 
-    TRIGGER --> BUILD
-    BUILD --> DOCKER_BUILD
-    DOCKER_BUILD --> DOCKER_PUSH
-    DOCKER_PUSH --> DEPLOY
-    DEPLOY --> LH
-    LH --> CLEAN
+    subgraph "Prod Pipeline"
+        PROD_PUSH[Push to master]
+        PROD_LINT[Lint]
+        PROD_BUILD[Build]
+        PROD_DOCKER[Docker Build & Push]
+        PROD_DEPLOY[Deploy to Prod]
+        PROD_LH[Lighthouse Audit]
+        PROD_CLEAN[Cleanup]
+
+        PROD_PUSH --> PROD_LINT --> PROD_BUILD --> PROD_DOCKER --> PROD_DEPLOY --> PROD_LH --> PROD_CLEAN
+    end
 ```
 
 ## Pipeline Steps
 
-### 1. Build
+### Shared Steps (Both Dev & Prod)
+
+#### 1. Lint
 - **Image**: node:22
 - **Commands**:
   - `npm ci` - Install dependencies
-  - `npm run build` - Production build with Nuxt
+  - `npm run lint` - Run ESLint
 - **Conditions**: Push, tag, manual
 
-### 2. Docker Build
+#### 2. Build
+- **Image**: node:22
+- **Commands**:
+  - `npm run build` - Production build with Nuxt
+  - Dev: `NUXT_PUBLIC_NO_INDEX=true npm run build`
+  - Prod: `npm run build` (no NO_INDEX)
+- **Conditions**: Push, tag, manual
+
+#### 3. Docker Build & Push
 - **Image**: docker:27
 - **Commands**:
   - Login to Docker Hub
-  - Build with tags: `dev` and `${CI_COMMIT_SHA}`
+  - Build with tags: `dev` or `prod` and `${CI_COMMIT_SHA}`
+  - Push `nemesisguy/nemesisnet:<tag>`
 - **Secrets**: DOCKER_USERNAME, DOCKER_PASSWORD
 - **Volumes**: Docker socket
 
-### 3. Docker Push
-- **Image**: docker:27
-- **Commands**:
-  - Login to Docker Hub
-  - Push `nemesisguy/nemesisnet:dev`
-  - Push `nemesisguy/nemesisnet:${CI_COMMIT_SHA}`
-- **Conditions**: Push, tag, manual, branch: dev
-
-### 4. Deploy
+#### 4. Deploy
 - **Image**: curlimages/curl
 - **Commands**:
   - PUT to Portainer API to update stack
@@ -57,23 +68,30 @@ flowchart TB
   - `prune: true` to recreate containers
   - `forceRecreate: true` to ensure new image used
 - **Secrets**: PORTAINER_API_KEY
-- **Conditions**: Push, tag, manual, branch: dev
+- **Portainer Stack IDs**: Dev = 82, Prod = 32
 
-### 5. Lighthouse Audit
-- **Image**: node:22
-- **Commands**:
-  - Install Chrome dependencies
-  - Run npm ci
-  - Execute lighthouse-audit.js
-- **Conditions**: Push, tag, manual, branch: dev
-- **Output**: Lighthouse report JSON
+### Dev-Only Steps
 
-### 6. Cleanup
+#### Cleanup
 - **Image**: docker:27
 - **Commands**:
   - Remove old local images
   - Keep only latest 2 SHA-tagged images
-- **Conditions**: Push, tag, manual, branch: dev
+
+### Prod-Only Steps
+
+#### 5. Lighthouse Audit
+- **Image**: node:22
+- **Commands**:
+  - Install Chrome dependencies
+  - `npm ci`
+  - `node lighthouse-audit.js`
+- **Conditions**: Push, tag, manual, branch: master
+- **Audits**: accessibility, best-practices, seo (no performance — CI latency skews it)
+- **Output**: Lighthouse report JSON
+
+#### 6. Cleanup
+- Remove old local images
 
 ## Environment Variables
 
@@ -91,22 +109,9 @@ flowchart TB
 - **Usage**: Login to Docker Hub for push
 
 ### Portainer
-- **Name**: portainer_api_key
+- **Name**: PORTAINER_API_KEY
 - **Level**: Repository
 - **Usage**: API authentication for deploy
-
-## Triggers
-
-### Push to Dev Branch
-```yaml
-when:
-  event: [push, tag, manual]
-  branch: dev
-```
-
-### Manual Trigger
-- Use Woodpecker "Run Pipeline" button
-- Select branch and event type
 
 ## Deployment Flow
 
@@ -115,13 +120,15 @@ when:
 npm run dev
 ```
 
-### CI Deployment
+### CI Deployment (Dev)
 1. Push to dev branch
 2. Woodpecker triggers pipeline
-3. Build runs in node:22 container
-4. Docker image built and pushed
-5. Portainer pulls and redeploys
-6. Lighthouse tests deployed version
+3. Lint → Build → Docker Build & Push → Deploy to dev stack (82)
+
+### CI Deployment (Prod)
+1. Push to master branch
+2. Woodpecker triggers pipeline
+3. Lint → Build → Docker Build & Push → Deploy to prod stack (32) → Lighthouse audit
 
 ### Manual Deploy
 ```bash
@@ -146,7 +153,6 @@ git push origin dev
 **Docker login fails**
 - Verify secrets are set correctly
 - Check DOCKER_USERNAME and DOCKER_PASSWORD
-- Ensure repo has permission for the registry
 
 **Docker build fails**
 - Check Dockerfile syntax
@@ -156,7 +162,7 @@ git push origin dev
 ### Deploy Failures
 
 **Portainer API returns 400**
-- Verify stack ID is correct (82)
+- Verify stack ID is correct (82 for dev, 32 for prod)
 - Check endpointId is correct (3)
 - Ensure JSON payload is valid
 
@@ -209,41 +215,9 @@ git revert HEAD
 git push origin dev
 ```
 
-## Adding New Pipeline Steps
-
-1. Edit `.woodpecker.yml`
-2. Add step with required configuration
-3. Test locally before pushing
-
-Example:
-```yaml
-new-step:
-  image: node:22
-  commands:
-    - npm ci
-    - npm run new-task
-  when:
-    event: [push, tag, manual]
-    branch: dev
-```
-
 ## Security Considerations
 
 - Store secrets in Woodpecker, not in code
 - Use `from_secret` for sensitive values
 - Limit secret access to required repos
 - Rotate credentials periodically
-
-## Performance
-
-- Pipeline typically completes in 5-10 minutes
-- Build step: ~2-3 minutes
-- Docker build: ~1-2 minutes
-- Deploy: ~30 seconds
-- Lighthouse: ~2-3 minutes
-
-## Links
-
-- [Woodpecker CI Docs](https://woodpecker-ci.org/docs)
-- [Portainer API Docs](https://documentation.portainer.io/)
-- [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci)

@@ -9,7 +9,7 @@
     "preview": "nuxt preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "build:docker": "npm run generate && wsl docker build --no-cache -t nemesisguy/nemesisnet:dev . && wsl docker push nemesisguy/nemesisnet:dev"
+    "build:docker": "npm run build && wsl docker build --no-cache -t nemesisguy/nemesisnet:dev . && wsl docker push nemesisguy/nemesisnet:dev"
   },
   "dependencies": {
     "@nuxt/scripts": "^1.2.1",
