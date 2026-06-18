@@ -6,7 +6,10 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      meta: process.env.NUXT_PUBLIC_NO_INDEX === 'true' ? [{ name: 'robots', content: 'noindex, nofollow' }] : []
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        ...(process.env.NUXT_PUBLIC_NO_INDEX === 'true' ? [{ name: 'robots', content: 'noindex, nofollow' }] : [])
+      ]
     }
   },
   runtimeConfig: {
