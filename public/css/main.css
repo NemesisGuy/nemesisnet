@@ -158,6 +158,9 @@ html:not([data-theme="light"]) .avatar-wrap:hover::after{
 }
 
 * { margin:0; padding:0; box-sizing:border-box; font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; }
+html, body {
+  overflow-x: hidden;
+}
 html { 
   scroll-behavior: auto !important;
   scroll-padding-top: 0;
@@ -165,6 +168,7 @@ html {
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 body {
