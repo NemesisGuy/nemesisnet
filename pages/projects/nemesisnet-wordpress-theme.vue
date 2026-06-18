@@ -8,7 +8,7 @@
 
         <div ref="carouselRef" class="demo-carousel">
           <div class="carousel-track" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
-            <div v-for="(slide, i) in slides" :key="i" class="carousel-slide">
+            <div v-for="(slide, i) in slides" :key="slide.src" class="carousel-slide">
               <img :src="slide.src" :alt="slide.alt" loading="lazy" @click="openLightbox(i)">
             </div>
           </div>
@@ -17,6 +17,7 @@
           <div class="carousel-dots">
             <button v-for="(_, i) in slides" :key="i" :class="['dot', { active: currentSlide === i }]" :aria-label="'Slide ' + (i + 1)" @click="currentSlide = i" />
           </div>
+          <div class="carousel-mode-label">{{ isLight ? '☀ Light mode' : '☾ Dark mode' }} screenshots — toggle theme above to see both modes</div>
         </div>
 
         <h2>The Challenge</h2>
@@ -85,8 +86,9 @@
 const currentSlide = ref(0)
 const lightboxOpen = ref(false)
 const lightboxIndex = ref(0)
+const isLight = ref(false)
 
-const slides = [
+const darkSlides = [
   { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-hero.webp', alt: 'Theme Hero Section' },
   { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-cards.webp', alt: 'Glassmorphic Cards' },
   { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-components.webp', alt: 'Component Library' },
@@ -94,15 +96,34 @@ const slides = [
   { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-nav.webp', alt: 'Navigation & Footer' },
 ]
 
-function nextSlide() { currentSlide.value = (currentSlide.value + 1) % slides.length }
-function prevSlide() { currentSlide.value = (currentSlide.value - 1 + slides.length) % slides.length }
+const lightSlides = [
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-demo-hero.webp', alt: 'Theme Hero Section' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-demo-cards.webp', alt: 'Glassmorphic Cards' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-demo-components.webp', alt: 'Component Library' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-demo-features.webp', alt: 'Feature Blocks' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-demo-nav.webp', alt: 'Navigation & Footer' },
+]
+
+const slides = computed(() => isLight.value ? lightSlides : darkSlides)
+
+function nextSlide() { currentSlide.value = (currentSlide.value + 1) % slides.value.length }
+function prevSlide() { currentSlide.value = (currentSlide.value - 1 + slides.value.length) % slides.value.length }
 function openLightbox(i) { lightboxIndex.value = i; lightboxOpen.value = true }
-function lightboxNext() { lightboxIndex.value = (lightboxIndex.value + 1) % slides.length }
-function lightboxPrev() { lightboxIndex.value = (lightboxIndex.value - 1 + slides.length) % slides.length }
+function lightboxNext() { lightboxIndex.value = (lightboxIndex.value + 1) % slides.value.length }
+function lightboxPrev() { lightboxIndex.value = (lightboxIndex.value - 1 + slides.value.length) % slides.value.length }
 
 onMounted(() => {
+  const saved = localStorage.getItem('theme') || 'dark'
+  isLight.value = saved === 'light'
+
+  const observer = new MutationObserver(() => {
+    isLight.value = document.documentElement.getAttribute('data-theme') === 'light'
+    currentSlide.value = 0
+  })
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
+
   const autoplay = setInterval(nextSlide, 5000)
-  onUnmounted(() => clearInterval(autoplay))
+  onUnmounted(() => { clearInterval(autoplay); observer.disconnect() })
 })
 
 useHead({
@@ -188,6 +209,7 @@ useHead({
 .carousel-dots { display: flex; justify-content: center; gap: 8px; padding: 12px 0; }
 .dot { width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--glass-border); background: transparent; cursor: pointer; transition: all 0.3s; }
 .dot.active { background: var(--accent-color); border-color: var(--accent-color); }
+.carousel-mode-label { text-align: center; font-size: 0.75rem; color: var(--text-muted); padding: 4px 0 8px; opacity: 0.7; }
 
 /* Lightbox */
 .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 10001; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(8px); }
