@@ -100,9 +100,9 @@ useHead({
 </script>
 
 <style scoped>
-.detail-page { background: var(--bg-gradient); min-height: 100vh; padding: 0 20px; overflow-x: hidden; }
-.detail-container { max-width: 1000px; margin: 0 auto; padding: 24px 0 40px; display: grid; grid-template-columns: 1fr 300px; gap: 60px; }
-.detail-main { text-align: left; line-height: 1.8; }
+.detail-page { background: var(--bg-gradient); min-height: 100vh; }
+.detail-container { max-width: 1000px; margin: 0 auto; padding: 24px 20px 40px; display: grid; grid-template-columns: 1fr 300px; gap: 60px; }
+.detail-main { text-align: left; line-height: 1.8; min-width: 0; overflow: hidden; }
 .detail-main h2 { font-size: 2rem; margin: 40px 0 20px; text-align: left; }
 .detail-main p { color: var(--text-muted); margin-bottom: 20px; }
 .detail-image { width: 100%; height: auto; border-radius: 20px; border: 1px solid var(--glass-border); margin: 30px 0; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }

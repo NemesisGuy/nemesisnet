@@ -2391,6 +2391,11 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
   padding-top: 24px;
 }
 
+/* Fix grid items overflowing container on mobile */
+.detail-main {
+  min-width: 0;
+}
+
 .breadcrumbs {
   margin-top: 70px;
   padding: 4px 16px !important;
