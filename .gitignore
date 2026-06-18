@@ -10,3 +10,4 @@ Thumbs.db
 .playwright-mcp/
 *-screenshot.png
 *-screenshot.jpg
+test-*.png
