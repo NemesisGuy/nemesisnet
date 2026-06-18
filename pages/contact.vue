@@ -72,7 +72,9 @@
           </div>
           
           <div class="form-group">
-            <NuxtTurnstile v-model="turnstileToken" />
+            <ClientOnly>
+              <NuxtTurnstile v-model="turnstileToken" />
+            </ClientOnly>
           </div>
           
           <button type="submit" class="btn-primary" :disabled="submitting || !turnstileToken">

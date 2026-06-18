@@ -238,6 +238,9 @@ useHead({
   .project-links :deep(.btn-glass) {
     width: 100%;
   }
+  .projects-grid .card {
+    width: 100%;
+  }
 }
 
 .breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; padding-left: 20px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
