@@ -112,6 +112,17 @@
               <NuxtLink class="btn-glass" to="/projects/codecritical-cli">Detail</NuxtLink>
             </div>
           </div>
+
+          <div class="card">
+            <img src="/images/projects/nemesisnet-wordpress-theme/optimized/hero.webp" srcset="/images/projects/nemesisnet-wordpress-theme/optimized/hero-480.webp 480w, /images/projects/nemesisnet-wordpress-theme/optimized/hero-640.webp 640w, /images/projects/nemesisnet-wordpress-theme/optimized/hero.webp 800w" sizes="(max-width: 640px) 480px, 280px" alt="NemesisNet WordPress Theme" loading="lazy" width="256" height="256">
+            <h3>NemesisNet WordPress Theme</h3>
+            <p>Custom WordPress theme built on the NemesisNet brand — glassmorphic dark/light UI, component library, and Umami analytics.</p>
+            <div class="project-links">
+              <a class="btn-glass" href="https://github.com/NemesisGuy/NemesisNet-WordPress-Theme" target="_blank">Source</a>
+              <NuxtLink class="btn-glass" to="/projects/nemesisnet-wordpress-theme">Detail</NuxtLink>
+              <a class="btn-glass" href="https://blog.nemesisnet.co.za" target="_blank">Live Demo</a>
+            </div>
+          </div>
         </div>
 
         <h2 class="project-group-title">Client Work / Full-Stack Builds</h2>

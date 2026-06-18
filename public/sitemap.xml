@@ -85,6 +85,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://nemesisnet.co.za/projects/nemesisnet-wordpress-theme</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://nemesisnet.co.za/projects/nk-assessments</loc>
     <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>

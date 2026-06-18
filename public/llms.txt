@@ -46,6 +46,7 @@ NemesisNet operates on the principle of digital sovereignty and architectural pu
 
 ### Tools & Open Source
 - **WordPress MCP Server:** Lightweight MCP bridge that lets AI agents read, update, and manage WordPress content securely via a local-first server.
+- **NemesisNet WordPress Theme:** Custom WordPress theme built on the NemesisNet brand — glassmorphic dark/light UI, CSS variable design tokens, Customizer support, component library, and Umami analytics.
 - **NK Assessments:** Custom assessment and evaluation platform with automated scoring and reporting.
 - **Bored Room Cafe:** Full-stack hospitality management system with online ordering and inventory tracking.
 

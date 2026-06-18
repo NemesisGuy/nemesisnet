@@ -42,6 +42,7 @@ export default defineNuxtConfig({
         '/projects',
         '/projects/kokoro-tts',
         '/projects/wordpress-mcp',
+        '/projects/nemesisnet-wordpress-theme',
         '/projects/nk-assessments',
         '/projects/codecritical-cli',
         '/projects/codecritical-saas',
