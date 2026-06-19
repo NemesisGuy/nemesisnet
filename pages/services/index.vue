@@ -92,7 +92,7 @@
             <div class="pricing-price">R7,000 – R20,000</div>
             <div class="pricing-unit">Range</div>
             <p class="pricing-description">Lightweight web systems, client onboarding tools, MVPs, prototypes, and simple admin dashboards.</p>
-            <p class="pricing-timeline">Delivery: 7–14 days</p>
+            <p class="pricing-timeline">Delivery: 1–4 weeks</p>
             <ul class="pricing-points">
               <li>PocketBase-based apps or static frontend</li>
               <li>React or Vue frontend</li>
@@ -111,7 +111,7 @@
             <div class="pricing-price">R110,000</div>
             <div class="pricing-unit">Starting from</div>
             <p class="pricing-description">End-to-end product builds with Vue 3 frontend, Spring Boot backend, secure auth, dashboards, and infrastructure.</p>
-            <p class="pricing-timeline">Typically 6-14 weeks depending on scope</p>
+            <p class="pricing-timeline">Typically 4–8 weeks depending on scope</p>
             <ul class="pricing-points">
               <li>Architecture, testing strategy, and CI/CD readiness included.</li>
               <li>Built to ship and scale, not just to demo.</li>
@@ -125,7 +125,7 @@
             <div class="pricing-price">R220,000</div>
             <div class="pricing-unit">Starting from</div>
             <p class="pricing-description">Self-hosted AI systems for real workloads, including TTS pipelines, agent workflows, and LLM integrations.</p>
-            <p class="pricing-timeline">Typically 8-16 weeks, scoped after technical discovery</p>
+            <p class="pricing-timeline">Typically 8–16+ weeks, scoped after technical discovery</p>
             <ul class="pricing-points">
               <li>Designed for security, performance, and long-term maintainability.</li>
               <li>Final quote is set after discovery and technical scoping.</li>
@@ -193,7 +193,7 @@
             <div class="tier-details">
               <div class="tier-detail"><strong>Stack</strong><span>Vue/React + PocketBase + SQLite</span></div>
               <div class="tier-detail"><strong>Complexity</strong><span>Low — single dev maintainable</span></div>
-              <div class="tier-detail"><strong>Delivery</strong><span>1–5 days</span></div>
+              <div class="tier-detail"><strong>Delivery</strong><span>1–4 weeks</span></div>
               <div class="tier-detail"><strong>Examples</strong><span>Forms, Dashboards, CRUD, Simple Auth</span></div>
             </div>
           </div>
@@ -206,7 +206,7 @@
             <div class="tier-details">
               <div class="tier-detail"><strong>Stack</strong><span>Spring Boot + MySQL/PostgreSQL + Vue</span></div>
               <div class="tier-detail"><strong>Complexity</strong><span>Medium — structured architecture</span></div>
-              <div class="tier-detail"><strong>Delivery</strong><span>1–3 weeks</span></div>
+              <div class="tier-detail"><strong>Delivery</strong><span>4–8 weeks</span></div>
               <div class="tier-detail"><strong>Examples</strong><span>Client Portals, CMS, Business Tools</span></div>
             </div>
           </div>
@@ -219,7 +219,7 @@
             <div class="tier-details">
               <div class="tier-detail"><strong>Stack</strong><span>Spring Boot DDD + Redis + Message Queues</span></div>
               <div class="tier-detail"><strong>Complexity</strong><span>High — full CI/CD, microservices</span></div>
-              <div class="tier-detail"><strong>Delivery</strong><span>1–3+ months</span></div>
+              <div class="tier-detail"><strong>Delivery</strong><span>8–16+ weeks</span></div>
               <div class="tier-detail"><strong>Examples</strong><span>CRMs, Billing, Financial Systems</span></div>
             </div>
           </div>
@@ -344,7 +344,7 @@ useHead({
             'name': 'What is the typical delivery timeline?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Lightweight systems ship in 1-5 days. Business systems typically take 1-3 weeks. AI-powered platforms and enterprise builds range from 8-16 weeks. All timelines are scoped during the discovery phase.'
+              'text': 'Lightweight systems ship in 1–4 weeks. Business systems typically take 4–8 weeks. AI-powered platforms and enterprise builds range from 8–16+ weeks. All timelines are scoped during the discovery phase.'
             }
           },
           {
