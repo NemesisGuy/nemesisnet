@@ -1,6 +1,6 @@
 <template>
   <div class="detail-page">
-    <PageHeader title="App Starter" subtitle="PocketBase-backed applications with auth, roles, and real data — a real application with moving parts." />
+    <PageHeader title="App Starter" subtitle="PocketBase-backed production systems with auth, roles, and real data — delivered fast, built to last." />
 
     <div class="detail-container">
       <div class="detail-main">
@@ -13,8 +13,8 @@
         </div>
 
         <h2>What It Is</h2>
-        <p>An App Starter is a real application — not just a website. It has a backend (PocketBase or Firebase), user accounts with login, data that persists, and basic role-based access. Think CRUD dashboards, admin panels, internal tools, MVPs, and booking systems.</p>
-        <p>PocketBase gives you a Go-based backend with SQLite, authentication, real-time subscriptions, and an admin UI — all in a single binary. Combined with a Vue or React frontend, you get a production-ready app without the overhead of Spring Boot or a full DevOps stack.</p>
+        <p>An App Starter is a real application — not just a website. It has a backend, user accounts with login, data that persists, and role-based access. Think CRUD dashboards, admin panels, internal tools, MVPs, and booking systems.</p>
+        <p>PocketBase provides authentication, storage, and real-time features in a lightweight package, allowing faster delivery and lower infrastructure requirements. Combined with a Vue or React frontend, you get a production-ready system that works.</p>
 
         <h2>Who It's For</h2>
         <p><strong>Internal teams</strong> that need a custom tool for data entry, tracking, or reporting. <strong>Small businesses</strong> building an MVP to validate a product idea. <strong>Solo founders</strong> who need a working app before they raise funding or scale. <strong>Workshops, clinics, and service businesses</strong> that need booking, scheduling, or client management tools.</p>
@@ -24,11 +24,11 @@
           <li>PocketBase or Firebase backend with SQLite/Cloud Firestore</li>
           <li>Vue 3 or React frontend with responsive design</li>
           <li>User authentication (email/password, optional OAuth2)</li>
-          <li>Basic role-based access control (admin, user, viewer)</li>
+          <li>Role-based access control (admin, user, viewer)</li>
           <li>CRUD operations with collection/schema design</li>
           <li>Real-time data updates (PocketBase subscriptions)</li>
           <li>Docker + Nginx deployment included</li>
-          <li>Basic admin panel setup</li>
+          <li>Admin panel setup</li>
         </ul>
 
         <h2>What's Not Included</h2>
@@ -41,33 +41,47 @@
           <li>Full CI/CD pipeline setup</li>
         </ul>
 
-        <h2>Timeline Breakdown</h2>
+        <h2>What You're Actually Paying For</h2>
+        <p>You're not paying for pages or dashboards. You're paying for a working system with authentication, data integrity, and deployment. You're paying for:</p>
+        <ul class="feature-list">
+          <li>System design — the right data model, the right schema, the right roles from day one</li>
+          <li>Backend architecture that handles auth, real-time, and storage without glue code</li>
+          <li>A frontend your team will actually use — clean, responsive, built for the workflow</li>
+          <li>Production deployment — Docker, Nginx, SSL, domain, live and monitored</li>
+          <li>Delivery speed — PocketBase eliminates months of backend boilerplate so you get to production faster</li>
+        </ul>
+
+        <h2>How We Work</h2>
         <div class="process-steps">
           <div class="process-step">
             <span class="step-number">1</span>
-            <h4>Week 1–2 — Discovery &amp; Schema</h4>
-            <p>Map out your data model, user roles, and core workflows. Design the PocketBase collections and define the API surface.</p>
+            <h4>Discovery &amp; Architecture</h4>
+            <p>Map your data model, user roles, and core workflows. Design the PocketBase collections and define the API surface. Lock the architecture before any code is written.</p>
           </div>
           <div class="process-step">
             <span class="step-number">2</span>
-            <h4>Week 3–4 — Backend &amp; Auth</h4>
-            <p>Set up PocketBase, configure authentication, build the collection schemas, and implement role-based access. Deploy the backend.</p>
+            <h4>Build &amp; Iterate</h4>
+            <p>Backend, frontend, and integration built in parallel. Each deliverable is tested and deployable. Regular checkpoints to keep delivery aligned with intent.</p>
           </div>
           <div class="process-step">
             <span class="step-number">3</span>
-            <h4>Week 5–6 — Frontend Build</h4>
-            <p>Build the Vue or React frontend. CRUD interfaces, dashboards, and real-time data views. Connect to the PocketBase API.</p>
-          </div>
-          <div class="process-step">
-            <span class="step-number">4</span>
-            <h4>Week 7–8 — Polish &amp; Deploy</h4>
-            <p>Testing, bug fixes, and client review. Docker deployment, SSL, domain setup, and go-live.</p>
+            <h4>Deploy &amp; Launch</h4>
+            <p>Docker deployment, SSL, domain setup, and final testing. Your system goes live with monitoring in place and support available.</p>
           </div>
         </div>
 
-        <h2>How Pricing Works</h2>
-        <p>Starting from <strong>R15,000</strong> for a simple CRUD app with basic auth. Most App Starter projects land between <strong>R20,000–R35,000</strong> depending on the number of collections, user roles, and frontend complexity.</p>
-        <p>Factors that push the price higher: multiple user roles, file upload/storage, real-time subscriptions, custom dashboards, and integration with external services.</p>
+        <h2>Pricing</h2>
+        <p>Starting from <strong>R25,000</strong> for simple internal tools and CRUD systems with authentication.</p>
+        <p>Most App Starter projects range between <strong>R35,000–R60,000</strong> depending on:</p>
+        <ul class="feature-list">
+          <li>Number of modules and collections</li>
+          <li>Authentication complexity</li>
+          <li>Role-based access depth</li>
+          <li>Real-time features</li>
+          <li>Frontend complexity</li>
+          <li>External integrations</li>
+        </ul>
+        <p>Advanced MVP systems requiring complex workflows, multi-tenant architecture, or billing systems are quoted under <NuxtLink to="/services/business-systems">Business Systems</NuxtLink>.</p>
 
         <h2>Real Examples</h2>
         <div class="related-projects">
@@ -96,7 +110,7 @@
           <h4>Service Details</h4>
           <ul class="sidebar-list">
             <li><span>Delivery:</span> <strong>4–8 Weeks</strong></li>
-            <li><span>Price:</span> <strong>R15,000 – R35,000</strong></li>
+            <li><span>Price:</span> <strong>R25,000 – R60,000</strong></li>
             <li><span>Tier:</span> <strong>Tier 2</strong></li>
             <li><span>Stack:</span> <strong>PocketBase, Vue, React</strong></li>
           </ul>
@@ -119,9 +133,9 @@
 useHead({
   title: 'App Starter — PocketBase MVP Development | NemesisNet',
   meta: [
-    { name: 'description', content: 'PocketBase-backed apps with auth, roles, and real data. CRUD dashboards, MVPs, admin panels. Starting from R15,000. Cape Town, South Africa.' },
+    { name: 'description', content: 'PocketBase-backed production systems with auth, roles, and real data. From R25,000. Cape Town, South Africa.' },
     { property: 'og:title', content: 'App Starter | NemesisNet' },
-    { property: 'og:description', content: 'PocketBase-backed applications with auth, roles, and real data. Starting from R15,000.' },
+    { property: 'og:description', content: 'PocketBase-backed production systems with auth, roles, and real data. From R25,000.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/app-starter' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
@@ -136,7 +150,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'Service',
         'name': 'App Starter',
-        'description': 'PocketBase-backed applications with auth, roles, and real data. CRUD dashboards, MVPs, admin panels.',
+        'description': 'PocketBase-backed production systems with auth, roles, and real data. CRUD dashboards, MVPs, admin panels.',
         'provider': { '@type': 'Organization', 'name': 'NemesisNet', 'url': 'https://nemesisnet.co.za' },
         'areaServed': { '@type': 'Country', 'name': 'South Africa' },
         'mainEntityOfPage': {

@@ -34,9 +34,9 @@
           </div>
           <div class="card pricing-card">
             <h4 class="pricing-title">App Starter</h4>
-            <div class="pricing-price">R15,000 – R35,000</div>
+            <div class="pricing-price">R25,000 – R60,000</div>
             <div class="pricing-unit">Range</div>
-            <p class="pricing-description">PocketBase-backed apps, CRUD dashboards, MVPs, prototypes, and simple admin tools with basic auth.</p>
+            <p class="pricing-description">PocketBase-backed apps, CRUD dashboards, MVPs, prototypes, and admin tools with auth and roles.</p>
             <p class="pricing-timeline">Delivery: 4–8 weeks</p>
             <ul class="pricing-points">
               <li>PocketBase or Firebase backend</li>
@@ -345,7 +345,7 @@ useHead({
             'name': 'How does pricing work?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R7,000 for lightweight systems to R350,000+ for platform and enterprise work. Specialist engagements (consulting, MCP integrations) start from R10,000 and R55,000 respectively. Ongoing support starts at R850/month for light hosting and R7,500/month for managed retainers.'
+              'text': 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R7,000 for static sites to R350,000+ for platform and enterprise work. App Starter projects range from R25,000–R60,000. Specialist engagements (consulting, MCP integrations) start from R10,000 and R55,000 respectively. Ongoing support starts at R850/month for light hosting and R7,500/month for managed retainers.'
             }
           },
           {
