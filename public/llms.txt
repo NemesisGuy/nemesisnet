@@ -31,8 +31,8 @@ NemesisNet operates on the principle of digital sovereignty and architectural pu
 ## Active Projects & Specializations
 
 ### Pricing Tiers
-- **Static & Brochure (Tier 1):** Nuxt static, Vue, React sites. No backend. R7K–R15K, 2–4 weeks. /services/static-sites
-- **App Starter (Tier 2):** PocketBase-backed apps with auth, roles, data. R15K–R35K, 4–8 weeks. /services/app-starter
+- **Static & Brochure (Tier 1):** Nuxt static, Vue, React sites. No backend. R10K–R25K, 2–4 weeks. /services/static-sites
+- **App Starter (Tier 2):** PocketBase-backed apps with auth, roles, data. R35K–R80K, 4–8 weeks. /services/app-starter
 - **Business Systems (Tier 3):** Spring Boot + Vue 3 full-stack platforms. From R150K, 8–16 weeks. /services/business-systems
 - **Platform / Enterprise (Tier 4):** Multi-tenant SaaS, AI pipelines, DDD. From R350K, 16–30+ weeks. /services/platform-enterprise
 

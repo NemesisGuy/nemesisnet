@@ -19,7 +19,7 @@
         <div class="pricing-grid">
           <div class="card pricing-card">
             <h4 class="pricing-title">Static &amp; Brochure</h4>
-            <div class="pricing-price">R7,000 – R15,000</div>
+            <div class="pricing-price">R10,000 – R25,000</div>
             <div class="pricing-unit">Range</div>
             <p class="pricing-description">Static sites, landing pages, brochure sites, and simple internal tools with no auth complexity.</p>
             <p class="pricing-timeline">Delivery: 2–4 weeks</p>
@@ -34,7 +34,7 @@
           </div>
           <div class="card pricing-card">
             <h4 class="pricing-title">App Starter</h4>
-            <div class="pricing-price">R25,000 – R60,000</div>
+            <div class="pricing-price">R35,000 – R80,000</div>
             <div class="pricing-unit">Range</div>
             <p class="pricing-description">PocketBase-backed apps, CRUD dashboards, MVPs, prototypes, and admin tools with auth and roles.</p>
             <p class="pricing-timeline">Delivery: 4–8 weeks</p>
@@ -263,7 +263,7 @@
           </div>
           <div class="local-card">
             <strong>ZAR Pricing</strong>
-            <span>Transparency from R7,000 to R350,000+ — no hidden fees</span>
+            <span>Transparency from R10,000 to R350,000+ — no hidden fees</span>
           </div>
         </div>
 
@@ -315,9 +315,9 @@
 useHead({
   title: 'IT Services Cape Town — Software, SaaS, AI & Infrastructure | NemesisNet',
   meta: [
-    { name: 'description', content: 'IT services in Cape Town, South Africa: Custom software, SaaS development, AI infrastructure, DevOps. ZAR pricing from R7,000. Cape Town-based engineering.' },
+    { name: 'description', content: 'IT services in Cape Town, South Africa: Custom software, SaaS development, AI infrastructure, DevOps. ZAR pricing from R10,000. Cape Town-based engineering.' },
     { property: 'og:title', content: 'IT Services Cape Town | Software, SaaS, AI & Infrastructure' },
-    { property: 'og:description', content: 'Custom software, SaaS, and AI infrastructure services based in Cape Town, South Africa. Starting from R7,000.' },
+    { property: 'og:description', content: 'Custom software, SaaS, and AI infrastructure services based in Cape Town, South Africa. Starting from R10,000.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
@@ -345,7 +345,7 @@ useHead({
             'name': 'How does pricing work?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R7,000 for static sites to R350,000+ for platform and enterprise work. App Starter projects range from R25,000–R60,000. Specialist engagements (consulting, MCP integrations) start from R10,000 and R55,000 respectively. Ongoing support starts at R850/month for light hosting and R7,500/month for managed retainers.'
+              'text': 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R10,000 for static sites to R350,000+ for platform and enterprise work. App Starter projects range from R35,000–R80,000. Specialist engagements (consulting, MCP integrations) start from R10,000 and R55,000 respectively. Ongoing support starts at R850/month for light hosting and R7,500/month for managed retainers.'
             }
           },
           {

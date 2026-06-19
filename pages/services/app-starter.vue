@@ -71,8 +71,8 @@
         </div>
 
         <h2>Pricing</h2>
-        <p>Starting from <strong>R25,000</strong> for simple internal tools and CRUD systems with authentication.</p>
-        <p>Most App Starter projects range between <strong>R35,000–R60,000</strong> depending on:</p>
+        <p>Starting from <strong>R35,000</strong> for simple internal tools and CRUD systems with authentication.</p>
+        <p>Most App Starter projects range between <strong>R45,000–R80,000</strong> depending on:</p>
         <ul class="feature-list">
           <li>Number of modules and collections</li>
           <li>Authentication complexity</li>
@@ -110,7 +110,7 @@
           <h4>Service Details</h4>
           <ul class="sidebar-list">
             <li><span>Delivery:</span> <strong>4–8 Weeks</strong></li>
-            <li><span>Price:</span> <strong>R25,000 – R60,000</strong></li>
+            <li><span>Price:</span> <strong>R35,000 – R80,000</strong></li>
             <li><span>Tier:</span> <strong>Tier 2</strong></li>
             <li><span>Stack:</span> <strong>PocketBase, Vue, React</strong></li>
           </ul>
@@ -133,9 +133,9 @@
 useHead({
   title: 'App Starter — PocketBase MVP Development | NemesisNet',
   meta: [
-    { name: 'description', content: 'PocketBase-backed production systems with auth, roles, and real data. From R25,000. Cape Town, South Africa.' },
+    { name: 'description', content: 'PocketBase-backed production systems with auth, roles, and real data. From R35,000. Cape Town, South Africa.' },
     { property: 'og:title', content: 'App Starter | NemesisNet' },
-    { property: 'og:description', content: 'PocketBase-backed production systems with auth, roles, and real data. From R25,000.' },
+    { property: 'og:description', content: 'PocketBase-backed production systems with auth, roles, and real data. From R35,000.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/app-starter' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
