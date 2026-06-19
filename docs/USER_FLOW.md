@@ -31,7 +31,7 @@ flowchart LR
 2. Reviews hero message and value proposition
 3. Explores core services section
 4. Clicks specific service for details
-5. Reviews pricing and scoping information
+5. Browses pricing tiers — clicks tier cards for detailed breakdowns (included features, timelines, real examples)
 6. Fills contact form or accesses scope.nemesisnet.co.za
 
 ### 2. Visitor → Project Showcase
@@ -174,7 +174,8 @@ Homepage → Projects → Project Detail → Live Demo → External Site
 
 ### Service Detail Touchpoints
 - Service description
-- Pricing tiers
+- Pricing tiers (4 complexity-based tiers: Static & Brochure, App Starter, Business Systems, Platform / Enterprise)
+- Tier detail pages with included/excluded features, timelines, and real examples
 - Related projects
 - CTA to contact
 

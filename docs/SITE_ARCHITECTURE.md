@@ -54,6 +54,10 @@ flowchart TD
         SV --> SVSH["Self-Hosted AI"]
         SV --> SVID["Infrastructure"]
         SV --> SVC["Consulting"]
+        SV --> T1["/services/static-sites"]
+        SV --> T2["/services/app-starter"]
+        SV --> T3["/services/business-systems"]
+        SV --> T4["/services/platform-enterprise"]
     end
 
     subgraph "Projects Branch"
@@ -121,6 +125,10 @@ flowchart LR
         C7["Learn More - Self-Hosted AI"] --> /services/self-hosted-ai
         C8["Learn More - Infrastructure"] --> /services/infrastructure
         C9["Learn More - Consulting"] --> /services/consulting
+        C10["Tier 1 - Static & Brochure"] --> /services/static-sites
+        C11["Tier 2 - App Starter"] --> /services/app-starter
+        C12["Tier 3 - Business Systems"] --> /services/business-systems
+        C13["Tier 4 - Platform / Enterprise"] --> /services/platform-enterprise
     end
 
     subgraph "Project CTAs"
@@ -271,7 +279,7 @@ flowchart TB
 | Component | Technology | Version |
 |-----------|------------|---------|
 | Framework | Nuxt | 4.4.8 |
-| Runtime | Node.js | 22 |
+| Runtime | Node.js | 20 |
 | Styling | Custom CSS | - |
 | Deployment | Docker + Nitro SSR | node:20-alpine |
 | CI/CD | Woodpecker | - |
