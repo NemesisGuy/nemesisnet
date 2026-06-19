@@ -9,38 +9,204 @@
           <span>/</span>
           <span aria-current="page">Services</span>
         </div>
-        <h2>Core Services</h2>
-        <div class="services-grid">
-          <div class="card">
-            <h3>Custom Software Development</h3>
-            <p>End-to-end application development with clean architecture and modern frameworks.</p>
-            <NuxtLink to="/services/custom-software" class="btn-glass">Learn More</NuxtLink>
+
+        <h2>Pricing Guide</h2>
+        <p class="pricing-trust">Most projects begin with a short discovery call to clarify scope, architecture, and timelines.</p>
+        <p class="pricing-intro">Transparent starting-from pricing to help with planning. Final quotes are confirmed after a short discovery call and technical scoping session.</p>
+
+        <h3 class="pricing-group-label">Project Builds</h3>
+        <p class="pricing-group-desc">One-time engagements to design, build, and deploy production systems.</p>
+        <div class="pricing-grid">
+          <div class="card pricing-card">
+            <h4 class="pricing-title">Lightweight Systems</h4>
+            <div class="pricing-price">R7,000 – R15,000</div>
+            <div class="pricing-unit">Range</div>
+            <p class="pricing-description">Static sites, landing pages, brochure sites, and simple internal tools with no auth complexity.</p>
+            <p class="pricing-timeline">Delivery: 2–4 weeks</p>
+            <ul class="pricing-points">
+              <li>Nuxt static or simple Vue/React frontend</li>
+              <li>Docker + Nginx deployment included</li>
+              <li>Basic SEO setup (if public-facing)</li>
+            </ul>
+            <div class="pricing-foot">
+              <a class="btn-glass" href="/#contact">Start A Project</a>
+            </div>
           </div>
-          <div class="card">
-            <h3>SaaS Development</h3>
-            <p>Scalable multi-tenant platforms with authentication, billing, and APIs.</p>
-            <NuxtLink to="/services/saas-development" class="btn-glass">Learn More</NuxtLink>
+          <div class="card pricing-card">
+            <h4 class="pricing-title">Lightweight Apps</h4>
+            <div class="pricing-price">R15,000 – R35,000</div>
+            <div class="pricing-unit">Range</div>
+            <p class="pricing-description">PocketBase-backed apps, CRUD dashboards, MVPs, prototypes, and simple admin tools with basic auth.</p>
+            <p class="pricing-timeline">Delivery: 4–8 weeks</p>
+            <ul class="pricing-points">
+              <li>PocketBase or Firebase backend</li>
+              <li>Vue or React frontend</li>
+              <li>Basic auth and role-based access</li>
+              <li>Docker + Nginx deployment included</li>
+            </ul>
+            <div class="pricing-foot">
+              <a class="btn-glass" href="/#contact">Start A Project</a>
+            </div>
           </div>
-          <div class="card">
-            <h3>AI Development</h3>
-            <p>MCP agents, self-hosted TTS pipelines, and multi-agent coding harnesses.</p>
-            <NuxtLink to="/services/ai-development" class="btn-glass">Learn More</NuxtLink>
+          <div class="card pricing-card pricing-card--featured">
+            <div class="pricing-title-row">
+              <h4 class="pricing-title">Business Systems</h4>
+              <span class="pricing-badge">Most Popular</span>
+            </div>
+            <div class="pricing-price">R150,000</div>
+            <div class="pricing-unit">Starting from</div>
+            <p class="pricing-description">End-to-end product builds with Vue 3 frontend, Spring Boot backend, secure auth, dashboards, and infrastructure.</p>
+            <p class="pricing-timeline">Typically 8–16 weeks depending on scope</p>
+            <ul class="pricing-points">
+              <li>Architecture, testing strategy, and CI/CD readiness included</li>
+              <li>Built to ship and scale, not just to demo</li>
+            </ul>
+            <div class="pricing-foot">
+              <a class="btn-glass" href="/#contact">Discuss Scope</a>
+            </div>
           </div>
-          <div class="card">
-            <h3>Self-Hosted AI Infrastructure</h3>
-            <p>GGUF models, GPU deployment, and vector databases — no vendor lock-in.</p>
-            <NuxtLink to="/services/self-hosted-ai" class="btn-glass">Learn More</NuxtLink>
+          <div class="card pricing-card">
+            <h4 class="pricing-title">Platform / Enterprise</h4>
+            <div class="pricing-price">R350,000</div>
+            <div class="pricing-unit">Starting from</div>
+            <p class="pricing-description">Multi-tenant SaaS, AI pipelines, self-hosted LLM/TTS systems, MCP integrations, and agent workflows.</p>
+            <p class="pricing-timeline">Typically 16–30+ weeks, scoped after technical discovery</p>
+            <ul class="pricing-points">
+              <li>Designed for security, performance, and long-term maintainability</li>
+              <li>Final quote is set after discovery and technical scoping</li>
+            </ul>
+            <div class="pricing-foot">
+              <a class="btn-glass" href="/#contact">Plan Build</a>
+            </div>
           </div>
-          <div class="card">
-            <h3>Infrastructure & DevOps</h3>
-            <p>Docker, CI/CD, cloud networking, and infrastructure automation.</p>
-            <NuxtLink to="/services/infrastructure" class="btn-glass">Learn More</NuxtLink>
+        </div>
+
+        <h3 class="pricing-group-label">Specialist Engagements</h3>
+        <p class="pricing-group-desc">Scoped sessions and integrations for teams with specific technical needs.</p>
+        <div class="pricing-grid">
+          <div class="card pricing-card">
+            <h4 class="pricing-title">AI Architecture / Consulting</h4>
+            <div class="pricing-price">R10,000</div>
+            <div class="pricing-unit">Starting from</div>
+            <p class="pricing-description">Half-day to full-day working sessions for teams making serious AI or platform decisions.</p>
+            <p class="pricing-timeline">Half-day or full-day sessions, booked in advance</p>
+            <ul class="pricing-points">
+              <li>Platform reviews, workflow design, and technical roadmapping</li>
+              <li>Best before you build, not after something breaks</li>
+            </ul>
+            <div class="pricing-foot">
+              <a class="btn-glass" href="/#contact">Book Session</a>
+            </div>
           </div>
-          <div class="card">
-            <h3>Consulting & Architecture</h3>
-            <p>System design, code reviews, and technical leadership for teams.</p>
-            <NuxtLink to="/services/consulting" class="btn-glass">Learn More</NuxtLink>
+          <div class="card pricing-card">
+            <h4 class="pricing-title">Custom MCP &amp; Agent Integrations</h4>
+            <div class="pricing-price">R55,000</div>
+            <div class="pricing-unit">Starting from</div>
+            <p class="pricing-description">Custom MCP servers that connect AI agents to CMS, CRM, databases, and internal tooling.</p>
+            <p class="pricing-timeline">Typically 3–6 weeks per integration</p>
+            <ul class="pricing-points">
+              <li>Role-safe pipelines with controlled data sync across systems</li>
+              <li>Multi-system automation without fragile glue-code sprawl</li>
+            </ul>
+            <div class="pricing-foot">
+              <a class="btn-glass" href="/#contact">Design Integration</a>
+            </div>
           </div>
+        </div>
+
+        <h3 class="pricing-group-label">Ongoing Support</h3>
+        <p class="pricing-group-desc">Monthly retainers for hosting, maintenance, and continuous improvement.</p>
+        <div class="pricing-grid">
+          <div class="card pricing-card">
+            <h4 class="pricing-title">Light Hosting</h4>
+            <div class="pricing-price">R850</div>
+            <div class="pricing-unit">Monthly</div>
+            <p class="pricing-description">Hosting, SSL, uptime monitoring, and security patches for deployed systems.</p>
+            <ul class="pricing-points">
+              <li>Server hosting and SSL management</li>
+              <li>OS and dependency patching</li>
+              <li>Uptime monitoring and alerts</li>
+            </ul>
+            <div class="pricing-foot">
+              <a class="btn-glass" href="/#contact">Choose Support</a>
+            </div>
+          </div>
+          <div class="card pricing-card">
+            <h4 class="pricing-title">Managed Retainer</h4>
+            <div class="pricing-price">R7,500</div>
+            <div class="pricing-unit">Monthly</div>
+            <p class="pricing-description">CI/CD pipeline management, monitoring, bug fixes, and continuous improvement for production systems.</p>
+            <ul class="pricing-points">
+              <li>CI/CD pipeline management and deployments</li>
+              <li>Application monitoring and alerting</li>
+              <li>Bug fixes and continuous improvement</li>
+              <li>Priority support and SLA coverage</li>
+            </ul>
+            <div class="pricing-foot">
+              <a class="btn-glass" href="/#contact">Choose Support</a>
+            </div>
+          </div>
+        </div>
+        <p class="pricing-note"><strong>Note:</strong> prices are starting-from benchmarks for South Africa/Cape Town market context. Final pricing depends on scope, delivery timeline, integrations, and support requirements.</p>
+
+        <h2>How NemesisNet Scopes Projects</h2>
+        <p class="section-intro">Every system is classified based on complexity, business risk, data sensitivity, and workflow requirements. NemesisNet builds right-sized solutions — no overengineering, no underbuilding.</p>
+        <div class="tiers-grid">
+          <div class="card tier-card tier-1">
+            <div class="tier-header">
+              <span class="tier-badge tier-badge-green">Tier 1</span>
+              <h3>Lightweight</h3>
+            </div>
+            <p class="tier-desc">Fast build for MVPs, internal tools, automation, and simple workflows. PocketBase for CRUD apps, Nuxt static for brochure sites.</p>
+            <div class="tier-details">
+              <div class="tier-detail"><strong>Stack</strong><span>Nuxt static / Vue + PocketBase / simple React</span></div>
+              <div class="tier-detail"><strong>Complexity</strong><span>Low — single dev maintainable</span></div>
+              <div class="tier-detail"><strong>Delivery</strong><span>2–4 weeks</span></div>
+              <div class="tier-detail"><strong>Examples</strong><span>Landing pages, CRUD dashboards, internal tools</span></div>
+            </div>
+          </div>
+          <div class="card tier-card tier-2">
+            <div class="tier-header">
+              <span class="tier-badge tier-badge-yellow">Tier 2</span>
+              <h3>Lightweight Apps</h3>
+            </div>
+            <p class="tier-desc">PocketBase-backed apps with auth, roles, and integrations. More scope than a simple CRUD tool but still single-stack.</p>
+            <div class="tier-details">
+              <div class="tier-detail"><strong>Stack</strong><span>PocketBase + Vue/React with architecture</span></div>
+              <div class="tier-detail"><strong>Complexity</strong><span>Low–Medium — structured but manageable</span></div>
+              <div class="tier-detail"><strong>Delivery</strong><span>4–8 weeks</span></div>
+              <div class="tier-detail"><strong>Examples</strong><span>TorqueBooks, Since, booking tools, admin panels</span></div>
+            </div>
+          </div>
+          <div class="card tier-card tier-3">
+            <div class="tier-header">
+              <span class="tier-badge tier-badge-red">Tier 3</span>
+              <h3>Business Systems</h3>
+            </div>
+            <p class="tier-desc">Multi-user platforms with real auth, roles, API integrations, and Spring Boot business logic.</p>
+            <div class="tier-details">
+              <div class="tier-detail"><strong>Stack</strong><span>Spring Boot + MySQL/PostgreSQL + Vue</span></div>
+              <div class="tier-detail"><strong>Complexity</strong><span>Medium — structured architecture</span></div>
+              <div class="tier-detail"><strong>Delivery</strong><span>8–16 weeks</span></div>
+              <div class="tier-detail"><strong>Examples</strong><span>Client portals, CMS, business tools</span></div>
+            </div>
+          </div>
+          <div class="card tier-card tier-4">
+            <div class="tier-header">
+              <span class="tier-badge tier-badge-red">Tier 4</span>
+              <h3>Platform / Enterprise</h3>
+            </div>
+            <p class="tier-desc">Multi-tenant SaaS, financial systems, AI pipelines, and self-hosted LLM/TTS infrastructure. Full CI/CD, microservices, compliance.</p>
+            <div class="tier-details">
+              <div class="tier-detail"><strong>Stack</strong><span>Spring Boot DDD + Redis + queues + AI frameworks</span></div>
+              <div class="tier-detail"><strong>Complexity</strong><span>High — full CI/CD, microservices</span></div>
+              <div class="tier-detail"><strong>Delivery</strong><span>16–30+ weeks</span></div>
+              <div class="tier-detail"><strong>Examples</strong><span>SaaS platforms, CRMs, billing, AI systems</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="section-cta">
+          <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Not sure which tier fits? → Let's scope it together</a>
         </div>
 
         <h2>How NemesisNet Works With Clients</h2>
@@ -52,20 +218,20 @@
 
         <div class="service-columns sdlc-columns">
           <div class="card">
-            <h3>Agile & Iterative</h3>
+            <h3>Agile &amp; Iterative</h3>
             <p>Two-week sprints with continuous stakeholder feedback. Ideal for MVPs, product evolution, and environments where requirements shift based on market response.</p>
             <ul class="service-list">
-              <li>Sprint planning & retrospectives</li>
-              <li>Daily standups & async updates</li>
-              <li>Continuous integration & delivery</li>
-              <li>Backlog grooming & prioritization</li>
+              <li>Sprint planning &amp; retrospectives</li>
+              <li>Daily standups &amp; async updates</li>
+              <li>Continuous integration &amp; delivery</li>
+              <li>Backlog grooming &amp; prioritization</li>
             </ul>
           </div>
           <div class="card">
-            <h3>Waterfall & Structured</h3>
+            <h3>Waterfall &amp; Structured</h3>
             <p>Full scope definition upfront with gated milestones. Best suited for compliance-heavy systems, fixed-budget builds, and integrations where downstream dependencies are rigid.</p>
             <ul class="service-list">
-              <li>Requirements sign-off & traceability</li>
+              <li>Requirements sign-off &amp; traceability</li>
               <li>Phased design, build, test, deploy</li>
               <li>Formal change control process</li>
               <li>Documentation-driven handoff</li>
@@ -82,171 +248,25 @@
           <p>Infrastructure is defined as code from day one. Containerized deployments, environment parity, and rollback-ready releases mean your platform stays stable as it scales.</p>
         </div>
 
-        <h2>Pricing Guide</h2>
-        <p class="pricing-trust">Most projects begin with a short discovery call to clarify scope, architecture, and timelines.</p>
-        <p class="pricing-intro">Transparent starting-from pricing to help with planning. Final quotes are confirmed after a short discovery call and technical scoping session.</p>
-
-        <div class="pricing-grid">
-          <div class="card pricing-card">
-            <h3 class="pricing-title">Starter / Rapid Delivery</h3>
-            <div class="pricing-price">R7,000 – R20,000</div>
-            <div class="pricing-unit">Range</div>
-            <p class="pricing-description">Lightweight web systems, client onboarding tools, MVPs, prototypes, and simple admin dashboards.</p>
-            <p class="pricing-timeline">Delivery: 1–4 weeks</p>
-            <ul class="pricing-points">
-              <li>PocketBase-based apps or static frontend</li>
-              <li>React or Vue frontend</li>
-              <li>Docker + Nginx deployment included</li>
-              <li>Basic SEO setup (if public-facing)</li>
-            </ul>
-            <div class="pricing-foot">
-              <a class="btn-glass" href="/#contact">Start A Project</a>
-            </div>
-          </div>
-          <div class="card pricing-card pricing-card--featured">
-            <div class="pricing-title-row">
-              <h3 class="pricing-title">Pro Full-Stack Platform</h3>
-              <span class="pricing-badge">Most Popular</span>
-            </div>
-            <div class="pricing-price">R110,000</div>
-            <div class="pricing-unit">Starting from</div>
-            <p class="pricing-description">End-to-end product builds with Vue 3 frontend, Spring Boot backend, secure auth, dashboards, and infrastructure.</p>
-            <p class="pricing-timeline">Typically 4–8 weeks depending on scope</p>
-            <ul class="pricing-points">
-              <li>Architecture, testing strategy, and CI/CD readiness included.</li>
-              <li>Built to ship and scale, not just to demo.</li>
-            </ul>
-            <div class="pricing-foot">
-              <a class="btn-glass" href="/#contact">Discuss Scope</a>
-            </div>
-          </div>
-          <div class="card pricing-card">
-            <h3 class="pricing-title">AI-Powered and Advanced Tooling</h3>
-            <div class="pricing-price">R220,000</div>
-            <div class="pricing-unit">Starting from</div>
-            <p class="pricing-description">Self-hosted AI systems for real workloads, including TTS pipelines, agent workflows, and LLM integrations.</p>
-            <p class="pricing-timeline">Typically 8–16+ weeks, scoped after technical discovery</p>
-            <ul class="pricing-points">
-              <li>Designed for security, performance, and long-term maintainability.</li>
-              <li>Final quote is set after discovery and technical scoping.</li>
-            </ul>
-            <div class="pricing-foot">
-              <a class="btn-glass" href="/#contact">Plan AI Build</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pricing-grid" style="margin-top: 24px;">
-          <div class="card pricing-card">
-            <h3 class="pricing-title">Maintenance and Retainers</h3>
-            <div class="pricing-price">R850</div>
-            <div class="pricing-unit">Monthly, from</div>
-            <p class="pricing-description">Two ongoing support levels so you can match budget to operational needs.</p>
-            <ul class="pricing-points">
-              <li>Light Hosting: from R850/month for hosting, patches, and uptime checks.</li>
-              <li>Managed Retainer: from R4,500/month for CI/CD, monitoring, fixes, and continuous improvement.</li>
-            </ul>
-            <div class="pricing-foot">
-              <a class="btn-glass" href="/#contact">Choose Support Tier</a>
-            </div>
-          </div>
-          <div class="card pricing-card">
-            <h3 class="pricing-title">AI Architecture / Consulting</h3>
-            <div class="pricing-price">R10,000</div>
-            <div class="pricing-unit">Starting from</div>
-            <p class="pricing-description">Half-day to full-day working sessions for teams making serious AI or platform decisions.</p>
-            <p class="pricing-timeline">Half-day or full-day sessions, booked in advance</p>
-            <ul class="pricing-points">
-              <li>Platform reviews, workflow design, and technical roadmapping.</li>
-              <li>Best before you build, not after something breaks.</li>
-            </ul>
-            <div class="pricing-foot">
-              <a class="btn-glass" href="/#contact">Book Session</a>
-            </div>
-          </div>
-          <div class="card pricing-card">
-            <h3 class="pricing-title">Custom MCP and Agent Integrations</h3>
-            <div class="pricing-price">R55,000</div>
-            <div class="pricing-unit">Starting from</div>
-            <p class="pricing-description">Custom MCP servers that connect AI agents to CMS, CRM, databases, and internal tooling.</p>
-            <p class="pricing-timeline">Typically 3-6 weeks per integration</p>
-            <ul class="pricing-points">
-              <li>Role-safe pipelines with controlled data sync across systems.</li>
-              <li>Multi-system automation without fragile glue-code sprawl.</li>
-            </ul>
-            <div class="pricing-foot">
-              <a class="btn-glass" href="/#contact">Design Integration</a>
-            </div>
-          </div>
-        </div>
-        <p class="pricing-note"><strong>Note:</strong> prices are starting-from benchmarks for South Africa/Cape Town market context. Final pricing depends on scope, delivery timeline, integrations, and support requirements.</p>
-
-        <h2>How NemesisNet Scopes Projects</h2>
-        <p class="section-intro">Every system is classified based on complexity, business risk, data sensitivity, and workflow requirements. NemesisNet builds right-sized solutions — no overengineering, no underbuilding.</p>
-        <div class="tiers-grid">
-          <div class="card tier-card tier-1">
-            <div class="tier-header">
-              <span class="tier-badge tier-badge-green">Tier 1</span>
-              <h3>Lightweight Systems</h3>
-            </div>
-            <p class="tier-desc">Fast build for MVPs, internal tools, automation, and simple workflows.</p>
-            <div class="tier-details">
-              <div class="tier-detail"><strong>Stack</strong><span>Vue/React + PocketBase + SQLite</span></div>
-              <div class="tier-detail"><strong>Complexity</strong><span>Low — single dev maintainable</span></div>
-              <div class="tier-detail"><strong>Delivery</strong><span>1–4 weeks</span></div>
-              <div class="tier-detail"><strong>Examples</strong><span>Forms, Dashboards, CRUD, Simple Auth</span></div>
-            </div>
-          </div>
-          <div class="card tier-card tier-2">
-            <div class="tier-header">
-              <span class="tier-badge tier-badge-yellow">Tier 2</span>
-              <h3>Business Systems</h3>
-            </div>
-            <p class="tier-desc">Standard engineering for multi-user tools, permissions, and API integrations.</p>
-            <div class="tier-details">
-              <div class="tier-detail"><strong>Stack</strong><span>Spring Boot + MySQL/PostgreSQL + Vue</span></div>
-              <div class="tier-detail"><strong>Complexity</strong><span>Medium — structured architecture</span></div>
-              <div class="tier-detail"><strong>Delivery</strong><span>4–8 weeks</span></div>
-              <div class="tier-detail"><strong>Examples</strong><span>Client Portals, CMS, Business Tools</span></div>
-            </div>
-          </div>
-          <div class="card tier-card tier-3">
-            <div class="tier-header">
-              <span class="tier-badge tier-badge-red">Tier 3</span>
-              <h3>Core / Enterprise</h3>
-            </div>
-            <p class="tier-desc">High complexity for financial systems, CRMs, and scalable enterprise platforms.</p>
-            <div class="tier-details">
-              <div class="tier-detail"><strong>Stack</strong><span>Spring Boot DDD + Redis + Message Queues</span></div>
-              <div class="tier-detail"><strong>Complexity</strong><span>High — full CI/CD, microservices</span></div>
-              <div class="tier-detail"><strong>Delivery</strong><span>8–16+ weeks</span></div>
-              <div class="tier-detail"><strong>Examples</strong><span>CRMs, Billing, Financial Systems</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="section-cta">
-          <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Not sure which tier fits? → Let's scope it together</a>
-        </div>
-
         <h2>South Africa-Based, Globally Remote</h2>
         <p class="section-intro">NemesisNet is based in Cape Town, South Africa and works with clients across the country and internationally. All engagements are conducted remotely with structured online scoping, daily async updates, and regular video check-ins. South African clients benefit from local business context, POPIA compliance awareness, and SLA-friendly time zone alignment. International clients — particularly those in European time zones — benefit from overlapping working hours and cost-effective ZAR pricing.</p>
 
         <div class="local-signals">
           <div class="local-card">
-            <strong>📍 Cape Town, South Africa</strong>
+            <strong>Cape Town, South Africa</strong>
             <span>Registered and operating from the Western Cape</span>
           </div>
           <div class="local-card">
-            <strong>🇬🇧🇪🇺 European Time Zone Overlap</strong>
+            <strong>European Time Zone Overlap</strong>
             <span>CAT (UTC+2) aligns with CET — real-time collaboration</span>
           </div>
           <div class="local-card">
-            <strong>🔒 POPIA-Aware</strong>
+            <strong>POPIA-Aware</strong>
             <span>Data protection aligned with SA Protection of Personal Information Act</span>
           </div>
           <div class="local-card">
-            <strong>💰 ZAR Pricing</strong>
-            <span>Transparency from R7,000 to R220,000+ — no hidden fees</span>
+            <strong>ZAR Pricing</strong>
+            <span>Transparency from R7,000 to R350,000+ — no hidden fees</span>
           </div>
         </div>
 
@@ -328,7 +348,7 @@ useHead({
             'name': 'How does pricing work?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Most projects start at R7,000 for rapid delivery and range up to R220,000 for AI-powered builds.'
+              'text': 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R7,000 for lightweight systems to R350,000+ for platform and enterprise work. Specialist engagements (consulting, MCP integrations) start from R10,000 and R55,000 respectively. Ongoing support starts at R850/month for light hosting and R7,500/month for managed retainers.'
             }
           },
           {
@@ -344,7 +364,7 @@ useHead({
             'name': 'What is the typical delivery timeline?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Lightweight systems ship in 1–4 weeks. Business systems typically take 4–8 weeks. AI-powered platforms and enterprise builds range from 8–16+ weeks. All timelines are scoped during the discovery phase.'
+              'text': 'Lightweight systems ship in 2–4 weeks. Lightweight apps typically take 4–8 weeks. Business systems range from 8–16 weeks. Platform and enterprise builds run 16–30+ weeks. All timelines are scoped during the discovery phase.'
             }
           },
           {
@@ -386,6 +406,8 @@ useHead({
 .btn-glass { display: inline-block; }
 .sdlc-columns { grid-template-columns: repeat(2, 1fr) !important; justify-items: center; }
 .pricing-grid, .tiers-grid { justify-items: center; }
+.pricing-group-label { font-size: 1.1rem; color: var(--accent-color); margin: 32px 0 8px; padding-bottom: 8px; border-bottom: 1px solid var(--glass-border); }
+.pricing-group-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px; }
 
 .back-link { text-align: center; margin-top: 48px; }
 .local-signals { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 32px 0 24px; }

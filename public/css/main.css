@@ -1249,6 +1249,7 @@ html[data-theme="light"][data-nemesis="on"] .footer-line .footer-divider {
 .tier-card.tier-1 { border-left: 4px solid #22c55e; }
 .tier-card.tier-2 { border-left: 4px solid #eab308; }
 .tier-card.tier-3 { border-left: 4px solid #ef4444; }
+.tier-card.tier-4 { border-left: 4px solid #a855f7; }
 
 .tier-header {
   display: flex;
