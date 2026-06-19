@@ -88,7 +88,7 @@
         <span class="pill pill-saas">SaaS Platform</span>
         <img :src="'/images/projects/since/optimized/hero.webp'" alt="Since" loading="lazy">
         <h3>Since</h3>
-        <p>Temporal claim registry — track predictions, record events, set deadlines, and verify outcomes over time.</p>
+        <p>Accountability tracker — make claims, record events, set deadlines, verify outcomes over time.</p>
         <div class="card-links">
           <NuxtLink to="/projects/since" class="btn-glass">Detail</NuxtLink>
           <a href="https://since.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>

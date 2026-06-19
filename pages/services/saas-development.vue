@@ -76,8 +76,8 @@
         <h2>Related Projects</h2>
         <div class="related-projects">
           <div class="related-card">
-            <h4>Since — Temporal Claim Registry</h4>
-            <p>Full-stack platform for managing temporal claims with multi-tenant architecture.</p>
+            <h4>Since — Accountability Tracker</h4>
+            <p>PocketBase + React platform for tracking predictions, recording events, and verifying outcomes.</p>
             <NuxtLink to="/projects/since" class="btn-glass">View Project</NuxtLink>
           </div>
           <div class="related-card">

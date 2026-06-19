@@ -81,7 +81,7 @@
           <div class="card">
             <img src="/images/projects/since/optimized/hero.webp" srcset="/images/projects/since/optimized/hero-480.webp 480w, /images/projects/since/optimized/hero-640.webp 640w, /images/projects/since/optimized/hero.webp 1200w" sizes="(max-width: 640px) 480px, 280px" alt="Since" loading="lazy" width="900" height="615">
             <h3>Since</h3>
-            <p>Temporal claim registry — track predictions, record events, set deadlines, and verify outcomes over time.</p>
+            <p>Accountability tracker — make claims, record events, set deadlines, verify outcomes over time.</p>
             <div class="project-links">
               <a class="btn-glass" href="https://github.com/NemesisGuy/Since" target="_blank">Source</a>
               <NuxtLink class="btn-glass" to="/projects/since">Detail</NuxtLink>

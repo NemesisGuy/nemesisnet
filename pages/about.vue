@@ -48,8 +48,8 @@
             <span>MCP bridge for AI agents to manage WordPress content securely</span>
           </div>
           <div class="project-highlight">
-            <strong><NuxtLink to="/projects/since">Since — Temporal Claim Registry</NuxtLink></strong>
-            <span>Full-stack multi-tenant temporal claim management platform</span>
+            <strong><NuxtLink to="/projects/since">Since — Accountability Tracker</NuxtLink></strong>
+            <span>Prediction tracking platform with event recording and outcome verification</span>
           </div>
           <div class="project-highlight">
             <strong><NuxtLink to="/projects/codecritical-saas">CodeCritical SaaS</NuxtLink></strong>

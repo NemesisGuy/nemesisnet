@@ -1,6 +1,6 @@
 <template>
   <div class="detail-page">
-    <PageHeader title="Since" subtitle="Temporal claim registry — track claims, verify outcomes, hold people accountable." />
+    <PageHeader title="Since" subtitle="Accountability tracker — make claims, set deadlines, verify outcomes." />
 
     <div class="detail-container">
       <div class="detail-main">
@@ -10,7 +10,7 @@
         <p>Claims, predictions, and deadlines are easy to make but hard to track. Without a system to record and verify outcomes over time, accountability fades. People forget what was said, when it was said, and whether it actually came true.</p>
         
         <h2>The Solution</h2>
-        <p>Since is a self-hosted temporal accountability engine that lets you register predictions, record past events, and set deadlines — then verify whether they came true. It ingests claims, attaches evidence, opens disputes, and tracks outcomes over time.</p>
+        <p>Since is a self-hosted accountability engine that lets you register predictions, record past events, and set deadlines — then verify whether they came true. It tracks claims over time, attaches evidence, and gives you a clear record of what was said, when, and whether it held up.</p>
         
         <h2>Technical Implementation</h2>
         <p>The platform uses a React frontend with Tailwind CSS and Motion animations, served via Vite SSR with Express. PocketBase provides the backend database and authentication. The data model supports three core collections with a REST API layer handling data operations.</p>
@@ -74,10 +74,10 @@
 
 <script setup>
 useHead({
-  title: 'Since | Temporal Claim & Accountability Engine | NemesisNet',
+  title: 'Since | Prediction & Accountability Tracker | NemesisNet',
   meta: [
-    { name: 'description', content: 'Since is a self-hosted temporal accountability and claim registry engine built using React, Express, and PocketBase.' },
-    { property: 'og:title', content: 'Since | Temporal Claim & Accountability Engine | NemesisNet' },
+    { name: 'description', content: 'Since is a self-hosted accountability tracker built with React, Express, and PocketBase. Register predictions, set deadlines, verify outcomes.' },
+    { property: 'og:title', content: 'Since | Prediction & Accountability Tracker | NemesisNet' },
     { property: 'og:description', content: 'Self-hosted prediction registry and outcome verification engine with automated dispute and outcome tracking.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/since' },
@@ -100,7 +100,7 @@ useHead({
           'price': '0',
           'priceCurrency': 'USD'
         },
-        'description': 'A self-hosted temporal accountability and claim registry engine built using React, Express, and PocketBase.',
+        'description': 'A self-hosted accountability tracker built with React, Express, and PocketBase.',
         'author': {
           '@type': 'Person',
           'name': 'Peter Buckingham',

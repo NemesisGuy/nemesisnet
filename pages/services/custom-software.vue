@@ -92,8 +92,8 @@
             <NuxtLink to="/projects/forkmyfolio" class="btn-glass">View Project</NuxtLink>
           </div>
           <div class="related-card">
-            <h4>Since — Temporal Registry</h4>
-            <p>Temporal claim management system with full audit trail.</p>
+            <h4>Since — Accountability Tracker</h4>
+            <p>Prediction tracking system with full audit trail and outcome verification.</p>
             <NuxtLink to="/projects/since" class="btn-glass">View Project</NuxtLink>
           </div>
         </div>

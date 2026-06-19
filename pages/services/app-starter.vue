@@ -91,8 +91,8 @@
             <NuxtLink to="/projects/torquebooks" class="btn-glass">View Project</NuxtLink>
           </div>
           <div class="related-card">
-            <h4>Since — Temporal Claim Registry</h4>
-            <p>PocketBase + React with temporal tracking, prediction recording, and outcome verification.</p>
+            <h4>Since — Accountability Tracker</h4>
+            <p>PocketBase + React for tracking predictions, recording events, and verifying outcomes over time.</p>
             <NuxtLink to="/projects/since" class="btn-glass">View Project</NuxtLink>
           </div>
         </div>
