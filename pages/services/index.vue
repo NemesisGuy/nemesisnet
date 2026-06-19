@@ -29,7 +29,7 @@
               <li>Basic SEO setup (if public-facing)</li>
             </ul>
             <div class="pricing-foot">
-              <a class="btn-glass" href="/#contact">Start A Project</a>
+              <NuxtLink class="btn-glass" to="/services/static-sites">See Details</NuxtLink>
             </div>
           </div>
           <div class="card pricing-card">
@@ -45,7 +45,7 @@
               <li>Docker + Nginx deployment included</li>
             </ul>
             <div class="pricing-foot">
-              <a class="btn-glass" href="/#contact">Start A Project</a>
+              <NuxtLink class="btn-glass" to="/services/app-starter">See Details</NuxtLink>
             </div>
           </div>
           <div class="card pricing-card pricing-card--featured">
@@ -59,7 +59,7 @@
               <li>Built to ship and scale, not just to demo</li>
             </ul>
             <div class="pricing-foot">
-              <a class="btn-glass" href="/#contact">Discuss Scope</a>
+              <NuxtLink class="btn-glass" to="/services/business-systems">See Details</NuxtLink>
             </div>
           </div>
           <div class="card pricing-card">
@@ -73,7 +73,7 @@
               <li>Final quote is set after discovery and technical scoping</li>
             </ul>
             <div class="pricing-foot">
-              <a class="btn-glass" href="/#contact">Plan Build</a>
+              <NuxtLink class="btn-glass" to="/services/platform-enterprise">See Details</NuxtLink>
             </div>
           </div>
         </div>
