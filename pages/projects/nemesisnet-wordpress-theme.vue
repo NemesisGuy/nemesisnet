@@ -87,19 +87,21 @@ const lightboxIndex = ref(0)
 const isLight = ref(false)
 
 const darkSlides = [
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-dark-header.webp', alt: 'Theme Header & Navigation' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-dark-typography.webp', alt: 'Typography & Brand Colors' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-dark-buttons.webp', alt: 'Buttons & Form Elements' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-dark-cards.webp', alt: 'Post Cards & Components' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-dark-comments.webp', alt: 'Comments & Alerts' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/dark-typography.webp', alt: 'Typography & Headings' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/dark-colors.webp', alt: 'Brand Color Palette' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/dark-postcard.webp', alt: 'Post Card Component' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/dark-buttons.webp', alt: 'Buttons & Hero Links' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/dark-forms.webp', alt: 'Form Elements' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/dark-tables.webp', alt: 'Tables & Blockquotes' },
 ]
 
 const lightSlides = [
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-light-header.webp', alt: 'Theme Header & Navigation' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-light-typography.webp', alt: 'Typography & Brand Colors' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-light-buttons.webp', alt: 'Buttons & Form Elements' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-light-cards.webp', alt: 'Post Cards & Components' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-light-comments.webp', alt: 'Comments & Alerts' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-typography.webp', alt: 'Typography & Headings' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-colors.webp', alt: 'Brand Color Palette' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-postcard.webp', alt: 'Post Card Component' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-buttons.webp', alt: 'Buttons & Hero Links' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-forms.webp', alt: 'Form Elements' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-tables.webp', alt: 'Tables & Blockquotes' },
 ]
 
 const slides = computed(() => isLight.value ? lightSlides : darkSlides)
