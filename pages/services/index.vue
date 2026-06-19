@@ -149,7 +149,7 @@
         <h2>How NemesisNet Scopes Projects</h2>
         <p class="section-intro">Every system is classified based on complexity, business risk, data sensitivity, and workflow requirements. NemesisNet builds right-sized solutions — no overengineering, no underbuilding.</p>
         <div class="tiers-grid">
-          <div class="card tier-card tier-1">
+          <NuxtLink to="/services/static-sites" class="card tier-card tier-1">
             <div class="tier-header">
               <span class="tier-badge tier-badge-green">Tier 1</span>
               <h3>Static &amp; Brochure</h3>
@@ -161,8 +161,9 @@
               <div class="tier-detail"><strong>Delivery</strong><span>2–4 weeks</span></div>
               <div class="tier-detail"><strong>Examples</strong><span>Landing pages, portfolio sites, brochure sites</span></div>
             </div>
-          </div>
-          <div class="card tier-card tier-2">
+            <span class="tier-link">See Details →</span>
+          </NuxtLink>
+          <NuxtLink to="/services/app-starter" class="card tier-card tier-2">
             <div class="tier-header">
               <span class="tier-badge tier-badge-yellow">Tier 2</span>
               <h3>App Starter</h3>
@@ -174,8 +175,9 @@
               <div class="tier-detail"><strong>Delivery</strong><span>4–8 weeks</span></div>
               <div class="tier-detail"><strong>Examples</strong><span>TorqueBooks, Since, booking tools, admin panels</span></div>
             </div>
-          </div>
-          <div class="card tier-card tier-3">
+            <span class="tier-link">See Details →</span>
+          </NuxtLink>
+          <NuxtLink to="/services/business-systems" class="card tier-card tier-3">
             <div class="tier-header">
               <span class="tier-badge tier-badge-red">Tier 3</span>
               <h3>Business Systems</h3>
@@ -187,8 +189,9 @@
               <div class="tier-detail"><strong>Delivery</strong><span>8–16 weeks</span></div>
               <div class="tier-detail"><strong>Examples</strong><span>Client portals, CMS, business tools</span></div>
             </div>
-          </div>
-          <div class="card tier-card tier-4">
+            <span class="tier-link">See Details →</span>
+          </NuxtLink>
+          <NuxtLink to="/services/platform-enterprise" class="card tier-card tier-4">
             <div class="tier-header">
               <span class="tier-badge tier-badge-red">Tier 4</span>
               <h3>Platform / Enterprise</h3>
@@ -200,7 +203,8 @@
               <div class="tier-detail"><strong>Delivery</strong><span>16–30+ weeks</span></div>
               <div class="tier-detail"><strong>Examples</strong><span>SaaS platforms, CRMs, billing, AI systems</span></div>
             </div>
-          </div>
+            <span class="tier-link">See Details →</span>
+          </NuxtLink>
         </div>
         <div class="section-cta">
           <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Not sure which tier fits? → Let's scope it together</a>
@@ -405,6 +409,9 @@ useHead({
 .pricing-grid, .tiers-grid { justify-items: center; }
 .pricing-group-label { font-size: 1.1rem; color: var(--accent-color); margin: 32px 0 8px; padding-bottom: 8px; border-bottom: 1px solid var(--glass-border); }
 .pricing-group-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px; }
+.tier-card { text-decoration: none !important; color: inherit !important; display: flex !important; flex-direction: column !important; transition: transform 0.2s ease, border-color 0.2s ease !important; }
+.tier-card:hover { transform: translateY(-2px); border-color: var(--accent-color) !important; }
+.tier-link { margin-top: auto; padding-top: 16px; color: var(--accent-color); font-size: 0.9rem; font-weight: 600; }
 
 .back-link { text-align: center; margin-top: 48px; }
 .local-signals { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 32px 0 24px; }
