@@ -18,7 +18,7 @@
         <p class="pricing-group-desc">One-time engagements to design, build, and deploy production systems.</p>
         <div class="pricing-grid">
           <div class="card pricing-card">
-            <h4 class="pricing-title">Lightweight Systems</h4>
+            <h4 class="pricing-title">Static &amp; Brochure</h4>
             <div class="pricing-price">R7,000 – R15,000</div>
             <div class="pricing-unit">Range</div>
             <p class="pricing-description">Static sites, landing pages, brochure sites, and simple internal tools with no auth complexity.</p>
@@ -33,7 +33,7 @@
             </div>
           </div>
           <div class="card pricing-card">
-            <h4 class="pricing-title">Lightweight Apps</h4>
+            <h4 class="pricing-title">App Starter</h4>
             <div class="pricing-price">R15,000 – R35,000</div>
             <div class="pricing-unit">Range</div>
             <p class="pricing-description">PocketBase-backed apps, CRUD dashboards, MVPs, prototypes, and simple admin tools with basic auth.</p>
@@ -152,22 +152,22 @@
           <div class="card tier-card tier-1">
             <div class="tier-header">
               <span class="tier-badge tier-badge-green">Tier 1</span>
-              <h3>Lightweight</h3>
+              <h3>Static &amp; Brochure</h3>
             </div>
-            <p class="tier-desc">Fast build for MVPs, internal tools, automation, and simple workflows. PocketBase for CRUD apps, Nuxt static for brochure sites.</p>
+            <p class="tier-desc">No backend, no user accounts. Content-focused sites built for display, not interaction.</p>
             <div class="tier-details">
-              <div class="tier-detail"><strong>Stack</strong><span>Nuxt static / Vue + PocketBase / simple React</span></div>
+              <div class="tier-detail"><strong>Stack</strong><span>Nuxt static / Vue / simple React</span></div>
               <div class="tier-detail"><strong>Complexity</strong><span>Low — single dev maintainable</span></div>
               <div class="tier-detail"><strong>Delivery</strong><span>2–4 weeks</span></div>
-              <div class="tier-detail"><strong>Examples</strong><span>Landing pages, CRUD dashboards, internal tools</span></div>
+              <div class="tier-detail"><strong>Examples</strong><span>Landing pages, portfolio sites, brochure sites</span></div>
             </div>
           </div>
           <div class="card tier-card tier-2">
             <div class="tier-header">
               <span class="tier-badge tier-badge-yellow">Tier 2</span>
-              <h3>Lightweight Apps</h3>
+              <h3>App Starter</h3>
             </div>
-            <p class="tier-desc">PocketBase-backed apps with auth, roles, and integrations. More scope than a simple CRUD tool but still single-stack.</p>
+            <p class="tier-desc">PocketBase-backed apps with auth, roles, and data. A real application with moving parts.</p>
             <div class="tier-details">
               <div class="tier-detail"><strong>Stack</strong><span>PocketBase + Vue/React with architecture</span></div>
               <div class="tier-detail"><strong>Complexity</strong><span>Low–Medium — structured but manageable</span></div>
