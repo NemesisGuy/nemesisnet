@@ -49,10 +49,7 @@
             </div>
           </div>
           <div class="card pricing-card pricing-card--featured">
-            <div class="pricing-title-row">
-              <h4 class="pricing-title">Business Systems</h4>
-              <span class="pricing-badge">Most Popular</span>
-            </div>
+            <h4 class="pricing-title">Business Systems</h4>
             <div class="pricing-price">R150,000</div>
             <div class="pricing-unit">Starting from</div>
             <p class="pricing-description">End-to-end product builds with Vue 3 frontend, Spring Boot backend, secure auth, dashboards, and infrastructure.</p>
@@ -254,7 +251,7 @@
         <div class="local-signals">
           <div class="local-card">
             <strong>Cape Town, South Africa</strong>
-            <span>Registered and operating from the Western Cape</span>
+            <span>Based in the Western Cape, working remotely across the country</span>
           </div>
           <div class="local-card">
             <strong>European Time Zone Overlap</strong>
