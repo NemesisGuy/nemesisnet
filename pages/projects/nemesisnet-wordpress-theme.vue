@@ -4,8 +4,6 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/nemesisnet-wordpress-theme/optimized/hero.webp'" class="detail-image" alt="NemesisNet WordPress Theme" loading="lazy">
-
         <div ref="carouselRef" class="demo-carousel">
           <div class="carousel-track" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
             <div v-for="(slide, i) in slides" :key="slide.src" class="carousel-slide">
@@ -89,19 +87,19 @@ const lightboxIndex = ref(0)
 const isLight = ref(false)
 
 const darkSlides = [
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-hero.webp', alt: 'Theme Hero Section' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-cards.webp', alt: 'Glassmorphic Cards' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-components.webp', alt: 'Component Library' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-features.webp', alt: 'Feature Blocks' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-nav.webp', alt: 'Navigation & Footer' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-dark-header.webp', alt: 'Theme Header & Navigation' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-dark-typography.webp', alt: 'Typography & Brand Colors' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-dark-buttons.webp', alt: 'Buttons & Form Elements' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-dark-cards.webp', alt: 'Post Cards & Components' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-dark-comments.webp', alt: 'Comments & Alerts' },
 ]
 
 const lightSlides = [
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-demo-hero.webp', alt: 'Theme Hero Section' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-demo-cards.webp', alt: 'Glassmorphic Cards' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-demo-components.webp', alt: 'Component Library' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-demo-features.webp', alt: 'Feature Blocks' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-demo-nav.webp', alt: 'Navigation & Footer' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-light-header.webp', alt: 'Theme Header & Navigation' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-light-typography.webp', alt: 'Typography & Brand Colors' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-light-buttons.webp', alt: 'Buttons & Form Elements' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-light-cards.webp', alt: 'Post Cards & Components' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/demo-light-comments.webp', alt: 'Comments & Alerts' },
 ]
 
 const slides = computed(() => isLight.value ? lightSlides : darkSlides)
