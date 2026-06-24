@@ -138,6 +138,10 @@
         </div>
         <p class="pricing-note"><strong>Note:</strong> prices are starting-from benchmarks for South Africa/Cape Town market context. Final pricing depends on scope, delivery timeline, integrations, and support requirements.</p>
 
+        <div class="section-cta">
+          <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Ready to scope your project? →</a>
+        </div>
+
         <h2>Software Development Life Cycle</h2>
         <p class="section-intro">NemesisNet adapts its delivery methodology to the constraints of each project. Whether you need the iterative speed of Agile or the structured predictability of Waterfall, the process is aligned to your business context.</p>
 
@@ -166,15 +170,6 @@
           </NuxtLink>
         </div>
 
-        <div class="service-block">
-          <h4>Quality Assurance</h4>
-          <p>Automated testing is not an afterthought. Unit, integration, and end-to-end tests are written as features are built, maintaining coverage thresholds and running full suites in CI before every merge.</p>
-        </div>
-        <div class="service-block">
-          <h4>DevOps Integration</h4>
-          <p>Infrastructure is defined as code from day one. Containerized deployments, environment parity, and rollback-ready releases mean your platform stays stable as it scales.</p>
-        </div>
-
         <h2>South Africa-Based, Globally Remote</h2>
         <p class="section-intro">NemesisNet is based in Cape Town, South Africa and works with clients across the country and internationally. All engagements are conducted remotely with structured online scoping, daily async updates, and regular video check-ins. South African clients benefit from local business context, POPIA compliance awareness, and SLA-friendly time zone alignment. International clients — particularly those in European time zones — benefit from overlapping working hours and cost-effective ZAR pricing.</p>
 
@@ -197,40 +192,28 @@
           </div>
         </div>
 
-        <h2>Delivery Rhythm</h2>
-        <p class="section-intro">A structured process keeps delivery predictable and technical risk visible. Discovery comes first — requirements, constraints, and success metrics are mapped before any code is written. Architecture and scope are locked early to protect timelines. Build happens with testing and CI/CD from day one, with regular checkpoints to keep delivery aligned with intent. Deployment includes hardening, monitoring, and optional support retainers for stability after launch. Without proper scoping, projects drift into scope creep, deadline slips, and expensive rework. NemesisNet's process prevents that.</p>
-
-        <div class="section-cta">
-          <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Ready to scope your project? →</a>
-        </div>
-
-        <h2>Related Services</h2>
-        <p class="section-intro">Explore our full service offering to find the right solution for your business.</p>
-        <div class="related-services-grid">
-          <NuxtLink to="/services/custom-software" class="related-service-card">
-            <strong>Backend &amp; API Engineering</strong>
-            <span>Custom APIs, data pipelines, system integrations</span>
-          </NuxtLink>
-          <NuxtLink to="/services/saas-development" class="related-service-card">
-            <strong>SaaS Development</strong>
-            <span>Scalable multi-tenant platforms</span>
-          </NuxtLink>
-          <NuxtLink to="/services/ai-development" class="related-service-card">
-            <strong>AI Development</strong>
-            <span>MCP agents, TTS, multi-agent systems</span>
-          </NuxtLink>
-          <NuxtLink to="/services/self-hosted-ai" class="related-service-card">
-            <strong>Self-Hosted AI Infrastructure</strong>
-            <span>GGUF models, GPU, vector databases</span>
-          </NuxtLink>
-          <NuxtLink to="/services/infrastructure" class="related-service-card">
-            <strong>Infrastructure Engineering</strong>
-            <span>Docker, CI/CD, Redis, Nginx</span>
-          </NuxtLink>
-          <NuxtLink to="/services/consulting" class="related-service-card">
-            <strong>System Design &amp; Consulting</strong>
-            <span>Technical roadmapping &amp; architecture</span>
-          </NuxtLink>
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>What technologies does NemesisNet use?</h3>
+            <p>NemesisNet works with Vue 3, React, Nuxt 4, Spring Boot, Python, PocketBase, Docker, PostgreSQL, Redis, and AI frameworks including MCP, GGUF models, and CUDA-accelerated inference.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How does pricing work?</h3>
+            <p>Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R10,000 for static sites to R350,000+ for platform and enterprise work. Specialist engagements start from R10,000. Ongoing support starts at R850/month.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Does NemesisNet work with clients outside Cape Town?</h3>
+            <p>Yes. While based in Cape Town, South Africa, NemesisNet works with clients remotely across the country and internationally. Discovery calls and scoping sessions are conducted online.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What is the typical delivery timeline?</h3>
+            <p>Static sites ship in 2–4 weeks. App starters typically take 4–8 weeks. Business systems range from 8–16 weeks. Platform and enterprise builds run 16–30+ weeks. All timelines are scoped during the discovery phase.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can NemesisNet integrate with existing systems?</h3>
+            <p>Yes. NemesisNet builds API integrations, MCP servers, and data pipelines that connect to existing CMS, CRM, and database systems. Custom MCP agents can automate workflows across multiple platforms.</p>
+          </div>
         </div>
 
         <div class="back-link">
@@ -267,7 +250,7 @@ useHead({
             'name': 'What technologies does NemesisNet use?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'NemesisNet works with Vue 3, React, Spring Boot, Python, PocketBase, Docker, PostgreSQL, Redis, and AI frameworks including MCP, GGUF models, and CUDA-accelerated inference.'
+              'text': 'NemesisNet works with Vue 3, React, Nuxt 4, Spring Boot, Python, PocketBase, Docker, PostgreSQL, Redis, and AI frameworks including MCP, GGUF models, and CUDA-accelerated inference.'
             }
           },
           {
@@ -344,18 +327,17 @@ useHead({
 .local-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; text-align: center; }
 .local-card strong { display: block; font-size: 0.95rem; margin-bottom: 6px; color: var(--accent-color); }
 .local-card span { font-size: 0.85rem; color: var(--text-muted); }
-.related-services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
-.related-service-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 6px; text-align: center; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease; }
-.related-service-card:hover { transform: translateY(-2px); border-color: var(--accent-color); }
-.related-service-card strong { color: var(--accent-color); font-size: 0.95rem; }
-.related-service-card span { color: var(--text-muted); font-size: 0.85rem; }
+.faq-list { margin: 24px 0; }
+.faq-item { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px 24px; margin-bottom: 12px; }
+.faq-item h3 { font-size: 1rem; color: var(--accent-color); margin: 0 0 8px; }
+.faq-item p { margin: 0; color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
 .pricing-card--linked { text-decoration: none !important; color: inherit !important; cursor: pointer; transition: transform 0.2s ease, border-color 0.2s ease !important; }
 .pricing-card--linked:hover { transform: translateY(-2px); border-color: var(--accent-color) !important; }
 .pricing-link { display: block; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--glass-border); color: var(--accent-color); font-size: 0.9rem; font-weight: 600; text-align: center; }
 .sdlc-card { text-decoration: none !important; color: inherit !important; cursor: pointer; transition: transform 0.2s ease, border-color 0.2s ease !important; display: flex !important; flex-direction: column !important; }
 .sdlc-card:hover { transform: translateY(-2px); border-color: var(--accent-color) !important; }
 .sdlc-link { margin-top: auto; padding-top: 16px; color: var(--accent-color); font-size: 0.9rem; font-weight: 600; }
-@media (max-width: 1100px) { .process-steps { grid-template-columns: repeat(2, 1fr); } .related-services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 1100px) { .process-steps { grid-template-columns: repeat(2, 1fr); } }
 .breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; padding-left: 20px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
 .breadcrumbs a { color: var(--accent-color); text-decoration: none; }
 .breadcrumbs a:hover { text-decoration: underline; }
@@ -365,6 +347,5 @@ useHead({
   .process-steps { grid-template-columns: 1fr; gap: 16px; }
   .detail-container { padding: 24px 16px 32px; }
   .detail-main h2 { font-size: 1.8rem; margin: 36px 0 20px; }
-  .related-services-grid { grid-template-columns: 1fr; }
 }
 </style>
