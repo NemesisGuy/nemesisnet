@@ -34,8 +34,8 @@
     <h2>Core Services</h2>
     <div class="services-grid">
       <div class="card">
-        <h3>Custom Software Development</h3>
-        <p>End-to-end application development with clean architecture and modern frameworks.</p>
+        <h3>Backend &amp; API Engineering</h3>
+        <p>Custom APIs, data pipelines, system integrations, and backend architecture.</p>
         <NuxtLink to="/services/custom-software" class="btn-glass">Learn More</NuxtLink>
       </div>
       <div class="card">
@@ -165,45 +165,15 @@
   <section id="contact">
     <div class="contact-inner">
       <h2>Get in Touch</h2>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <p>Get in touch. I review every submission personally and respond within 24 hours.</p>
-          <div class="contact-links">
-            <a href="mailto:admin@nemesisnet.co.za">Email</a>
-            <a href="https://github.com/NemesisGuy" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/peter-buckingham-65438757" target="_blank">LinkedIn</a>
-            <a href="https://forkmyfolio.nemesisnet.co.za/nemesis" target="_blank">Portfolio</a>
-          </div>
-        </div>
-        <form class="contact-form" @submit="handleContact">
-          <label for="cname">Name</label>
-          <input id="cname" v-model="formName" type="text" placeholder="Your name" required :disabled="formStatus === 'sending'">
-          <label for="cemail">Email</label>
-          <input id="cemail" v-model="formEmail" type="email" placeholder="you@domain.com" required :disabled="formStatus === 'sending'">
-          <label for="csubject">Subject</label>
-          <select id="csubject" v-model="formSubject" required :disabled="formStatus === 'sending'">
-            <option value="" disabled>Select a subject</option>
-            <option value="custom-software">Custom Software Development</option>
-            <option value="saas-development">SaaS Platform Development</option>
-            <option value="ai-development">AI/ML Development</option>
-            <option value="infrastructure">Infrastructure & DevOps</option>
-            <option value="consulting">Technical Consulting</option>
-            <option value="other">Other</option>
-          </select>
-          <label for="cmessage">Message</label>
-          <textarea id="cmessage" v-model="formMessage" placeholder="How can I help?" required :disabled="formStatus === 'sending'"/>
-          <ClientOnly>
-            <NuxtTurnstile v-model="turnstileToken" />
-          </ClientOnly>
-          <button type="submit" :disabled="formStatus === 'sending'">
-            <span v-if="formStatus === 'sending'">Sending...</span>
-            <span v-else-if="formStatus === 'success'">Sent!</span>
-            <span v-else>Send Message</span>
-          </button>
-          <small v-if="formStatus === 'success'" style="color: var(--success, #4ade80); text-align: center; margin-top: -8px;">Message sent — I'll respond within 24 hours.</small>
-          <small v-else-if="formStatus === 'error'" style="color: #f87171; text-align: center; margin-top: -8px;">{{ formError }}</small>
-          <small v-else style="color: var(--text-muted); text-align: center; margin-top: -8px;">Direct delivery — no third-party tracking.</small>
-        </form>
+      <p class="services-teaser-text">I review every enquiry personally and respond within 24 hours.</p>
+      <div class="contact-links">
+        <a href="mailto:admin@nemesisnet.co.za">Email</a>
+        <a href="https://github.com/NemesisGuy" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/peter-buckingham-65438757" target="_blank">LinkedIn</a>
+        <a href="https://forkmyfolio.nemesisnet.co.za/nemesis" target="_blank">Portfolio</a>
+      </div>
+      <div class="cta-buttons" style="margin-top: 24px;">
+        <NuxtLink to="/contact" class="btn-glass">Send a Message →</NuxtLink>
       </div>
       <p class="contact-subnote">Available for remote engagements globally. Also available for WordPress, WooCommerce, and CMS projects — enquire directly.</p>
     </div>
@@ -212,58 +182,6 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
-
-const formName = ref('')
-const formEmail = ref('')
-const formSubject = ref('')
-const formMessage = ref('')
-const formStatus = ref('idle')
-const formError = ref('')
-const turnstileToken = ref('')
-
-if (import.meta.client) {
-  try {
-    const { token } = useTurnstile()
-    turnstileToken.value = token.value || ''
-    watch(token, (v) => { turnstileToken.value = v })
-  } catch { /* turnstile not available */ }
-}
-
-const handleContact = async (e) => {
-  e.preventDefault()
-
-  if (!turnstileToken.value) {
-    formStatus.value = 'error'
-    formError.value = 'Please complete the verification first.'
-    return
-  }
-
-  formStatus.value = 'sending'
-  formError.value = ''
-
-  const name = formName.value.trim()
-  const email = formEmail.value.trim()
-  const subject = formSubject.value === 'other' ? 'Other' : formSubject.value
-  const message = formMessage.value.trim()
-
-  try {
-    await $fetch('/api/contact', {
-      method: 'POST',
-      body: { token: turnstileToken.value, name, email, subject, message }
-    })
-    formStatus.value = 'success'
-    formName.value = ''
-    formEmail.value = ''
-    formSubject.value = ''
-    formMessage.value = ''
-    turnstileToken.value = ''
-  } catch (err) {
-    formStatus.value = 'error'
-    formError.value = err.data?.message || 'Something went wrong. Please try again or email directly.'
-  }
-}
-
 useHead({
   title: 'NemesisNet — AI Infrastructure & Platform Engineering in Cape Town, South Africa',
   meta: [
@@ -346,24 +264,11 @@ useHead({
 /* Contact section */
 section#contact { min-height: auto; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 60px 20px 30px; }
 .contact-inner { max-width: 700px; width: 100%; text-align: center; }
-.contact-grid { display: flex; flex-direction: column; gap: 24px; margin-top: 32px; }
-.contact-info { text-align: center; padding: 32px; background: var(--glass-bg); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--glass-border); border-radius: 20px; }
-.contact-info p { margin-bottom: 12px; line-height: 1.7; font-size: 1rem; }
-.contact-info p:first-child { font-size: 1.1rem; margin-bottom: 24px; color: var(--text-color); }
-.contact-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+.contact-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
 .contact-links a { padding: 10px 20px; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; color: var(--accent-color); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
 .contact-links a:hover { background: var(--accent-color); color: #0a0e27; transform: translateY(-2px); box-shadow: 0 8px 24px var(--accent-glow); }
-.contact-form { display: flex; flex-direction: column; gap: 16px; padding: 32px; background: var(--glass-bg); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--glass-border); border-radius: 20px; }
-.contact-form label { font-weight: 600; color: var(--text-color); text-align: left; font-size: 0.9rem; margin-bottom: -10px; }
-.contact-form input, .contact-form textarea, .contact-form select { width: 100%; padding: 14px 16px; border-radius: 12px; border: 1px solid var(--glass-border); background: rgba(0,0,0,0.2); color: var(--text-color); font-size: 0.95rem; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); font-family: inherit; }
-.contact-form select { padding-right: 40px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23c0c8d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
-.contact-form select option { background-color: #0a0e27; color: #ffffff; }
-.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent-color); box-shadow: 0 0 0 3px var(--accent-glow); background: rgba(0,0,0,0.3); }
-.contact-form textarea { resize: vertical; min-height: 120px; }
-.contact-form button { cursor: pointer; background: linear-gradient(135deg, var(--accent-color), var(--secondary-accent)); color: white; border: none; padding: 14px 32px; border-radius: 12px; font-weight: 700; font-size: 1rem; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 24px var(--accent-glow); margin-top: 4px; }
-.contact-form button:hover { transform: translateY(-2px); box-shadow: 0 12px 32px var(--accent-glow); }
 .contact-subnote { margin-top: 24px; color: var(--text-muted); font-size: 0.9rem; }
-@media (max-width: 900px) { .contact-inner { padding: 0; } .contact-info, .contact-form { padding: 24px; } .contact-links { flex-direction: column; gap: 10px; } .contact-links a { width: 100%; text-align: center; } }
+@media (max-width: 900px) { .contact-links { flex-direction: column; gap: 10px; } .contact-links a { width: 100%; text-align: center; } }
 
 .services-teaser-text { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px; }
 

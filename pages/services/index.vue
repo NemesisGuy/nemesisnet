@@ -138,74 +138,6 @@
         </div>
         <p class="pricing-note"><strong>Note:</strong> prices are starting-from benchmarks for South Africa/Cape Town market context. Final pricing depends on scope, delivery timeline, integrations, and support requirements.</p>
 
-        <h2>How NemesisNet Scopes Projects</h2>
-        <p class="section-intro">Every system is classified based on complexity, business risk, data sensitivity, and workflow requirements. NemesisNet builds right-sized solutions — no overengineering, no underbuilding.</p>
-        <div class="tiers-grid">
-          <NuxtLink to="/services/static-sites" class="card tier-card tier-1">
-            <div class="tier-header">
-              <span class="tier-badge tier-badge-green">Tier 1</span>
-              <h3>Static &amp; Brochure</h3>
-            </div>
-            <p class="tier-desc">No backend, no user accounts. Content-focused sites built for display, not interaction.</p>
-            <div class="tier-details">
-              <div class="tier-detail"><strong>Stack</strong><span>Nuxt static / Vue / simple React</span></div>
-              <div class="tier-detail"><strong>Complexity</strong><span>Low — single dev maintainable</span></div>
-              <div class="tier-detail"><strong>Delivery</strong><span>2–4 weeks</span></div>
-              <div class="tier-detail"><strong>Examples</strong><span>Landing pages, portfolio sites, brochure sites</span></div>
-            </div>
-            <span class="tier-link">See Details →</span>
-          </NuxtLink>
-          <NuxtLink to="/services/app-starter" class="card tier-card tier-2">
-            <div class="tier-header">
-              <span class="tier-badge tier-badge-yellow">Tier 2</span>
-              <h3>App Starter</h3>
-            </div>
-            <p class="tier-desc">PocketBase-backed apps with auth, roles, and data. A real application with moving parts.</p>
-            <div class="tier-details">
-              <div class="tier-detail"><strong>Stack</strong><span>PocketBase + Vue/React with architecture</span></div>
-              <div class="tier-detail"><strong>Complexity</strong><span>Low–Medium — structured but manageable</span></div>
-              <div class="tier-detail"><strong>Delivery</strong><span>4–8 weeks</span></div>
-              <div class="tier-detail"><strong>Examples</strong><span>TorqueBooks, Since, booking tools, admin panels</span></div>
-            </div>
-            <span class="tier-link">See Details →</span>
-          </NuxtLink>
-          <NuxtLink to="/services/business-systems" class="card tier-card tier-3">
-            <div class="tier-header">
-              <span class="tier-badge tier-badge-red">Tier 3</span>
-              <h3>Business Systems</h3>
-            </div>
-            <p class="tier-desc">Multi-user platforms with real auth, roles, API integrations, and Spring Boot business logic.</p>
-            <div class="tier-details">
-              <div class="tier-detail"><strong>Stack</strong><span>Spring Boot + MySQL/PostgreSQL + Vue</span></div>
-              <div class="tier-detail"><strong>Complexity</strong><span>Medium — structured architecture</span></div>
-              <div class="tier-detail"><strong>Delivery</strong><span>8–16 weeks</span></div>
-              <div class="tier-detail"><strong>Examples</strong><span>Client portals, CMS, business tools</span></div>
-            </div>
-            <span class="tier-link">See Details →</span>
-          </NuxtLink>
-          <NuxtLink to="/services/platform-enterprise" class="card tier-card tier-4">
-            <div class="tier-header">
-              <span class="tier-badge tier-badge-red">Tier 4</span>
-              <h3>Platform / Enterprise</h3>
-            </div>
-            <p class="tier-desc">Multi-tenant SaaS, financial systems, AI pipelines, and self-hosted LLM/TTS infrastructure. Full CI/CD, microservices, compliance.</p>
-            <div class="tier-details">
-              <div class="tier-detail"><strong>Stack</strong><span>Spring Boot DDD + Redis + queues + AI frameworks</span></div>
-              <div class="tier-detail"><strong>Complexity</strong><span>High — full CI/CD, microservices</span></div>
-              <div class="tier-detail"><strong>Delivery</strong><span>16–30+ weeks</span></div>
-              <div class="tier-detail"><strong>Examples</strong><span>SaaS platforms, CRMs, billing, AI systems</span></div>
-            </div>
-            <span class="tier-link">See Details →</span>
-          </NuxtLink>
-        </div>
-        <div class="section-cta">
-          <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Not sure which tier fits? → Let's scope it together</a>
-        </div>
-
-        <h2>How NemesisNet Works With Clients</h2>
-        <p class="section-intro">Every engagement starts with understanding the business context. NemesisNet does not ship boilerplate — each system is scoped to the actual operational constraints, user workflows, and growth trajectory of the organization it serves. The goal is never to maximise billable hours; it is to ship production-grade infrastructure that continues to work long after deployment.</p>
-        <p class="section-intro">Some projects need a lightweight internal tool built in days. Others need a full-scale platform engineered over months. In both cases, the approach is identical: understand the problem deeply, architect the right solution, and deliver something that runs reliably in production.</p>
-
         <h2>Software Development Life Cycle</h2>
         <p class="section-intro">NemesisNet adapts its delivery methodology to the constraints of each project. Whether you need the iterative speed of Agile or the structured predictability of Waterfall, the process is aligned to your business context.</p>
 
@@ -276,8 +208,8 @@
         <p class="section-intro">Explore our full service offering to find the right solution for your business.</p>
         <div class="related-services-grid">
           <NuxtLink to="/services/custom-software" class="related-service-card">
-            <strong>Custom Software Development</strong>
-            <span>Enterprise-grade backend &amp; full-stack apps</span>
+            <strong>Backend &amp; API Engineering</strong>
+            <span>Custom APIs, data pipelines, system integrations</span>
           </NuxtLink>
           <NuxtLink to="/services/saas-development" class="related-service-card">
             <strong>SaaS Development</strong>

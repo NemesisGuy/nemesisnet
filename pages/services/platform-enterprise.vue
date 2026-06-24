@@ -89,7 +89,7 @@
         </div>
 
         <div class="cta-wrapper">
-          <NuxtLink to="/#contact" class="btn-glass">Plan Build →</NuxtLink>
+          <NuxtLink to="/contact" class="btn-glass">Plan Build →</NuxtLink>
         </div>
         <div class="next-project">
           <NuxtLink to="/services" class="btn-glass">← Back to Services</NuxtLink>

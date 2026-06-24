@@ -63,7 +63,7 @@
         <p>If your system needs grow beyond basic hosting, the Managed Retainer (R7,500/month) includes CI/CD management, bug fixes, application monitoring, and priority support.</p>
 
         <div class="cta-wrapper">
-          <NuxtLink to="/#contact" class="btn-glass">Choose Light Hosting →</NuxtLink>
+          <NuxtLink to="/contact" class="btn-glass">Choose Light Hosting →</NuxtLink>
         </div>
         <div class="next-project">
           <NuxtLink to="/services/managed-retainer" class="btn-glass">Need more? See Managed Retainer →</NuxtLink>

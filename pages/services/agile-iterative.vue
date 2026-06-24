@@ -81,7 +81,7 @@
         </div>
 
         <div class="cta-wrapper">
-          <NuxtLink to="/#contact" class="btn-glass">Plan a Sprint →</NuxtLink>
+          <NuxtLink to="/contact" class="btn-glass">Plan a Sprint →</NuxtLink>
         </div>
         <div class="next-project">
           <NuxtLink to="/services/waterfall-structured" class="btn-glass">See Also: Waterfall &amp; Structured →</NuxtLink>

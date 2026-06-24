@@ -80,7 +80,7 @@
         </div>
 
         <div class="cta-wrapper">
-          <NuxtLink to="/#contact" class="btn-glass">Design Your Integration →</NuxtLink>
+          <NuxtLink to="/contact" class="btn-glass">Design Your Integration →</NuxtLink>
         </div>
         <div class="next-project">
           <NuxtLink to="/services/ai-consulting" class="btn-glass">See Also: AI Architecture / Consulting →</NuxtLink>

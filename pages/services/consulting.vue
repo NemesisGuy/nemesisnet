@@ -36,8 +36,12 @@
         <p>Strategic guidance on tool selection, cloud migration, and AI integration strategies for your business. We stay vendor-neutral and evaluate options based on your specific requirements — not what's trending on Hacker News.</p>
         <p>Advisory engagements range from a single architecture review to a monthly retainer with ongoing code review and strategic check-ins. We've served as fractional CTOs for startups that can't justify a full-time hire yet.</p>
 
+        <h2>AI &amp; Platform Decisions</h2>
+        <p>For teams evaluating AI adoption, we provide focused working sessions on model selection, self-hosted vs cloud trade-offs, MCP agent architecture, and TTS pipeline design. These are working sessions — not slide decks. You leave with a concrete integration plan, cost model, and implementation roadmap.</p>
+        <p>If the session leads to a build engagement, the consulting fee is credited toward the project.</p>
+
         <h2>Who This Is For</h2>
-        <p><strong>CTOs and tech leads</strong> who need an experienced second opinion on architecture decisions. <strong>Startups preparing to scale</strong> and want to avoid the technical debt that kills growth. <strong>Enterprise teams</strong> dealing with legacy systems that everyone's afraid to touch. <strong>Non-technical founders</strong> who need trustworthy guidance to evaluate technical partners and decisions.</p>
+        <p><strong>CTOs and tech leads</strong> who need an experienced second opinion on architecture decisions. <strong>Startups preparing to scale</strong> and want to avoid the technical debt that kills growth. <strong>Enterprise teams</strong> dealing with legacy systems that everyone's afraid to touch. <strong>Non-technical founders</strong> who need trustworthy guidance to evaluate technical partners and decisions. <strong>Teams evaluating AI adoption</strong> — unsure which model to use, how to integrate it, or whether to self-host.</p>
 
         <h2>How We Work</h2>
         <div class="process-steps">
@@ -92,13 +96,13 @@
 
         <h2>Related Services</h2>
         <div class="related-services">
-          <NuxtLink to="/services/custom-software" class="btn-glass">Custom Software Development →</NuxtLink>
+          <NuxtLink to="/services/ai-consulting" class="btn-glass">AI Architecture / Consulting →</NuxtLink>
+          <NuxtLink to="/services/custom-software" class="btn-glass">Backend &amp; API Engineering →</NuxtLink>
           <NuxtLink to="/services/infrastructure" class="btn-glass">Infrastructure Engineering →</NuxtLink>
-          <NuxtLink to="/services/saas-development" class="btn-glass">SaaS Development →</NuxtLink>
         </div>
 
         <div class="cta-wrapper">
-          <NuxtLink to="/#contact" class="btn-glass">Book a Session</NuxtLink>
+          <NuxtLink to="/contact" class="btn-glass">Book a Session</NuxtLink>
         </div>
         <div class="next-project">
           <NuxtLink to="/services" class="btn-glass">← Back to Services</NuxtLink>
@@ -120,7 +124,8 @@
           <h4>Quick Links</h4>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
-            <NuxtLink to="/services/custom-software" class="btn-glass">Custom Software</NuxtLink>
+            <NuxtLink to="/services/ai-consulting" class="btn-glass">AI Consulting</NuxtLink>
+            <NuxtLink to="/services/custom-software" class="btn-glass">Backend & API</NuxtLink>
             <NuxtLink to="/services/infrastructure" class="btn-glass">Infrastructure</NuxtLink>
             <NuxtLink to="/projects" class="btn-glass">View Projects</NuxtLink>
           </div>

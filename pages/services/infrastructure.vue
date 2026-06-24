@@ -105,7 +105,7 @@
         </div>
 
         <div class="cta-wrapper">
-          <NuxtLink to="/#contact" class="btn-glass">Secure Your Infra</NuxtLink>
+          <NuxtLink to="/contact" class="btn-glass">Secure Your Infra</NuxtLink>
           <a href="https://blog.nemesisnet.co.za/self-hosted-ci-cd-on-a-home-rack-github-gitea-woodpecker-and-portainer/" target="_blank" class="btn-glass">Self-Hosted CI/CD</a>
           <a href="https://blog.nemesisnet.co.za/inside-the-nemesisnet-homelab-my-personal-data-center/" target="_blank" class="btn-glass">Homelab Deep Dive</a>
         </div>

@@ -74,7 +74,8 @@
         </div>
 
         <div class="cta-wrapper">
-          <NuxtLink to="/#contact" class="btn-glass">Book a Session →</NuxtLink>
+          <NuxtLink to="/contact" class="btn-glass">Book a Session →</NuxtLink>
+          <NuxtLink to="/services/consulting" class="btn-glass">General Technical Consulting →</NuxtLink>
         </div>
         <div class="next-project">
           <NuxtLink to="/services/mcp-integrations" class="btn-glass">See Also: MCP &amp; Agent Integrations →</NuxtLink>

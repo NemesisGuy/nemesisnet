@@ -88,12 +88,12 @@
               <li>Application monitoring</li>
               <li>Priority support &amp; SLA</li>
             </ul>
-            <NuxtLink to="/#contact" class="btn-glass">Choose Managed</NuxtLink>
+            <NuxtLink to="/contact" class="btn-glass">Choose Managed</NuxtLink>
           </div>
         </div>
 
         <div class="cta-wrapper">
-          <NuxtLink to="/#contact" class="btn-glass">Choose Managed Retainer →</NuxtLink>
+          <NuxtLink to="/contact" class="btn-glass">Choose Managed Retainer →</NuxtLink>
         </div>
         <div class="next-project">
           <NuxtLink to="/services/light-hosting" class="btn-glass">Just need hosting? See Light Hosting →</NuxtLink>

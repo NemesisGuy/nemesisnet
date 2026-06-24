@@ -94,13 +94,13 @@
 
         <h2>Related Services</h2>
         <div class="related-services">
-          <NuxtLink to="/services/custom-software" class="btn-glass">Custom Software Development →</NuxtLink>
+          <NuxtLink to="/services/custom-software" class="btn-glass">Backend &amp; API Engineering →</NuxtLink>
           <NuxtLink to="/services/infrastructure" class="btn-glass">Infrastructure Engineering →</NuxtLink>
           <NuxtLink to="/services/consulting" class="btn-glass">Technical Consulting →</NuxtLink>
         </div>
 
         <div class="cta-wrapper">
-          <NuxtLink to="/#contact" class="btn-glass">Discuss Your SaaS Project →</NuxtLink>
+          <NuxtLink to="/contact" class="btn-glass">Discuss Your SaaS Project →</NuxtLink>
           <a href="https://blog.nemesisnet.co.za/from-rebuilding-authentication-in-every-app-to-a-shared-identity-layer/" target="_blank" class="btn-glass">Read Auth Deep Dive</a>
         </div>
         <div class="next-project">

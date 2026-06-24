@@ -81,7 +81,7 @@
         </div>
 
         <div class="cta-wrapper">
-          <NuxtLink to="/#contact" class="btn-glass">Define Your Project →</NuxtLink>
+          <NuxtLink to="/contact" class="btn-glass">Define Your Project →</NuxtLink>
         </div>
         <div class="next-project">
           <NuxtLink to="/services/agile-iterative" class="btn-glass">See Also: Agile &amp; Iterative →</NuxtLink>
