@@ -106,28 +106,31 @@
 
 ### Week 5-6: Case Studies
 
-- [ ] **CS1** — Create case study: "Building a Multi-Tenant SaaS with Spring Boot + Vue 3"
+- [x] **CS1** — Create case study: "Building a Multi-Tenant SaaS with Spring Boot + Vue 3"
   - Source from: Since app (https://github.com/NemesisGuy/since)
   - Metrics: User growth, feature timeline, tech decisions
+  - Draft: `blog-drafts/cs1-multi-tenant-saas-since.md` (~2,050 words)
 
-- [ ] **CS2** — Create case study: "MCP Integration for WordPress Automation"
+- [x] **CS2** — Create case study: "MCP Integration for WordPress Automation"
   - Source from: WordPress MCP Server (https://github.com/NemesisGuy/wordpress-mcp-server)
   - Metrics: Time saved, automation gains
+  - Draft: `blog-drafts/cs2-wordpress-mcp-automation.md` (~1,800 words)
 
-- [ ] **CS3** — Create case study: "Self-Hosted TTS Pipeline for Production"
+- [x] **CS3** — Create case study: "Self-Hosted TTS Pipeline for Production"
   - Source from: Kokoro TTS project
   - Metrics: Latency, cost reduction, reliability
+  - Draft: `blog-drafts/cs3-kokoro-tts-production.md` (~2,000 words)
 
 ### Week 7-8: Topical Clusters & Measurement
 
-- [ ] **TC1** — AI Infrastructure Cluster (create 3 articles):
-  - [ ] "MCP Explained: The Future of AI Agent Tool Use"
-  - [ ] "Running Local LLMs: A Practical Guide for Production"
-  - [ ] "Dockerized AI Deployment: From Laptop to Production"
+- [x] **TC1** — AI Infrastructure Cluster (create 3 articles):
+  - [x] "MCP Explained: The Future of AI Agent Tool Use" — `blog-drafts/tc1-a-mcp-explained.md`
+  - [x] "Running Local LLMs: A Practical Guide for Production" — `blog-drafts/tc1-b-running-local-llms.md`
+  - [x] "Dockerized AI Deployment: From Laptop to Production" — `blog-drafts/tc1-c-dockerized-ai-deployment.md`
 
-- [ ] **TC2** — Full-Stack Development Cluster (create 2 articles):
-  - [ ] "Spring Boot Patterns for Multi-Tenant SaaS"
-  - [ ] "Vue 3 Composition API: Real-World Patterns"
+- [x] **TC2** — Full-Stack Development Cluster (create 2 articles):
+  - [x] "Spring Boot Patterns for Multi-Tenant SaaS" — `blog-drafts/tc2-a-spring-boot-multi-tenant.md`
+  - [x] "Vue 3 Composition API: Real-World Patterns" — `blog-drafts/tc2-b-vue-3-composition-api.md`
 
 - [ ] **M1** — Set up Google Analytics goals for lead form submissions
 - [ ] **M2** — Create custom dashboard for SEO KPIs
@@ -175,8 +178,8 @@
 | 2 | Service Pages | S1-S3 | [x] S1, S2, S3 done (renamed to saas-development) |
 | 3 | Schema & On-Page | T1-T5 | [x] Complete |
 | 4 | Comparisons + Expansion | C1-C2 + all 16 service pages | [x] Complete |
-| 5-6 | Case Studies | CS1-CS3 | [ ] |
-| 7-8 | Clusters & Measure | TC1-TC2, M1-M4 | [ ] |
+| 5-6 | Case Studies | CS1-CS3 | [x] Drafts written (blog-drafts/) |
+| 7-8 | Clusters & Measure | TC1-TC2, M1-M4 | [x] TC1-TC2 drafts written, M1-M4 pending |
 | 2.8 | Authority Injection | Homepage, Decision-layer, Internal links, Local SEO | [x] Complete — all items done (P1-P14) |
 | Cleanup | Services Index + Blog Links | FAQ, redundancy removal, 14 blog cross-links | [x] Complete |
 
@@ -205,9 +208,11 @@ SEO Audit Scores: JSON-LD [MISS→DONE], Canonical [WEAK→DONE], OG [WEAK→DON
 - [ ] P12: Blog — add canonicals on all posts *(cross-linking done — all 14 posts linked from appropriate main site pages)*
 - [ ] P13: Google Business Profile setup
 - [ ] P9 follow-up: Named client logos for testimonials
+- [ ] M1-M4: Analytics setup (GA4 goals, SEO dashboard, baseline measurement, Week 8 review)
+- [ ] Publish case studies and cluster articles to WordPress blog
 
 ---
 
-*Document Version: 4.0*
+*Document Version: 4.1*
 *Last Updated: June 24, 2026*
-*Phase 2 service pages, authority injection, services cleanup, and blog cross-linking complete. Remaining: case studies (CS1-CS3), topical clusters (TC1-TC2), analytics (M1-M4), GMB, client logos.*
+*Phase 2 service pages, authority injection, services cleanup, blog cross-linking, case studies (CS1-CS3), and topical clusters (TC1-TC2) complete. Remaining: analytics (M1-M4), GMB, client logos, publish drafts to WordPress.*

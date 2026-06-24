@@ -90,6 +90,7 @@
 
         <div class="cta-wrapper">
           <NuxtLink to="/contact" class="btn-glass">Discuss Scope →</NuxtLink>
+          <a href="https://blog.nemesisnet.co.za/vue-3-vs-react-for-enterprise-saas/" target="_blank" class="btn-glass">Vue 3 vs React Comparison</a>
         </div>
         <div class="next-project">
           <NuxtLink to="/services" class="btn-glass">← Back to Services</NuxtLink>

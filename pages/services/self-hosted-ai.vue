@@ -111,6 +111,7 @@
         <div class="cta-wrapper">
           <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Discuss Infrastructure</a>
           <a href="https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/" target="_blank" class="btn-glass">Read Cost Analysis</a>
+          <a href="https://blog.nemesisnet.co.za/wordpress-mcp-automation-cutting-publishing-time-by-80/" target="_blank" class="btn-glass">WordPress MCP Case Study</a>
         </div>
         <div class="next-project">
           <NuxtLink to="/services" class="btn-glass">← Back to Services</NuxtLink>

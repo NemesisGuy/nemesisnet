@@ -81,6 +81,7 @@
 
         <div class="cta-wrapper">
           <NuxtLink to="/contact" class="btn-glass">Design Your Integration →</NuxtLink>
+          <a href="https://blog.nemesisnet.co.za/wordpress-mcp-automation-cutting-publishing-time-by-80/" target="_blank" class="btn-glass">WordPress MCP Case Study</a>
         </div>
         <div class="next-project">
           <NuxtLink to="/services/ai-consulting" class="btn-glass">See Also: AI Architecture / Consulting →</NuxtLink>
