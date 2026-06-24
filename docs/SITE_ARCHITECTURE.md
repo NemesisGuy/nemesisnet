@@ -58,6 +58,10 @@ flowchart TD
         SV --> T2["/services/app-starter"]
         SV --> T3["/services/business-systems"]
         SV --> T4["/services/platform-enterprise"]
+        SV --> AG["/services/agile-iterative"]
+        SV --> WF["/services/waterfall-structured"]
+        SV --> AIC["/services/ai-consulting"]
+        SV --> MCP["/services/mcp-integrations"]
     end
 
     subgraph "Projects Branch"

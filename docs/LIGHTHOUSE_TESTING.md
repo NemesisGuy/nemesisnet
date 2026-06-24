@@ -44,6 +44,10 @@ Lighthouse testing is integrated into the Woodpecker CI pipeline to ensure acces
 | `/services/app-starter` | High | Desktop |
 | `/services/business-systems` | High | Desktop |
 | `/services/platform-enterprise` | High | Desktop |
+| `/services/agile-iterative` | High | Desktop |
+| `/services/waterfall-structured` | High | Desktop |
+| `/services/ai-consulting` | High | Desktop |
+| `/services/mcp-integrations` | High | Desktop |
 
 ### Project Pages
 

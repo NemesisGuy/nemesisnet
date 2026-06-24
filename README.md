@@ -16,7 +16,7 @@ NemesisNet builds AI-powered platforms, backend systems, and automation infrastr
 ## Tech Stack
 
 - **Framework:** Nuxt 4.4.8
-- **Rendering:** SSR + Static Prerendering (31 pages)
+- **Rendering:** SSR + Static Prerendering (35 pages)
 - **Styling:** Custom CSS with glassmorphic UI
 - **Deployment:** Docker + Node.js (Nitro SSR server)
 - **CI/CD:** Woodpecker CI
@@ -116,11 +116,11 @@ See [Lighthouse Testing](./docs/LIGHTHOUSE_TESTING.md) for details.
 ./optimize-images.sh codecritical-saas
 ```
 
-## Pages (31 Total)
+## Pages (35 Total)
 
 - Homepage (`/`)
 - Projects (`/projects`) + 14 project pages
-- Services (`/services`) + 6 service pages + 4 tier detail pages
+- Services (`/services`) + 6 service pages + 4 tier detail pages + 4 method/engagement pages
 - About (`/about`)
 - Contact (`/contact`)
 - Legal (`/legal/privacy`, `/legal/terms`, `/legal/refund`)

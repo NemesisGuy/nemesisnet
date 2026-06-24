@@ -13,6 +13,10 @@ const routes = [
   { path: '/services/saas-development', name: 'saas-development' },
   { path: '/services/ai-development', name: 'ai-development' },
   { path: '/services/infrastructure', name: 'infrastructure' },
+  { path: '/services/agile-iterative', name: 'agile-iterative' },
+  { path: '/services/waterfall-structured', name: 'waterfall-structured' },
+  { path: '/services/ai-consulting', name: 'ai-consulting' },
+  { path: '/services/mcp-integrations', name: 'mcp-integrations' },
   { path: '/projects/torquebooks', name: 'torquebooks' },
 ];
 

@@ -81,7 +81,7 @@
         <h3 class="pricing-group-label">Specialist Engagements</h3>
         <p class="pricing-group-desc">Scoped sessions and integrations for teams with specific technical needs.</p>
         <div class="pricing-grid">
-          <div class="card pricing-card">
+          <NuxtLink to="/services/ai-consulting" class="card pricing-card pricing-card--linked">
             <h4 class="pricing-title">AI Architecture / Consulting</h4>
             <div class="pricing-price">R10,000</div>
             <div class="pricing-unit">Starting from</div>
@@ -91,11 +91,9 @@
               <li>Platform reviews, workflow design, and technical roadmapping</li>
               <li>Best before you build, not after something breaks</li>
             </ul>
-            <div class="pricing-foot">
-              <a class="btn-glass" href="/#contact">Book Session</a>
-            </div>
-          </div>
-          <div class="card pricing-card">
+            <span class="pricing-link">See Details →</span>
+          </NuxtLink>
+          <NuxtLink to="/services/mcp-integrations" class="card pricing-card pricing-card--linked">
             <h4 class="pricing-title">Custom MCP &amp; Agent Integrations</h4>
             <div class="pricing-price">R55,000</div>
             <div class="pricing-unit">Starting from</div>
@@ -105,10 +103,8 @@
               <li>Role-safe pipelines with controlled data sync across systems</li>
               <li>Multi-system automation without fragile glue-code sprawl</li>
             </ul>
-            <div class="pricing-foot">
-              <a class="btn-glass" href="/#contact">Design Integration</a>
-            </div>
-          </div>
+            <span class="pricing-link">See Details →</span>
+          </NuxtLink>
         </div>
 
         <h3 class="pricing-group-label">Ongoing Support</h3>
@@ -218,7 +214,7 @@
         <p class="section-intro">NemesisNet adapts its delivery methodology to the constraints of each project. Whether you need the iterative speed of Agile or the structured predictability of Waterfall, the process is aligned to your business context.</p>
 
         <div class="service-columns sdlc-columns">
-          <div class="card">
+          <NuxtLink to="/services/agile-iterative" class="card sdlc-card">
             <h3>Agile &amp; Iterative</h3>
             <p>Two-week sprints with continuous stakeholder feedback. Ideal for MVPs, product evolution, and environments where requirements shift based on market response.</p>
             <ul class="service-list">
@@ -227,8 +223,9 @@
               <li>Continuous integration &amp; delivery</li>
               <li>Backlog grooming &amp; prioritization</li>
             </ul>
-          </div>
-          <div class="card">
+            <span class="sdlc-link">See Details →</span>
+          </NuxtLink>
+          <NuxtLink to="/services/waterfall-structured" class="card sdlc-card">
             <h3>Waterfall &amp; Structured</h3>
             <p>Full scope definition upfront with gated milestones. Best suited for compliance-heavy systems, fixed-budget builds, and integrations where downstream dependencies are rigid.</p>
             <ul class="service-list">
@@ -237,7 +234,8 @@
               <li>Formal change control process</li>
               <li>Documentation-driven handoff</li>
             </ul>
-          </div>
+            <span class="sdlc-link">See Details →</span>
+          </NuxtLink>
         </div>
 
         <div class="service-block">
@@ -423,6 +421,12 @@ useHead({
 .related-service-card:hover { transform: translateY(-2px); border-color: var(--accent-color); }
 .related-service-card strong { color: var(--accent-color); font-size: 0.95rem; }
 .related-service-card span { color: var(--text-muted); font-size: 0.85rem; }
+.pricing-card--linked { text-decoration: none !important; color: inherit !important; cursor: pointer; transition: transform 0.2s ease, border-color 0.2s ease !important; }
+.pricing-card--linked:hover { transform: translateY(-2px); border-color: var(--accent-color) !important; }
+.pricing-link { display: block; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--glass-border); color: var(--accent-color); font-size: 0.9rem; font-weight: 600; text-align: center; }
+.sdlc-card { text-decoration: none !important; color: inherit !important; cursor: pointer; transition: transform 0.2s ease, border-color 0.2s ease !important; display: flex !important; flex-direction: column !important; }
+.sdlc-card:hover { transform: translateY(-2px); border-color: var(--accent-color) !important; }
+.sdlc-link { margin-top: auto; padding-top: 16px; color: var(--accent-color); font-size: 0.9rem; font-weight: 600; }
 @media (max-width: 1100px) { .process-steps { grid-template-columns: repeat(2, 1fr); } .related-services-grid { grid-template-columns: repeat(2, 1fr); } }
 .breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; padding-left: 20px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
 .breadcrumbs a { color: var(--accent-color); text-decoration: none; }

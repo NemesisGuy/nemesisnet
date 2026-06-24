@@ -73,6 +73,30 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://nemesisnet.co.za/services/agile-iterative</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nemesisnet.co.za/services/waterfall-structured</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nemesisnet.co.za/services/ai-consulting</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nemesisnet.co.za/services/mcp-integrations</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://nemesisnet.co.za/services/static-sites</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>

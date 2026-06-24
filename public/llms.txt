@@ -36,6 +36,14 @@ NemesisNet operates on the principle of digital sovereignty and architectural pu
 - **Business Systems (Tier 3):** Spring Boot + Vue 3 full-stack platforms. From R150K, 8–16 weeks. /services/business-systems
 - **Platform / Enterprise (Tier 4):** Multi-tenant SaaS, AI pipelines, DDD. From R350K, 16–30+ weeks. /services/platform-enterprise
 
+### Specialist Engagements
+- **AI Architecture / Consulting:** Half-day to full-day working sessions for platform and AI decisions. From R10K. /services/ai-consulting
+- **Custom MCP & Agent Integrations:** MCP servers connecting AI agents to CMS, CRM, databases. From R55K, 3–6 weeks. /services/mcp-integrations
+
+### Delivery Methodology
+- **Agile & Iterative:** Two-week sprints, continuous feedback, CI/CD from day one. Best for MVPs and evolving products. /services/agile-iterative
+- **Waterfall & Structured:** Full scope upfront, gated milestones, formal change control. Best for compliance and fixed-budget builds. /services/waterfall-structured
+
 ### AI & Speech Infrastructure
 - **VoxNemesis Supertonic / VoxBox / BabbageBox:** Specialized local-first AI pipelines orchestrating high-concurrency, priority-queued, CPU/GPU-optimized Speech-to-Text (STT), Large Language Model (LLM) routing, and Text-to-Speech (TTS) engines (including optimized Kokoro TTS setups).
 - **LLM SPA Proxy & MCP:** Agentic workflows, Model Context Protocol (MCP) integrations, automated multi-agent code generation swarms (NICE), and secure database-backed rate-limiting proxy gateways for autonomous AI agents.
