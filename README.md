@@ -81,6 +81,13 @@ graph TD
     Services --> T3[Business Systems]
     Services --> T4[Platform / Enterprise]
     
+    Services --> Agile[Agile & Iterative]
+    Services --> Waterfall[Waterfall & Structured]
+    Services --> AICon[AI Consulting]
+    Services --> MCP[MCP Integrations]
+    Services --> Hosting[Light Hosting]
+    Services --> Retainer[Managed Retainer]
+    
     Projects --> Featured[Featured Projects]
     Projects --> All[All Projects]
 ```

@@ -79,6 +79,7 @@ flowchart TD
         PJ --> PJ9["OnTheGoRentals"]
         PJ --> PJ10["NK Assessments"]
         PJ --> PJ11["NemesisNet WordPress Theme"]
+        PJ --> PJ12["TorqueBooks"]
     end
 
     subgraph "Legal Branch"
@@ -135,6 +136,12 @@ flowchart LR
         C11["Tier 2 - App Starter"] --> /services/app-starter
         C12["Tier 3 - Business Systems"] --> /services/business-systems
         C13["Tier 4 - Platform / Enterprise"] --> /services/platform-enterprise
+        C14["Agile & Iterative"] --> /services/agile-iterative
+        C15["Waterfall & Structured"] --> /services/waterfall-structured
+        C16["AI Architecture / Consulting"] --> /services/ai-consulting
+        C17["Custom MCP & Agent Integrations"] --> /services/mcp-integrations
+        C18["Light Hosting"] --> /services/light-hosting
+        C19["Managed Retainer"] --> /services/managed-retainer
     end
 
     subgraph "Project CTAs"
