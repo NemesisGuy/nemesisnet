@@ -70,7 +70,7 @@
           <div class="related-card">
             <h4>WordPress MCP Server</h4>
             <p>MCP server for WordPress — agents can create, update, and query posts, pages, and media through a structured API.</p>
-            <NuxtLink to="/projects/wordpress-mcp-server" class="btn-glass">View Project</NuxtLink>
+            <NuxtLink to="/projects/wordpress-mcp" class="btn-glass">View Project</NuxtLink>
           </div>
           <div class="related-card">
             <h4>PocketTTS-MCP</h4>

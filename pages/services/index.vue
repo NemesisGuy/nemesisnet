@@ -110,7 +110,7 @@
         <h3 class="pricing-group-label">Ongoing Support</h3>
         <p class="pricing-group-desc">Monthly retainers for hosting, maintenance, and continuous improvement.</p>
         <div class="pricing-grid">
-          <div class="card pricing-card">
+          <NuxtLink to="/services/light-hosting" class="card pricing-card pricing-card--linked">
             <h4 class="pricing-title">Light Hosting</h4>
             <div class="pricing-price">R850</div>
             <div class="pricing-unit">Monthly</div>
@@ -120,11 +120,9 @@
               <li>OS and dependency patching</li>
               <li>Uptime monitoring and alerts</li>
             </ul>
-            <div class="pricing-foot">
-              <a class="btn-glass" href="/#contact">Choose Support</a>
-            </div>
-          </div>
-          <div class="card pricing-card">
+            <span class="pricing-link">See Details →</span>
+          </NuxtLink>
+          <NuxtLink to="/services/managed-retainer" class="card pricing-card pricing-card--linked">
             <h4 class="pricing-title">Managed Retainer</h4>
             <div class="pricing-price">R7,500</div>
             <div class="pricing-unit">Monthly</div>
@@ -135,10 +133,8 @@
               <li>Bug fixes and continuous improvement</li>
               <li>Priority support and SLA coverage</li>
             </ul>
-            <div class="pricing-foot">
-              <a class="btn-glass" href="/#contact">Choose Support</a>
-            </div>
-          </div>
+            <span class="pricing-link">See Details →</span>
+          </NuxtLink>
         </div>
         <p class="pricing-note"><strong>Note:</strong> prices are starting-from benchmarks for South Africa/Cape Town market context. Final pricing depends on scope, delivery timeline, integrations, and support requirements.</p>
 

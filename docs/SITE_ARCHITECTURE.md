@@ -62,6 +62,8 @@ flowchart TD
         SV --> WF["/services/waterfall-structured"]
         SV --> AIC["/services/ai-consulting"]
         SV --> MCP["/services/mcp-integrations"]
+        SV --> LH["/services/light-hosting"]
+        SV --> MR["/services/managed-retainer"]
     end
 
     subgraph "Projects Branch"

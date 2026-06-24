@@ -44,6 +44,10 @@ NemesisNet operates on the principle of digital sovereignty and architectural pu
 - **Agile & Iterative:** Two-week sprints, continuous feedback, CI/CD from day one. Best for MVPs and evolving products. /services/agile-iterative
 - **Waterfall & Structured:** Full scope upfront, gated milestones, formal change control. Best for compliance and fixed-budget builds. /services/waterfall-structured
 
+### Ongoing Support
+- **Light Hosting:** Server hosting, SSL, uptime monitoring, security patches. R850/month. /services/light-hosting
+- **Managed Retainer:** CI/CD management, monitoring, bug fixes, priority support. R7,500/month. /services/managed-retainer
+
 ### AI & Speech Infrastructure
 - **VoxNemesis Supertonic / VoxBox / BabbageBox:** Specialized local-first AI pipelines orchestrating high-concurrency, priority-queued, CPU/GPU-optimized Speech-to-Text (STT), Large Language Model (LLM) routing, and Text-to-Speech (TTS) engines (including optimized Kokoro TTS setups).
 - **LLM SPA Proxy & MCP:** Agentic workflows, Model Context Protocol (MCP) integrations, automated multi-agent code generation swarms (NICE), and secure database-backed rate-limiting proxy gateways for autonomous AI agents.

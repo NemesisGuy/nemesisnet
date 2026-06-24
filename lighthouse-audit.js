@@ -17,6 +17,8 @@ const routes = [
   { path: '/services/waterfall-structured', name: 'waterfall-structured' },
   { path: '/services/ai-consulting', name: 'ai-consulting' },
   { path: '/services/mcp-integrations', name: 'mcp-integrations' },
+  { path: '/services/light-hosting', name: 'light-hosting' },
+  { path: '/services/managed-retainer', name: 'managed-retainer' },
   { path: '/projects/torquebooks', name: 'torquebooks' },
 ];
 
