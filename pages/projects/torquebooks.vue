@@ -39,6 +39,7 @@
 
         <div class="cta-wrapper">
           <a href="https://torquebooks.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
+          <a href="https://blog.nemesisnet.co.za/torquebooks-building-a-workshop-management-system-for-south-african-auto-shops/" target="_blank" class="btn-glass">Read Build Log</a>
         </div>
         <div class="next-project">
           <NuxtLink to="/projects/nk-assessments" class="btn-glass">Next Project → NK Assessments</NuxtLink>

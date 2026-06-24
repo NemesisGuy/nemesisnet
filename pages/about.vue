@@ -147,6 +147,8 @@
 
         <div class="back-link">
           <NuxtLink to="/projects" class="btn-glass">See the Work →</NuxtLink>
+          <a href="https://blog.nemesisnet.co.za/welcome-to-nemesisnet-why-i-started-this-blog/" target="_blank" class="btn-glass">Why I Started This Blog</a>
+          <a href="https://blog.nemesisnet.co.za/nemesisnet-overview/" target="_blank" class="btn-glass">NemesisNet Overview</a>
         </div>
       </div>
     </div>

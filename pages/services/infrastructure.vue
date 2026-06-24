@@ -108,6 +108,7 @@
           <NuxtLink to="/contact" class="btn-glass">Secure Your Infra</NuxtLink>
           <a href="https://blog.nemesisnet.co.za/self-hosted-ci-cd-on-a-home-rack-github-gitea-woodpecker-and-portainer/" target="_blank" class="btn-glass">Self-Hosted CI/CD</a>
           <a href="https://blog.nemesisnet.co.za/inside-the-nemesisnet-homelab-my-personal-data-center/" target="_blank" class="btn-glass">Homelab Deep Dive</a>
+          <a href="https://blog.nemesisnet.co.za/build-once-deploy-anywhere-runtime-env-injection-docker-frontend/" target="_blank" class="btn-glass">Build Once, Deploy Anywhere</a>
         </div>
         <div class="next-project">
           <NuxtLink to="/services" class="btn-glass">← Back to Services</NuxtLink>

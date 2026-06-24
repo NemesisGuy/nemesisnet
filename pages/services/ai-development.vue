@@ -101,6 +101,7 @@
         <div class="cta-wrapper">
           <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Scope an AI Build</a>
           <a href="https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/" target="_blank" class="btn-glass">Read Cost Analysis</a>
+          <a href="https://blog.nemesisnet.co.za/maximizing-personal-productivity-with-ai-tools/" target="_blank" class="btn-glass">AI Productivity Guide</a>
         </div>
         <div class="next-project">
           <NuxtLink to="/services/self-hosted-ai" class="btn-glass">Next: Self-Hosted AI Infrastructure →</NuxtLink>
