@@ -55,14 +55,34 @@
 - [x] **C1** — Create `/blog/self-hosted-ai-vs-openai-apis` — Outlines complete
 - [x] **C2** — Create `/blog/vue-vs-react-enterprise-saas` — Outlines complete
 
-### All 6 Service Pages Expanded (P3)
+### All 16 Service Pages Expanded (P3 + subsequent work)
 
 - [x] **ai-development.vue** — ~280 → ~700+ words, added Problem, Who, Process, Related Services
 - [x] **self-hosted-ai.vue** — ~350 → ~750+ words, added Problem, Who, Process, Related Services
 - [x] **saas-development.vue** — ~200 → ~650+ words, added Problem, Who, Process, Related Services
 - [x] **infrastructure.vue** — ~200 → ~650+ words, added Problem, Who, Process, Related Services
-- [x] **custom-software.vue** — ~200 → ~650+ words, added Problem, Who, Process, Related Services
-- [x] **consulting.vue** — ~180 → ~600+ words, added Problem, Who, Process, Related Services
+- [x] **custom-software.vue** — Renamed to "Backend & API Engineering", reframed as APIs/integrations/pipelines
+- [x] **consulting.vue** — Expanded with AI & Platform Decisions section, cross-references ai-consulting
+- [x] **static-sites.vue** — Tier 1 detail page created (R10K–R25K)
+- [x] **app-starter.vue** — Tier 2 detail page created (R35K–R80K)
+- [x] **business-systems.vue** — Tier 3 detail page created (R150K+)
+- [x] **platform-enterprise.vue** — Tier 4 detail page created (R350K+)
+- [x] **ai-consulting.vue** — Specialist consulting page created (R10K)
+- [x] **mcp-integrations.vue** — MCP integrations page created (R55K)
+- [x] **agile-iterative.vue** — Agile delivery methodology page created
+- [x] **waterfall-structured.vue** — Waterfall delivery methodology page created
+- [x] **light-hosting.vue** — Light hosting page created (R850/mo)
+- [x] **managed-retainer.vue** — Managed retainer page created (R7,500/mo)
+
+### Services Index Cleanup (Completed)
+
+- [x] Removed redundant tier grid from services index (pricing cards already cover this)
+- [x] Removed dead-end QA/DevOps blocks (no links, no value)
+- [x] Removed Delivery Rhythm paragraph (restated SDLC cards)
+- [x] Removed duplicate Related Services grid (pricing cards already link to all services)
+- [x] Added visible FAQ section (5 questions matching FAQ schema)
+- [x] Moved CTA higher — right after pricing cards
+- [x] Fixed FAQ schema: Nuxt 3 → Nuxt 4
 
 ### Week 4: Comparison Articles (Create 2)
 
@@ -153,11 +173,12 @@
 |------|-------|-------|--------|
 | 1 | Audit & Setup | A1-A5 | [x] Complete |
 | 2 | Service Pages | S1-S3 | [x] S1, S2, S3 done (renamed to saas-development) |
-| 3 | Schema & On-Page | T1-T5 | [x] T1, T2, T4 done; T3, T5 skipped → T3, T5 reinstated (medium-high impact) |
-| 4 | Comparisons | C1-C2 | [x] Outlines done; writing in progress |
+| 3 | Schema & On-Page | T1-T5 | [x] Complete |
+| 4 | Comparisons + Expansion | C1-C2 + all 16 service pages | [x] Complete |
 | 5-6 | Case Studies | CS1-CS3 | [ ] |
 | 7-8 | Clusters & Measure | TC1-TC2, M1-M4 | [ ] |
-| 2.8 | Authority Injection | Homepage, Decision-layer, Internal links, Local SEO | [x] Complete — all items done (P1-P11) |
+| 2.8 | Authority Injection | Homepage, Decision-layer, Internal links, Local SEO | [x] Complete — all items done (P1-P14) |
+| Cleanup | Services Index + Blog Links | FAQ, redundancy removal, 14 blog cross-links | [x] Complete |
 
 **Phase 2.8 Authority Injection — SEO Scorecard Tasks:**
 
@@ -181,12 +202,12 @@ SEO Audit Scores: JSON-LD [MISS→DONE], Canonical [WEAK→DONE], OG [WEAK→DON
 - [x] Blog link in AppHeader/AppFooter verified as external (noopener noreferrer)
 
 ### 🔴 Remaining
-- [ ] P12: Blog — add canonicals on all posts + aggressive cross-linking from main site
+- [ ] P12: Blog — add canonicals on all posts *(cross-linking done — all 14 posts linked from appropriate main site pages)*
 - [ ] P13: Google Business Profile setup
 - [ ] P9 follow-up: Named client logos for testimonials
 
 ---
 
-*Document Version: 3.0*
-*Last Updated: May 14, 2026*
-*All Phase 2.8 tasks P1-P14 completed — remaining items are Phase 3+ (case studies, blog canonicals, GMB, client logos)*
+*Document Version: 4.0*
+*Last Updated: June 24, 2026*
+*Phase 2 service pages, authority injection, services cleanup, and blog cross-linking complete. Remaining: case studies (CS1-CS3), topical clusters (TC1-TC2), analytics (M1-M4), GMB, client logos.*
