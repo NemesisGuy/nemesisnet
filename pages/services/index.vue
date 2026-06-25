@@ -138,8 +138,9 @@
         </div>
         <p class="pricing-note"><strong>Note:</strong> prices are starting-from benchmarks for South Africa/Cape Town market context. Final pricing depends on scope, delivery timeline, integrations, and support requirements.</p>
 
-        <div class="section-cta">
-          <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Ready to scope your project? →</a>
+        <div class="section-cta section-cta--prominent">
+          <NuxtLink to="/contact" class="btn-aurora">Book a Scoping Session →</NuxtLink>
+          <p class="section-cta-sub">Free 30-minute call to clarify scope, architecture, and timelines.</p>
         </div>
 
         <h2>Which build fits your project?</h2>
@@ -446,9 +447,12 @@ useHead({
 .detail-main { text-align: left !important; line-height: 1.8; }
 .detail-main p, .detail-main h2, .detail-main h3, .detail-main h4, .detail-main li { text-align: left !important; }
 .section-cta { text-align: center !important; }
+.section-cta--prominent { margin: 32px 0 40px; }
+.section-cta--prominent .btn-aurora { font-size: 1.05rem; padding: 14px 32px; }
+.section-cta-sub { font-size: 0.85rem; color: var(--text-muted); margin-top: 10px; }
 .btn-glass { display: inline-block; }
 .sdlc-columns { grid-template-columns: repeat(2, 1fr) !important; justify-items: center; }
-.pricing-grid, .tiers-grid { justify-items: center; }
+.pricing-grid, .tiers-grid { /* pricing-grid now flexbox, centered via main.css */ }
 .pricing-group-label { font-size: 1.1rem; color: var(--accent-color); margin: 32px 0 8px; padding-bottom: 8px; border-bottom: 1px solid var(--glass-border); }
 .pricing-group-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px; }
 .tier-card { text-decoration: none !important; color: inherit !important; display: flex !important; flex-direction: column !important; transition: transform 0.2s ease, border-color 0.2s ease !important; }

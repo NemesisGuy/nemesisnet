@@ -10,7 +10,7 @@
         <p>Most high-quality text-to-speech services are locked behind expensive monthly subscriptions and restrictive APIs, with significant latency and zero privacy. For production workloads, a local, low-latency, and high-fidelity alternative was needed.</p>
         
         <h2>The Solution</h2>
-        <p>The Kokoro TTS Service is a full-stack implementation of the open-source Kokoro engine. I built a custom web interface and API layer that allows users to generate natural-sounding speech synthesis instantly without relying on third-party cloud providers.</p>
+        <p>The Kokoro TTS Service is a full-stack implementation of the open-source Kokoro engine. A custom web interface and API layer allows users to generate natural-sounding speech synthesis instantly without relying on third-party cloud providers.</p>
         
         <h2>Technical Implementation</h2>
         <p>The system uses a Python-based backend to handle the model inference, wrapped in a high-performance API. The frontend is a modern, responsive web interface that allows for real-time audio preview and batch processing. The entire stack is containerized and runs on self-hosted infrastructure, delivering sub-second response times without cloud dependencies.</p>
