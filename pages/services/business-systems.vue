@@ -21,24 +21,24 @@
 
         <h2>What's Included</h2>
         <ul class="feature-list">
-          <li>Spring Boot backend with clean architecture</li>
-          <li>Vue 3 frontend with responsive design</li>
-          <li>Secure authentication (JWT, RBAC, optional OAuth2)</li>
-          <li>MySQL or PostgreSQL database design and optimisation</li>
-          <li>REST API with documentation (OpenAPI/Swagger)</li>
-          <li>Automated testing (unit, integration)</li>
-          <li>Docker + Nginx deployment</li>
-          <li>CI/CD pipeline setup</li>
-          <li>Architecture, testing strategy, and documentation</li>
+          <li><CheckCircle :size="18" /> Spring Boot backend with clean architecture</li>
+          <li><CheckCircle :size="18" /> Vue 3 frontend with responsive design</li>
+          <li><CheckCircle :size="18" /> Secure authentication (JWT, RBAC, optional OAuth2)</li>
+          <li><CheckCircle :size="18" /> MySQL or PostgreSQL database design and optimisation</li>
+          <li><CheckCircle :size="18" /> REST API with documentation (OpenAPI/Swagger)</li>
+          <li><CheckCircle :size="18" /> Automated testing (unit, integration)</li>
+          <li><CheckCircle :size="18" /> Docker + Nginx deployment</li>
+          <li><CheckCircle :size="18" /> CI/CD pipeline setup</li>
+          <li><CheckCircle :size="18" /> Architecture, testing strategy, and documentation</li>
         </ul>
 
         <h2>What's Not Included</h2>
         <ul class="feature-list feature-list--muted">
-          <li>Multi-tenant SaaS architecture (goes into Platform/Enterprise)</li>
-          <li>AI/ML pipelines or LLM integrations</li>
-          <li>Complex financial or compliance systems</li>
-          <li>Microservices architecture (monolith-first approach)</li>
-          <li>Ongoing hosting management (available as retainer add-on)</li>
+          <li><XCircle :size="18" /> Multi-tenant SaaS architecture (goes into Platform/Enterprise)</li>
+          <li><XCircle :size="18" /> AI/ML pipelines or LLM integrations</li>
+          <li><XCircle :size="18" /> Complex financial or compliance systems</li>
+          <li><XCircle :size="18" /> Microservices architecture (monolith-first approach)</li>
+          <li><XCircle :size="18" /> Ongoing hosting management (available as retainer add-on)</li>
         </ul>
 
         <h2>Timeline Breakdown</h2>
@@ -122,6 +122,8 @@
 </template>
 
 <script setup>
+import { CheckCircle, XCircle } from 'lucide-vue-next'
+
 useHead({
   title: 'Business Systems — Spring Boot, Vue 3, Full-Stack | NemesisNet',
   meta: [
@@ -179,9 +181,7 @@ useHead({
 .breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
 @media (max-width: 768px) { .breadcrumbs { display: none !important; } }
 .feature-list { list-style: none; padding: 0; margin: 0 0 24px; }
-.feature-list li { padding: 8px 0; padding-left: 20px; position: relative; color: var(--text-muted); }
-.feature-list li::before { content: '✓'; position: absolute; left: 0; color: #22c55e; font-weight: 700; }
-.feature-list--muted li::before { content: '✗'; color: #ef4444; }
+.feature-list li { padding: 8px 0; color: var(--text-muted); }
 .process-steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 24px 0; }
 .process-steps .process-step { flex: 0 1 calc(50% - 10px); min-width: 280px; max-width: 360px; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }

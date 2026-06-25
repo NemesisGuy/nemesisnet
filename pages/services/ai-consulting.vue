@@ -21,19 +21,19 @@
 
         <h2>What's Included</h2>
         <ul class="feature-list">
-          <li>Platform review — current architecture, bottlenecks, and improvement opportunities</li>
-          <li>AI workflow design — model selection, deployment strategy, and integration patterns</li>
-          <li>Technical roadmapping — phased delivery plan aligned to your business goals</li>
-          <li>Stack evaluation — honest assessment of your current tech choices</li>
-          <li>Cost modelling — infrastructure and operational cost projections</li>
-          <li>Written summary of recommendations and next steps</li>
+          <li><CheckCircle :size="18" /> Platform review — current architecture, bottlenecks, and improvement opportunities</li>
+          <li><CheckCircle :size="18" /> AI workflow design — model selection, deployment strategy, and integration patterns</li>
+          <li><CheckCircle :size="18" /> Technical roadmapping — phased delivery plan aligned to your business goals</li>
+          <li><CheckCircle :size="18" /> Stack evaluation — honest assessment of your current tech choices</li>
+          <li><CheckCircle :size="18" /> Cost modelling — infrastructure and operational cost projections</li>
+          <li><CheckCircle :size="18" /> Written summary of recommendations and next steps</li>
         </ul>
 
         <h2>What's Not Included</h2>
         <ul class="feature-list feature-list--muted">
-          <li>Hands-on coding or implementation (available as a separate engagement)</li>
-          <li>Ongoing advisory retainers (available via Managed Retainer)</li>
-          <li>Vendor-specific sales pitches — recommendations are stack-agnostic</li>
+          <li><XCircle :size="18" /> Hands-on coding or implementation (available as a separate engagement)</li>
+          <li><XCircle :size="18" /> Ongoing advisory retainers (available via Managed Retainer)</li>
+          <li><XCircle :size="18" /> Vendor-specific sales pitches — recommendations are stack-agnostic</li>
         </ul>
 
         <h2>Session Format</h2>
@@ -107,6 +107,8 @@
 </template>
 
 <script setup>
+import { CheckCircle, XCircle } from 'lucide-vue-next'
+
 useHead({
   title: 'AI Architecture & Consulting — Half-Day Sessions | NemesisNet',
   meta: [
@@ -165,9 +167,7 @@ useHead({
 .breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
 @media (max-width: 768px) { .breadcrumbs { display: none !important; } }
 .feature-list { list-style: none; padding: 0; margin: 0 0 24px; }
-.feature-list li { padding: 8px 0; padding-left: 20px; position: relative; color: var(--text-muted); }
-.feature-list li::before { content: '✓'; position: absolute; left: 0; color: #22c55e; font-weight: 700; }
-.feature-list--muted li::before { content: '✗'; color: #ef4444; }
+.feature-list li { padding: 8px 0; color: var(--text-muted); }
 .process-steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 24px 0; }
 .process-steps .process-step { flex: 0 1 calc(50% - 10px); min-width: 280px; max-width: 360px; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }

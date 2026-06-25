@@ -21,21 +21,21 @@
 
         <h2>What's Included</h2>
         <ul class="feature-list">
-          <li>Full requirements documentation and sign-off</li>
-          <li>Architecture and design phase with stakeholder approval</li>
-          <li>Phased delivery with gated milestones</li>
-          <li>Formal change control process for scope adjustments</li>
-          <li>Documentation-driven handoff</li>
-          <li>Comprehensive testing at each phase boundary</li>
-          <li>Full audit trail for compliance requirements</li>
+          <li><CheckCircle :size="18" /> Full requirements documentation and sign-off</li>
+          <li><CheckCircle :size="18" /> Architecture and design phase with stakeholder approval</li>
+          <li><CheckCircle :size="18" /> Phased delivery with gated milestones</li>
+          <li><CheckCircle :size="18" /> Formal change control process for scope adjustments</li>
+          <li><CheckCircle :size="18" /> Documentation-driven handoff</li>
+          <li><CheckCircle :size="18" /> Comprehensive testing at each phase boundary</li>
+          <li><CheckCircle :size="18" /> Full audit trail for compliance requirements</li>
         </ul>
 
         <h2>What's Not Included</h2>
         <ul class="feature-list feature-list--muted">
-          <li>Mid-sprint scope changes (changes go through formal process)</li>
-          <li>Continuous stakeholder reshaping of the product</li>
-          <li>Working software until the build phase completes</li>
-          <li>Flexible timelines — milestones are fixed once signed off</li>
+          <li><XCircle :size="18" /> Mid-sprint scope changes (changes go through formal process)</li>
+          <li><XCircle :size="18" /> Continuous stakeholder reshaping of the product</li>
+          <li><XCircle :size="18" /> Working software until the build phase completes</li>
+          <li><XCircle :size="18" /> Flexible timelines — milestones are fixed once signed off</li>
         </ul>
 
         <h2>Phase Breakdown</h2>
@@ -113,6 +113,8 @@
 </template>
 
 <script setup>
+import { CheckCircle, XCircle } from 'lucide-vue-next'
+
 useHead({
   title: 'Waterfall & Structured Delivery — Gated Milestones | NemesisNet',
   meta: [
@@ -170,9 +172,7 @@ useHead({
 .breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
 @media (max-width: 768px) { .breadcrumbs { display: none !important; } }
 .feature-list { list-style: none; padding: 0; margin: 0 0 24px; }
-.feature-list li { padding: 8px 0; padding-left: 20px; position: relative; color: var(--text-muted); }
-.feature-list li::before { content: '✓'; position: absolute; left: 0; color: #22c55e; font-weight: 700; }
-.feature-list--muted li::before { content: '✗'; color: #ef4444; }
+.feature-list li { padding: 8px 0; color: var(--text-muted); }
 .process-steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 24px 0; }
 .process-steps .process-step { flex: 0 1 calc(50% - 10px); min-width: 280px; max-width: 360px; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }

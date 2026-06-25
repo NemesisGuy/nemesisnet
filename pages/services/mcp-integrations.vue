@@ -21,20 +21,20 @@
 
         <h2>What's Included</h2>
         <ul class="feature-list">
-          <li>Custom MCP server design and implementation</li>
-          <li>Integration with CMS, CRM, databases, and internal APIs</li>
-          <li>Role-based access control for agent operations</li>
-          <li>Audit logging for all agent actions</li>
-          <li>Data validation and sanitization at the integration boundary</li>
-          <li>Documentation and handoff for your engineering team</li>
+          <li><CheckCircle :size="18" /> Custom MCP server design and implementation</li>
+          <li><CheckCircle :size="18" /> Integration with CMS, CRM, databases, and internal APIs</li>
+          <li><CheckCircle :size="18" /> Role-based access control for agent operations</li>
+          <li><CheckCircle :size="18" /> Audit logging for all agent actions</li>
+          <li><CheckCircle :size="18" /> Data validation and sanitization at the integration boundary</li>
+          <li><CheckCircle :size="18" /> Documentation and handoff for your engineering team</li>
         </ul>
 
         <h2>What's Not Included</h2>
         <ul class="feature-list feature-list--muted">
-          <li>AI model training or fine-tuning</li>
-          <li>Building the AI agents themselves (focus is on the integration layer)</li>
-          <li>Ongoing infrastructure management (available via Managed Retainer)</li>
-          <li>Third-party vendor API changes (handled through maintenance agreements)</li>
+          <li><XCircle :size="18" /> AI model training or fine-tuning</li>
+          <li><XCircle :size="18" /> Building the AI agents themselves (focus is on the integration layer)</li>
+          <li><XCircle :size="18" /> Ongoing infrastructure management (available via Managed Retainer)</li>
+          <li><XCircle :size="18" /> Third-party vendor API changes (handled through maintenance agreements)</li>
         </ul>
 
         <h2>Integration Process</h2>
@@ -113,6 +113,8 @@
 </template>
 
 <script setup>
+import { CheckCircle, XCircle } from 'lucide-vue-next'
+
 useHead({
   title: 'Custom MCP & Agent Integrations — AI System Connectivity | NemesisNet',
   meta: [
@@ -171,9 +173,7 @@ useHead({
 .breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
 @media (max-width: 768px) { .breadcrumbs { display: none !important; } }
 .feature-list { list-style: none; padding: 0; margin: 0 0 24px; }
-.feature-list li { padding: 8px 0; padding-left: 20px; position: relative; color: var(--text-muted); }
-.feature-list li::before { content: '✓'; position: absolute; left: 0; color: #22c55e; font-weight: 700; }
-.feature-list--muted li::before { content: '✗'; color: #ef4444; }
+.feature-list li { padding: 8px 0; color: var(--text-muted); }
 .process-steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 24px 0; }
 .process-steps .process-step { flex: 0 1 calc(50% - 10px); min-width: 280px; max-width: 360px; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }

@@ -2,6 +2,7 @@
   <div>
     <PageHeader title="Services" subtitle="Engineering platforms, systems, and infrastructure for real production workloads." />
 
+
     <div class="detail-container">
       <div class="detail-main">
         <div class="breadcrumbs" aria-label="Breadcrumb">
@@ -18,6 +19,7 @@
         <p class="pricing-group-desc">One-time engagements to design, build, and deploy production systems.</p>
         <div class="pricing-grid">
           <div class="card pricing-card">
+            <div class="pricing-icon"><ClientOnly><Globe :size="24" /></ClientOnly></div>
             <h4 class="pricing-title">Static &amp; Brochure</h4>
             <div class="pricing-price">R10,000 – R25,000</div>
             <div class="pricing-unit">Range</div>
@@ -33,6 +35,7 @@
             </div>
           </div>
           <div class="card pricing-card">
+            <div class="pricing-icon"><ClientOnly><Layers :size="24" /></ClientOnly></div>
             <h4 class="pricing-title">App Starter</h4>
             <div class="pricing-price">R35,000 – R80,000</div>
             <div class="pricing-unit">Range</div>
@@ -49,6 +52,7 @@
             </div>
           </div>
           <div class="card pricing-card pricing-card--featured">
+            <div class="pricing-icon"><ClientOnly><Briefcase :size="24" /></ClientOnly></div>
             <h4 class="pricing-title">Business Systems</h4>
             <div class="pricing-price">R150,000</div>
             <div class="pricing-unit">Starting from</div>
@@ -63,6 +67,7 @@
             </div>
           </div>
           <div class="card pricing-card">
+            <div class="pricing-icon"><ClientOnly><Cpu :size="24" /></ClientOnly></div>
             <h4 class="pricing-title">Platform / Enterprise</h4>
             <div class="pricing-price">R350,000</div>
             <div class="pricing-unit">Starting from</div>
@@ -328,25 +333,14 @@
 
         <h2>Frequently Asked Questions</h2>
         <div class="faq-list">
-          <div class="faq-item">
-            <h3>What technologies does NemesisNet use?</h3>
-            <p>NemesisNet works with Vue 3, React, Nuxt 4, Spring Boot, Python, PocketBase, Docker, PostgreSQL, Redis, and AI frameworks including MCP, GGUF models, and CUDA-accelerated inference.</p>
-          </div>
-          <div class="faq-item">
-            <h3>How does pricing work?</h3>
-            <p>Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R10,000 for static sites to R350,000+ for platform and enterprise work. Specialist engagements start from R10,000. Ongoing support starts at R850/month.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Does NemesisNet work with clients outside Cape Town?</h3>
-            <p>Yes. While based in Cape Town, South Africa, NemesisNet works with clients remotely across the country and internationally. Discovery calls and scoping sessions are conducted online.</p>
-          </div>
-          <div class="faq-item">
-            <h3>What is the typical delivery timeline?</h3>
-            <p>Static sites ship in 2–4 weeks. App starters typically take 4–8 weeks. Business systems range from 8–16 weeks. Platform and enterprise builds run 16–30+ weeks. All timelines are scoped during the discovery phase.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Can NemesisNet integrate with existing systems?</h3>
-            <p>Yes. NemesisNet builds API integrations, MCP servers, and data pipelines that connect to existing CMS, CRM, and database systems. Custom MCP agents can automate workflows across multiple platforms.</p>
+          <div v-for="(faq, i) in faqs" :key="i" class="faq-item" :class="{ 'faq-item--open': openFaq === i }">
+            <button class="faq-toggle" @click="toggleFaq(i)">
+              <h3>{{ faq.q }}</h3>
+              <ClientOnly><ChevronDown :size="18" class="faq-chevron" /></ClientOnly>
+            </button>
+            <div class="faq-answer" :style="{ maxHeight: openFaq === i ? '400px' : '0' }">
+              <p>{{ faq.a }}</p>
+            </div>
           </div>
         </div>
 
@@ -359,6 +353,19 @@
 </template>
 
 <script setup>
+import { Globe, Layers, Briefcase, Cpu, ChevronDown } from 'lucide-vue-next'
+
+const openFaq = ref(null)
+const toggleFaq = (i) => { openFaq.value = openFaq.value === i ? null : i }
+
+const faqs = [
+  { q: 'What technologies does NemesisNet use?', a: 'NemesisNet works with Vue 3, React, Nuxt 4, Spring Boot, Python, PocketBase, Docker, PostgreSQL, Redis, and AI frameworks including MCP, GGUF models, and CUDA-accelerated inference.' },
+  { q: 'How does pricing work?', a: 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R10,000 for static sites to R350,000+ for platform and enterprise work. Specialist engagements start from R10,000. Ongoing support starts at R850/month.' },
+  { q: 'Does NemesisNet work with clients outside Cape Town?', a: 'Yes. While based in Cape Town, South Africa, NemesisNet works with clients remotely across the country and internationally. Discovery calls and scoping sessions are conducted online.' },
+  { q: 'What is the typical delivery timeline?', a: 'Static sites ship in 2–4 weeks. App starters typically take 4–8 weeks. Business systems range from 8–16 weeks. Platform and enterprise builds run 16–30+ weeks. All timelines are scoped during the discovery phase.' },
+  { q: 'Can NemesisNet integrate with existing systems?', a: 'Yes. NemesisNet builds API integrations, MCP servers, and data pipelines that connect to existing CMS, CRM, and database systems. Custom MCP agents can automate workflows across multiple platforms.' }
+]
+
 useHead({
   title: 'IT Services Cape Town — Software, SaaS, AI & Infrastructure | NemesisNet',
   meta: [
@@ -468,6 +475,13 @@ useHead({
 .faq-item { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px 24px; margin-bottom: 12px; }
 .faq-item h3 { font-size: 1rem; color: var(--accent-color); margin: 0 0 8px; }
 .faq-item p { margin: 0; color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
+.pricing-icon { color: var(--accent-color); margin-bottom: 8px; }
+.faq-toggle { display: flex; justify-content: space-between; align-items: center; width: 100%; background: none; border: none; cursor: pointer; padding: 0; text-align: left; }
+.faq-toggle h3 { margin: 0; flex: 1; }
+.faq-chevron { color: var(--accent-color); transition: transform 0.3s ease; flex-shrink: 0; margin-left: 12px; }
+.faq-item--open .faq-chevron { transform: rotate(180deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.faq-answer p { margin-top: 12px; }
 .pricing-card--linked { text-decoration: none !important; color: inherit !important; cursor: pointer; transition: transform 0.2s ease, border-color 0.2s ease !important; }
 .pricing-card--linked:hover { transform: translateY(-2px); border-color: var(--accent-color) !important; }
 .pricing-link { display: block; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--glass-border); color: var(--accent-color); font-size: 0.9rem; font-weight: 600; text-align: center; }

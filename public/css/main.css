@@ -2421,3 +2421,10 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
   padding-left: 24px !important;
   font-size: 0.8rem;
 }
+
+/* Feature list with Lucide icons */
+.feature-list { list-style: none; padding: 0; margin: 0 0 24px; }
+.feature-list li { display: flex; align-items: flex-start; gap: 8px; padding: 8px 0; color: var(--text-muted); }
+.feature-list li svg { flex-shrink: 0; margin-top: 2px; color: var(--accent-color); }
+.feature-list--muted li svg { color: rgba(255, 255, 255, 0.3); }
+[data-theme='light'] .feature-list--muted li svg { color: rgba(0, 0, 0, 0.3); }

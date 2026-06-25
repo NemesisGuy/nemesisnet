@@ -21,22 +21,22 @@
 
         <h2>What's Included</h2>
         <ul class="feature-list">
-          <li>Server hosting and SSL management</li>
-          <li>OS and dependency security patching</li>
-          <li>Uptime monitoring and alerts</li>
-          <li>Automated backups (where applicable)</li>
-          <li>DNS management support</li>
-          <li>Monthly status report</li>
+          <li><CheckCircle :size="18" /> Server hosting and SSL management</li>
+          <li><CheckCircle :size="18" /> OS and dependency security patching</li>
+          <li><CheckCircle :size="18" /> Uptime monitoring and alerts</li>
+          <li><CheckCircle :size="18" /> Automated backups (where applicable)</li>
+          <li><CheckCircle :size="18" /> DNS management support</li>
+          <li><CheckCircle :size="18" /> Monthly status report</li>
         </ul>
 
         <h2>What's Not Included</h2>
         <ul class="feature-list feature-list--muted">
-          <li>Feature development or new builds</li>
-          <li>Bug fixes or code changes</li>
-          <li>CI/CD pipeline management</li>
-          <li>Application monitoring or APM</li>
-          <li>Priority support or SLA coverage</li>
-          <li>Database administration</li>
+          <li><XCircle :size="18" /> Feature development or new builds</li>
+          <li><XCircle :size="18" /> Bug fixes or code changes</li>
+          <li><XCircle :size="18" /> CI/CD pipeline management</li>
+          <li><XCircle :size="18" /> Application monitoring or APM</li>
+          <li><XCircle :size="18" /> Priority support or SLA coverage</li>
+          <li><XCircle :size="18" /> Database administration</li>
         </ul>
 
         <h2>What You Get Each Month</h2>
@@ -95,6 +95,8 @@
 </template>
 
 <script setup>
+import { CheckCircle, XCircle } from 'lucide-vue-next'
+
 useHead({
   title: 'Light Hosting — R850/mo Server Hosting & Monitoring | NemesisNet',
   meta: [
@@ -153,9 +155,7 @@ useHead({
 .breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
 @media (max-width: 768px) { .breadcrumbs { display: none !important; } }
 .feature-list { list-style: none; padding: 0; margin: 0 0 24px; }
-.feature-list li { padding: 8px 0; padding-left: 20px; position: relative; color: var(--text-muted); }
-.feature-list li::before { content: '✓'; position: absolute; left: 0; color: #22c55e; font-weight: 700; }
-.feature-list--muted li::before { content: '✗'; color: #ef4444; }
+.feature-list li { padding: 8px 0; color: var(--text-muted); }
 .process-steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 24px 0; }
 .process-steps .process-step { flex: 0 1 calc(50% - 10px); min-width: 280px; max-width: 360px; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }

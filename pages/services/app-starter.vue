@@ -21,34 +21,34 @@
 
         <h2>What's Included</h2>
         <ul class="feature-list">
-          <li>PocketBase or Firebase backend with SQLite/Cloud Firestore</li>
-          <li>Vue 3 or React frontend with responsive design</li>
-          <li>User authentication (email/password, optional OAuth2)</li>
-          <li>Role-based access control (admin, user, viewer)</li>
-          <li>CRUD operations with collection/schema design</li>
-          <li>Real-time data updates (PocketBase subscriptions)</li>
-          <li>Docker + Nginx deployment included</li>
-          <li>Admin panel setup</li>
+          <li><CheckCircle :size="18" /> PocketBase or Firebase backend with SQLite/Cloud Firestore</li>
+          <li><CheckCircle :size="18" /> Vue 3 or React frontend with responsive design</li>
+          <li><CheckCircle :size="18" /> User authentication (email/password, optional OAuth2)</li>
+          <li><CheckCircle :size="18" /> Role-based access control (admin, user, viewer)</li>
+          <li><CheckCircle :size="18" /> CRUD operations with collection/schema design</li>
+          <li><CheckCircle :size="18" /> Real-time data updates (PocketBase subscriptions)</li>
+          <li><CheckCircle :size="18" /> Docker + Nginx deployment included</li>
+          <li><CheckCircle :size="18" /> Admin panel setup</li>
         </ul>
 
         <h2>What's Not Included</h2>
         <ul class="feature-list feature-list--muted">
-          <li>Multi-tenant architecture (goes into Business Systems tier)</li>
-          <li>Complex business logic or workflow engines</li>
-          <li>Payment processing or billing integration</li>
-          <li>Third-party API integrations (CRM, ERP, etc.)</li>
-          <li>Advanced reporting or analytics dashboards</li>
-          <li>Full CI/CD pipeline setup</li>
+          <li><XCircle :size="18" /> Multi-tenant architecture (goes into Business Systems tier)</li>
+          <li><XCircle :size="18" /> Complex business logic or workflow engines</li>
+          <li><XCircle :size="18" /> Payment processing or billing integration</li>
+          <li><XCircle :size="18" /> Third-party API integrations (CRM, ERP, etc.)</li>
+          <li><XCircle :size="18" /> Advanced reporting or analytics dashboards</li>
+          <li><XCircle :size="18" /> Full CI/CD pipeline setup</li>
         </ul>
 
         <h2>What You're Actually Paying For</h2>
         <p>You're not paying for pages or dashboards. You're paying for a working system with authentication, data integrity, and deployment. You're paying for:</p>
         <ul class="feature-list">
-          <li>System design — the right data model, the right schema, the right roles from day one</li>
-          <li>Backend architecture that handles auth, real-time, and storage without glue code</li>
-          <li>A frontend your team will actually use — clean, responsive, built for the workflow</li>
-          <li>Production deployment — Docker, Nginx, SSL, domain, live and monitored</li>
-          <li>Delivery speed — PocketBase eliminates months of backend boilerplate so you get to production faster</li>
+          <li><CheckCircle :size="18" /> System design — the right data model, the right schema, the right roles from day one</li>
+          <li><CheckCircle :size="18" /> Backend architecture that handles auth, real-time, and storage without glue code</li>
+          <li><CheckCircle :size="18" /> A frontend your team will actually use — clean, responsive, built for the workflow</li>
+          <li><CheckCircle :size="18" /> Production deployment — Docker, Nginx, SSL, domain, live and monitored</li>
+          <li><CheckCircle :size="18" /> Delivery speed — PocketBase eliminates months of backend boilerplate so you get to production faster</li>
         </ul>
 
         <h2>How We Work</h2>
@@ -74,12 +74,12 @@
         <p>Starting from <strong>R35,000</strong> for simple internal tools and CRUD systems with authentication.</p>
         <p>Most App Starter projects range between <strong>R45,000–R80,000</strong> depending on:</p>
         <ul class="feature-list">
-          <li>Number of modules and collections</li>
-          <li>Authentication complexity</li>
-          <li>Role-based access depth</li>
-          <li>Real-time features</li>
-          <li>Frontend complexity</li>
-          <li>External integrations</li>
+          <li><CheckCircle :size="18" /> Number of modules and collections</li>
+          <li><CheckCircle :size="18" /> Authentication complexity</li>
+          <li><CheckCircle :size="18" /> Role-based access depth</li>
+          <li><CheckCircle :size="18" /> Real-time features</li>
+          <li><CheckCircle :size="18" /> Frontend complexity</li>
+          <li><CheckCircle :size="18" /> External integrations</li>
         </ul>
         <p>Advanced MVP systems requiring complex workflows, multi-tenant architecture, or billing systems are quoted under <NuxtLink to="/services/business-systems">Business Systems</NuxtLink>.</p>
 
@@ -130,6 +130,8 @@
 </template>
 
 <script setup>
+import { CheckCircle, XCircle } from 'lucide-vue-next'
+
 useHead({
   title: 'App Starter — PocketBase MVP Development | NemesisNet',
   meta: [
@@ -187,9 +189,7 @@ useHead({
 .breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
 @media (max-width: 768px) { .breadcrumbs { display: none !important; } }
 .feature-list { list-style: none; padding: 0; margin: 0 0 24px; }
-.feature-list li { padding: 8px 0; padding-left: 20px; position: relative; color: var(--text-muted); }
-.feature-list li::before { content: '✓'; position: absolute; left: 0; color: #22c55e; font-weight: 700; }
-.feature-list--muted li::before { content: '✗'; color: #ef4444; }
+.feature-list li { padding: 8px 0; color: var(--text-muted); }
 .process-steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 24px 0; }
 .process-steps .process-step { flex: 0 1 calc(50% - 10px); min-width: 280px; max-width: 360px; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }

@@ -37,20 +37,20 @@
 
         <h2>What's Included</h2>
         <ul class="feature-list">
-          <li>Spring Boot REST APIs with OpenAPI/Swagger documentation</li>
-          <li>Database design and optimisation (MySQL, PostgreSQL, SQLite)</li>
-          <li>System integrations (webhooks, message queues, polling services)</li>
-          <li>Data pipelines and ETL jobs</li>
-          <li>Secure authentication (JWT, RBAC, OAuth2)</li>
-          <li>Automated testing (unit, integration)</li>
-          <li>Docker deployment and CI/CD setup</li>
+          <li><CheckCircle :size="18" /> Spring Boot REST APIs with OpenAPI/Swagger documentation</li>
+          <li><CheckCircle :size="18" /> Database design and optimisation (MySQL, PostgreSQL, SQLite)</li>
+          <li><CheckCircle :size="18" /> System integrations (webhooks, message queues, polling services)</li>
+          <li><CheckCircle :size="18" /> Data pipelines and ETL jobs</li>
+          <li><CheckCircle :size="18" /> Secure authentication (JWT, RBAC, OAuth2)</li>
+          <li><CheckCircle :size="18" /> Automated testing (unit, integration)</li>
+          <li><CheckCircle :size="18" /> Docker deployment and CI/CD setup</li>
         </ul>
 
         <h2>What's Not Included</h2>
         <ul class="feature-list feature-list--muted">
-          <li>Full-stack application builds (see Business Systems)</li>
-          <li>Multi-tenant SaaS architecture (see Platform/Enterprise)</li>
-          <li>Frontend UI development (not our scope here)</li>
+          <li><XCircle :size="18" /> Full-stack application builds (see Business Systems)</li>
+          <li><XCircle :size="18" /> Multi-tenant SaaS architecture (see Platform/Enterprise)</li>
+          <li><XCircle :size="18" /> Frontend UI development (not our scope here)</li>
         </ul>
 
         <h2>How We Build</h2>
@@ -152,6 +152,8 @@
 </template>
 
 <script setup>
+import { CheckCircle, XCircle } from 'lucide-vue-next'
+
 useHead({
   title: 'Backend & API Engineering | NemesisNet — APIs, Data Pipelines, System Integrations',
   meta: [

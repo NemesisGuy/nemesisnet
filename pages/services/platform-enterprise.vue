@@ -21,24 +21,24 @@
 
         <h2>What's Included</h2>
         <ul class="feature-list">
-          <li>Spring Boot DDD architecture with clean separation</li>
-          <li>Multi-tenant data isolation and RBAC</li>
-          <li>Vue 3 frontend with complex dashboards</li>
-          <li>PostgreSQL/MySQL with connection pooling and read replicas</li>
-          <li>Redis caching and message queue integration</li>
-          <li>Full CI/CD pipeline (build, test, deploy, monitor)</li>
-          <li>Docker + Kubernetes or Nomad orchestration</li>
-          <li>Comprehensive automated testing (unit, integration, E2E)</li>
-          <li>Security audit and hardening</li>
-          <li>Architecture documentation and runbooks</li>
+          <li><CheckCircle :size="18" /> Spring Boot DDD architecture with clean separation</li>
+          <li><CheckCircle :size="18" /> Multi-tenant data isolation and RBAC</li>
+          <li><CheckCircle :size="18" /> Vue 3 frontend with complex dashboards</li>
+          <li><CheckCircle :size="18" /> PostgreSQL/MySQL with connection pooling and read replicas</li>
+          <li><CheckCircle :size="18" /> Redis caching and message queue integration</li>
+          <li><CheckCircle :size="18" /> Full CI/CD pipeline (build, test, deploy, monitor)</li>
+          <li><CheckCircle :size="18" /> Docker + Kubernetes or Nomad orchestration</li>
+          <li><CheckCircle :size="18" /> Comprehensive automated testing (unit, integration, E2E)</li>
+          <li><CheckCircle :size="18" /> Security audit and hardening</li>
+          <li><CheckCircle :size="18" /> Architecture documentation and runbooks</li>
         </ul>
 
         <h2>What's Not Included</h2>
         <ul class="feature-list feature-list--muted">
-          <li>Simple CRUD apps or internal tools (goes into App Starter)</li>
-          <li>Static websites or brochure sites (goes into Static &amp; Brochure)</li>
-          <li>One-time consulting sessions (available as separate engagement)</li>
-          <li>Ongoing hosting management (available as retainer add-on)</li>
+          <li><XCircle :size="18" /> Simple CRUD apps or internal tools (goes into App Starter)</li>
+          <li><XCircle :size="18" /> Static websites or brochure sites (goes into Static &amp; Brochure)</li>
+          <li><XCircle :size="18" /> One-time consulting sessions (available as separate engagement)</li>
+          <li><XCircle :size="18" /> Ongoing hosting management (available as retainer add-on)</li>
         </ul>
 
         <h2>Timeline Breakdown</h2>
@@ -121,6 +121,8 @@
 </template>
 
 <script setup>
+import { CheckCircle, XCircle } from 'lucide-vue-next'
+
 useHead({
   title: 'Platform / Enterprise — Multi-Tenant SaaS, AI Pipelines | NemesisNet',
   meta: [
@@ -178,9 +180,7 @@ useHead({
 .breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
 @media (max-width: 768px) { .breadcrumbs { display: none !important; } }
 .feature-list { list-style: none; padding: 0; margin: 0 0 24px; }
-.feature-list li { padding: 8px 0; padding-left: 20px; position: relative; color: var(--text-muted); }
-.feature-list li::before { content: '✓'; position: absolute; left: 0; color: #22c55e; font-weight: 700; }
-.feature-list--muted li::before { content: '✗'; color: #ef4444; }
+.feature-list li { padding: 8px 0; color: var(--text-muted); }
 .process-steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 24px 0; }
 .process-steps .process-step { flex: 0 1 calc(50% - 10px); min-width: 280px; max-width: 360px; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }

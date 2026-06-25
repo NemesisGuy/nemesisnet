@@ -21,21 +21,21 @@
 
         <h2>What's Included</h2>
         <ul class="feature-list">
-          <li>Two-week sprint cycles with defined goals</li>
-          <li>Sprint planning and retrospectives</li>
-          <li>Daily standups and async progress updates</li>
-          <li>Continuous integration and delivery (CI/CD from sprint 1)</li>
-          <li>Backlog grooming and prioritisation sessions</li>
-          <li>Working software delivered at the end of each sprint</li>
-          <li>Stakeholder review and feedback incorporation</li>
+          <li><CheckCircle :size="18" /> Two-week sprint cycles with defined goals</li>
+          <li><CheckCircle :size="18" /> Sprint planning and retrospectives</li>
+          <li><CheckCircle :size="18" /> Daily standups and async progress updates</li>
+          <li><CheckCircle :size="18" /> Continuous integration and delivery (CI/CD from sprint 1)</li>
+          <li><CheckCircle :size="18" /> Backlog grooming and prioritisation sessions</li>
+          <li><CheckCircle :size="18" /> Working software delivered at the end of each sprint</li>
+          <li><CheckCircle :size="18" /> Stakeholder review and feedback incorporation</li>
         </ul>
 
         <h2>What's Not Included</h2>
         <ul class="feature-list feature-list--muted">
-          <li>Fixed scope, fixed price contracts (scope is flexible by design)</li>
-          <li>Upfront detailed design documents (design evolves with the build)</li>
-          <li>Waterfall-style phase gates or sign-off milestones</li>
-          <li>Multi-month planning before any code is written</li>
+          <li><XCircle :size="18" /> Fixed scope, fixed price contracts (scope is flexible by design)</li>
+          <li><XCircle :size="18" /> Upfront detailed design documents (design evolves with the build)</li>
+          <li><XCircle :size="18" /> Waterfall-style phase gates or sign-off milestones</li>
+          <li><XCircle :size="18" /> Multi-month planning before any code is written</li>
         </ul>
 
         <h2>Sprint Lifecycle</h2>
@@ -113,6 +113,8 @@
 </template>
 
 <script setup>
+import { CheckCircle, XCircle } from 'lucide-vue-next'
+
 useHead({
   title: 'Agile & Iterative Delivery — Two-Week Sprints | NemesisNet',
   meta: [
@@ -170,9 +172,7 @@ useHead({
 .breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
 @media (max-width: 768px) { .breadcrumbs { display: none !important; } }
 .feature-list { list-style: none; padding: 0; margin: 0 0 24px; }
-.feature-list li { padding: 8px 0; padding-left: 20px; position: relative; color: var(--text-muted); }
-.feature-list li::before { content: '✓'; position: absolute; left: 0; color: #22c55e; font-weight: 700; }
-.feature-list--muted li::before { content: '✗'; color: #ef4444; }
+.feature-list li { padding: 8px 0; color: var(--text-muted); }
 .process-steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 24px 0; }
 .process-steps .process-step { flex: 0 1 calc(50% - 10px); min-width: 280px; max-width: 360px; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }

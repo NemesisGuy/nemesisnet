@@ -21,23 +21,23 @@
 
         <h2>What's Included</h2>
         <ul class="feature-list">
-          <li>Custom-designed responsive frontend (Nuxt static, Vue, or React)</li>
-          <li>Docker + Nginx deployment included</li>
-          <li>Basic SEO setup (meta tags, Open Graph, sitemap)</li>
-          <li>Performance optimisation (lazy loading, compressed assets)</li>
-          <li>SSL certificate and domain configuration</li>
-          <li>Contact form integration (if needed)</li>
-          <li>Analytics setup (optional)</li>
+          <li><CheckCircle :size="18" /> Custom-designed responsive frontend (Nuxt static, Vue, or React)</li>
+          <li><CheckCircle :size="18" /> Docker + Nginx deployment included</li>
+          <li><CheckCircle :size="18" /> Basic SEO setup (meta tags, Open Graph, sitemap)</li>
+          <li><CheckCircle :size="18" /> Performance optimisation (lazy loading, compressed assets)</li>
+          <li><CheckCircle :size="18" /> SSL certificate and domain configuration</li>
+          <li><CheckCircle :size="18" /> Contact form integration (if needed)</li>
+          <li><CheckCircle :size="18" /> Analytics setup (optional)</li>
         </ul>
 
         <h2>What's Not Included</h2>
         <ul class="feature-list feature-list--muted">
-          <li>User authentication or login systems</li>
-          <li>Database or data storage</li>
-          <li>Admin dashboards or content management</li>
-          <li>API integrations or backend logic</li>
-          <li>E-commerce or payment processing</li>
-          <li>Ongoing hosting management (available as add-on)</li>
+          <li><XCircle :size="18" /> User authentication or login systems</li>
+          <li><XCircle :size="18" /> Database or data storage</li>
+          <li><XCircle :size="18" /> Admin dashboards or content management</li>
+          <li><XCircle :size="18" /> API integrations or backend logic</li>
+          <li><XCircle :size="18" /> E-commerce or payment processing</li>
+          <li><XCircle :size="18" /> Ongoing hosting management (available as add-on)</li>
         </ul>
 
         <h2>Timeline Breakdown</h2>
@@ -115,6 +115,8 @@
 </template>
 
 <script setup>
+import { CheckCircle, XCircle } from 'lucide-vue-next'
+
 useHead({
   title: 'Static & Brochure Sites — Fast, Performant Websites | NemesisNet',
   meta: [
@@ -172,9 +174,7 @@ useHead({
 .breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
 @media (max-width: 768px) { .breadcrumbs { display: none !important; } }
 .feature-list { list-style: none; padding: 0; margin: 0 0 24px; }
-.feature-list li { padding: 8px 0; padding-left: 20px; position: relative; color: var(--text-muted); }
-.feature-list li::before { content: '✓'; position: absolute; left: 0; color: #22c55e; font-weight: 700; }
-.feature-list--muted li::before { content: '✗'; color: #ef4444; }
+.feature-list li { padding: 8px 0; color: var(--text-muted); }
 .process-steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 24px 0; }
 .process-steps .process-step { flex: 0 1 calc(50% - 10px); min-width: 280px; max-width: 360px; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }
