@@ -164,6 +164,10 @@ html:not([data-theme="light"]) .avatar-wrap:hover::after{
 html, body {
   overflow-x: hidden;
 }
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
 html { 
   scroll-behavior: auto !important;
   scroll-padding-top: 0;
@@ -490,6 +494,8 @@ section h2 {
   margin-bottom:40px;
   background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-accent) 100%);
   -webkit-background-clip: text;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing:-0.01em;
@@ -2377,14 +2383,22 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
   font-size: 2.5rem;
   margin-bottom: 8px;
   color: var(--accent-color);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 .page-header p {
   font-size: 1.1rem;
   color: var(--text-muted);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 @media (max-width: 768px) {
   .page-header h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
+  }
+  .page-header p {
+    font-size: 0.95rem;
   }
 }
 
