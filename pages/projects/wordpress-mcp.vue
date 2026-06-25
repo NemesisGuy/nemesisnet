@@ -172,7 +172,8 @@ useHead({
   border: 1px solid var(--glass-border);
   border-radius: 20px;
   padding: 24px;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
 }
 
 .sidebar-card h4 {

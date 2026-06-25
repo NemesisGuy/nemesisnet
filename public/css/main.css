@@ -63,7 +63,10 @@ html[data-theme="light"][data-nemesis="on"] .avatar-img {
 html[data-theme="light"][data-nemesis="on"] .avatar-wrap::after {
   content: '';
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   border-radius: 50%;
   pointer-events: none;
   box-shadow: 0 0 0 0 rgba(0,255,255,0.4);
@@ -423,7 +426,7 @@ a.btn-hero:focus-visible {
 
 .theme-toggle { 
   margin-top:24px; 
-  padding:10px 24px; 
+  padding: 12px 24px; 
   border:1px solid var(--glass-border); 
   border-radius:12px; 
   cursor:pointer; 
@@ -1119,7 +1122,7 @@ html[data-theme="light"][data-nemesis="on"] .footer-line .footer-divider {
   flex-wrap: wrap;
   gap: 6px;
 }
-.skill-tag {
+-webkit-backdrop-filter: blur(10px);`.skill-tag {
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
@@ -1141,7 +1144,7 @@ html[data-theme="light"][data-nemesis="on"] .footer-line .footer-divider {
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
-.stat-item {
+-webkit-backdrop-filter: blur(10px);`.stat-item {
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
@@ -1961,8 +1964,8 @@ html[data-theme="light"][data-nemesis="on"] .nav-logo img {
   display: none;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   background: transparent;
   border: 1px solid var(--glass-border);
   border-radius: 10px;
@@ -1987,7 +1990,7 @@ html[data-theme="light"][data-nemesis="on"] .nav-logo img {
   font-size: 1.2rem;
 }
 .nav-links a {
-  padding: 8px 16px;
+  padding: 10px 16px;
   background: transparent;
   border: 1px solid transparent;
   border-radius: 10px;
@@ -2144,7 +2147,7 @@ section#contact{
   margin-top:20px;
 }
 .contact-links a {
-  padding:10px 20px;
+  padding: 12px 20px;
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   border-radius:12px;
@@ -2307,7 +2310,7 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
 
 /* Mobile nav overlay and stronger open-state styles */
 /* overlay behind the mobile menu; slightly darker to improve contrast */
-#nav-overlay{ display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:9990; opacity:0; transition:opacity .18s ease; }
+#nav-overlay{ display:none; position:fixed; top: 0; right: 0; bottom: 0; left: 0; background:rgba(0,0,0,0.75); z-index:9990; opacity:0; transition:opacity .18s ease; }
 #nav-overlay.visible{ display:block; opacity:1; }
 
 @media (max-width: 768px) {
