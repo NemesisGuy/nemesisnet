@@ -139,7 +139,7 @@
         <p class="pricing-note"><strong>Note:</strong> prices are starting-from benchmarks for South Africa/Cape Town market context. Final pricing depends on scope, delivery timeline, integrations, and support requirements.</p>
 
         <div class="section-cta section-cta--prominent">
-          <NuxtLink to="/contact" class="btn-aurora">Book a Scoping Session →</NuxtLink>
+          <NuxtLink to="/contact" class="btn--ignite">Book a Scoping Session →</NuxtLink>
           <p class="section-cta-sub">Free 30-minute call to clarify scope, architecture, and timelines.</p>
         </div>
 
@@ -448,7 +448,7 @@ useHead({
 .detail-main p, .detail-main h2, .detail-main h3, .detail-main h4, .detail-main li { text-align: left !important; }
 .section-cta { text-align: center !important; }
 .section-cta--prominent { margin: 32px 0 40px; }
-.section-cta--prominent .btn-aurora { font-size: 1.05rem; padding: 14px 32px; }
+.section-cta--prominent .btn--ignite { font-size: 1.05rem; padding: 14px 32px; display: inline-block; }
 .section-cta-sub { font-size: 0.85rem; color: var(--text-muted); margin-top: 10px; }
 .btn-glass { display: inline-block; }
 .sdlc-columns { grid-template-columns: repeat(2, 1fr) !important; justify-items: center; }
