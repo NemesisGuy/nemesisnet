@@ -174,7 +174,8 @@ useHead({
 .feature-list li { padding: 8px 0; padding-left: 20px; position: relative; color: var(--text-muted); }
 .feature-list li::before { content: '✓'; position: absolute; left: 0; color: #22c55e; font-weight: 700; }
 .feature-list--muted li::before { content: '✗'; color: #ef4444; }
-.process-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0; }
+.process-steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 24px 0; }
+.process-steps .process-step { flex: 0 1 calc(50% - 10px); min-width: 280px; max-width: 360px; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }
 .process-step .step-number { display: inline-block; background: var(--accent-color); color: #000; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; }
 .process-step h4 { color: var(--accent-color); font-size: 1rem; margin: 0 0 8px; }
