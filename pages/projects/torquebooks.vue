@@ -133,7 +133,7 @@ useHead({
 
 <style scoped>
 .detail-page { background: var(--bg-gradient); min-height: 100vh; }
-.detail-container { max-width: 1000px; margin: 0 auto; padding: 24px 20px 40px; display: grid; grid-template-columns: 1fr 300px; gap: 60px; }
+.detail-container { max-width: 1280px; margin: 0 auto; padding: 24px 20px 40px; display: grid; grid-template-columns: 1fr 300px; gap: 60px; }
 .detail-main { text-align: left; line-height: 1.8; }
 .detail-main h2 { font-size: 2rem; margin: 40px 0 20px; }
 .detail-main p { color: var(--text-muted); margin-bottom: 20px; }

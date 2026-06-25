@@ -247,7 +247,7 @@ useHead({
 .testimonials-grid .card strong { margin-top: auto; }
 
 .section-cta { text-align: center; }
-#services, #projects, #testimonials, #cta, #contact { max-width: 1200px; margin: 0 auto; padding: 40px 20px; min-height: auto !important; justify-content: flex-start !important; }
+#services, #projects, #testimonials, #cta, #contact { max-width: 1280px; margin: 0 auto; padding: 40px 20px; min-height: auto !important; justify-content: flex-start !important; }
 .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
 
 /* Mobile fixes */

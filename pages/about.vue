@@ -225,7 +225,7 @@ useHead({
 </script>
 
 <style>
-.detail-container { max-width: 1000px; margin: 0 auto; padding: 24px 20px 40px 20px; }
+.detail-container { max-width: 1280px; margin: 0 auto; padding: 24px 20px 40px 20px; }
 .detail-main { text-align: left; line-height: 1.8; }
 .detail-main h2 { font-size: 2rem; margin: 40px 0 20px; color: var(--accent-color); }
 .detail-main p { color: var(--text-muted); margin-bottom: 20px; }

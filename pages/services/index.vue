@@ -443,7 +443,7 @@ useHead({
 .services-grid .card .btn-glass { margin-top: auto !important; }
 @media (max-width: 1100px) { .services-grid .card { flex: 0 1 calc(50% - 16px) !important; max-width: none !important; } }
 @media (max-width: 768px) { .services-grid { flex-direction: column !important; gap: 14px !important; } .services-grid .card { flex: none !important; } }
-.detail-container { max-width: 1100px; margin: 0 auto; padding: 24px 24px 40px; }
+.detail-container { max-width: 1280px; margin: 0 auto; padding: 24px 24px 40px; }
 .detail-main { text-align: left !important; line-height: 1.8; }
 .detail-main p, .detail-main h2, .detail-main h3, .detail-main h4, .detail-main li { text-align: left !important; }
 .section-cta { text-align: center !important; }

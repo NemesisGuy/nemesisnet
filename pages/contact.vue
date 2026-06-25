@@ -204,7 +204,7 @@ useHead({
 
 <style>
 .contact-page {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 40px 20px;
   min-height: auto !important;
