@@ -14,3 +14,8 @@ Thumbs.db
 test-*.png
 full-site-audit.json
 lighthouse-new-report.json
+
+# Lighthouse reports
+lh-*.json
+lighthouse-local-home.json
+lighthouse-report-*.json
