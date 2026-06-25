@@ -104,15 +104,15 @@
             <li><span>Delivery:</span> <strong>8–16 Weeks</strong></li>
             <li><span>Price:</span> <strong>From R150,000</strong></li>
             <li><span>Tier:</span> <strong>Tier 3</strong></li>
-            <li><span>Stack:</span> <strong>Spring Boot, Vue 3, MySQL</strong></li>
+            <li><span>Stack:</span> <strong>Spring Boot, Vue 3, PostgreSQL/MySQL</strong></li>
           </ul>
         </div>
         <div class="sidebar-card">
           <h4>Quick Links</h4>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
-            <NuxtLink to="/services/custom-software" class="btn-glass">Custom Software</NuxtLink>
-            <NuxtLink to="/services/saas-development" class="btn-glass">SaaS Development</NuxtLink>
+            <NuxtLink to="/services/app-starter" class="btn-glass">App Starter</NuxtLink>
+            <NuxtLink to="/services/platform-enterprise" class="btn-glass">Platform / Enterprise</NuxtLink>
             <NuxtLink to="/projects" class="btn-glass">View Projects</NuxtLink>
           </div>
         </div>

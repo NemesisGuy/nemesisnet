@@ -110,8 +110,8 @@
           <h4>Quick Links</h4>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
-            <NuxtLink to="/services/ai-development" class="btn-glass">AI Development</NuxtLink>
-            <NuxtLink to="/services/self-hosted-ai" class="btn-glass">Self-Hosted AI</NuxtLink>
+            <NuxtLink to="/services/business-systems" class="btn-glass">Business Systems</NuxtLink>
+            <NuxtLink to="/services/app-starter" class="btn-glass">App Starter</NuxtLink>
             <NuxtLink to="/projects" class="btn-glass">View Projects</NuxtLink>
           </div>
         </div>
