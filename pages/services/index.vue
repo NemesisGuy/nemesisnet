@@ -142,6 +142,139 @@
           <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Ready to scope your project? →</a>
         </div>
 
+        <h2>Which build fits your project?</h2>
+        <p class="section-intro">Not sure which tier you need? Use this to find your fit — then explore the detail page.</p>
+        <div class="tier-selector">
+          <!-- Desktop table -->
+          <table class="tier-table">
+            <thead>
+              <tr>
+                <th/>
+                <th>Static &amp; Brochure</th>
+                <th>App Starter</th>
+                <th>Business Systems</th>
+                <th>Platform / Enterprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tier-question">Need user accounts?</td>
+                <td class="tier-no">✗</td>
+                <td class="tier-yes">✓</td>
+                <td class="tier-yes">✓</td>
+                <td class="tier-yes">✓</td>
+              </tr>
+              <tr>
+                <td class="tier-question">Multiple user roles / RBAC?</td>
+                <td class="tier-no">✗</td>
+                <td class="tier-no">✗</td>
+                <td class="tier-yes">✓</td>
+                <td class="tier-yes">✓</td>
+              </tr>
+              <tr>
+                <td class="tier-question">Multi-tenant or SaaS?</td>
+                <td class="tier-no">✗</td>
+                <td class="tier-no">✗</td>
+                <td class="tier-no">✗</td>
+                <td class="tier-yes">✓</td>
+              </tr>
+              <tr>
+                <td class="tier-question">AI pipelines or LLM integration?</td>
+                <td class="tier-no">✗</td>
+                <td class="tier-no">✗</td>
+                <td class="tier-no">✗</td>
+                <td class="tier-yes">✓</td>
+              </tr>
+              <tr>
+                <td class="tier-question">Custom business logic?</td>
+                <td class="tier-no">✗</td>
+                <td class="tier-partial">Basic</td>
+                <td class="tier-yes">✓</td>
+                <td class="tier-yes">✓</td>
+              </tr>
+              <tr>
+                <td class="tier-question">Third-party API integrations?</td>
+                <td class="tier-no">✗</td>
+                <td class="tier-partial">Basic</td>
+                <td class="tier-yes">✓</td>
+                <td class="tier-yes">✓</td>
+              </tr>
+              <tr>
+                <td class="tier-question">Compliance requirements (POPIA etc)?</td>
+                <td class="tier-no">✗</td>
+                <td class="tier-no">✗</td>
+                <td class="tier-yes">✓</td>
+                <td class="tier-yes">✓</td>
+              </tr>
+              <tr>
+                <td class="tier-question">Client manages own content?</td>
+                <td class="tier-yes">✓</td>
+                <td class="tier-yes">✓</td>
+                <td class="tier-yes">✓</td>
+                <td class="tier-yes">✓</td>
+              </tr>
+              <tr class="tier-cta-row">
+                <td/>
+                <td><NuxtLink to="/services/static-sites" class="btn-glass">See Details →</NuxtLink></td>
+                <td><NuxtLink to="/services/app-starter" class="btn-glass">See Details →</NuxtLink></td>
+                <td><NuxtLink to="/services/business-systems" class="btn-glass">See Details →</NuxtLink></td>
+                <td><NuxtLink to="/services/platform-enterprise" class="btn-glass">See Details →</NuxtLink></td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- Mobile stacked cards -->
+          <div class="tier-mobile-cards">
+            <div class="tier-mobile-card">
+              <h4>Static &amp; Brochure</h4>
+              <div class="tier-row"><span>Need user accounts?</span><span class="tier-no">✗</span></div>
+              <div class="tier-row"><span>Multiple user roles?</span><span class="tier-no">✗</span></div>
+              <div class="tier-row"><span>Multi-tenant or SaaS?</span><span class="tier-no">✗</span></div>
+              <div class="tier-row"><span>AI or LLM integration?</span><span class="tier-no">✗</span></div>
+              <div class="tier-row"><span>Custom business logic?</span><span class="tier-no">✗</span></div>
+              <div class="tier-row"><span>API integrations?</span><span class="tier-no">✗</span></div>
+              <div class="tier-row"><span>Compliance (POPIA)?</span><span class="tier-no">✗</span></div>
+              <div class="tier-row"><span>Client manages content?</span><span class="tier-yes">✓</span></div>
+              <NuxtLink to="/services/static-sites" class="btn-glass">See Details →</NuxtLink>
+            </div>
+            <div class="tier-mobile-card">
+              <h4>App Starter</h4>
+              <div class="tier-row"><span>Need user accounts?</span><span class="tier-yes">✓</span></div>
+              <div class="tier-row"><span>Multiple user roles?</span><span class="tier-no">✗</span></div>
+              <div class="tier-row"><span>Multi-tenant or SaaS?</span><span class="tier-no">✗</span></div>
+              <div class="tier-row"><span>AI or LLM integration?</span><span class="tier-no">✗</span></div>
+              <div class="tier-row"><span>Custom business logic?</span><span class="tier-partial">Basic</span></div>
+              <div class="tier-row"><span>API integrations?</span><span class="tier-partial">Basic</span></div>
+              <div class="tier-row"><span>Compliance (POPIA)?</span><span class="tier-no">✗</span></div>
+              <div class="tier-row"><span>Client manages content?</span><span class="tier-yes">✓</span></div>
+              <NuxtLink to="/services/app-starter" class="btn-glass">See Details →</NuxtLink>
+            </div>
+            <div class="tier-mobile-card">
+              <h4>Business Systems</h4>
+              <div class="tier-row"><span>Need user accounts?</span><span class="tier-yes">✓</span></div>
+              <div class="tier-row"><span>Multiple user roles?</span><span class="tier-yes">✓</span></div>
+              <div class="tier-row"><span>Multi-tenant or SaaS?</span><span class="tier-no">✗</span></div>
+              <div class="tier-row"><span>AI or LLM integration?</span><span class="tier-no">✗</span></div>
+              <div class="tier-row"><span>Custom business logic?</span><span class="tier-yes">✓</span></div>
+              <div class="tier-row"><span>API integrations?</span><span class="tier-yes">✓</span></div>
+              <div class="tier-row"><span>Compliance (POPIA)?</span><span class="tier-yes">✓</span></div>
+              <div class="tier-row"><span>Client manages content?</span><span class="tier-yes">✓</span></div>
+              <NuxtLink to="/services/business-systems" class="btn-glass">See Details →</NuxtLink>
+            </div>
+            <div class="tier-mobile-card">
+              <h4>Platform / Enterprise</h4>
+              <div class="tier-row"><span>Need user accounts?</span><span class="tier-yes">✓</span></div>
+              <div class="tier-row"><span>Multiple user roles?</span><span class="tier-yes">✓</span></div>
+              <div class="tier-row"><span>Multi-tenant or SaaS?</span><span class="tier-yes">✓</span></div>
+              <div class="tier-row"><span>AI or LLM integration?</span><span class="tier-yes">✓</span></div>
+              <div class="tier-row"><span>Custom business logic?</span><span class="tier-yes">✓</span></div>
+              <div class="tier-row"><span>API integrations?</span><span class="tier-yes">✓</span></div>
+              <div class="tier-row"><span>Compliance (POPIA)?</span><span class="tier-yes">✓</span></div>
+              <div class="tier-row"><span>Client manages content?</span><span class="tier-yes">✓</span></div>
+              <NuxtLink to="/services/platform-enterprise" class="btn-glass">See Details →</NuxtLink>
+            </div>
+          </div>
+        </div>
+
         <h2>Software Development Life Cycle</h2>
         <p class="section-intro">NemesisNet adapts its delivery methodology to the constraints of each project. Whether you need the iterative speed of Agile or the structured predictability of Waterfall, the process is aligned to your business context.</p>
 
@@ -342,10 +475,30 @@ useHead({
 .breadcrumbs a { color: var(--accent-color); text-decoration: none; }
 .breadcrumbs a:hover { text-decoration: underline; }
 .breadcrumbs span { color: var(--text-muted); opacity: 0.6; }
+.tier-selector { margin: 24px 0 40px; }
+.tier-table { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; overflow: hidden; }
+.tier-table th { padding: 16px 12px; font-size: 0.85rem; font-weight: 700; color: var(--accent-color); text-align: center; border-bottom: 1px solid var(--glass-border); background: rgba(41, 121, 255, 0.05); }
+.tier-table td { padding: 14px 12px; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.04); font-size: 0.9rem; }
+.tier-table tr:last-child td { border-bottom: none; }
+.tier-question { text-align: left !important; color: var(--text-primary); font-weight: 500; padding-left: 20px !important; }
+.tier-yes { color: var(--accent-color); font-weight: 600; }
+.tier-no { color: rgba(255, 255, 255, 0.2); }
+.tier-partial { color: rgba(255, 255, 255, 0.5); font-size: 0.8rem; }
+.tier-cta-row td { padding: 16px 12px 20px; border-bottom: none; }
+.tier-cta-row .btn-glass { font-size: 0.8rem; padding: 8px 16px; display: inline-block; }
+.tier-mobile-cards { display: none; }
+.tier-mobile-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }
+.tier-mobile-card h4 { color: var(--accent-color); font-size: 0.95rem; margin: 0 0 12px; }
+.tier-mobile-card .tier-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.04); font-size: 0.85rem; }
+.tier-mobile-card .tier-row:last-of-type { border-bottom: none; }
+.tier-mobile-card .tier-row span:first-child { color: var(--text-muted); }
+.tier-mobile-card .btn-glass { display: block; text-align: center; margin-top: 12px; font-size: 0.85rem; }
 @media (max-width: 768px) {
   .breadcrumbs { display: none !important; }
   .process-steps { grid-template-columns: 1fr; gap: 16px; }
   .detail-container { padding: 24px 16px 32px; }
   .detail-main h2 { font-size: 1.8rem; margin: 36px 0 20px; }
+  .tier-table { display: none !important; }
+  .tier-mobile-cards { display: flex !important; flex-direction: column; gap: 16px; }
 }
 </style>
