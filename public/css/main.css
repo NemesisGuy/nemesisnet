@@ -126,7 +126,7 @@ html:not([data-theme="light"]) .avatar-wrap:hover::after{
   --bg-color: var(--nemesis-black);
   --bg-gradient: linear-gradient(135deg, #0a0e27 0%, #16213e 50%, #0f3460 100%);
   --text-color: var(--nemesis-white);
-  --text-muted: rgba(244,244,244,0.65);
+  --text-muted: rgba(244,244,244,0.82);
 
   --card: #0f0f10;
   --card-bg: rgba(255, 255, 255, 0.03);
@@ -140,7 +140,7 @@ html:not([data-theme="light"]) .avatar-wrap:hover::after{
   --bg-color: var(--nemesis-white);
   --bg-gradient: linear-gradient(135deg, var(--nemesis-white) 0%, #f0f6ff 50%, #eaf6ff 100%);
   --text-color: var(--nemesis-black);
-  --text-muted: rgba(26,26,26,0.72);
+  --text-muted: rgba(26,26,26,0.80);
 
   --accent-color: var(--nemesis-blue);
   --accent-hover: #2979FF;
@@ -967,7 +967,7 @@ html[data-theme="light"][data-nemesis="on"] .card .project-link:hover{
   font-size:0.85rem;
 }
 .footer-line a {
-  color:#8cc4ff;
+  color:#a8d4ff;
   text-decoration:none;
   font-weight:600;
   display:inline-flex;
@@ -1002,17 +1002,17 @@ html[data-theme="light"][data-nemesis="on"] .card .project-link:hover{
 .footer-group h4 {
   margin: 0 0 10px;
   color: var(--accent-color);
-  font-size: 0.74rem;
+  font-size: 0.78rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  opacity: 0.9;
+  font-weight: 700;
 }
 
 .footer-group a {
   display: block;
   margin: 6px 0;
   width: fit-content;
-  color: #8cc4ff;
+  color: #a8d4ff;
   text-decoration: none;
   font-weight: 550;
   font-size: 0.9rem;

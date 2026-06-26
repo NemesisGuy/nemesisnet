@@ -236,7 +236,8 @@ useHead({
 .pill-client { background: rgba(236, 72, 153, 0.2); color: #f472b6; border: 1px solid rgba(236, 72, 153, 0.3); }
 
 /* Services card alignment — buttons sit at bottom */
-.services-grid .card { display: flex; flex-direction: column; }
+.services-grid .card { display: flex; flex-direction: column; transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
+.services-grid .card:hover { transform: translateY(-4px); border-color: var(--accent-color); box-shadow: 0 12px 32px rgba(41,121,255,0.15); }
 .services-grid .card .btn-glass { margin-top: auto; }
 .service-icon { color: var(--accent-color); margin-bottom: 12px; text-align: center; }
 
