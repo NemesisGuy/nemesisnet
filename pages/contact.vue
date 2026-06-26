@@ -91,16 +91,19 @@
         
         <div class="info-card">
           <div class="info-item">
+            <div class="info-icon"><ClientOnly><Mail :size="20" /></ClientOnly></div>
             <strong>Email</strong>
             <a href="mailto:admin@nemesisnet.co.za">admin@nemesisnet.co.za</a>
           </div>
           
           <div class="info-item">
+            <div class="info-icon"><ClientOnly><MapPin :size="20" /></ClientOnly></div>
             <strong>Location</strong>
             <span>Cape Town, South Africa</span>
           </div>
           
           <div class="info-item">
+            <div class="info-icon"><ClientOnly><CircleDot :size="20" /></ClientOnly></div>
             <strong>Availability</strong>
             <span>Open for new projects</span>
           </div>
@@ -115,12 +118,15 @@
           <h3>Other Ways to Connect</h3>
           <div class="social-links">
             <a href="https://github.com/NemesisGuy" target="_blank" class="social-link">
+              <ClientOnly><Github :size="18" /></ClientOnly>
               <span>GitHub</span>
             </a>
             <a href="https://linkedin.com/in/peter-buckingham-65438757" target="_blank" class="social-link">
+              <ClientOnly><Linkedin :size="18" /></ClientOnly>
               <span>LinkedIn</span>
             </a>
             <NuxtLink to="/projects" class="social-link">
+              <ClientOnly><ExternalLink :size="18" /></ClientOnly>
               <span>View Portfolio</span>
             </NuxtLink>
           </div>
@@ -131,6 +137,8 @@
 </template>
 
 <script setup>
+import { Mail, MapPin, CircleDot, Github, Linkedin, ExternalLink } from 'lucide-vue-next'
+
 const form = reactive({
   name: '',
   email: '',
@@ -360,6 +368,11 @@ useHead({
   gap: 4px;
 }
 
+.info-icon {
+  color: var(--accent-color);
+  margin-bottom: 4px;
+}
+
 .info-item strong {
   color: var(--accent-color);
   font-size: 0.85rem;
@@ -414,6 +427,9 @@ useHead({
 }
 
 .social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 10px 20px;
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);

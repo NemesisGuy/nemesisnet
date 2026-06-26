@@ -68,26 +68,32 @@
         <h2>Track Record</h2>
         <div class="stats-grid">
           <div class="stat-card">
+            <div class="stat-icon"><ClientOnly><PackageCheck :size="24" /></ClientOnly></div>
             <strong class="stat-number">20+</strong>
             <span class="stat-label">Systems Delivered</span>
           </div>
           <div class="stat-card">
+            <div class="stat-icon"><ClientOnly><Server :size="24" /></ClientOnly></div>
             <strong class="stat-number">14</strong>
             <span class="stat-label">Homelab Nodes</span>
           </div>
           <div class="stat-card">
+            <div class="stat-icon"><ClientOnly><Clock :size="24" /></ClientOnly></div>
             <strong class="stat-number">10+</strong>
             <span class="stat-label">Years Engineering</span>
           </div>
           <div class="stat-card">
+            <div class="stat-icon"><ClientOnly><HardDrive :size="24" /></ClientOnly></div>
             <strong class="stat-number">Self-Hosted</strong>
             <span class="stat-label">AI Infrastructure & Pipelines</span>
           </div>
           <div class="stat-card">
+            <div class="stat-icon"><ClientOnly><GitFork :size="24" /></ClientOnly></div>
             <strong class="stat-number">Open Source</strong>
             <span class="stat-label">Active Contributor</span>
           </div>
           <div class="stat-card">
+            <div class="stat-icon"><ClientOnly><Layers :size="24" /></ClientOnly></div>
             <strong class="stat-number">End-to-End</strong>
             <span class="stat-label">Full Stack Ownership</span>
           </div>
@@ -96,14 +102,17 @@
         <h2>Core Values</h2>
         <div class="values-grid">
           <div class="value-card">
+            <div class="value-icon"><ClientOnly><Building :size="22" /></ClientOnly></div>
             <strong>Infrastructure-First</strong>
             <span>We think about deployment, monitoring, and scaling before we write application code. Systems that can't be deployed reliably shouldn't exist.</span>
           </div>
           <div class="value-card">
+            <div class="value-icon"><ClientOnly><Unlock :size="22" /></ClientOnly></div>
             <strong>No Vendor Lock-in</strong>
             <span>Your infrastructure, your data, your models. We build systems you can run, modify, and own — not systems that require someone else's API to function.</span>
           </div>
           <div class="value-card">
+            <div class="value-icon"><ClientOnly><Zap :size="22" /></ClientOnly></div>
             <strong>Production-Obsessed</strong>
             <span>We care about what happens at 3 AM under load, not just what looks good in a demo. Observability, graceful degradation, and automated recovery are non-negotiable.</span>
           </div>
@@ -156,6 +165,8 @@
 </template>
 
 <script setup>
+import { PackageCheck, Server, Clock, HardDrive, GitFork, Layers, Building, Unlock, Zap } from 'lucide-vue-next'
+
 useHead({
   title: 'About | NemesisNet — AI Infrastructure Engineer in Cape Town, South Africa',
   meta: [
@@ -262,11 +273,13 @@ useHead({
 
 .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
 .stat-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 24px; text-align: center; }
+.stat-icon { color: var(--accent-color); margin-bottom: 12px; display: flex; justify-content: center; }
 .stat-number { display: block; font-size: 1.8rem; color: var(--accent-color); font-weight: 700; margin-bottom: 4px; }
 .stat-label { font-size: 0.85rem; color: var(--text-muted); }
 
 .values-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 24px 0; }
 .value-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }
+.value-icon { color: var(--accent-color); margin-bottom: 12px; }
 .value-card strong { color: var(--accent-color); display: block; margin-bottom: 8px; font-size: 1rem; }
 .value-card span { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
 
