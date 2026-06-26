@@ -42,7 +42,7 @@
             <p class="pricing-description">PocketBase-backed apps, CRUD dashboards, MVPs, prototypes, and admin tools with auth and roles.</p>
             <p class="pricing-timeline">Delivery: 4–8 weeks</p>
             <ul class="pricing-points">
-              <li>PocketBase or Firebase backend</li>
+              <li>PocketBase backend</li>
               <li>Vue or React frontend</li>
               <li>Basic auth and role-based access</li>
               <li>Docker + Nginx deployment included</li>
@@ -419,7 +419,7 @@ useHead({
             'name': 'What is the typical delivery timeline?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Lightweight systems ship in 2–4 weeks. Lightweight apps typically take 4–8 weeks. Business systems range from 8–16 weeks. Platform and enterprise builds run 16–30+ weeks. All timelines are scoped during the discovery phase.'
+              'text': 'Static &amp; Brochure sites ship in 2–4 weeks. App Starter projects typically take 4–8 weeks. Business Systems range from 8–16 weeks. Platform and Enterprise builds run 16–30+ weeks. All timelines are scoped during the discovery phase.'
             }
           },
           {

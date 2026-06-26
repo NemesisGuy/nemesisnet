@@ -21,7 +21,7 @@
 
         <h2>What's Included</h2>
         <ul class="feature-list">
-          <li><CheckCircle :size="18" /> PocketBase or Firebase backend with SQLite/Cloud Firestore</li>
+          <li><CheckCircle :size="18" /> PocketBase backend with SQLite</li>
           <li><CheckCircle :size="18" /> Vue 3 or React frontend with responsive design</li>
           <li><CheckCircle :size="18" /> User authentication (email/password, optional OAuth2)</li>
           <li><CheckCircle :size="18" /> Role-based access control (admin, user, viewer)</li>
