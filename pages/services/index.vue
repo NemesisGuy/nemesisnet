@@ -87,6 +87,7 @@
         <p class="pricing-group-desc">Scoped sessions and integrations for teams with specific technical needs.</p>
         <div class="pricing-grid">
           <NuxtLink to="/services/ai-consulting" class="card pricing-card pricing-card--linked">
+            <div class="pricing-icon"><ClientOnly><Brain :size="24" /></ClientOnly></div>
             <h4 class="pricing-title">AI Architecture / Consulting</h4>
             <div class="pricing-price">R10,000</div>
             <div class="pricing-unit">Starting from</div>
@@ -99,6 +100,7 @@
             <span class="pricing-link">See Details →</span>
           </NuxtLink>
           <NuxtLink to="/services/mcp-integrations" class="card pricing-card pricing-card--linked">
+            <div class="pricing-icon"><ClientOnly><Workflow :size="24" /></ClientOnly></div>
             <h4 class="pricing-title">Custom MCP &amp; Agent Integrations</h4>
             <div class="pricing-price">R55,000</div>
             <div class="pricing-unit">Starting from</div>
@@ -116,6 +118,7 @@
         <p class="pricing-group-desc">Monthly retainers for hosting, maintenance, and continuous improvement.</p>
         <div class="pricing-grid">
           <NuxtLink to="/services/light-hosting" class="card pricing-card pricing-card--linked">
+            <div class="pricing-icon"><ClientOnly><Server :size="24" /></ClientOnly></div>
             <h4 class="pricing-title">Light Hosting</h4>
             <div class="pricing-price">R850</div>
             <div class="pricing-unit">Monthly</div>
@@ -128,6 +131,7 @@
             <span class="pricing-link">See Details →</span>
           </NuxtLink>
           <NuxtLink to="/services/managed-retainer" class="card pricing-card pricing-card--linked">
+            <div class="pricing-icon"><ClientOnly><Shield :size="24" /></ClientOnly></div>
             <h4 class="pricing-title">Managed Retainer</h4>
             <div class="pricing-price">R7,500</div>
             <div class="pricing-unit">Monthly</div>
@@ -353,7 +357,7 @@
 </template>
 
 <script setup>
-import { Globe, Layers, Briefcase, Cpu, ChevronDown } from 'lucide-vue-next'
+import { Globe, Layers, Briefcase, Cpu, Brain, Workflow, Server, Shield, ChevronDown } from 'lucide-vue-next'
 
 const openFaq = ref(null)
 const toggleFaq = (i) => { openFaq.value = openFaq.value === i ? null : i }
