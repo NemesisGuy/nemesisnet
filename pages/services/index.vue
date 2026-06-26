@@ -522,5 +522,6 @@ useHead({
   .detail-main h2 { font-size: 1.8rem; margin: 36px 0 20px; }
   .tier-table { display: none !important; }
   .tier-mobile-cards { display: flex !important; flex-direction: column; gap: 16px; }
+  .sdlc-columns { grid-template-columns: 1fr !important; }
 }
 </style>
