@@ -479,7 +479,7 @@ useHead({
 .faq-item { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px 24px; margin-bottom: 12px; }
 .faq-item h3 { font-size: 1rem; color: var(--accent-color); margin: 0 0 8px; }
 .faq-item p { margin: 0; color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
-.pricing-icon { color: var(--accent-color); margin-bottom: 8px; }
+.pricing-icon { color: var(--accent-color); margin-bottom: 8px; display: flex; justify-content: center; }
 .faq-toggle { display: flex; justify-content: space-between; align-items: center; width: 100%; background: none; border: none; cursor: pointer; padding: 0; text-align: left; }
 .faq-toggle h3 { margin: 0; flex: 1; }
 .faq-chevron { color: var(--accent-color); transition: transform 0.3s ease; flex-shrink: 0; margin-left: 12px; }
