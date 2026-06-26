@@ -25,5 +25,8 @@
     "lighthouse": "^13.3.0",
     "puppeteer": "^24.43.1",
     "sharp": "^0.34.5"
+  },
+  "optionalDependencies": {
+    "@rolldown/binding-win32-x64-msvc": "^1.1.3"
   }
 }
