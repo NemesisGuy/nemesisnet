@@ -97,7 +97,7 @@
               <li>Platform reviews, workflow design, and technical roadmapping</li>
               <li>Best before you build, not after something breaks</li>
             </ul>
-            <span class="pricing-link">See Details →</span>
+            <NuxtLink to="/services/ai-consulting" class="btn-glass">See Details</NuxtLink>
           </NuxtLink>
           <NuxtLink to="/services/mcp-integrations" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Workflow :size="24" /></ClientOnly></div>
@@ -110,7 +110,7 @@
               <li>Role-safe pipelines with controlled data sync across systems</li>
               <li>Multi-system automation without fragile glue-code sprawl</li>
             </ul>
-            <span class="pricing-link">See Details →</span>
+            <NuxtLink to="/services/mcp-integrations" class="btn-glass">See Details</NuxtLink>
           </NuxtLink>
         </div>
 
@@ -128,7 +128,7 @@
               <li>OS and dependency patching</li>
               <li>Uptime monitoring and alerts</li>
             </ul>
-            <span class="pricing-link">See Details →</span>
+            <NuxtLink to="/services/light-hosting" class="btn-glass">See Details</NuxtLink>
           </NuxtLink>
           <NuxtLink to="/services/managed-retainer" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Shield :size="24" /></ClientOnly></div>
@@ -142,7 +142,7 @@
               <li>Bug fixes and continuous improvement</li>
               <li>Priority support and SLA coverage</li>
             </ul>
-            <span class="pricing-link">See Details →</span>
+            <NuxtLink to="/services/managed-retainer" class="btn-glass">See Details</NuxtLink>
           </NuxtLink>
         </div>
         <p class="pricing-note"><strong>Note:</strong> prices are starting-from benchmarks for South Africa/Cape Town market context. Final pricing depends on scope, delivery timeline, integrations, and support requirements.</p>
@@ -298,7 +298,7 @@
               <li>Continuous integration &amp; delivery</li>
               <li>Backlog grooming &amp; prioritization</li>
             </ul>
-            <span class="sdlc-link">See Details →</span>
+            <NuxtLink to="/services/agile-iterative" class="btn-glass">See Details</NuxtLink>
           </NuxtLink>
           <NuxtLink to="/services/waterfall-structured" class="card sdlc-card">
             <h3>Waterfall &amp; Structured</h3>
@@ -309,7 +309,7 @@
               <li>Formal change control process</li>
               <li>Documentation-driven handoff</li>
             </ul>
-            <span class="sdlc-link">See Details →</span>
+            <NuxtLink to="/services/waterfall-structured" class="btn-glass">See Details</NuxtLink>
           </NuxtLink>
         </div>
 
@@ -466,9 +466,6 @@ useHead({
 .pricing-grid, .tiers-grid { /* pricing-grid now flexbox, centered via main.css */ }
 .pricing-group-label { font-size: 1.1rem; color: var(--accent-color); margin: 32px 0 8px; padding-bottom: 8px; border-bottom: 1px solid var(--glass-border); }
 .pricing-group-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px; }
-.tier-card { text-decoration: none !important; color: inherit !important; display: flex !important; flex-direction: column !important; }
-.tier-card:hover { transform: translateY(-6px); border-color: var(--accent-hover) !important; box-shadow: 0 20px 70px rgba(2,6,23,0.55), 0 8px 30px rgba(0,0,0,0.4), 0 0 60px var(--accent-glow) !important; }
-.tier-link { margin-top: auto; padding-top: 16px; color: var(--accent-color); font-size: 0.9rem; font-weight: 600; }
 
 .back-link { text-align: center; margin-top: 48px; }
 .local-signals { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 32px 0 24px; }
@@ -488,10 +485,8 @@ useHead({
 .faq-answer p { margin-top: 12px; }
 .pricing-card--linked { text-decoration: none !important; color: inherit !important; cursor: pointer; }
 .pricing-card--linked:hover { transform: translateY(-6px); border-color: var(--accent-hover) !important; box-shadow: 0 20px 70px rgba(2,6,23,0.55), 0 8px 30px rgba(0,0,0,0.4), 0 0 60px var(--accent-glow) !important; }
-.pricing-link { display: block; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--glass-border); color: var(--accent-color); font-size: 0.9rem; font-weight: 600; text-align: center; }
 .sdlc-card { text-decoration: none !important; color: inherit !important; cursor: pointer; display: flex !important; flex-direction: column !important; }
 .sdlc-card:hover { transform: translateY(-6px); border-color: var(--accent-hover) !important; box-shadow: 0 20px 70px rgba(2,6,23,0.55), 0 8px 30px rgba(0,0,0,0.4), 0 0 60px var(--accent-glow) !important; }
-.sdlc-link { margin-top: auto; padding-top: 16px; color: var(--accent-color); font-size: 0.9rem; font-weight: 600; }
 @media (max-width: 1100px) { .process-steps { grid-template-columns: repeat(2, 1fr); } }
 .breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; padding-left: 20px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
 .breadcrumbs a { color: var(--accent-color); text-decoration: none; }
