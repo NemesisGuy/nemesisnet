@@ -466,8 +466,8 @@ useHead({
 .pricing-grid, .tiers-grid { /* pricing-grid now flexbox, centered via main.css */ }
 .pricing-group-label { font-size: 1.1rem; color: var(--accent-color); margin: 32px 0 8px; padding-bottom: 8px; border-bottom: 1px solid var(--glass-border); }
 .pricing-group-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px; }
-.tier-card { text-decoration: none !important; color: inherit !important; display: flex !important; flex-direction: column !important; transition: transform 0.2s ease, border-color 0.2s ease !important; }
-.tier-card:hover { transform: translateY(-2px); border-color: var(--accent-color) !important; }
+.tier-card { text-decoration: none !important; color: inherit !important; display: flex !important; flex-direction: column !important; }
+.tier-card:hover { transform: translateY(-6px); border-color: var(--accent-hover) !important; box-shadow: 0 20px 70px rgba(2,6,23,0.55), 0 8px 30px rgba(0,0,0,0.4), 0 0 60px var(--accent-glow) !important; }
 .tier-link { margin-top: auto; padding-top: 16px; color: var(--accent-color); font-size: 0.9rem; font-weight: 600; }
 
 .back-link { text-align: center; margin-top: 48px; }
@@ -486,11 +486,11 @@ useHead({
 .faq-item--open .faq-chevron { transform: rotate(180deg); }
 .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
 .faq-answer p { margin-top: 12px; }
-.pricing-card--linked { text-decoration: none !important; color: inherit !important; cursor: pointer; transition: transform 0.2s ease, border-color 0.2s ease !important; }
-.pricing-card--linked:hover { transform: translateY(-2px); border-color: var(--accent-color) !important; }
+.pricing-card--linked { text-decoration: none !important; color: inherit !important; cursor: pointer; }
+.pricing-card--linked:hover { transform: translateY(-6px); border-color: var(--accent-hover) !important; box-shadow: 0 20px 70px rgba(2,6,23,0.55), 0 8px 30px rgba(0,0,0,0.4), 0 0 60px var(--accent-glow) !important; }
 .pricing-link { display: block; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--glass-border); color: var(--accent-color); font-size: 0.9rem; font-weight: 600; text-align: center; }
-.sdlc-card { text-decoration: none !important; color: inherit !important; cursor: pointer; transition: transform 0.2s ease, border-color 0.2s ease !important; display: flex !important; flex-direction: column !important; }
-.sdlc-card:hover { transform: translateY(-2px); border-color: var(--accent-color) !important; }
+.sdlc-card { text-decoration: none !important; color: inherit !important; cursor: pointer; display: flex !important; flex-direction: column !important; }
+.sdlc-card:hover { transform: translateY(-6px); border-color: var(--accent-hover) !important; box-shadow: 0 20px 70px rgba(2,6,23,0.55), 0 8px 30px rgba(0,0,0,0.4), 0 0 60px var(--accent-glow) !important; }
 .sdlc-link { margin-top: auto; padding-top: 16px; color: var(--accent-color); font-size: 0.9rem; font-weight: 600; }
 @media (max-width: 1100px) { .process-steps { grid-template-columns: repeat(2, 1fr); } }
 .breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; padding-left: 20px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
