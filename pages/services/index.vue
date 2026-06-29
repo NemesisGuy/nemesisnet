@@ -97,7 +97,7 @@
               <li>Platform reviews, workflow design, and technical roadmapping</li>
               <li>Best before you build, not after something breaks</li>
             </ul>
-            <NuxtLink to="/services/ai-consulting" class="btn-glass">See Details</NuxtLink>
+            <span class="btn-glass">See Details</span>
           </NuxtLink>
           <NuxtLink to="/services/mcp-integrations" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Workflow :size="24" /></ClientOnly></div>
@@ -110,7 +110,7 @@
               <li>Role-safe pipelines with controlled data sync across systems</li>
               <li>Multi-system automation without fragile glue-code sprawl</li>
             </ul>
-            <NuxtLink to="/services/mcp-integrations" class="btn-glass">See Details</NuxtLink>
+            <span class="btn-glass">See Details</span>
           </NuxtLink>
         </div>
 
@@ -128,7 +128,7 @@
               <li>OS and dependency patching</li>
               <li>Uptime monitoring and alerts</li>
             </ul>
-            <NuxtLink to="/services/light-hosting" class="btn-glass">See Details</NuxtLink>
+            <span class="btn-glass">See Details</span>
           </NuxtLink>
           <NuxtLink to="/services/managed-retainer" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Shield :size="24" /></ClientOnly></div>
@@ -142,7 +142,7 @@
               <li>Bug fixes and continuous improvement</li>
               <li>Priority support and SLA coverage</li>
             </ul>
-            <NuxtLink to="/services/managed-retainer" class="btn-glass">See Details</NuxtLink>
+            <span class="btn-glass">See Details</span>
           </NuxtLink>
         </div>
         <p class="pricing-note"><strong>Note:</strong> prices are starting-from benchmarks for South Africa/Cape Town market context. Final pricing depends on scope, delivery timeline, integrations, and support requirements.</p>
@@ -298,7 +298,7 @@
               <li>Continuous integration &amp; delivery</li>
               <li>Backlog grooming &amp; prioritization</li>
             </ul>
-            <NuxtLink to="/services/agile-iterative" class="btn-glass">See Details</NuxtLink>
+            <span class="btn-glass">See Details</span>
           </NuxtLink>
           <NuxtLink to="/services/waterfall-structured" class="card sdlc-card">
             <h3>Waterfall &amp; Structured</h3>
@@ -309,7 +309,7 @@
               <li>Formal change control process</li>
               <li>Documentation-driven handoff</li>
             </ul>
-            <NuxtLink to="/services/waterfall-structured" class="btn-glass">See Details</NuxtLink>
+            <span class="btn-glass">See Details</span>
           </NuxtLink>
         </div>
 
