@@ -173,6 +173,7 @@ useHead({
 
 const ctaLinks = [
   { label: 'Scope This Project', to: '/contact', variant: 'primary', arrow: true },
+  { label: 'Read the Since Build Log', href: 'https://blog.nemesisnet.co.za/building-since-self-hosted-claim-tracker-pocketbase-react-express/', variant: 'secondary' },
   { label: '← Back to Services', to: '/services', variant: 'cross-sell' }
 ]
 </script>

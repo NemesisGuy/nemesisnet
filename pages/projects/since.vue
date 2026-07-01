@@ -30,13 +30,7 @@
         <h3>API</h3>
         <p>The REST API handles data operations for claims, evidence, and disputes. Users can create claims, attach evidence links, raise disputes, and resolve outcomes. All operations are authenticated via the backend.</p>
         
-        <div class="cta-wrapper">
-          <a href="https://github.com/NemesisGuy/Since" target="_blank" class="btn-glass">View Source</a>
-          <a href="https://since.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
-        </div>
-        <div class="next-project">
-          <NuxtLink to="/projects/voxnemesis-supertonic" class="btn-glass">Next Project → VoxNemesis Supertonic</NuxtLink>
-        </div>
+        <CTAGroup :links="ctaLinks" />
       </div>
 
       <div class="detail-sidebar">
@@ -122,6 +116,13 @@ useHead({
     }
   ]
 })
+
+const ctaLinks = [
+  { label: 'View Source', href: 'https://github.com/NemesisGuy/Since', variant: 'primary' },
+  { label: 'Live Demo', href: 'https://since.nemesisnet.co.za', variant: 'primary' },
+  { label: 'Read the Build Log', href: 'https://blog.nemesisnet.co.za/building-since-self-hosted-claim-tracker-pocketbase-react-express/', variant: 'secondary' },
+  { label: 'Next Project → VoxNemesis Supertonic', to: '/projects/voxnemesis-supertonic', variant: 'cross-sell', arrow: true }
+]
 </script>
 
 <style scoped>
@@ -142,7 +143,6 @@ useHead({
 .sidebar-list li { margin-bottom: 10px; color: var(--text-muted); display: grid; grid-template-columns: 90px 1fr; gap: 8px; align-items: start; }
 .sidebar-list li span { color: var(--text-muted); }
 .sidebar-list li strong { color: var(--text-color); text-align: left; word-break: break-word; }
-.cta-wrapper { margin-top: 60px; display: flex; gap: 15px; }
 .quick-links { display: flex; flex-direction: column; gap: 10px; }
 .quick-links .btn-glass { display: block; width: 100%; }
 .arch-list { list-style: none; padding: 0; margin: 15px 0 25px 0; }
