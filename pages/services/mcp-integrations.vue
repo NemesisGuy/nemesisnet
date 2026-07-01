@@ -79,14 +79,7 @@
           </div>
         </div>
 
-        <div class="cta-wrapper">
-          <NuxtLink to="/contact" class="btn-glass">Design Your Integration →</NuxtLink>
-          <a href="https://blog.nemesisnet.co.za/wordpress-mcp-automation-cutting-publishing-time-by-80/" target="_blank" class="btn-glass">WordPress MCP Case Study</a>
-          <a href="https://blog.nemesisnet.co.za/mcp-explained-the-future-of-ai-agent-tool-use/" target="_blank" class="btn-glass">MCP Deep Dive</a>
-        </div>
-        <div class="next-project">
-          <NuxtLink to="/services/ai-consulting" class="btn-glass">See Also: AI Architecture / Consulting →</NuxtLink>
-        </div>
+        <CTAGroup :links="ctaLinks" />
       </div>
 
       <div class="detail-sidebar">
@@ -160,6 +153,13 @@ useHead({
     }
   ]
 })
+
+const ctaLinks = [
+  { label: 'Design Your Integration', to: '/contact', variant: 'primary', arrow: true },
+  { label: 'WordPress MCP Case Study', href: 'https://blog.nemesisnet.co.za/wordpress-mcp-automation-cutting-publishing-time-by-80/', variant: 'secondary' },
+  { label: 'MCP Deep Dive', href: 'https://blog.nemesisnet.co.za/mcp-explained-the-future-of-ai-agent-tool-use/', variant: 'secondary' },
+  { label: 'See Also: AI Architecture / Consulting', to: '/services/ai-consulting', variant: 'cross-sell', arrow: true }
+]
 </script>
 
 <style scoped>
@@ -186,8 +186,7 @@ useHead({
 .related-card h4 { color: var(--accent-color); font-size: 0.95rem; margin: 0; }
 .related-card p { color: var(--text-muted); font-size: 0.85rem; margin: 0; flex: 1; }
 .related-card .btn-glass { font-size: 0.8rem; padding: 8px 16px; display: block; text-align: center; }
-.cta-wrapper { margin-top: 60px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
-.next-project { margin-top: 20px; }
+
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }

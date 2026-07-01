@@ -62,12 +62,7 @@
         <p><strong>R850/month</strong> — flat rate, no hidden fees. Covers up to 2 deployed systems. Additional systems quoted separately.</p>
         <p>If your system needs grow beyond basic hosting, the Managed Retainer (R7,500/month) includes CI/CD management, bug fixes, application monitoring, and priority support.</p>
 
-        <div class="cta-wrapper">
-          <NuxtLink to="/contact" class="btn-glass">Choose Light Hosting →</NuxtLink>
-        </div>
-        <div class="next-project">
-          <NuxtLink to="/services/managed-retainer" class="btn-glass">Need more? See Managed Retainer →</NuxtLink>
-        </div>
+        <CTAGroup :links="ctaLinks" />
       </div>
 
       <div class="detail-sidebar">
@@ -141,6 +136,11 @@ useHead({
     }
   ]
 })
+
+const ctaLinks = [
+  { label: 'Choose Light Hosting', to: '/contact', variant: 'primary', arrow: true },
+  { label: 'Need more? See Managed Retainer', to: '/services/managed-retainer', variant: 'cross-sell', arrow: true }
+]
 </script>
 
 <style scoped>
@@ -162,8 +162,7 @@ useHead({
 .process-step .step-number { display: inline-block; background: var(--accent-color); color: #000; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; }
 .process-step h4 { color: var(--accent-color); font-size: 1rem; margin: 0 0 8px; }
 .process-step p { margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
-.cta-wrapper { margin-top: 60px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
-.next-project { margin-top: 20px; }
+
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }

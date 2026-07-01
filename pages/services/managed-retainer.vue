@@ -92,12 +92,7 @@
           </div>
         </div>
 
-        <div class="cta-wrapper">
-          <NuxtLink to="/contact" class="btn-glass">Choose Managed Retainer →</NuxtLink>
-        </div>
-        <div class="next-project">
-          <NuxtLink to="/services/light-hosting" class="btn-glass">Just need hosting? See Light Hosting →</NuxtLink>
-        </div>
+        <CTAGroup :links="ctaLinks" />
       </div>
 
       <div class="detail-sidebar">
@@ -171,6 +166,11 @@ useHead({
     }
   ]
 })
+
+const ctaLinks = [
+  { label: 'Choose Managed Retainer', to: '/contact', variant: 'primary', arrow: true },
+  { label: 'Just need hosting? See Light Hosting', to: '/services/light-hosting', variant: 'cross-sell', arrow: true }
+]
 </script>
 
 <style scoped>
@@ -201,8 +201,7 @@ useHead({
 .compare-list li { padding: 4px 0; color: var(--text-muted); }
 .compare-list li::before { content: '✓ '; color: #22c55e; }
 .compare-card .btn-glass { margin-top: auto; }
-.cta-wrapper { margin-top: 60px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
-.next-project { margin-top: 20px; }
+
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }

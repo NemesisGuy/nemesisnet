@@ -117,13 +117,7 @@
           <NuxtLink to="/services/infrastructure" class="btn-glass">Infrastructure Engineering →</NuxtLink>
         </div>
 
-        <div class="cta-wrapper">
-          <NuxtLink to="/contact" class="btn-glass">Discuss This Service →</NuxtLink>
-          <a href="https://blog.nemesisnet.co.za/from-rebuilding-authentication-in-every-app-to-a-shared-identity-layer/" target="_blank" class="btn-glass">Read Auth Deep Dive</a>
-        </div>
-        <div class="next-project">
-          <NuxtLink to="/services" class="btn-glass">← Back to Services</NuxtLink>
-        </div>
+        <CTAGroup :links="ctaLinks" />
       </div>
 
       <div class="detail-sidebar">
@@ -206,6 +200,12 @@ useHead({
     }
   ]
 })
+
+const ctaLinks = [
+  { label: 'Discuss This Service', to: '/contact', variant: 'primary', arrow: true },
+  { label: 'Read Auth Deep Dive', href: 'https://blog.nemesisnet.co.za/from-rebuilding-authentication-in-every-app-to-a-shared-identity-layer/', variant: 'secondary' },
+  { label: '← Back to Services', to: '/services', variant: 'cross-sell' }
+]
 </script>
 
 <style scoped>
@@ -240,8 +240,7 @@ useHead({
 .related-card p { color: var(--text-muted); font-size: 0.85rem; margin: 0; flex: 1; }
 .related-card .btn-glass { font-size: 0.8rem; padding: 8px 16px; display: block; text-align: center; }
 .related-services { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
-.cta-wrapper { margin-top: 60px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
-.next-project { margin-top: 20px; }
+
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
