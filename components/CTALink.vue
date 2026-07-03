@@ -60,12 +60,11 @@ defineProps({
 }
 
 .cta-item--cross-sell {
-  background: transparent;
-  border-style: dashed;
   padding: 6px 14px;
   font-size: 0.8rem;
   min-width: 0;
   opacity: 0.7;
+  border-style: dashed;
 }
 
 .cta-item--cross-sell:hover {
