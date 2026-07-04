@@ -124,10 +124,11 @@ defineProps({
   backdrop-filter: blur(10px);
 }
 
-.service-footer-cta-inner h2 { font-size: 1.8rem; margin-bottom: 12px; }
-.service-footer-cta-inner p { color: var(--text-muted); margin-bottom: 28px; font-size: 1rem; max-width: 540px; margin-left: auto; margin-right: auto; }
-.service-footer-cta-btn { display: block; font-size: 1.1rem; padding: 16px 44px; max-width: 320px; margin: 0 auto; }
-.service-footer-cta-note { display: block; margin-top: 16px; font-size: 0.8rem; color: var(--text-muted); opacity: 0.6; font-style: italic; }
+.service-footer-cta-inner { text-align: center; }
+.service-footer-cta-inner h2 { font-size: 1.8rem; margin-bottom: 12px; text-align: center; }
+.service-footer-cta-inner p { color: var(--text-muted); margin-bottom: 28px; font-size: 1rem; max-width: 540px; margin-left: auto; margin-right: auto; text-align: center; }
+.service-footer-cta-btn { display: block; font-size: 1.1rem; padding: 16px 44px; max-width: 320px; margin: 0 auto; text-align: center; }
+.service-footer-cta-note { display: block; margin-top: 16px; font-size: 0.8rem; color: var(--text-muted); opacity: 0.6; font-style: italic; text-align: center; }
 
 @media (max-width: 768px) {
   .service-footer-cards { grid-template-columns: 1fr; }
