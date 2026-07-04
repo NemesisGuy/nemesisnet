@@ -1,7 +1,7 @@
 <template>
   <div class="service-footer">
     <div v-if="exploring.length" class="service-footer-exploring">
-      <h2>Continue Exploring</h2>
+      <h2>Related Services</h2>
       <p v-if="exploringNote" class="service-footer-note">{{ exploringNote }}</p>
       <div class="service-footer-cards">
         <div v-for="card in exploring" :key="card.to" class="service-footer-card">
@@ -13,9 +13,11 @@
     </div>
 
     <div v-if="reading.length" class="service-footer-reading">
-      <span class="service-footer-reading-label">{{ readingLabel }}</span>
-      <div class="service-footer-reading-links">
-        <a v-for="link in reading" :key="link.href" :href="link.href" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+      <div class="service-footer-reading-inner">
+        <span class="service-footer-reading-label">{{ readingLabel }}</span>
+        <div class="service-footer-reading-links">
+          <a v-for="link in reading" :key="link.href" :href="link.href" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+        </div>
       </div>
     </div>
 
@@ -74,8 +76,13 @@ defineProps({
 
 .service-footer-reading {
   margin-top: 48px;
-  padding-top: 24px;
-  border-top: 1px solid var(--glass-border);
+}
+
+.service-footer-reading-inner {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 24px;
   text-align: center;
 }
 
@@ -119,7 +126,7 @@ defineProps({
 
 .service-footer-cta-inner h2 { font-size: 1.8rem; margin-bottom: 12px; }
 .service-footer-cta-inner p { color: var(--text-muted); margin-bottom: 28px; font-size: 1rem; max-width: 540px; margin-left: auto; margin-right: auto; }
-.service-footer-cta-btn { display: inline-block; font-size: 1.1rem; padding: 16px 44px; }
+.service-footer-cta-btn { display: block; font-size: 1.1rem; padding: 16px 44px; max-width: 320px; margin: 0 auto; }
 .service-footer-cta-note { display: block; margin-top: 16px; font-size: 0.8rem; color: var(--text-muted); opacity: 0.6; font-style: italic; }
 
 @media (max-width: 768px) {
