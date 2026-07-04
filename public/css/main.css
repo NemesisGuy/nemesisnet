@@ -1359,6 +1359,7 @@ html[data-theme="light"][data-nemesis="on"] .footer-line .footer-divider {
 .pricing-card {
   display: flex;
   flex-direction: column;
+  overflow: visible;
 }
 
 .pricing-card--featured {
