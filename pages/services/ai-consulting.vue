@@ -73,7 +73,35 @@
           </div>
         </div>
 
-        <CTAGroup :links="ctaLinks" />
+        <div class="cta-zone">
+          <div class="cta-zone-heading">
+            <h2>Ready to make the right call before you build?</h2>
+            <p>Consulting fees are credited toward any build engagement.</p>
+            <NuxtLink to="/contact" class="btn-glass cta-zone-btn">Book a Session →</NuxtLink>
+          </div>
+        </div>
+
+        <h2>Where Consulting Leads</h2>
+        <div class="related-projects">
+          <div class="related-card">
+            <h4>System Design & Consulting</h4>
+            <p>Not sure if AI consulting is the right fit? Start with a broader architecture and technical roadmapping engagement.</p>
+            <NuxtLink to="/services/consulting" class="btn-glass">View Service</NuxtLink>
+          </div>
+          <div class="related-card">
+            <h4>MCP & Agent Integrations</h4>
+            <p>Consulting often leads here. Connect your AI agents to live systems with a structured, auditable integration layer.</p>
+            <NuxtLink to="/services/mcp-integrations" class="btn-glass">View Service</NuxtLink>
+          </div>
+        </div>
+
+        <div class="further-reading">
+          <span class="further-reading-label">Further Reading</span>
+          <div class="further-reading-links">
+            <a href="https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/" target="_blank" rel="noopener noreferrer">Self-Hosted AI vs Cloud APIs: What South African Businesses Need to Know</a>
+            <a href="https://blog.nemesisnet.co.za/from-rebuilding-authentication-in-every-app-to-a-shared-identity-layer/" target="_blank" rel="noopener noreferrer">From Rebuilding Authentication in Every App to a Shared Identity Layer</a>
+          </div>
+        </div>
       </div>
 
       <div class="detail-sidebar">
@@ -147,12 +175,6 @@ useHead({
     }
   ]
 })
-
-const ctaLinks = [
-  { label: 'Book a Session', to: '/contact', variant: 'primary', arrow: true },
-  { label: 'General Technical Consulting', to: '/services/consulting', variant: 'secondary', arrow: true },
-  { label: 'See Also: MCP & Agent Integrations', to: '/services/mcp-integrations', variant: 'cross-sell', arrow: true }
-]
 </script>
 
 <style scoped>
@@ -179,6 +201,16 @@ const ctaLinks = [
 .related-card h4 { color: var(--accent-color); font-size: 0.95rem; margin: 0; }
 .related-card p { color: var(--text-muted); font-size: 0.85rem; margin: 0; flex: 1; }
 .related-card .btn-glass { font-size: 0.8rem; padding: 8px 16px; display: block; text-align: center; }
+.cta-zone { margin-top: 60px; text-align: center; }
+.cta-zone-heading h2 { font-size: 1.8rem; margin-bottom: 8px; }
+.cta-zone-heading p { color: var(--text-muted); margin-bottom: 24px; font-size: 1rem; }
+.cta-zone-btn { display: inline-block; font-size: 1.05rem; padding: 14px 36px; }
+.further-reading { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--glass-border); text-align: center; }
+.further-reading-label { display: block; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); opacity: 0.5; margin-bottom: 12px; }
+.further-reading-links { display: flex; flex-direction: column; gap: 8px; }
+.further-reading-links a { color: var(--accent-color); font-size: 0.85rem; text-decoration: none; opacity: 0.75; transition: opacity 0.2s; }
+.further-reading-links a:hover { opacity: 1; text-decoration: underline; }
+.further-reading-links a::before { content: ''; }
 
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); }
