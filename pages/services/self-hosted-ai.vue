@@ -108,7 +108,18 @@
           <NuxtLink to="/services/infrastructure" class="btn-glass">Infrastructure Engineering →</NuxtLink>
         </div>
 
-        <CTAGroup :links="ctaLinks" />
+        <ServiceFooter
+          :exploring="[
+            { title: 'AI Development', description: 'Custom AI agents and multi-agent harnesses — the software that runs on your infrastructure.', to: '/services/ai-development' },
+            { title: 'Infrastructure & DevOps', description: 'Docker, CI/CD, networking, and monitoring — the foundation self-hosted AI depends on.', to: '/services/infrastructure' }
+          ]"
+          exploring-note="Self-hosted AI needs infrastructure and software. These services cover both."
+          :reading="[
+            { label: 'Self-Hosted AI vs Cloud APIs: What South African Businesses Need to Know', href: 'https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/' },
+            { label: 'Inside the NemesisNet Homelab: My Personal Data Center', href: 'https://blog.nemesisnet.co.za/inside-the-nemesisnet-homelab-my-personal-data-center/' }
+          ]"
+          :cta="{ heading: 'Ready to own your infrastructure?', description: 'Self-hosted LLMs, TTS pipelines, and inference architecture — running on your hardware.', buttonLabel: 'Discuss Infrastructure', to: '/contact' }"
+        />
       </div>
 
       <div class="detail-sidebar">
@@ -191,12 +202,6 @@ useHead({
   ]
 })
 
-const ctaLinks = [
-  { label: 'Discuss Infrastructure', href: 'https://scope.nemesisnet.co.za', variant: 'primary' },
-  { label: 'Read Cost Analysis', href: 'https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/', variant: 'secondary' },
-  { label: 'WordPress MCP Case Study', href: 'https://blog.nemesisnet.co.za/wordpress-mcp-automation-cutting-publishing-time-by-80/', variant: 'secondary' },
-  { label: '← Back to Services', to: '/services', variant: 'cross-sell' }
-]
 </script>
 
 <style scoped>

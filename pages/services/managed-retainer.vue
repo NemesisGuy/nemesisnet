@@ -92,7 +92,15 @@
           </div>
         </div>
 
-        <CTAGroup :links="ctaLinks" />
+        <ServiceFooter
+          :exploring="[
+            { title: 'Light Hosting', description: 'Managed hosting for Nuxt and static sites — SSL, backups, and monitoring included.', to: '/services/light-hosting' },
+            { title: 'System Design & Consulting', description: 'Architecture sessions for technical decisions — ad-hoc when you do not need a retainer.', to: '/services/consulting' }
+          ]"
+          exploring-note="From managed hosting to ad-hoc consulting — find the right support model."
+          :reading="[]"
+          :cta="{ heading: 'Ready for ongoing support?', description: 'Dedicated engineering hours for maintenance, feature work, and technical decisions.', buttonLabel: 'Choose Managed Retainer', to: '/contact' }"
+        />
       </div>
 
       <div class="detail-sidebar">
@@ -167,10 +175,6 @@ useHead({
   ]
 })
 
-const ctaLinks = [
-  { label: 'Choose Managed Retainer', to: '/contact', variant: 'primary', arrow: true },
-  { label: 'Just need hosting? See Light Hosting', to: '/services/light-hosting', variant: 'cross-sell', arrow: true }
-]
 </script>
 
 <style scoped>

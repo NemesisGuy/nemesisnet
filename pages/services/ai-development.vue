@@ -98,7 +98,19 @@
           <NuxtLink to="/services/infrastructure" class="btn-glass">Infrastructure Engineering →</NuxtLink>
         </div>
 
-        <CTAGroup :links="ctaLinks" />
+        <ServiceFooter
+          :exploring="[
+            { title: 'Self-Hosted AI Infrastructure', description: 'LLM deployment, TTS pipelines, and inference architecture — running on your own hardware.', to: '/services/self-hosted-ai' },
+            { title: 'MCP & Agent Integrations', description: 'Structured, auditable connections between AI agents and your live systems.', to: '/services/mcp-integrations' }
+          ]"
+          exploring-note="From model deployment to agent connectivity — these services complement AI development."
+          :reading="[
+            { label: 'Agent Harness Explained: The Runtime That Makes AI Agents Actually Work', href: 'https://blog.nemesisnet.co.za/agent-harness-explained-the-runtime-that-makes-ai-agents-actually-work/' },
+            { label: 'Agent Skills Explained: How AI Agents Learn to Do Real Work', href: 'https://blog.nemesisnet.co.za/agent-skills-explained-how-ai-agents-learn-to-do-real-work/' },
+            { label: 'MCP Explained: The Future of AI Agent Tool Use', href: 'https://blog.nemesisnet.co.za/mcp-explained-the-future-of-ai-agent-tool-use/' }
+          ]"
+          :cta="{ heading: 'Ready to build AI infrastructure?', description: 'Custom MCP agents, self-hosted LLMs, and multi-agent coding harnesses — built for production.', buttonLabel: 'Scope an AI Build', to: '/contact' }"
+        />
       </div>
 
       <div class="detail-sidebar">
@@ -181,15 +193,6 @@ useHead({
   ]
 })
 
-const ctaLinks = [
-  { label: 'Scope an AI Build', href: 'https://scope.nemesisnet.co.za', variant: 'primary' },
-  { label: 'Read Cost Analysis', href: 'https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/', variant: 'secondary' },
-  { label: 'WordPress MCP Case Study', href: 'https://blog.nemesisnet.co.za/wordpress-mcp-automation-cutting-publishing-time-by-80/', variant: 'secondary' },
-  { label: 'MCP Deep Dive', href: 'https://blog.nemesisnet.co.za/mcp-explained-the-future-of-ai-agent-tool-use/', variant: 'secondary' },
-  { label: 'Agent Harness Deep Dive', href: 'https://blog.nemesisnet.co.za/agent-harness-explained-the-runtime-that-makes-ai-agents-actually-work/', variant: 'secondary' },
-  { label: 'Agent Skills Deep Dive', href: 'https://blog.nemesisnet.co.za/agent-skills-explained-how-ai-agents-learn-to-do-real-work/', variant: 'secondary' },
-  { label: 'Next: Self-Hosted AI Infrastructure', to: '/services/self-hosted-ai', variant: 'cross-sell', arrow: true }
-]
 </script>
 
 <style scoped>

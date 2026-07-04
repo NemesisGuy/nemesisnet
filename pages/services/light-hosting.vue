@@ -62,7 +62,15 @@
         <p><strong>R850/month</strong> — flat rate, no hidden fees. Covers up to 2 deployed systems. Additional systems quoted separately.</p>
         <p>If your system needs grow beyond basic hosting, the Managed Retainer (R7,500/month) includes CI/CD management, bug fixes, application monitoring, and priority support.</p>
 
-        <CTAGroup :links="ctaLinks" />
+        <ServiceFooter
+          :exploring="[
+            { title: 'Managed Retainer', description: 'Dedicated engineering hours for maintenance, feature work, and technical decisions.', to: '/services/managed-retainer' },
+            { title: 'Infrastructure & DevOps', description: 'Docker, CI/CD, and networking — when you need to own the infrastructure yourself.', to: '/services/infrastructure' }
+          ]"
+          exploring-note="Need more hands-on support or full infrastructure control? These services scale up from light hosting."
+          :reading="[]"
+          :cta="{ heading: 'Ready to get hosted?', description: 'Managed hosting for Nuxt and static sites — SSL, backups, and monitoring included.', buttonLabel: 'Choose Light Hosting', to: '/contact' }"
+        />
       </div>
 
       <div class="detail-sidebar">
@@ -137,10 +145,6 @@ useHead({
   ]
 })
 
-const ctaLinks = [
-  { label: 'Choose Light Hosting', to: '/contact', variant: 'primary', arrow: true },
-  { label: 'Need more? See Managed Retainer', to: '/services/managed-retainer', variant: 'cross-sell', arrow: true }
-]
 </script>
 
 <style scoped>

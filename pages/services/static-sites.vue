@@ -82,7 +82,16 @@
           </div>
         </div>
 
-        <CTAGroup :links="ctaLinks" />
+        <ServiceFooter
+          :exploring="[
+            { title: 'App Starter', description: 'PocketBase-backed apps with auth, storage, and a real database — for when a static site is not enough.', to: '/services/app-starter' },
+            { title: 'Custom Software', description: 'APIs, backends, and data pipelines built from first principles — when you need something a template cannot do.', to: '/services/custom-software' }
+          ]"
+          exploring-note="Need more than a static site? These services build on the same fast frontend with added complexity."
+          :reading="[]"
+          reading-label="Technical Reading"
+          :cta="{ heading: 'Ready to build your website?', description: 'Fast, performant websites that load in under a second. No backend complexity, just content that works.', buttonLabel: 'Scope This Project', to: '/contact' }"
+        />
       </div>
 
       <div class="detail-sidebar">
@@ -155,11 +164,6 @@ useHead({
     }
   ]
 })
-
-const ctaLinks = [
-  { label: 'Scope This Project', to: '/contact', variant: 'primary', arrow: true },
-  { label: '← Back to Services', to: '/services', variant: 'cross-sell' }
-]
 </script>
 
 <style scoped>

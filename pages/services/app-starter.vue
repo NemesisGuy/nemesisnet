@@ -97,7 +97,17 @@
           </div>
         </div>
 
-        <CTAGroup :links="ctaLinks" />
+        <ServiceFooter
+          :exploring="[
+            { title: 'Static & Brochure Sites', description: 'When you do not need a backend — just a fast, clean website that loads instantly.', to: '/services/static-sites' },
+            { title: 'Business Systems', description: 'Custom dashboards, CRMs, and internal tools that replace spreadsheets with software.', to: '/services/business-systems' }
+          ]"
+          exploring-note="Starting simple or scaling up? These services bracket the App Starter tier."
+          :reading="[
+            { label: 'Building Since: A Self-Hosted Claim Tracker with PocketBase', href: 'https://blog.nemesisnet.co.za/building-since-self-hosted-claim-tracker-pocketbase-react-express/' }
+          ]"
+          :cta="{ heading: 'Ready to start building?', description: 'PocketBase-backed apps with auth, storage, and a real database — deployed and ready to grow.', buttonLabel: 'Scope This Project', to: '/contact' }"
+        />
       </div>
 
       <div class="detail-sidebar">
@@ -170,12 +180,6 @@ useHead({
     }
   ]
 })
-
-const ctaLinks = [
-  { label: 'Scope This Project', to: '/contact', variant: 'primary', arrow: true },
-  { label: 'Read the Since Build Log', href: 'https://blog.nemesisnet.co.za/building-since-self-hosted-claim-tracker-pocketbase-react-express/', variant: 'secondary' },
-  { label: '← Back to Services', to: '/services', variant: 'cross-sell' }
-]
 </script>
 
 <style scoped>

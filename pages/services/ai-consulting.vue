@@ -73,38 +73,19 @@
           </div>
         </div>
 
-        <h2>Continue Exploring</h2>
-        <p class="section-subtitle">Not every engagement starts with AI architecture. Depending on where you are, these services may be a better fit.</p>
-        <div class="related-projects">
-          <div class="related-card">
-            <h4>System Design & Consulting</h4>
-            <p>General architecture reviews, technical roadmapping, and stack evaluation — the broader engagement that often precedes AI-specific work.</p>
-            <NuxtLink to="/services/consulting" class="btn-glass">View Service</NuxtLink>
-          </div>
-          <div class="related-card">
-            <h4>MCP & Agent Integrations</h4>
-            <p>Production AI agent integrations. Connect agents to live systems with a structured, auditable integration layer.</p>
-            <NuxtLink to="/services/mcp-integrations" class="btn-glass">View Service</NuxtLink>
-          </div>
-        </div>
-
-        <div class="further-reading">
-          <span class="further-reading-label">Technical Reading</span>
-          <div class="further-reading-links">
-            <a href="https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/" target="_blank" rel="noopener noreferrer">Self-Hosted AI vs Cloud APIs for South African Businesses</a>
-            <a href="https://blog.nemesisnet.co.za/mcp-explained-the-future-of-ai-agent-tool-use/" target="_blank" rel="noopener noreferrer">Understanding Model Context Protocol (MCP)</a>
-            <a href="https://blog.nemesisnet.co.za/from-rebuilding-authentication-in-every-app-to-a-shared-identity-layer/" target="_blank" rel="noopener noreferrer">Building a Shared Identity Layer Across Applications</a>
-          </div>
-        </div>
-
-        <div class="cta-zone">
-          <div class="cta-zone-heading">
-            <h2>Ready to make the right technical decision?</h2>
-            <p>Half-day and full-day consulting sessions. You leave with clear recommendations, architecture guidance, and a written action plan.</p>
-            <NuxtLink to="/contact" class="btn-glass cta-zone-btn">Book a Session →</NuxtLink>
-            <span class="cta-zone-note">Consulting fees are credited toward implementation work.</span>
-          </div>
-        </div>
+        <ServiceFooter
+          :exploring="[
+            { title: 'System Design & Consulting', description: 'General architecture reviews, technical roadmapping, and stack evaluation — the broader engagement that often precedes AI-specific work.', to: '/services/consulting' },
+            { title: 'MCP & Agent Integrations', description: 'Production AI agent integrations. Connect agents to live systems with a structured, auditable integration layer.', to: '/services/mcp-integrations' }
+          ]"
+          exploring-note="Not every engagement starts with AI architecture. Depending on where you are, these services may be a better fit."
+          :reading="[
+            { label: 'Self-Hosted AI vs Cloud APIs for South African Businesses', href: 'https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/' },
+            { label: 'Understanding Model Context Protocol (MCP)', href: 'https://blog.nemesisnet.co.za/mcp-explained-the-future-of-ai-agent-tool-use/' },
+            { label: 'Building a Shared Identity Layer Across Applications', href: 'https://blog.nemesisnet.co.za/from-rebuilding-authentication-in-every-app-to-a-shared-identity-layer/' }
+          ]"
+          :cta="{ heading: 'Ready to make the right technical decision?', description: 'Half-day and full-day consulting sessions. You leave with clear recommendations, architecture guidance, and a written action plan.', buttonLabel: 'Book a Session', to: '/contact', note: 'Consulting fees are credited toward implementation work.' }"
+        />
       </div>
 
       <div class="detail-sidebar">
@@ -204,18 +185,6 @@ useHead({
 .related-card h4 { color: var(--accent-color); font-size: 0.95rem; margin: 0; }
 .related-card p { color: var(--text-muted); font-size: 0.85rem; margin: 0; flex: 1; }
 .related-card .btn-glass { font-size: 0.8rem; padding: 8px 16px; display: block; text-align: center; }
-.section-subtitle { color: var(--text-muted); margin-bottom: 16px; font-size: 0.95rem; }
-.cta-zone { margin-top: 80px; padding: 60px 40px; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 24px; text-align: center; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
-.cta-zone-heading h2 { font-size: 1.8rem; margin-bottom: 12px; }
-.cta-zone-heading p { color: var(--text-muted); margin-bottom: 28px; font-size: 1rem; max-width: 540px; margin-left: auto; margin-right: auto; }
-.cta-zone-btn { display: inline-block; font-size: 1.1rem; padding: 16px 44px; }
-.cta-zone-note { display: block; margin-top: 16px; font-size: 0.8rem; color: var(--text-muted); opacity: 0.6; font-style: italic; }
-.further-reading { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--glass-border); text-align: center; }
-.further-reading-label { display: block; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); opacity: 0.5; margin-bottom: 12px; }
-.further-reading-links { display: flex; flex-direction: column; gap: 8px; }
-.further-reading-links a { color: var(--accent-color); font-size: 0.85rem; text-decoration: none; opacity: 0.75; transition: opacity 0.2s; }
-.further-reading-links a:hover { opacity: 1; text-decoration: underline; }
-.further-reading-links a::before { content: ''; }
 
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); }

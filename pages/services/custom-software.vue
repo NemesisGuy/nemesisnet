@@ -117,7 +117,17 @@
           <NuxtLink to="/services/infrastructure" class="btn-glass">Infrastructure Engineering →</NuxtLink>
         </div>
 
-        <CTAGroup :links="ctaLinks" />
+        <ServiceFooter
+          :exploring="[
+            { title: 'SaaS Development', description: 'Multi-tenant SaaS with subscription billing, onboarding flows, and deployment pipelines.', to: '/services/saas-development' },
+            { title: 'App Starter', description: 'PocketBase-backed apps with auth and storage — the simpler path for smaller products.', to: '/services/app-starter' }
+          ]"
+          exploring-note="From lightweight apps to full SaaS — find the right scope for your product."
+          :reading="[
+            { label: 'Building a Shared Identity Layer Across Applications', href: 'https://blog.nemesisnet.co.za/from-rebuilding-authentication-in-every-app-to-a-shared-identity-layer/' }
+          ]"
+          :cta="{ heading: 'Ready to build your product?', description: 'APIs, backends, and data pipelines built from first principles — not template farms.', buttonLabel: 'Discuss This Service', to: '/contact' }"
+        />
       </div>
 
       <div class="detail-sidebar">
@@ -201,11 +211,6 @@ useHead({
   ]
 })
 
-const ctaLinks = [
-  { label: 'Discuss This Service', to: '/contact', variant: 'primary', arrow: true },
-  { label: 'Read Auth Deep Dive', href: 'https://blog.nemesisnet.co.za/from-rebuilding-authentication-in-every-app-to-a-shared-identity-layer/', variant: 'secondary' },
-  { label: '← Back to Services', to: '/services', variant: 'cross-sell' }
-]
 </script>
 
 <style scoped>

@@ -88,7 +88,17 @@
           </div>
         </div>
 
-        <CTAGroup :links="ctaLinks" />
+        <ServiceFooter
+          :exploring="[
+            { title: 'Business Systems', description: 'Custom dashboards and internal tools — the stepping stone to full platform architecture.', to: '/services/business-systems' },
+            { title: 'SaaS Development', description: 'Multi-tenant SaaS with subscription billing, onboarding flows, and deployment pipelines.', to: '/services/saas-development' }
+          ]"
+          exploring-note="Scaling from internal tools to multi-tenant platforms? Start here."
+          :reading="[
+            { label: 'Build Once, Deploy Anywhere: Runtime Env Injection', href: 'https://blog.nemesisnet.co.za/build-once-deploy-anywhere-runtime-env-injection-docker-frontend/' }
+          ]"
+          :cta="{ heading: 'Ready to scale?', description: 'Multi-tenant platforms with role-based access, real-time data, and enterprise-grade infrastructure.', buttonLabel: 'Plan Build', to: '/contact' }"
+        />
       </div>
 
       <div class="detail-sidebar">
@@ -161,11 +171,6 @@ useHead({
     }
   ]
 })
-
-const ctaLinks = [
-  { label: 'Plan Build', to: '/contact', variant: 'primary', arrow: true },
-  { label: '← Back to Services', to: '/services', variant: 'cross-sell' }
-]
 </script>
 
 <style scoped>

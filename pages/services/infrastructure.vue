@@ -104,7 +104,19 @@
           <NuxtLink to="/services/self-hosted-ai" class="btn-glass">Self-Hosted AI →</NuxtLink>
         </div>
 
-        <CTAGroup :links="ctaLinks" />
+        <ServiceFooter
+          :exploring="[
+            { title: 'Self-Hosted AI Infrastructure', description: 'LLM deployment, TTS pipelines, and inference architecture — the AI-specific layer on top of your infra.', to: '/services/self-hosted-ai' },
+            { title: 'Light Hosting', description: 'Managed hosting for Nuxt and static sites — SSL, backups, and monitoring included.', to: '/services/light-hosting' }
+          ]"
+          exploring-note="From DIY infrastructure to managed hosting — pick the level of control you need."
+          :reading="[
+            { label: 'Self-Hosted CI/CD on a Home Rack', href: 'https://blog.nemesisnet.co.za/self-hosted-ci-cd-on-a-home-rack-github-gitea-woodpecker-and-portainer/' },
+            { label: 'Inside the NemesisNet Homelab', href: 'https://blog.nemesisnet.co.za/inside-the-nemesisnet-homelab-my-personal-data-center/' },
+            { label: 'Build Once, Deploy Anywhere', href: 'https://blog.nemesisnet.co.za/build-once-deploy-anywhere-runtime-env-injection-docker-frontend/' }
+          ]"
+          :cta="{ heading: 'Ready to secure your infrastructure?', description: 'Docker, CI/CD, networking, and monitoring — self-hosted and production-ready.', buttonLabel: 'Secure Your Infra', to: '/contact' }"
+        />
       </div>
 
       <div class="detail-sidebar">
@@ -188,13 +200,6 @@ useHead({
   ]
 })
 
-const ctaLinks = [
-  { label: 'Secure Your Infra', to: '/contact', variant: 'primary' },
-  { label: 'Self-Hosted CI/CD', href: 'https://blog.nemesisnet.co.za/self-hosted-ci-cd-on-a-home-rack-github-gitea-woodpecker-and-portainer/', variant: 'secondary' },
-  { label: 'Homelab Deep Dive', href: 'https://blog.nemesisnet.co.za/inside-the-nemesisnet-homelab-my-personal-data-center/', variant: 'secondary' },
-  { label: 'Build Once, Deploy Anywhere', href: 'https://blog.nemesisnet.co.za/build-once-deploy-anywhere-runtime-env-injection-docker-frontend/', variant: 'secondary' },
-  { label: '← Back to Services', to: '/services', variant: 'cross-sell' }
-]
 </script>
 
 <style scoped>

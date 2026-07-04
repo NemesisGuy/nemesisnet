@@ -99,7 +99,18 @@
           <NuxtLink to="/services/consulting" class="btn-glass">Technical Consulting →</NuxtLink>
         </div>
 
-        <CTAGroup :links="ctaLinks" />
+        <ServiceFooter
+          :exploring="[
+            { title: 'Custom Software', description: 'APIs, backends, and data pipelines — the building blocks of any SaaS product.', to: '/services/custom-software' },
+            { title: 'Business Systems', description: 'Internal tools and dashboards — when the product is for your team, not your customers.', to: '/services/business-systems' }
+          ]"
+          exploring-note="SaaS is one path. Custom software and internal tools are others."
+          :reading="[
+            { label: 'Building a Shared Identity Layer Across Applications', href: 'https://blog.nemesisnet.co.za/from-rebuilding-authentication-in-every-app-to-a-shared-identity-layer/' },
+            { label: 'Vue 3 vs React for Enterprise SaaS', href: 'https://blog.nemesisnet.co.za/vue-3-vs-react-for-enterprise-saas/' }
+          ]"
+          :cta="{ heading: 'Ready to launch your SaaS?', description: 'Multi-tenant architecture, subscription billing, and deployment pipelines — from concept to production.', buttonLabel: 'Discuss Your SaaS Project', to: '/contact' }"
+        />
       </div>
 
       <div class="detail-sidebar">
@@ -182,12 +193,6 @@ useHead({
   ]
 })
 
-const ctaLinks = [
-  { label: 'Discuss Your SaaS Project', to: '/contact', variant: 'primary', arrow: true },
-  { label: 'Read Auth Deep Dive', href: 'https://blog.nemesisnet.co.za/from-rebuilding-authentication-in-every-app-to-a-shared-identity-layer/', variant: 'secondary' },
-  { label: 'Vue 3 vs React Comparison', href: 'https://blog.nemesisnet.co.za/vue-3-vs-react-for-enterprise-saas/', variant: 'secondary' },
-  { label: '← Back to Services', to: '/services', variant: 'cross-sell' }
-]
 </script>
 
 <style scoped>

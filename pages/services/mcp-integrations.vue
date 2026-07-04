@@ -79,7 +79,18 @@
           </div>
         </div>
 
-        <CTAGroup :links="ctaLinks" />
+        <ServiceFooter
+          :exploring="[
+            { title: 'AI Development', description: 'Custom AI agents, self-hosted LLMs, and multi-agent coding harnesses — the builds that need MCP.', to: '/services/ai-development' },
+            { title: 'AI Architecture / Consulting', description: 'Architecture sessions that often lead to MCP — start with the design before the integration.', to: '/services/ai-consulting' }
+          ]"
+          exploring-note="MCP connects agents to systems. These services build the agents and design the architecture."
+          :reading="[
+            { label: 'MCP Explained: The Future of AI Agent Tool Use', href: 'https://blog.nemesisnet.co.za/mcp-explained-the-future-of-ai-agent-tool-use/' },
+            { label: 'WordPress MCP Automation: Cutting Publishing Time by 80%', href: 'https://blog.nemesisnet.co.za/wordpress-mcp-automation-cutting-publishing-time-by-80/' }
+          ]"
+          :cta="{ heading: 'Ready to connect your agents?', description: 'Structured, auditable integrations between AI agents and your live systems.', buttonLabel: 'Design Your Integration', to: '/contact' }"
+        />
       </div>
 
       <div class="detail-sidebar">
@@ -154,12 +165,6 @@ useHead({
   ]
 })
 
-const ctaLinks = [
-  { label: 'Design Your Integration', to: '/contact', variant: 'primary', arrow: true },
-  { label: 'WordPress MCP Case Study', href: 'https://blog.nemesisnet.co.za/wordpress-mcp-automation-cutting-publishing-time-by-80/', variant: 'secondary' },
-  { label: 'MCP Deep Dive', href: 'https://blog.nemesisnet.co.za/mcp-explained-the-future-of-ai-agent-tool-use/', variant: 'secondary' },
-  { label: 'See Also: AI Architecture / Consulting', to: '/services/ai-consulting', variant: 'cross-sell', arrow: true }
-]
 </script>
 
 <style scoped>

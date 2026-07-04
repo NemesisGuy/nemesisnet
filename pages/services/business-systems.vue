@@ -88,7 +88,17 @@
           </div>
         </div>
 
-        <CTAGroup :links="ctaLinks" />
+        <ServiceFooter
+          :exploring="[
+            { title: 'App Starter', description: 'PocketBase-backed apps with auth and storage — the simpler foundation before custom business logic.', to: '/services/app-starter' },
+            { title: 'Platform / Enterprise', description: 'Multi-tenant platforms with role-based access, real-time data, and enterprise-grade infrastructure.', to: '/services/platform-enterprise' }
+          ]"
+          exploring-note="From lightweight apps to enterprise platforms — find the right complexity level."
+          :reading="[
+            { label: 'Vue 3 vs React for Enterprise SaaS', href: 'https://blog.nemesisnet.co.za/vue-3-vs-react-for-enterprise-saas/' }
+          ]"
+          :cta="{ heading: 'Ready to systematise your operations?', description: 'Custom dashboards, CRMs, and internal tools that replace spreadsheets with software.', buttonLabel: 'Discuss Scope', to: '/contact' }"
+        />
       </div>
 
       <div class="detail-sidebar">
@@ -161,12 +171,6 @@ useHead({
     }
   ]
 })
-
-const ctaLinks = [
-  { label: 'Discuss Scope', to: '/contact', variant: 'primary', arrow: true },
-  { label: 'Vue 3 vs React Comparison', href: 'https://blog.nemesisnet.co.za/vue-3-vs-react-for-enterprise-saas/', variant: 'secondary' },
-  { label: '← Back to Services', to: '/services', variant: 'cross-sell' }
-]
 </script>
 
 <style scoped>

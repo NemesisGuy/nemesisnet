@@ -101,7 +101,15 @@
           <NuxtLink to="/services/infrastructure" class="btn-glass">Infrastructure Engineering →</NuxtLink>
         </div>
 
-        <CTAGroup :links="ctaLinks" />
+        <ServiceFooter
+          :exploring="[
+            { title: 'AI Architecture / Consulting', description: 'Specialised AI sessions — model selection, deployment strategy, and self-hosted infrastructure.', to: '/services/ai-consulting' },
+            { title: 'MCP & Agent Integrations', description: 'Connect AI agents to live systems with a structured, auditable integration layer.', to: '/services/mcp-integrations' }
+          ]"
+          exploring-note="Need AI-specific guidance? These services go deeper into architecture and agent infrastructure."
+          :reading="[]"
+          :cta="{ heading: 'Ready for a technical roadmap?', description: 'Half-day sessions that give you clarity on what to build, how to build it, and what to do first.', buttonLabel: 'Book a Session', to: '/contact' }"
+        />
       </div>
 
       <div class="detail-sidebar">
@@ -184,10 +192,6 @@ useHead({
   ]
 })
 
-const ctaLinks = [
-  { label: 'Book a Session', to: '/contact', variant: 'primary' },
-  { label: '← Back to Services', to: '/services', variant: 'cross-sell' }
-]
 </script>
 
 <style scoped>

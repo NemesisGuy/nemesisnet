@@ -80,7 +80,15 @@
           </div>
         </div>
 
-        <CTAGroup :links="ctaLinks" />
+        <ServiceFooter
+          :exploring="[
+            { title: 'Waterfall & Structured', description: 'Fixed scope, fixed price, fixed timeline — when you know exactly what you need.', to: '/services/waterfall-structured' },
+            { title: 'System Design & Consulting', description: 'Architecture sessions that help you decide which methodology fits your project.', to: '/services/consulting' }
+          ]"
+          exploring-note="Agile is one approach. Waterfall and consulting help you choose."
+          :reading="[]"
+          :cta="{ heading: 'Ready to start sprinting?', description: 'Two-week cycles, working software, continuous feedback — when the path forward is not clear.', buttonLabel: 'Plan a Sprint', to: '/contact' }"
+        />
       </div>
 
       <div class="detail-sidebar">
@@ -154,10 +162,6 @@ useHead({
   ]
 })
 
-const ctaLinks = [
-  { label: 'Plan a Sprint', to: '/contact', variant: 'primary', arrow: true },
-  { label: 'See Also: Waterfall & Structured', to: '/services/waterfall-structured', variant: 'cross-sell', arrow: true }
-]
 </script>
 
 <style scoped>
