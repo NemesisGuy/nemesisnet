@@ -21,7 +21,7 @@
           <div class="card pricing-card">
             <div class="pricing-icon"><ClientOnly><Globe :size="24" /></ClientOnly></div>
             <h4 class="pricing-title">Static &amp; Brochure</h4>
-            <div class="pricing-price">R10,000 – R25,000</div>
+            <div class="pricing-price">R7,000 – R25,000</div>
             <div class="pricing-unit">Range</div>
             <p class="pricing-description">Static sites, landing pages, brochure sites, and simple internal tools with no auth complexity.</p>
             <p class="pricing-timeline">Delivery: 2–4 weeks</p>
@@ -331,7 +331,7 @@
           </div>
           <div class="local-card">
             <strong>ZAR Pricing</strong>
-            <span>Transparency from R10,000 to R350,000+ — no hidden fees</span>
+            <span>Transparency from R7,000 to R350,000+ — no hidden fees</span>
           </div>
         </div>
 
@@ -364,7 +364,7 @@ const toggleFaq = (i) => { openFaq.value = openFaq.value === i ? null : i }
 
 const faqs = [
   { q: 'What technologies does NemesisNet use?', a: 'NemesisNet works with Vue 3, React, Nuxt 4, Spring Boot, Python, PocketBase, Docker, PostgreSQL, Redis, and AI frameworks including MCP, GGUF models, and CUDA-accelerated inference.' },
-  { q: 'How does pricing work?', a: 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R10,000 for static sites to R350,000+ for platform and enterprise work. Specialist engagements start from R10,000. Ongoing support starts at R850/month.' },
+  { q: 'How does pricing work?', a: 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R7,000 for static sites to R350,000+ for platform and enterprise work. Specialist engagements start from R10,000. Ongoing support starts at R850/month.' },
   { q: 'Does NemesisNet work with clients outside Cape Town?', a: 'Yes. While based in Cape Town, South Africa, NemesisNet works with clients remotely across the country and internationally. Discovery calls and scoping sessions are conducted online.' },
   { q: 'What is the typical delivery timeline?', a: 'Static sites ship in 2–4 weeks. App starters typically take 4–8 weeks. Business systems range from 8–16 weeks. Platform and enterprise builds run 16–30+ weeks. All timelines are scoped during the discovery phase.' },
   { q: 'Can NemesisNet integrate with existing systems?', a: 'Yes. NemesisNet builds API integrations, MCP servers, and data pipelines that connect to existing CMS, CRM, and database systems. Custom MCP agents can automate workflows across multiple platforms.' }
@@ -373,9 +373,9 @@ const faqs = [
 useHead({
   title: 'IT Services Cape Town — Software, SaaS, AI & Infrastructure | NemesisNet',
   meta: [
-    { name: 'description', content: 'IT services in Cape Town, South Africa: Custom software, SaaS development, AI infrastructure, DevOps. ZAR pricing from R10,000. Cape Town-based engineering.' },
+    { name: 'description', content: 'IT services in Cape Town, South Africa: Custom software, SaaS development, AI infrastructure, DevOps. ZAR pricing from R7,000. Cape Town-based engineering.' },
     { property: 'og:title', content: 'IT Services Cape Town | Software, SaaS, AI & Infrastructure' },
-    { property: 'og:description', content: 'Custom software, SaaS, and AI infrastructure services based in Cape Town, South Africa. Starting from R10,000.' },
+    { property: 'og:description', content: 'Custom software, SaaS, and AI infrastructure services based in Cape Town, South Africa. Starting from R7,000.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
@@ -403,7 +403,7 @@ useHead({
             'name': 'How does pricing work?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R10,000 for static sites to R350,000+ for platform and enterprise work. App Starter projects range from R35,000–R80,000. Specialist engagements (consulting, MCP integrations) start from R10,000 and R55,000 respectively. Ongoing support starts at R850/month for light hosting and R7,500/month for managed retainers.'
+              'text': 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R7,000 for static sites to R350,000+ for platform and enterprise work. App Starter projects range from R35,000–R80,000. Specialist engagements (consulting, MCP integrations) start from R10,000 and R55,000 respectively. Ongoing support starts at R850/month for light hosting and R7,500/month for managed retainers.'
             }
           },
           {

@@ -65,7 +65,7 @@
         </div>
 
         <h2>How Pricing Works</h2>
-        <p>Starting from <strong>R10,000</strong> for a simple single-page site. Most brochure sites land between <strong>R15,000–R25,000</strong> depending on number of pages, custom design complexity, and whether you need animations or interactive elements.</p>
+        <p>Starting from <strong>R7,000</strong> for a simple single-page site. Most brochure sites land between <strong>R12,000–R25,000</strong> depending on number of pages, custom design complexity, and whether you need animations or interactive elements.</p>
         <p>Factors that push the price higher: custom illustrations or animations, multi-language support, extensive content migration, and integration with third-party booking or form tools.</p>
 
         <h2>Real Examples</h2>
@@ -99,7 +99,7 @@
           <h4>Service Details</h4>
           <ul class="sidebar-list">
             <li><span>Delivery:</span> <strong>2–4 Weeks</strong></li>
-            <li><span>Price:</span> <strong>R10,000 – R25,000</strong></li>
+            <li><span>Price:</span> <strong>R7,000 – R25,000</strong></li>
             <li><span>Tier:</span> <strong>Tier 1</strong></li>
             <li><span>Stack:</span> <strong>Nuxt, Vue, React, Docker</strong></li>
           </ul>
@@ -124,9 +124,9 @@ import { CheckCircle, XCircle } from 'lucide-vue-next'
 useHead({
   title: 'Static & Brochure Sites — Fast, Performant Websites | NemesisNet',
   meta: [
-    { name: 'description', content: 'Static and brochure websites built with Nuxt, Vue, and React. Fast, SEO-optimised, no backend complexity. Starting from R10,000. Cape Town, South Africa.' },
+    { name: 'description', content: 'Static and brochure websites built with Nuxt, Vue, and React. Fast, SEO-optimised, no backend complexity. Starting from R7,000. Cape Town, South Africa.' },
     { property: 'og:title', content: 'Static & Brochure Sites | NemesisNet' },
-    { property: 'og:description', content: 'Fast, performant websites for display. No backend, no complexity. Starting from R10,000.' },
+    { property: 'og:description', content: 'Fast, performant websites for display. No backend, no complexity. Starting from R7,000.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/static-sites' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }

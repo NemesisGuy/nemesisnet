@@ -156,7 +156,7 @@ export default defineNuxtConfig({
               'addressRegion': 'Western Cape',
               'addressCountry': 'ZA'
             },
-            'priceRange': 'R10,000 - R350,000+',
+            'priceRange': 'R7,000 - R350,000+',
             'openingHoursSpecification': {
               '@type': 'OpeningHoursSpecification',
               'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
