@@ -7,7 +7,7 @@
         <div class="breadcrumbs" aria-label="Breadcrumb">
           <NuxtLink to="/">Home</NuxtLink>
           <span>/</span>
-          <NuxtLink to="/services">Services</NuxtLink>
+          <NuxtLink to="/resources">Resources</NuxtLink>
           <span>/</span>
           <span aria-current="page">Pricing Guide</span>
         </div>
@@ -186,7 +186,7 @@
         </div>
 
         <div class="back-link">
-          <NuxtLink to="/" class="btn-glass">← Back to Home</NuxtLink>
+          <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
         </div>
       </div>
     </div>
@@ -227,10 +227,10 @@ const faqs = [
 ]
 
 useHead({
-  title: 'Custom Software Development Cost in South Africa (2026) | NemesisNet',
+  title: 'Software Development Cost South Africa 2026 | NemesisNet',
   meta: [
     { name: 'description', content: 'Transparent ZAR pricing for custom software, SaaS platforms, and AI systems built in South Africa. Real numbers from R7,000 to R350,000+ — from a Cape Town engineer who publishes actual prices.' },
-    { property: 'og:title', content: 'Custom Software Development Cost in South Africa (2026) | NemesisNet' },
+    { property: 'og:title', content: 'Software Development Cost South Africa 2026 | NemesisNet' },
     { property: 'og:description', content: 'Transparent ZAR pricing for custom software, SaaS platforms, and AI systems. Real numbers from R7,000 to R350,000+.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/software-development-cost-south-africa' },

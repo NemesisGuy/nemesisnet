@@ -80,6 +80,7 @@
           ]"
           exploring-note="Not every engagement starts with AI architecture. Depending on where you are, these services may be a better fit."
           :reading="[
+            { label: 'Software Development Cost Guide — Pricing & What Drives Cost', href: '/software-development-cost-south-africa' },
             { label: 'Self-Hosted AI vs Cloud APIs for South African Businesses', href: 'https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/' },
             { label: 'Understanding Model Context Protocol (MCP)', href: 'https://blog.nemesisnet.co.za/mcp-explained-the-future-of-ai-agent-tool-use/' },
             { label: 'Building a Shared Identity Layer Across Applications', href: 'https://blog.nemesisnet.co.za/from-rebuilding-authentication-in-every-app-to-a-shared-identity-layer/' }

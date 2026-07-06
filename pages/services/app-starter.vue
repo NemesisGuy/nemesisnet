@@ -104,6 +104,7 @@
           ]"
           exploring-note="Starting simple or scaling up? These services bracket the App Starter tier."
           :reading="[
+            { label: 'Software Development Cost Guide — Pricing & What Drives Cost', href: '/software-development-cost-south-africa' },
             { label: 'Building Since: A Self-Hosted Claim Tracker with PocketBase', href: 'https://blog.nemesisnet.co.za/building-since-self-hosted-claim-tracker-pocketbase-react-express/' }
           ]"
           :cta="{ heading: 'Ready to start building?', description: 'PocketBase-backed apps with auth, storage, and a real database — deployed and ready to grow.', buttonLabel: 'Scope This Project', to: '/contact' }"

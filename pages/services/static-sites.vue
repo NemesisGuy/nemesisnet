@@ -88,7 +88,9 @@
             { title: 'Custom Software', description: 'APIs, backends, and data pipelines built from first principles — when you need something a template cannot do.', to: '/services/custom-software' }
           ]"
           exploring-note="Need more than a static site? These services build on the same fast frontend with added complexity."
-          :reading="[]"
+          :reading="[
+            { label: 'Software Development Cost Guide — Pricing & What Drives Cost', href: '/software-development-cost-south-africa' }
+          ]"
           reading-label="Technical Reading"
           :cta="{ heading: 'Ready to build your website?', description: 'Fast, performant websites that load in under a second. No backend complexity, just content that works.', buttonLabel: 'Scope This Project', to: '/contact' }"
         />

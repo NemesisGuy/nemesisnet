@@ -6,6 +6,7 @@
         <NuxtLink to="/services">Services</NuxtLink>
         <NuxtLink to="/projects">Projects</NuxtLink>
         <NuxtLink to="/about">About</NuxtLink>
+        <NuxtLink to="/software-development-cost-south-africa">Pricing Guide</NuxtLink>
         <a href="/#testimonials">Testimonials</a>
         <NuxtLink to="/contact">Contact</NuxtLink>
       </div>
@@ -17,7 +18,6 @@
       </div>
       <div class="footer-group">
         <h4>Links</h4>
-        <NuxtLink to="/software-development-cost-south-africa">Pricing Guide</NuxtLink>
         <a href="https://blog.nemesisnet.co.za/" target="_blank" rel="noopener noreferrer">Blog</a>
         <a href="https://brand.nemesisnet.co.za" target="_blank" rel="noopener noreferrer">Brand Guide</a>
         <a href="https://github.com/NemesisGuy" target="_blank" rel="noopener noreferrer">GitHub</a>

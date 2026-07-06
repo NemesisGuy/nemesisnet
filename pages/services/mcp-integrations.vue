@@ -86,6 +86,7 @@
           ]"
           exploring-note="MCP connects agents to systems. These services build the agents and design the architecture."
           :reading="[
+            { label: 'Software Development Cost Guide — Pricing & What Drives Cost', href: '/software-development-cost-south-africa' },
             { label: 'MCP Explained: The Future of AI Agent Tool Use', href: 'https://blog.nemesisnet.co.za/mcp-explained-the-future-of-ai-agent-tool-use/' },
             { label: 'WordPress MCP Automation: Cutting Publishing Time by 80%', href: 'https://blog.nemesisnet.co.za/wordpress-mcp-automation-cutting-publishing-time-by-80/' }
           ]"
