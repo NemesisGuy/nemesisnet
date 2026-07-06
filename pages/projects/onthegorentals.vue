@@ -74,12 +74,11 @@ const currentSlide = ref(0)
 let autoTimer = null
 
 const slides = [
-  { src: '/images/projects/onthegorentals/screenshots/onthegorentals-home.webp', alt: 'OnTheGoRentals homepage', caption: 'Homepage' },
-  { src: '/images/projects/onthegorentals/screenshots/onthegorentals-fleet.webp', alt: 'Fleet listing page', caption: 'Fleet Browser' },
-  { src: '/images/projects/onthegorentals/screenshots/onthegorentals-car-detail.webp', alt: 'Car detail page', caption: 'Car Detail' },
-  { src: '/images/projects/onthegorentals/screenshots/onthegorentals-signup.webp', alt: 'User signup page', caption: 'Signup' },
-  { src: '/images/projects/onthegorentals/screenshots/onthegorentals-login.webp', alt: 'User login page', caption: 'Login' },
-  { src: '/images/projects/onthegorentals/screenshots/onthegorentals-about.webp', alt: 'About us page', caption: 'About Us' }
+  { src: '/images/projects/onthegorentals/screenshots/onthegorentals-home-v2.webp', alt: 'OnTheGoRentals homepage with car categories', caption: 'Homepage' },
+  { src: '/images/projects/onthegorentals/screenshots/onthegorentals-fleet-v2.webp', alt: 'Fleet listing with search and filters', caption: 'Fleet Browser' },
+  { src: '/images/projects/onthegorentals/screenshots/onthegorentals-car-detail-v2.webp', alt: 'Car detail page with booking form', caption: 'Car Detail & Booking' },
+  { src: '/images/projects/onthegorentals/screenshots/onthegorentals-signup-v2.webp', alt: 'User registration page', caption: 'Signup' },
+  { src: '/images/projects/onthegorentals/screenshots/onthegorentals-login-v2.webp', alt: 'User login page', caption: 'Login' }
 ]
 
 const nextSlide = () => { currentSlide.value = (currentSlide.value + 1) % slides.length }
@@ -153,8 +152,8 @@ useHead({
 
 .screenshot-carousel { position: relative; overflow: hidden; border-radius: 16px; border: 1px solid var(--glass-border); margin: 16px 0 32px; background: var(--glass-bg); }
 .carousel-track { display: flex; transition: transform 0.5s ease; }
-.carousel-slide { min-width: 100%; position: relative; }
-.carousel-slide img { width: 100%; height: auto; display: block; }
+.carousel-slide { min-width: 100%; position: relative; aspect-ratio: 16/10; overflow: hidden; }
+.carousel-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .carousel-caption { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.7); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; white-space: nowrap; backdrop-filter: blur(4px); }
 .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1.4rem; cursor: pointer; z-index: 2; transition: background 0.2s; backdrop-filter: blur(4px); }
 .carousel-btn:hover { background: rgba(0,0,0,0.8); }

@@ -76,12 +76,12 @@ const currentSlide = ref(0)
 let autoTimer = null
 
 const slides = [
-  { src: '/images/projects/forkmyfolio/screenshots/forkmyfolio-home.webp', alt: 'ForkMyFolio homepage', caption: 'Homepage' },
-  { src: '/images/projects/forkmyfolio/screenshots/forkmyfolio-login.webp', alt: 'Login page', caption: 'Login' },
-  { src: '/images/projects/forkmyfolio/screenshots/forkmyfolio-dashboard.webp', alt: 'Admin dashboard', caption: 'Dashboard' },
-  { src: '/images/projects/forkmyfolio/screenshots/forkmyfolio-portfolio.webp', alt: 'Public portfolio', caption: 'Public Portfolio' },
-  { src: '/images/projects/forkmyfolio/screenshots/forkmyfolio-projects.webp', alt: 'Projects management', caption: 'Projects Manager' },
-  { src: '/images/projects/forkmyfolio/screenshots/forkmyfolio-skills.webp', alt: 'Skills management', caption: 'Skills Manager' }
+  { src: '/images/projects/forkmyfolio/screenshots/forkmyfolio-dashboard-v2.webp', alt: 'Admin dashboard with management cards', caption: 'Dashboard' },
+  { src: '/images/projects/forkmyfolio/screenshots/forkmyfolio-portfolio-v2.webp', alt: 'Public portfolio view', caption: 'Public Portfolio' },
+  { src: '/images/projects/forkmyfolio/screenshots/forkmyfolio-projects-v2.webp', alt: 'Projects management interface', caption: 'Projects Manager' },
+  { src: '/images/projects/forkmyfolio/screenshots/forkmyfolio-profile.webp', alt: 'Profile editing page', caption: 'Profile Editor' },
+  { src: '/images/projects/forkmyfolio/screenshots/forkmyfolio-skills-mgmt.webp', alt: 'Skills management interface', caption: 'Skills Manager' },
+  { src: '/images/projects/forkmyfolio/screenshots/forkmyfolio-exports.webp', alt: 'PDF export and backup settings', caption: 'Exports & Backup' }
 ]
 
 const nextSlide = () => { currentSlide.value = (currentSlide.value + 1) % slides.length }
@@ -155,8 +155,8 @@ useHead({
 
 .screenshot-carousel { position: relative; overflow: hidden; border-radius: 16px; border: 1px solid var(--glass-border); margin: 16px 0 32px; background: var(--glass-bg); }
 .carousel-track { display: flex; transition: transform 0.5s ease; }
-.carousel-slide { min-width: 100%; position: relative; }
-.carousel-slide img { width: 100%; height: auto; display: block; }
+.carousel-slide { min-width: 100%; position: relative; aspect-ratio: 16/10; overflow: hidden; }
+.carousel-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .carousel-caption { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.7); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; white-space: nowrap; backdrop-filter: blur(4px); }
 .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1.4rem; cursor: pointer; z-index: 2; transition: background 0.2s; backdrop-filter: blur(4px); }
 .carousel-btn:hover { background: rgba(0,0,0,0.8); }
