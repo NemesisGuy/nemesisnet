@@ -14,32 +14,47 @@
     <div class="contact-container">
       <div class="contact-form-section">
         <h2>Send a Message</h2>
-        <form class="contact-form" @submit.prevent="handleSubmit">
+        <form
+          class="contact-form"
+          toolname="contact-nemesisnet"
+          tooldescription="Send a message to NemesisNet to enquire about custom software, SaaS, AI, or infrastructure projects. Submitter receives a response within 24 hours."
+          @submit.prevent="handleSubmit"
+        >
           <div class="form-group">
             <label for="name">Name</label>
-            <input 
-              id="name" 
-              v-model="form.name" 
-              type="text" 
-              required 
+            <input
+              id="name"
+              name="name"
+              v-model="form.name"
+              type="text"
+              required
               placeholder="Your name"
+              toolparamdescription="The full name of the person submitting the enquiry."
             >
           </div>
-          
+
           <div class="form-group">
             <label for="email">Email</label>
-            <input 
-              id="email" 
-              v-model="form.email" 
-              type="email" 
-              required 
+            <input
+              id="email"
+              name="email"
+              v-model="form.email"
+              type="email"
+              required
               placeholder="your@email.com"
+              toolparamdescription="A reply-to email address. Must be a valid email format."
             >
           </div>
-          
+
           <div class="form-group">
             <label for="subject">Subject</label>
-            <select id="subject" v-model="form.subject" required>
+            <select
+              id="subject"
+              name="subject"
+              v-model="form.subject"
+              required
+              toolparamdescription="The service category the enquiry relates to. One of: custom-software, saas-development, ai-development, infrastructure, consulting, other."
+            >
               <option value="" disabled>Select a subject</option>
               <option value="custom-software">Custom Software Development</option>
               <option value="saas-development">SaaS Platform Development</option>
@@ -49,38 +64,42 @@
               <option value="other">Other</option>
             </select>
           </div>
-          
+
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea 
-              id="message" 
-              v-model="form.message" 
-              required 
+            <textarea
+              id="message"
+              name="message"
+              v-model="form.message"
+              required
               placeholder="Tell us about your project..."
               rows="6"
+              toolparamdescription="A description of the project, problem, or question. Include scope, timeline, and any technical requirements."
             />
           </div>
-          
+
           <div v-if="form.subject === 'other'" class="form-group">
             <label for="other-subject">Other Subject</label>
-            <input 
-              id="other-subject" 
-              v-model="form.otherSubject" 
-              type="text" 
+            <input
+              id="other-subject"
+              name="other_subject"
+              v-model="form.otherSubject"
+              type="text"
               placeholder="What is this about?"
+              toolparamdescription="A custom subject line when the 'subject' field is set to 'other'."
             >
           </div>
-          
+
           <div class="form-group">
             <ClientOnly>
               <NuxtTurnstile v-model="turnstileToken" />
             </ClientOnly>
           </div>
-          
+
           <button type="submit" class="btn-primary" :disabled="submitting || !turnstileToken">
             {{ submitting ? 'Sending...' : 'Send Message' }}
           </button>
-          
+
           <p v-if="success" class="success-message">Message sent successfully! We'll be in touch soon.</p>
           <p v-if="error" class="error-message">{{ error }}</p>
         </form>
@@ -152,7 +171,7 @@ const submitting = ref(false)
 const success = ref(false)
 const error = ref('')
 
-async function handleSubmit() {
+async function handleSubmit(event) {
   if (!form.name || !form.email || !form.subject || !form.message) {
     error.value = 'Please fill in all required fields'
     return
@@ -169,17 +188,16 @@ async function handleSubmit() {
   error.value = ''
   success.value = false
 
-  try {
-    await $fetch('/api/contact', {
-      method: 'POST',
-      body: {
-        token: turnstileToken.value,
-        name: form.name,
-        email: form.email,
-        subject,
-        message: form.message
-      }
-    })
+  const sendPromise = $fetch('/api/contact', {
+    method: 'POST',
+    body: {
+      token: turnstileToken.value,
+      name: form.name,
+      email: form.email,
+      subject,
+      message: form.message
+    }
+  }).then(() => {
     success.value = true
     form.name = ''
     form.email = ''
@@ -187,10 +205,28 @@ async function handleSubmit() {
     form.otherSubject = ''
     form.message = ''
     turnstileToken.value = ''
-  } catch (e) {
+    return {
+      content: [
+        {
+          type: 'text',
+          text: `Message sent successfully. ${form.name || 'The submitter'} will receive a response at ${form.email || 'the provided email'} within 24 hours.`
+        }
+      ]
+    }
+  }).catch((e) => {
     error.value = e.data?.message || 'Failed to send message. Please try again or email directly.'
-  } finally {
+    return {
+      content: [{ type: 'text', text: error.value }],
+      isError: true
+    }
+  }).finally(() => {
     submitting.value = false
+  })
+
+  if (event && typeof event.respondWith === 'function' && event.agentInvoked) {
+    event.respondWith(sendPromise)
+  } else {
+    await sendPromise
   }
 }
 
