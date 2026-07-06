@@ -63,6 +63,7 @@ export default defineNuxtConfig({
         '/services/waterfall-structured',
         '/services/light-hosting',
         '/services/managed-retainer',
+        '/software-development-cost-south-africa',
         '/about',
         '/legal/refund',
         '/legal/terms',

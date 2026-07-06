@@ -348,6 +348,8 @@
           </div>
         </div>
 
+        <p class="pricing-guide-cta">Want a full breakdown of what drives project costs? <NuxtLink to="/software-development-cost-south-africa">See our Pricing Guide →</NuxtLink></p>
+
         <div class="back-link">
           <NuxtLink to="/" class="btn-glass">← Back to Home</NuxtLink>
         </div>
@@ -467,6 +469,9 @@ useHead({
 .pricing-group-label { font-size: 1.1rem; color: var(--accent-color); margin: 32px 0 8px; padding-bottom: 8px; border-bottom: 1px solid var(--glass-border); }
 .pricing-group-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px; }
 
+.pricing-guide-cta { text-align: center; margin: 32px 0; font-size: 0.95rem; color: var(--text-muted); }
+.pricing-guide-cta a { color: var(--accent-color); text-decoration: none; }
+.pricing-guide-cta a:hover { text-decoration: underline; }
 .back-link { text-align: center; margin-top: 48px; }
 .local-signals { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 32px 0 24px; }
 .local-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; text-align: center; }
