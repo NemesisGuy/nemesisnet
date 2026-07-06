@@ -37,37 +37,37 @@
         <div class="service-icon"><ClientOnly><Server :size="24" /></ClientOnly></div>
         <h3>Backend &amp; API Engineering</h3>
         <p>Custom APIs, data pipelines, system integrations, and backend architecture.</p>
-        <NuxtLink to="/services/custom-software" class="btn-glass">Learn More</NuxtLink>
+        <NuxtLink to="/services/custom-software" class="btn-glass">Custom Software Details</NuxtLink>
       </div>
       <div class="card">
         <div class="service-icon"><ClientOnly><Cloud :size="24" /></ClientOnly></div>
         <h3>SaaS Development</h3>
         <p>Scalable multi-tenant platforms with authentication, billing, and APIs.</p>
-        <NuxtLink to="/services/saas-development" class="btn-glass">Learn More</NuxtLink>
+        <NuxtLink to="/services/saas-development" class="btn-glass">SaaS Development Details</NuxtLink>
       </div>
       <div class="card">
         <div class="service-icon"><ClientOnly><Brain :size="24" /></ClientOnly></div>
         <h3>AI Development</h3>
         <p>MCP agents, self-hosted TTS pipelines, and multi-agent coding harnesses.</p>
-        <NuxtLink to="/services/ai-development" class="btn-glass">Learn More</NuxtLink>
+        <NuxtLink to="/services/ai-development" class="btn-glass">AI Development Details</NuxtLink>
       </div>
       <div class="card">
         <div class="service-icon"><ClientOnly><Cpu :size="24" /></ClientOnly></div>
         <h3>Self-Hosted AI Infrastructure</h3>
         <p>GGUF models, GPU deployment, and vector databases — no vendor lock-in.</p>
-        <NuxtLink to="/services/self-hosted-ai" class="btn-glass">Learn More</NuxtLink>
+        <NuxtLink to="/services/self-hosted-ai" class="btn-glass">Self-Hosted AI Details</NuxtLink>
       </div>
       <div class="card">
         <div class="service-icon"><ClientOnly><Workflow :size="24" /></ClientOnly></div>
         <h3>Infrastructure & DevOps</h3>
         <p>Docker, CI/CD, cloud networking, and infrastructure automation.</p>
-        <NuxtLink to="/services/infrastructure" class="btn-glass">Learn More</NuxtLink>
+        <NuxtLink to="/services/infrastructure" class="btn-glass">Infrastructure Details</NuxtLink>
       </div>
       <div class="card">
         <div class="service-icon"><ClientOnly><Briefcase :size="24" /></ClientOnly></div>
         <h3>Consulting & Architecture</h3>
         <p>System design, code reviews, and technical leadership for teams.</p>
-        <NuxtLink to="/services/consulting" class="btn-glass">Learn More</NuxtLink>
+        <NuxtLink to="/services/consulting" class="btn-glass">Consulting Details</NuxtLink>
       </div>
     </div>
     <div class="section-cta">
