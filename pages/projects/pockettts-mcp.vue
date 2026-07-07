@@ -26,12 +26,12 @@
         <h2>Technical Implementation</h2>
         <p>The server is built with FastMCP and Python, loading the Pocket TTS GGUF model directly. It handles voice selection, text tokenization, and audio synthesis entirely on the local machine. The MCP interface maps cleanly to the underlying model, exposing voices, synthesis parameters, and audio format options. Runs on CPU or GPU with automatic hardware detection.</p>
 
-        <div class="tech-stack">
+        <div class="tech-pills">
+          <span class="pill pill-lang">Python</span>
           <span class="pill pill-tools">FastMCP</span>
           <span class="pill pill-tools">Pocket TTS</span>
-          <span class="pill pill-tools">Python</span>
           <span class="pill pill-tools">GGUF</span>
-          <span class="pill pill-tools">MCP</span>
+          <span class="pill pill-tools">MCP Protocol</span>
         </div>
 
         <ServiceFooter

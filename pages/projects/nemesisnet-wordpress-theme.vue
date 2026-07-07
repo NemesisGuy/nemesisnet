@@ -31,6 +31,15 @@
         <h2>Technical Implementation</h2>
         <p>Built with PHP, CSS custom properties, and vanilla JavaScript. Version 2.0 added full WordPress Customizer support (accent colors, sidebar position, sticky header, glass blur intensity), Gutenberg editor styles that match the frontend, sidebar templates (left/right/none), reading time estimates, and a back-to-top button. The component library includes glassmorphic cards, gradient buttons, taxonomy pills, a carousel, stats grid, author bio, and custom comments — all documented in a live demo page template.</p>
 
+        <div class="tech-pills">
+          <span class="pill pill-lang">PHP</span>
+          <span class="pill pill-lang">JavaScript</span>
+          <span class="pill pill-framework">WordPress</span>
+          <span class="pill pill-lang">CSS Custom Properties</span>
+          <span class="pill pill-tools">Gutenberg</span>
+          <span class="pill pill-tools">Customizer API</span>
+        </div>
+
         <ServiceFooter
           exploring-label="Related Projects"
           exploring-button-label="View Project"

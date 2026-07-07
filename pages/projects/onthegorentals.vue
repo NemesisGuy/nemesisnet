@@ -29,7 +29,16 @@
         
         <h2>Technical Implementation</h2>
         <p>The system is powered by a Java Spring Boot backend, utilizing a robust relational database for rental history and vehicle tracking. Security is handled via JWT authentication, ensuring a seamless but secure login experience. The frontend is a highly responsive Vue.js application optimized for mobile and desktop.</p>
-        
+
+        <div class="tech-pills">
+          <span class="pill pill-lang">Java</span>
+          <span class="pill pill-lang">Vue 3</span>
+          <span class="pill pill-framework">Spring Boot</span>
+          <span class="pill pill-db">MySQL</span>
+          <span class="pill pill-tools">JWT</span>
+          <span class="pill pill-tools">Docker</span>
+        </div>
+
         <ServiceFooter
           exploring-label="Related Projects"
           exploring-button-label="View Project"

@@ -14,7 +14,15 @@
         
         <h2>Technical Implementation</h2>
         <p>The extension uses the Offscreen API to create a dedicated audio engine that persists even when the popup closes. It implements a watchdog pattern to handle race conditions between the popup and background worker during initial model download. The architecture includes intelligent backend switching — attempting WebGPU first, then gracefully degrading to WASM with SIMD for broader hardware compatibility.</p>
-        
+
+        <div class="tech-pills">
+          <span class="pill pill-lang">JavaScript</span>
+          <span class="pill pill-tools">ONNX Runtime Web</span>
+          <span class="pill pill-tools">WebGPU</span>
+          <span class="pill pill-tools">WASM</span>
+          <span class="pill pill-tools">Chrome Extension Manifest V3</span>
+        </div>
+
         <ServiceFooter
           exploring-label="Related Projects"
           exploring-button-label="View Project"

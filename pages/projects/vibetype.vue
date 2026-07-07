@@ -14,7 +14,14 @@
         
         <h2>Technical Implementation</h2>
         <p>Implemented as a local-first assistant, Vibe-Type uses specialized prompts to translate natural language into code snippets and structured text. It focuses on low-latency processing to ensure that the assistant feels like a natural extension of the user's typing rhythm.</p>
-        
+
+        <div class="tech-pills">
+          <span class="pill pill-lang">Python</span>
+          <span class="pill pill-tools">OpenAI API</span>
+          <span class="pill pill-tools">Local LLMs</span>
+          <span class="pill pill-tools">Voice-to-Text</span>
+        </div>
+
         <ServiceFooter
           exploring-label="Related Projects"
           exploring-button-label="View Project"

@@ -14,7 +14,14 @@
         
         <h2>Technical Implementation</h2>
         <p>Built with a focus on security and low latency, the server uses a secure bridge to the WordPress API. It translates protocol tool calls into authenticated requests, enabling agents to read posts, update categories, and manage media libraries in real-time. The system is containerized for instant deployment across any environment.</p>
-        
+
+        <div class="tech-pills">
+          <span class="pill pill-lang">Node.js</span>
+          <span class="pill pill-framework">WordPress API</span>
+          <span class="pill pill-tools">MCP Protocol</span>
+          <span class="pill pill-tools">Docker</span>
+        </div>
+
         <ServiceFooter
           exploring-label="Related Projects"
           exploring-button-label="View Project"

@@ -13,6 +13,14 @@
         <p>CodeCritical is a Java code analysis tool that gives developers in-depth insights into their codebase. It tracks metrics like lines of code, functions, classes, maintainability index, and code duplication — helping teams measure and improve code quality, maintainability, and readability.</p>
         
         <h2>Key Features</h2>
+
+        <div class="tech-pills">
+          <span class="pill pill-lang">Java</span>
+          <span class="pill pill-tools">CLI</span>
+          <span class="pill pill-tools">Static Analysis</span>
+          <span class="pill pill-tools">Markdown Reports</span>
+        </div>
+
         <ul class="arch-list">
           <li><strong>File Line Counting:</strong> Total lines, code lines, comment lines, and blank lines per file</li>
           <li><strong>Function Counting:</strong> Detects and counts method signatures to evaluate complexity</li>

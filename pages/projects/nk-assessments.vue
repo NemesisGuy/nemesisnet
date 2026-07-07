@@ -14,7 +14,15 @@
         
         <h2>Technical Implementation</h2>
         <p>The focus was on stability and speed. I used a clean, semantic HTML structure and optimized assets to ensure a near-perfect Lighthouse score. The Docker deployment allowed for an immutable infrastructure approach, making updates and scaling effortless.</p>
-        
+
+        <div class="tech-pills">
+          <span class="pill pill-lang">HTML5</span>
+          <span class="pill pill-framework">Bootstrap</span>
+          <span class="pill pill-tools">Nginx</span>
+          <span class="pill pill-tools">Docker</span>
+          <span class="pill pill-tools">Lighthouse 100</span>
+        </div>
+
         <ServiceFooter
           exploring-label="Related Projects"
           exploring-button-label="View Project"
