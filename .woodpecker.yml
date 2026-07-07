@@ -1,51 +1,17 @@
 steps:
-  build:
-    image: node:22
-    commands:
-      - npm ci
-      - npm run lint
-      - npm run build
-    environment:
-      NUXT_PUBLIC_NO_INDEX: "true"
-      PUPPETEER_SKIP_DOWNLOAD: "true"
-    when:
-      event: [push, tag, manual]
-      branch: dev
-
-  build-prod:
-    image: node:22
-    commands:
-      - npm ci
-      - npm run lint
-      - npm run build
-    environment:
-      PUPPETEER_SKIP_DOWNLOAD: "true"
-    when:
-      event: [push, tag, manual]
-      branch: master
-
-  docker-build:
+  build-and-push:
     image: docker:27
     pull: true
     commands:
-      - echo "Docker Hub login..."
+      - echo "Installing Node.js..."
+      - apk add --no-cache nodejs npm
+      - echo "Building Nuxt app..."
+      - npm ci
+      - npm run lint
+      - npm run build
+      - echo "Building Docker image..."
       - echo $${DOCKER_PASSWORD} | docker login -u $${DOCKER_USERNAME} --password-stdin
       - docker build --no-cache -t nemesisguy/nemesisnet:dev -t nemesisguy/nemesisnet:$${CI_COMMIT_SHA} .
-    environment:
-      DOCKER_USERNAME:
-        from_secret: DOCKER_USERNAME
-      DOCKER_PASSWORD:
-        from_secret: DOCKER_PASSWORD
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    when:
-      event: [push, tag, manual]
-
-  docker-push:
-    image: docker:27
-    pull: true
-    commands:
-      - echo $${DOCKER_PASSWORD} | docker login -u $${DOCKER_USERNAME} --password-stdin
       - docker push nemesisguy/nemesisnet:dev
       - docker push nemesisguy/nemesisnet:$${CI_COMMIT_SHA}
     environment:
@@ -53,19 +19,27 @@ steps:
         from_secret: DOCKER_USERNAME
       DOCKER_PASSWORD:
         from_secret: DOCKER_PASSWORD
+      NUXT_PUBLIC_NO_INDEX: "true"
+      PUPPETEER_SKIP_DOWNLOAD: "true"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     when:
       event: [push, tag, manual]
       branch: dev
 
-  docker-push-prod:
+  build-and-push-prod:
     image: docker:27
     pull: true
     commands:
-      - echo "Building and pushing prod image..."
+      - echo "Installing Node.js..."
+      - apk add --no-cache nodejs npm
+      - echo "Building Nuxt app..."
+      - npm ci
+      - npm run lint
+      - npm run build
+      - echo "Building and pushing prod Docker image..."
       - echo $${DOCKER_PASSWORD} | docker login -u $${DOCKER_USERNAME} --password-stdin
-      - docker build --no-cache -t nemesisguy/nemesisnet:latest .
+      - docker build --no-cache -t nemesisguy/nemesisnet:latest -t nemesisguy/nemesisnet:$${CI_COMMIT_SHA} .
       - docker push nemesisguy/nemesisnet:latest
       - docker push nemesisguy/nemesisnet:$${CI_COMMIT_SHA}
     environment:
@@ -73,6 +47,7 @@ steps:
         from_secret: DOCKER_USERNAME
       DOCKER_PASSWORD:
         from_secret: DOCKER_PASSWORD
+      PUPPETEER_SKIP_DOWNLOAD: "true"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     when:
