@@ -1,13 +1,13 @@
 <template>
   <div class="service-footer">
     <div v-if="exploring.length" class="service-footer-exploring">
-      <h2>Related Services</h2>
+      <h2>{{ exploringLabel }}</h2>
       <p v-if="exploringNote" class="service-footer-note">{{ exploringNote }}</p>
       <div class="service-footer-cards">
         <div v-for="card in exploring" :key="card.to" class="service-footer-card">
           <h4>{{ card.title }}</h4>
           <p>{{ card.description }}</p>
-          <NuxtLink :to="card.to" class="btn-glass">View Service</NuxtLink>
+          <NuxtLink :to="card.to" class="btn-glass">{{ exploringButtonLabel }}</NuxtLink>
         </div>
       </div>
     </div>
@@ -29,6 +29,23 @@
         <span v-if="cta.note" class="service-footer-cta-note">{{ cta.note }}</span>
       </div>
     </div>
+
+    <div v-if="navigation" class="service-footer-nav">
+      <NuxtLink v-if="navigation.prev" :to="navigation.prev.to" class="service-footer-nav-link service-footer-nav-prev">
+        <span class="service-footer-nav-arrow">←</span>
+        <span class="service-footer-nav-text">
+          <span class="service-footer-nav-label">Previous</span>
+          <span class="service-footer-nav-title">{{ navigation.prev.label }}</span>
+        </span>
+      </NuxtLink>
+      <NuxtLink v-if="navigation.next" :to="navigation.next.to" class="service-footer-nav-link service-footer-nav-next">
+        <span class="service-footer-nav-text">
+          <span class="service-footer-nav-label">Next</span>
+          <span class="service-footer-nav-title">{{ navigation.next.label }}</span>
+        </span>
+        <span class="service-footer-nav-arrow">→</span>
+      </NuxtLink>
+    </div>
   </div>
 </template>
 
@@ -36,12 +53,18 @@
 defineProps({
   exploring: { type: Array, default: () => [] },
   exploringNote: { type: String, default: '' },
+  exploringLabel: { type: String, default: 'Related Services' },
+  exploringButtonLabel: { type: String, default: 'View Service' },
   reading: { type: Array, default: () => [] },
   readingLabel: { type: String, default: 'Technical Reading' },
   cta: {
     type: Object,
     required: true,
     default: () => ({ heading: '', description: '', buttonLabel: '', to: '/contact', note: '' })
+  },
+  navigation: {
+    type: Object,
+    default: null
   }
 })
 </script>
@@ -130,9 +153,70 @@ defineProps({
 .service-footer-cta-btn { display: block; font-size: 1.1rem; padding: 16px 44px; max-width: 320px; margin: 0 auto; text-align: center; }
 .service-footer-cta-note { display: block; margin-top: 16px; font-size: 0.8rem; color: var(--text-muted); opacity: 0.6; font-style: italic; text-align: center; }
 
+.service-footer-nav {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.service-footer-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: border-color 0.2s, transform 0.2s;
+  flex: 1;
+  min-width: 0;
+}
+
+.service-footer-nav-link:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.service-footer-nav-next { text-align: right; justify-content: flex-end; }
+
+.service-footer-nav-arrow {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+.service-footer-nav-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.service-footer-nav-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.service-footer-nav-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 @media (max-width: 768px) {
   .service-footer-cards { grid-template-columns: 1fr; }
   .service-footer-cta { padding: 40px 20px; }
   .service-footer-cta-inner h2 { font-size: 1.4rem; }
+  .service-footer-nav { flex-direction: column; }
+  .service-footer-nav-next { text-align: left; justify-content: flex-start; }
 }
 </style>

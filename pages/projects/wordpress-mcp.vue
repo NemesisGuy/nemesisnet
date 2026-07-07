@@ -15,13 +15,20 @@
         <h2>Technical Implementation</h2>
         <p>Built with a focus on security and low latency, the server uses a secure bridge to the WordPress API. It translates protocol tool calls into authenticated requests, enabling agents to read posts, update categories, and manage media libraries in real-time. The system is containerized for instant deployment across any environment.</p>
         
-        <div class="cta-wrapper">
-          <a href="https://github.com/NemesisGuy/WordPress-MCP" target="_blank" class="btn-glass">View Source</a>
-          <a href="https://blog.nemesisnet.co.za/bring-wordpress-into-your-agent-workflows-with-the-wordpress-mcp-server" target="_blank" class="btn-glass">Deep Dive</a>
-        </div>
-        <div class="next-project">
-          <NuxtLink to="/projects/nk-assessments" class="btn-glass">Next Project → NK Assessments</NuxtLink>
-        </div>
+        <ServiceFooter
+          exploring-label="Related Projects"
+          exploring-button-label="View Project"
+          :exploring="[
+            { title: 'PocketTTS-MCP', description: 'Another local-first MCP server — exposing neural TTS to AI agents through the Model Context Protocol.', to: '/projects/pockettts-mcp' },
+            { title: 'NemesisNet WordPress Theme', description: 'A custom WordPress theme built on the NemesisNet brand — the front-end this server manages content for.', to: '/projects/nemesisnet-wordpress-theme' }
+          ]"
+          :reading="[
+            { label: 'View Source on GitHub', href: 'https://github.com/NemesisGuy/WordPress-MCP' },
+            { label: 'Read the Build Log', href: 'https://blog.nemesisnet.co.za/bring-wordpress-into-your-agent-workflows-with-the-wordpress-mcp-server' }
+          ]"
+          :cta="{ heading: 'Want something like this built?', description: 'Node.js and WordPress — production-built MCP servers and agent bridges with secure local-first authentication and containerized deployment.', buttonLabel: 'Start a Project', to: '/contact', note: 'Scoping calls are free.' }"
+          :navigation="{ prev: { to: '/projects/kokoro-tts', label: 'Kokoro TTS Service' }, next: { to: '/projects/nemesisnet-wordpress-theme', label: 'NemesisNet WordPress Theme' } }"
+        />
       </div>
 
       <div class="detail-sidebar">

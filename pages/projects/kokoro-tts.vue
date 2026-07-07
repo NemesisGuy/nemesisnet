@@ -15,14 +15,21 @@
         <h2>Technical Implementation</h2>
         <p>The system uses a Python-based backend to handle the model inference, wrapped in a high-performance API. The frontend is a modern, responsive web interface that allows for real-time audio preview and batch processing. The entire stack is containerized and runs on self-hosted infrastructure, delivering sub-second response times without cloud dependencies.</p>
         
-        <div class="cta-wrapper">
-          <a href="https://github.com/NemesisGuy/Kokoro_TTS_Service" target="_blank" class="btn-glass">View Source</a>
-          <a href="https://kokoro-gui.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
-          <a href="https://blog.nemesisnet.co.za/bringing-gpu-support-to-neutts-air-a-dev-diary/" target="_blank" class="btn-glass">Read Dev Diary</a>
-        </div>
-        <div class="next-project">
-          <NuxtLink to="/projects/wordpress-mcp" class="btn-glass">Next Project → WordPress MCP</NuxtLink>
-        </div>
+        <ServiceFooter
+          exploring-label="Related Projects"
+          exploring-button-label="View Project"
+          :exploring="[
+            { title: 'VoxNemesis Supertonic', description: 'Browser extension running the Kokoro model in-browser via ONNX Runtime Web and WebGPU — same engine, different delivery.', to: '/projects/voxnemesis-supertonic' },
+            { title: 'PocketTTS-MCP', description: 'MCP server exposing local neural TTS to AI agents — another local-first approach to speech synthesis.', to: '/projects/pockettts-mcp' }
+          ]"
+          :reading="[
+            { label: 'View Source on GitHub', href: 'https://github.com/NemesisGuy/Kokoro_TTS_Service' },
+            { label: 'Live Demo', href: 'https://kokoro-gui.nemesisnet.co.za' },
+            { label: 'Read the Build Log', href: 'https://blog.nemesisnet.co.za/bringing-gpu-support-to-neutts-air-a-dev-diary/' }
+          ]"
+          :cta="{ heading: 'Want something like this built?', description: 'Python, FastAPI, PyTorch, and Vue — production-built self-hosted AI infrastructure with REST APIs and containerized deployment.', buttonLabel: 'Start a Project', to: '/contact', note: 'Scoping calls are free.' }"
+          :navigation="{ prev: { to: '/projects/pockettts-mcp', label: 'PocketTTS-MCP' }, next: { to: '/projects/wordpress-mcp', label: 'WordPress MCP Server' } }"
+        />
       </div>
 
       <div class="detail-sidebar">

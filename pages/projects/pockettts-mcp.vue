@@ -34,13 +34,20 @@
           <span class="pill pill-tools">MCP</span>
         </div>
 
-        <div class="cta-wrapper">
-          <a href="https://github.com/NemesisGuy/PocketTTS-MCP" target="_blank" class="btn-glass">View Source</a>
-          <a href="https://blog.nemesisnet.co.za/bringing-gpu-support-to-neutts-air-a-dev-diary/" target="_blank" class="btn-glass">Read Dev Diary</a>
-        </div>
-        <div class="next-project">
-          <NuxtLink to="/projects/kokoro-tts" class="btn-glass">Next Project → Kokoro TTS Service</NuxtLink>
-        </div>
+        <ServiceFooter
+          exploring-label="Related Projects"
+          exploring-button-label="View Project"
+          :exploring="[
+            { title: 'Kokoro TTS Service', description: 'Self-hosted neural TTS infrastructure — the same Kokoro model family, exposed as a REST API and web UI.', to: '/projects/kokoro-tts' },
+            { title: 'WordPress MCP Server', description: 'Another local-first MCP server — bridging AI agents to WordPress content management securely.', to: '/projects/wordpress-mcp' }
+          ]"
+          :reading="[
+            { label: 'View Source on GitHub', href: 'https://github.com/NemesisGuy/PocketTTS-MCP' },
+            { label: 'Read the Build Log', href: 'https://blog.nemesisnet.co.za/bringing-gpu-support-to-neutts-air-a-dev-diary/' }
+          ]"
+          :cta="{ heading: 'Want something like this built?', description: 'Python, FastMCP, and local neural models — production-built MCP servers and agent tooling with on-device inference and zero API keys.', buttonLabel: 'Start a Project', to: '/contact', note: 'Scoping calls are free.' }"
+          :navigation="{ prev: { to: '/projects/voxnemesis-supertonic', label: 'VoxNemesis Supertonic' }, next: { to: '/projects/kokoro-tts', label: 'Kokoro TTS Service' } }"
+        />
       </div>
 
       <div class="detail-sidebar">

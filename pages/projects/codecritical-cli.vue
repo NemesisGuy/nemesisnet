@@ -23,12 +23,19 @@
           <li><strong>Grand Totals:</strong> Project-wide metric summaries for tracking trends over time</li>
         </ul>
         
-        <div class="cta-wrapper">
-          <a href="https://github.com/NemesisGuy/CodeCritical" target="_blank" class="btn-glass">View Source</a>
-        </div>
-        <div class="next-project">
-          <NuxtLink to="/projects/codecritical-saas" class="btn-glass">Next Project → CodeCritical SaaS</NuxtLink>
-        </div>
+        <ServiceFooter
+          exploring-label="Related Projects"
+          exploring-button-label="View Project"
+          :exploring="[
+            { title: 'CodeCritical SaaS', description: 'Enterprise security scanning SaaS — the multi-tenant platform this CLI powers.', to: '/projects/codecritical-saas' },
+            { title: 'OntheGoRentals', description: 'Java Spring Boot full-stack platform with JWT auth and admin dashboards.', to: '/projects/onthegorentals' }
+          ]"
+          :reading="[
+            { label: 'View Source on GitHub', href: 'https://github.com/NemesisGuy/CodeCritical' }
+          ]"
+          :cta="{ heading: 'Want something like this built?', description: 'Java — production-built with static analysis, maintainability metrics, and Markdown reporting.', buttonLabel: 'Start a Project', to: '/contact', note: 'Scoping calls are free.' }"
+          :navigation="{ prev: { to: '/projects/codecritical-saas', label: 'CodeCritical SaaS' }, next: { to: '/projects/onthegorentals', label: 'OntheGoRentals' } }"
+        />
       </div>
 
       <div class="detail-sidebar">

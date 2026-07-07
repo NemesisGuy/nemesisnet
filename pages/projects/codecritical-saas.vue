@@ -29,12 +29,19 @@
         <h3>Frontend Architecture</h3>
         <p>The Vue 3 frontend uses a composite navigation header with component-based architecture. The Admin Hub provides admin sections for user management, request handling, scan monitoring, capacity planning, and feedback. A platform banner system enables announcement management.</p>
         
-        <div class="cta-wrapper">
-          <a href="https://github.com/NemesisGuy/CodeCritical" target="_blank" class="btn-glass">View Source</a>
-        </div>
-        <div class="next-project">
-          <NuxtLink to="/projects/onthegorentals" class="btn-glass">Next Project → OntheGoRentals</NuxtLink>
-        </div>
+        <ServiceFooter
+          exploring-label="Related Projects"
+          exploring-button-label="View Project"
+          :exploring="[
+            { title: 'CodeCritical CLI', description: 'Java static analysis CLI measuring LOC, duplication, and maintainability index — the analysis engine behind the SaaS platform.', to: '/projects/codecritical-cli' },
+            { title: 'OntheGoRentals', description: 'Spring Boot + Vue 3 full-stack rental platform with JWT auth and admin dashboards.', to: '/projects/onthegorentals' }
+          ]"
+          :reading="[
+            { label: 'View Source on GitHub', href: 'https://github.com/NemesisGuy/CodeCritical' }
+          ]"
+          :cta="{ heading: 'Want something like this built?', description: 'Java, Spring Boot, Vue 3, PostgreSQL, and Redis — production-built with multi-tenant isolation, JWT auth, and async scan pipelines.', buttonLabel: 'Start a Project', to: '/contact', note: 'Scoping calls are free.' }"
+          :navigation="{ prev: { to: '/projects/bored-room-cafe', label: 'Bored Room Cafe' }, next: { to: '/projects/codecritical-cli', label: 'CodeCritical CLI' } }"
+        />
       </div>
 
       <div class="detail-sidebar">

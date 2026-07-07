@@ -15,13 +15,20 @@
         <h2>Technical Implementation</h2>
         <p>Built using a modern static architecture to ensure instant load times on mobile devices. The site focuses on high-impact imagery and a streamlined UX to drive conversions from social media traffic to direct orders.</p>
         
-        <div class="cta-wrapper">
-          <a href="https://github.com/NemesisGuy/Bored-Room-Cafe" target="_blank" class="btn-glass">View Source</a>
-          <a href="https://boredroomcafe.nemesisnet.co.za" target="_blank" class="btn-glass">Visit Site</a>
-        </div>
-        <div class="next-project">
-          <NuxtLink to="/projects" class="btn-glass">← Back to All Projects</NuxtLink>
-        </div>
+        <ServiceFooter
+          exploring-label="Related Projects"
+          exploring-button-label="View Project"
+          :exploring="[
+            { title: 'NK Assessments', description: 'Custom assessment platform with automated scoring — another local business production build.', to: '/projects/nk-assessments' },
+            { title: 'ForkMyFolio', description: 'Portfolio management engine with integration and load-testing suites.', to: '/projects/forkmyfolio' }
+          ]"
+          :reading="[
+            { label: 'View Source on GitHub', href: 'https://github.com/NemesisGuy/Bored-Room-Cafe' },
+            { label: 'Visit Site', href: 'https://boredroomcafe.nemesisnet.co.za' }
+          ]"
+          :cta="{ heading: 'Want something like this built?', description: 'Static sites, landing pages, and brochure sites — fast, SEO-optimised, and deployed with Docker + Nginx.', buttonLabel: 'Start a Project', to: '/contact', note: 'Scoping calls are free.' }"
+          :navigation="{ prev: { to: '/projects/nemesisnet-wordpress-theme', label: 'NemesisNet WordPress Theme' }, next: { to: '/projects', label: 'All Projects' } }"
+        />
       </div>
 
       <div class="detail-sidebar">

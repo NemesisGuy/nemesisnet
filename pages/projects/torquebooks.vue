@@ -37,13 +37,20 @@
           <li><strong>Runtime Config:</strong> VITE_PB_URL injected into window.__RUNTIME_CONFIG__ at container start</li>
         </ul>
 
-        <div class="cta-wrapper">
-          <a href="https://torquebooks.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
-          <a href="https://blog.nemesisnet.co.za/torquebooks-building-a-workshop-management-system-for-south-african-auto-shops/" target="_blank" class="btn-glass">Read Build Log</a>
-        </div>
-        <div class="next-project">
-          <NuxtLink to="/projects/nk-assessments" class="btn-glass">Next Project → NK Assessments</NuxtLink>
-        </div>
+        <ServiceFooter
+          exploring-label="Related Projects"
+          exploring-button-label="View Project"
+          :exploring="[
+            { title: 'Since', description: 'Accountability tracker with React, Express, and PocketBase — same lightweight backend stack.', to: '/projects/since' },
+            { title: 'OnTheGo Rentals', description: 'Rental management system with automated booking, invoicing, and fleet tracking.', to: '/projects/onthegorentals' }
+          ]"
+          :reading="[
+            { label: 'Live Demo', href: 'https://torquebooks.nemesisnet.co.za' },
+            { label: 'Read the Build Log', href: 'https://blog.nemesisnet.co.za/torquebooks-building-a-workshop-management-system-for-south-african-auto-shops/' }
+          ]"
+          :cta="{ heading: 'Want something like this built?', description: 'React + TypeScript + PocketBase — production-built with OAuth SSO, PDF invoicing, role-based access, and fleet CRM.', buttonLabel: 'Start a Project', to: '/contact', note: 'Scoping calls are free.' }"
+          :navigation="{ prev: { to: '/projects/nk-assessments', label: 'NK Assessments' }, next: { to: '/projects/since', label: 'Since' } }"
+        />
       </div>
 
       <div class="detail-sidebar">

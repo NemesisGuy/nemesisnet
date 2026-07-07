@@ -15,13 +15,20 @@
         <h2>Technical Implementation</h2>
         <p>The focus was on stability and speed. I used a clean, semantic HTML structure and optimized assets to ensure a near-perfect Lighthouse score. The Docker deployment allowed for an immutable infrastructure approach, making updates and scaling effortless.</p>
         
-        <div class="cta-wrapper">
-          <a href="https://github.com/NemesisGuy/NKAssessments" target="_blank" class="btn-glass">View Source</a>
-          <a href="https://nkassessments.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
-        </div>
-        <div class="next-project">
-          <NuxtLink to="/projects/forkmyfolio" class="btn-glass">Next Project → ForkMyFolio</NuxtLink>
-        </div>
+        <ServiceFooter
+          exploring-label="Related Projects"
+          exploring-button-label="View Project"
+          :exploring="[
+            { title: 'TorqueBooks', description: 'React + PocketBase platform deployed with Docker containerized infrastructure.', to: '/projects/torquebooks' },
+            { title: 'Since', description: 'React + Express + PocketBase self-hosted app deployed with Docker Compose.', to: '/projects/since' }
+          ]"
+          :reading="[
+            { label: 'View Source on GitHub', href: 'https://github.com/NemesisGuy/NKAssessments' },
+            { label: 'Live Demo', href: 'https://nkassessments.nemesisnet.co.za' }
+          ]"
+          :cta="{ heading: 'Want something like this built?', description: 'HTML5, Bootstrap, Nginx, and Docker — production-deployed in under 48 hours with zero downtime.', buttonLabel: 'Start a Project', to: '/contact', note: 'Scoping calls are free.' }"
+          :navigation="{ prev: { to: '/projects/forkmyfolio', label: 'ForkMyFolio' }, next: { to: '/projects/torquebooks', label: 'TorqueBooks' } }"
+        />
       </div>
 
       <div class="detail-sidebar">

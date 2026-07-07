@@ -31,11 +31,20 @@
         <h2>Technical Implementation</h2>
         <p>Built with PHP, CSS custom properties, and vanilla JavaScript. Version 2.0 added full WordPress Customizer support (accent colors, sidebar position, sticky header, glass blur intensity), Gutenberg editor styles that match the frontend, sidebar templates (left/right/none), reading time estimates, and a back-to-top button. The component library includes glassmorphic cards, gradient buttons, taxonomy pills, a carousel, stats grid, author bio, and custom comments — all documented in a live demo page template.</p>
 
-        <div class="cta-wrapper">
-          <a href="https://github.com/NemesisGuy/NemesisNet-WordPress-Theme" target="_blank" class="btn-glass">View Source</a>
-          <a href="https://blog.nemesisnet.co.za/theme-demo/" target="_blank" class="btn-glass">Live Demo</a>
-          <NuxtLink to="/projects/wordpress-mcp" class="btn-glass">WordPress MCP →</NuxtLink>
-        </div>
+        <ServiceFooter
+          exploring-label="Related Projects"
+          exploring-button-label="View Project"
+          :exploring="[
+            { title: 'WordPress MCP Server', description: 'Local-first MCP bridge letting AI agents securely manage WordPress content — the back-end companion to this theme.', to: '/projects/wordpress-mcp' },
+            { title: 'Bored Room Cafe', description: 'A high-performance static site — another production web build focused on speed and conversions.', to: '/projects/bored-room-cafe' }
+          ]"
+          :reading="[
+            { label: 'View Source on GitHub', href: 'https://github.com/NemesisGuy/NemesisNet-WordPress-Theme' },
+            { label: 'Live Demo', href: 'https://blog.nemesisnet.co.za/theme-demo/' }
+          ]"
+          :cta="{ heading: 'Want something like this built?', description: 'PHP, CSS custom properties, and vanilla JS — production-built WordPress themes with brand-token design systems, Customizer integration, and a reusable component library.', buttonLabel: 'Start a Project', to: '/contact', note: 'Scoping calls are free.' }"
+          :navigation="{ prev: { to: '/projects/wordpress-mcp', label: 'WordPress MCP Server' }, next: { to: '/projects/bored-room-cafe', label: 'Bored Room Cafe' } }"
+        />
       </div>
 
       <div class="detail-sidebar">

@@ -15,13 +15,20 @@
         <h2>Technical Implementation</h2>
         <p>The extension uses the Offscreen API to create a dedicated audio engine that persists even when the popup closes. It implements a watchdog pattern to handle race conditions between the popup and background worker during initial model download. The architecture includes intelligent backend switching — attempting WebGPU first, then gracefully degrading to WASM with SIMD for broader hardware compatibility.</p>
         
-        <div class="cta-wrapper">
-          <a href="https://github.com/NemesisGuy/voxnemesis-supertonic-extension" target="_blank" class="btn-glass">View Source</a>
-          <a href="https://blog.nemesisnet.co.za/voxnemesis-supertonic-building-a-local-first-gpu-aware-tts-browser-extension/" target="_blank" class="btn-glass">Read Build Log</a>
-        </div>
-        <div class="next-project">
-          <NuxtLink to="/projects/kokoro-tts" class="btn-glass">Next Project → Kokoro TTS</NuxtLink>
-        </div>
+        <ServiceFooter
+          exploring-label="Related Projects"
+          exploring-button-label="View Project"
+          :exploring="[
+            { title: 'Kokoro TTS Service', description: 'Self-hosted, high-fidelity AI text-to-speech infrastructure with a custom web interface and REST API.', to: '/projects/kokoro-tts' },
+            { title: 'PocketTTS-MCP', description: 'MCP server exposing local neural TTS to AI agents — same local-first, privacy-preserving philosophy.', to: '/projects/pockettts-mcp' }
+          ]"
+          :reading="[
+            { label: 'View Source on GitHub', href: 'https://github.com/NemesisGuy/voxnemesis-supertonic-extension' },
+            { label: 'Read the Build Log', href: 'https://blog.nemesisnet.co.za/voxnemesis-supertonic-building-a-local-first-gpu-aware-tts-browser-extension/' }
+          ]"
+          :cta="{ heading: 'Want something like this built?', description: 'ONNX Runtime Web, WebGPU, and Manifest V3 — production-built browser extensions with local-first AI and graceful hardware fallbacks.', buttonLabel: 'Start a Project', to: '/contact', note: 'Scoping calls are free.' }"
+          :navigation="{ prev: { to: '/projects/vibetype', label: 'Vibe-Type' }, next: { to: '/projects/pockettts-mcp', label: 'PocketTTS-MCP' } }"
+        />
       </div>
 
       <div class="detail-sidebar">

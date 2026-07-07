@@ -31,16 +31,19 @@
         <p>The REST API handles data operations for claims, evidence, and disputes. Users can create claims, attach evidence links, raise disputes, and resolve outcomes. All operations are authenticated via the backend.</p>
         
         <ServiceFooter
+          exploring-label="Related Projects"
+          exploring-button-label="View Project"
           :exploring="[
-            { title: 'App Starter', description: 'PocketBase-backed apps with auth, CRUD dashboards, and Docker deployment — the stack behind Since.', to: '/services/app-starter' },
-            { title: 'Custom Software', description: 'React, Express, and Vue builds with custom business logic, API layers, and production deployment.', to: '/services/custom-software' }
+            { title: 'TorqueBooks', description: 'Workshop management platform — same PocketBase + React stack with OAuth, RBAC, and PDF invoicing.', to: '/projects/torquebooks' },
+            { title: 'VibeType', description: 'Rapid prototyping and code generation platform — React-based tooling with agentic workflows.', to: '/projects/vibetype' }
           ]"
-          exploring-note="Since was built with the App Starter and Custom Software engagement patterns."
           :reading="[
-            { label: 'Building Since — Self-Hosted Claim Tracker with PocketBase, React & Express', href: 'https://blog.nemesisnet.co.za/building-since-self-hosted-claim-tracker-pocketbase-react-express/' },
-            { label: 'Building a Shared Identity Layer Across Applications', href: 'https://blog.nemesisnet.co.za/from-rebuilding-authentication-in-every-app-to-a-shared-identity-layer/' }
+            { label: 'View Source on GitHub', href: 'https://github.com/NemesisGuy/Since' },
+            { label: 'Live Demo', href: 'https://since.nemesisnet.co.za' },
+            { label: 'Building Since — Self-Hosted Claim Tracker with PocketBase, React & Express', href: 'https://blog.nemesisnet.co.za/building-since-self-hosted-claim-tracker-pocketbase-react-express/' }
           ]"
-          :cta="{ heading: 'Building a tracking or accountability system?', description: 'PocketBase, React, Express — production-built with auth, data modeling, and Docker deployment.', buttonLabel: 'Start a Project', to: '/contact', note: 'Scoping calls are free.' }"
+          :cta="{ heading: 'Want something like this built?', description: 'React, Express, and PocketBase — production-built with auth, data modeling, REST APIs, and Docker deployment.', buttonLabel: 'Start a Project', to: '/contact', note: 'Scoping calls are free.' }"
+          :navigation="{ prev: { to: '/projects/torquebooks', label: 'TorqueBooks' }, next: { to: '/projects/vibetype', label: 'VibeType' } }"
         />
       </div>
 

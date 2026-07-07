@@ -15,13 +15,20 @@
         <h2>Technical Implementation</h2>
         <p>Implemented as a local-first assistant, Vibe-Type uses specialized prompts to translate natural language into code snippets and structured text. It focuses on low-latency processing to ensure that the assistant feels like a natural extension of the user's typing rhythm.</p>
         
-        <div class="cta-wrapper">
-          <a href="https://github.com/NemesisGuy/Vibe-Type" target="_blank" class="btn-glass">View Source</a>
-          <a href="https://blog.nemesisnet.co.za/vibetype-building-a-local-first-voice-coding-companion/" target="_blank" class="btn-glass">Deep Dive</a>
-        </div>
-        <div class="next-project">
-          <NuxtLink to="/projects/kokoro-tts" class="btn-glass">Next Project → Kokoro TTS</NuxtLink>
-        </div>
+        <ServiceFooter
+          exploring-label="Related Projects"
+          exploring-button-label="View Project"
+          :exploring="[
+            { title: 'VoxNemesis Supertonic', description: 'Local-first, GPU-aware TTS browser extension running the Kokoro model in-browser via ONNX Runtime Web.', to: '/projects/voxnemesis-supertonic' },
+            { title: 'PocketTTS-MCP', description: 'MCP server wrapping Kyutai Pocket TTS for local neural speech generation in AI agents.', to: '/projects/pockettts-mcp' }
+          ]"
+          :reading="[
+            { label: 'View Source on GitHub', href: 'https://github.com/NemesisGuy/Vibe-Type' },
+            { label: 'Read the Build Log', href: 'https://blog.nemesisnet.co.za/vibetype-building-a-local-first-voice-coding-companion/' }
+          ]"
+          :cta="{ heading: 'Want something like this built?', description: 'Python, OpenAI, and local LLMs — production-built for low-latency AI assistants and voice-driven developer workflows.', buttonLabel: 'Start a Project', to: '/contact', note: 'Scoping calls are free.' }"
+          :navigation="{ prev: { to: '/projects/since', label: 'Since' }, next: { to: '/projects/voxnemesis-supertonic', label: 'VoxNemesis Supertonic' } }"
+        />
       </div>
 
       <div class="detail-sidebar">
