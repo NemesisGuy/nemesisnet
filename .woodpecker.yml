@@ -11,9 +11,8 @@ steps:
       - npm run build
       - echo "Building Docker image..."
       - echo $${DOCKER_PASSWORD} | docker login -u $${DOCKER_USERNAME} --password-stdin
-      - docker build --no-cache -t nemesisguy/nemesisnet:dev -t nemesisguy/nemesisnet:$${CI_COMMIT_SHA} .
+      - docker build --no-cache -t nemesisguy/nemesisnet:dev .
       - docker push nemesisguy/nemesisnet:dev
-      - docker push nemesisguy/nemesisnet:$${CI_COMMIT_SHA}
     environment:
       DOCKER_USERNAME:
         from_secret: DOCKER_USERNAME
@@ -39,9 +38,8 @@ steps:
       - npm run build
       - echo "Building and pushing prod Docker image..."
       - echo $${DOCKER_PASSWORD} | docker login -u $${DOCKER_USERNAME} --password-stdin
-      - docker build --no-cache -t nemesisguy/nemesisnet:latest -t nemesisguy/nemesisnet:$${CI_COMMIT_SHA} .
+      - docker build --no-cache -t nemesisguy/nemesisnet:latest .
       - docker push nemesisguy/nemesisnet:latest
-      - docker push nemesisguy/nemesisnet:$${CI_COMMIT_SHA}
     environment:
       DOCKER_USERNAME:
         from_secret: DOCKER_USERNAME
@@ -109,16 +107,6 @@ steps:
       event: [push, tag, manual]
       branch: dev
 
-  cleanup:
-    image: docker:27
-    commands:
-      - docker images nemesisguy/nemesisnet --format "{{.Tag}}" | grep -v dev | grep -v "<none>" | sort -r | tail -n +3 | xargs -I {} docker rmi nemesisguy/nemesisnet:{} || true
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    when:
-      event: [push, tag, manual]
-      branch: dev
-
   deploy-prod:
     image: alpine
     commands:
@@ -182,12 +170,4 @@ steps:
       event: [push, tag, manual]
       branch: master
 
-  cleanup-prod:
-    image: docker:27
-    commands:
-      - docker images nemesisguy/nemesisnet --format "{{.Tag}}" | grep -v latest | grep -v "<none>" | sort -r | tail -n +3 | xargs -I {} docker rmi nemesisguy/nemesisnet:{} || true
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    when:
-      event: [push, tag, manual]
-      branch: master
+
