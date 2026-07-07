@@ -4,7 +4,19 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/bored-room-cafe/optimized/hero.webp'" class="detail-image" alt="Bored Room Cafe" loading="lazy">
+        <div ref="carouselRef" class="demo-carousel">
+  <div class="carousel-track" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
+    <div v-for="(slide, i) in slides" :key="slide.src" class="carousel-slide">
+      <img :src="slide.src" :alt="slide.alt" loading="lazy" @click="openLightbox(i)">
+    </div>
+  </div>
+  <button class="carousel-btn carousel-btn--prev" aria-label="Previous slide" @click="prevSlide">&#8249;</button>
+  <button class="carousel-btn carousel-btn--next" aria-label="Next slide" @click="nextSlide">&#8250;</button>
+  <div class="carousel-dots">
+    <button v-for="(_, i) in slides" :key="i" :class="['dot', { active: currentSlide === i }]" :aria-label="'Slide ' + (i + 1)" @click="currentSlide = i" />
+  </div>
+  <div class="carousel-mode-label">{{ isLight ? '☀ Light mode' : '☾ Dark mode' }} screenshots — toggle theme above to see both modes</div>
+</div>
         
         <h2>The Challenge</h2>
         <p>Small local businesses often struggle with digital visibility and streamlined ordering. The goal was to build a professional online presence that showcases the local flavor while providing a simple, effective way for families to order food.</p>
@@ -59,6 +71,13 @@
         </div>
       </div>
     </div>
+
+    <div v-if="lightboxOpen" class="lightbox" @click.self="lightboxOpen = false">
+      <button class="lightbox-close" aria-label="Close" @click="lightboxOpen = false">&times;</button>
+      <button class="lightbox-prev" aria-label="Previous" @click="lightboxPrev">&#8249;</button>
+      <img :src="slides[lightboxIndex].src" :alt="slides[lightboxIndex].alt" class="lightbox-img">
+      <button class="lightbox-next" aria-label="Next" @click="lightboxNext">&#8250;</button>
+    </div>
   </div>
 </template>
 
@@ -106,6 +125,41 @@ useHead({
     }
   ]
 })
+
+const currentSlide = ref(0)
+const lightboxOpen = ref(false)
+const lightboxIndex = ref(0)
+const isLight = ref(false)
+
+const darkSlides = [
+  { src: '/images/projects/bored-room-cafe/screenshots/dark.webp', alt: 'Bored Room Cafe — dark mode' },
+]
+
+const lightSlides = [
+  { src: '/images/projects/bored-room-cafe/screenshots/light.webp', alt: 'Bored Room Cafe — light mode' },
+]
+
+const slides = computed(() => isLight.value ? lightSlides : darkSlides)
+
+function nextSlide() { currentSlide.value = (currentSlide.value + 1) % slides.value.length }
+function prevSlide() { currentSlide.value = (currentSlide.value - 1 + slides.value.length) % slides.value.length }
+function openLightbox(i) { lightboxIndex.value = i; lightboxOpen.value = true }
+function lightboxNext() { lightboxIndex.value = (lightboxIndex.value + 1) % slides.value.length }
+function lightboxPrev() { lightboxIndex.value = (lightboxIndex.value - 1 + slides.value.length) % slides.value.length }
+
+onMounted(() => {
+  const saved = localStorage.getItem('theme') || 'dark'
+  isLight.value = saved === 'light'
+
+  const observer = new MutationObserver(() => {
+    isLight.value = document.documentElement.getAttribute('data-theme') === 'light'
+    currentSlide.value = 0
+  })
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
+
+  const autoplay = setInterval(nextSlide, 5000)
+  onUnmounted(() => { clearInterval(autoplay); observer.disconnect() })
+})
 </script>
 
 <style scoped>
@@ -124,4 +178,27 @@ useHead({
 .sidebar-list li strong { color: var(--text-color); text-align: left; word-break: break-word; }
 .cta-wrapper { margin-top: 60px; display: flex; gap: 15px; }
 @media (max-width: 900px) { .detail-container { grid-template-columns: 1fr; } .page-header h1 { font-size: 2.5rem; } .detail-sidebar { position: static; } }
+
+/* Carousel */
+.demo-carousel { position: relative; margin: 30px 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--glass-border); background: var(--glass-bg); }
+.carousel-track { display: flex; transition: transform 0.4s ease; }
+.carousel-slide { min-width: 100%; }
+.carousel-slide img { width: 100%; height: auto; display: block; cursor: zoom-in; }
+.carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; width: 44px; height: 44px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); transition: background 0.2s; z-index: 2; }
+.carousel-btn:hover { background: var(--accent-color); }
+.carousel-btn--prev { left: 12px; }
+.carousel-btn--next { right: 12px; }
+.carousel-dots { display: flex; justify-content: center; gap: 8px; padding: 12px 0; }
+.dot { width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--glass-border); background: transparent; cursor: pointer; transition: all 0.3s; }
+.dot.active { background: var(--accent-color); border-color: var(--accent-color); }
+.carousel-mode-label { text-align: center; font-size: 0.75rem; color: var(--text-muted); padding: 4px 0 8px; opacity: 0.7; }
+
+/* Lightbox */
+.lightbox { position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0,0,0,0.9); z-index: 10001; display: flex; align-items: center; justify-content: center; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+.lightbox-img { max-width: 90vw; max-height: 90vh; border-radius: 12px; object-fit: contain; }
+.lightbox-close { position: absolute; top: 20px; right: 24px; background: none; border: none; color: #fff; font-size: 2.5rem; cursor: pointer; z-index: 2; }
+.lightbox-prev, .lightbox-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.15); color: #fff; border: none; width: 50px; height: 50px; border-radius: 50%; font-size: 2rem; cursor: pointer; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); transition: background 0.2s; }
+.lightbox-prev:hover, .lightbox-next:hover { background: var(--accent-color); }
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
 </style>
