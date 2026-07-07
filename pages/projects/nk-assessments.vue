@@ -132,11 +132,11 @@ const lightboxIndex = ref(0)
 const isLight = ref(false)
 
 const darkSlides = [
-  { src: '/images/projects/nk-assessments/screenshots/dark.webp', alt: 'NK Assessments — dark mode' },
+  { src: '/images/projects/nk-assessments/screenshots/dark-home.webp', alt: 'NK Assessments — homepage' },
 ]
 
 const lightSlides = [
-  { src: '/images/projects/nk-assessments/screenshots/light.webp', alt: 'NK Assessments — light mode' },
+  { src: '/images/projects/nk-assessments/screenshots/light-home.webp', alt: 'NK Assessments — homepage' },
 ]
 
 const slides = computed(() => isLight.value ? lightSlides : darkSlides)

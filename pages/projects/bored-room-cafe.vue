@@ -132,11 +132,15 @@ const lightboxIndex = ref(0)
 const isLight = ref(false)
 
 const darkSlides = [
-  { src: '/images/projects/bored-room-cafe/screenshots/dark.webp', alt: 'Bored Room Cafe — dark mode' },
+  { src: '/images/projects/bored-room-cafe/screenshots/dark-home.webp', alt: 'Bored Room Cafe — homepage' },
+  { src: '/images/projects/bored-room-cafe/screenshots/dark-menu.webp', alt: 'Bored Room Cafe — menu page' },
+  { src: '/images/projects/bored-room-cafe/screenshots/dark-about.webp', alt: 'Bored Room Cafe — about page' },
 ]
 
 const lightSlides = [
-  { src: '/images/projects/bored-room-cafe/screenshots/light.webp', alt: 'Bored Room Cafe — light mode' },
+  { src: '/images/projects/bored-room-cafe/screenshots/light-home.webp', alt: 'Bored Room Cafe — homepage' },
+  { src: '/images/projects/bored-room-cafe/screenshots/light-menu.webp', alt: 'Bored Room Cafe — menu page' },
+  { src: '/images/projects/bored-room-cafe/screenshots/light-about.webp', alt: 'Bored Room Cafe — about page' },
 ]
 
 const slides = computed(() => isLight.value ? lightSlides : darkSlides)

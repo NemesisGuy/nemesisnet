@@ -173,11 +173,13 @@ const lightboxIndex = ref(0)
 const isLight = ref(false)
 
 const darkSlides = [
-  { src: '/images/projects/torquebooks/screenshots/dark.webp', alt: 'TorqueBooks — dark mode' },
+  { src: '/images/projects/torquebooks/screenshots/dark-home.webp', alt: 'TorqueBooks — workshop dashboard' },
+  { src: '/images/projects/torquebooks/screenshots/dark-login.webp', alt: 'TorqueBooks — login page' },
 ]
 
 const lightSlides = [
-  { src: '/images/projects/torquebooks/screenshots/light.webp', alt: 'TorqueBooks — light mode' },
+  { src: '/images/projects/torquebooks/screenshots/light-home.webp', alt: 'TorqueBooks — workshop dashboard' },
+  { src: '/images/projects/torquebooks/screenshots/light-login.webp', alt: 'TorqueBooks — login page' },
 ]
 
 const slides = computed(() => isLight.value ? lightSlides : darkSlides)

@@ -105,21 +105,35 @@ const lightboxIndex = ref(0)
 const isLight = ref(false)
 
 const darkSlides = [
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/dark-typography.webp', alt: 'Typography & Headings' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/dark-colors.webp', alt: 'Brand Color Palette' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/dark-postcard.webp', alt: 'Post Card Component' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/dark-buttons.webp', alt: 'Buttons & Hero Links' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/dark-forms.webp', alt: 'Form Elements' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/dark-tables.webp', alt: 'Tables & Blockquotes' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/dark-typography.webp', alt: 'Typography & Headings' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/dark-colors.webp', alt: 'Brand Color Palette' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/dark-buttons.webp', alt: 'Buttons & Links' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/dark-forms.webp', alt: 'Form Elements' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/dark-tables.webp', alt: 'Tables & Data' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/dark-post-card.webp', alt: 'Post Card Component' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/dark-blockquotes.webp', alt: 'Blockquotes & Callouts' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/dark-alerts.webp', alt: 'Alert Components' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/dark-comments.webp', alt: 'Comment System' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/dark-galleries.webp', alt: 'Image Galleries' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/dark-sizing.webp', alt: 'Spacing & Sizing' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/dark-alignment.webp', alt: 'Content Alignment' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/dark-media.webp', alt: 'Media Embeds' },
 ]
 
 const lightSlides = [
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-typography.webp', alt: 'Typography & Headings' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-colors.webp', alt: 'Brand Color Palette' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-postcard.webp', alt: 'Post Card Component' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-buttons.webp', alt: 'Buttons & Hero Links' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-forms.webp', alt: 'Form Elements' },
-  { src: '/images/projects/nemesisnet-wordpress-theme/optimized/light-tables.webp', alt: 'Tables & Blockquotes' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/light-typography.webp', alt: 'Typography & Headings' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/light-colors.webp', alt: 'Brand Color Palette' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/light-buttons.webp', alt: 'Buttons & Links' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/light-forms.webp', alt: 'Form Elements' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/light-tables.webp', alt: 'Tables & Data' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/light-post-card.webp', alt: 'Post Card Component' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/light-blockquotes.webp', alt: 'Blockquotes & Callouts' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/light-alerts.webp', alt: 'Alert Components' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/light-comments.webp', alt: 'Comment System' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/light-galleries.webp', alt: 'Image Galleries' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/light-sizing.webp', alt: 'Spacing & Sizing' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/light-alignment.webp', alt: 'Content Alignment' },
+  { src: '/images/projects/nemesisnet-wordpress-theme/screenshots/light-media.webp', alt: 'Media Embeds' },
 ]
 
 const slides = computed(() => isLight.value ? lightSlides : darkSlides)

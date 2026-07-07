@@ -140,11 +140,15 @@ const lightboxIndex = ref(0)
 const isLight = ref(false)
 
 const darkSlides = [
-  { src: '/images/projects/kokoro-tts-service/screenshots/dark.webp', alt: 'Kokoro TTS Service — dark mode' },
+  { src: '/images/projects/kokoro-tts-service/screenshots/dark-home.webp', alt: 'Kokoro TTS — main interface' },
+  { src: '/images/projects/kokoro-tts-service/screenshots/dark-voices.webp', alt: 'Kokoro TTS — voice selection' },
+  { src: '/images/projects/kokoro-tts-service/screenshots/dark-batch.webp', alt: 'Kokoro TTS — batch processing' },
 ]
 
 const lightSlides = [
-  { src: '/images/projects/kokoro-tts-service/screenshots/light.webp', alt: 'Kokoro TTS Service — light mode' },
+  { src: '/images/projects/kokoro-tts-service/screenshots/light-home.webp', alt: 'Kokoro TTS — main interface' },
+  { src: '/images/projects/kokoro-tts-service/screenshots/light-voices.webp', alt: 'Kokoro TTS — voice selection' },
+  { src: '/images/projects/kokoro-tts-service/screenshots/light-batch.webp', alt: 'Kokoro TTS — batch processing' },
 ]
 
 const slides = computed(() => isLight.value ? lightSlides : darkSlides)
