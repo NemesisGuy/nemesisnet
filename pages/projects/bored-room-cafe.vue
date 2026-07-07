@@ -135,20 +135,20 @@ const darkSlides = [
   { src: '/images/projects/bored-room-cafe/screenshots/dark-home.webp', alt: 'Bored Room Cafe — homepage' },
   { src: '/images/projects/bored-room-cafe/screenshots/dark-menu.webp', alt: 'Bored Room Cafe — menu page' },
   { src: '/images/projects/bored-room-cafe/screenshots/dark-top-sellers.webp', alt: 'Bored Room Cafe — top sellers section' },
-  { src: '/images/projects/bored-room-cafe/screenshots/dark-full-menu.webp', alt: 'Bored Room Cafe — full menu section' },
   { src: '/images/projects/bored-room-cafe/screenshots/dark-order-info.webp', alt: 'Bored Room Cafe — order information' },
   { src: '/images/projects/bored-room-cafe/screenshots/dark-gallery.webp', alt: 'Bored Room Cafe — photo gallery' },
   { src: '/images/projects/bored-room-cafe/screenshots/dark-about.webp', alt: 'Bored Room Cafe — about page' },
+  { src: '/images/projects/bored-room-cafe/screenshots/dark-location-contact.webp', alt: 'Bored Room Cafe — location and contact' },
 ]
 
 const lightSlides = [
   { src: '/images/projects/bored-room-cafe/screenshots/light-home.webp', alt: 'Bored Room Cafe — homepage' },
   { src: '/images/projects/bored-room-cafe/screenshots/light-menu.webp', alt: 'Bored Room Cafe — menu page' },
   { src: '/images/projects/bored-room-cafe/screenshots/light-top-sellers.webp', alt: 'Bored Room Cafe — top sellers section' },
-  { src: '/images/projects/bored-room-cafe/screenshots/light-full-menu.webp', alt: 'Bored Room Cafe — full menu section' },
   { src: '/images/projects/bored-room-cafe/screenshots/light-order-info.webp', alt: 'Bored Room Cafe — order information' },
   { src: '/images/projects/bored-room-cafe/screenshots/light-gallery.webp', alt: 'Bored Room Cafe — photo gallery' },
   { src: '/images/projects/bored-room-cafe/screenshots/light-about.webp', alt: 'Bored Room Cafe — about page' },
+  { src: '/images/projects/bored-room-cafe/screenshots/light-location-contact.webp', alt: 'Bored Room Cafe — location and contact' },
 ]
 
 const slides = computed(() => isLight.value ? lightSlides : darkSlides)

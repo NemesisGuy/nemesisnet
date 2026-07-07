@@ -15,7 +15,7 @@
   <div class="carousel-dots">
     <button v-for="(_, i) in slides" :key="i" :class="['dot', { active: currentSlide === i }]" :aria-label="'Slide ' + (i + 1)" @click="currentSlide = i" />
   </div>
-  <div class="carousel-mode-label">{{ isLight ? '☀ Light mode' : '☾ Dark mode' }} screenshots — toggle theme above to see both modes</div>
+  <div class="carousel-mode-label">App screenshots — light mode (Gradio default theme)</div>
 </div>
         
         <h2>The Challenge</h2>
@@ -137,17 +137,8 @@ useHead({
 const currentSlide = ref(0)
 const lightboxOpen = ref(false)
 const lightboxIndex = ref(0)
-const isLight = ref(false)
 
-const darkSlides = [
-  { src: '/images/projects/kokoro-tts-service/screenshots/dark-home.webp', alt: 'Kokoro TTS — main interface' },
-  { src: '/images/projects/kokoro-tts-service/screenshots/dark-simple-synthesis.webp', alt: 'Kokoro TTS — Simple Synthesis tab' },
-  { src: '/images/projects/kokoro-tts-service/screenshots/dark-dialogue-scripting.webp', alt: 'Kokoro TTS — Dialogue & Scripting tab' },
-  { src: '/images/projects/kokoro-tts-service/screenshots/dark-voice-blender.webp', alt: 'Kokoro TTS — Voice Blender tab' },
-  { src: '/images/projects/kokoro-tts-service/screenshots/dark-benchmark.webp', alt: 'Kokoro TTS — Benchmark tab' },
-]
-
-const lightSlides = [
+const slides = [
   { src: '/images/projects/kokoro-tts-service/screenshots/light-home.webp', alt: 'Kokoro TTS — main interface' },
   { src: '/images/projects/kokoro-tts-service/screenshots/light-simple-synthesis.webp', alt: 'Kokoro TTS — Simple Synthesis tab' },
   { src: '/images/projects/kokoro-tts-service/screenshots/light-dialogue-scripting.webp', alt: 'Kokoro TTS — Dialogue & Scripting tab' },
@@ -155,26 +146,15 @@ const lightSlides = [
   { src: '/images/projects/kokoro-tts-service/screenshots/light-benchmark.webp', alt: 'Kokoro TTS — Benchmark tab' },
 ]
 
-const slides = computed(() => isLight.value ? lightSlides : darkSlides)
-
-function nextSlide() { currentSlide.value = (currentSlide.value + 1) % slides.value.length }
-function prevSlide() { currentSlide.value = (currentSlide.value - 1 + slides.value.length) % slides.value.length }
+function nextSlide() { currentSlide.value = (currentSlide.value + 1) % slides.length }
+function prevSlide() { currentSlide.value = (currentSlide.value - 1 + slides.length) % slides.length }
 function openLightbox(i) { lightboxIndex.value = i; lightboxOpen.value = true }
-function lightboxNext() { lightboxIndex.value = (lightboxIndex.value + 1) % slides.value.length }
-function lightboxPrev() { lightboxIndex.value = (lightboxIndex.value - 1 + slides.value.length) % slides.value.length }
+function lightboxNext() { lightboxIndex.value = (lightboxIndex.value + 1) % slides.length }
+function lightboxPrev() { lightboxIndex.value = (lightboxIndex.value - 1 + slides.length) % slides.length }
 
 onMounted(() => {
-  const saved = localStorage.getItem('theme') || 'dark'
-  isLight.value = saved === 'light'
-
-  const observer = new MutationObserver(() => {
-    isLight.value = document.documentElement.getAttribute('data-theme') === 'light'
-    currentSlide.value = 0
-  })
-  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
-
   const autoplay = setInterval(nextSlide, 5000)
-  onUnmounted(() => { clearInterval(autoplay); observer.disconnect() })
+  onUnmounted(() => clearInterval(autoplay))
 })
 </script>
 
