@@ -14,7 +14,15 @@
         
         <h2>Technical Implementation</h2>
         <p>Built using a modern static architecture to ensure instant load times on mobile devices. The site focuses on high-impact imagery and a streamlined UX to drive conversions from social media traffic to direct orders.</p>
-        
+
+        <div class="tech-pills">
+          <span class="pill pill-lang">HTML</span>
+          <span class="pill pill-lang">CSS</span>
+          <span class="pill pill-tools">Static Site</span>
+          <span class="pill pill-tools">Nginx</span>
+          <span class="pill pill-tools">Docker</span>
+        </div>
+
         <ServiceFooter
           exploring-label="Related Projects"
           exploring-button-label="View Project"

@@ -15,6 +15,17 @@
         <h2>Technical Implementation</h2>
         <p>The platform uses React with TypeScript on the frontend, backed by PocketBase (SQLite) for the API and database layer. The frontend communicates directly with PocketBase via raw <code>fetch</code> calls through a custom <code>db.ts</code> helper — no SDK dependency. Authentication is handled through OAuth2 SSO (IAM) with email/password fallback, and authorization is enforced via PocketBase Row-Level Security rules at the collection level.</p>
 
+        <div class="tech-pills">
+          <span class="pill pill-lang">TypeScript</span>
+          <span class="pill pill-framework">React</span>
+          <span class="pill pill-framework">Tailwind CSS</span>
+          <span class="pill pill-db">PocketBase</span>
+          <span class="pill pill-db">SQLite</span>
+          <span class="pill pill-tools">Vite</span>
+          <span class="pill pill-tools">Zustand</span>
+          <span class="pill pill-tools">Docker</span>
+        </div>
+
         <h3>Architecture Highlights</h3>
         <ul class="arch-list">
           <li><strong>Frontend:</strong> React + TypeScript + Vite with Zustand state management</li>

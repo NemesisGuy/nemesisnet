@@ -29,7 +29,16 @@
         
         <h2>Technical Implementation</h2>
         <p>Built on a Vue frontend backed by a Java Spring Boot API with MySQL persistence and Redis caching. The platform sustains high traffic with low latency on dedicated infrastructure — no cloud scaling required. Includes dynamic project tracking, skill management, PDF export, and a full backup and restore system.</p>
-        
+
+        <div class="tech-pills">
+          <span class="pill pill-lang">Java</span>
+          <span class="pill pill-lang">Vue 3</span>
+          <span class="pill pill-framework">Spring Boot</span>
+          <span class="pill pill-db">MySQL</span>
+          <span class="pill pill-db">Redis</span>
+          <span class="pill pill-tools">Docker</span>
+        </div>
+
         <ServiceFooter
           exploring-label="Related Projects"
           exploring-button-label="View Project"

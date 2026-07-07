@@ -15,6 +15,16 @@
         <h2>Technical Implementation</h2>
         <p>The platform uses a Spring Boot backend with a modern Java runtime, fronted by a Vue 3 SPA with Pinia state management. The system implements shared-database multi-tenancy with row-level security using tenant-aware partitioning. Authentication uses custom JWT handlers with refresh token rotation and role-based access control.</p>
 
+        <div class="tech-pills">
+          <span class="pill pill-lang">Java</span>
+          <span class="pill pill-lang">Vue 3</span>
+          <span class="pill pill-framework">Spring Boot</span>
+          <span class="pill pill-db">PostgreSQL</span>
+          <span class="pill pill-db">Redis</span>
+          <span class="pill pill-tools">Nginx</span>
+          <span class="pill pill-tools">JWT</span>
+        </div>
+
         <h3>Architecture Highlights</h3>
         <ul class="arch-list">
           <li><strong>Edge Layer:</strong> Nginx Gateway handles routing and SSL termination</li>

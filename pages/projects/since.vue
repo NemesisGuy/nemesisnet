@@ -15,6 +15,15 @@
         <h2>Technical Implementation</h2>
         <p>The platform uses a React frontend with Tailwind CSS and Motion animations, served via Vite SSR with Express. PocketBase provides the backend database and authentication. The data model supports three core collections with a REST API layer handling data operations.</p>
 
+        <div class="tech-pills">
+          <span class="pill pill-lang">JavaScript</span>
+          <span class="pill pill-framework">React</span>
+          <span class="pill pill-framework">Tailwind CSS</span>
+          <span class="pill pill-framework">Express</span>
+          <span class="pill pill-db">PocketBase</span>
+          <span class="pill pill-tools">Vite SSR</span>
+        </div>
+
         <h3>Architecture Highlights</h3>
         <ul class="arch-list">
           <li><strong>Frontend:</strong> React SPA with Vite SSR middleware</li>

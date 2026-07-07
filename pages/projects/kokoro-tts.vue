@@ -14,7 +14,15 @@
         
         <h2>Technical Implementation</h2>
         <p>The system uses a Python-based backend to handle the model inference, wrapped in a high-performance API. The frontend is a modern, responsive web interface that allows for real-time audio preview and batch processing. The entire stack is containerized and runs on self-hosted infrastructure, delivering sub-second response times without cloud dependencies.</p>
-        
+
+        <div class="tech-pills">
+          <span class="pill pill-lang">Python</span>
+          <span class="pill pill-framework">PyTorch</span>
+          <span class="pill pill-framework">FastAPI</span>
+          <span class="pill pill-tools">Kokoro TTS</span>
+          <span class="pill pill-tools">Docker</span>
+        </div>
+
         <ServiceFooter
           exploring-label="Related Projects"
           exploring-button-label="View Project"
