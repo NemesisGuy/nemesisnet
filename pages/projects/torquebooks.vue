@@ -173,13 +173,21 @@ const lightboxIndex = ref(0)
 const isLight = ref(false)
 
 const darkSlides = [
-  { src: '/images/projects/torquebooks/screenshots/dark-home.webp', alt: 'TorqueBooks — workshop dashboard' },
+  { src: '/images/projects/torquebooks/screenshots/dark-home.webp', alt: 'TorqueBooks — homepage' },
   { src: '/images/projects/torquebooks/screenshots/dark-login.webp', alt: 'TorqueBooks — login page' },
+  { src: '/images/projects/torquebooks/screenshots/dark-dashboard.webp', alt: 'TorqueBooks — dashboard with sidebar navigation' },
+  { src: '/images/projects/torquebooks/screenshots/dark-jobs.webp', alt: 'TorqueBooks — job cards management' },
+  { src: '/images/projects/torquebooks/screenshots/dark-invoices.webp', alt: 'TorqueBooks — invoicing and payments' },
+  { src: '/images/projects/torquebooks/screenshots/dark-customers.webp', alt: 'TorqueBooks — customer CRM' },
 ]
 
 const lightSlides = [
-  { src: '/images/projects/torquebooks/screenshots/light-home.webp', alt: 'TorqueBooks — workshop dashboard' },
+  { src: '/images/projects/torquebooks/screenshots/light-home.webp', alt: 'TorqueBooks — homepage' },
   { src: '/images/projects/torquebooks/screenshots/light-login.webp', alt: 'TorqueBooks — login page' },
+  { src: '/images/projects/torquebooks/screenshots/light-dashboard.webp', alt: 'TorqueBooks — dashboard with sidebar navigation' },
+  { src: '/images/projects/torquebooks/screenshots/light-jobs.webp', alt: 'TorqueBooks — job cards management' },
+  { src: '/images/projects/torquebooks/screenshots/light-invoices.webp', alt: 'TorqueBooks — invoicing and payments' },
+  { src: '/images/projects/torquebooks/screenshots/light-customers.webp', alt: 'TorqueBooks — customer CRM' },
 ]
 
 const slides = computed(() => isLight.value ? lightSlides : darkSlides)

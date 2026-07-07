@@ -141,14 +141,18 @@ const isLight = ref(false)
 
 const darkSlides = [
   { src: '/images/projects/kokoro-tts-service/screenshots/dark-home.webp', alt: 'Kokoro TTS — main interface' },
-  { src: '/images/projects/kokoro-tts-service/screenshots/dark-voices.webp', alt: 'Kokoro TTS — voice selection' },
-  { src: '/images/projects/kokoro-tts-service/screenshots/dark-batch.webp', alt: 'Kokoro TTS — batch processing' },
+  { src: '/images/projects/kokoro-tts-service/screenshots/dark-simple-synthesis.webp', alt: 'Kokoro TTS — Simple Synthesis tab' },
+  { src: '/images/projects/kokoro-tts-service/screenshots/dark-dialogue-scripting.webp', alt: 'Kokoro TTS — Dialogue & Scripting tab' },
+  { src: '/images/projects/kokoro-tts-service/screenshots/dark-voice-blender.webp', alt: 'Kokoro TTS — Voice Blender tab' },
+  { src: '/images/projects/kokoro-tts-service/screenshots/dark-benchmark.webp', alt: 'Kokoro TTS — Benchmark tab' },
 ]
 
 const lightSlides = [
   { src: '/images/projects/kokoro-tts-service/screenshots/light-home.webp', alt: 'Kokoro TTS — main interface' },
-  { src: '/images/projects/kokoro-tts-service/screenshots/light-voices.webp', alt: 'Kokoro TTS — voice selection' },
-  { src: '/images/projects/kokoro-tts-service/screenshots/light-batch.webp', alt: 'Kokoro TTS — batch processing' },
+  { src: '/images/projects/kokoro-tts-service/screenshots/light-simple-synthesis.webp', alt: 'Kokoro TTS — Simple Synthesis tab' },
+  { src: '/images/projects/kokoro-tts-service/screenshots/light-dialogue-scripting.webp', alt: 'Kokoro TTS — Dialogue & Scripting tab' },
+  { src: '/images/projects/kokoro-tts-service/screenshots/light-voice-blender.webp', alt: 'Kokoro TTS — Voice Blender tab' },
+  { src: '/images/projects/kokoro-tts-service/screenshots/light-benchmark.webp', alt: 'Kokoro TTS — Benchmark tab' },
 ]
 
 const slides = computed(() => isLight.value ? lightSlides : darkSlides)

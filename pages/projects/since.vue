@@ -165,13 +165,15 @@ const lightboxIndex = ref(0)
 const isLight = ref(false)
 
 const darkSlides = [
-  { src: '/images/projects/since/screenshots/dark-home.webp', alt: 'Since — claims dashboard' },
+  { src: '/images/projects/since/screenshots/dark-home.webp', alt: 'Since — homepage with navigation sidebar' },
+  { src: '/images/projects/since/screenshots/dark-trending.webp', alt: 'Since — trending claims feed' },
   { src: '/images/projects/since/screenshots/dark-login.webp', alt: 'Since — login page' },
   { src: '/images/projects/since/screenshots/dark-register.webp', alt: 'Since — registration page' },
 ]
 
 const lightSlides = [
-  { src: '/images/projects/since/screenshots/light-home.webp', alt: 'Since — claims dashboard' },
+  { src: '/images/projects/since/screenshots/light-home.webp', alt: 'Since — homepage with navigation sidebar' },
+  { src: '/images/projects/since/screenshots/light-trending.webp', alt: 'Since — trending claims feed' },
   { src: '/images/projects/since/screenshots/light-login.webp', alt: 'Since — login page' },
   { src: '/images/projects/since/screenshots/light-register.webp', alt: 'Since — registration page' },
 ]
