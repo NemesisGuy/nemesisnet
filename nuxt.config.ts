@@ -1,3 +1,5 @@
+import { PRERENDER_ROUTES } from './config/prerender-routes'
+
 export default defineNuxtConfig({
   ssr: true,
   modules: ['@nuxtjs/turnstile'],
@@ -29,46 +31,7 @@ export default defineNuxtConfig({
     },
     prerender: {
       crawlLinks: true,
-      routes: [
-        '/',
-        '/projects',
-        '/projects/kokoro-tts',
-        '/projects/wordpress-mcp',
-        '/projects/nemesisnet-wordpress-theme',
-        '/projects/nk-assessments',
-        '/projects/codecritical-cli',
-        '/projects/codecritical-saas',
-        '/projects/vibetype',
-        '/projects/forkmyfolio',
-        '/projects/onthegorentals',
-        '/projects/bored-room-cafe',
-        '/projects/voxnemesis-supertonic',
-        '/projects/since',
-        '/projects/pockettts-mcp',
-        '/projects/torquebooks',
-        '/services',
-        '/services/static-sites',
-        '/services/app-starter',
-        '/services/business-systems',
-        '/services/platform-enterprise',
-        '/services/ai-development',
-        '/services/ai-consulting',
-        '/services/mcp-integrations',
-        '/services/self-hosted-ai',
-        '/services/custom-software',
-        '/services/saas-development',
-        '/services/infrastructure',
-        '/services/consulting',
-        '/services/agile-iterative',
-        '/services/waterfall-structured',
-        '/services/light-hosting',
-        '/services/managed-retainer',
-        '/software-development-cost-south-africa',
-        '/about',
-        '/legal/refund',
-        '/legal/terms',
-        '/legal/privacy'
-      ],
+      routes: PRERENDER_ROUTES,
       failOnError: false
     }
   },
@@ -80,7 +43,11 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
         { name: 'description', content: 'NemesisNet engineers AI-powered platforms, backend systems, and automation infrastructure.' },
-        ...(process.env.NUXT_PUBLIC_NO_INDEX === 'true' ? [{ name: 'robots', content: 'noindex, nofollow' }] : [])
+        ...(process.env.NUXT_PUBLIC_NO_INDEX === 'true' ? [{ name: 'robots', content: 'noindex, nofollow' }] : []),
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@NemesisNet' },
+        { name: 'twitter:title', content: 'NemesisNet — AI Infrastructure & Platform Engineering' },
+        { name: 'twitter:description', content: 'NemesisNet engineers AI-powered platforms, backend systems, and automation infrastructure.' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/images/brand/Nemesis_Logo_Icon.ico' },

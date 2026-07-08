@@ -59,7 +59,6 @@ defineProps({
   readingLabel: { type: String, default: 'Technical Reading' },
   cta: {
     type: Object,
-    required: true,
     default: () => ({ heading: '', description: '', buttonLabel: '', to: '/contact', note: '' })
   },
   navigation: {

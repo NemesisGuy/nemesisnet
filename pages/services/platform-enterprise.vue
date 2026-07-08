@@ -154,6 +154,16 @@ useHead({
         'mainEntityOfPage': {
           '@type': 'WebPage',
           '@id': 'https://nemesisnet.co.za/services/platform-enterprise'
+        },
+        'offers': {
+          '@type': 'Offer',
+          'price': '350000',
+          'priceCurrency': 'ZAR',
+          'priceSpecification': {
+            '@type': 'PriceSpecification',
+            'minPrice': '350000',
+            'priceCurrency': 'ZAR'
+          }
         }
       })
     },

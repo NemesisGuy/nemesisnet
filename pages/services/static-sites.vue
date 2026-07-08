@@ -149,6 +149,17 @@ useHead({
         'mainEntityOfPage': {
           '@type': 'WebPage',
           '@id': 'https://nemesisnet.co.za/services/static-sites'
+        },
+        'offers': {
+          '@type': 'Offer',
+          'price': '7000',
+          'priceCurrency': 'ZAR',
+          'priceSpecification': {
+            '@type': 'PriceSpecification',
+            'minPrice': '7000',
+            'maxPrice': '25000',
+            'priceCurrency': 'ZAR'
+          }
         }
       })
     },
