@@ -71,6 +71,11 @@ function applyTheme(themeValue) {
 function toggleTheme() {
   const next = currentTheme.value === 'dark' ? 'light' : 'dark'
   applyTheme(next)
+  if (next === 'light') {
+    isNemesis.value = false
+    isAurora.value = false
+    applyMode()
+  }
 }
 
 function applyMode() {
