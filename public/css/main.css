@@ -453,7 +453,7 @@ a.btn-hero:focus-visible {
 }
 
   /* Aurora (teal) utility button */
-  .btn--ignite{ background: var(--aurora-base); color: #0a0e27; border: 1px solid transparent; padding:10px 18px; border-radius:10px; font-weight:600; transition: all 0.18s ease; }
+  .btn--ignite{ background: var(--aurora-base); color: #0a0e27; border: 1px solid transparent; padding:10px 18px; border-radius:10px; font-weight:600; transition: all 0.18s ease; text-decoration: none; display: inline-block; }
   .btn--ignite:hover{ background: var(--aurora-flare); box-shadow: 0 10px 30px var(--aurora-glow); transform: translateY(-2px); }
 
   /* Brand guide button styles for base light/dark mode */

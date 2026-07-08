@@ -348,7 +348,10 @@
           </div>
         </div>
 
-        <p class="pricing-guide-cta">Want a full breakdown of what drives project costs? <NuxtLink to="/software-development-cost-south-africa">See our Pricing Guide →</NuxtLink></p>
+        <div class="section-cta pricing-guide-cta">
+          <p>Want a full breakdown of what drives project costs?</p>
+          <NuxtLink to="/software-development-cost-south-africa" class="btn-glass">See our Pricing Guide →</NuxtLink>
+        </div>
 
         <div class="back-link">
           <NuxtLink to="/" class="btn-glass">← Back to Home</NuxtLink>
@@ -469,9 +472,8 @@ useHead({
 .pricing-group-label { font-size: 1.1rem; color: var(--accent-color); margin: 32px 0 8px; padding-bottom: 8px; border-bottom: 1px solid var(--glass-border); }
 .pricing-group-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px; }
 
-.pricing-guide-cta { text-align: center; margin: 32px 0; font-size: 0.95rem; color: var(--text-muted); }
-.pricing-guide-cta a { color: var(--accent-color); text-decoration: none; }
-.pricing-guide-cta a:hover { text-decoration: underline; }
+.pricing-guide-cta { text-align: center; margin: 32px 0; }
+.pricing-guide-cta p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 12px; }
 .back-link { text-align: center; margin-top: 48px; }
 .local-signals { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 32px 0 24px; }
 .local-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; text-align: center; }
@@ -488,9 +490,15 @@ useHead({
 .faq-item--open .faq-chevron { transform: rotate(180deg); }
 .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
 .faq-answer p { margin-top: 12px; }
-.pricing-card--linked { text-decoration: none !important; color: inherit !important; cursor: pointer; }
+.pricing-card--linked { text-decoration: none !important; color: inherit !important; cursor: pointer; display: flex; flex-direction: column; }
+.pricing-card--linked,
+.pricing-card--linked * { text-decoration: none !important; }
+.pricing-card--linked .btn-glass { margin-top: auto; }
 .pricing-card--linked:hover { transform: translateY(-6px); border-color: var(--accent-hover) !important; box-shadow: 0 20px 70px rgba(2,6,23,0.55), 0 8px 30px rgba(0,0,0,0.4), 0 0 60px var(--accent-glow) !important; }
 .sdlc-card { text-decoration: none !important; color: inherit !important; cursor: pointer; display: flex !important; flex-direction: column !important; }
+.sdlc-card,
+.sdlc-card * { text-decoration: none !important; }
+.sdlc-card .btn-glass { margin-top: auto; }
 .sdlc-card:hover { transform: translateY(-6px); border-color: var(--accent-hover) !important; box-shadow: 0 20px 70px rgba(2,6,23,0.55), 0 8px 30px rgba(0,0,0,0.4), 0 0 60px var(--accent-glow) !important; }
 @media (max-width: 1100px) { .process-steps { grid-template-columns: repeat(2, 1fr); } }
 .breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; padding-left: 20px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
