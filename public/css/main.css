@@ -1135,7 +1135,7 @@ html[data-theme="light"][data-nemesis="on"] .footer-line .footer-divider {
   flex-wrap: wrap;
   gap: 6px;
 }
--webkit-backdrop-filter: blur(10px);`.skill-tag {
+.skill-tag {
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
@@ -1157,7 +1157,7 @@ html[data-theme="light"][data-nemesis="on"] .footer-line .footer-divider {
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
--webkit-backdrop-filter: blur(10px);`.stat-item {
+.stat-item {
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
