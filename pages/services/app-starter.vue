@@ -164,6 +164,17 @@ useHead({
         'mainEntityOfPage': {
           '@type': 'WebPage',
           '@id': 'https://nemesisnet.co.za/services/app-starter'
+        },
+        'offers': {
+          '@type': 'Offer',
+          'price': '35000',
+          'priceCurrency': 'ZAR',
+          'priceSpecification': {
+            '@type': 'PriceSpecification',
+            'minPrice': '35000',
+            'maxPrice': '80000',
+            'priceCurrency': 'ZAR'
+          }
         }
       })
     },

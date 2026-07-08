@@ -154,6 +154,16 @@ useHead({
         'mainEntityOfPage': {
           '@type': 'WebPage',
           '@id': 'https://nemesisnet.co.za/services/business-systems'
+        },
+        'offers': {
+          '@type': 'Offer',
+          'price': '150000',
+          'priceCurrency': 'ZAR',
+          'priceSpecification': {
+            '@type': 'PriceSpecification',
+            'minPrice': '150000',
+            'priceCurrency': 'ZAR'
+          }
         }
       })
     },
