@@ -107,7 +107,10 @@
             { title: 'MCP & Agent Integrations', description: 'Connect AI agents to live systems with a structured, auditable integration layer.', to: '/services/mcp-integrations' }
           ]"
           exploring-note="Need AI-specific guidance? These services go deeper into architecture and agent infrastructure."
-          :reading="[]"
+          :reading="[
+            { label: 'Building a Shared Identity Layer Across Applications', href: 'https://blog.nemesisnet.co.za/from-rebuilding-authentication-in-every-app-to-a-shared-identity-layer/' },
+            { label: 'Maximizing Personal Productivity with AI Tools', href: 'https://blog.nemesisnet.co.za/maximizing-personal-productivity-with-ai-tools/' }
+          ]"
           :cta="{ heading: 'Ready for a technical roadmap?', description: 'Half-day sessions that give you clarity on what to build, how to build it, and what to do first.', buttonLabel: 'Book a Session', to: '/contact' }"
         />
       </div>
