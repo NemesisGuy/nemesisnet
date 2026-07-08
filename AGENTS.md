@@ -99,7 +99,7 @@ Run site-wide Lighthouse audits to check performance:
 # Single page audit
 node lighthouse-audit.js
 
-# Full site audit (all 27 pages)
+# Full site audit (all 35 routes: 14 projects, 16 services, about/contact/legal/guide)
 node lighthouse-full-audit.js
 ```
 
