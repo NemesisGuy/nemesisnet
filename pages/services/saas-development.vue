@@ -106,6 +106,7 @@
           ]"
           exploring-note="SaaS is one path. Custom software and internal tools are others."
           :reading="[
+            { label: 'TorqueBooks: Building a Workshop Management System', href: 'https://blog.nemesisnet.co.za/torquebooks-building-a-workshop-management-system-for-south-african-auto-shops/' },
             { label: 'Building a Shared Identity Layer Across Applications', href: 'https://blog.nemesisnet.co.za/from-rebuilding-authentication-in-every-app-to-a-shared-identity-layer/' },
             { label: 'Vue 3 vs React for Enterprise SaaS', href: 'https://blog.nemesisnet.co.za/vue-3-vs-react-for-enterprise-saas/' }
           ]"

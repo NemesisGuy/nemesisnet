@@ -115,6 +115,7 @@
           ]"
           exploring-note="Self-hosted AI needs infrastructure and software. These services cover both."
           :reading="[
+            { label: 'Self-Hosted TTS with Kokoro ONNX (CPU-Only Inference)', href: 'https://blog.nemesisnet.co.za/self-hosted-tts-with-kokoro-onnx-what-cpu-only-inference-actually-gets-you/' },
             { label: 'Self-Hosted AI vs Cloud APIs: What South African Businesses Need to Know', href: 'https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/' },
             { label: 'Inside the NemesisNet Homelab: My Personal Data Center', href: 'https://blog.nemesisnet.co.za/inside-the-nemesisnet-homelab-my-personal-data-center/' }
           ]"
