@@ -11,11 +11,11 @@
 
         <div class="policy-doc">
           <article class="policy-block">
-            <h3>1. Scope Of Services</h3>
+            <h2>1. Scope Of Services</h2>
             <p>NemesisNet provides software engineering, consulting, and subscription-based technical services as agreed in written proposals, statements of work, or approved communications.</p>
           </article>
           <article class="policy-block">
-            <h3>2. Quotations And Payment</h3>
+            <h2>2. Quotations And Payment</h2>
             <ul>
               <li>Quotes are valid for 14 days unless otherwise stated.</li>
               <li>Work starts after written acceptance and any required upfront payment.</li>
@@ -23,7 +23,7 @@
             </ul>
           </article>
           <article class="policy-block">
-            <h3>3. Client Responsibilities</h3>
+            <h2>3. Client Responsibilities</h2>
             <ul>
               <li>Provide timely access to required accounts, content, and technical inputs.</li>
               <li>Review deliverables and provide feedback within agreed timelines.</li>
@@ -31,35 +31,35 @@
             </ul>
           </article>
           <article class="policy-block">
-            <h3>4. Intellectual Property And Liability</h3>
+            <h2>4. Intellectual Property And Liability</h2>
             <p>Ownership and licensing are defined per project agreement. Third-party tools remain subject to their original licenses. To the maximum extent permitted by law, NemesisNet is not liable for indirect, incidental, or consequential damages.</p>
           </article>
           <article class="policy-block">
-            <h3>5. Termination</h3>
+            <h2>5. Termination</h2>
             <p>Either party may terminate an engagement in writing with reasonable notice. Outstanding invoices for completed work remain payable upon termination. Work in progress may be delivered in its current state or billed proportionally, depending on the agreement in place.</p>
           </article>
           <article class="policy-block">
-            <h3>6. Confidentiality</h3>
+            <h2>6. Confidentiality</h2>
             <p>Information shared during the course of a project is treated as confidential. NemesisNet does not disclose client data, trade secrets, or proprietary systems to third parties without written consent.</p>
           </article>
           <article class="policy-block">
-            <h3>7. Governing Law</h3>
+            <h2>7. Governing Law</h2>
             <p>These terms are governed by the laws of South Africa. Any dispute arising from these terms or a project agreement will be resolved in the courts of Cape Town, South Africa.</p>
           </article>
           <article class="policy-block">
-            <h3>8. Changes To Terms</h3>
+            <h2>8. Changes To Terms</h2>
             <p>NemesisNet may update these terms from time to time. Continued use of services after changes constitutes acceptance of the revised terms. Clients will be notified of material changes via email or direct communication.</p>
           </article>
           <article class="policy-block">
-            <h3>9. Limitation Of Liability</h3>
+            <h2>9. Limitation Of Liability</h2>
             <p>To the fullest extent permitted by applicable law, NemesisNet's total liability for any claim arising from services rendered will not exceed the total amount paid by the client for the specific service giving rise to the claim.</p>
           </article>
           <article class="policy-block">
-            <h3>10. Force Majeure</h3>
+            <h2>10. Force Majeure</h2>
             <p>NemesisNet is not liable for failure or delay in performance due to causes beyond reasonable control, including but not limited to acts of God, internet outages, supplier failures, or government restrictions.</p>
           </article>
           <article class="policy-block">
-            <h3>11. Refund Policy</h3>
+            <h2>11. Refund Policy</h2>
             <p>Refund handling follows the <NuxtLink to="/legal/refund" style="color: var(--accent-color); text-decoration: none;">Refund Policy</NuxtLink>.</p>
           </article>
         </div>
@@ -107,7 +107,7 @@ useHead({
   border-radius: 14px;
 }
 
-.policy-block h3 {
+.policy-block h2 {
   margin: 0 0 8px;
   color: var(--accent-color);
   font-size: 1rem;

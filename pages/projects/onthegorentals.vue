@@ -4,7 +4,15 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/onthegorentals/optimized/hero-v2.webp'" class="detail-image" alt="OntheGoRentals" loading="lazy">
+        <img
+          src="/images/projects/onthegorentals/optimized/hero-v2.webp"
+          srcset="/images/projects/onthegorentals/optimized/hero-480-v2.webp 480w, /images/projects/onthegorentals/optimized/hero-640-v2.webp 640w, /images/projects/onthegorentals/optimized/hero-v2.webp 800w"
+          sizes="(max-width: 640px) 480px, (max-width: 900px) 640px, 800px"
+          class="detail-image"
+          alt="OntheGoRentals"
+          loading="lazy"
+          decoding="async"
+        >
 
         <h2>App Screenshots</h2>
         <div class="screenshot-carousel" @mouseenter="pauseAuto" @mouseleave="resumeAuto">

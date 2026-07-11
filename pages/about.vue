@@ -17,7 +17,7 @@
         <h2>The Engineer Behind NemesisNet</h2>
         <div class="founder-grid">
           <div class="founder-photo">
-            <img src="/images/about/founder.webp" alt="Peter Buckingham" class="founder-img" fetchpriority="high" loading="eager">
+            <img src="/images/about/founder.webp" alt="Peter Buckingham" class="founder-img" loading="lazy">
             <p class="photo-caption">Self-taught systems architect &amp; founder of NemesisNet, based in Cape Town.</p>
           </div>
           <div class="founder-bio">
@@ -168,14 +168,16 @@
 import { PackageCheck, Server, Clock, HardDrive, GitFork, Layers, Building, Unlock, Zap } from 'lucide-vue-next'
 
 useHead({
-  title: 'About | NemesisNet — AI Infrastructure Engineer in Cape Town, South Africa',
+  title: 'About | NemesisNet',
   meta: [
     { name: 'description', content: 'About NemesisNet — AI infrastructure, platform engineering, and full-stack development by Peter Buckingham. Based in Cape Town, South Africa.' },
     { property: 'og:title', content: 'About | NemesisNet' },
     { property: 'og:description', content: 'Systems architect specializing in AI infrastructure, TTS pipelines, and production full-stack platforms. Based in Cape Town, South Africa.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/about' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:title', content: 'About | NemesisNet' },
+    { name: 'twitter:description', content: 'AI infrastructure, platform engineering, and full-stack development by Peter Buckingham. Cape Town, SA.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/about' }

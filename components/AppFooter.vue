@@ -2,7 +2,7 @@
   <footer class="site-footer">
     <div class="footer-links-grid">
       <div class="footer-group">
-        <h4>Business</h4>
+        <strong class="footer-heading">Business</strong>
         <NuxtLink to="/services">Services</NuxtLink>
         <NuxtLink to="/projects">Projects</NuxtLink>
         <NuxtLink to="/about">About</NuxtLink>
@@ -11,13 +11,13 @@
         <NuxtLink to="/contact">Contact</NuxtLink>
       </div>
       <div class="footer-group">
-        <h4>Legal</h4>
+        <strong class="footer-heading">Legal</strong>
         <NuxtLink to="/legal/refund">Refund Policy</NuxtLink>
         <NuxtLink to="/legal/terms">Terms of Service</NuxtLink>
         <NuxtLink to="/legal/privacy">Privacy Policy</NuxtLink>
       </div>
       <div class="footer-group">
-        <h4>Links</h4>
+        <strong class="footer-heading">Links</strong>
         <a href="https://blog.nemesisnet.co.za/" target="_blank" rel="noopener noreferrer">Blog</a>
         <a href="https://brand.nemesisnet.co.za" target="_blank" rel="noopener noreferrer">Brand Guide</a>
         <a href="https://github.com/NemesisGuy" target="_blank" rel="noopener noreferrer">GitHub</a>

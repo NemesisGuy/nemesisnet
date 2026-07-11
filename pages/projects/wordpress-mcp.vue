@@ -4,7 +4,15 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/wordpress-mcp/optimized/hero.webp'" class="detail-image" alt="WordPress MCP Server" loading="lazy">
+        <img
+          src="/images/projects/wordpress-mcp/optimized/hero.webp"
+          srcset="/images/projects/wordpress-mcp/optimized/hero-480.webp 480w, /images/projects/wordpress-mcp/optimized/hero-640.webp 640w, /images/projects/wordpress-mcp/optimized/hero.webp 800w"
+          sizes="(max-width: 640px) 480px, (max-width: 900px) 640px, 800px"
+          class="detail-image"
+          alt="WordPress MCP Server"
+          loading="lazy"
+          decoding="async"
+        >
         
         <h2>The Challenge</h2>
         <p>Connecting AI agents to WordPress usually requires exposing sensitive API keys or opening precarious webhooks that increase the attack surface of a website. There was a need for a bridge that allows agents to manage content without compromising the security of the WordPress installation.</p>

@@ -11,11 +11,11 @@
 
         <div class="policy-doc">
           <article class="policy-block">
-            <h3>1. Overview</h3>
+            <h2>1. Overview</h2>
             <p>NemesisNet provides custom software development, consulting, and SaaS-based services. Due to the nature of digital and custom-built solutions, refunds are handled case-by-case under the terms below.</p>
           </article>
           <article class="policy-block">
-            <h3>2. Eligibility For Refunds</h3>
+            <h2>2. Eligibility For Refunds</h2>
             <ul>
               <li>Project has not yet started.</li>
               <li>Service cannot be delivered due to technical or operational constraints.</li>
@@ -24,7 +24,7 @@
             </ul>
           </article>
           <article class="policy-block">
-            <h3>3. Non-Refundable Services</h3>
+            <h2>3. Non-Refundable Services</h2>
             <ul>
               <li>Completed or partially completed custom development work.</li>
               <li>Delivered digital products, source code, or deployments.</li>
@@ -33,11 +33,11 @@
             </ul>
           </article>
           <article class="policy-block">
-            <h3>4. Partial Refunds</h3>
+            <h2>4. Partial Refunds</h2>
             <p>If a project is cancelled mid-way, partial refunds may be issued based on the percentage of work completed and at NemesisNet's discretion.</p>
           </article>
           <article class="policy-block">
-            <h3>5. Refund Process</h3>
+            <h2>5. Refund Process</h2>
             <ul>
               <li>Contact: admin@nemesisnet.co.za</li>
               <li>Include project or transaction reference.</li>
@@ -46,7 +46,7 @@
             <p>Approved refunds are processed via the original payment method. Processing fees may not be refundable where retained by payment providers.</p>
           </article>
           <article class="policy-block">
-            <h3>6. Processing Time And Cancellations</h3>
+            <h2>6. Processing Time And Cancellations</h2>
             <ul>
               <li>Refunds may take 3-10 business days after approval.</li>
               <li>Before project start: full refund.</li>
@@ -100,7 +100,7 @@ useHead({
   border-radius: 14px;
 }
 
-.policy-block h3 {
+.policy-block h2 {
   margin: 0 0 8px;
   color: var(--accent-color);
   font-size: 1rem;

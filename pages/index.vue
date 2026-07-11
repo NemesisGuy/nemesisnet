@@ -87,7 +87,6 @@
         <p>Enterprise B2B platform with role-based access, client portals, and automated billing.</p>
         <div class="card-links">
           <NuxtLink to="/projects/codecritical-saas" class="btn-glass">Detail</NuxtLink>
-          <a href="https://codecritical.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
         </div>
       </div>
       <div class="card">
@@ -191,17 +190,43 @@
 import { Server, Cloud, Brain, Cpu, Workflow, Briefcase } from 'lucide-vue-next'
 
 useHead({
-  title: 'NemesisNet — AI Infrastructure & Platform Engineering in Cape Town, South Africa',
+  title: 'AI Infrastructure & Platform Engineering | NemesisNet',
   meta: [
-    { name: 'description', content: 'AI infrastructure, SaaS development, and self-hosted systems built for production. Based in Cape Town, South Africa. Engineering-grade reliability, ZAR pricing, and POPIA-aware data handling.' },
+    { name: 'description', content: 'AI infrastructure, SaaS development, and self-hosted systems for production. Cape Town, South Africa. ZAR pricing, POPIA-aware.' },
     { property: 'og:title', content: 'NemesisNet — AI Infrastructure & Platform Engineering in Cape Town' },
     { property: 'og:description', content: 'Custom AI systems, self-hosted infrastructure, and SaaS platforms built for production. Based in Cape Town, South Africa.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:title', content: 'AI Infrastructure & Platform Engineering | NemesisNet' },
+    { name: 'twitter:description', content: 'AI infrastructure, SaaS development, and self-hosted systems for production. Cape Town, South Africa.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        'name': 'NemesisNet',
+        'url': 'https://nemesisnet.co.za',
+        'logo': 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png',
+        'description': 'AI infrastructure and platform engineering based in Cape Town, South Africa.',
+        'sameAs': [
+          'https://github.com/NemesisGuy',
+          'https://www.linkedin.com/in/peter-buckingham-65438757'
+        ],
+        'address': {
+          '@type': 'PostalAddress',
+          'addressLocality': 'Cape Town',
+          'addressCountry': 'ZA'
+        },
+        'areaServed': 'ZA',
+        'priceRange': 'R7000-R350000+'
+      })
+    }
   ]
 })
 </script>

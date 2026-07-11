@@ -130,6 +130,10 @@ function openNav() {
   isMenuOpen.value = true
   const overlay = document.getElementById('nav-overlay')
   if (overlay) { overlay.style.display = 'block'; setTimeout(() => overlay.classList.add('visible'), 10) }
+  nextTick(() => {
+    const firstLink = nav.querySelector('.nav-links a')
+    if (firstLink) firstLink.focus()
+  })
 }
 
 function closeNav() {
@@ -141,6 +145,7 @@ function closeNav() {
   isMenuOpen.value = false
   const overlay = document.getElementById('nav-overlay')
   if (overlay) { overlay.classList.remove('visible'); setTimeout(() => overlay.style.display = 'none', 220) }
+  if (btn) btn.focus()
 }
 
 function toggleNav() {

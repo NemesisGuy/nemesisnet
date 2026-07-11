@@ -4,7 +4,15 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/voxnemesis-supertonic/optimized/hero.webp'" class="detail-image" alt="VoxNemesis Supertonic" loading="lazy">
+        <img
+          src="/images/projects/voxnemesis-supertonic/optimized/hero.webp"
+          srcset="/images/projects/voxnemesis-supertonic/optimized/hero-480.webp 480w, /images/projects/voxnemesis-supertonic/optimized/hero-640.webp 640w, /images/projects/voxnemesis-supertonic/optimized/hero.webp 800w"
+          sizes="(max-width: 640px) 480px, (max-width: 900px) 640px, 800px"
+          class="detail-image"
+          alt="VoxNemesis Supertonic"
+          loading="lazy"
+          decoding="async"
+        >
         
         <h2>The Challenge</h2>
         <p>High-quality text-to-speech usually requires cloud APIs, sending user data to third-party servers. Users needed a private, fast, and truly local alternative that runs entirely in the browser without compromising on audio quality or latency.</p>

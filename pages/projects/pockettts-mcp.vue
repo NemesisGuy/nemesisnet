@@ -131,7 +131,7 @@ useHead({
 .detail-main { text-align: left; line-height: 1.8; }
 .detail-main h2 { font-size: 2rem; margin: 40px 0 20px; text-align: left; }
 .detail-main p { color: var(--text-muted); margin-bottom: 20px; }
-.detail-image { width: 100%; max-height: 400px; object-fit: contain; border-radius: 20px; border: 1px solid var(--glass-border); margin: 30px 0; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+.detail-image { width: 100%; height: auto; border-radius: 20px; border: 1px solid var(--glass-border); margin: 30px 0; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
 .tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
 .pill { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
 .pill-tools { background: rgba(234, 179, 8, 0.2); color: #facc15; border: 1px solid rgba(234, 179, 8, 0.3); }

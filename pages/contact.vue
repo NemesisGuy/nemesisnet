@@ -100,8 +100,8 @@
             {{ submitting ? 'Sending...' : 'Send Message' }}
           </button>
 
-          <p v-if="success" class="success-message">Message sent successfully! We'll be in touch soon.</p>
-          <p v-if="error" class="error-message">{{ error }}</p>
+          <p v-if="success" class="success-message" role="status" aria-live="polite">Message sent successfully! We'll be in touch soon.</p>
+          <p v-if="error" class="error-message" role="alert" aria-live="assertive">{{ error }}</p>
         </form>
       </div>
 
@@ -136,11 +136,11 @@
         <div class="alternative-contact">
           <h3>Other Ways to Connect</h3>
           <div class="social-links">
-            <a href="https://github.com/NemesisGuy" target="_blank" class="social-link">
+            <a href="https://github.com/NemesisGuy" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub (opens in new tab)">
               <ClientOnly><Github :size="18" /></ClientOnly>
               <span>GitHub</span>
             </a>
-            <a href="https://linkedin.com/in/peter-buckingham-65438757" target="_blank" class="social-link">
+            <a href="https://linkedin.com/in/peter-buckingham-65438757" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn (opens in new tab)">
               <ClientOnly><Linkedin :size="18" /></ClientOnly>
               <span>LinkedIn</span>
             </a>
@@ -337,9 +337,18 @@ useHead({
   color: var(--text-color, #ffffff);
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+.form-group input:focus-visible,
+.form-group select:focus-visible,
+.form-group textarea:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.form-group input:focus:not(:focus-visible),
+.form-group select:focus:not(:focus-visible),
+.form-group textarea:focus:not(:focus-visible) {
   outline: none;
   border-color: var(--accent-color);
   box-shadow: 0 0 0 3px var(--accent-glow);
@@ -481,7 +490,7 @@ useHead({
   transform: translateY(-2px);
 }
 
-.breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; padding-left: 20px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.breadcrumbs { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px; padding-left: 20px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
 .breadcrumbs a { color: var(--accent-color); text-decoration: none; }
 .breadcrumbs a:hover { text-decoration: underline; }
 .breadcrumbs span { color: var(--text-muted); opacity: 0.6; }

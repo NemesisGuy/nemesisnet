@@ -375,6 +375,12 @@ a.btn-hero:focus-visible {
   outline-offset: 3px;
 }
 
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
 /* Full-width block modifier */
 .btn-block,
 .btn-glass.btn-block,
@@ -436,6 +442,8 @@ a.btn-hero:focus-visible {
 }
 
 .theme-toggle { 
+  min-height: 44px;
+  min-width: 44px;
   margin-top:24px; 
   padding: 12px 24px; 
   border:1px solid var(--glass-border); 
@@ -476,19 +484,9 @@ a.btn-hero:focus-visible {
   .btn--primary:active{transform:translateY(0)}
   .btn--dual{background:linear-gradient(90deg,var(--nemesis-blue) 0%, var(--aurora-base) 100%);color:#0a0e27;border:0;padding:10px 14px;border-radius:10px;font-weight:700}
   .btn--dual:hover{box-shadow:0 14px 48px rgba(41,121,255,0.28), 0 8px 30px rgba(0,194,168,0.22);transform:translateY(-2px) scale(1.01)}
-  .btn--dual:active{transform:translateY(0)}/* Sections with modern spacing and animations */
-section { 
-  padding:80px 20px; 
-  max-width:1280px; 
-  margin:auto; 
-  text-align:center; 
-  min-height: auto; /* Changed from 100vh to allow natural content flow */
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items: center;
-}
+  .btn--dual:active{transform:translateY(0)}
 
+/* Sections with modern spacing and animations */
 .js section {
   opacity: 1 !important;
   transform: none !important;
@@ -1012,17 +1010,21 @@ html[data-theme="light"][data-nemesis="on"] .card .project-link:hover{
   align-items: center;
 }
 
-.footer-group h4 {
+.footer-group h4,
+.footer-group .footer-heading {
   margin: 0 0 10px;
   color: var(--accent-color);
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 700;
 }
 
 .footer-group a {
-  display: block;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 6px 0;
   width: fit-content;
   color: #a8d4ff;
@@ -1464,7 +1466,7 @@ html[data-theme="light"][data-nemesis="on"] .footer-line .footer-divider {
 
 .pricing-points li {
   color: var(--text-muted);
-  font-size: 0.86rem;
+  font-size: 0.9rem;
   line-height: 1.45;
   padding-left: 16px;
   position: relative;
@@ -1507,7 +1509,7 @@ html[data-theme="light"][data-nemesis="on"] .footer-line .footer-divider {
   border-radius: 14px;
 }
 
-.policy-block h3 {
+.policy-block h2 {
   margin: 0 0 8px;
   color: var(--accent-color);
   font-size: 1rem;
@@ -2174,6 +2176,7 @@ html[data-theme="light"][data-nemesis="on"] .nav-logo img {
   align-items: center;
 }
 .nav-logo {
+  min-height: 44px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -2226,6 +2229,9 @@ html[data-theme="light"][data-nemesis="on"] .nav-logo img {
   font-size: 1.2rem;
 }
 .nav-links a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
   padding: 10px 16px;
   background: transparent;
   border: 1px solid transparent;
@@ -2430,7 +2436,14 @@ section#contact{
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-family: inherit;
 }
-.contact-form input:focus, .contact-form textarea:focus { 
+.contact-form input:focus-visible, .contact-form textarea:focus-visible { 
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+  background: rgba(0,0,0,0.3);
+}
+.contact-form input:focus:not(:focus-visible), .contact-form textarea:focus:not(:focus-visible) { 
   outline:none; 
   border-color: var(--accent-color);
   box-shadow: 0 0 0 3px var(--accent-glow);
@@ -2446,8 +2459,14 @@ section#contact{
   color: var(--text-color);
   box-shadow: none;
 }
-[data-theme="light"] .contact-form input:focus,
-[data-theme="light"] .contact-form textarea:focus {
+[data-theme="light"] .contact-form input:focus-visible,
+[data-theme="light"] .contact-form textarea:focus-visible {
+  background: rgba(255,255,255,1);
+  border-color: var(--accent-hover);
+  box-shadow: 0 0 0 4px rgba(41,121,255,0.06);
+}
+[data-theme="light"] .contact-form input:focus:not(:focus-visible),
+[data-theme="light"] .contact-form textarea:focus:not(:focus-visible) {
   background: rgba(255,255,255,1);
   border-color: var(--accent-hover);
   box-shadow: 0 0 0 4px rgba(41,121,255,0.06);
@@ -2483,8 +2502,14 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea::placeholder 
   color: rgba(173,219,235,0.72);
 }
 
-html[data-theme="light"][data-nemesis="on"] .contact-form input:focus,
-html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
+html[data-theme="light"][data-nemesis="on"] .contact-form input:focus-visible,
+html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus-visible {
+  background: rgba(8,15,36,0.96);
+  border-color: rgba(56,237,255,0.72);
+  box-shadow: 0 0 0 3px rgba(56,237,255,0.18);
+}
+html[data-theme="light"][data-nemesis="on"] .contact-form input:focus:not(:focus-visible),
+html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus:not(:focus-visible) {
   background: rgba(8,15,36,0.96);
   border-color: rgba(56,237,255,0.72);
   box-shadow: 0 0 0 3px rgba(56,237,255,0.18);
@@ -2649,7 +2674,12 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
   margin-top: 70px;
   padding: 4px 16px !important;
   padding-left: 24px !important;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+}
+
+/* Project hero images: prevent stretching, ensure consistent cover behavior */
+.detail-image {
+  object-fit: cover;
 }
 
 /* Feature list with Lucide icons */
@@ -2665,4 +2695,12 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus {
   .projects-container { max-width: 100% !important; padding-left: 16px; padding-right: 16px; }
   .about-container { max-width: 100% !important; padding-left: 16px; padding-right: 16px; }
   .nav-container { max-width: 100% !important; padding: 0 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

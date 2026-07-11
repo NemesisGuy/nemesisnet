@@ -11,7 +11,7 @@
 
         <div class="policy-doc">
           <article class="policy-block">
-            <h3>1. Information Collected</h3>
+            <h2>1. Information Collected</h2>
             <ul>
               <li>Contact information provided through forms or direct communication.</li>
               <li>Operational and analytics data related to website usage.</li>
@@ -19,7 +19,7 @@
             </ul>
           </article>
           <article class="policy-block">
-            <h3>2. How Information Is Used</h3>
+            <h2>2. How Information Is Used</h2>
             <ul>
               <li>To deliver requested services and support.</li>
               <li>To communicate about projects, billing, and updates.</li>
@@ -27,11 +27,11 @@
             </ul>
           </article>
           <article class="policy-block">
-            <h3>3. Data Sharing And Security</h3>
+            <h2>3. Data Sharing And Security</h2>
             <p>NemesisNet does not sell personal data. Data may be shared only with trusted processors where necessary to deliver services. Reasonable technical and organizational safeguards are used to protect data.</p>
           </article>
           <article class="policy-block">
-            <h3>4. Retention And Rights</h3>
+            <h2>4. Retention And Rights</h2>
             <p>Data is retained only as needed for service delivery, compliance, and operations. You may request access, correction, or deletion by emailing admin@nemesisnet.co.za.</p>
           </article>
         </div>
@@ -79,7 +79,7 @@ useHead({
   border-radius: 14px;
 }
 
-.policy-block h3 {
+.policy-block h2 {
   margin: 0 0 8px;
   color: var(--accent-color);
   font-size: 1rem;

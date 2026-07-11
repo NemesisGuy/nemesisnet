@@ -34,6 +34,7 @@ export const PRERENDER_ROUTES = [
   '/services/managed-retainer',
   '/software-development-cost-south-africa',
   '/about',
+  '/contact',
   '/legal/refund',
   '/legal/terms',
   '/legal/privacy'

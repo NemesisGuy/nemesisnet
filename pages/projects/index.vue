@@ -181,14 +181,16 @@
 
 <script setup>
 useHead({
-  title: 'Projects | NemesisNet — Production-Grade AI, SaaS, and Infrastructure Builds',
+  title: 'Projects | NemesisNet',
   meta: [
-    { name: 'description', content: 'Full portfolio of production systems built by NemesisNet: AI agents, TTS pipelines, multi-tenant SaaS platforms, MCP integrations, and DevOps infrastructure. Cape Town, South Africa.' },
+    { name: 'description', content: 'Production systems built by NemesisNet: AI agents, TTS pipelines, SaaS platforms, MCP integrations, and DevOps infrastructure.' },
     { property: 'og:title', content: 'Projects | NemesisNet' },
     { property: 'og:description', content: 'Production-grade AI, SaaS, and infrastructure builds. VoxNemesis, Kokoro TTS, Since, ForkMyFolio, and more.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:title', content: 'Projects | NemesisNet' },
+    { name: 'twitter:description', content: 'Production systems built by NemesisNet: AI agents, TTS pipelines, SaaS platforms, and DevOps infrastructure.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects' }

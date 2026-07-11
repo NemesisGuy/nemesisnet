@@ -4,7 +4,15 @@
 
     <div class="detail-container">
       <div class="detail-main">
-        <img :src="'/images/projects/forkmyfolio/optimized/hero.webp'" class="detail-image" alt="ForkMyFolio" loading="lazy">
+        <img
+          src="/images/projects/forkmyfolio/optimized/hero.webp"
+          srcset="/images/projects/forkmyfolio/optimized/hero-480.webp 480w, /images/projects/forkmyfolio/optimized/hero-640.webp 640w, /images/projects/forkmyfolio/optimized/hero.webp 800w"
+          sizes="(max-width: 640px) 480px, (max-width: 900px) 640px, 800px"
+          class="detail-image"
+          alt="ForkMyFolio"
+          loading="lazy"
+          decoding="async"
+        >
 
         <h2>App Screenshots</h2>
         <div class="screenshot-carousel" @mouseenter="pauseAuto" @mouseleave="resumeAuto">

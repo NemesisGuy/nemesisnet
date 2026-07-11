@@ -1,4 +1,4 @@
-node_modules/
+.nuxt/\nnode_modules/
 .output/
 dist/
 legacy/
@@ -22,3 +22,4 @@ lighthouse-report-*.json
 
 # Business docs (contracts, SOPs, forms, proposals)
 nemesis-docs/
+.gstack/

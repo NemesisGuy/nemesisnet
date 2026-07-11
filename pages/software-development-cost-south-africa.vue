@@ -13,7 +13,7 @@
         </div>
 
         <!-- Section 1 — Hero intro (no CTA, research page) -->
-        <h1>What Does Custom Software Development Actually Cost in South Africa? (2026)</h1>
+        <h2>What Does Custom Software Development Actually Cost in South Africa? (2026)</h2>
         <p>Most South African developers won't publish prices. We do. This guide covers what real custom software projects cost in 2026 — from a static marketing site to a multi-tenant SaaS platform with AI pipelines — based on NemesisNet's actual pricing, not industry averages or agency guesswork.</p>
 
         <!-- Section 2 — Market Context -->
@@ -229,12 +229,14 @@ const faqs = [
 useHead({
   title: 'Software Development Cost South Africa 2026 | NemesisNet',
   meta: [
-    { name: 'description', content: 'Transparent ZAR pricing for custom software, SaaS platforms, and AI systems built in South Africa. Real numbers from R7,000 to R350,000+ — from a Cape Town engineer who publishes actual prices.' },
+    { name: 'description', content: 'Transparent ZAR pricing for custom software, SaaS, and AI systems in South Africa. R7,000 to R350,000+ — real numbers.' },
     { property: 'og:title', content: 'Software Development Cost South Africa 2026 | NemesisNet' },
     { property: 'og:description', content: 'Transparent ZAR pricing for custom software, SaaS platforms, and AI systems. Real numbers from R7,000 to R350,000+.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/software-development-cost-south-africa' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:title', content: 'Software Development Cost SA | NemesisNet' },
+    { name: 'twitter:description', content: 'Transparent ZAR pricing for custom software, SaaS, and AI systems in South Africa. R7,000 to R350,000+.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/software-development-cost-south-africa' }

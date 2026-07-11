@@ -119,12 +119,14 @@ import { CheckCircle, XCircle } from 'lucide-vue-next'
 useHead({
   title: 'AI Architecture & Consulting — Half-Day Sessions | NemesisNet',
   meta: [
-    { name: 'description', content: 'AI architecture consulting sessions for teams making platform and AI decisions. Platform reviews, workflow design, technical roadmapping. From R10,000. Cape Town, South Africa.' },
+    { name: 'description', content: 'AI architecture consulting for teams making platform decisions. Reviews, roadmapping, cost modelling. From R10,000. Cape Town.' },
     { property: 'og:title', content: 'AI Architecture & Consulting | NemesisNet' },
     { property: 'og:description', content: 'Half-day to full-day working sessions for teams making serious AI or platform decisions. From R10,000.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/ai-consulting' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:title', content: 'AI Architecture & Consulting | NemesisNet' },
+    { name: 'twitter:description', content: 'AI architecture consulting for teams making platform decisions. Reviews, roadmapping. From R10,000.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/services/ai-consulting' }
