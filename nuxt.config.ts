@@ -13,7 +13,8 @@ export default defineNuxtConfig({
     turnstile: {
       secretKey: process.env.TURNSTILE_SECRET_KEY || ''
     },
-    resendApiKey: process.env.RESEND_API_KEY || ''
+    resendApiKey: process.env.RESEND_API_KEY || '',
+    gemmaApiKey: process.env.GEMMA_API_KEY || ''
   },
   nitro: {
     routeRules: {

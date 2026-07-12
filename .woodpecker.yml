@@ -70,6 +70,7 @@ steps:
               - RESEND_API_KEY=$${RESEND_API_KEY}
               - TURNSTILE_SITE_KEY=$${TURNSTILE_SITE_KEY}
               - TURNSTILE_SECRET_KEY=$${TURNSTILE_SECRET_KEY}
+              - GEMMA_API_KEY=$${GEMMA_API_KEY}
               - NUXT_PUBLIC_NO_INDEX=true
         EOF
       - |
@@ -78,6 +79,7 @@ steps:
           --arg resend "$RESEND_API_KEY" \
           --arg ts_site "$TURNSTILE_SITE_KEY" \
           --arg ts_secret "$TURNSTILE_SECRET_KEY" \
+          --arg gemma "$GEMMA_API_KEY" \
           '{
             "prune": true,
             "pullImage": true,
@@ -86,6 +88,7 @@ steps:
               {"name": "RESEND_API_KEY", "value": $resend},
               {"name": "TURNSTILE_SITE_KEY", "value": $ts_site},
               {"name": "TURNSTILE_SECRET_KEY", "value": $ts_secret},
+              {"name": "GEMMA_API_KEY", "value": $gemma},
               {"name": "NUXT_PUBLIC_NO_INDEX", "value": "true"}
             ]
           }')
@@ -103,6 +106,8 @@ steps:
         from_secret: TURNSTILE_SITE_KEY
       TURNSTILE_SECRET_KEY:
         from_secret: TURNSTILE_SECRET_KEY
+      GEMMA_API_KEY:
+        from_secret: GEMMA_API_KEY
     when:
       event: [push, tag, manual]
       branch: dev
@@ -125,6 +130,7 @@ steps:
               - RESEND_API_KEY=$${RESEND_API_KEY}
               - TURNSTILE_SITE_KEY=$${TURNSTILE_SITE_KEY}
               - TURNSTILE_SECRET_KEY=$${TURNSTILE_SECRET_KEY}
+              - GEMMA_API_KEY=$${GEMMA_API_KEY}
         EOF
       - |
         PAYLOAD=$(jq -n \
@@ -132,6 +138,7 @@ steps:
           --arg resend "$RESEND_API_KEY" \
           --arg ts_site "$TURNSTILE_SITE_KEY" \
           --arg ts_secret "$TURNSTILE_SECRET_KEY" \
+          --arg gemma "$GEMMA_API_KEY" \
           '{
             "prune": true,
             "pullImage": true,
@@ -139,7 +146,8 @@ steps:
             "env": [
               {"name": "RESEND_API_KEY", "value": $resend},
               {"name": "TURNSTILE_SITE_KEY", "value": $ts_site},
-              {"name": "TURNSTILE_SECRET_KEY", "value": $ts_secret}
+              {"name": "TURNSTILE_SECRET_KEY", "value": $ts_secret},
+              {"name": "GEMMA_API_KEY", "value": $gemma}
             ]
           }')
         curl -s -w "%{http_code}" \
@@ -156,6 +164,8 @@ steps:
         from_secret: TURNSTILE_SITE_KEY
       TURNSTILE_SECRET_KEY:
         from_secret: TURNSTILE_SECRET_KEY
+      GEMMA_API_KEY:
+        from_secret: GEMMA_API_KEY
     when:
       event: [push, tag, manual]
       branch: master
