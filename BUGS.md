@@ -38,14 +38,14 @@
 - **Actual:** System prompt contains no mention of the blog
 - **Root Cause:** The `SYSTEM_PROMPT` in `server/api/chat.post.ts` does not include blog information
 
-## BUG-004: Chat API Returns 502 on Dev
+## BUG-004: Chat API Returns 502 on Dev and Prod
 - **Status:** OPEN
 - **Priority:** HIGH
-- **Platform:** Dev environment
+- **Platform:** Dev (dev.nemesisnet.co.za) and Prod (nemesisnet.co.za)
 - **Steps to Reproduce:**
-  1. Open dev.nemesisnet.co.za
+  1. Open site
   2. Send any message in chat
   3. Response: "Something went wrong"
 - **Expected:** Chat responds with bot answer
 - **Actual:** 502 error from API
-- **Root Cause:** `GEMMA_API_KEY` not configured in dev Portainer stack env vars
+- **Root Cause:** CI config passes `GEMMA_API_KEY` from Woodpecker secrets correctly (verified in `.woodpecker.yml`). The secret likely doesn't exist in Woodpecker yet, OR the Portainer stack needs a manual redeploy to pick up the new env var. Action needed: verify `GEMMA_API_KEY` exists as a Woodpecker secret, then trigger a redeploy on Portainer for both dev (stack 82) and prod (stack 32).

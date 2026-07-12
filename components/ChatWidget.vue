@@ -413,9 +413,9 @@ const sendMessage = async () => {
     bottom: 0;
     right: 0;
     left: 0;
-    top: 0;
+    top: 60px;
     width: 100%;
-    max-height: 100%;
+    max-height: calc(100% - 60px);
     border-radius: 0;
   }
   .chat-close-btn {
