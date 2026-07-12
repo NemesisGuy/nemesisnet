@@ -93,8 +93,10 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, message: 'Message too long. Please keep it under 2000 characters.' })
   }
 
-  const apiKey = process.env.GEMMA_API_KEY || config.gemmaApiKey
+  const apiKey = process.env.GEMMA_API_KEY || process.env.NUXT_GEMMA_API_KEY || config.gemmaApiKey
+  console.log('GEMMA_API_KEY source:', process.env.GEMMA_API_KEY ? 'env' : process.env.NUXT_GEMMA_API_KEY ? 'nuxt_env' : config.gemmaApiKey ? 'config' : 'MISSING')
   if (!apiKey) {
+    console.error('GEMMA_API_KEY not found in env or config')
     throw createError({ statusCode: 500, message: 'Chat service not configured.' })
   }
 
