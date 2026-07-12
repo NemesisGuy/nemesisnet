@@ -82,7 +82,8 @@ useHead({
     { property: 'og:description', content: 'Expose local-first neural text-to-speech to AI agents and tools using Python, FastMCP, and GGUF quantization.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/pockettts-mcp' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/pockettts-mcp/optimized/hero.webp' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/pockettts-mcp/optimized/hero.webp' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/pockettts-mcp/optimized/hero.webp' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/pockettts-mcp' }

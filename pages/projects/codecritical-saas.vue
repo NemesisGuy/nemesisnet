@@ -103,7 +103,8 @@ useHead({
     { property: 'og:description', content: 'Multi-tenant security scanning platform with container vulnerability checks, static analysis, and custom architectural validation.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/codecritical-saas' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/codecritical-saas/optimized/hero.webp' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/codecritical-saas/optimized/hero.webp' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/codecritical-saas/optimized/hero.webp' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/codecritical-saas' }

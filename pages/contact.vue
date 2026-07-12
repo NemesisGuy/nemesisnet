@@ -19,6 +19,7 @@
           toolname="contact-nemesisnet"
           tooldescription="Send a message to NemesisNet to enquire about custom software, SaaS, AI, or infrastructure projects. Submitter receives a response within 24 hours."
           @submit.prevent="handleSubmit"
+          @focusin="onFormInteraction"
         >
           <div class="form-group">
             <label for="name">Name</label>
@@ -92,7 +93,7 @@
 
           <div class="form-group">
             <ClientOnly>
-              <NuxtTurnstile v-model="turnstileToken" />
+              <NuxtTurnstile v-if="turnstileReady" v-model="turnstileToken" />
             </ClientOnly>
           </div>
 
@@ -170,6 +171,13 @@ const turnstileToken = ref('')
 const submitting = ref(false)
 const success = ref(false)
 const error = ref('')
+const turnstileReady = ref(false)
+
+function onFormInteraction() {
+  if (!turnstileReady.value) {
+    turnstileReady.value = true
+  }
+}
 
 async function handleSubmit(event) {
   if (!form.name || !form.email || !form.subject || !form.message) {
@@ -238,7 +246,8 @@ useHead({
     { property: 'og:description', content: 'Get in touch with NemesisNet for custom software, AI development, and self-hosted infrastructure projects.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/contact' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/contact' }

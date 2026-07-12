@@ -92,7 +92,8 @@ useHead({
     { property: 'og:description', content: 'Low-latency, self-hosted, private and open-source neural text-to-speech web service and REST API built on the Kokoro model.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/kokoro-tts' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/kokoro-tts-service/optimized/hero.webp' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/kokoro-tts-service/optimized/hero.webp' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/kokoro-tts-service/optimized/hero.webp' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/kokoro-tts' }

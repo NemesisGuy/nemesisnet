@@ -90,7 +90,8 @@ useHead({
     { property: 'og:description', content: 'Lightweight static portal designed for extreme performance and deployed using containerized Nginx with zero downtime.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/nk-assessments' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/nk-assessments/optimized/hero.webp' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/nk-assessments/optimized/hero.webp' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/nk-assessments/optimized/hero.webp' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/nk-assessments' }

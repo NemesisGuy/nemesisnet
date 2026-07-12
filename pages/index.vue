@@ -198,6 +198,7 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:title', content: 'AI Infrastructure & Platform Engineering | NemesisNet' },
     { name: 'twitter:description', content: 'AI infrastructure, SaaS development, and self-hosted systems for production. Cape Town, South Africa.' }
   ],

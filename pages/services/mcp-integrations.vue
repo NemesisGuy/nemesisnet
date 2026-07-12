@@ -130,6 +130,7 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/mcp-integrations' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:title', content: 'MCP & Agent Integrations | NemesisNet' },
     { name: 'twitter:description', content: 'Custom MCP servers connecting AI agents to CMS, CRM, databases. Role-safe pipelines. From R55,000.' }
   ],

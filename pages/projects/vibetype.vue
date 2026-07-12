@@ -78,7 +78,8 @@ useHead({
     { property: 'og:description', content: 'Vibe your way through code using voice conceptualization, smart suggestion systems, and local LLM acceleration.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/vibetype' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/vibetype/optimized/hero.webp' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/vibetype/optimized/hero.webp' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/vibetype/optimized/hero.webp' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/vibetype' }

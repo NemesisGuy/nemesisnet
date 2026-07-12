@@ -85,7 +85,8 @@ useHead({
     { property: 'og:description', content: 'Measure Java code maintainability, duplication, complexity and LOC using a professional, local static analysis CLI.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/codecritical-cli' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/codecritical/optimized/hero.webp' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/codecritical/optimized/hero.webp' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/codecritical/optimized/hero.webp' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/codecritical-cli' }

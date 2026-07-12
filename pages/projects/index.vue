@@ -189,6 +189,7 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:title', content: 'Projects | NemesisNet' },
     { name: 'twitter:description', content: 'Production systems built by NemesisNet: AI agents, TTS pipelines, SaaS platforms, and DevOps infrastructure.' }
   ],

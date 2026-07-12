@@ -125,6 +125,7 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/ai-consulting' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:title', content: 'AI Architecture & Consulting | NemesisNet' },
     { name: 'twitter:description', content: 'AI architecture consulting for teams making platform decisions. Reviews, roadmapping. From R10,000.' }
   ],

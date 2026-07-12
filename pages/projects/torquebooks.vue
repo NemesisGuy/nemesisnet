@@ -125,7 +125,8 @@ useHead({
     { property: 'og:description', content: 'React + PocketBase workshop management with job cards, vehicle CRM, PDF invoicing, and OAuth2 SSO.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/torquebooks' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/torquebooks/optimized/hero.webp' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/torquebooks/optimized/hero.webp' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/torquebooks/optimized/hero.webp' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/torquebooks' }

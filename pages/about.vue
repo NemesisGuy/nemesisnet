@@ -176,6 +176,7 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/about' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:title', content: 'About | NemesisNet' },
     { name: 'twitter:description', content: 'AI infrastructure, platform engineering, and full-stack development by Peter Buckingham. Cape Town, SA.' }
   ],

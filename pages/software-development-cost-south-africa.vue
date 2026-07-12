@@ -235,6 +235,7 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/software-development-cost-south-africa' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:title', content: 'Software Development Cost SA | NemesisNet' },
     { name: 'twitter:description', content: 'Transparent ZAR pricing for custom software, SaaS, and AI systems in South Africa. R7,000 to R350,000+.' }
   ],

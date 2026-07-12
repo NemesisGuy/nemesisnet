@@ -90,7 +90,8 @@ useHead({
     { property: 'og:description', content: 'High-performance digital ordering spot showcasing local home-style takeaway in Ferness Estate, Cape Town.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/bored-room-cafe' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/bored-room-cafe/optimized/hero.webp' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/bored-room-cafe/optimized/hero.webp' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/bored-room-cafe/optimized/hero.webp' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/bored-room-cafe' }

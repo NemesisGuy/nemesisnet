@@ -79,7 +79,8 @@ useHead({
     { property: 'og:description', content: 'Run high-fidelity Kokoro neural speech synthesis 100% privately in the browser with WebGPU hardware acceleration.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/voxnemesis-supertonic' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/voxnemesis-supertonic/optimized/hero.webp' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/voxnemesis-supertonic/optimized/hero.webp' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/voxnemesis-supertonic/optimized/hero.webp' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/voxnemesis-supertonic' }

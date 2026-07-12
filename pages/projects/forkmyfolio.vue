@@ -119,7 +119,8 @@ useHead({
     { property: 'og:description', content: 'A complete developer portfolio content management system for tracking projects, skills, PDF generation, and automated database backups.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/forkmyfolio' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/forkmyfolio/optimized/hero.webp' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/forkmyfolio/optimized/hero.webp' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/forkmyfolio/optimized/hero.webp' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/forkmyfolio' }

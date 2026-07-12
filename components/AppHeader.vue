@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted, watch, nextTick } from 'vue'
 
 const isMenuOpen = ref(false)
 const currentTheme = ref('dark')
@@ -121,6 +121,35 @@ function toggleAuroraMode() {
   setAurora(!isAurora.value)
 }
 
+function trapFocus(e) {
+  if (!isMenuOpen.value) return
+  if (e.key === 'Escape') { closeNav(); return }
+  if (e.key !== 'Tab') return
+  const nav = document.getElementById('navbar')
+  if (!nav) return
+  const focusable = nav.querySelectorAll('.nav-links a, .nav-links button, #nav-toggle')
+  if (!focusable.length) return
+  const first = focusable[0]
+  const last = focusable[focusable.length - 1]
+  if (e.shiftKey) {
+    if (document.activeElement === first) { e.preventDefault(); last.focus() }
+  } else {
+    if (document.activeElement === last) { e.preventDefault(); first.focus() }
+  }
+}
+
+watch(isMenuOpen, (open) => {
+  if (open) {
+    document.addEventListener('keydown', trapFocus)
+  } else {
+    document.removeEventListener('keydown', trapFocus)
+  }
+})
+
+onUnmounted(() => {
+  document.removeEventListener('keydown', trapFocus)
+})
+
 function openNav() {
   const nav = document.getElementById('navbar')
   const btn = document.getElementById('nav-toggle')
@@ -128,6 +157,7 @@ function openNav() {
   nav.classList.add('open')
   if (btn) btn.setAttribute('aria-expanded','true')
   isMenuOpen.value = true
+  document.body.style.overflow = 'hidden'
   const overlay = document.getElementById('nav-overlay')
   if (overlay) { overlay.style.display = 'block'; setTimeout(() => overlay.classList.add('visible'), 10) }
   nextTick(() => {
@@ -143,6 +173,7 @@ function closeNav() {
   nav.classList.remove('open')
   if (btn) btn.setAttribute('aria-expanded','false')
   isMenuOpen.value = false
+  document.body.style.overflow = ''
   const overlay = document.getElementById('nav-overlay')
   if (overlay) { overlay.classList.remove('visible'); setTimeout(() => overlay.style.display = 'none', 220) }
   if (btn) btn.focus()

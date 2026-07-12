@@ -136,7 +136,8 @@ useHead({
     { property: 'og:description', content: 'End-to-end product builds with Spring Boot, Vue 3, secure auth. From R150,000.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/business-systems' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/services/business-systems' }

@@ -136,7 +136,8 @@ useHead({
     { property: 'og:description', content: 'Multi-tenant SaaS, AI pipelines, self-hosted infrastructure. From R350,000.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/platform-enterprise' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/services/platform-enterprise' }

@@ -117,7 +117,8 @@ useHead({
     { property: 'og:description', content: 'Self-hosted prediction registry and outcome verification engine with automated dispute and outcome tracking.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/since' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/since/optimized/hero.webp' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/since/optimized/hero.webp' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/since/optimized/hero.webp' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/since' }

@@ -52,7 +52,8 @@ useHead({
     { property: 'og:description', content: 'NemesisNet privacy policy covering information collected, usage, sharing, and data rights.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/legal/privacy' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/legal/privacy' }

@@ -116,7 +116,8 @@ useHead({
     { property: 'og:description', content: 'Robust real-time vehicle booking, administrative dashboard management, secure JWT authentication, and MySQL tracking.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/onthegorentals' },
-    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/onthegorentals/optimized/hero-v2.webp' }
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/onthegorentals/optimized/hero-v2.webp' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/onthegorentals/optimized/hero-v2.webp' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/onthegorentals' }

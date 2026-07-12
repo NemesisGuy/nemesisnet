@@ -384,6 +384,7 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:title', content: 'IT Services Cape Town | NemesisNet' },
     { name: 'twitter:description', content: 'IT services in Cape Town: Custom software, SaaS, AI infrastructure, DevOps. ZAR pricing from R7,000.' }
   ],
