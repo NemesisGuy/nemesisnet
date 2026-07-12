@@ -491,7 +491,6 @@ select:focus-visible, textarea:focus-visible {
   opacity: 1 !important;
   transform: none !important;
 }
-.js section.visible { opacity: 1 !important; transform: none !important; }
 
 section h2 {
   font-size:2.5rem;
@@ -2681,6 +2680,7 @@ html[data-theme="light"][data-nemesis="on"] .contact-form textarea:focus:not(:fo
 .detail-image {
   object-fit: cover;
 }
+.project-hero img, .project-screenshots img, .project-gallery img { object-fit: cover; width: 100%; height: auto; }
 
 /* Feature list with Lucide icons */
 .feature-list { list-style: none; padding: 0; margin: 0 0 24px; }
