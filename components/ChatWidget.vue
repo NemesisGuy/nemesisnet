@@ -88,6 +88,7 @@ const formatMessage = (text) => {
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.*?)\*/g, '<em>$1</em>')
     .replace(/`(.*?)`/g, '<code>$1</code>')
+    .replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>')
     .replace(/\n/g, '<br>')
 }
 
@@ -319,6 +320,14 @@ const sendMessage = async () => {
   border-radius: 4px;
   font-size: 0.82rem;
 }
+.chat-msg-content :deep(a) {
+  color: var(--accent-color, #2979FF);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.chat-msg-content :deep(a:hover) {
+  opacity: 0.8;
+}
 
 .chat-typing {
   display: flex;
@@ -408,6 +417,26 @@ const sendMessage = async () => {
     width: 100%;
     max-height: 100%;
     border-radius: 0;
+  }
+  .chat-close-btn {
+    display: flex !important;
+    min-width: 32px;
+    min-height: 32px;
+    align-items: center;
+    justify-content: center;
+  }
+  .chat-header {
+    padding: 12px 14px;
+    flex-shrink: 0;
+  }
+  .chat-header-info {
+    min-width: 0;
+    flex: 1;
+  }
+  .chat-header-info strong {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 </style>

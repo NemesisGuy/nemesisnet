@@ -36,6 +36,9 @@ Java Spring Boot 3, Vue 3, Nuxt 4, React, Python, PostgreSQL, MySQL, Redis, Dock
 - **Light Hosting** — R850/month. Hosting, SSL, uptime monitoring, security patches.
 - **Managed Retainer** — R7,500/month. CI/CD management, monitoring, bug fixes, continuous improvement, priority support.
 
+## BLOG
+NemesisNet has a technical blog at blog.nemesisnet.co.za covering AI infrastructure, engineering deep dives, project case studies, and industry insights. If a user asks about blog posts, articles, or technical writing, direct them to https://blog.nemesisnet.co.za/
+
 ## SHOWCASE PROJECTS
 
 ### AI & TTS
