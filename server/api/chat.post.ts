@@ -140,7 +140,9 @@ export default defineEventHandler(async (event) => {
     }
 
     const data = await gemmaRes.json()
-    const text = data.candidates?.[0]?.content?.parts?.[0]?.text
+    const parts = data.candidates?.[0]?.content?.parts || []
+    const answerParts = parts.filter((p: { thought?: boolean }) => !p.thought)
+    const text = answerParts.map((p: { text: string }) => p.text).join('')
 
     if (!text) {
       throw createError({ statusCode: 502, message: 'No response from chat service.' })
