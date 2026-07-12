@@ -112,7 +112,7 @@ const sendMessage = async () => {
     })
 
     messages.value.push({ role: 'model', content: response?.text || 'Got a response but could not parse it.' })
-  } catch (err) {
+  } catch {
     messages.value.push({ role: 'model', content: 'Something went wrong. Please try again or contact us at nemesisnet.co.za/contact' })
   } finally {
     isLoading.value = false

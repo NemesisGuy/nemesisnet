@@ -96,7 +96,7 @@ export default defineEventHandler(async (event) => {
   }
 
   const sanitizedHistory = Array.isArray(history)
-    ? history.slice(-10).map((msg: any) => ({
+    ? history.slice(-10).map((msg: { role: string; content: string }) => ({
         role: msg.role === 'user' ? 'user' : 'model',
         parts: [{ text: String(msg.content || '').slice(0, 1000) }]
       }))
@@ -147,8 +147,8 @@ export default defineEventHandler(async (event) => {
     }
 
     return { text }
-  } catch (err: any) {
-    if (err.statusCode) throw err
+  } catch (err: unknown) {
+    if (err && typeof err === 'object' && 'statusCode' in err) throw err
     console.error('Chat error:', err)
     throw createError({ statusCode: 500, message: 'Something went wrong. Please try again.' })
   }
