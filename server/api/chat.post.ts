@@ -83,8 +83,68 @@ NemesisNet has a technical blog at blog.nemesisnet.co.za covering AI infrastruct
 - When mentioning contact, ALWAYS include: https://nemesisnet.co.za/contact
 - Always end with a helpful next step or CTA when natural.`
 
+const rateLimitStore = new Map<string, { tokens: number; lastRefill: number }>()
+const RATE_LIMIT_MAX = 20
+const RATE_LIMIT_WINDOW_MS = 60_000
+const RATE_LIMIT_REFILL_RATE = RATE_LIMIT_MAX / RATE_LIMIT_WINDOW_MS
+
+function getClientIp(event: any): string {
+  const cfIp = getRequestHeader(event, 'cf-connecting-ip')
+  if (cfIp) return cfIp
+  const xff = getRequestHeader(event, 'x-forwarded-for')
+  if (xff) return xff.split(',')[0].trim()
+  return event.node.req.socket.remoteAddress || 'unknown'
+}
+
+function checkRateLimit(ip: string): { allowed: boolean; retryAfter?: number } {
+  const now = Date.now()
+  const entry = rateLimitStore.get(ip)
+
+  if (!entry) {
+    rateLimitStore.set(ip, { tokens: RATE_LIMIT_MAX - 1, lastRefill: now })
+    return { allowed: true }
+  }
+
+  const elapsed = now - entry.lastRefill
+  const refill = Math.floor(elapsed * RATE_LIMIT_REFILL_RATE)
+  entry.tokens = Math.min(RATE_LIMIT_MAX, entry.tokens + refill)
+  entry.lastRefill = now
+
+  if (entry.tokens <= 0) {
+    const waitMs = Math.ceil((1 - entry.tokens) / RATE_LIMIT_REFILL_RATE)
+    return { allowed: false, retryAfter: Math.ceil(waitMs / 1000) }
+  }
+
+  entry.tokens--
+  return { allowed: true }
+}
+
+const ipStore = rateLimitStore
+setInterval(() => {
+  const cutoff = Date.now() - RATE_LIMIT_WINDOW_MS * 2
+  for (const [ip, entry] of ipStore) {
+    if (entry.lastRefill < cutoff) ipStore.delete(ip)
+  }
+}, RATE_LIMIT_WINDOW_MS * 5)
+
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
+
+  const origin = getRequestHeader(event, 'origin')
+  const referer = getRequestHeader(event, 'referer')
+  const allowedHost = 'nemesisnet.co.za'
+  const source = origin || referer || ''
+  if (source && !source.includes(allowedHost)) {
+    throw createError({ statusCode: 403, message: 'Forbidden.' })
+  }
+
+  const clientIp = getClientIp(event)
+  const rateCheck = checkRateLimit(clientIp)
+  if (!rateCheck.allowed) {
+    setResponseHeader(event, 'Retry-After', String(rateCheck.retryAfter))
+    throw createError({ statusCode: 429, message: 'Too many requests. Please wait a moment and try again.' })
+  }
+
   const body = await readBody(event)
   const { message, history = [] } = body
 
@@ -97,17 +157,19 @@ export default defineEventHandler(async (event) => {
   }
 
   const apiKey = process.env.GEMMA_API_KEY || process.env.NUXT_GEMMA_API_KEY || config.gemmaApiKey
-  console.log('GEMMA_API_KEY source:', process.env.GEMMA_API_KEY ? 'env' : process.env.NUXT_GEMMA_API_KEY ? 'nuxt_env' : config.gemmaApiKey ? 'config' : 'MISSING')
   if (!apiKey) {
     console.error('GEMMA_API_KEY not found in env or config')
     throw createError({ statusCode: 500, message: 'Chat service not configured.' })
   }
 
   const sanitizedHistory = Array.isArray(history)
-    ? history.slice(-10).map((msg: { role: string; content: string }) => ({
-        role: msg.role === 'user' ? 'user' : 'model',
-        parts: [{ text: String(msg.content || '').slice(0, 1000) }]
-      }))
+    ? history
+        .slice(-10)
+        .filter((msg: { role: string }) => msg.role === 'user')
+        .map((msg: { content: string }) => ({
+          role: 'user' as const,
+          parts: [{ text: String(msg.content || '').slice(0, 1000) }]
+        }))
     : []
 
   const contents = [
@@ -149,6 +211,11 @@ export default defineEventHandler(async (event) => {
         const text = answerParts.map((p: { text: string }) => p.text).join('')
 
         if (text) return { text }
+
+        const finishReason = data.candidates?.[0]?.finishReason
+        if (finishReason === 'SAFETY' || !data.candidates?.length) {
+          return { text: "I'm sorry, I can't help with that. I'm here to answer questions about NemesisNet's services and projects." }
+        }
       }
 
       console.error(`Gemma API attempt ${attempt + 1} failed:`, gemmaRes.status)
