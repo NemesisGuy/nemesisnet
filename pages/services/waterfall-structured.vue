@@ -127,7 +127,9 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/waterfall-structured' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
-    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:title', content: 'Waterfall & Structured Development | NemesisNet' },
+    { name: 'twitter:description', content: 'Full scope definition upfront with gated milestones for compliance-heavy and fixed-budget builds.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/services/waterfall-structured' }

@@ -132,7 +132,9 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/static-sites' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
-    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:title', content: 'Static Websites | Fast & Performant | NemesisNet' },
+    { name: 'twitter:description', content: 'Fast, performant websites for display. No backend, no complexity. Starting from R7,000.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/services/static-sites' }

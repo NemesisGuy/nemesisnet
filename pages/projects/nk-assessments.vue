@@ -91,7 +91,9 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/nk-assessments' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/nk-assessments/optimized/hero.webp' },
-    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/nk-assessments/optimized/hero.webp' }
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/nk-assessments/optimized/hero.webp' },
+    { name: 'twitter:title', content: 'NK Assessments | Static Portal | NemesisNet' },
+    { name: 'twitter:description', content: 'Lightweight static portal designed for extreme performance and deployed using containerized Nginx with zero downtime.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/nk-assessments' }

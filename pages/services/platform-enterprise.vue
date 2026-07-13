@@ -137,7 +137,9 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/platform-enterprise' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
-    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:title', content: 'Enterprise Platform | Multi-Tenant SaaS & AI | NemesisNet' },
+    { name: 'twitter:description', content: 'Multi-tenant SaaS, AI pipelines, self-hosted infrastructure. From R350,000.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/services/platform-enterprise' }

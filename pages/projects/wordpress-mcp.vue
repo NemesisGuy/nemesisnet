@@ -79,7 +79,9 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/wordpress-mcp' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/wordpress-mcp/optimized/hero.webp' },
-    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/wordpress-mcp/optimized/hero.webp' }
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/wordpress-mcp/optimized/hero.webp' },
+    { name: 'twitter:title', content: 'WordPress MCP Plugin | AI Tools for WordPress | NemesisNet' },
+    { name: 'twitter:description', content: 'Connect AI tools securely to WordPress to read, publish, edit posts, and manage media via Model Context Protocol.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/wordpress-mcp' }

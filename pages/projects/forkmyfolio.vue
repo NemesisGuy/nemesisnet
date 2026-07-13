@@ -120,7 +120,9 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/forkmyfolio' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/forkmyfolio/optimized/hero.webp' },
-    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/forkmyfolio/optimized/hero.webp' }
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/forkmyfolio/optimized/hero.webp' },
+    { name: 'twitter:title', content: 'ForkMyFolio | Developer Portfolio CMS | NemesisNet' },
+    { name: 'twitter:description', content: 'A complete developer portfolio content management system for tracking projects, skills, PDF generation, and automated database backups.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/forkmyfolio' }

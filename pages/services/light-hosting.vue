@@ -109,7 +109,9 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/light-hosting' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
-    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:title', content: 'Light Hosting | SSL, Uptime Monitoring | NemesisNet' },
+    { name: 'twitter:description', content: 'Hosting, SSL, uptime monitoring, and security patches. R850/month flat rate.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/services/light-hosting' }

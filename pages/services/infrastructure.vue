@@ -156,7 +156,9 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/infrastructure' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
-    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:title', content: 'Infrastructure & DevOps | Docker, CI/CD, Redis | NemesisNet' },
+    { name: 'twitter:description', content: 'Docker, CI/CD, Redis, Nginx, and production AI runtimes. Based in Cape Town, South Africa.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/services/infrastructure' }

@@ -74,7 +74,9 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/legal/refund' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
-    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:title', content: 'Refund & Cancellation Policy | NemesisNet' },
+    { name: 'twitter:description', content: 'NemesisNet refund and cancellation policy for custom software development, consulting, and SaaS services.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/legal/refund' }

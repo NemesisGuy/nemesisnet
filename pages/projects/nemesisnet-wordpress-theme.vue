@@ -167,7 +167,9 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/nemesisnet-wordpress-theme' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/nemesisnet-wordpress-theme/optimized/hero.webp' },
-    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/nemesisnet-wordpress-theme/optimized/hero.webp' }
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/nemesisnet-wordpress-theme/optimized/hero.webp' },
+    { name: 'twitter:title', content: 'NemesisNet WordPress Theme | Glassmorphic Dark/Light UI | NemesisNet' },
+    { name: 'twitter:description', content: 'Custom WordPress theme with glassmorphic dark/light UI, CSS variable design tokens, Customizer support, and a reusable component library.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/nemesisnet-wordpress-theme' }

@@ -104,7 +104,9 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/codecritical-saas' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/codecritical-saas/optimized/hero.webp' },
-    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/codecritical-saas/optimized/hero.webp' }
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/codecritical-saas/optimized/hero.webp' },
+    { name: 'twitter:title', content: 'CodeCritical SaaS | Security Scanning Platform | NemesisNet' },
+    { name: 'twitter:description', content: 'Multi-tenant security scanning platform with container vulnerability checks, static analysis, and custom architectural validation.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/codecritical-saas' }

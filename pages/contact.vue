@@ -247,7 +247,9 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/contact' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
-    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:title', content: 'Contact NemesisNet | Custom Software & AI Development' },
+    { name: 'twitter:description', content: 'Get in touch with NemesisNet for custom software, AI development, and self-hosted infrastructure projects.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/contact' }

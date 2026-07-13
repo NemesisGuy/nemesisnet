@@ -104,3 +104,148 @@ node lighthouse-full-audit.js
 ```
 
 Target scores: Performance >90, Accessibility >90, Best Practices >90, SEO >90
+
+---
+
+## New Page Checklist
+
+Every new page MUST include the following. Failure to include any item will cause audit failures.
+
+### Required `useHead` Meta Tags
+
+```js
+useHead({
+  title: 'Page Title | NemesisNet',
+  meta: [
+    { name: 'description', content: '≤155 char description with keywords' },
+    { property: 'og:title', content: 'Page Title | NemesisNet' },
+    { property: 'og:description', content: '≤155 char description' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://nemesisnet.co.za/page-path' },
+    { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Page Title | NemesisNet' },
+    { name: 'twitter:description', content: '≤155 char description' },
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/page-path' }
+  ]
+})
+```
+
+**For project pages**, use the project's hero image for `og:image` and `twitter:image`:
+```js
+{ property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/<project-slug>/optimized/hero.webp' },
+{ name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/<project-slug>/optimized/hero.webp' }
+```
+
+### Required JSON-LD (Service Pages)
+
+```js
+useHead({
+  script: [{
+    type: 'application/ld+json',
+    children: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Service Name',
+      provider: { '@type': 'Organization', name: 'NemesisNet' },
+      areaServed: { '@type': 'Country', name: 'South Africa' },
+      offers: { '@type': 'Offer', priceCurrency: 'ZAR', price: '7000' }
+    })
+  }]
+})
+```
+
+### Required Image Setup
+
+Every project page needs responsive hero images:
+
+1. **Main hero**: `optimized/hero.webp` (1200px wide, ≤100KB)
+2. **640px variant**: `optimized/hero-640.webp` (≤30KB)
+3. **480px variant**: `optimized/hero-480.webp` (≤20KB)
+4. **srcset on listing page** (pages/projects/index.vue):
+   ```html
+   <img src="/images/projects/<slug>/optimized/hero.webp"
+        srcset="/images/projects/<slug>/optimized/hero-480.webp 480w, /images/projects/<slug>/optimized/hero-640.webp 640w, /images/projects/<slug>/optimized/hero.webp 800w"
+        sizes="(max-width: 640px) 480px, 280px"
+        alt="Project Name" loading="lazy" width="900" height="615">
+   ```
+
+### Required CSS Patterns
+
+- **Max width**: All page containers use `max-width: 1280px`
+- **Card alignment**: Use `margin-top: auto` on card buttons to push them to bottom
+- **No nested NuxtLinks**: Use `<span class="btn-glass">` inside `<NuxtLink>` card wrappers
+- **Theme support**: Cards need styles for both dark and light themes using CSS variables
+- **Nemesis light mode**: Add overrides for `html[data-theme="light"][data-nemesis="on"]` if the page has custom card styles
+
+### Required Accessibility
+
+- **Skip link**: Already in `layouts/default.vue` — do not remove
+- **Focus-visible**: Already in `main.css` — do not override with `outline: none`
+- **Reduced motion**: Already in `main.css` — do not add animations without respecting it
+- **Form ARIA**: All form feedback needs `role="status"` (success) and `role="alert"` (error)
+- **External links**: All `target="_blank"` links need `rel="noopener noreferrer"` and `aria-label="... (opens in new tab)"`
+- **Footer headings**: Use `<strong class="footer-heading">` not `<h4>` or `<h3>`
+- **Lucide icons**: Use `<ClientOnly><IconName :size="20" /></ClientOnly>` in templates
+
+---
+
+## Audit Verification Checklist
+
+Before shipping, verify these items (they cause audit failures every time):
+
+### SEO
+- [ ] Every page has `twitter:title`, `twitter:description`, `twitter:image`
+- [ ] Every page has `og:title`, `og:description`, `og:image`, `og:url`
+- [ ] Meta descriptions ≤155 characters
+- [ ] Title tags ≤60 characters
+- [ ] Single `<h1>` per page
+- [ ] Heading hierarchy: h1 → h2 → h3 (no skips)
+- [ ] JSON-LD renders in SSR (check `.output/public/index.html`)
+- [ ] Canonical URL set on every page
+- [ ] `/contact` in sitemap (`config/prerender-routes.ts`)
+
+### Accessibility
+- [ ] Skip link present and functional
+- [ ] `:focus-visible` outlines visible on all interactive elements
+- [ ] `prefers-reduced-motion` respected
+- [ ] Footer headings use `<strong>` not `<h4>`
+- [ ] Form messages have `role="status"` / `role="alert"`
+- [ ] External links have `aria-label` with "(opens in new tab)"
+- [ ] Mobile nav: Escape closes, first link gets focus, body scroll locked
+- [ ] All images have `alt` text
+- [ ] All images use `loading="lazy"` (except above-fold hero)
+
+### Performance
+- [ ] Hero images ≤100KB (main), ≤30KB (640px), ≤20KB (480px)
+- [ ] WebP format for all images
+- [ ] Responsive srcset on project listing cards
+- [ ] No duplicate CSS rules
+- [ ] CSS files use `?v=YYYYMMDD` cache-busting
+- [ ] Turnstile deferred on contact page (loads on form interaction)
+
+### Links & Navigation
+- [ ] No broken internal links
+- [ ] No broken external links
+- [ ] No hydration errors in console
+- [ ] No `<NuxtLink>` nested inside `<NuxtLink>`
+
+---
+
+## Common Audit Issues (Historical)
+
+These issues have been found and fixed in past audits. Watch for regressions:
+
+1. **Twitter Card tags missing** — Every page needs `twitter:title`, `twitter:description`, `twitter:image` in `useHead`
+2. **JSON-LD empty** — `useHead({ script: [{ children: JSON.stringify(...) }] })` renders correctly in SSR
+3. **Hero image distortion** — Add `object-fit: cover; width: 100%; height: auto;` to `.project-hero img`
+4. **Card text underline** — NuxtLink-wrapped cards need `* { text-decoration: none !important; }` in card CSS
+5. **Nemesis light mode broken** — Full CSS override block needed for `html[data-theme="light"][data-nemesis="on"]`
+6. **Blog gradient missing from dark mode** — Use layered radial glows, not flat linear-gradient
+7. **Services page btn--ignite underline** — Add `text-decoration: none; display: inline-block;` to `.btn--ignite`
+8. **Footer h4 headings** — WCAG violation; use `<strong class="footer-heading">` instead
+9. **Missing /contact in sitemap** — Must be in `config/prerender-routes.ts`
+10. **Dev site indexed** — Triple protection: `NUXT_PUBLIC_NO_INDEX=true`, robots Disallow, no-store cache

@@ -117,7 +117,9 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/onthegorentals' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/onthegorentals/optimized/hero-v2.webp' },
-    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/onthegorentals/optimized/hero-v2.webp' }
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/onthegorentals/optimized/hero-v2.webp' },
+    { name: 'twitter:title', content: 'OnTheGoRentals | Vehicle Booking Platform | NemesisNet' },
+    { name: 'twitter:description', content: 'Robust real-time vehicle booking, administrative dashboard management, secure JWT authentication, and MySQL tracking.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/onthegorentals' }

@@ -83,7 +83,9 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/pockettts-mcp' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/pockettts-mcp/optimized/hero.webp' },
-    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/pockettts-mcp/optimized/hero.webp' }
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/pockettts-mcp/optimized/hero.webp' },
+    { name: 'twitter:title', content: 'PocketTTS MCP | Neural Text-to-Speech for AI Agents | NemesisNet' },
+    { name: 'twitter:description', content: 'Expose local-first neural text-to-speech to AI agents and tools using Python, FastMCP, and GGUF quantization.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/pockettts-mcp' }

@@ -167,7 +167,9 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/custom-software' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
-    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' }
+    { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
+    { name: 'twitter:title', content: 'Custom Software Development | APIs & Data Pipelines | NemesisNet' },
+    { name: 'twitter:description', content: 'Custom APIs, data pipelines, and system integrations with Spring Boot. Based in Cape Town, South Africa.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/services/custom-software' }

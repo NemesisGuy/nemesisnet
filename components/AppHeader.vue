@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, watch, nextTick } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
 
 const isMenuOpen = ref(false)
 const currentTheme = ref('dark')
@@ -127,28 +127,16 @@ function trapFocus(e) {
   if (e.key !== 'Tab') return
   const nav = document.getElementById('navbar')
   if (!nav) return
-  const focusable = nav.querySelectorAll('.nav-links a, .nav-links button, #nav-toggle')
+  const focusable = Array.from(nav.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'))
   if (!focusable.length) return
-  const first = focusable[0]
-  const last = focusable[focusable.length - 1]
+  const idx = focusable.indexOf(document.activeElement)
+  if (idx === -1) return
   if (e.shiftKey) {
-    if (document.activeElement === first) { e.preventDefault(); last.focus() }
+    if (idx === 0) { e.preventDefault(); focusable[focusable.length - 1].focus() }
   } else {
-    if (document.activeElement === last) { e.preventDefault(); first.focus() }
+    if (idx === focusable.length - 1) { e.preventDefault(); focusable[0].focus() }
   }
 }
-
-watch(isMenuOpen, (open) => {
-  if (open) {
-    document.addEventListener('keydown', trapFocus)
-  } else {
-    document.removeEventListener('keydown', trapFocus)
-  }
-})
-
-onUnmounted(() => {
-  document.removeEventListener('keydown', trapFocus)
-})
 
 function openNav() {
   const nav = document.getElementById('navbar')
@@ -158,6 +146,7 @@ function openNav() {
   if (btn) btn.setAttribute('aria-expanded','true')
   isMenuOpen.value = true
   document.body.style.overflow = 'hidden'
+  document.addEventListener('keydown', trapFocus)
   const overlay = document.getElementById('nav-overlay')
   if (overlay) { overlay.style.display = 'block'; setTimeout(() => overlay.classList.add('visible'), 10) }
   nextTick(() => {
@@ -174,6 +163,7 @@ function closeNav() {
   if (btn) btn.setAttribute('aria-expanded','false')
   isMenuOpen.value = false
   document.body.style.overflow = ''
+  document.removeEventListener('keydown', trapFocus)
   const overlay = document.getElementById('nav-overlay')
   if (overlay) { overlay.classList.remove('visible'); setTimeout(() => overlay.style.display = 'none', 220) }
   if (btn) btn.focus()
