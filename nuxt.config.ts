@@ -63,7 +63,7 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/images/brand/Nemesis_Logo_Icon.ico' },
         { rel: 'icon', type: 'image/png', href: '/images/brand/Nemesis_Logo_Icon.png' },
         { rel: 'shortcut icon', href: '/images/brand/Nemesis_Logo_Icon.ico' },
-        { rel: 'stylesheet', href: '/css/main.css?v=20260707' },
+        { rel: 'stylesheet', href: '/css/main.css?v=20260713' },
         { rel: 'stylesheet', href: '/css/aurora-mode.css?v=20260707' },
         { rel: 'stylesheet', href: '/css/nemesis-mode.css?v=20260707' }
       ],

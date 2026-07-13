@@ -1038,7 +1038,10 @@ html[data-theme="light"][data-nemesis="on"] .card .project-link:hover{
 
 .footer-group a::after {
   content: "";
-  display: block;
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 0;
   height: 1px;
   background: currentColor;
