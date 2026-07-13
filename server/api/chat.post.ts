@@ -135,7 +135,6 @@ export default defineEventHandler(async (event) => {
       ]
     }
 
-    let lastError: unknown = null
     for (let attempt = 0; attempt < 2; attempt++) {
       const gemmaRes = await fetch(apiUrl, {
         method: 'POST',
@@ -152,7 +151,6 @@ export default defineEventHandler(async (event) => {
         if (text) return { text }
       }
 
-      lastError = gemmaRes.status
       console.error(`Gemma API attempt ${attempt + 1} failed:`, gemmaRes.status)
       if (attempt === 0) await new Promise(r => setTimeout(r, 1000))
     }
