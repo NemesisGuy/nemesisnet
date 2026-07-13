@@ -466,9 +466,9 @@ useHead({
 .detail-main { text-align: left !important; line-height: 1.8; }
 .detail-main p, .detail-main h2, .detail-main h3, .detail-main h4, .detail-main li { text-align: left !important; }
 .section-cta { text-align: center !important; }
-.section-cta--prominent { margin: 32px 0 40px; }
+.section-cta--prominent { margin: 32px 0 40px; display: flex; flex-direction: column; align-items: center; }
 .section-cta--prominent .btn--ignite { font-size: 1.05rem; padding: 14px 32px; display: inline-block; }
-.section-cta-sub { font-size: 0.85rem; color: var(--text-muted); margin-top: 10px; }
+.section-cta-sub { font-size: 0.85rem; color: var(--text-muted); margin-top: 10px; text-align: center; }
 .btn-glass { display: inline-block; }
 .sdlc-columns { grid-template-columns: repeat(2, 1fr) !important; justify-items: center; }
 .pricing-grid, .tiers-grid { /* pricing-grid now flexbox, centered via main.css */ }
