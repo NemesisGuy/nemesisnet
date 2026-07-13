@@ -1,7 +1,7 @@
 # NemesisBot Chat Widget — Bug Tracker
 
 ## BUG-001: Mobile Close Button Not Visible
-- **Status:** OPEN
+- **Status:** FIXED
 - **Priority:** HIGH
 - **Platform:** Mobile (≤480px)
 - **Steps to Reproduce:**
@@ -14,7 +14,7 @@
 - **Root Cause:** The `.chat-header` has `justify-content: space-between` but the close button may be obscured by the full-screen panel or the header layout doesn't render the X properly at 375px
 
 ## BUG-002: Links in Chat Responses Not Clickable
-- **Status:** OPEN
+- **Status:** FIXED
 - **Priority:** HIGH
 - **Platform:** All
 - **Steps to Reproduce:**
@@ -27,7 +27,7 @@
 - **Root Cause:** `formatMessage()` in `ChatWidget.vue` does not convert URLs to `<a href>` tags
 
 ## BUG-003: Bot Has No Access to Blog Posts
-- **Status:** OPEN
+- **Status:** FIXED
 - **Priority:** MEDIUM
 - **Platform:** All
 - **Steps to Reproduce:**
