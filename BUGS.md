@@ -39,7 +39,7 @@
 - **Root Cause:** The `SYSTEM_PROMPT` in `server/api/chat.post.ts` does not include blog information
 
 ## BUG-004: Chat API Returns 502 on Dev and Prod
-- **Status:** OPEN
+- **Status:** FIXED
 - **Priority:** HIGH
 - **Platform:** Dev (dev.nemesisnet.co.za) and Prod (nemesisnet.co.za)
 - **Steps to Reproduce:**
