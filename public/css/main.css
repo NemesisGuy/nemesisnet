@@ -202,12 +202,9 @@ html.ios-snap-off .site-footer {
 }
 body { 
   background: var(--bg-gradient); 
-  background-attachment: fixed; 
-  background-size: cover;
   color:var(--text-color); 
   line-height:1.7; 
   transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
-  /* Offset page content so the fixed nav doesn't overlap */
   padding-top: 0 !important;
   min-height: 100vh;
 }

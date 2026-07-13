@@ -78,6 +78,9 @@ NemesisNet has a technical blog at blog.nemesisnet.co.za covering AI infrastruct
 ## RESPONSE FORMATTING
 - Keep responses short and scannable.
 - Use bullet points for lists of services or features.
+- When mentioning a page, ALWAYS include the full URL as a clickable link. For example: "You can read more at https://nemesisnet.co.za/services" not just "our services page".
+- When mentioning the blog, ALWAYS include: https://blog.nemesisnet.co.za/
+- When mentioning contact, ALWAYS include: https://nemesisnet.co.za/contact
 - Always end with a helpful next step or CTA when natural.`
 
 export default defineEventHandler(async (event) => {
@@ -116,43 +119,45 @@ export default defineEventHandler(async (event) => {
 
   try {
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemma-4-31b-it:generateContent?key=${apiKey}`
+    const requestBody = {
+      contents,
+      generationConfig: {
+        temperature: 0.7,
+        topP: 0.9,
+        topK: 40,
+        maxOutputTokens: 1024
+      },
+      safetySettings: [
+        { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_MEDIUM_AND_ABOVE" },
+        { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_MEDIUM_AND_ABOVE" },
+        { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_MEDIUM_AND_ABOVE" },
+        { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_MEDIUM_AND_ABOVE" }
+      ]
+    }
 
-    const gemmaRes = await fetch(apiUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents,
-        generationConfig: {
-          temperature: 0.7,
-          topP: 0.9,
-          topK: 40,
-          maxOutputTokens: 1024
-        },
-        safetySettings: [
-          { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_MEDIUM_AND_ABOVE" },
-          { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_MEDIUM_AND_ABOVE" },
-          { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_MEDIUM_AND_ABOVE" },
-          { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_MEDIUM_AND_ABOVE" }
-        ]
+    let lastError: unknown = null
+    for (let attempt = 0; attempt < 2; attempt++) {
+      const gemmaRes = await fetch(apiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(requestBody)
       })
-    })
 
-    if (!gemmaRes.ok) {
-      const errText = await gemmaRes.text()
-      console.error('Gemma API error:', gemmaRes.status, errText)
-      throw createError({ statusCode: 502, message: 'Chat service temporarily unavailable.' })
+      if (gemmaRes.ok) {
+        const data = await gemmaRes.json()
+        const parts = data.candidates?.[0]?.content?.parts || []
+        const answerParts = parts.filter((p: { thought?: boolean }) => !p.thought)
+        const text = answerParts.map((p: { text: string }) => p.text).join('')
+
+        if (text) return { text }
+      }
+
+      lastError = gemmaRes.status
+      console.error(`Gemma API attempt ${attempt + 1} failed:`, gemmaRes.status)
+      if (attempt === 0) await new Promise(r => setTimeout(r, 1000))
     }
 
-    const data = await gemmaRes.json()
-    const parts = data.candidates?.[0]?.content?.parts || []
-    const answerParts = parts.filter((p: { thought?: boolean }) => !p.thought)
-    const text = answerParts.map((p: { text: string }) => p.text).join('')
-
-    if (!text) {
-      throw createError({ statusCode: 502, message: 'No response from chat service.' })
-    }
-
-    return { text }
+    throw createError({ statusCode: 502, message: 'Chat service temporarily unavailable. Please try again.' })
   } catch (err: unknown) {
     if (err && typeof err === 'object' && 'statusCode' in err) throw err
     console.error('Chat error:', err)
