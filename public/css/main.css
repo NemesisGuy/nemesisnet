@@ -687,6 +687,7 @@ html:not([data-theme="light"]) .card:hover img{
   margin-bottom:10px; 
   font-size:1.3rem;
   font-weight:600;
+  text-align: center;
 }
 .card p { 
   color:var(--text-muted); 
