@@ -88,7 +88,7 @@ const RATE_LIMIT_MAX = 20
 const RATE_LIMIT_WINDOW_MS = 60_000
 const RATE_LIMIT_REFILL_RATE = RATE_LIMIT_MAX / RATE_LIMIT_WINDOW_MS
 
-function getClientIp(event: any): string {
+function getClientIp(event: H3Event): string {
   const cfIp = getRequestHeader(event, 'cf-connecting-ip')
   if (cfIp) return cfIp
   const xff = getRequestHeader(event, 'x-forwarded-for')
