@@ -42,6 +42,7 @@
 </template>
 
 <script setup>
+const config = useRuntimeConfig()
 const currentYear = new Date().toLocaleString('default', { month: 'long' }) + ' ' + new Date().getFullYear()
-const buildVersion = 'v2026.07.14.3'
+const buildVersion = config.public.buildId
 </script>
