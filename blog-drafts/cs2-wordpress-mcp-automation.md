@@ -113,7 +113,7 @@
 <p>WordPress application passwords provide a clean authentication mechanism without sharing admin credentials. Each integration gets its own application password with scoped permissions:</p>
 <pre><code># WordPress generates an application password per user
 # The MCP server stores it as an environment variable
-WORDPRESS_APP_PASSWORD=xxxx xxxx xxxx xxxx xxxx xxxx</code></pre>
+WORDPRESS_APP_PASSWORD=<your_application_password></code></pre>
 <p>The application password is tied to a specific WordPress user. If compromised, you revoke that one password — not the entire admin account.</p>
 
 <h3>Content Pipeline Automation</h3>
