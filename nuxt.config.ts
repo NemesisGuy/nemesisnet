@@ -63,9 +63,10 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/images/brand/Nemesis_Logo_Icon.ico' },
         { rel: 'icon', type: 'image/png', href: '/images/brand/Nemesis_Logo_Icon.png' },
         { rel: 'shortcut icon', href: '/images/brand/Nemesis_Logo_Icon.ico' },
-        { rel: 'stylesheet', href: '/css/main.css?v=20260714c' },
-        { rel: 'stylesheet', href: '/css/aurora-mode.css?v=20260714' },
-        { rel: 'stylesheet', href: '/css/nemesis-mode.css?v=20260714' }
+        { rel: 'preload', href: '/images/brand/Nemesis_Logo_Icon.webp', as: 'image', fetchpriority: 'high' },
+        { rel: 'stylesheet', href: '/css/main.css?v=20260714c', media: 'print', onload: "this.media='all'" },
+        { rel: 'stylesheet', href: '/css/aurora-mode.css?v=20260714', media: 'print', onload: "this.media='all'" },
+        { rel: 'stylesheet', href: '/css/nemesis-mode.css?v=20260714', media: 'print', onload: "this.media='all'" }
       ],
       script: [
         {
