@@ -156,11 +156,11 @@ test.describe('Accessibility Fixes E2E', () => {
     }
   })
 
-  test('Fix 7: Contact form messages have proper ARIA roles', async ({ page }) => {
+  test('Fix 7: Contact form messages have proper ARIA roles', async () => {
     // Vue strips v-if elements from SSR when conditions are false.
     // Verify the source template has the correct ARIA attributes.
-    const fs = require('fs')
-    const source = fs.readFileSync('pages/contact.vue', 'utf-8')
+    const { readFileSync } = await import('fs')
+    const source = readFileSync('pages/contact.vue', 'utf-8')
     expect(source).toContain('role="status"')
     expect(source).toContain('aria-live="polite"')
     expect(source).toContain('role="alert"')
