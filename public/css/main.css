@@ -1386,7 +1386,7 @@ html[data-theme="light"][data-nemesis="on"] .footer-line .footer-divider {
   font-size: 1.18rem;
   font-weight: 700;
   margin-bottom: 8px;
-  text-align: center;
+  text-align: center !important;
 }
 
 .pricing-title-row {
