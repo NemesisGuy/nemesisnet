@@ -32,6 +32,10 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, message: 'Name, email, and message are required.' })
   }
 
+  if (trimmedName.length > 100 || trimmedEmail.length > 254 || trimmedMessage.length > 5000) {
+    throw createError({ statusCode: 400, message: 'Input too long. Please keep name under 100, email under 254, and message under 5000 characters.' })
+  }
+
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   if (!emailRegex.test(trimmedEmail)) {
     throw createError({ statusCode: 400, message: 'Invalid email address.' })
