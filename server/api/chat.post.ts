@@ -165,9 +165,9 @@ export default defineEventHandler(async (event) => {
   const sanitizedHistory = Array.isArray(history)
     ? history
         .slice(-10)
-        .filter((msg: { role: string }) => msg.role === 'user')
-        .map((msg: { content: string }) => ({
-          role: 'user' as const,
+        .filter((msg: { role: string }) => msg.role === 'user' || msg.role === 'model')
+        .map((msg: { role: string; content: string }) => ({
+          role: msg.role === 'user' ? 'user' as const : 'model' as const,
           parts: [{ text: String(msg.content || '').slice(0, 1000) }]
         }))
     : []
