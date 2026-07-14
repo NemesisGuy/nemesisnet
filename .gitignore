@@ -22,6 +22,9 @@ lh-*.json
 lighthouse-local-home.json
 lighthouse-report-*.json
 
+# Temporary artifacts
+temp/
+
 # Business docs (contracts, SOPs, forms, proposals)
 nemesis-docs/
 .gstack/
