@@ -7,8 +7,6 @@
         <div class="breadcrumbs" aria-label="Breadcrumb">
           <NuxtLink to="/">Home</NuxtLink>
           <span>/</span>
-          <NuxtLink to="/resources">Resources</NuxtLink>
-          <span>/</span>
           <span aria-current="page">Pricing Guide</span>
         </div>
 

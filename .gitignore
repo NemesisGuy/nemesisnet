@@ -1,4 +1,6 @@
-.nuxt/\nnode_modules/
+.nuxt/
+node_modules/
+node_modules/.cache/
 .output/
 dist/
 legacy/

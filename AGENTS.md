@@ -1,5 +1,17 @@
 # Agent Instructions for NemesisNet
 
+## CRITICAL: Git Remote & Branch
+
+- **Current branch**: `dev` (push here to trigger CI)
+- **Remote**: `origin` (GitHub: `https://github.com/NemesisGuy/nemesisnet.git`)
+- **CI triggers on push to `dev` or `master`**
+- **Deploy command**: `git push origin dev`
+
+```bash
+# Quick deploy:
+git add -A && git commit -m "your message" && git push origin dev
+```
+
 ## CRITICAL: Docker Commands Must Run in WSL
 
 **Docker is NOT available in the Windows PowerShell environment.** All Docker commands MUST be executed inside WSL.
