@@ -8,7 +8,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      noIndex: process.env.NUXT_PUBLIC_NO_INDEX === 'true'
+      noIndex: process.env.NUXT_PUBLIC_NO_INDEX === 'true',
+      buildId: process.env.NUXT_PUBLIC_BUILD_ID || 'dev'
     },
     turnstile: {
       secretKey: process.env.TURNSTILE_SECRET_KEY || ''

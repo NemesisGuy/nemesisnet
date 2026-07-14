@@ -3,12 +3,12 @@ steps:
     image: docker:27
     pull: true
     commands:
-      - echo "Installing Node.js..."
-      - apk add --no-cache nodejs npm
+      - echo "Installing Node.js and Git..."
+      - apk add --no-cache nodejs npm git
       - echo "Building Nuxt app..."
       - npm ci
       - npm run lint
-      - npm run build
+      - NUXT_PUBLIC_BUILD_ID="v$(date +%Y.%m.%d)-$(git rev-parse --short HEAD)" npm run build
       - echo "Building Docker image..."
       - echo $${DOCKER_PASSWORD} | docker login -u $${DOCKER_USERNAME} --password-stdin
       - docker build --no-cache -t nemesisguy/nemesisnet:dev .
@@ -30,12 +30,12 @@ steps:
     image: docker:27
     pull: true
     commands:
-      - echo "Installing Node.js..."
-      - apk add --no-cache nodejs npm
+      - echo "Installing Node.js and Git..."
+      - apk add --no-cache nodejs npm git
       - echo "Building Nuxt app..."
       - npm ci
       - npm run lint
-      - npm run build
+      - NUXT_PUBLIC_BUILD_ID="v$(date +%Y.%m.%d)-$(git rev-parse --short HEAD)" npm run build
       - echo "Building and pushing prod Docker image..."
       - echo $${DOCKER_PASSWORD} | docker login -u $${DOCKER_USERNAME} --password-stdin
       - docker build --no-cache -t nemesisguy/nemesisnet:latest .

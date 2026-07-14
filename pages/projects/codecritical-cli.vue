@@ -10,8 +10,9 @@
           sizes="(max-width: 640px) 480px, (max-width: 900px) 640px, 800px"
           class="detail-image"
           alt="CodeCritical CLI"
-          loading="lazy"
-          decoding="async"
+           loading="eager"
+           fetchpriority="high"
+           decoding="async"
         >
         
         <h2>The Challenge</h2>
