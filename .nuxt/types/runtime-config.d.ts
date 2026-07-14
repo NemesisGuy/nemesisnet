@@ -1,5 +1,9 @@
 import { RuntimeConfig as UserRuntimeConfig, PublicRuntimeConfig as UserPublicRuntimeConfig } from 'nuxt/schema'
   interface SharedRuntimeConfig {
+   turnstile: {
+      secretKey: string,
+   },
+
    app: {
       buildId: string,
 
@@ -10,12 +14,40 @@ import { RuntimeConfig as UserRuntimeConfig, PublicRuntimeConfig as UserPublicRu
       cdnURL: string,
    },
 
+   resendApiKey: string,
+
+   gemmaApiKey: string,
+
    nitro: {
       envPrefix: string,
    },
+
+   "nuxt-scripts": {
+      version: string,
+
+      googleStaticMapsProxy: any,
+   },
   }
   interface SharedPublicRuntimeConfig {
+   turnstile: {
+      siteKey: string,
+   },
 
+   noIndex: boolean,
+
+   "nuxt-scripts": {
+      version: string,
+
+      prefix: string,
+
+      defaultScriptOptions: {
+         trigger: string,
+      },
+
+      googleStaticMapsProxy: any,
+
+      endpoints: any,
+   },
   }
 declare module '@nuxt/schema' {
   interface RuntimeConfig extends UserRuntimeConfig {}

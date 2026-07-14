@@ -4,8 +4,8 @@
       "vue-router": [
         "../node_modules/vue-router"
       ],
-      "vue-router/auto-routes": [
-        "../node_modules/vue-router/vue-router-auto-routes"
+      "@types/cloudflare-turnstile": [
+        "../node_modules/@types/cloudflare-turnstile"
       ],
       "nuxt": [
         "../node_modules/nuxt"
@@ -43,6 +43,9 @@
       "crossws": [
         "../node_modules/crossws"
       ],
+      "nitropack": [
+        "../node_modules/nitropack"
+      ],
       "vite/client": [
         "../node_modules/vite/client"
       ],
@@ -52,8 +55,8 @@
       "nitropack/runtime": [
         "../node_modules/nitropack/runtime"
       ],
-      "nitropack": [
-        "../node_modules/nitropack"
+      "vue-router/auto-routes": [
+        "../node_modules/vue-router/vue-router-auto-routes.d.mts"
       ],
       "~": [
         ".."
@@ -100,6 +103,12 @@
       "vue-demi": [
         "../node_modules/nuxt/dist/app/compat/vue-demi"
       ],
+      "#nuxt-scripts": [
+        "../node_modules/@nuxt/scripts/dist/runtime"
+      ],
+      "#nuxt-scripts/*": [
+        "../node_modules/@nuxt/scripts/dist/runtime/*"
+      ],
       "#vue-router": [
         "../node_modules/vue-router"
       ],
@@ -110,7 +119,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/8f231c0d-735b-4a82-b432-19f13806dcd6.json"
+        "./manifest/meta/dev.json"
       ],
       "#build": [
         "."

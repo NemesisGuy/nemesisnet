@@ -1,0 +1,225 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - link "Skip to content" [ref=e4] [cursor=pointer]:
+    - /url: "#main"
+  - navigation [ref=e5]:
+    - generic [ref=e6]:
+      - link "NemesisNet Logo NemesisNet" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img "NemesisNet Logo" [ref=e8]
+        - generic [ref=e9]: NemesisNet
+      - generic [ref=e10]:
+        - link "Services" [ref=e11] [cursor=pointer]:
+          - /url: /services
+        - link "Projects" [ref=e12] [cursor=pointer]:
+          - /url: /projects
+        - link "About" [ref=e13] [cursor=pointer]:
+          - /url: /about
+        - link "Testimonials" [ref=e14] [cursor=pointer]:
+          - /url: /#testimonials
+        - link "Contact" [ref=e15] [cursor=pointer]:
+          - /url: /contact
+        - link "NemesisNet Blog" [ref=e16] [cursor=pointer]:
+          - /url: https://blog.nemesisnet.co.za/
+          - text: Blog
+        - button "Toggle Aurora Mode" [ref=e17] [cursor=pointer]:
+          - generic [ref=e18]: ✦
+        - button "Toggle Nemesis Mode" [ref=e19] [cursor=pointer]:
+          - generic [ref=e20]: ⚙
+        - button "Toggle light and dark theme" [ref=e21] [cursor=pointer]:
+          - generic [ref=e22]: ☀
+  - main [ref=e23]:
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - img "NemesisNet logo" [ref=e28]
+          - generic [ref=e29]:
+            - heading "AI Infrastructure & Platform Engineering" [level=1] [ref=e30]
+            - paragraph [ref=e31]: We build real infrastructure — not API wrappers.
+        - generic [ref=e32]:
+          - paragraph [ref=e33]:
+            - strong [ref=e34]: NemesisNet
+            - text: builds custom AI systems, self-hosted infrastructure, and SaaS platforms for businesses that need control, scalability, and engineering-grade reliability.
+          - generic [ref=e35]:
+            - generic [ref=e36]: AI agents & MCP integrations
+            - generic [ref=e37]: Self-hosted LLM & TTS pipelines
+            - generic [ref=e38]: Multi-tenant SaaS platforms
+            - generic [ref=e39]: Production automation & infrastructure
+          - generic [ref=e40]:
+            - link "See Our Work" [ref=e41] [cursor=pointer]:
+              - /url: /projects
+            - link "Scope Your Project" [ref=e42] [cursor=pointer]:
+              - /url: https://scope.nemesisnet.co.za
+        - link "Scroll to projects" [ref=e43] [cursor=pointer]:
+          - /url: /projects
+          - img [ref=e44]
+      - generic [ref=e46]:
+        - heading "Core Services" [level=2] [ref=e47]
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - heading "Backend & API Engineering" [level=3] [ref=e50]
+            - paragraph [ref=e51]: Custom APIs, data pipelines, system integrations, and backend architecture.
+            - link "Custom Software Details" [ref=e52] [cursor=pointer]:
+              - /url: /services/custom-software
+          - generic [ref=e53]:
+            - heading "SaaS Development" [level=3] [ref=e54]
+            - paragraph [ref=e55]: Scalable multi-tenant platforms with authentication, billing, and APIs.
+            - link "SaaS Development Details" [ref=e56] [cursor=pointer]:
+              - /url: /services/saas-development
+          - generic [ref=e57]:
+            - heading "AI Development" [level=3] [ref=e58]
+            - paragraph [ref=e59]: MCP agents, self-hosted TTS pipelines, and multi-agent coding harnesses.
+            - link "AI Development Details" [ref=e60] [cursor=pointer]:
+              - /url: /services/ai-development
+          - generic [ref=e61]:
+            - heading "Self-Hosted AI Infrastructure" [level=3] [ref=e62]
+            - paragraph [ref=e63]: GGUF models, GPU deployment, and vector databases — no vendor lock-in.
+            - link "Self-Hosted AI Details" [ref=e64] [cursor=pointer]:
+              - /url: /services/self-hosted-ai
+          - generic [ref=e65]:
+            - heading "Infrastructure & DevOps" [level=3] [ref=e66]
+            - paragraph [ref=e67]: Docker, CI/CD, cloud networking, and infrastructure automation.
+            - link "Infrastructure Details" [ref=e68] [cursor=pointer]:
+              - /url: /services/infrastructure
+          - generic [ref=e69]:
+            - heading "Consulting & Architecture" [level=3] [ref=e70]
+            - paragraph [ref=e71]: System design, code reviews, and technical leadership for teams.
+            - link "Consulting Details" [ref=e72] [cursor=pointer]:
+              - /url: /services/consulting
+        - link "View Services & Pricing" [ref=e74] [cursor=pointer]:
+          - /url: /services
+      - generic [ref=e75]:
+        - heading "Featured Projects" [level=2] [ref=e76]
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e79]: Enterprise SaaS
+            - img "CodeCritical SaaS" [ref=e80]
+            - heading "CodeCritical SaaS" [level=3] [ref=e81]
+            - paragraph [ref=e82]: Enterprise B2B platform with role-based access, client portals, and automated billing.
+            - link "Detail" [ref=e84] [cursor=pointer]:
+              - /url: /projects/codecritical-saas
+          - generic [ref=e85]:
+            - generic [ref=e86]: SaaS Platform
+            - img "Since" [ref=e87]
+            - heading "Since" [level=3] [ref=e88]
+            - paragraph [ref=e89]: Accountability tracker — make claims, record events, set deadlines, verify outcomes over time.
+            - generic [ref=e90]:
+              - link "Detail" [ref=e91] [cursor=pointer]:
+                - /url: /projects/since
+              - link "Live Demo" [ref=e92] [cursor=pointer]:
+                - /url: https://since.nemesisnet.co.za
+          - generic [ref=e93]:
+            - generic [ref=e94]: AI/ML
+            - img "VoxNemesis Supertonic" [ref=e95]
+            - heading "VoxNemesis Supertonic" [level=3] [ref=e96]
+            - paragraph [ref=e97]: WebGPU-powered local voice cloning with ONNX inference, real-time TTS, and zero cloud dependencies.
+            - link "Detail" [ref=e99] [cursor=pointer]:
+              - /url: /projects/voxnemesis-supertonic
+          - generic [ref=e100]:
+            - generic [ref=e101]: AI/Tooling
+            - img "PocketTTS-MCP" [ref=e102]
+            - heading "PocketTTS-MCP" [level=3] [ref=e103]
+            - paragraph [ref=e104]: Model Context Protocol server for local LLM-powered text-to-speech with audio streaming and voice cloning.
+            - link "Detail" [ref=e106] [cursor=pointer]:
+              - /url: /projects/pockettts-mcp
+        - link "View All Projects" [ref=e108] [cursor=pointer]:
+          - /url: /projects
+      - generic [ref=e109]:
+        - heading "Testimonials" [level=2] [ref=e110]
+        - generic [ref=e111]:
+          - generic [ref=e112]:
+            - generic [ref=e114]:
+              - strong [ref=e115]: NK Assessments
+              - generic [ref=e116]: Business Owner — Cape Town, South Africa
+            - paragraph [ref=e117]: "\"The project was delivered quickly without compromising quality. Everything was set up and deployed with no issues. Highly recommend for any custom software or automation needs.\""
+            - generic [ref=e118]:
+              - generic [ref=e119]: "Related:"
+              - link "NK Assessments" [ref=e120] [cursor=pointer]:
+                - /url: /projects/nk-assessments
+          - generic [ref=e121]:
+            - generic [ref=e123]:
+              - strong [ref=e124]: Bored Room Cafe
+              - generic [ref=e125]: Business Owner — Cape Town, South Africa
+            - paragraph [ref=e126]: "\"NemesisNet delivered a clean, well-structured system that worked as expected from day one. Communication was clear and the process was smooth throughout.\""
+            - generic [ref=e127]:
+              - generic [ref=e128]: "Related:"
+              - link "Bored Room Cafe" [ref=e129] [cursor=pointer]:
+                - /url: /projects/bored-room-cafe
+      - generic [ref=e130]:
+        - heading "Ready to Start Your Project?" [level=2] [ref=e131]
+        - paragraph [ref=e132]: Every system is scoped by complexity and workflow requirements — then right-sized with transparent pricing. Let's talk.
+        - generic [ref=e133]:
+          - link "Scope Your Project" [ref=e134] [cursor=pointer]:
+            - /url: https://scope.nemesisnet.co.za
+          - link "View Pricing →" [ref=e135] [cursor=pointer]:
+            - /url: /services
+      - generic [ref=e137]:
+        - heading "Get in Touch" [level=2] [ref=e138]
+        - paragraph [ref=e139]: I review every enquiry personally and respond within 24 hours.
+        - generic [ref=e140]:
+          - link "Email" [ref=e141] [cursor=pointer]:
+            - /url: mailto:admin@nemesisnet.co.za
+          - link "GitHub" [ref=e142] [cursor=pointer]:
+            - /url: https://github.com/NemesisGuy
+          - link "LinkedIn" [ref=e143] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/peter-buckingham-65438757
+          - link "Portfolio" [ref=e144] [cursor=pointer]:
+            - /url: https://forkmyfolio.nemesisnet.co.za/nemesis
+        - link "Send a Message →" [ref=e146] [cursor=pointer]:
+          - /url: /contact
+        - paragraph [ref=e147]: Available for remote engagements globally. Also available for WordPress, WooCommerce, and CMS projects — enquire directly.
+  - contentinfo [ref=e148]:
+    - generic [ref=e149]:
+      - generic [ref=e150]:
+        - strong [ref=e151]: Business
+        - link "Services" [ref=e152] [cursor=pointer]:
+          - /url: /services
+        - link "Projects" [ref=e153] [cursor=pointer]:
+          - /url: /projects
+        - link "About" [ref=e154] [cursor=pointer]:
+          - /url: /about
+        - link "Pricing Guide" [ref=e155] [cursor=pointer]:
+          - /url: /software-development-cost-south-africa
+        - link "Testimonials" [ref=e156] [cursor=pointer]:
+          - /url: /#testimonials
+        - link "Contact" [ref=e157] [cursor=pointer]:
+          - /url: /contact
+      - generic [ref=e158]:
+        - strong [ref=e159]: Legal
+        - link "Refund Policy" [ref=e160] [cursor=pointer]:
+          - /url: /legal/refund
+        - link "Terms of Service" [ref=e161] [cursor=pointer]:
+          - /url: /legal/terms
+        - link "Privacy Policy" [ref=e162] [cursor=pointer]:
+          - /url: /legal/privacy
+      - generic [ref=e163]:
+        - strong [ref=e164]: Links
+        - link "Blog" [ref=e165] [cursor=pointer]:
+          - /url: https://blog.nemesisnet.co.za/
+        - link "Brand Guide" [ref=e166] [cursor=pointer]:
+          - /url: https://brand.nemesisnet.co.za
+        - link "GitHub" [ref=e167] [cursor=pointer]:
+          - /url: https://github.com/NemesisGuy
+    - generic [ref=e168]:
+      - generic [ref=e169]: © July 2026 NemesisNet
+      - generic [ref=e170]: "|"
+      - generic [ref=e171]: Based in Cape Town, South Africa
+      - generic [ref=e172]: "|"
+      - generic [ref=e173]: Remote engagements globally
+      - generic [ref=e174]: "|"
+      - generic [ref=e175]:
+        - text: Built by
+        - link "NemesisGuy on GitHub" [ref=e176] [cursor=pointer]:
+          - /url: https://github.com/NemesisGuy
+          - img [ref=e177]
+          - text: NemesisGuy
+      - generic [ref=e179]: "|"
+      - generic [ref=e180]:
+        - text: Powered by
+        - link "NemesisNet.co.za" [ref=e181] [cursor=pointer]:
+          - /url: https://nemesisnet.co.za
+      - generic [ref=e182]: "|"
+      - generic [ref=e183]: All rights reserved.
+```

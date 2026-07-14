@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Date: Wed, 08 Jul 2026 12:08:47 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Expires: 0
+Pragma: no-cache
+Set-Cookie: refreshToken=0653b74a-9065-4ec5-ac0b-2abdc51aa43b; Path=/; Max-Age=1209600; Expires=Wed, 22 Jul 2026 12:08:47 GMT; HttpOnly; SameSite=Lax
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+Cf-Cache-Status: DYNAMIC
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=jO68S04obd8XJKNdMU%2BcNrV9Bc56lrsbU9tsILbIcNwHjK88FpWqGzMlwUCO1vBXqJ8CrtWe7J41jZFAdyt9CSVsy%2FbcDP58DUyqEcqmRXyX7qqvh5ecmiBYoTcbm1OXTHfmLAHawLnLJx2IVvzUdI5V9g%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Server: cloudflare
+CF-RAY: a17ef9f08b199863-JNB
+alt-svc: h3=":443"; ma=86400
+

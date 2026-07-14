@@ -1,0 +1,557 @@
+/* ============================================================
+   NemesisNet Keycloak Theme — targets parent DOM exactly
+   ============================================================ */
+
+:root {
+    --nn-blue: #1E88E5;
+    --nn-blue-bright: #2979FF;
+    --nn-teal: #00C2A8;
+    --nn-teal-flare: #33D6B7;
+    --nn-teal-ember: #008B6A;
+    --nn-black: #0a0e27;
+    --nn-white: #F4F4F4;
+    --nn-accent: var(--nn-blue);
+    --nn-accent-hover: var(--nn-blue-bright);
+    --nn-accent-glow: rgba(41,121,255,0.18);
+    --nn-error: #ff4444;
+    --nn-font: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    --nn-radius: 14px;
+    --nn-radius-sm: 8px;
+}
+
+/* ============================================================
+   CRITICAL OVERRIDES — PatternFly can't touch these
+   ============================================================ */
+#kc-header, #kc-header-wrapper {
+    display: none !important;
+}
+
+.nn-social-btn,
+#kc-social-providers a,
+#kc-social-providers button,
+.pf-c-button.pf-m-control.kc-social-item,
+a[class*="kc-social-item"],
+a[class*="kcFormSocialAccountListButton"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    padding: 12px 16px !important;
+    margin-bottom: 10px !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    font-family: var(--nn-font) !important;
+    color: var(--nn-white) !important;
+    background: rgba(255,255,255,0.05) !important;
+    border: 1px solid rgba(255,255,255,0.12) !important;
+    border-radius: var(--nn-radius-sm) !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    text-align: center !important;
+    transition: all 0.2s ease !important;
+    box-sizing: border-box !important;
+    line-height: 1.4 !important;
+}
+
+.nn-social-btn:hover,
+#kc-social-providers a:hover,
+#kc-social-providers button:hover,
+.pf-c-button.pf-m-control.kc-social-item:hover,
+a[class*="kc-social-item"]:hover,
+a[class*="kcFormSocialAccountListButton"]:hover {
+    background: rgba(255,255,255,0.10) !important;
+    border-color: rgba(255,255,255,0.20) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3) !important;
+}
+
+.nn-social-btn i,
+#kc-social-providers a i,
+#kc-social-providers button i {
+    font-size: 1.1rem !important;
+    width: 20px !important;
+    text-align: center !important;
+    flex-shrink: 0 !important;
+}
+
+#kc-social-providers {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    margin-top: 16px !important;
+    list-style: none !important;
+}
+
+.nn-divider {
+    display: flex !important;
+    align-items: center !important;
+    margin: 20px 0 !important;
+}
+
+.nn-divider::before,
+.nn-divider::after {
+    content: '' !important;
+    flex: 1 !important;
+    height: 1px !important;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent) !important;
+}
+
+.nn-divider span {
+    padding: 0 12px !important;
+    font-size: 0.8rem !important;
+    color: rgba(244,244,244,0.5) !important;
+    white-space: nowrap !important;
+}
+
+.nn-social-btn svg {
+    width: 20px !important;
+    height: 20px !important;
+    flex-shrink: 0 !important;
+}
+
+/* === Body & HTML === */
+html.login-pf, html {
+    height: 100% !important;
+}
+
+body, body.login-pf-body {
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: var(--nn-font) !important;
+    color: var(--nn-white) !important;
+    background-color: var(--nn-black) !important;
+    background-image:
+        radial-gradient(ellipse 80% 50% at 20% 20%, rgba(41,121,255,0.30) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 60% at 80% 10%, rgba(0,194,168,0.22) 0%, transparent 45%),
+        radial-gradient(ellipse 70% 50% at 50% 90%, rgba(41,121,255,0.18) 0%, transparent 50%),
+        radial-gradient(ellipse 40% 40% at 10% 70%, rgba(0,255,255,0.10) 0%, transparent 40%),
+        radial-gradient(ellipse 30% 30% at 90% 60%, rgba(255,0,80,0.06) 0%, transparent 40%) !important;
+    background-attachment: fixed !important;
+    -webkit-font-smoothing: antialiased !important;
+    overflow-x: hidden !important;
+}
+
+/* VHS scanlines */
+body::before {
+    content: '' !important;
+    position: fixed !important;
+    inset: 0 !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.02) 2px, rgba(255,255,255,0.02) 4px) !important;
+}
+
+/* Vignette */
+body::after {
+    content: '' !important;
+    position: fixed !important;
+    inset: 0 !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+    background: radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.55) 100%) !important;
+}
+
+/* === Main page wrapper === */
+.login-pf {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 100vh !important;
+    background: transparent !important;
+}
+
+.login-pf-page {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 100vh !important;
+    width: 100% !important;
+    background: transparent !important;
+    padding: 24px !important;
+}
+
+/* Nuke all container/row/col Bootstrap classes */
+.container-fluid, .container,
+[class*="col-sm"], [class*="col-md"], [class*="col-lg"],
+[class*="col-xs"], [class*="row"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+}
+
+/* === Header === */
+.login-pf-page-header {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-bottom: 24px !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+#kc-header, #kc-header-wrapper {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+    display: none !important;
+}
+
+#kc-header-wrapper {
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+    color: var(--nn-white) !important;
+    text-shadow: -1px 0 0 rgba(255,0,80,0.25), 1px 0 0 rgba(0,255,255,0.25) !important;
+    letter-spacing: -0.02em !important;
+}
+
+/* === Form card === */
+.card-pf, .card {
+    background: linear-gradient(160deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 50%, rgba(41,121,255,0.04) 100%) !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    border-radius: var(--nn-radius) !important;
+    backdrop-filter: blur(30px) saturate(130%) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(130%) !important;
+    box-shadow:
+        0 24px 80px rgba(0,0,0,0.55),
+        0 0 0 1px rgba(255,255,255,0.04),
+        0 0 100px rgba(41,121,255,0.10),
+        inset 0 1px 0 rgba(255,255,255,0.06) !important;
+    max-width: 450px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 32px !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+/* Gradient border shimmer */
+.card-pf::before, .card::before {
+    content: '' !important;
+    position: absolute !important;
+    inset: -1px !important;
+    border-radius: var(--nn-radius) !important;
+    padding: 1px !important;
+    background: linear-gradient(160deg, rgba(41,121,255,0.25) 0%, transparent 40%, transparent 60%, rgba(0,255,255,0.15) 100%) !important;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) !important;
+    -webkit-mask-composite: xor !important;
+    mask-composite: exclude !important;
+    pointer-events: none !important;
+    opacity: 0.6 !important;
+}
+
+/* === Logo === */
+.nn-logo-wrapper {
+    text-align: center !important;
+    margin-bottom: 8px !important;
+}
+
+.nn-logo {
+    height: 80px !important;
+    width: auto !important;
+    filter: brightness(1.4) drop-shadow(0 0 12px rgba(0,194,168,0.4)) !important;
+}
+
+/* === Form header === */
+.login-pf-header {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-bottom: 16px !important;
+    text-align: center !important;
+}
+
+/* === Page title === */
+#kc-page-title {
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    color: var(--nn-white) !important;
+    text-align: center !important;
+    margin: 0 0 8px 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    text-shadow: -1px 0 0 rgba(255,0,80,0.2), 1px 0 0 rgba(0,255,255,0.2) !important;
+}
+
+/* === Form wrapper === */
+#kc-form, #kc-form-wrapper {
+    padding: 0 8px !important;
+}
+
+/* === Alerts === */
+.pf-c-alert, .alert-error, .alert-success, .alert-warning, .alert-info {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    padding: 12px 16px !important;
+    border-radius: var(--nn-radius-sm) !important;
+    font-size: 0.875rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 20px !important;
+    border: 1px solid !important;
+    background: rgba(255,68,68,0.08) !important;
+    border-color: rgba(255,68,68,0.25) !important;
+    color: #ff6b6b !important;
+}
+
+.alert-success, .pf-c-alert.pf-m-success {
+    background: rgba(0,194,168,0.08) !important;
+    border-color: rgba(0,194,168,0.25) !important;
+    color: var(--nn-teal-flare) !important;
+}
+
+.pf-c-alert__icon, [class*="kcFeedback"] {
+    display: none !important;
+}
+
+.pf-c-alert__title, [class*="kcAlertTitle"] {
+    color: inherit !important;
+}
+
+/* === Form groups === */
+.form-group, .pf-c-form__group {
+    margin-bottom: 18px !important;
+}
+
+.nn-input-group {
+    margin-bottom: 18px !important;
+}
+
+/* === Labels === */
+.pf-c-form__label, .pf-c-form__label-text,
+label.pf-c-form__label,
+.nn-input-group label {
+    display: block !important;
+    font-size: 0.8125rem !important;
+    font-weight: 600 !important;
+    color: rgba(244,244,244,0.72) !important;
+    margin-bottom: 6px !important;
+    letter-spacing: 0.02em !important;
+    text-transform: uppercase !important;
+}
+
+/* === Inputs === */
+.pf-c-form-control,
+input[name="username"],
+input[name="password"],
+input[type="text"],
+input[type="password"] {
+    width: 89.5% !important;
+    padding: 12px 16px !important;
+    font-size: 0.9375rem !important;
+    font-family: var(--nn-font) !important;
+    color: var(--nn-white) !important;
+    background: rgba(255,255,255,0.04) !important;
+    border: 1px solid rgba(255,255,255,0.10) !important;
+    border-radius: var(--nn-radius-sm) !important;
+    outline: none !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease !important;
+    box-shadow: none !important;
+}
+
+.pf-c-form-control:focus,
+input[name="username"]:focus,
+input[name="password"]:focus {
+    border-color: var(--nn-accent) !important;
+    box-shadow: 0 0 0 3px var(--nn-accent-glow), 0 0 20px rgba(41,121,255,0.08) !important;
+    background: rgba(255,255,255,0.05) !important;
+}
+
+.pf-c-form-control::placeholder,
+input::placeholder {
+    color: rgba(244,244,244,0.3) !important;
+}
+
+input[aria-invalid="true"] {
+    border-color: var(--nn-error) !important;
+    box-shadow: 0 0 0 3px rgba(255,68,68,0.15) !important;
+}
+
+/* === Error messages === */
+.pf-c-form__helper-text.pf-m-error,
+.nn-field-error {
+    display: block !important;
+    font-size: 0.8125rem !important;
+    color: #ff6b6b !important;
+    margin-top: 6px !important;
+    line-height: 1.4 !important;
+}
+
+/* === Checkbox / remember me === */
+.login-pf-settings, .nn-checkbox-row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 20px !important;
+    gap: 12px !important;
+}
+
+.checkbox label, .pf-c-check__label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 0.875rem !important;
+    color: rgba(244,244,244,0.72) !important;
+    cursor: pointer !important;
+}
+
+input[type="checkbox"] {
+    width: 16px !important;
+    height: 16px !important;
+    accent-color: var(--nn-accent) !important;
+}
+
+/* === Forgot password link === */
+.login-pf-settings a,
+a[href*="loginResetCredentials"] {
+    color: var(--nn-accent) !important;
+    text-decoration: none !important;
+    font-size: 0.875rem !important;
+    transition: color 0.2s ease !important;
+}
+
+a[href*="loginResetCredentials"]:hover {
+    color: var(--nn-accent-hover) !important;
+    text-decoration: underline !important;
+}
+
+/* === Submit button === */
+.pf-c-button.pf-m-primary,
+input[type="submit"],
+#kc-login {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 12px 24px !important;
+    font-size: 0.9375rem !important;
+    font-weight: 600 !important;
+    font-family: var(--nn-font) !important;
+    border: none !important;
+    border-radius: var(--nn-radius-sm) !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    background: linear-gradient(135deg, var(--nn-accent), var(--nn-teal-ember)) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 20px var(--nn-accent-glow) !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    text-decoration: none !important;
+    line-height: 1.4 !important;
+}
+
+.pf-c-button.pf-m-primary:hover,
+input[type="submit"]:hover,
+#kc-login:hover {
+    background: linear-gradient(135deg, var(--nn-accent-hover), var(--nn-teal)) !important;
+    box-shadow: 0 8px 30px var(--nn-accent-glow), 0 0 60px rgba(41,121,255,0.10) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* === Social providers (see CRITICAL OVERRIDES above) === */
+
+/* === Registration link === */
+.login-pf-signup, #kc-registration {
+    text-align: center !important;
+    margin-top: 16px !important;
+}
+
+.login-pf-signup span, #kc-registration span {
+    font-size: 0.8125rem !important;
+    color: rgba(244,244,244,0.72) !important;
+}
+
+.login-pf-signup a, #kc-registration a {
+    color: var(--nn-accent) !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+}
+
+.login-pf-signup a:hover, #kc-registration a:hover {
+    color: var(--nn-accent-hover) !important;
+    text-decoration: underline !important;
+}
+
+/* === Locale selector === */
+.pf-c-dropdown, #kc-locale {
+    position: absolute !important;
+    top: 12px !important;
+    right: 12px !important;
+    z-index: 10 !important;
+}
+
+.pf-c-dropdown button, #kc-locale button {
+    background: rgba(255,255,255,0.05) !important;
+    border: 1px solid rgba(255,255,255,0.10) !important;
+    color: rgba(244,244,244,0.72) !important;
+    padding: 6px 12px !important;
+    border-radius: var(--nn-radius-sm) !important;
+    font-size: 0.8125rem !important;
+    cursor: pointer !important;
+}
+
+/* === Password visibility toggle === */
+.pf-c-button.pf-m-control,
+button[data-password-toggle] {
+    background: rgba(255,255,255,0.04) !important;
+    border: 1px solid rgba(255,255,255,0.10) !important;
+    border-radius: 0 var(--nn-radius-sm) var(--nn-radius-sm) 0 !important;
+    color: rgba(244,244,244,0.5) !important;
+    cursor: pointer !important;
+    transition: color 0.2s ease !important;
+}
+
+.pf-c-button.pf-m-control:hover {
+    color: var(--nn-white) !important;
+}
+
+/* === Footer === */
+#kc-info, .login-pf-signup,
+.nn-powered-by {
+    border-top: 1px solid rgba(255,255,255,0.06) !important;
+    margin-top: 20px !important;
+    padding-top: 16px !important;
+}
+
+.nn-powered-by {
+    margin-top: 20px !important;
+    font-size: 0.75rem !important;
+    color: rgba(244,244,244,0.5) !important;
+    text-align: center !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.nn-powered-by strong {
+    color: var(--nn-accent) !important;
+}
+
+/* === Responsive === */
+@media (max-width: 480px) {
+    .card-pf, .card {
+        padding: 24px 16px !important;
+        margin: 0 8px !important;
+    }
+    #kc-header-wrapper {
+        font-size: 1.3rem !important;
+    }
+}
+
+/* === Accessibility === */
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+}
+
+input:focus-visible,
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--nn-accent) !important;
+    outline-offset: 2px !important;
+}

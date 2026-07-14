@@ -35,10 +35,13 @@
        <span>Powered by <a href="https://nemesisnet.co.za" target="_blank" rel="noopener">NemesisNet.co.za</a></span>
        <span class="footer-divider">|</span>
        <span>All rights reserved.</span>
+       <span class="footer-divider">|</span>
+       <span class="footer-version">{{ buildVersion }}</span>
      </div>
   </footer>
 </template>
 
 <script setup>
 const currentYear = new Date().toLocaleString('default', { month: 'long' }) + ' ' + new Date().getFullYear()
+const buildVersion = 'v2026.07.14.3'
 </script>
