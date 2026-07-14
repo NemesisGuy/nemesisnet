@@ -465,6 +465,7 @@ useHead({
 .detail-container { max-width: 1280px; margin: 0 auto; padding: 24px 24px 40px; }
 .detail-main { text-align: left !important; line-height: 1.8; }
 .detail-main p, .detail-main h2, .detail-main h3, .detail-main li { text-align: left !important; }
+.detail-main .pricing-title { text-align: center !important; }
 .section-cta { text-align: center !important; }
 .section-cta--prominent { margin: 32px 0 40px; display: flex; flex-direction: column; align-items: center; }
 .section-cta--prominent .btn--ignite { font-size: 1.05rem; padding: 14px 32px; display: inline-block; }

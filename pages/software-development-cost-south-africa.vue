@@ -324,6 +324,7 @@ useHead({
 .detail-container { max-width: 1280px; margin: 0 auto; padding: 24px 24px 40px; }
 .detail-main { text-align: left !important; line-height: 1.8; }
 .detail-main p, .detail-main h1, .detail-main h2, .detail-main h3, .detail-main h4, .detail-main li { text-align: left !important; }
+.detail-main .pricing-title { text-align: center !important; }
 .detail-main h1 { font-size: 2rem; color: var(--accent-color); margin: 0 0 16px; line-height: 1.3; }
 .detail-main h2 { font-size: 1.4rem; color: var(--accent-color); margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--glass-border); }
 .detail-main p { margin: 0 0 16px; color: var(--text-muted); font-size: 0.95rem; }
