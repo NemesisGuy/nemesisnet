@@ -1374,6 +1374,7 @@ html[data-theme="light"][data-nemesis="on"] .footer-line .footer-divider {
   display: flex;
   flex-direction: column;
   overflow: visible;
+  text-align: center;
 }
 
 .pricing-card--featured {
