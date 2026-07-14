@@ -55,17 +55,17 @@
         <div class="process-steps">
           <div class="process-step">
             <span class="step-number">1</span>
-            <h4>Discovery &amp; Architecture</h4>
+            <h3>Discovery &amp; Architecture</h3>
             <p>Map your data model, user roles, and core workflows. Design the PocketBase collections and define the API surface. Lock the architecture before any code is written.</p>
           </div>
           <div class="process-step">
             <span class="step-number">2</span>
-            <h4>Build &amp; Iterate</h4>
+            <h3>Build &amp; Iterate</h3>
             <p>Backend, frontend, and integration built in parallel. Each deliverable is tested and deployable. Regular checkpoints to keep delivery aligned with intent.</p>
           </div>
           <div class="process-step">
             <span class="step-number">3</span>
-            <h4>Deploy &amp; Launch</h4>
+            <h3>Deploy &amp; Launch</h3>
             <p>Docker deployment, SSL, domain setup, and final testing. Your system goes live with monitoring in place and support available.</p>
           </div>
         </div>
@@ -86,12 +86,12 @@
         <h2>Real Examples</h2>
         <div class="related-projects">
           <div class="related-card">
-            <h4>TorqueBooks — Workshop Management</h4>
+            <h3>TorqueBooks — Workshop Management</h3>
             <p>PocketBase + React with OAuth2 SSO, four-tier RBAC, and PDF invoicing.</p>
             <NuxtLink to="/projects/torquebooks" class="btn-glass">View Project</NuxtLink>
           </div>
           <div class="related-card">
-            <h4>Since — Accountability Tracker</h4>
+            <h3>Since — Accountability Tracker</h3>
             <p>PocketBase + React for tracking predictions, recording events, and verifying outcomes over time.</p>
             <NuxtLink to="/projects/since" class="btn-glass">View Project</NuxtLink>
           </div>
@@ -113,7 +113,7 @@
 
       <div class="detail-sidebar">
         <div class="sidebar-card">
-          <h4>Service Details</h4>
+          <h3>Service Details</h3>
           <ul class="sidebar-list">
             <li><span>Delivery:</span> <strong>4–8 Weeks</strong></li>
             <li><span>Price:</span> <strong>R35,000 – R80,000</strong></li>
@@ -122,7 +122,7 @@
           </ul>
         </div>
         <div class="sidebar-card">
-          <h4>Quick Links</h4>
+          <h3>Quick Links</h3>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
             <NuxtLink to="/services/static-sites" class="btn-glass">Static &amp; Brochure</NuxtLink>
@@ -214,18 +214,18 @@ useHead({
 .process-steps .process-step { flex: 0 1 calc(50% - 10px); min-width: 280px; max-width: 360px; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }
 .process-step .step-number { display: inline-block; background: var(--accent-color); color: #000; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; }
-.process-step h4 { color: var(--accent-color); font-size: 1rem; margin: 0 0 8px; }
+.process-step h3 { color: var(--accent-color); font-size: 1rem; margin: 0 0 8px; }
 .process-step p { margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
 .related-projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0; }
 .related-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 8px; }
-.related-card h4 { color: var(--accent-color); font-size: 0.95rem; margin: 0; }
+.related-card h3 { color: var(--accent-color); font-size: 0.95rem; margin: 0; }
 .related-card p { color: var(--text-muted); font-size: 0.85rem; margin: 0; flex: 1; }
 .related-card .btn-glass { font-size: 0.8rem; padding: 8px 16px; display: block; text-align: center; }
 
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
-.sidebar-card h4 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+.sidebar-card h3 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 .sidebar-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
 .sidebar-list li { margin-bottom: 10px; color: var(--text-muted); display: flex; justify-content: space-between; }
 .sidebar-list li strong { color: var(--text-color); }

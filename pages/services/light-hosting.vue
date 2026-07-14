@@ -43,17 +43,17 @@
         <div class="process-steps">
           <div class="process-step">
             <span class="step-number">1</span>
-            <h4>Infrastructure Monitoring</h4>
+            <h3>Infrastructure Monitoring</h3>
             <p>24/7 uptime monitoring with instant alerts. We know if your system goes down before your users do.</p>
           </div>
           <div class="process-step">
             <span class="step-number">2</span>
-            <h4>Security Patching</h4>
+            <h3>Security Patching</h3>
             <p>Regular OS and dependency updates applied during maintenance windows. No surprises, no vulnerabilities left unpatched.</p>
           </div>
           <div class="process-step">
             <span class="step-number">3</span>
-            <h4>Monthly Report</h4>
+            <h3>Monthly Report</h3>
             <p>Uptime stats, patch log, and any issues flagged. You always know the state of your infrastructure.</p>
           </div>
         </div>
@@ -75,7 +75,7 @@
 
       <div class="detail-sidebar">
         <div class="sidebar-card">
-          <h4>Service Details</h4>
+          <h3>Service Details</h3>
           <ul class="sidebar-list">
             <li><span>Price:</span> <strong>R850/month</strong></li>
             <li><span>Billing:</span> <strong>Monthly</strong></li>
@@ -84,7 +84,7 @@
           </ul>
         </div>
         <div class="sidebar-card">
-          <h4>Quick Links</h4>
+          <h3>Quick Links</h3>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
             <NuxtLink to="/services/managed-retainer" class="btn-glass">Managed Retainer</NuxtLink>
@@ -167,13 +167,13 @@ useHead({
 .process-steps .process-step { flex: 0 1 calc(50% - 10px); min-width: 280px; max-width: 360px; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }
 .process-step .step-number { display: inline-block; background: var(--accent-color); color: #000; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; }
-.process-step h4 { color: var(--accent-color); font-size: 1rem; margin: 0 0 8px; }
+.process-step h3 { color: var(--accent-color); font-size: 1rem; margin: 0 0 8px; }
 .process-step p { margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
 
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
-.sidebar-card h4 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+.sidebar-card h3 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 .sidebar-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
 .sidebar-list li { margin-bottom: 10px; color: var(--text-muted); display: flex; justify-content: space-between; }
 .sidebar-list li strong { color: var(--text-color); }

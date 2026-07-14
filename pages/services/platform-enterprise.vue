@@ -45,22 +45,22 @@
         <div class="process-steps">
           <div class="process-step">
             <span class="step-number">1</span>
-            <h4>Week 1–3 — Deep Discovery</h4>
+            <h3>Week 1–3 — Deep Discovery</h3>
             <p>Full business analysis. Map all user roles, data flows, integration points, and compliance requirements. Define the domain model and bounded contexts.</p>
           </div>
           <div class="process-step">
             <span class="step-number">2</span>
-            <h4>Week 4–8 — Architecture &amp; Core</h4>
+            <h3>Week 4–8 — Architecture &amp; Core</h3>
             <p>DDD domain model, database schema, authentication system, core API, and frontend shell. CI/CD pipeline from day one. Infrastructure as code.</p>
           </div>
           <div class="process-step">
             <span class="step-number">3</span>
-            <h4>Week 9–16 — Feature Build</h4>
+            <h3>Week 9–16 — Feature Build</h3>
             <p>Iterative feature delivery in two-week sprints. Each sprint includes backend, frontend, tests, and deployment. Regular demos and stakeholder review.</p>
           </div>
           <div class="process-step">
             <span class="step-number">4</span>
-            <h4>Week 17–24 — Hardening &amp; Launch</h4>
+            <h3>Week 17–24 — Hardening &amp; Launch</h3>
             <p>Load testing, security audit, compliance review, UAT. Monitoring, alerting, and rollback procedures. Staged rollout and go-live support.</p>
           </div>
         </div>
@@ -72,17 +72,17 @@
         <h2>Real Examples</h2>
         <div class="related-projects">
           <div class="related-card">
-            <h4>CodeCritical SaaS</h4>
+            <h3>CodeCritical SaaS</h3>
             <p>Container security scanning platform with CVE tracking and CI/CD auditing.</p>
             <NuxtLink to="/projects/codecritical-saas" class="btn-glass">View Project</NuxtLink>
           </div>
           <div class="related-card">
-            <h4>VoxNemesis Supertonic</h4>
+            <h3>VoxNemesis Supertonic</h3>
             <p>Self-hosted AI pipeline with LLM routing, TTS, and multi-agent orchestration.</p>
             <NuxtLink to="/projects/voxnemesis-supertonic" class="btn-glass">View Project</NuxtLink>
           </div>
           <div class="related-card">
-            <h4>PocketTTS MCP</h4>
+            <h3>PocketTTS MCP</h3>
             <p>MCP server for local LLM-powered text-to-speech with voice cloning.</p>
             <NuxtLink to="/projects/pockettts-mcp" class="btn-glass">View Project</NuxtLink>
           </div>
@@ -103,7 +103,7 @@
 
       <div class="detail-sidebar">
         <div class="sidebar-card">
-          <h4>Service Details</h4>
+          <h3>Service Details</h3>
           <ul class="sidebar-list">
             <li><span>Delivery:</span> <strong>16–30+ Weeks</strong></li>
             <li><span>Price:</span> <strong>From R350,000</strong></li>
@@ -112,7 +112,7 @@
           </ul>
         </div>
         <div class="sidebar-card">
-          <h4>Quick Links</h4>
+          <h3>Quick Links</h3>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
             <NuxtLink to="/services/business-systems" class="btn-glass">Business Systems</NuxtLink>
@@ -203,18 +203,18 @@ useHead({
 .process-steps .process-step { flex: 0 1 calc(50% - 10px); min-width: 280px; max-width: 360px; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }
 .process-step .step-number { display: inline-block; background: var(--accent-color); color: #000; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; }
-.process-step h4 { color: var(--accent-color); font-size: 1rem; margin: 0 0 8px; }
+.process-step h3 { color: var(--accent-color); font-size: 1rem; margin: 0 0 8px; }
 .process-step p { margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
 .related-projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
 .related-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 8px; }
-.related-card h4 { color: var(--accent-color); font-size: 0.95rem; margin: 0; }
+.related-card h3 { color: var(--accent-color); font-size: 0.95rem; margin: 0; }
 .related-card p { color: var(--text-muted); font-size: 0.85rem; margin: 0; flex: 1; }
 .related-card .btn-glass { font-size: 0.8rem; padding: 8px 16px; display: block; text-align: center; }
 
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
-.sidebar-card h4 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+.sidebar-card h3 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 .sidebar-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
 .sidebar-list li { margin-bottom: 10px; color: var(--text-muted); display: flex; justify-content: space-between; }
 .sidebar-list li strong { color: var(--text-color); }

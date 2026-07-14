@@ -5,7 +5,7 @@
       <p v-if="exploringNote" class="service-footer-note">{{ exploringNote }}</p>
       <div class="service-footer-cards">
         <div v-for="card in exploring" :key="card.to" class="service-footer-card">
-          <h4>{{ card.title }}</h4>
+          <h3>{{ card.title }}</h3>
           <p>{{ card.description }}</p>
           <NuxtLink :to="card.to" class="btn-glass">{{ exploringButtonLabel }}</NuxtLink>
         </div>
@@ -90,7 +90,7 @@ defineProps({
   gap: 8px;
 }
 
-.service-footer-card h4 { color: var(--accent-color); font-size: 0.95rem; margin: 0; }
+.service-footer-card h3 { color: var(--accent-color); font-size: 0.95rem; margin: 0; }
 .service-footer-card p { color: var(--text-muted); font-size: 0.85rem; margin: 0; flex: 1; }
 .service-footer-card .btn-glass { font-size: 0.8rem; padding: 8px 16px; display: block; text-align: center; }
 

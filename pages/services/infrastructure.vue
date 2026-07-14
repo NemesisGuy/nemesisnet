@@ -44,22 +44,22 @@
         <div class="process-steps">
           <div class="process-step">
             <span class="step-number">1</span>
-            <h4>Architecture Assessment</h4>
+            <h3>Architecture Assessment</h3>
             <p>We review your current infrastructure, identify bottlenecks, and define the target architecture — including service boundaries, data flow, and scaling strategy.</p>
           </div>
           <div class="process-step">
             <span class="step-number">2</span>
-            <h4>Infrastructure as Code</h4>
+            <h3>Infrastructure as Code</h3>
             <p>Every component is defined in Docker Compose files and provisioning scripts. Environments are reproducible — development, staging, and production are structurally identical.</p>
           </div>
           <div class="process-step">
             <span class="step-number">3</span>
-            <h4>CI/CD Pipeline</h4>
+            <h3>CI/CD Pipeline</h3>
             <p>Automated build, test, and deployment pipelines. Every commit triggers tests; every merge triggers deployment. Rollback is a single command.</p>
           </div>
           <div class="process-step">
             <span class="step-number">4</span>
-            <h4>Monitoring &amp; Observability</h4>
+            <h3>Monitoring &amp; Observability</h3>
             <p>Prometheus metrics, Grafana dashboards, and alerting rules configured for your specific SLAs. We set up error tracking, uptime monitoring, and performance baselines.</p>
           </div>
         </div>
@@ -81,17 +81,17 @@
         <h2>Related Projects</h2>
         <div class="related-projects">
           <div class="related-card">
-            <h4>Kokoro TTS — AI Runtime</h4>
+            <h3>Kokoro TTS — AI Runtime</h3>
             <p>Self-hosted TTS web service running on dedicated infrastructure.</p>
             <NuxtLink to="/projects/kokoro-tts" class="btn-glass">View Project</NuxtLink>
           </div>
           <div class="related-card">
-            <h4>VoxNemesis Supertonic — WebGPU TTS</h4>
+            <h3>VoxNemesis Supertonic — WebGPU TTS</h3>
             <p>Local-first TTS browser extension with WebGPU acceleration.</p>
             <NuxtLink to="/projects/voxnemesis-supertonic" class="btn-glass">View Project</NuxtLink>
           </div>
           <div class="related-card">
-            <h4>PocketTTS-MCP — MCP Server</h4>
+            <h3>PocketTTS-MCP — MCP Server</h3>
             <p>MCP bridge for AI agents to manage content pipelines.</p>
             <NuxtLink to="/projects/pockettts-mcp" class="btn-glass">View Project</NuxtLink>
           </div>
@@ -121,7 +121,7 @@
 
       <div class="detail-sidebar">
         <div class="sidebar-card">
-          <h4>Service Details</h4>
+          <h3>Service Details</h3>
           <ul class="sidebar-list">
             <li><span>Delivery:</span> <strong>1–6 Weeks</strong></li>
             <li><span>Focus:</span> <strong>Uptime &amp; Speed</strong></li>
@@ -131,7 +131,7 @@
           </ul>
         </div>
         <div class="sidebar-card">
-          <h4>Quick Links</h4>
+          <h3>Quick Links</h3>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
             <a href="https://blog.nemesisnet.co.za/self-hosted-ci-cd-on-a-home-rack-github-gitea-woodpecker-and-portainer/" target="_blank" class="btn-glass">Self-Hosted CI/CD</a>
@@ -226,14 +226,14 @@ useHead({
 .process-steps .process-step { flex: 0 1 calc(50% - 10px); min-width: 280px; max-width: 360px; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }
 .process-step .step-number { display: inline-block; background: var(--accent-color); color: #000; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; }
-.process-step h4 { color: var(--accent-color); font-size: 1rem; margin: 0 0 8px; }
+.process-step h3 { color: var(--accent-color); font-size: 1rem; margin: 0 0 8px; }
 .process-step p { margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
 .tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
 .pill { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
 .pill-tools { background: rgba(234, 179, 8, 0.2); color: #facc15; border: 1px solid rgba(234, 179, 8, 0.3); }
 .related-projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
 .related-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 8px; }
-.related-card h4 { color: var(--accent-color); font-size: 0.95rem; margin: 0; }
+.related-card h3 { color: var(--accent-color); font-size: 0.95rem; margin: 0; }
 .related-card p { color: var(--text-muted); font-size: 0.85rem; margin: 0; flex: 1; }
 .related-card .btn-glass { font-size: 0.8rem; padding: 8px 16px; display: block; text-align: center; }
 .related-services { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
@@ -241,7 +241,7 @@ useHead({
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
-.sidebar-card h4 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+.sidebar-card h3 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 .sidebar-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
 .sidebar-list li { margin-bottom: 10px; color: var(--text-muted); display: flex; justify-content: space-between; }
 .sidebar-list li strong { color: var(--text-color); }

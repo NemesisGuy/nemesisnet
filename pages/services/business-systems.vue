@@ -45,22 +45,22 @@
         <div class="process-steps">
           <div class="process-step">
             <span class="step-number">1</span>
-            <h4>Week 1–2 — Discovery &amp; Architecture</h4>
+            <h3>Week 1–2 — Discovery &amp; Architecture</h3>
             <p>Deep-dive into business requirements. Define system architecture, database schema, API contracts, and UI wireframes. Lock technical decisions before code.</p>
           </div>
           <div class="process-step">
             <span class="step-number">2</span>
-            <h4>Week 3–4 — Backend Core</h4>
+            <h3>Week 3–4 — Backend Core</h3>
             <p>Spring Boot backend with authentication, database setup, core API endpoints, and business logic. Database migrations and seed data.</p>
           </div>
           <div class="process-step">
             <span class="step-number">3</span>
-            <h4>Week 5–8 — Frontend &amp; Integration</h4>
+            <h3>Week 5–8 — Frontend &amp; Integration</h3>
             <p>Vue 3 frontend build. Connect to backend APIs. Implement dashboards, CRUD workflows, and user-facing features. Automated testing.</p>
           </div>
           <div class="process-step">
             <span class="step-number">4</span>
-            <h4>Week 9–12 — Testing &amp; Launch</h4>
+            <h3>Week 9–12 — Testing &amp; Launch</h3>
             <p>Load testing, security review, UAT. CI/CD pipeline finalisation. Deployment, monitoring, and go-live support.</p>
           </div>
         </div>
@@ -72,17 +72,17 @@
         <h2>Real Examples</h2>
         <div class="related-projects">
           <div class="related-card">
-            <h4>OnTheGoRentals — Booking Platform</h4>
+            <h3>OnTheGoRentals — Booking Platform</h3>
             <p>Complete rental management with automated booking, invoicing, and fleet tracking.</p>
             <NuxtLink to="/projects/onthegorentals" class="btn-glass">View Project</NuxtLink>
           </div>
           <div class="related-card">
-            <h4>CodeCritical SaaS — Security Scanning</h4>
+            <h3>CodeCritical SaaS — Security Scanning</h3>
             <p>Container security scanning with CVE tracking and CI/CD vulnerability auditing.</p>
             <NuxtLink to="/projects/codecritical-saas" class="btn-glass">View Project</NuxtLink>
           </div>
           <div class="related-card">
-            <h4>ForkMyFolio — Portfolio Platform</h4>
+            <h3>ForkMyFolio — Portfolio Platform</h3>
             <p>Multi-user portfolio management with content creation workflows.</p>
             <NuxtLink to="/projects/forkmyfolio" class="btn-glass">View Project</NuxtLink>
           </div>
@@ -103,7 +103,7 @@
 
       <div class="detail-sidebar">
         <div class="sidebar-card">
-          <h4>Service Details</h4>
+          <h3>Service Details</h3>
           <ul class="sidebar-list">
             <li><span>Delivery:</span> <strong>8–16 Weeks</strong></li>
             <li><span>Price:</span> <strong>From R150,000</strong></li>
@@ -112,7 +112,7 @@
           </ul>
         </div>
         <div class="sidebar-card">
-          <h4>Quick Links</h4>
+          <h3>Quick Links</h3>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
             <NuxtLink to="/services/app-starter" class="btn-glass">App Starter</NuxtLink>
@@ -203,18 +203,18 @@ useHead({
 .process-steps .process-step { flex: 0 1 calc(50% - 10px); min-width: 280px; max-width: 360px; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }
 .process-step .step-number { display: inline-block; background: var(--accent-color); color: #000; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; }
-.process-step h4 { color: var(--accent-color); font-size: 1rem; margin: 0 0 8px; }
+.process-step h3 { color: var(--accent-color); font-size: 1rem; margin: 0 0 8px; }
 .process-step p { margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
 .related-projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
 .related-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 8px; }
-.related-card h4 { color: var(--accent-color); font-size: 0.95rem; margin: 0; }
+.related-card h3 { color: var(--accent-color); font-size: 0.95rem; margin: 0; }
 .related-card p { color: var(--text-muted); font-size: 0.85rem; margin: 0; flex: 1; }
 .related-card .btn-glass { font-size: 0.8rem; padding: 8px 16px; display: block; text-align: center; }
 
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
-.sidebar-card h4 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+.sidebar-card h3 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 .sidebar-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
 .sidebar-list li { margin-bottom: 10px; color: var(--text-muted); display: flex; justify-content: space-between; }
 .sidebar-list li strong { color: var(--text-color); }

@@ -27,7 +27,7 @@
             <div class="chat-welcome-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
             </div>
-            <h4>Hey! I'm NemesisBot</h4>
+            <h3>Hey! I'm NemesisBot</h3>
             <p>Ask me about NemesisNet's services, projects, pricing, or capabilities.</p>
           </div>
 
@@ -287,7 +287,7 @@ const sendMessage = async () => {
   margin: 0 auto 12px;
   color: var(--accent-color, #2979FF);
 }
-.chat-welcome h4 {
+.chat-welcome h3 {
   margin: 0 0 6px;
   color: var(--text-color, #F4F4F4);
   font-size: 1rem;

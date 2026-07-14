@@ -41,8 +41,8 @@
 - **Verified:** Both dev and prod
 
 ## BUG-006: CSS MIME Type Errors (Intermittent)
-- **Status:** INVESTIGATING
+- **Status:** FIXED
 - **Priority:** MEDIUM
 - **Platform:** Prod
-- **Root Cause:** Cloudflare caching or Nitro static file serving issue
-- **Note:** Dev loads fine, prod sometimes fails. May resolve with cache clear.
+- **Root Cause:** Cloudflare caching serving CSS with wrong Content-Type; nosniff header blocking them
+- **Solution:** Added explicit Content-Type headers for .css and .js in nginx config; purged Cloudflare cache

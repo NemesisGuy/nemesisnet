@@ -41,22 +41,22 @@
         <div class="process-steps">
           <div class="process-step">
             <span class="step-number">1</span>
-            <h4>Pipeline &amp; Deployments</h4>
+            <h3>Pipeline &amp; Deployments</h3>
             <p>Manage your CI/CD pipelines, run deployments, verify releases. Your team ships code; we make sure it lands safely in production.</p>
           </div>
           <div class="process-step">
             <span class="step-number">2</span>
-            <h4>Monitor &amp; Alert</h4>
+            <h3>Monitor &amp; Alert</h3>
             <p>Application monitoring, error tracking, and performance alerts. We catch issues before your users do and respond within SLA.</p>
           </div>
           <div class="process-step">
             <span class="step-number">3</span>
-            <h4>Fix &amp; Improve</h4>
+            <h3>Fix &amp; Improve</h3>
             <p>Bug fixes, dependency updates, security patches, and small improvements. Continuous refinement without the overhead of a full-time hire.</p>
           </div>
           <div class="process-step">
             <span class="step-number">4</span>
-            <h4>Report &amp; Review</h4>
+            <h3>Report &amp; Review</h3>
             <p>Monthly health report: uptime, incidents resolved, patches applied, improvements made. Full transparency on what was done and what is next.</p>
           </div>
         </div>
@@ -68,7 +68,7 @@
         <h2>How It Compares</h2>
         <div class="compare-grid">
           <div class="compare-card">
-            <h4>Light Hosting</h4>
+            <h3>Light Hosting</h3>
             <div class="compare-price">R850/mo</div>
             <ul class="compare-list">
               <li>Server hosting &amp; SSL</li>
@@ -79,7 +79,7 @@
             <NuxtLink to="/services/light-hosting" class="btn-glass">View Details</NuxtLink>
           </div>
           <div class="compare-card compare-card--featured">
-            <h4>Managed Retainer</h4>
+            <h3>Managed Retainer</h3>
             <div class="compare-price">R7,500/mo</div>
             <ul class="compare-list">
               <li>Everything in Light Hosting</li>
@@ -105,7 +105,7 @@
 
       <div class="detail-sidebar">
         <div class="sidebar-card">
-          <h4>Service Details</h4>
+          <h3>Service Details</h3>
           <ul class="sidebar-list">
             <li><span>Price:</span> <strong>R7,500/month</strong></li>
             <li><span>Billing:</span> <strong>Monthly</strong></li>
@@ -114,7 +114,7 @@
           </ul>
         </div>
         <div class="sidebar-card">
-          <h4>Quick Links</h4>
+          <h3>Quick Links</h3>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
             <NuxtLink to="/services/light-hosting" class="btn-glass">Light Hosting</NuxtLink>
@@ -197,12 +197,12 @@ useHead({
 .process-steps .process-step { flex: 0 1 calc(50% - 10px); min-width: 280px; max-width: 360px; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }
 .process-step .step-number { display: inline-block; background: var(--accent-color); color: #000; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; }
-.process-step h4 { color: var(--accent-color); font-size: 1rem; margin: 0 0 8px; }
+.process-step h3 { color: var(--accent-color); font-size: 1rem; margin: 0 0 8px; }
 .process-step p { margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
 .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
 .compare-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
 .compare-card--featured { border-color: var(--accent-color); }
-.compare-card h4 { color: var(--accent-color); font-size: 1rem; margin: 0; }
+.compare-card h3 { color: var(--accent-color); font-size: 1rem; margin: 0; }
 .compare-price { font-size: 1.5rem; font-weight: 700; color: var(--text-color); }
 .compare-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; flex: 1; }
 .compare-list li { padding: 4px 0; color: var(--text-muted); }
@@ -212,7 +212,7 @@ useHead({
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
-.sidebar-card h4 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+.sidebar-card h3 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 .sidebar-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
 .sidebar-list li { margin-bottom: 10px; color: var(--text-muted); display: flex; justify-content: space-between; }
 .sidebar-list li strong { color: var(--text-color); }

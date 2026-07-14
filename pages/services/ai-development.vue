@@ -39,22 +39,22 @@
         <div class="process-steps">
           <div class="process-step">
             <span class="step-number">1</span>
-            <h4>Discovery &amp; Scoping</h4>
+            <h3>Discovery &amp; Scoping</h3>
             <p>We map your use case, data constraints, latency requirements, and compliance needs. No assumptions — every architecture decision starts from your actual workload.</p>
           </div>
           <div class="process-step">
             <span class="step-number">2</span>
-            <h4>Architecture Design</h4>
+            <h3>Architecture Design</h3>
             <p>We design the full stack: model selection, inference optimization, MCP tool definitions, data flow, and deployment topology. You get a technical spec before we write a line of code.</p>
           </div>
           <div class="process-step">
             <span class="step-number">3</span>
-            <h4>Build &amp; Iterate</h4>
+            <h3>Build &amp; Iterate</h3>
             <p>We build in Docker containers, test with your real data, and iterate on latency and accuracy. Infrastructure-as-code means every environment is reproducible.</p>
           </div>
           <div class="process-step">
             <span class="step-number">4</span>
-            <h4>Deploy &amp; Handoff</h4>
+            <h3>Deploy &amp; Handoff</h3>
             <p>Deployed to your infrastructure or ours. Full documentation, monitoring dashboards, and a runbook so your team can operate the system independently.</p>
           </div>
         </div>
@@ -76,17 +76,17 @@
         <h2>Related Projects</h2>
         <div class="related-projects">
           <div class="related-card">
-            <h4>PocketTTS-MCP</h4>
+            <h3>PocketTTS-MCP</h3>
             <p>MCP server wrapping Kyutai's Pocket TTS for AI agent TTS access.</p>
             <NuxtLink to="/projects/pockettts-mcp" class="btn-glass">View Project</NuxtLink>
           </div>
           <div class="related-card">
-            <h4>Kokoro TTS Service</h4>
+            <h3>Kokoro TTS Service</h3>
             <p>Self-hosted AI TTS web service on the Kokoro open-source engine.</p>
             <NuxtLink to="/projects/kokoro-tts" class="btn-glass">View Project</NuxtLink>
           </div>
           <div class="related-card">
-            <h4>WordPress MCP Server</h4>
+            <h3>WordPress MCP Server</h3>
             <p>MCP bridge for AI agents to manage WordPress content securely.</p>
             <NuxtLink to="/projects/wordpress-mcp" class="btn-glass">View Project</NuxtLink>
           </div>
@@ -115,7 +115,7 @@
 
       <div class="detail-sidebar">
         <div class="sidebar-card">
-          <h4>Service Details</h4>
+          <h3>Service Details</h3>
           <ul class="sidebar-list">
             <li><span>Focus:</span> <strong>MCP, TTS, Multi-Agent Systems</strong></li>
             <li><span>Stack:</span> <strong>Python, FastMCP, GGUF, Docker</strong></li>
@@ -125,7 +125,7 @@
           </ul>
         </div>
         <div class="sidebar-card">
-          <h4>Quick Links</h4>
+          <h3>Quick Links</h3>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
             <a href="https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/" target="_blank" class="btn-glass">Read Cost Analysis</a>
@@ -215,14 +215,14 @@ useHead({
 .process-steps .process-step { flex: 0 1 calc(50% - 10px); min-width: 280px; max-width: 360px; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }
 .process-step .step-number { display: inline-block; background: var(--accent-color); color: #000; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; }
-.process-step h4 { color: var(--accent-color); font-size: 1rem; margin: 0 0 8px; }
+.process-step h3 { color: var(--accent-color); font-size: 1rem; margin: 0 0 8px; }
 .process-step p { margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
 .tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
 .pill { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
 .pill-tools { background: rgba(234, 179, 8, 0.2); color: #facc15; border: 1px solid rgba(234, 179, 8, 0.3); }
 .related-projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
 .related-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 8px; }
-.related-card h4 { color: var(--accent-color); font-size: 0.95rem; margin: 0; }
+.related-card h3 { color: var(--accent-color); font-size: 0.95rem; margin: 0; }
 .related-card p { color: var(--text-muted); font-size: 0.85rem; margin: 0; flex: 1; }
 .related-card .btn-glass { font-size: 0.8rem; padding: 8px 16px; display: block; text-align: center; }
 .related-services { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
@@ -230,7 +230,7 @@ useHead({
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
-.sidebar-card h4 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+.sidebar-card h3 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 .sidebar-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
 .sidebar-list li { margin-bottom: 10px; color: var(--text-muted); display: grid; grid-template-columns: 90px 1fr; gap: 8px; align-items: start; }
 .sidebar-list li span { color: var(--text-muted); }

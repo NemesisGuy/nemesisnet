@@ -20,7 +20,7 @@
         <div class="pricing-grid">
           <div class="card pricing-card">
             <div class="pricing-icon"><ClientOnly><Globe :size="24" /></ClientOnly></div>
-            <h4 class="pricing-title">Static &amp; Brochure</h4>
+            <h3 class="pricing-title">Static &amp; Brochure</h3>
             <div class="pricing-price">R7,000 – R25,000</div>
             <div class="pricing-unit">Range</div>
             <p class="pricing-description">Static sites, landing pages, brochure sites, and simple internal tools with no auth complexity.</p>
@@ -36,7 +36,7 @@
           </div>
           <div class="card pricing-card">
             <div class="pricing-icon"><ClientOnly><Layers :size="24" /></ClientOnly></div>
-            <h4 class="pricing-title">App Starter</h4>
+            <h3 class="pricing-title">App Starter</h3>
             <div class="pricing-price">R35,000 – R80,000</div>
             <div class="pricing-unit">Range</div>
             <p class="pricing-description">PocketBase-backed apps, CRUD dashboards, MVPs, prototypes, and admin tools with auth and roles.</p>
@@ -53,7 +53,7 @@
           </div>
           <div class="card pricing-card pricing-card--featured">
             <div class="pricing-icon"><ClientOnly><Briefcase :size="24" /></ClientOnly></div>
-            <h4 class="pricing-title">Business Systems</h4>
+            <h3 class="pricing-title">Business Systems</h3>
             <div class="pricing-price">R150,000</div>
             <div class="pricing-unit">Starting from</div>
             <p class="pricing-description">End-to-end product builds with Vue 3 frontend, Spring Boot backend, secure auth, dashboards, and infrastructure.</p>
@@ -68,7 +68,7 @@
           </div>
           <div class="card pricing-card">
             <div class="pricing-icon"><ClientOnly><Cpu :size="24" /></ClientOnly></div>
-            <h4 class="pricing-title">Platform / Enterprise</h4>
+            <h3 class="pricing-title">Platform / Enterprise</h3>
             <div class="pricing-price">R350,000</div>
             <div class="pricing-unit">Starting from</div>
             <p class="pricing-description">Multi-tenant SaaS, AI pipelines, self-hosted LLM/TTS systems, MCP integrations, and agent workflows.</p>
@@ -88,7 +88,7 @@
         <div class="pricing-grid">
           <NuxtLink to="/services/ai-consulting" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Brain :size="24" /></ClientOnly></div>
-            <h4 class="pricing-title">AI Architecture / Consulting</h4>
+            <h3 class="pricing-title">AI Architecture / Consulting</h3>
             <div class="pricing-price">R10,000</div>
             <div class="pricing-unit">Starting from</div>
             <p class="pricing-description">Half-day to full-day working sessions for teams making serious AI or platform decisions.</p>
@@ -101,7 +101,7 @@
           </NuxtLink>
           <NuxtLink to="/services/mcp-integrations" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Workflow :size="24" /></ClientOnly></div>
-            <h4 class="pricing-title">Custom MCP &amp; Agent Integrations</h4>
+            <h3 class="pricing-title">Custom MCP &amp; Agent Integrations</h3>
             <div class="pricing-price">R55,000</div>
             <div class="pricing-unit">Starting from</div>
             <p class="pricing-description">Custom MCP servers that connect AI agents to CMS, CRM, databases, and internal tooling.</p>
@@ -119,7 +119,7 @@
         <div class="pricing-grid">
           <NuxtLink to="/services/light-hosting" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Server :size="24" /></ClientOnly></div>
-            <h4 class="pricing-title">Light Hosting</h4>
+            <h3 class="pricing-title">Light Hosting</h3>
             <div class="pricing-price">R850</div>
             <div class="pricing-unit">Monthly</div>
             <p class="pricing-description">Hosting, SSL, uptime monitoring, and security patches for deployed systems.</p>
@@ -132,7 +132,7 @@
           </NuxtLink>
           <NuxtLink to="/services/managed-retainer" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Shield :size="24" /></ClientOnly></div>
-            <h4 class="pricing-title">Managed Retainer</h4>
+            <h3 class="pricing-title">Managed Retainer</h3>
             <div class="pricing-price">R7,500</div>
             <div class="pricing-unit">Monthly</div>
             <p class="pricing-description">CI/CD pipeline management, monitoring, bug fixes, and continuous improvement for production systems.</p>
@@ -235,7 +235,7 @@
           <!-- Mobile stacked cards -->
           <div class="tier-mobile-cards">
             <div class="tier-mobile-card">
-              <h4>Static &amp; Brochure</h4>
+              <h3>Static &amp; Brochure</h3>
               <div class="tier-row"><span>Need user accounts?</span><span class="tier-no">✗</span></div>
               <div class="tier-row"><span>Multiple user roles?</span><span class="tier-no">✗</span></div>
               <div class="tier-row"><span>Multi-tenant or SaaS?</span><span class="tier-no">✗</span></div>
@@ -247,7 +247,7 @@
               <NuxtLink to="/services/static-sites" class="btn-glass">See Details →</NuxtLink>
             </div>
             <div class="tier-mobile-card">
-              <h4>App Starter</h4>
+              <h3>App Starter</h3>
               <div class="tier-row"><span>Need user accounts?</span><span class="tier-yes">✓</span></div>
               <div class="tier-row"><span>Multiple user roles?</span><span class="tier-no">✗</span></div>
               <div class="tier-row"><span>Multi-tenant or SaaS?</span><span class="tier-no">✗</span></div>
@@ -259,7 +259,7 @@
               <NuxtLink to="/services/app-starter" class="btn-glass">See Details →</NuxtLink>
             </div>
             <div class="tier-mobile-card">
-              <h4>Business Systems</h4>
+              <h3>Business Systems</h3>
               <div class="tier-row"><span>Need user accounts?</span><span class="tier-yes">✓</span></div>
               <div class="tier-row"><span>Multiple user roles?</span><span class="tier-yes">✓</span></div>
               <div class="tier-row"><span>Multi-tenant or SaaS?</span><span class="tier-no">✗</span></div>
@@ -271,7 +271,7 @@
               <NuxtLink to="/services/business-systems" class="btn-glass">See Details →</NuxtLink>
             </div>
             <div class="tier-mobile-card">
-              <h4>Platform / Enterprise</h4>
+              <h3>Platform / Enterprise</h3>
               <div class="tier-row"><span>Need user accounts?</span><span class="tier-yes">✓</span></div>
               <div class="tier-row"><span>Multiple user roles?</span><span class="tier-yes">✓</span></div>
               <div class="tier-row"><span>Multi-tenant or SaaS?</span><span class="tier-yes">✓</span></div>
@@ -464,7 +464,7 @@ useHead({
 @media (max-width: 768px) { .services-grid { flex-direction: column !important; gap: 14px !important; } .services-grid .card { flex: none !important; } }
 .detail-container { max-width: 1280px; margin: 0 auto; padding: 24px 24px 40px; }
 .detail-main { text-align: left !important; line-height: 1.8; }
-.detail-main p, .detail-main h2, .detail-main h3, .detail-main h4, .detail-main li { text-align: left !important; }
+.detail-main p, .detail-main h2, .detail-main h3, .detail-main li { text-align: left !important; }
 .section-cta { text-align: center !important; }
 .section-cta--prominent { margin: 32px 0 40px; display: flex; flex-direction: column; align-items: center; }
 .section-cta--prominent .btn--ignite { font-size: 1.05rem; padding: 14px 32px; display: inline-block; }
@@ -521,7 +521,7 @@ useHead({
 .tier-cta-row .btn-glass { font-size: 0.8rem; padding: 8px 16px; display: inline-block; }
 .tier-mobile-cards { display: none; }
 .tier-mobile-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }
-.tier-mobile-card h4 { color: var(--accent-color); font-size: 0.95rem; margin: 0 0 12px; }
+.tier-mobile-card h3 { color: var(--accent-color); font-size: 0.95rem; margin: 0 0 12px; }
 .tier-mobile-card .tier-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.04); font-size: 0.85rem; }
 .tier-mobile-card .tier-row:last-of-type { border-bottom: none; }
 .tier-mobile-card .tier-row span:first-child { color: var(--text-muted); }
