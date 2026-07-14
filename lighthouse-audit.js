@@ -4,28 +4,8 @@ const lighthouse = require('lighthouse').default || require('lighthouse');
 const BASE_URL = process.env.LIGHTHOUSE_URL || 'https://nemesisnet.co.za';
 
 const routes = [
-  { path: '/', name: 'homepage' },
-  { path: '/projects', name: 'projects' },
-  { path: '/contact', name: 'contact' },
-  { path: '/services', name: 'services' },
-  { path: '/about', name: 'about' },
-  { path: '/services/static-sites', name: 'static-sites' },
-  { path: '/services/app-starter', name: 'app-starter' },
-  { path: '/services/business-systems', name: 'business-systems' },
-  { path: '/services/platform-enterprise', name: 'platform-enterprise' },
-  { path: '/services/custom-software', name: 'custom-software' },
-  { path: '/services/saas-development', name: 'saas-development' },
-  { path: '/services/ai-development', name: 'ai-development' },
-  { path: '/services/ai-consulting', name: 'ai-consulting' },
-  { path: '/services/mcp-integrations', name: 'mcp-integrations' },
-  { path: '/services/self-hosted-ai', name: 'self-hosted-ai' },
-  { path: '/services/infrastructure', name: 'infrastructure' },
-  { path: '/services/consulting', name: 'consulting' },
-  { path: '/services/agile-iterative', name: 'agile-iterative' },
-  { path: '/services/waterfall-structured', name: 'waterfall-structured' },
-  { path: '/services/light-hosting', name: 'light-hosting' },
-  { path: '/services/managed-retainer', name: 'managed-retainer' },
-  { path: '/projects/torquebooks', name: 'torquebooks' },
+  { path: '/projects/codecritical-saas', name: 'codecritical-saas' },
+  { path: '/projects/codecritical-cli', name: 'codecritical-cli' },
 ];
 
 const thresholds = {

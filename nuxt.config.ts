@@ -2,6 +2,11 @@ import { PRERENDER_ROUTES } from './config/prerender-routes'
 
 export default defineNuxtConfig({
   ssr: true,
+  css: [
+    '~/assets/css/main.css',
+    '~/assets/css/aurora-mode.css',
+    '~/assets/css/nemesis-mode.css'
+  ],
   modules: ['@nuxtjs/turnstile'],
   turnstile: {
     siteKey: '0x4AAAAAADPNJc2ObjAJrmVf'
@@ -65,9 +70,6 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', href: '/images/brand/Nemesis_Logo_Icon.png' },
         { rel: 'shortcut icon', href: '/images/brand/Nemesis_Logo_Icon.ico' },
         { rel: 'preload', href: '/images/brand/Nemesis_Logo_Icon.webp', as: 'image', fetchpriority: 'high' },
-        { rel: 'stylesheet', href: '/css/main.css?v=20260714c', media: 'print', onload: "this.media='all'" },
-        { rel: 'stylesheet', href: '/css/aurora-mode.css?v=20260714', media: 'print', onload: "this.media='all'" },
-        { rel: 'stylesheet', href: '/css/nemesis-mode.css?v=20260714', media: 'print', onload: "this.media='all'" }
       ],
       script: [
         {

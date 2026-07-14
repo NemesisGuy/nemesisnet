@@ -218,11 +218,12 @@ export default defineEventHandler(async (event) => {
         }
       }
 
-      console.error(`Gemma API attempt ${attempt + 1} failed:`, gemmaRes.status)
+      const errorData = await gemmaRes.text()
+      console.error(`Gemma API attempt ${attempt + 1} failed (Status: ${gemmaRes.status}):`, errorData)
       if (attempt === 0) await new Promise(r => setTimeout(r, 1000))
     }
 
-    throw createError({ statusCode: 502, message: 'Chat service temporarily unavailable. Please try again.' })
+    throw createError({ statusCode: 503, message: 'Chat service is currently unavailable (API Error). Please try again later.' })
   } catch (err: unknown) {
     if (err && typeof err === 'object' && 'statusCode' in err) throw err
     console.error('Chat error:', err)
