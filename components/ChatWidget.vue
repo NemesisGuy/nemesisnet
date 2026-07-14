@@ -83,14 +83,18 @@ const scrollToBottom = () => {
   })
 }
 
-const formatMessage = (text) => {
-  return text
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*(.*?)\*/g, '<em>$1</em>')
-    .replace(/`(.*?)`/g, '<code>$1</code>')
-    .replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>')
-    .replace(/\n/g, '<br>')
-}
+  const formatMessage = (text) => {
+    return text
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.*?)\*/g, '<em>$1</em>')
+      .replace(/`(.*?)`/g, '<code>$1</code>')
+      .replace(/(https?:\/\/[^\s<]+)/g, (url) => {
+        const cleanedUrl = url.replace(/[.,;:]+$/, '');
+        const punctuation = url.substring(cleanedUrl.length);
+        return `<a href="${cleanedUrl}" target="_blank" rel="noopener noreferrer">${cleanedUrl}</a>${punctuation}`;
+      })
+      .replace(/\n/g, '<br>')
+  }
 
 const sendMessage = async () => {
   const msg = input.value.trim()
@@ -327,7 +331,7 @@ const sendMessage = async () => {
   color: var(--text-color, #1a1a1a);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
-.chat-msg-content :deep(strong) { color: var(--accent-color, #2979FF); }
+.chat-msg-content :deep(strong) { color: var(--text-color); font-weight: 700; }
 .chat-msg-content :deep(code) {
   background: rgba(255, 255, 255, 0.08);
   padding: 1px 5px;
@@ -338,9 +342,12 @@ const sendMessage = async () => {
   color: var(--accent-color, #2979FF);
   text-decoration: underline;
   text-underline-offset: 2px;
+  font-weight: 600;
+  cursor: pointer;
 }
 .chat-msg-content :deep(a:hover) {
   opacity: 0.8;
+  text-decoration: none;
 }
 
 .chat-typing {
