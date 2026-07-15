@@ -29,7 +29,7 @@ const maxAttempts = 20
 
 for (const [name, msg] of convos) {
   let last = ''
-  let refused = false
+  let refused
   for (let i = 1; i <= maxAttempts; i++) {
     last = await ask(msg)
     refused = declineMarkers.some(m => last.includes(m))
