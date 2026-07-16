@@ -56,6 +56,7 @@
           ]"
           :reading="[
             { label: 'View Source on GitHub', href: 'https://github.com/NemesisGuy/OnTheGoRentals' },
+            { label: 'Read Dev Diary', href: 'https://blog.nemesisnet.co.za/onthegorentals-a-dev-diary-building-a-production-ready-rental-saas/' },
             { label: 'Live Demo', href: 'https://otgr.nemesisnet.co.za' }
           ]"
           :cta="{ heading: 'Want something like this built?', description: 'Java, Spring Boot, Vue, and MySQL — production-built with JWT auth, real-time booking, and admin dashboards.', buttonLabel: 'Start a Project', to: '/contact', note: 'Scoping calls are free.' }"
@@ -78,6 +79,7 @@
           <div class="quick-links">
             <NuxtLink to="/projects" class="btn-glass">← Back to Portfolio</NuxtLink>
             <a href="https://github.com/NemesisGuy/OnTheGoRentals" target="_blank" class="btn-glass">View Source</a>
+            <a href="https://blog.nemesisnet.co.za/onthegorentals-a-dev-diary-building-a-production-ready-rental-saas/" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Read the OnTheGoRentals dev diary on the blog (opens in new tab)">Read Dev Diary</a>
             <a href="https://otgr.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
           </div>
         </div>
