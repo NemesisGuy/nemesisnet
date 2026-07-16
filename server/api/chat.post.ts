@@ -103,56 +103,10 @@ Decline line: "That's not something NemesisNet builds — I can only help with l
 - When mentioning contact, ALWAYS include: https://nemesisnet.co.za/contact
 - Always end with a helpful next step or CTA when natural.`
 
-// --- Read-only tools the model can call on demand ---
-const TOOLS = [
-  {
-    name: 'getProject',
-    description: 'Look up a specific NemesisNet project by name or keyword (e.g. "onthegorentals", "forkmyfolio", "torquebooks"). Returns the project description and its exact links (project page, blog post, live demo, GitHub).',
-    parameters: {
-      type: 'object',
-      properties: {
-        query: { type: 'string', description: 'Project name or keyword to search for.' }
-      },
-      required: ['query']
-    }
-  },
-  {
-    name: 'listServices',
-    description: 'Return the full list of NemesisNet services and their pricing/timelines.',
-    parameters: { type: 'object', properties: {}, required: [] }
-  },
-  {
-    name: 'listBlogPosts',
-    description: 'Return recent NemesisNet blog posts with their exact URLs.',
-    parameters: { type: 'object', properties: {}, required: [] }
-  }
-]
-
-function runTool(name: string, args: Record<string, unknown>): string {
-  if (!KNOWLEDGE) return 'Knowledge base unavailable.'
-  const q = String(args?.query || '').toLowerCase()
-  if (name === 'getProject') {
-    const match = KNOWLEDGE.projects.find(
-      (p) => p.name.toLowerCase().includes(q) || q.includes(p.name.toLowerCase()) || (p.category || '').toLowerCase().includes(q)
-    )
-    if (!match) return `No project found matching "${String(args?.query || '')}". Known projects: ${KNOWLEDGE.projects.map((p) => p.name).join(', ')}.`
-    const links = Object.entries(match.links || {})
-      .map(([type, url]) => `  ${type}: ${url}`)
-      .join('\n')
-    return `**${match.name}** (${match.category}): ${match.description}` + (links ? `\n${links}` : '')
-  }
-  if (name === 'listServices') {
-    return KNOWLEDGE.services
-      .map((s) => `- **${s.name}** — ${s.price} | ${s.timeline}. ${s.description}`)
-      .join('\n')
-  }
-  if (name === 'listBlogPosts') {
-    return KNOWLEDGE.blogPosts
-      .map((b) => `- ${b.title} — ${b.url}`)
-      .join('\n')
-  }
-  return 'Unknown tool.'
-}
+// --- NOTE: project/service/blog data is loaded from server/data/nemesis-knowledge.json
+// at startup and injected into the system prompt via buildKnowledgeSection() below,
+// so the model answers with exact, current links without any per-turn tool round-trips.
+// This is cheaper (no extra API calls) and far more robust than function-calling.
 
 const rateLimitStore = new Map<string, { tokens: number; lastRefill: number }>()
 const RATE_LIMIT_MAX = 20
@@ -251,14 +205,11 @@ export default defineEventHandler(async (event) => {
   ]
 
   const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemma-4-31b-it:generateContent?key=${apiKey}`
-  const MAX_TOOL_ROUNDS = 3
 
   try {
-    for (let attempt = 0; attempt < MAX_TOOL_ROUNDS; attempt++) {
+    for (let attempt = 0; attempt < 2; attempt++) {
       const requestBody = {
         contents,
-        tools: [{ functionDeclarations: TOOLS }],
-        toolConfig: { functionCallingConfig: { mode: 'AUTO' } },
         generationConfig: {
           temperature: 0.7,
           topP: 0.9,
@@ -281,44 +232,16 @@ export default defineEventHandler(async (event) => {
 
       if (!gemmaRes.ok) {
         const errorData = await gemmaRes.text()
-        // On a transient API error, retry once after a short delay; otherwise surface a clean 503
-        if (attempt === 0) {
-          console.error(`Gemma API attempt 1 failed (Status: ${gemmaRes.status}):`, errorData)
-          await new Promise(r => setTimeout(r, 1000))
-          continue
-        }
-        console.error(`Gemma API attempt 2 failed (Status: ${gemmaRes.status}):`, errorData)
+        console.error(`Gemma API attempt ${attempt + 1} failed (Status: ${gemmaRes.status}):`, errorData)
+        if (attempt === 0) { await new Promise(r => setTimeout(r, 1000)); continue }
         throw createError({ statusCode: 503, message: 'Chat service is currently unavailable (API Error). Please try again later.' })
       }
 
       const data = await gemmaRes.json()
       const candidate = data.candidates?.[0]
-      const parts = (candidate?.content?.parts || []) as Array<{ text?: string; thought?: boolean; functionCall?: { name: string; args?: Record<string, unknown> | string } }>
-
-      // Prefer a real text answer if the model returned one alongside/instead of a tool call
-      const answerParts = parts.filter((p) => !p.thought && p.text)
+      const parts = (candidate?.content?.parts || []) as Array<{ text?: string; thought?: boolean }>
+      const answerParts = parts.filter((p) => !p.thought)
       const text = answerParts.map((p) => p.text || '').join('').trim()
-
-      // Check for a function call
-      const funcCall = parts.find((p) => p.functionCall)
-      if (funcCall?.functionCall) {
-        const { name, args } = funcCall.functionCall
-        // Gemini may serialize args as a JSON string
-        let parsedArgs: Record<string, unknown> = {}
-        if (typeof args === 'string') {
-          try { parsedArgs = JSON.parse(args) as Record<string, unknown> } catch { parsedArgs = {} }
-        } else if (args && typeof args === 'object') {
-          parsedArgs = args as Record<string, unknown>
-        }
-        let toolResult = 'Tool error.'
-        try { toolResult = runTool(name, parsedArgs) } catch (e) { toolResult = 'Tool error: ' + String(e) }
-
-        // Feed the tool result back in the Gemini functionResponse shape and loop for the final answer.
-        // Gemini expects response.content as a STRING.
-        contents.push({ role: 'model', parts: [{ functionCall: { name, args: parsedArgs } }] })
-        contents.push({ role: 'tool', parts: [{ functionResponse: { name, response: { name, content: String(toolResult) } } }] })
-        continue
-      }
 
       if (text) return { text }
 
