@@ -316,7 +316,7 @@ export default defineEventHandler(async (event) => {
         // Feed the tool result back in the Gemini functionResponse shape and loop for the final answer.
         // Gemini expects response.content as a STRING.
         contents.push({ role: 'model', parts: [{ functionCall: { name, args: parsedArgs } }] })
-        contents.push({ role: 'user', parts: [{ functionResponse: { name, response: { name, content: String(toolResult) } } }] })
+        contents.push({ role: 'tool', parts: [{ functionResponse: { name, response: { name, content: String(toolResult) } } }] })
         continue
       }
 
