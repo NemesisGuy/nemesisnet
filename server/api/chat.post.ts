@@ -183,7 +183,7 @@ export default defineEventHandler(async (event) => {
 
   const refusal = "That's not something NemesisNet builds — I can only help with legitimate software and AI projects. Happy to help with something else?"
 
-  const blocked = /\b(porn|hentai|nsfw|nude|naked|xxx|sex\s*(chat|cam|video|work)|escort|onlyfans|brothel|sexting)\b/i
+  const blocked = /\b(porn|hentai|nsfw|nude|naked|xxx|sex\s*(chat|cam|video|work)|escort|onlyfans|brothel|sexting)\b|pornhub|xvideos|xhamster|redtube|youporn|spankbang/i
   const gambling = /\b(sportsbook|betting\s*site|casino|pokies|online\s*gambl|slot\s*machine|poker\s*site|lottery\s*platform)\b/i
   if (blocked.test(message) || gambling.test(message)) {
     return { text: refusal }
