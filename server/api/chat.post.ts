@@ -86,6 +86,7 @@ When a user asks for examples, proof of work, or "what have you built" — do no
   Live demo: torquebooks.nemesisnet.co.za
 - **OnTheGoRentals** — Full-stack rental platform — bookings, history, admin dashboard, Spring Boot + Vue. 
   Project page: nemesisnet.co.za/projects/onthegorentals
+  Blog deep dive: blog.nemesisnet.co.za/onthegorentals-a-dev-diary-building-a-production-ready-rental-saas/
   Live demo: otgr.nemesisnet.co.za
 - **NK Assessments** — Client-facing static portal, HTML5 + Bootstrap + Docker, shipped in under 48 hours. 
   Project page: nemesisnet.co.za/projects/nk-assessments
