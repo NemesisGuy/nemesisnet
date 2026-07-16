@@ -1,0 +1,61 @@
+{
+  "company": {
+    "name": "NemesisNet",
+    "url": "https://nemesisnet.co.za",
+    "blog": "https://blog.nemesisnet.co.za/",
+    "contact": "https://nemesisnet.co.za/contact",
+    "founder": "Peter Buckingham",
+    "location": "Cape Town, South Africa",
+    "description": "Software engineering and AI infrastructure company. Engineers AI-powered platforms, backend systems, and automation infrastructure. Infrastructure-first thinking, no vendor lock-in, production-obsessed.",
+    "techStack": ["Java Spring Boot 3", "Vue 3", "Nuxt 4", "React", "Python", "PostgreSQL", "MySQL", "Redis", "Docker", "Nginx", "PocketBase", "Spring Security", "JWT", "RabbitMQ", "Cloudflare", "Linux", "CI/CD", "MCP", "TTS", "REST APIs", "Git", "ESPHome", "ONNX Runtime", "WebGPU", "CUDA"]
+  },
+  "services": [
+    { "name": "Static & Brochure Sites", "price": "R7,000–R25,000", "timeline": "2–4 weeks", "description": "Landing pages, brochure sites, simple internal tools." },
+    { "name": "App Starter", "price": "R35,000–R80,000", "timeline": "4–8 weeks", "description": "PocketBase-backed apps, CRUD dashboards, MVPs, admin tools with auth." },
+    { "name": "Business Systems", "price": "From R150,000", "timeline": "8–16 weeks", "description": "End-to-end product builds with Vue 3 + Spring Boot, secure auth, dashboards, infrastructure." },
+    { "name": "Platform / Enterprise", "price": "From R350,000", "timeline": "16–30+ weeks", "description": "Multi-tenant SaaS, AI pipelines, self-hosted LLM/TTS, MCP integrations, agent workflows." },
+    { "name": "AI Architecture / Consulting", "price": "From R10,000", "timeline": "Half-day or full-day", "description": "Working sessions for AI and platform decisions." },
+    { "name": "Custom MCP & Agent Integrations", "price": "From R55,000", "timeline": "3–6 weeks", "description": "Custom MCP servers connecting AI agents to CMS, CRM, databases." },
+    { "name": "Light Hosting", "price": "R850/month", "timeline": "Ongoing", "description": "Hosting, SSL, uptime monitoring, security patches." },
+    { "name": "Managed Retainer", "price": "R7,500/month", "timeline": "Ongoing", "description": "CI/CD management, monitoring, bug fixes, continuous improvement, priority support." }
+  ],
+  "projects": [
+    { "name": "VoxNemesis Supertonic", "category": "AI & TTS", "description": "Local-first, GPU-aware TTS browser extension using ONNX Runtime Web with WebGPU acceleration. Runs entirely in the browser.", "links": { "github": "https://github.com/NemesisGuy/voxnemesis-supertonic-extension" } },
+    { "name": "Kokoro TTS Service", "category": "AI & TTS", "description": "Self-hosted AI text-to-speech web service on the Kokoro open-source engine.", "links": { "live": "https://kokoro-gui.nemesisnet.co.za" } },
+    { "name": "PocketTTS-MCP", "category": "AI & TTS", "description": "MCP server wrapping Kyutai Labs' Pocket TTS for agent-native text-to-speech workflows.", "links": { "github": "https://github.com/NemesisGuy/PocketTTS-MCP" } },
+    { "name": "Vibe-Type", "category": "AI & TTS", "description": "Experimental AI-powered coding/typing assistant with voice support.", "links": { "github": "https://github.com/NemesisGuy/Vibe-Type" } },
+
+    { "name": "CodeCritical SaaS", "category": "SaaS Platforms", "description": "Enterprise security scanning with multi-tenant architecture, JWT auth, Redis job queue, static analysis pipeline.", "links": { "project": "https://nemesisnet.co.za/projects/codecritical-saas", "github": "https://github.com/NemesisGuy/CodeCritical" } },
+    { "name": "ForkMyFolio", "category": "SaaS Platforms", "description": "Personal portfolio management with dynamic project tracking, skill management, PDF export, backup & restore.", "links": { "project": "https://nemesisnet.co.za/projects/forkmyfolio", "blog": "https://blog.nemesisnet.co.za/forkmyfolio-backend-designing-a-modern-multi-user-portfolio-platform-in-spring-boot/", "live": "https://forkmyfolio.nemesisnet.co.za" } },
+    { "name": "Since", "category": "SaaS Platforms", "description": "Accountability tracker — make claims, record events, set deadlines, verify outcomes.", "links": { "project": "https://nemesisnet.co.za/projects/since", "live": "https://since.nemesisnet.co.za" } },
+
+    { "name": "WordPress MCP Server", "category": "Tools & Open Source", "description": "MCP bridge letting AI agents read, update, and manage WordPress content securely.", "links": { "project": "https://nemesisnet.co.za/projects/wordpress-mcp", "github": "https://github.com/NemesisGuy/WordPress-MCP" } },
+    { "name": "CodeCritical CLI", "category": "Tools & Open Source", "description": "Java code analysis: LOC, functions, classes, duplication, maintainability index with markdown reports.", "links": { "project": "https://nemesisnet.co.za/projects/codecritical-cli" } },
+    { "name": "NemesisNet WordPress Theme", "category": "Tools & Open Source", "description": "Custom theme with glassmorphic dark/light UI, component library, Umami analytics.", "links": { "project": "https://nemesisnet.co.za/projects/nemesisnet-wordpress-theme" } },
+
+    { "name": "TorqueBooks", "category": "Client Work", "description": "Workshop management for auto shops — job cards, invoicing, CRM, vehicle tracking. React + PocketBase + OAuth2.", "links": { "project": "https://nemesisnet.co.za/projects/torquebooks", "live": "https://torquebooks.nemesisnet.co.za" } },
+    { "name": "OnTheGoRentals", "category": "Client Work", "description": "Full-stack rental platform — bookings, history, admin dashboard, Spring Boot + Vue.", "links": { "project": "https://nemesisnet.co.za/projects/onthegorentals", "blog": "https://blog.nemesisnet.co.za/onthegorentals-a-dev-diary-building-a-production-ready-rental-saas/", "live": "https://otgr.nemesisnet.co.za" } },
+    { "name": "NK Assessments", "category": "Client Work", "description": "Client-facing static portal, HTML5 + Bootstrap + Docker, shipped in under 48 hours.", "links": { "project": "https://nemesisnet.co.za/projects/nk-assessments", "live": "https://nkassessments.nemesisnet.co.za" } },
+    { "name": "Bored Room Cafe", "category": "Client Work", "description": "Local homestyle takeaway site.", "links": { "project": "https://nemesisnet.co.za/projects/bored-room-cafe", "live": "https://boredroomcafe.nemesisnet.co.za" } }
+  ],
+  "blogPosts": [
+    { "title": "Vue 3 Composition API: Real-World Patterns from Production Apps", "url": "https://blog.nemesisnet.co.za/vue-3-composition-api-real-world-patterns-from-production-apps/" },
+    { "title": "Self-Hosted TTS with Kokoro ONNX: What CPU-Only Inference Actually Gets You", "url": "https://blog.nemesisnet.co.za/self-hosted-tts-with-kokoro-onnx-what-cpu-only-inference-actually-gets-you/" },
+    { "title": "Building Since: A Self-Hosted Claim Tracker with PocketBase, React, and Express", "url": "https://blog.nemesisnet.co.za/building-since-self-hosted-claim-tracker-pocketbase-react-express/" },
+    { "title": "Agent Harness Explained: The Runtime That Makes AI Agents Actually Work", "url": "https://blog.nemesisnet.co.za/agent-harness-explained-the-runtime-that-makes-ai-agents-actually-work/" },
+    { "title": "Agent Skills Explained: How AI Agents Learn to Do Real Work", "url": "https://blog.nemesisnet.co.za/agent-skills-explained-how-ai-agents-learn-to-do-real-work/" },
+    { "title": "MCP Explained: The Open Standard That Makes AI Agents Actually Useful", "url": "https://blog.nemesisnet.co.za/mcp-explained-the-future-of-ai-agent-tool-use/" },
+    { "title": "MCP Integration for WordPress Automation: Cutting Publishing Time by 80%", "url": "https://blog.nemesisnet.co.za/wordpress-mcp-automation-cutting-publishing-time-by-80/" },
+    { "title": "Vue 3 vs React for Enterprise SaaS", "url": "https://blog.nemesisnet.co.za/vue-3-vs-react-for-enterprise-saas/" },
+    { "title": "TorqueBooks: Building a Workshop Management System for South African Auto Shops", "url": "https://blog.nemesisnet.co.za/torquebooks-building-a-workshop-management-system-for-south-african-auto-shops/" },
+    { "title": "Build Once, Deploy Anywhere: Runtime Env Injection for Dockerized Frontends", "url": "https://blog.nemesisnet.co.za/build-once-deploy-anywhere-runtime-env-injection-docker-frontend/" },
+    { "title": "ForkMyFolio Backend: Designing a Modern, Multi-User Portfolio Platform in Spring Boot", "url": "https://blog.nemesisnet.co.za/forkmyfolio-backend-designing-a-modern-multi-user-portfolio-platform-in-spring-boot/" },
+    { "title": "OnTheGoRentals: A Dev Diary — Building a Production-Ready Rental SaaS", "url": "https://blog.nemesisnet.co.za/onthegorentals-a-dev-diary-building-a-production-ready-rental-saas/" }
+  ],
+  "hardLimits": [
+    "Illegal products or services (fraud, card skimming, fake documents, hacking/exploit tools, malware, etc.)",
+    "Gambling or betting platforms (online casinos, sportsbooks, lottery, loot-box / gacha systems with real-money wagering)",
+    "Adult, NSFW, or pornographic products or content (including user-uploaded adult video platforms)",
+    "Anything facilitating harm, harassment, self-harm, or other illegal activity"
+  ]
+}
