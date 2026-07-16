@@ -9,7 +9,6 @@ async function ask(m, h = []) {
   const d = await r.json()
   return d.text || '[EMPTY]'
 }
-const decline = ['not something NemesisNet builds', 'can only help with legitimate']
 const max = 25
 
 // (b) specific project lookup -> should use getProject tool and return the dev-diary/blog link
