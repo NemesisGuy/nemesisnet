@@ -304,13 +304,19 @@ export default defineEventHandler(async (event) => {
       if (funcCall?.functionCall) {
         const { name, args } = funcCall.functionCall
         // Gemini may serialize args as a JSON string
+        let parsedArgs: Record<string, unknown> = {}
         if (typeof args === 'string') {
-          try { args = JSON.parse(args) as Record<string, unknown> } catch { args = {} }
+          try { parsedArgs = JSON.parse(args) as Record<string, unknown> } catch { parsedArgs = {} }
+        } else if (args && typeof args === 'object') {
+          parsedArgs = args as Record<string, unknown>
         }
-        const toolResult = runTool(name, (args as Record<string, unknown>) || {})
-        // Feed the tool result back in the Gemini functionResponse shape and loop for the final answer
-        contents.push({ role: 'model', parts: [{ functionCall: { name, args: (args as Record<string, unknown>) || {} } }] })
-        contents.push({ role: 'user', parts: [{ functionResponse: { name, response: { result: toolResult } } }] })
+        let toolResult = 'Tool error.'
+        try { toolResult = runTool(name, parsedArgs) } catch (e) { toolResult = 'Tool error: ' + String(e) }
+
+        // Feed the tool result back in the Gemini functionResponse shape and loop for the final answer.
+        // Gemini expects response.content as a STRING.
+        contents.push({ role: 'model', parts: [{ functionCall: { name, args: parsedArgs } }] })
+        contents.push({ role: 'user', parts: [{ functionResponse: { name, response: { name, content: String(toolResult) } } }] })
         continue
       }
 
