@@ -181,12 +181,12 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, message: 'Message too long. Please keep it under 2000 characters.' })
   }
 
-  const refusal = "That's not something NemesisNet builds — I can only help with legitimate software and AI projects. Happy to help with something else?"
+  const softRefusal = "I can't help with that. Happy to assist with legitimate software and AI projects though — what are you looking to build?"
 
   const blocked = /\b(porn|hentai|nsfw|nude|naked|xxx|sex\s*(chat|cam|video|work)|escort|onlyfans|brothel|sexting)\b|pornhub|xvideos|xhamster|redtube|youporn|spankbang/i
   const gambling = /\b(sportsbook|betting\s*site|casino|pokies|online\s*gambl|slot\s*machine|poker\s*site|lottery\s*platform)\b/i
   if (blocked.test(message) || gambling.test(message)) {
-    return { text: refusal }
+    return { text: softRefusal }
   }
 
   const apiKey = process.env.GEMMA_API_KEY || process.env.NUXT_GEMMA_API_KEY || config.gemmaApiKey
