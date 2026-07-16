@@ -251,9 +251,10 @@ export default defineEventHandler(async (event) => {
   ]
 
   const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemma-4-31b-it:generateContent?key=${apiKey}`
+  const MAX_TOOL_ROUNDS = 3
 
   try {
-    for (let attempt = 0; attempt < 2; attempt++) {
+    for (let attempt = 0; attempt < MAX_TOOL_ROUNDS; attempt++) {
       const requestBody = {
         contents,
         tools: [{ functionDeclarations: TOOLS }],
@@ -280,28 +281,38 @@ export default defineEventHandler(async (event) => {
 
       if (!gemmaRes.ok) {
         const errorData = await gemmaRes.text()
-        console.error(`Gemma API attempt ${attempt + 1} failed (Status: ${gemmaRes.status}):`, errorData)
-        if (attempt === 0) await new Promise(r => setTimeout(r, 1000))
-        continue
+        // On a transient API error, retry once after a short delay; otherwise surface a clean 503
+        if (attempt === 0) {
+          console.error(`Gemma API attempt 1 failed (Status: ${gemmaRes.status}):`, errorData)
+          await new Promise(r => setTimeout(r, 1000))
+          continue
+        }
+        console.error(`Gemma API attempt 2 failed (Status: ${gemmaRes.status}):`, errorData)
+        throw createError({ statusCode: 503, message: 'Chat service is currently unavailable (API Error). Please try again later.' })
       }
 
       const data = await gemmaRes.json()
       const candidate = data.candidates?.[0]
-      const parts = (candidate?.content?.parts || []) as Array<{ text?: string; thought?: boolean; functionCall?: { name: string; args?: Record<string, unknown> } }>
+      const parts = (candidate?.content?.parts || []) as Array<{ text?: string; thought?: boolean; functionCall?: { name: string; args?: Record<string, unknown> | string } }>
+
+      // Prefer a real text answer if the model returned one alongside/instead of a tool call
+      const answerParts = parts.filter((p) => !p.thought && p.text)
+      const text = answerParts.map((p) => p.text || '').join('').trim()
 
       // Check for a function call
       const funcCall = parts.find((p) => p.functionCall)
       if (funcCall?.functionCall) {
         const { name, args } = funcCall.functionCall
-        const toolResult = runTool(name, args || {})
-        // Feed the tool result back and let the model produce the final answer
-        contents.push({ role: 'model', parts: [{ functionCall: { name, args: args || {} } }] })
+        // Gemini may serialize args as a JSON string
+        if (typeof args === 'string') {
+          try { args = JSON.parse(args) as Record<string, unknown> } catch { args = {} }
+        }
+        const toolResult = runTool(name, (args as Record<string, unknown>) || {})
+        // Feed the tool result back in the Gemini functionResponse shape and loop for the final answer
+        contents.push({ role: 'model', parts: [{ functionCall: { name, args: (args as Record<string, unknown>) || {} } }] })
         contents.push({ role: 'user', parts: [{ functionResponse: { name, response: { result: toolResult } } }] })
         continue
       }
-
-      const answerParts = parts.filter((p) => !p.thought)
-      const text = answerParts.map((p) => p.text || '').join('')
 
       if (text) return { text }
 
