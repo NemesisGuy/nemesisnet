@@ -228,7 +228,8 @@ export default defineEventHandler(async (event) => {
       const gemmaRes = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(requestBody)
+        body: JSON.stringify(requestBody),
+        signal: AbortSignal.timeout(30000)
       })
 
       if (!gemmaRes.ok) {

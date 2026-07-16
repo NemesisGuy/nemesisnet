@@ -111,11 +111,16 @@ const sendMessage = async () => {
       content: m.content
     }))
 
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), 35000)
+
     const response = await $fetch('/api/chat', {
       method: 'POST',
-      body: { message: msg, history }
+      body: { message: msg, history },
+      signal: controller.signal
     })
 
+    clearTimeout(timeout)
     messages.value.push({ role: 'model', content: response?.text || 'Got a response but could not parse it.' })
   } catch {
     messages.value.push({ role: 'model', content: 'Something went wrong. Please try again or contact us at nemesisnet.co.za/contact' })
