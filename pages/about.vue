@@ -122,7 +122,7 @@
         <div class="stack-tags">
           <span class="stack-tag">Java Spring Boot 3</span>
           <span class="stack-tag">Vue 3</span>
-          <span class="stack-tag">Nuxt 3</span>
+          <span class="stack-tag">Nuxt 4</span>
           <span class="stack-tag">React</span>
           <span class="stack-tag">Python</span>
           <span class="stack-tag">PostgreSQL</span>
