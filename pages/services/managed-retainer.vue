@@ -98,7 +98,11 @@
             { title: 'System Design & Consulting', description: 'Architecture sessions for technical decisions — ad-hoc when you do not need a retainer.', to: '/services/consulting' }
           ]"
           exploring-note="From managed hosting to ad-hoc consulting — find the right support model."
-          :reading="[]"
+          :reading="[
+            { label: 'Self-Hosted CI/CD on a Home Rack — GitHub, Gitea, Woodpecker & Portainer', href: 'https://blog.nemesisnet.co.za/self-hosted-ci-cd-on-a-home-rack-github-gitea-woodpecker-and-portainer/' },
+            { label: 'WordPress MCP Automation — Cutting Publishing Time by 80%', href: 'https://blog.nemesisnet.co.za/wordpress-mcp-automation-cutting-publishing-time-by-80/' },
+            { label: 'Self-Hosted AI vs Cloud APIs — What South African Businesses Need to Know', href: 'https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/' }
+          ]"
           :cta="{ heading: 'Ready for ongoing support?', description: 'Dedicated engineering hours for maintenance, feature work, and technical decisions.', buttonLabel: 'Choose Managed Retainer', to: '/contact' }"
         />
       </div>

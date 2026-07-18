@@ -50,6 +50,17 @@ console.log('input enabled:', await input.isEnabled())
 
 for (let i = 0; i < convo.length; i++) {
   const msg = convo[i]
+  // Wait for input to be enabled (API response or timeout must complete first)
+  await input.waitFor({ state: 'visible', timeout: 40000 })
+  const startWait = Date.now()
+  while (!(await input.isEnabled()) && Date.now() - startWait < 40000) {
+    await sleep(1000)
+  }
+  if (!(await input.isEnabled())) {
+    console.log(`\n[${i + 1}] USER: ${msg}`)
+    console.log(`    SKIPPED: input still disabled after 40s`)
+    continue
+  }
   const bubblesBefore = await page.evaluate(() => document.querySelectorAll('.chat-msg--model').length)
   await input.fill(msg)
   await input.press('Enter')
