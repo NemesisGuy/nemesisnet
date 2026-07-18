@@ -1,13 +1,13 @@
 # NemesisNet
 
-AI Infrastructure & Platform Engineering - [dev.nemesisnet.co.za](https://dev.nemesisnet.co.za)
+AI Infrastructure & Platform Engineering - [nemesisnet.co.za](https://nemesisnet.co.za)
 
 ## Badges
 
 [![Build Status](https://ci.nemesisnet.co.za/api/badges/Nemesis/nemesisnet/status.svg)](https://ci.nemesisnet.co.za/Nemesis/nemesisnet)
-[![Lighthouse Performance](https://img.shields.io/badge/Lighthouse-Performance-91-green)](https://dev.nemesisnet.co.za)
-[![Lighthouse Accessibility](https://img.shields.io/badge/Lighthouse-Accessibility-98-green)](https://dev.nemesisnet.co.za)
-[![Lighthouse SEO](https://img.shields.io/badge/Lighthouse-SEO-99-green)](https://dev.nemesisnet.co.za)
+[![Lighthouse Performance](https://img.shields.io/badge/Lighthouse-Performance-91-green)](https://nemesisnet.co.za)
+[![Lighthouse Accessibility](https://img.shields.io/badge/Lighthouse-Accessibility-98-green)](https://nemesisnet.co.za)
+[![Lighthouse SEO](https://img.shields.io/badge/Lighthouse-SEO-99-green)](https://nemesisnet.co.za)
 
 ## Overview
 
