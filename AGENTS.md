@@ -261,3 +261,33 @@ These issues have been found and fixed in past audits. Watch for regressions:
 8. **Footer h4 headings** — WCAG violation; use `<strong class="footer-heading">` instead
 9. **Missing /contact in sitemap** — Must be in `config/prerender-routes.ts`
 10. **Dev site indexed** — Triple protection: `NUXT_PUBLIC_NO_INDEX=true`, robots Disallow, no-store cache
+
+---
+
+## Project Audit (July 2026)
+
+### Score: 8/10 — Production-ready
+
+### Completed Fixes
+- [x] Chat history increased from 1 to 10 turns (`chat.post.ts:190`)
+- [x] `.env.example` created with all required vars (force-tracked past gitignore)
+- [x] About page: "Nuxt 3" → "Nuxt 4" (`about.vue:125`)
+- [x] `twitter:site` unified to `@NemesisGuy` (was `@NemesisNet` in nuxt.config)
+- [x] XSS sanitizer added to ChatWidget `formatMessage()` — strips `<script>`, `<iframe>`, `on*` events
+- [x] Pre-check regex guardrails for porn/gambling (catches before API call)
+
+### Remaining Tech Debt
+1. **`main.css` is 2,708 lines** — Split into nav, cards, footer, tokens, responsive
+2. **Unscoped `<style>` in `about.vue` and `services/index.vue`** — Convert to `<style scoped>`
+3. **No error monitoring** — Add Sentry free tier or similar
+4. **API keys in `.env`** — Rotate: `GEMMA_API_KEY`, `RESEND_API_KEY`, `TURNSTILE_SECRET_KEY`
+5. **Chat API key in URL query string** — Google API pattern, can't avoid, but ensure server logs aren't public
+6. **No streaming** — Bot waits for full response (3-5s dead air). Consider streaming tokens.
+7. **Rate limiter is in-memory** — Resets on restart, single-instance only (fine for current setup)
+
+### Architecture Notes
+- Knowledge base: `server/data/nemesis-knowledge.json` (loaded at startup, injected into system prompt)
+- Bot: `server/api/chat.post.ts` (Gemma 4 31B IT via Google AI Studio)
+- Guardrails: regex pre-check → API safety settings → system prompt hard limits
+- Deploy: Woodpecker CI → Docker Hub → Portainer API (dev + prod tracks)
+- Themes: dark/light + aurora/nemesis via CSS variables and data attributes
