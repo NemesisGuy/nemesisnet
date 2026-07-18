@@ -68,7 +68,10 @@
             { title: 'Infrastructure & DevOps', description: 'Docker, CI/CD, and networking — when you need to own the infrastructure yourself.', to: '/services/infrastructure' }
           ]"
           exploring-note="Need more hands-on support or full infrastructure control? These services scale up from light hosting."
-          :reading="[]"
+          :reading="[
+            { label: 'Self-Hosted CI/CD on a Home Rack — GitHub, Gitea, Woodpecker & Portainer', href: 'https://blog.nemesisnet.co.za/self-hosted-ci-cd-on-a-home-rack-github-gitea-woodpecker-and-portainer/' },
+            { label: 'Self-Hosted AI vs Cloud APIs — What South African Businesses Need to Know', href: 'https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/' }
+          ]"
           :cta="{ heading: 'Ready to get hosted?', description: 'Managed hosting for Nuxt and static sites — SSL, backups, and monitoring included.', buttonLabel: 'Choose Light Hosting', to: '/contact' }"
         />
       </div>
