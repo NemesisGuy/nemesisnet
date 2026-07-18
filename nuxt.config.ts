@@ -61,7 +61,7 @@ export default defineNuxtConfig({
         { name: 'description', content: 'NemesisNet engineers AI-powered platforms, backend systems, and automation infrastructure.' },
         ...(process.env.NUXT_PUBLIC_NO_INDEX === 'true' ? [{ name: 'robots', content: 'noindex, nofollow' }] : []),
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:site', content: '@NemesisNet' },
+        { name: 'twitter:site', content: '@NemesisGuy' },
         { name: 'twitter:title', content: 'NemesisNet — AI Infrastructure & Platform Engineering' },
         { name: 'twitter:description', content: 'NemesisNet engineers AI-powered platforms, backend systems, and automation infrastructure.' }
       ],
