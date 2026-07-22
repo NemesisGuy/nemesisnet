@@ -180,4 +180,16 @@ steps:
       event: [push, tag, manual]
       branch: master
 
+  submit-to-internet-archive:
+    image: alpine
+    commands:
+      - apk add --no-cache curl
+      - echo "Submitting sitemap to Internet Archive Wayback Machine..."
+      - curl -s "https://web.archive.org/save/https://nemesisnet.co.za" -o /dev/null -w "Homepage: %{http_code}\n" || true
+      - curl -s "https://web.archive.org/save/https://nemesisnet.co.za/sitemap.xml" -o /dev/null -w "Sitemap: %{http_code}\n" || true
+      - echo "Internet Archive submission complete."
+    when:
+      event: [push, tag, manual]
+      branch: master
+
 
