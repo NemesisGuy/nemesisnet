@@ -185,8 +185,8 @@ steps:
     commands:
       - apk add --no-cache curl
       - echo "Submitting to Internet Archive Wayback Machine..."
-      - curl -s -o /dev/null -w "Homepage: HTTP %{http_code}" "https://web.archive.org/save/https://nemesisnet.co.za" || true
-      - curl -s -o /dev/null -w "Sitemap: HTTP %{http_code}" "https://web.archive.org/save/https://nemesisnet.co.za/sitemap.xml" || true
+      - curl -s -o /dev/null "https://web.archive.org/save/https://nemesisnet.co.za" || true
+      - curl -s -o /dev/null "https://web.archive.org/save/https://nemesisnet.co.za/sitemap.xml" || true
       - echo "Done."
     when:
       event: [push, tag, manual]
