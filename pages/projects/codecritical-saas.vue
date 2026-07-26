@@ -56,7 +56,7 @@
             { title: 'OntheGoRentals', description: 'Spring Boot + Vue 3 full-stack rental platform with JWT auth and admin dashboards.', to: '/projects/onthegorentals' }
           ]"
           :reading="[
-            { label: 'View Source on GitHub', href: 'https://github.com/NemesisGuy/CodeCritical' }
+            { label: 'Try the Public Beta', href: 'https://codecritical.nemesisnet.co.za' }
           ]"
           :cta="{ heading: 'Want something like this built?', description: 'Java, Spring Boot, Vue 3, PostgreSQL, and Redis — production-built with multi-tenant isolation, JWT auth, and async scan pipelines.', buttonLabel: 'Start a Project', to: '/contact', note: 'Scoping calls are free.' }"
           :navigation="{ prev: { to: '/projects/bored-room-cafe', label: 'Bored Room Cafe' }, next: { to: '/projects/codecritical-cli', label: 'CodeCritical CLI' } }"
@@ -70,7 +70,7 @@
             <li><span>Timeline:</span> <strong>Stable Release</strong></li>
             <li><span>Stack:</span> <strong>Java, Spring Boot, Vue 3, PostgreSQL, Redis, Nginx</strong></li>
             <li><span>Role:</span> <strong>Lead Engineer</strong></li>
-            <li><span>Status:</span> <strong>In Development</strong></li>
+            <li><span>Status:</span> <strong>Public Beta</strong></li>
           </ul>
         </div>
         <div class="sidebar-card">
@@ -87,7 +87,7 @@
           <h4>Quick Links</h4>
           <div class="quick-links">
             <NuxtLink to="/projects" class="btn-glass">← Back to Portfolio</NuxtLink>
-            <a href="https://github.com/NemesisGuy/CodeCritical" target="_blank" class="btn-glass">View Source</a>
+            <a href="https://codecritical.nemesisnet.co.za" target="_blank" class="btn-glass">Public Beta</a>
           </div>
         </div>
       </div>
