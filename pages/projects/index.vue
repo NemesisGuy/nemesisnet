@@ -62,8 +62,8 @@
             <h3>CodeCritical SaaS</h3>
             <p>Enterprise security scanning SaaS with multi-tenant architecture, JWT auth, Redis job queue, and static analysis pipeline.</p>
             <div class="project-links">
-              <a class="btn-glass" href="https://codecritical.nemesisnet.co.za" target="_blank">Public Beta</a>
               <NuxtLink class="btn-glass" to="/projects/codecritical-saas">Detail</NuxtLink>
+              <a class="btn-glass" href="https://codecritical.nemesisnet.co.za" target="_blank">Live Demo</a>
             </div>
           </div>
 
