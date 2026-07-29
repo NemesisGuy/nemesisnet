@@ -78,6 +78,11 @@ export default defineNuxtConfig({
       ],
       script: [
         {
+          src: 'https://metrics.nemesisnet.co.za/script.js',
+          defer: true,
+          'data-website-id': '9a0683f9-2a7e-41fc-aee8-8d1150dea50c'
+        },
+        {
           type: 'application/ld+json',
           children: JSON.stringify({
             '@context': 'https://schema.org',
