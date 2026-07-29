@@ -64,6 +64,7 @@
             <div class="project-links">
               <NuxtLink class="btn-glass" to="/projects/codecritical-saas">Detail</NuxtLink>
               <a class="btn-glass" href="https://codecritical.nemesisnet.co.za" target="_blank">Live Demo</a>
+              <a class="btn-glass" href="https://blog.nemesisnet.co.za/codecritical-beta-release-know-if-your-code-is-ready-to-ship/" target="_blank">Blog</a>
             </div>
           </div>
 
