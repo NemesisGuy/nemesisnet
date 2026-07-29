@@ -25,7 +25,7 @@
     { "name": "PocketTTS-MCP", "category": "AI & TTS", "description": "MCP server wrapping Kyutai Labs' Pocket TTS for agent-native text-to-speech workflows.", "links": { "github": "https://github.com/NemesisGuy/PocketTTS-MCP" } },
     { "name": "Vibe-Type", "category": "AI & TTS", "description": "Experimental AI-powered coding/typing assistant with voice support.", "links": { "github": "https://github.com/NemesisGuy/Vibe-Type" } },
 
-    { "name": "CodeCritical SaaS", "category": "SaaS Platforms", "description": "Enterprise security scanning with multi-tenant architecture, JWT auth, Redis job queue, static analysis pipeline. Public beta live at codecritical.nemesisnet.co.za.", "links": { "project": "https://nemesisnet.co.za/projects/codecritical-saas", "live": "https://codecritical.nemesisnet.co.za" } },
+    { "name": "CodeCritical SaaS", "category": "SaaS Platforms", "description": "Enterprise security scanning with multi-tenant architecture, JWT auth, Redis job queue, static analysis pipeline. Public beta live at codecritical.nemesisnet.co.za.", "links": { "project": "https://nemesisnet.co.za/projects/codecritical-saas", "live": "https://codecritical.nemesisnet.co.za", "blog": "https://blog.nemesisnet.co.za/codecritical-beta-release-know-if-your-code-is-ready-to-ship/" } },
     { "name": "ForkMyFolio", "category": "SaaS Platforms", "description": "Personal portfolio management with dynamic project tracking, skill management, PDF export, backup & restore.", "links": { "project": "https://nemesisnet.co.za/projects/forkmyfolio", "blog": "https://blog.nemesisnet.co.za/forkmyfolio-backend-designing-a-modern-multi-user-portfolio-platform-in-spring-boot/", "live": "https://forkmyfolio.nemesisnet.co.za" } },
     { "name": "Since", "category": "SaaS Platforms", "description": "Accountability tracker — make claims, record events, set deadlines, verify outcomes.", "links": { "project": "https://nemesisnet.co.za/projects/since", "live": "https://since.nemesisnet.co.za" } },
 
@@ -50,7 +50,8 @@
     { "title": "TorqueBooks: Building a Workshop Management System for South African Auto Shops", "url": "https://blog.nemesisnet.co.za/torquebooks-building-a-workshop-management-system-for-south-african-auto-shops/" },
     { "title": "Build Once, Deploy Anywhere: Runtime Env Injection for Dockerized Frontends", "url": "https://blog.nemesisnet.co.za/build-once-deploy-anywhere-runtime-env-injection-docker-frontend/" },
     { "title": "ForkMyFolio Backend: Designing a Modern, Multi-User Portfolio Platform in Spring Boot", "url": "https://blog.nemesisnet.co.za/forkmyfolio-backend-designing-a-modern-multi-user-portfolio-platform-in-spring-boot/" },
-    { "title": "OnTheGoRentals: A Dev Diary — Building a Production-Ready Rental SaaS", "url": "https://blog.nemesisnet.co.za/onthegorentals-a-dev-diary-building-a-production-ready-rental-saas/" }
+    { "title": "OnTheGoRentals: A Dev Diary — Building a Production-Ready Rental SaaS", "url": "https://blog.nemesisnet.co.za/onthegorentals-a-dev-diary-building-a-production-ready-rental-saas/" },
+    { "title": "CodeCritical Beta Release — Know If Your Code Is Ready to Ship", "url": "https://blog.nemesisnet.co.za/codecritical-beta-release-know-if-your-code-is-ready-to-ship/" }
   ],
   "hardLimits": [
     "Illegal products or services (fraud, card skimming, fake documents, hacking/exploit tools, malware, etc.)",

@@ -56,7 +56,8 @@
             { title: 'OntheGoRentals', description: 'Spring Boot + Vue 3 full-stack rental platform with JWT auth and admin dashboards.', to: '/projects/onthegorentals' }
           ]"
           :reading="[
-            { label: 'Try the Public Beta', href: 'https://codecritical.nemesisnet.co.za' }
+            { label: 'Try the Public Beta', href: 'https://codecritical.nemesisnet.co.za' },
+            { label: 'Read the Launch Post', href: 'https://blog.nemesisnet.co.za/codecritical-beta-release-know-if-your-code-is-ready-to-ship/' }
           ]"
           :cta="{ heading: 'Want something like this built?', description: 'Java, Spring Boot, Vue 3, PostgreSQL, and Redis — production-built with multi-tenant isolation, JWT auth, and async scan pipelines.', buttonLabel: 'Start a Project', to: '/contact', note: 'Scoping calls are free.' }"
           :navigation="{ prev: { to: '/projects/bored-room-cafe', label: 'Bored Room Cafe' }, next: { to: '/projects/codecritical-cli', label: 'CodeCritical CLI' } }"
