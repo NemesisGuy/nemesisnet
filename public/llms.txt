@@ -23,7 +23,7 @@ NemesisNet operates on the principle of digital sovereignty and architectural pu
 - **Framework & Styling:** Vue 3, Nuxt, Vite. Minimalist, high-performance, dark-mode technical user interfaces (glassmorphism, neon accents) optimized for sub-second paint times, high contrast, and accessibility.
 
 ### Infrastructure & DevOps
-- **Deployment:** Self-hosted on enterprise bare-metal rack hardware (Dell PowerEdge, HP ProLiant, Cisco/HP switching infrastructure).
+- **Deployment:** Self-hosted on enterprise bare-metal rack hardware.
 - **Containerization & Routing:** Containerized deployments using Docker, custom Nginx reverse-proxies, dynamic environment URL runtime injections, and Cloudflare zone network routing.
 - **CI/CD:** Self-managed Gitea repositories, Woodpecker CI for continuous delivery, and container orchestration via Portainer.
 
