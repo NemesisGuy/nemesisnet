@@ -280,7 +280,7 @@ useHead({
 .stat-number { display: block; font-size: 1.8rem; color: var(--accent-color); font-weight: 700; margin-bottom: 4px; }
 .stat-label { font-size: 0.85rem; color: var(--text-muted); }
 
-.values-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 24px 0; }
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
 .value-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }
 .value-icon { color: var(--accent-color); margin-bottom: 12px; }
 .value-card strong { color: var(--accent-color); display: block; margin-bottom: 8px; font-size: 1rem; }
@@ -291,5 +291,6 @@ useHead({
   .founder-photo { position: static; }
   .project-highlights { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .values-grid { grid-template-columns: 1fr; }
 }
 </style>
