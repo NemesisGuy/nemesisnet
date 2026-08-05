@@ -250,7 +250,7 @@ useHead({
 @media (max-width: 768px) {
   .breadcrumbs { display: none !important; }
 }
-.back-link { text-align: center; margin-top: 40px; }
+.back-link { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }
 .about-cta { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 32px; text-align: center; margin: 40px 0 20px; }
 .about-cta h2 { font-size: 1.5rem; margin: 0 0 12px; color: var(--accent-color); }
 .about-cta p { color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem; }
