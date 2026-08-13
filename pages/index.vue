@@ -123,6 +123,29 @@
     </div>
   </section>
 
+  <!-- Latest from the Lab -->
+  <section id="lab">
+    <h2>Latest from the Lab</h2>
+    <p class="lab-intro">Deep dives on architecture, self-hosted AI, and production engineering.</p>
+    <div class="lab-grid">
+      <a href="https://blog.nemesisnet.co.za/codecritical-beta-release-know-if-your-code-is-ready-to-ship/" target="_blank" rel="noopener noreferrer" class="lab-card">
+        <strong>CodeCritical Beta Release — Know If Your Code Is Ready to Ship</strong>
+        <span>Multi-engine security scanning with a single verdict score.</span>
+      </a>
+      <a href="https://blog.nemesisnet.co.za/vue-3-vs-react-for-enterprise-saas/" target="_blank" rel="noopener noreferrer" class="lab-card">
+        <strong>Vue 3 vs React for Enterprise SaaS</strong>
+        <span>Why Vue 3 won for CodeCritical's frontend.</span>
+      </a>
+      <a href="https://blog.nemesisnet.co.za/self-hosted-ci-cd-on-a-home-rack-github-gitea-woodpecker-and-portainer/" target="_blank" rel="noopener noreferrer" class="lab-card">
+        <strong>Self-Hosted CI/CD on a Home Rack</strong>
+        <span>How Woodpecker CI powers the deployment pipeline.</span>
+      </a>
+    </div>
+    <div class="section-cta">
+      <a href="https://blog.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" class="btn-glass">Read the Blog →</a>
+    </div>
+  </section>
+
 <!-- Testimonials Section -->
    <section id="testimonials">
      <h2>Testimonials</h2>
@@ -305,6 +328,16 @@ section#contact { min-height: auto; display: flex; flex-direction: column; justi
 @media (max-width: 900px) { .contact-links { flex-direction: column; gap: 10px; } .contact-links a { width: 100%; text-align: center; } }
 
 .services-teaser-text { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px; }
+
+/* Latest from the Lab */
+#lab { max-width: 1280px; margin: 0 auto; padding: 40px 20px; }
+.lab-intro { color: var(--text-muted); margin-bottom: 24px; font-size: 1.05rem; }
+.lab-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.lab-card { display: flex; flex-direction: column; gap: 8px; padding: 24px; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; text-decoration: none; transition: all 0.3s ease; }
+.lab-card:hover { transform: translateY(-4px); border-color: var(--accent-color); box-shadow: 0 12px 32px rgba(0,0,0,0.3); }
+.lab-card strong { color: var(--text-color); font-size: 1.05rem; line-height: 1.4; }
+.lab-card span { color: var(--text-muted); font-size: 0.9rem; }
+@media (max-width: 900px) { .lab-grid { grid-template-columns: 1fr; } }
 
 /* Testimonial enhancements */
 .testimonial-header { margin-bottom: 16px; }
