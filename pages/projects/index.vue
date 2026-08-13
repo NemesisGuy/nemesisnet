@@ -99,7 +99,7 @@
             <p>Lightweight MCP bridge that lets AI agents read, update, and manage WordPress content securely via a local-first server.</p>
             <div class="project-links">
               <NuxtLink class="btn-glass" to="/projects/wordpress-mcp">Details</NuxtLink>
-              <a class="btn-glass" href="https://blog.nemesisnet.co.za/bring-wordpress-into-your-agent-workflows-with-the-wordpress-mcp-server" target="_blank">Blog</a>
+              <a class="btn-glass" href="https://blog.nemesisnet.co.za/bring-wordpress-into-your-agent-workflows-with-the-wordpress-mcp-server/" target="_blank">Blog</a>
               <a class="btn-glass" href="https://github.com/NemesisGuy/WordPress-MCP" target="_blank">Source</a>
             </div>
           </div>
@@ -119,9 +119,9 @@
             <h3>NemesisNet WordPress Theme</h3>
             <p>Custom WordPress theme built on the NemesisNet brand — glassmorphic dark/light UI, component library, and Umami analytics.</p>
             <div class="project-links">
+              <NuxtLink class="btn-glass" to="/projects/nemesisnet-wordpress-theme">Details</NuxtLink>
+              <a class="btn-glass" href="https://blog.nemesisnet.co.za" target="_blank">Blog</a>
               <a class="btn-glass" href="https://github.com/NemesisGuy/NemesisNet-WordPress-Theme" target="_blank">Source</a>
-              <NuxtLink class="btn-glass" to="/projects/nemesisnet-wordpress-theme">Detail</NuxtLink>
-              <a class="btn-glass" href="https://blog.nemesisnet.co.za" target="_blank">Live Demo</a>
             </div>
           </div>
         </div>
