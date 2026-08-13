@@ -28,3 +28,9 @@ temp/
 # Business docs (contracts, SOPs, forms, proposals)
 nemesis-docs/
 .gstack/
+
+# Local deploy/screenshot artifacts
+deploy.sh
+github-contributions.png
+github-profile.png
+scripts/shot-*.png

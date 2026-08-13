@@ -86,7 +86,8 @@
         <h3>CodeCritical SaaS</h3>
         <p>Enterprise B2B platform with role-based access, client portals, and automated billing.</p>
         <div class="card-links">
-          <NuxtLink to="/projects/codecritical-saas" class="btn-glass">Detail</NuxtLink>
+          <NuxtLink to="/projects/onthego-rentals" class="nuxt-link">Details</NuxtLink>
+          <a href="https://onthego.nemesisnet.co.za" target="_blank" class="nuxt-link">Live Demo</a>
         </div>
       </div>
       <div class="card">
@@ -105,7 +106,8 @@
         <h3>VoxNemesis Supertonic</h3>
         <p>WebGPU-powered local voice cloning with ONNX inference, real-time TTS, and zero cloud dependencies.</p>
         <div class="card-links">
-          <NuxtLink to="/projects/voxnemesis-supertonic" class="btn-glass">Detail</NuxtLink>
+          <NuxtLink to="/projects/data-migration-intelligence" class="nuxt-link">Details</NuxtLink>
+          <a href="https://dmi.nemesisnet.co.za" target="_blank" class="nuxt-link">Live Demo</a>
         </div>
       </div>
       <div class="card">

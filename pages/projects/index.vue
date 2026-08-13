@@ -16,9 +16,9 @@
             <h3>VoxNemesis Supertonic</h3>
             <p>A local-first, GPU-aware TTS browser extension that runs entirely in the browser using ONNX Runtime Web with WebGPU acceleration.</p>
             <div class="project-links">
-              <a class="btn-glass" href="https://github.com/NemesisGuy/voxnemesis-supertonic-extension" target="_blank">Source</a>
-              <NuxtLink class="btn-glass" to="/projects/voxnemesis-supertonic">Detail</NuxtLink>
+              <NuxtLink class="btn-glass" to="/projects/voxnemesis-supertonic">Details</NuxtLink>
               <a class="btn-glass" href="https://blog.nemesisnet.co.za/voxnemesis-supertonic-building-a-local-first-gpu-aware-tts-browser-extension/" target="_blank">Blog</a>
+              <a class="btn-glass" href="https://github.com/NemesisGuy/voxnemesis-supertonic-extension" target="_blank">Source</a>
             </div>
           </div>
 
@@ -27,9 +27,9 @@
             <h3>Kokoro TTS Service</h3>
             <p>A self-hosted AI text-to-speech web service built on top of the open-source Kokoro TTS engine — enabling natural-sounding speech synthesis via a user-friendly web interface.</p>
             <div class="project-links">
-              <a class="btn-glass" href="https://github.com/NemesisGuy/Kokoro_TTS_Service" target="_blank">Source</a>
-              <NuxtLink class="btn-glass" to="/projects/kokoro-tts">Detail</NuxtLink>
+              <NuxtLink class="btn-glass" to="/projects/kokoro-tts">Details</NuxtLink>
               <a class="btn-glass" href="https://kokoro-gui.nemesisnet.co.za" target="_blank">Live Demo</a>
+              <a class="btn-glass" href="https://github.com/NemesisGuy/Kokoro_TTS_Service" target="_blank">Source</a>
             </div>
           </div>
 
@@ -38,8 +38,8 @@
             <h3>PocketTTS-MCP</h3>
             <p>MCP server wrapping Kyutai Labs' Pocket TTS — local, open-source neural text-to-speech for AI agent workflows.</p>
             <div class="project-links">
+              <NuxtLink class="btn-glass" to="/projects/pockettts-mcp">Details</NuxtLink>
               <a class="btn-glass" href="https://github.com/NemesisGuy/PocketTTS-MCP" target="_blank">Source</a>
-              <NuxtLink class="btn-glass" to="/projects/pockettts-mcp">Detail</NuxtLink>
             </div>
           </div>
 
@@ -48,9 +48,9 @@
             <h3>Vibe-Type</h3>
             <p>An experimental AI-powered coding/typing assistant — offering voice or smart-typing support, to speed up coding and writing workflows.</p>
             <div class="project-links">
-              <a class="btn-glass" href="https://github.com/NemesisGuy/Vibe-Type" target="_blank">Source</a>
-              <NuxtLink class="btn-glass" to="/projects/vibetype">Detail</NuxtLink>
+              <NuxtLink class="btn-glass" to="/projects/vibetype">Details</NuxtLink>
               <a class="btn-glass" href="https://blog.nemesisnet.co.za/vibetype-building-a-local-first-voice-coding-companion/" target="_blank">Blog</a>
+              <a class="btn-glass" href="https://github.com/NemesisGuy/Vibe-Type" target="_blank">Source</a>
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@
             <h3>CodeCritical SaaS</h3>
             <p>Enterprise security scanning SaaS with multi-tenant architecture, JWT auth, Redis job queue, and static analysis pipeline.</p>
             <div class="project-links">
-              <NuxtLink class="btn-glass" to="/projects/codecritical-saas">Detail</NuxtLink>
+              <NuxtLink class="btn-glass" to="/projects/codecritical-saas">Details</NuxtLink>
               <a class="btn-glass" href="https://codecritical.nemesisnet.co.za" target="_blank">Live Demo</a>
               <a class="btn-glass" href="https://blog.nemesisnet.co.za/codecritical-beta-release-know-if-your-code-is-ready-to-ship/" target="_blank">Blog</a>
             </div>
@@ -73,9 +73,9 @@
             <h3>ForkMyFolio</h3>
             <p>A fully-featured, production-ready personal portfolio management system with dynamic project tracking, skill management, PDF export, and backup & restore capabilities.</p>
             <div class="project-links">
-              <a class="btn-glass" href="https://github.com/NemesisGuy/ForkMyFolio-frontend" target="_blank">Source</a>
-              <NuxtLink class="btn-glass" to="/projects/forkmyfolio">Detail</NuxtLink>
+              <NuxtLink class="btn-glass" to="/projects/forkmyfolio">Details</NuxtLink>
               <a class="btn-glass" href="https://forkmyfolio.nemesisnet.co.za" target="_blank">Live Demo</a>
+              <a class="btn-glass" href="https://github.com/NemesisGuy/ForkMyFolio-frontend" target="_blank">Source</a>
             </div>
           </div>
 
@@ -84,9 +84,9 @@
             <h3>Since</h3>
             <p>Accountability tracker — make claims, record events, set deadlines, verify outcomes over time.</p>
             <div class="project-links">
-              <a class="btn-glass" href="https://github.com/NemesisGuy/Since" target="_blank">Source</a>
-              <NuxtLink class="btn-glass" to="/projects/since">Detail</NuxtLink>
+              <NuxtLink class="btn-glass" to="/projects/since">Details</NuxtLink>
               <a class="btn-glass" href="https://since.nemesisnet.co.za" target="_blank">Live Demo</a>
+              <a class="btn-glass" href="https://github.com/NemesisGuy/Since" target="_blank">Source</a>
             </div>
           </div>
         </div>
@@ -98,9 +98,9 @@
             <h3>WordPress MCP Server</h3>
             <p>Lightweight MCP bridge that lets AI agents read, update, and manage WordPress content securely via a local-first server.</p>
             <div class="project-links">
-              <a class="btn-glass" href="https://github.com/NemesisGuy/WordPress-MCP" target="_blank">Source</a>
-              <NuxtLink class="btn-glass" to="/projects/wordpress-mcp">Detail</NuxtLink>
+              <NuxtLink class="btn-glass" to="/projects/wordpress-mcp">Details</NuxtLink>
               <a class="btn-glass" href="https://blog.nemesisnet.co.za/bring-wordpress-into-your-agent-workflows-with-the-wordpress-mcp-server" target="_blank">Blog</a>
+              <a class="btn-glass" href="https://github.com/NemesisGuy/WordPress-MCP" target="_blank">Source</a>
             </div>
           </div>
 
@@ -109,8 +109,8 @@
             <h3>CodeCritical CLI</h3>
             <p>Java code analysis tool — measures LOC, functions, classes, duplication, and maintainability index with markdown reports.</p>
             <div class="project-links">
+              <NuxtLink class="btn-glass" to="/projects/codecritical-cli">Details</NuxtLink>
               <a class="btn-glass" href="https://github.com/NemesisGuy/CodeCritical" target="_blank">Source</a>
-              <NuxtLink class="btn-glass" to="/projects/codecritical-cli">Detail</NuxtLink>
             </div>
           </div>
 
@@ -133,7 +133,7 @@
             <h3>TorqueBooks</h3>
             <p>Workshop management for auto shops — job cards, invoicing, CRM, vehicle tracking. React + PocketBase + OAuth2 SSO.</p>
             <div class="project-links">
-              <NuxtLink class="btn-glass" to="/projects/torquebooks">Detail</NuxtLink>
+              <NuxtLink class="btn-glass" to="/projects/torquebooks">Details</NuxtLink>
               <a class="btn-glass" href="https://torquebooks.nemesisnet.co.za" target="_blank">Live Demo</a>
             </div>
           </div>
@@ -143,9 +143,9 @@
             <h3>OntheGoRentals</h3>
             <p>Full-stack reference build — bookings, rental history, admin dashboard, and rental management with Spring Boot and Vue.</p>
             <div class="project-links">
-              <a class="btn-glass" href="https://github.com/NemesisGuy/OnTheGoRentals" target="_blank">Source</a>
-              <NuxtLink class="btn-glass" to="/projects/onthegorentals">Detail</NuxtLink>
+              <NuxtLink class="btn-glass" to="/projects/onthegorentals">Details</NuxtLink>
               <a class="btn-glass" href="https://otgr.nemesisnet.co.za" target="_blank">Live Demo</a>
+              <a class="btn-glass" href="https://github.com/NemesisGuy/OnTheGoRentals" target="_blank">Source</a>
             </div>
           </div>
 
@@ -154,9 +154,9 @@
             <h3>NK Assessments</h3>
             <p>Client-facing static portal built with HTML5, Bootstrap, and Dockerized Nginx — designed, shipped, and deployed in under 48 hours.</p>
             <div class="project-links">
-              <a class="btn-glass" href="https://github.com/NemesisGuy/NKAssessments" target="_blank">Source</a>
-              <NuxtLink class="btn-glass" to="/projects/nk-assessments">Detail</NuxtLink>
+              <NuxtLink class="btn-glass" to="/projects/nk-assessments">Details</NuxtLink>
               <a class="btn-glass" href="https://nkassessments.nemesisnet.co.za" target="_blank">Live Demo</a>
+              <a class="btn-glass" href="https://github.com/NemesisGuy/NKAssessments" target="_blank">Source</a>
             </div>
           </div>
 
@@ -165,9 +165,9 @@
             <h3>Bored Room Cafe</h3>
             <p>A local homestyle takeaway and food-service spot based in Ferness Estate — showcasing local flavour and simple ordering for busy families.</p>
             <div class="project-links">
-              <a class="btn-glass" href="https://github.com/NemesisGuy/Bored-Room-Cafe" target="_blank">Source</a>
-              <NuxtLink class="btn-glass" to="/projects/bored-room-cafe">Detail</NuxtLink>
+              <NuxtLink class="btn-glass" to="/projects/bored-room-cafe">Details</NuxtLink>
               <a class="btn-glass" href="https://boredroomcafe.nemesisnet.co.za" target="_blank">Live Demo</a>
+              <a class="btn-glass" href="https://github.com/NemesisGuy/Bored-Room-Cafe" target="_blank">Source</a>
             </div>
           </div>
         </div>
