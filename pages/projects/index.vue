@@ -29,6 +29,7 @@
             <div class="project-links">
               <NuxtLink class="btn-glass" to="/projects/kokoro-tts">Details</NuxtLink>
               <a class="btn-glass" href="https://kokoro-gui.nemesisnet.co.za" target="_blank">Live Demo</a>
+              <a class="btn-glass" href="https://blog.nemesisnet.co.za/self-hosted-tts-with-kokoro-onnx-what-cpu-only-inference-actually-gets-you/" target="_blank">Blog</a>
               <a class="btn-glass" href="https://github.com/NemesisGuy/Kokoro_TTS_Service" target="_blank">Source</a>
             </div>
           </div>
@@ -75,6 +76,7 @@
             <div class="project-links">
               <NuxtLink class="btn-glass" to="/projects/forkmyfolio">Details</NuxtLink>
               <a class="btn-glass" href="https://forkmyfolio.nemesisnet.co.za" target="_blank">Live Demo</a>
+              <a class="btn-glass" href="https://blog.nemesisnet.co.za/forkmyfolio-backend-designing-a-modern-multi-user-portfolio-platform-in-spring-boot/" target="_blank">Blog</a>
               <a class="btn-glass" href="https://github.com/NemesisGuy/ForkMyFolio-frontend" target="_blank">Source</a>
             </div>
           </div>
@@ -86,6 +88,7 @@
             <div class="project-links">
               <NuxtLink class="btn-glass" to="/projects/since">Details</NuxtLink>
               <a class="btn-glass" href="https://since.nemesisnet.co.za" target="_blank">Live Demo</a>
+              <a class="btn-glass" href="https://blog.nemesisnet.co.za/building-since-self-hosted-claim-tracker-pocketbase-react-express/" target="_blank">Blog</a>
               <a class="btn-glass" href="https://github.com/NemesisGuy/Since" target="_blank">Source</a>
             </div>
           </div>
@@ -135,6 +138,7 @@
             <div class="project-links">
               <NuxtLink class="btn-glass" to="/projects/torquebooks">Details</NuxtLink>
               <a class="btn-glass" href="https://torquebooks.nemesisnet.co.za" target="_blank">Live Demo</a>
+              <a class="btn-glass" href="https://blog.nemesisnet.co.za/torquebooks-building-a-workshop-management-system-for-south-african-auto-shops/" target="_blank">Blog</a>
             </div>
           </div>
 
@@ -145,6 +149,7 @@
             <div class="project-links">
               <NuxtLink class="btn-glass" to="/projects/onthegorentals">Details</NuxtLink>
               <a class="btn-glass" href="https://otgr.nemesisnet.co.za" target="_blank">Live Demo</a>
+              <a class="btn-glass" href="https://blog.nemesisnet.co.za/onthegorentals-a-dev-diary-building-a-production-ready-rental-saas/" target="_blank">Blog</a>
               <a class="btn-glass" href="https://github.com/NemesisGuy/OnTheGoRentals" target="_blank">Source</a>
             </div>
           </div>
