@@ -84,10 +84,10 @@
         <span class="pill pill-client">Enterprise SaaS</span>
         <img :src="'/images/projects/codecritical-saas/optimized/hero.webp'" alt="CodeCritical SaaS" loading="lazy">
         <h3>CodeCritical SaaS</h3>
-        <p>Enterprise B2B platform with role-based access, client portals, and automated billing.</p>
+        <p>Enterprise security scanning SaaS — vulnerability scanning, static analysis, and architecture validation in one platform.</p>
         <div class="card-links">
-          <NuxtLink to="/projects/onthego-rentals" class="nuxt-link">Details</NuxtLink>
-          <a href="https://onthego.nemesisnet.co.za" target="_blank" class="nuxt-link">Live Demo</a>
+          <NuxtLink to="/projects/codecritical-saas" class="btn-glass">Details</NuxtLink>
+          <a href="https://codecritical.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
         </div>
       </div>
       <div class="card">
@@ -96,7 +96,7 @@
         <h3>Since</h3>
         <p>Accountability tracker — make claims, record events, set deadlines, verify outcomes over time.</p>
         <div class="card-links">
-          <NuxtLink to="/projects/since" class="btn-glass">Detail</NuxtLink>
+          <NuxtLink to="/projects/since" class="btn-glass">Details</NuxtLink>
           <a href="https://since.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
         </div>
       </div>
@@ -106,8 +106,8 @@
         <h3>VoxNemesis Supertonic</h3>
         <p>WebGPU-powered local voice cloning with ONNX inference, real-time TTS, and zero cloud dependencies.</p>
         <div class="card-links">
-          <NuxtLink to="/projects/data-migration-intelligence" class="nuxt-link">Details</NuxtLink>
-          <a href="https://dmi.nemesisnet.co.za" target="_blank" class="nuxt-link">Live Demo</a>
+          <NuxtLink to="/projects/voxnemesis-supertonic" class="btn-glass">Details</NuxtLink>
+          <a href="https://blog.nemesisnet.co.za/voxnemesis-supertonic-building-a-local-first-gpu-aware-tts-browser-extension/" target="_blank" class="btn-glass">Blog</a>
         </div>
       </div>
       <div class="card">
@@ -116,7 +116,7 @@
         <h3>PocketTTS-MCP</h3>
         <p>Model Context Protocol server for local LLM-powered text-to-speech with audio streaming and voice cloning.</p>
         <div class="card-links">
-          <NuxtLink to="/projects/pockettts-mcp" class="btn-glass">Detail</NuxtLink>
+          <NuxtLink to="/projects/pockettts-mcp" class="btn-glass">Details</NuxtLink>
         </div>
       </div>
     </div>
