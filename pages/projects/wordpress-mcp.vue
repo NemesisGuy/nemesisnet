@@ -60,8 +60,8 @@
           <h4>Quick Links</h4>
           <div class="quick-links">
             <NuxtLink to="/projects" class="btn-glass">← Back to Portfolio</NuxtLink>
-            <a href="https://github.com/NemesisGuy/WordPress-MCP" target="_blank" class="btn-glass">View Source</a>
-              <a href="https://blog.nemesisnet.co.za/bring-wordpress-into-your-agent-workflows-with-the-wordpress-mcp-server/" target="_blank" class="btn-glass">Deep Dive</a>
+            <a href="https://github.com/NemesisGuy/WordPress-MCP" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="View Source (opens in new tab)">View Source</a>
+              <a href="https://blog.nemesisnet.co.za/bring-wordpress-into-your-agent-workflows-with-the-wordpress-mcp-server/" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Deep Dive (opens in new tab)">Deep Dive</a>
           </div>
         </div>
       </div>

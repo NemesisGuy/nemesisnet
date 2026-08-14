@@ -61,8 +61,8 @@
           <h4>Quick Links</h4>
           <div class="quick-links">
             <NuxtLink to="/projects" class="btn-glass">← Back to Portfolio</NuxtLink>
-            <a href="https://github.com/NemesisGuy/voxnemesis-supertonic-extension" target="_blank" class="btn-glass">View Source</a>
-            <a href="https://blog.nemesisnet.co.za/voxnemesis-supertonic-building-a-local-first-gpu-aware-tts-browser-extension/" target="_blank" class="btn-glass">Read Build Log</a>
+            <a href="https://github.com/NemesisGuy/voxnemesis-supertonic-extension" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="View Source (opens in new tab)">View Source</a>
+            <a href="https://blog.nemesisnet.co.za/voxnemesis-supertonic-building-a-local-first-gpu-aware-tts-browser-extension/" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Read Build Log (opens in new tab)">Read Build Log</a>
           </div>
         </div>
       </div>

@@ -134,8 +134,8 @@
           <h3>Quick Links</h3>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
-            <a href="https://blog.nemesisnet.co.za/self-hosted-ci-cd-on-a-home-rack-github-gitea-woodpecker-and-portainer/" target="_blank" class="btn-glass">Self-Hosted CI/CD</a>
-            <a href="https://blog.nemesisnet.co.za/inside-the-nemesisnet-homelab-my-personal-data-center/" target="_blank" class="btn-glass">Homelab Deep Dive</a>
+            <a href="https://blog.nemesisnet.co.za/self-hosted-ci-cd-on-a-home-rack-github-gitea-woodpecker-and-portainer/" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Self-Hosted CI/CD (opens in new tab)">Self-Hosted CI/CD</a>
+            <a href="https://blog.nemesisnet.co.za/inside-the-nemesisnet-homelab-my-personal-data-center/" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Homelab Deep Dive (opens in new tab)">Homelab Deep Dive</a>
             <NuxtLink to="/services/ai-development" class="btn-glass">AI Development</NuxtLink>
             <NuxtLink to="/services/custom-software" class="btn-glass">Custom Software</NuxtLink>
             <NuxtLink to="/projects" class="btn-glass">View Projects</NuxtLink>

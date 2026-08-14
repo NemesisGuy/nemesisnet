@@ -18,8 +18,8 @@
 | Redirect hygiene | ✅ Pass | No internal links hit the 5 `nuxt.config` 301s |
 | `useHead` SEO coverage | ✅ Pass | Present on all 39 page files |
 | Footer headings | ✅ Pass | Use `<strong class="footer-heading">` (no `<h4>`) |
-| `rel="noopener noreferrer"` on external links | ⚠️ Open | Many links missing it (see §3) |
-| `aria-label="…(opens in new tab)"` on external links | ⚠️ Open | Many missing (see §3) |
+| `rel="noopener noreferrer"` on external links | ✅ Pass | Added to all 83 external `target="_blank"` anchors (2026-08-13, F7) |
+| `aria-label="…(opens in new tab)"` on external links | ✅ Pass | Added to all 83 external `target="_blank"` anchors (2026-08-13, F7) |
 | Heading hierarchy (h1→h2→h3) per page | 🔍 To verify | Detail pages use h3/h4 subheads — confirm no skips |
 | Meta description ≤155 / title ≤60 per page | 🔍 To verify | `useHead` present; need per-page length check |
 | JSON-LD on service pages | 🔍 To verify | Need per-page confirm |
@@ -80,6 +80,38 @@
 | F4 | WordPress Theme card mislabeled "Live Demo" (pointed at blog) | Relabeled "Blog" | `pages/projects/index.vue` |
 | F5 | Homepage featured cards: wrong cross-links (CodeCritical→OnTheGo, VoxNemesis→DMI), "Detail" label, mixed classes | Corrected links, "Details" label, `btn-glass` class | `pages/index.vue` |
 | F6 | `dmi.nemesisnet.co.za` / `onthego.nemesisnet.co.za` references | Confirmed absent (OnTheGo already uses `otgr`) | — |
+| F7 | B1 — external links missing `rel="noopener noreferrer"` + `aria-label` | Added to **83** external `target="_blank"` anchors across 23 files via script | see table below |
+
+**F7 — anchors fixed per file (2026-08-13)**
+
+| File | Anchors fixed |
+|---|---|
+| pages/about.vue | 3 |
+| pages/index.vue | 12 |
+| pages/projects/bored-room-cafe.vue | 2 |
+| pages/projects/codecritical-cli.vue | 1 |
+| pages/projects/codecritical-saas.vue | 2 |
+| pages/projects/forkmyfolio.vue | 3 |
+| pages/projects/index.vue | 30 |
+| pages/projects/kokoro-tts.vue | 3 |
+| pages/projects/nemesisnet-wordpress-theme.vue | 2 |
+| pages/projects/nk-assessments.vue | 2 |
+| pages/projects/onthegorentals.vue | 2 |
+| pages/projects/pockettts-mcp.vue | 2 |
+| pages/projects/since.vue | 2 |
+| pages/projects/torquebooks.vue | 1 |
+| pages/projects/vibetype.vue | 2 |
+| pages/projects/voxnemesis-supertonic.vue | 2 |
+| pages/projects/wordpress-mcp.vue | 2 |
+| pages/services/ai-development.vue | 1 |
+| pages/services/infrastructure.vue | 2 |
+| pages/services/saas-development.vue | 1 |
+| pages/services/self-hosted-ai.vue | 1 |
+| pages/software-development-cost-south-africa.vue | 1 |
+| components/AppFooter.vue | 4 |
+| **Total** | **83** |
+
+> Excluded (already compliant or dynamic): `components/AppHeader.vue`, `components/ServiceFooter.vue`, `components/ChatWidget.vue`.
 
 ---
 
@@ -106,14 +138,14 @@
 | `:focus-visible` outline | ✅ Pass | In `main.css` |
 | `prefers-reduced-motion` | ✅ Pass | In `main.css` |
 | Footer headings use `<strong class="footer-heading">` | ✅ Pass | No `<h4>` in footers (grep-verified) |
-| External links have `rel="noopener noreferrer"` | ⚠️ Open | **Missing on most project cards & detail-page buttons** — e.g. `pages/projects/index.vue` (all 15 card links), `pages/projects/*` detail buttons, `pages/about.vue:153/159/160`, `pages/index.vue:24/90/100/110/189/201/202/203`. Present on header/footer + "Latest from the Lab" cards. |
-| External links have `aria-label="…(opens in new tab)"` | ⚠️ Open | Same coverage gap as above |
+| External links have `rel="noopener noreferrer"` | ✅ Pass | Added to all 83 external `target="_blank"` anchors 2026-08-13 (F7) |
+| External links have `aria-label="…(opens in new tab)"` | ✅ Pass | Added to all 83 external `target="_blank"` anchors 2026-08-13 (F7) |
 | Images have `alt` + `loading="lazy"` | 🔍 To verify | Project listing uses both; confirm detail pages |
 | Form feedback `role="status"`/`role="alert"` | 🔍 To verify | Chat + contact forms |
 | No `<NuxtLink>` nested in `<NuxtLink>` | 🔍 To verify | |
 | Heading hierarchy h1→h2→h3 (no skips) | 🔍 To verify | Detail pages use h3/h4 section heads under h1 |
 
-**Recommended batch fix (not yet applied):** add `rel="noopener noreferrer"` and `aria-label="… (opens in new tab)"` to all external `target="_blank"` anchors project-wide. High-impact, low-risk.
+**Done 2026-08-13 (F7):** `rel="noopener noreferrer"` + `aria-label="… (opens in new tab)"` added to all 83 external `target="_blank"` anchors project-wide via script.
 
 ---
 
@@ -142,7 +174,7 @@
 
 | ID | Issue | Priority | Status | Owner/Notes |
 |---|---|---|---|---|
-| B1 | Add `rel="noopener noreferrer"` + `aria-label` to all external links | High | ⚠️ Open | ~40 anchors across `pages/**` |
+| B1 | Add `rel="noopener noreferrer"` + `aria-label` to all external links | High | ✅ Fixed | 83 anchors across 23 files (F7) |
 | B2 | Per-page SEO length check (title ≤60, desc ≤155) | Med | 🔍 To verify | |
 | B3 | Per-page heading hierarchy audit | Med | 🔍 To verify | Detail pages |
 | B4 | Per-page JSON-LD confirm (service pages) | Med | 🔍 To verify | |

@@ -177,7 +177,7 @@
         <div class="section-cta section-cta--prominent">
           <h2>Ready to Scope Your Project?</h2>
           <p class="section-cta-body">Every engagement starts with a free discovery call. Bring your brief — we'll tell you which tier fits, what's realistic in your timeline, and what to budget before you commit to anything.</p>
-          <NuxtLink to="https://scope.nemesisnet.co.za" class="btn--ignite" target="_blank" rel="noopener noreferrer">Scope Your Project →</NuxtLink>
+          <NuxtLink to="https://scope.nemesisnet.co.za" class="btn--ignite" target="_blank" rel="noopener noreferrer" aria-label="Scope Your Project → (opens in new tab)">Scope Your Project →</NuxtLink>
           <p class="section-cta-sub">
             <NuxtLink to="/services" class="cta-secondary-link">View Full Services &amp; Pricing →</NuxtLink>
           </p>

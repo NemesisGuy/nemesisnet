@@ -101,7 +101,7 @@
           <h4>Quick Links</h4>
           <div class="quick-links">
             <NuxtLink to="/projects" class="btn-glass">← Back to Portfolio</NuxtLink>
-            <a href="https://torquebooks.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
+            <a href="https://torquebooks.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Live Demo (opens in new tab)">Live Demo</a>
           </div>
         </div>
       </div>

@@ -64,8 +64,8 @@
           <h4>Quick Links</h4>
           <div class="quick-links">
             <NuxtLink to="/projects" class="btn-glass">← Back to Portfolio</NuxtLink>
-            <a href="https://blog.nemesisnet.co.za/bringing-gpu-support-to-neutts-air-a-dev-diary/" target="_blank" class="btn-glass">Read Dev Diary</a>
-            <a href="https://github.com/NemesisGuy/PocketTTS-MCP" target="_blank" class="btn-glass">View Source</a>
+            <a href="https://blog.nemesisnet.co.za/bringing-gpu-support-to-neutts-air-a-dev-diary/" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Read Dev Diary (opens in new tab)">Read Dev Diary</a>
+            <a href="https://github.com/NemesisGuy/PocketTTS-MCP" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="View Source (opens in new tab)">View Source</a>
           </div>
         </div>
       </div>

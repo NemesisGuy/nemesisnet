@@ -150,14 +150,14 @@
           <p>Every engagement is scoped by complexity and workflow requirements — then right-sized with transparent pricing starting from R7,000.</p>
           <div class="about-cta-buttons">
             <NuxtLink to="/services" class="btn-glass">View Services & Pricing →</NuxtLink>
-            <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Scope Your Project</a>
+            <a href="https://scope.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Scope Your Project (opens in new tab)">Scope Your Project</a>
           </div>
         </div>
 
         <div class="back-link">
           <NuxtLink to="/projects" class="btn-glass">See the Work →</NuxtLink>
-          <a href="https://blog.nemesisnet.co.za/welcome-to-nemesisnet-why-i-started-this-blog/" target="_blank" class="btn-glass">Why I Started This Blog</a>
-          <a href="https://blog.nemesisnet.co.za/nemesisnet-overview/" target="_blank" class="btn-glass">NemesisNet Overview</a>
+          <a href="https://blog.nemesisnet.co.za/welcome-to-nemesisnet-why-i-started-this-blog/" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Why I Started This Blog (opens in new tab)">Why I Started This Blog</a>
+          <a href="https://blog.nemesisnet.co.za/nemesisnet-overview/" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="NemesisNet Overview (opens in new tab)">NemesisNet Overview</a>
         </div>
       </div>
     </div>
