@@ -69,7 +69,7 @@
           <h4>Quick Links</h4>
           <div class="quick-links">
             <NuxtLink to="/projects" class="btn-glass">← Back to Portfolio</NuxtLink>
-            <a href="https://github.com/NemesisGuy/CodeCritical" target="_blank" class="btn-glass">View Source</a>
+            <a href="https://github.com/NemesisGuy/CodeCritical" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="View Source (opens in new tab)">View Source</a>
           </div>
         </div>
       </div>

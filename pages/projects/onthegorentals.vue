@@ -78,9 +78,9 @@
           <h4>Quick Links</h4>
           <div class="quick-links">
             <NuxtLink to="/projects" class="btn-glass">← Back to Portfolio</NuxtLink>
-            <a href="https://github.com/NemesisGuy/OnTheGoRentals" target="_blank" class="btn-glass">View Source</a>
+            <a href="https://github.com/NemesisGuy/OnTheGoRentals" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="View Source (opens in new tab)">View Source</a>
             <a href="https://blog.nemesisnet.co.za/onthegorentals-a-dev-diary-building-a-production-ready-rental-saas/" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Read the OnTheGoRentals dev diary on the blog (opens in new tab)">Read Dev Diary</a>
-            <a href="https://otgr.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
+            <a href="https://otgr.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Live Demo (opens in new tab)">Live Demo</a>
           </div>
         </div>
       </div>

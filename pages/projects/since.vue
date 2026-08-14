@@ -92,8 +92,8 @@
           <h4>Quick Links</h4>
           <div class="quick-links">
             <NuxtLink to="/projects" class="btn-glass">← Back to Portfolio</NuxtLink>
-            <a href="https://github.com/NemesisGuy/Since" target="_blank" class="btn-glass">View Source</a>
-            <a href="https://since.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
+            <a href="https://github.com/NemesisGuy/Since" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="View Source (opens in new tab)">View Source</a>
+            <a href="https://since.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Live Demo (opens in new tab)">Live Demo</a>
           </div>
         </div>
       </div>

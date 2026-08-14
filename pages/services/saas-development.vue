@@ -129,7 +129,7 @@
           <h3>Quick Links</h3>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
-            <a href="https://blog.nemesisnet.co.za/from-rebuilding-authentication-in-every-app-to-a-shared-identity-layer/" target="_blank" class="btn-glass">Auth Deep Dive</a>
+            <a href="https://blog.nemesisnet.co.za/from-rebuilding-authentication-in-every-app-to-a-shared-identity-layer/" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Auth Deep Dive (opens in new tab)">Auth Deep Dive</a>
             <NuxtLink to="/services/custom-software" class="btn-glass">Custom Software</NuxtLink>
             <NuxtLink to="/services/infrastructure" class="btn-glass">Infrastructure</NuxtLink>
             <NuxtLink to="/projects" class="btn-glass">View Projects</NuxtLink>

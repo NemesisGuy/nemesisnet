@@ -93,8 +93,8 @@
           <h4>Quick Links</h4>
           <div class="quick-links">
             <NuxtLink to="/projects" class="btn-glass">← Back to Portfolio</NuxtLink>
-            <a href="https://codecritical.nemesisnet.co.za" target="_blank" class="btn-glass">Public Beta</a>
-            <a href="https://blog.nemesisnet.co.za/codecritical-beta-release-know-if-your-code-is-ready-to-ship/" target="_blank" class="btn-glass">Read the Launch Post</a>
+            <a href="https://codecritical.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Public Beta (opens in new tab)">Public Beta</a>
+            <a href="https://blog.nemesisnet.co.za/codecritical-beta-release-know-if-your-code-is-ready-to-ship/" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Read the Launch Post (opens in new tab)">Read the Launch Post</a>
           </div>
         </div>
       </div>

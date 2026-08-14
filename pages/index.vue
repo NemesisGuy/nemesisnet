@@ -21,7 +21,7 @@
       </div>
       <div class="hero-links">
         <NuxtLink to="/projects" class="btn-glass">See Our Work</NuxtLink>
-        <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass btn-primary">Scope Your Project</a>
+        <a href="https://scope.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" class="btn-glass btn-primary" aria-label="Scope Your Project (opens in new tab)">Scope Your Project</a>
       </div>
     </div>
     <a href="/projects" class="chevron" aria-label="Scroll to projects">
@@ -87,7 +87,7 @@
         <p>Enterprise security scanning SaaS — vulnerability scanning, static analysis, and architecture validation in one platform.</p>
         <div class="card-links">
           <NuxtLink to="/projects/codecritical-saas" class="btn-glass">Details</NuxtLink>
-          <a href="https://codecritical.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
+          <a href="https://codecritical.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Live Demo (opens in new tab)">Live Demo</a>
         </div>
       </div>
       <div class="card">
@@ -97,7 +97,7 @@
         <p>Accountability tracker — make claims, record events, set deadlines, verify outcomes over time.</p>
         <div class="card-links">
           <NuxtLink to="/projects/since" class="btn-glass">Details</NuxtLink>
-          <a href="https://since.nemesisnet.co.za" target="_blank" class="btn-glass">Live Demo</a>
+          <a href="https://since.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Live Demo (opens in new tab)">Live Demo</a>
         </div>
       </div>
       <div class="card">
@@ -107,7 +107,7 @@
         <p>WebGPU-powered local voice cloning with ONNX inference, real-time TTS, and zero cloud dependencies.</p>
         <div class="card-links">
           <NuxtLink to="/projects/voxnemesis-supertonic" class="btn-glass">Details</NuxtLink>
-          <a href="https://blog.nemesisnet.co.za/voxnemesis-supertonic-building-a-local-first-gpu-aware-tts-browser-extension/" target="_blank" class="btn-glass">Blog</a>
+          <a href="https://blog.nemesisnet.co.za/voxnemesis-supertonic-building-a-local-first-gpu-aware-tts-browser-extension/" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Blog (opens in new tab)">Blog</a>
         </div>
       </div>
       <div class="card">
@@ -130,21 +130,21 @@
     <h2>Latest from the Lab</h2>
     <p class="lab-intro">Deep dives on architecture, self-hosted AI, and production engineering.</p>
     <div class="lab-grid">
-      <a href="https://blog.nemesisnet.co.za/codecritical-beta-release-know-if-your-code-is-ready-to-ship/" target="_blank" rel="noopener noreferrer" class="lab-card">
+      <a href="https://blog.nemesisnet.co.za/codecritical-beta-release-know-if-your-code-is-ready-to-ship/" target="_blank" rel="noopener noreferrer" class="lab-card" aria-label="CodeCritical Beta Release — Know If Your Code Is Ready to Ship Multi-engine security scanning with a single verdict score. (opens in new tab)">
         <strong>CodeCritical Beta Release — Know If Your Code Is Ready to Ship</strong>
         <span>Multi-engine security scanning with a single verdict score.</span>
       </a>
-      <a href="https://blog.nemesisnet.co.za/vue-3-vs-react-for-enterprise-saas/" target="_blank" rel="noopener noreferrer" class="lab-card">
+      <a href="https://blog.nemesisnet.co.za/vue-3-vs-react-for-enterprise-saas/" target="_blank" rel="noopener noreferrer" class="lab-card" aria-label="Vue 3 vs React for Enterprise SaaS Why Vue 3 won for CodeCritical's frontend. (opens in new tab)">
         <strong>Vue 3 vs React for Enterprise SaaS</strong>
         <span>Why Vue 3 won for CodeCritical's frontend.</span>
       </a>
-      <a href="https://blog.nemesisnet.co.za/self-hosted-ci-cd-on-a-home-rack-github-gitea-woodpecker-and-portainer/" target="_blank" rel="noopener noreferrer" class="lab-card">
+      <a href="https://blog.nemesisnet.co.za/self-hosted-ci-cd-on-a-home-rack-github-gitea-woodpecker-and-portainer/" target="_blank" rel="noopener noreferrer" class="lab-card" aria-label="Self-Hosted CI/CD on a Home Rack How Woodpecker CI powers the deployment pipeline. (opens in new tab)">
         <strong>Self-Hosted CI/CD on a Home Rack</strong>
         <span>How Woodpecker CI powers the deployment pipeline.</span>
       </a>
     </div>
     <div class="section-cta">
-      <a href="https://blog.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" class="btn-glass">Read the Blog →</a>
+      <a href="https://blog.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Read the Blog → (opens in new tab)">Read the Blog →</a>
     </div>
   </section>
 
@@ -186,7 +186,7 @@
      <h2>Ready to Start Your Project?</h2>
      <p class="services-teaser-text">Every system is scoped by complexity and workflow requirements — then right-sized with transparent pricing. Let's talk.</p>
      <div class="cta-buttons">
-       <a href="https://scope.nemesisnet.co.za" target="_blank" class="btn-glass">Scope Your Project</a>
+       <a href="https://scope.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Scope Your Project (opens in new tab)">Scope Your Project</a>
        <NuxtLink to="/services" class="btn-glass">View Pricing →</NuxtLink>
      </div>
    </section>
@@ -198,9 +198,9 @@
       <p class="services-teaser-text">I review every enquiry personally and respond within 24 hours.</p>
       <div class="contact-links">
         <a href="mailto:admin@nemesisnet.co.za">Email</a>
-        <a href="https://github.com/NemesisGuy" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/peter-buckingham-65438757" target="_blank">LinkedIn</a>
-        <a href="https://forkmyfolio.nemesisnet.co.za/nemesis" target="_blank">Portfolio</a>
+        <a href="https://github.com/NemesisGuy" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in new tab)">GitHub</a>
+        <a href="https://www.linkedin.com/in/peter-buckingham-65438757" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)">LinkedIn</a>
+        <a href="https://forkmyfolio.nemesisnet.co.za/nemesis" target="_blank" rel="noopener noreferrer" aria-label="Portfolio (opens in new tab)">Portfolio</a>
       </div>
       <div class="cta-buttons" style="margin-top: 24px;">
         <NuxtLink to="/contact" class="btn-glass">Send a Message →</NuxtLink>

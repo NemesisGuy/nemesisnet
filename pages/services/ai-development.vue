@@ -128,7 +128,7 @@
           <h3>Quick Links</h3>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
-            <a href="https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/" target="_blank" class="btn-glass">Read Cost Analysis</a>
+            <a href="https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Read Cost Analysis (opens in new tab)">Read Cost Analysis</a>
             <NuxtLink to="/services/self-hosted-ai" class="btn-glass">Self-Hosted AI</NuxtLink>
             <NuxtLink to="/services/infrastructure" class="btn-glass">Infrastructure</NuxtLink>
             <NuxtLink to="/projects" class="btn-glass">View Projects</NuxtLink>
