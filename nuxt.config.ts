@@ -59,7 +59,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
-      title: 'NemesisNet — AI Infrastructure & Platform Engineering',
+      title: 'NemesisNet | Full-Stack Software, SaaS & AI Solutions | Cape Town',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
@@ -84,7 +84,7 @@ export default defineNuxtConfig({
         },
         {
           type: 'application/ld+json',
-          children: JSON.stringify({
+          innerHTML: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'WebSite',
             'name': 'NemesisNet',
@@ -104,7 +104,7 @@ export default defineNuxtConfig({
         },
         {
           type: 'application/ld+json',
-          children: JSON.stringify({
+          innerHTML: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Organization',
             '@id': 'https://nemesisnet.co.za/#organization',
@@ -130,7 +130,7 @@ export default defineNuxtConfig({
         },
         {
           type: 'application/ld+json',
-          children: JSON.stringify({
+          innerHTML: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
             '@id': 'https://nemesisnet.co.za/#localbusiness',
@@ -138,10 +138,10 @@ export default defineNuxtConfig({
             'description': 'Software engineering and AI infrastructure services based in Cape Town, South Africa.',
             'url': 'https://nemesisnet.co.za',
             'image': 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png',
-            'areaServed': {
-              '@type': 'Country',
-              'name': 'South Africa'
-            },
+            'areaServed': [
+              { '@type': 'Country', 'name': 'South Africa' },
+              { '@type': 'City', 'name': 'Cape Town' }
+            ],
             'address': {
               '@type': 'PostalAddress',
               'addressLocality': 'Cape Town',

@@ -215,7 +215,7 @@
 import { Server, Cloud, Brain, Cpu, Workflow, Briefcase } from 'lucide-vue-next'
 
 useHead({
-  title: 'AI Infrastructure & Platform Engineering | NemesisNet',
+  title: 'NemesisNet | Full-Stack Software, SaaS & AI Solutions | Cape Town',
   meta: [
     { name: 'description', content: 'AI infrastructure, SaaS development, and self-hosted systems for production. Cape Town, South Africa. ZAR pricing, POPIA-aware.' },
     { property: 'og:title', content: 'NemesisNet — AI Infrastructure & Platform Engineering in Cape Town' },
@@ -233,7 +233,7 @@ useHead({
   script: [
     {
       type: 'application/ld+json',
-      children: JSON.stringify({
+      innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Organization',
         'name': 'NemesisNet',
