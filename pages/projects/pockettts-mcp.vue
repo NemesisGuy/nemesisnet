@@ -93,7 +93,7 @@ useHead({
   script: [
     {
       type: 'application/ld+json',
-      children: JSON.stringify({
+      innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'SoftwareApplication',
         'name': 'PocketTTS-MCP',
@@ -114,7 +114,7 @@ useHead({
     },
     {
       type: 'application/ld+json',
-      children: JSON.stringify({
+      innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
