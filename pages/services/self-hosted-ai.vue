@@ -18,7 +18,7 @@
 
         <h2>The Solution: AI Infrastructure You Own</h2>
         <p>NemesisNet engineers self-hosted AI infrastructure — systems that run on cloud VPS instances, on-premise servers, or hybrid configurations. The architecture is portable: models can be swapped, hardware can scale independently of vendor pricing, and the entire stack can be replicated across environments without licensing constraints.</p>
-        <p>Not locked into vendor APIs. Not dependent on someone else's uptime. Full sovereignty over your data, your models, and your inference pipeline. Whether you need a single TTS endpoint or a fleet of LLM workers serving thousands of requests per minute, we build infrastructure that's yours.</p>
+        <p>Not locked into vendor APIs. Not dependent on someone else's uptime. Full sovereignty over your data, your models, and your inference pipeline. Whether you need a single speech-to-text (STT) or text-to-speech (TTS) endpoint, or a fleet of LLM workers serving thousands of requests per minute, we build infrastructure that's yours.</p>
 
         <h2>Infrastructure Architecture</h2>
         <p>Self-hosted AI stacks are built around GGUF model files — quantized LLM and TTS models that run efficiently on CPU or GPU hardware without the overhead of full-precision serving. Infrastructure is Dockerized end-to-end: model serving, API layer, authentication, and monitoring all run in containers with defined resource boundaries.</p>
@@ -33,7 +33,7 @@
         </ul>
 
         <h2>GPU Infrastructure &amp; Optimization</h2>
-        <p>For TTS and LLM inference workloads, GPU acceleration significantly reduces generation time. NemesisNet configures CUDA environments, optimizes VRAM usage through quantization (GPTQ, AWQ, and GGUF formats), and implements batch processing for throughput optimization.</p>
+        <p>For speech-to-text (STT), text-to-speech (TTS), and LLM inference workloads, GPU acceleration significantly reduces generation time. NemesisNet configures CUDA environments, optimizes VRAM usage through quantization (GPTQ, AWQ, and GGUF formats), and implements batch processing for throughput optimization.</p>
         <p>The infrastructure handles model loading, memory management, and hardware failover — keeping the system stable under variable load. We've benchmarked inference on hardware ranging from consumer-grade GPUs to multi-GPU server configurations, always optimizing for cost-per-token.</p>
 
         <h2>Vector Databases &amp; Semantic Search</h2>
@@ -58,7 +58,7 @@
           <div class="process-step">
             <span class="step-number">3</span>
             <h3>Model Optimization</h3>
-            <p>Models are quantized, benchmarked, and containerized. We optimize for your specific latency-throughput tradeoff, whether that's sub-100ms TTS or high-throughput batch inference.</p>
+            <p>Models are quantized, benchmarked, and containerized. We optimize for your specific latency-throughput tradeoff, whether that's sub-100ms TTS, real-time speech-to-text (STT) transcription, or high-throughput batch inference.</p>
           </div>
           <div class="process-step">
             <span class="step-number">4</span>
@@ -119,7 +119,7 @@
             { label: 'Self-Hosted AI vs Cloud APIs: What South African Businesses Need to Know', href: 'https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/' },
             { label: 'Inside the NemesisNet Homelab: My Personal Data Center', href: 'https://blog.nemesisnet.co.za/inside-the-nemesisnet-homelab-my-personal-data-center/' }
           ]"
-          :cta="{ heading: 'Ready to own your infrastructure?', description: 'Self-hosted LLMs, TTS pipelines, and inference architecture — running on your hardware.', buttonLabel: 'Discuss Infrastructure', to: '/contact' }"
+          :cta="{ heading: 'Ready to own your infrastructure?', description: 'Self-hosted LLMs, speech-to-text (STT) and text-to-speech (TTS) pipelines, and inference architecture — running on your hardware.', buttonLabel: 'Discuss Infrastructure', to: '/contact' }"
         />
       </div>
 
@@ -127,7 +127,7 @@
         <div class="sidebar-card">
           <h3>Service Details</h3>
           <ul class="sidebar-list">
-            <li><span>Focus:</span> <strong>LLM, TTS, Vector DB Infrastructure</strong></li>
+            <li><span>Focus:</span> <strong>LLM, STT &amp; TTS, Vector DB Infrastructure</strong></li>
             <li><span>Stack:</span> <strong>Python, Docker, CUDA, Redis</strong></li>
             <li><span>Role:</span> <strong>Architecture &amp; Deployment</strong></li>
             <li><span>Location:</span> <strong>Cape Town, South Africa</strong></li>
@@ -153,7 +153,7 @@
 useHead({
   title: 'Self-Hosted AI Infrastructure | NemesisNet — GGUF, GPU, No Vendor Lock-in',
   meta: [
-    { name: 'description', content: 'Self-hosted AI infrastructure in South Africa: GGUF models, Docker deployment, GPU setup, and vector databases. Real AI — not API wrappers. Cape Town.' },
+    { name: 'description', content: 'Self-hosted AI infrastructure in South Africa: GGUF models, Docker, GPU, vector databases, and speech-to-text (STT) / text-to-speech (TTS) pipelines. Real AI — not API wrappers. Cape Town.' },
     { property: 'og:title', content: 'Self-Hosted AI Infrastructure | NemesisNet' },
     { property: 'og:description', content: 'GGUF models, Docker, GPU deployment, and vector databases. No vendor lock-in. Based in Cape Town, South Africa.' },
     { property: 'og:type', content: 'website' },
@@ -173,7 +173,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'Service',
         'name': 'Self-Hosted AI Infrastructure',
-        'description': 'Production-grade AI infrastructure on cloud VPS, on-premise, or hybrid deployments — GGUF models, GPU acceleration, and vector databases.',
+        'description': 'Production-grade AI infrastructure on cloud VPS, on-premise, or hybrid deployments — GGUF models, GPU acceleration, vector databases, and speech-to-text (STT) / text-to-speech (TTS) pipelines.',
         'provider': { '@type': 'Organization', 'name': 'NemesisNet', 'url': 'https://nemesisnet.co.za' },
         'areaServed': { '@type': 'Country', 'name': 'South Africa' },
         'hasOfferCatalog': {
@@ -182,7 +182,9 @@ useHead({
           'itemListElement': [
             { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Self-Hosted LLM Deployment' }, 'price': '220000', 'priceCurrency': 'ZAR' },
             { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'GPU Infrastructure Setup' }, 'price': '220000', 'priceCurrency': 'ZAR' },
-            { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Vector Database Integration' }, 'price': '55000', 'priceCurrency': 'ZAR' }
+            { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Vector Database Integration' }, 'price': '55000', 'priceCurrency': 'ZAR' },
+            { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Speech-to-Text (STT) Pipeline' }, 'price': '220000', 'priceCurrency': 'ZAR' },
+            { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Text-to-Speech (TTS) Pipeline' }, 'price': '220000', 'priceCurrency': 'ZAR' }
           ]
         },
         'mainEntityOfPage': {
@@ -205,7 +207,7 @@ useHead({
     },
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is self-hosted AI?","acceptedAnswer":{"@type":"Answer","text":"Running LLMs, TTS, and inference pipelines on your own hardware with no vendor lock-in."}},{"@type":"Question","name":"Which models can you deploy?","acceptedAnswer":{"@type":"Answer","text":"GGUF LLMs, Kokoro TTS, and ONNX models via vLLM or ONNX Runtime."}},{"@type":"Question","name":"Why self-host instead of a cloud API?","acceptedAnswer":{"@type":"Answer","text":"Privacy, predictable cost, and full control of your inference stack."}}]})
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is self-hosted AI?","acceptedAnswer":{"@type":"Answer","text":"Running LLMs, TTS, and inference pipelines on your own hardware with no vendor lock-in."}},{"@type":"Question","name":"Which models can you deploy?","acceptedAnswer":{"@type":"Answer","text":"GGUF LLMs, Kokoro TTS, and ONNX models via vLLM or ONNX Runtime."}},{"@type":"Question","name":"Why self-host instead of a cloud API?","acceptedAnswer":{"@type":"Answer","text":"Privacy, predictable cost, and full control of your inference stack."}},{"@type":"Question","name":"Do you build speech-to-text (STT) pipelines?","acceptedAnswer":{"@type":"Answer","text":"Yes. We build self-hosted speech-to-text (STT) and text-to-speech (TTS) pipelines for transcription, voice assistants, and accessibility features."}}]})
     }
   ]
 })

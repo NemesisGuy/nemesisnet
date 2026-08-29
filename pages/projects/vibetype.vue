@@ -15,7 +15,7 @@
         >
         
         <h2>The Challenge</h2>
-        <p>Coding and writing often involve a mental friction between thought and typing. Standard keyboards are a bottleneck for high-speed conceptualization, and existing voice-to-text tools are too generic for technical coding workflows.</p>
+        <p>Coding and writing often involve a mental friction between thought and typing. Standard keyboards are a bottleneck for high-speed conceptualization, and existing speech-to-text (STT) / voice-to-text tools are too generic for technical coding workflows.</p>
         
         <h2>The Solution</h2>
         <p>Vibe-Type is an experimental tool that integrates AI-powered smart typing and voice support. It allows developers to "vibe" their way through code, using voice and AI suggestions to accelerate the writing process without losing the precision required for syntax.</p>
@@ -73,15 +73,15 @@
 useHead({
   title: 'Vibe-Type | AI-Powered Voice Coding Companion | NemesisNet',
   meta: [
-    { name: 'description', content: 'Vibe-Type is an experimental AI-powered voice coding companion and typing assistant built with Python, OpenAI, and local LLMs.' },
+    { name: 'description', content: 'Vibe-Type is an experimental AI-powered speech-to-text (STT) voice coding companion and typing assistant built with Python, OpenAI, and local LLMs.' },
     { property: 'og:title', content: 'Vibe-Type | AI-Powered Voice Coding Companion | NemesisNet' },
-    { property: 'og:description', content: 'Vibe your way through code using voice conceptualization, smart suggestion systems, and local LLM acceleration.' },
+    { property: 'og:description', content: 'Vibe your way through code using speech-to-text (STT), voice conceptualization, smart suggestion systems, and local LLM acceleration.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/vibetype' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/vibetype/optimized/hero.webp' },
     { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/vibetype/optimized/hero.webp' },
     { name: 'twitter:title', content: 'VibeType | Voice-to-Code with Local LLMs | NemesisNet' },
-    { name: 'twitter:description', content: 'Vibe your way through code using voice conceptualization, smart suggestion systems, and local LLM acceleration.' }
+    { name: 'twitter:description', content: 'Vibe your way through code using speech-to-text (STT), voice conceptualization, smart suggestion systems, and local LLM acceleration.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/vibetype' }

@@ -15,7 +15,7 @@
       <p class="hero-intro"><strong>NemesisNet</strong> builds custom AI systems, self-hosted infrastructure, and SaaS platforms for businesses that need control, scalability, and engineering-grade reliability.</p>
       <div class="hero-what-we-build">
         <span class="hero-tag">AI agents &amp; MCP integrations</span>
-        <span class="hero-tag">Self-hosted LLM &amp; TTS pipelines</span>
+        <span class="hero-tag">Self-hosted LLM, STT &amp; TTS pipelines</span>
         <span class="hero-tag">Multi-tenant SaaS platforms</span>
         <span class="hero-tag">Production automation &amp; infrastructure</span>
       </div>
@@ -48,7 +48,7 @@
       <div class="card">
         <div class="service-icon"><ClientOnly><Brain :size="24" /></ClientOnly></div>
         <h3>AI Development</h3>
-        <p>MCP agents, self-hosted TTS pipelines, and multi-agent coding harnesses.</p>
+        <p>MCP agents, self-hosted speech-to-text (STT) and text-to-speech (TTS) pipelines, and multi-agent coding harnesses.</p>
         <NuxtLink to="/services/ai-development" class="btn-glass">AI Development</NuxtLink>
       </div>
       <div class="card">
@@ -217,15 +217,15 @@ import { Server, Cloud, Brain, Cpu, Workflow, Briefcase } from 'lucide-vue-next'
 useHead({
   title: 'NemesisNet | Full-Stack Software, SaaS & AI Solutions | Cape Town',
   meta: [
-    { name: 'description', content: 'AI infrastructure, SaaS development, and self-hosted systems for production. Cape Town, South Africa. ZAR pricing, POPIA-aware.' },
+    { name: 'description', content: 'AI infrastructure, SaaS development, and self-hosted systems for production — including speech-to-text (STT) and text-to-speech (TTS) pipelines. Cape Town, South Africa. ZAR pricing, POPIA-aware.' },
     { property: 'og:title', content: 'NemesisNet — AI Infrastructure & Platform Engineering in Cape Town' },
-    { property: 'og:description', content: 'Custom AI systems, self-hosted infrastructure, and SaaS platforms built for production. Based in Cape Town, South Africa.' },
+    { property: 'og:description', content: 'Custom AI systems, self-hosted infrastructure, speech-to-text (STT) and text-to-speech (TTS) pipelines, and SaaS platforms built for production. Based in Cape Town, South Africa.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:title', content: 'AI Infrastructure & Platform Engineering | NemesisNet' },
-    { name: 'twitter:description', content: 'AI infrastructure, SaaS development, and self-hosted systems for production. Cape Town, South Africa.' }
+    { name: 'twitter:description', content: 'AI infrastructure, SaaS development, and self-hosted systems for production — including speech-to-text (STT) and text-to-speech (TTS) pipelines. Cape Town, South Africa.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/' }

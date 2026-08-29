@@ -17,16 +17,16 @@
         <p>Worse, bolting AI onto legacy systems through generic REST calls creates fragile architectures. There's no structured way for AI agents to interact with your internal tools, no role-based access control on what the model can touch, and no path to running it on your own infrastructure when compliance or cost demands it.</p>
 
         <h2>The Solution: Production-Grade AI, Built for Your Constraints</h2>
-        <p>NemesisNet builds custom AI infrastructure — MCP agents, self-hosted TTS pipelines, multi-agent coding harnesses, and fine-tuned on-premise LLMs. Each system is designed for the operational constraints of the business it serves: latency budgets, hardware availability, security posture, and integration surface area.</p>
+        <p>NemesisNet builds custom AI infrastructure — MCP agents, self-hosted speech-to-text (STT) and text-to-speech (TTS) pipelines, multi-agent coding harnesses, and fine-tuned on-premise LLMs. Each system is designed for the operational constraints of the business it serves: latency budgets, hardware availability, security posture, and integration surface area.</p>
         <p>No API key dependency. No vendor lock-in. Architecture is portable across cloud providers, on-premise hardware, and hybrid deployments. You own the stack, you control the data, and the system works whether you're running on a Hetzner VPS or a rack of local GPUs.</p>
 
         <h2>MCP Agents &amp; Tool-Use Infrastructure</h2>
         <p>Model Context Protocol (MCP) servers let AI agents interact with real systems — databases, CMSs, CRMs, internal tooling — through structured, role-safe interfaces. Rather than generic API calls that the model hallucinates, MCP agents expose deterministic tools that agents can actually reason about.</p>
         <p>NemesisNet builds custom MCP servers that connect AI workflows to the specific tools and data your organization already runs. Built on FastMCP and Python, with Dockerized deployment for consistent environments. Works with Claude Desktop, Cursor, Windsurf, and any MCP-compatible client. Each server includes audit logging, permission scoping, and graceful error handling so the agent can't accidentally delete your production database.</p>
 
-        <h2>Self-Hosted TTS Pipelines</h2>
-        <p>Text-to-speech infrastructure that runs entirely on your own hardware. Using open-source models like Kyutai Labs' Pocket TTS and AIH parameters' Kokoro, NemesisNet builds TTS pipelines that deliver natural speech synthesis without cloud API dependencies. Sub-second latency. Full data privacy. Hardware-accelerated on CPU or GPU.</p>
-        <p>Our PocketTTS-MCP project wraps Kyutai's model in an MCP server, letting AI agents generate speech as a native tool — useful for voice assistants, accessibility features, and automated content narration.</p>
+        <h2>Speech Pipelines: Speech-to-Text (STT) &amp; TTS</h2>
+        <p>Speech infrastructure that runs entirely on your own hardware — both text-to-speech (TTS) and speech-to-text (STT). Using open-source models like Kyutai Labs' Pocket TTS and AIH parameters' Kokoro for synthesis, and Whisper-family models for transcription, NemesisNet builds speech pipelines that deliver natural speech synthesis and real-time transcription without cloud API dependencies. Sub-second latency. Full data privacy. Hardware-accelerated on CPU or GPU.</p>
+        <p>Our PocketTTS-MCP project wraps Kyutai's model in an MCP server, letting AI agents generate speech as a native tool — useful for voice assistants, accessibility features, and automated content narration. We build parallel speech-to-text (STT) pipelines for transcription, dictation, and voice-driven workflows.</p>
 
         <h2>Multi-Agent Coding Systems</h2>
         <p>Production-grade multi-agent coding harnesses that orchestrate LLMs across complex engineering tasks. Built with Python, GGUF model files, and Docker sandboxes that isolate agent execution. Each agent has a defined role — research, implementation, testing, review — with structured communication protocols.</p>
@@ -141,9 +141,9 @@
 
 <script setup>
 useHead({
-  title: 'Custom AI Development | NemesisNet — MCP Agents, TTS, Agent Workflows',
+  title: 'Custom AI Development | NemesisNet — MCP Agents, STT & TTS, Agent Workflows',
   meta: [
-    { name: 'description', content: 'Custom AI development in South Africa: MCP agents, self-hosted TTS pipelines, multi-agent coding harnesses, and AI integration for production systems. Cape Town.' },
+    { name: 'description', content: 'Custom AI development in South Africa: MCP agents, self-hosted speech-to-text (STT) and text-to-speech (TTS) pipelines, multi-agent coding harnesses, and AI integration for production systems. Cape Town.' },
     { property: 'og:title', content: 'Custom AI Development | NemesisNet' },
     { property: 'og:description', content: 'MCP agents, self-hosted TTS pipelines, and AI integration. Based in Cape Town, South Africa.' },
     { property: 'og:type', content: 'website' },
@@ -151,7 +151,7 @@ useHead({
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:title', content: 'AI Development | MCP Agents, Self-Hosted TTS | NemesisNet' },
-    { name: 'twitter:description', content: 'MCP agents, self-hosted TTS pipelines, and AI integration. Based in Cape Town, South Africa.' }
+    { name: 'twitter:description', content: 'MCP agents, self-hosted speech-to-text (STT) and text-to-speech (TTS) pipelines, and AI integration. Based in Cape Town, South Africa.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/services/ai-development' }
@@ -163,7 +163,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'Service',
         'name': 'AI Development',
-        'description': 'Custom AI agents, MCP servers, self-hosted TTS pipelines, and multi-agent coding harnesses for production workloads.',
+        'description': 'Custom AI agents, MCP servers, self-hosted speech-to-text (STT) and text-to-speech (TTS) pipelines, and multi-agent coding harnesses for production workloads.',
         'provider': { '@type': 'Organization', 'name': 'NemesisNet', 'url': 'https://nemesisnet.co.za' },
         'areaServed': { '@type': 'Country', 'name': 'South Africa' },
         'hasOfferCatalog': {
@@ -171,7 +171,7 @@ useHead({
           'name': 'AI Development Services',
           'itemListElement': [
             { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'MCP Agent Development' }, 'price': '55000', 'priceCurrency': 'ZAR' },
-            { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Self-Hosted TTS Pipeline' }, 'price': '220000', 'priceCurrency': 'ZAR' },
+            { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Self-Hosted Speech Pipeline (STT + TTS)' }, 'price': '220000', 'priceCurrency': 'ZAR' },
             { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Multi-Agent Coding Harness' }, 'price': '220000', 'priceCurrency': 'ZAR' }
           ]
         },

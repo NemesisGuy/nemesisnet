@@ -9,7 +9,7 @@
       </div>
       <main>
         <section id="projects">
-          <h2 class="project-group-title">AI & TTS</h2>
+          <h2 class="project-group-title">AI, STT &amp; TTS</h2>
         <div class="projects-grid">
           <div class="card">
             <img src="/images/projects/voxnemesis-supertonic/optimized/hero.webp" srcset="/images/projects/voxnemesis-supertonic/optimized/hero-480.webp 480w, /images/projects/voxnemesis-supertonic/optimized/hero-640.webp 640w, /images/projects/voxnemesis-supertonic/optimized/hero.webp 800w" sizes="(max-width: 640px) 480px, 280px" alt="VoxNemesis Supertonic" loading="lazy" width="900" height="483">
@@ -189,15 +189,15 @@
 useHead({
   title: 'Projects | NemesisNet',
   meta: [
-    { name: 'description', content: 'Production systems built by NemesisNet: AI agents, TTS pipelines, SaaS platforms, MCP integrations, and DevOps infrastructure.' },
+    { name: 'description', content: 'Production systems built by NemesisNet: AI agents, speech-to-text (STT) and TTS pipelines, SaaS platforms, MCP integrations, and DevOps infrastructure.' },
     { property: 'og:title', content: 'Projects | NemesisNet' },
-    { property: 'og:description', content: 'Production-grade AI, SaaS, and infrastructure builds. VoxNemesis, Kokoro TTS, Since, ForkMyFolio, and more.' },
+    { property: 'og:description', content: 'Production-grade AI, SaaS, and infrastructure builds — speech-to-text (STT) and text-to-speech (TTS), VoxNemesis, Kokoro TTS, Since, ForkMyFolio, and more.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:title', content: 'Projects | NemesisNet' },
-    { name: 'twitter:description', content: 'Production systems built by NemesisNet: AI agents, TTS pipelines, SaaS platforms, and DevOps infrastructure.' }
+    { name: 'twitter:description', content: 'Production systems built by NemesisNet: AI agents, speech-to-text (STT) and TTS pipelines, SaaS platforms, and DevOps infrastructure.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects' }
