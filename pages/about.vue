@@ -11,7 +11,7 @@
         </div>
 
         <h2>What NemesisNet Builds</h2>
-        <p>NemesisNet builds AI infrastructure and full-stack systems for real production workloads. The portfolio includes self-hosted AI runtimes, text-to-speech pipelines, MCP integrations, agent automation backends, and production-grade full-stack platforms.</p>
+        <p>NemesisNet builds AI infrastructure and full-stack systems for real production workloads. The portfolio includes self-hosted AI runtimes, speech-to-text (STT) and text-to-speech pipelines, MCP integrations, agent automation backends, and production-grade full-stack platforms.</p>
         <p>Most studios offering "AI services" are connecting third-party APIs and calling it integration. <strong>NemesisNet architects, deploys, and operates the underlying systems:</strong> local AI runtimes, agent pipelines, automation infrastructure, and cloud-neutral deployments running on hardware that is physically controlled. Every system ships to production standards — clean architecture, automated testing, Dockerized deployment, and continuous delivery.</p>
 
         <h2>The Engineer Behind NemesisNet</h2>
@@ -22,7 +22,7 @@
           </div>
           <div class="founder-bio">
             <p>NemesisNet is run by <strong>Peter Buckingham</strong> — a systems architect based in Cape Town, South Africa, with a <strong>BTech in Information Technology from CPUT</strong> (Cape Peninsula University of Technology). He pairs structured engineering education with years of hands-on, self-directed building — a combination that lets him bridge theory and production practice.</p>
-            <p>His specialization in <strong>text-to-speech infrastructure dates back to 2013</strong> — years before TTS became an industry trend. He was building voice-synthesis pipelines that ran on constrained hardware with minimal latency while most of the industry still treated speech as a research problem. That decade-plus of low-level audio and inference work is the foundation behind the TTS products NemesisNet ships today.</p>
+            <p>His specialization in <strong>text-to-speech and speech-to-text (STT) infrastructure dates back to 2013</strong> — years before TTS became an industry trend. He was building voice-synthesis and transcription pipelines that ran on constrained hardware with minimal latency while most of the industry still treated speech as a research problem. That decade-plus of low-level audio and inference work is the foundation behind the speech products NemesisNet ships today.</p>
             <p>What sets Peter apart is the <strong>self-sufficiency angle</strong>: he doesn't just architect systems, he runs them. His <strong>self-hosted rack homelab</strong> serves as the production backbone for NemesisNet's own products — the systems showcased on this site run on hardware he physically owns, configures, and maintains. This isn't cloud-only theory; it's infrastructure practice grounded in real hardware management, rack networking, power planning, and the kind of operational awareness that only comes from being the person who gets paged at 3 AM.</p>
             <p>All NemesisNet engagements leverage this hands-on infrastructure expertise. Peter leads architecture decisions, code reviews, and deployment strategy — ensuring every project benefits from production-grade engineering, not just development aesthetics.</p>
           </div>
@@ -195,8 +195,8 @@ useHead({
         'worksFor': { '@type': 'Organization', 'name': 'NemesisNet', 'url': 'https://nemesisnet.co.za' },
         'url': 'https://nemesisnet.co.za/about',
         'image': 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png',
-        'description': 'Self-taught systems architect specializing in AI infrastructure, TTS pipelines, and production full-stack platforms. BTech in IT from CPUT, Cape Town.',
-        'knowsAbout': ['Python', 'Spring Boot', 'Vue 3', 'Docker', 'AI Infrastructure', 'TTS', 'MCP', 'PostgreSQL', 'Redis', 'Kubernetes', 'CI/CD', 'Linux Systems Administration'],
+        'description': 'Self-taught systems architect specializing in AI infrastructure, speech-to-text (STT) and TTS pipelines, and production full-stack platforms. BTech in IT from CPUT, Cape Town.',
+          'knowsAbout': ['Python', 'Spring Boot', 'Vue 3', 'Docker', 'AI Infrastructure', 'TTS', 'STT', 'Speech-to-Text', 'MCP', 'PostgreSQL', 'Redis', 'Kubernetes', 'CI/CD', 'Linux Systems Administration'],
         'alumniOf': {
           '@type': 'EducationalOrganization',
           'name': 'Cape Peninsula University of Technology',

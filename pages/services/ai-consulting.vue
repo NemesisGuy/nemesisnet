@@ -63,7 +63,7 @@
         <div class="related-projects">
           <div class="related-card">
             <h3>AI Development Services</h3>
-            <p>Architecture consulting feeds directly into MCP agent design, self-hosted LLM deployment, and TTS pipeline builds.</p>
+            <p>Architecture consulting feeds directly into MCP agent design, self-hosted LLM deployment, and speech-to-text (STT) / TTS pipeline builds.</p>
             <NuxtLink to="/services/ai-development" class="btn-glass">View Service</NuxtLink>
           </div>
           <div class="related-card">
