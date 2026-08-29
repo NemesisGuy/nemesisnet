@@ -199,6 +199,10 @@ useHead({
           { '@type': 'ListItem', 'position': 3, 'name': 'Infrastructure Engineering', 'item': 'https://nemesisnet.co.za/services/infrastructure' }
         ]
       })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What infrastructure services do you offer?","acceptedAnswer":{"@type":"Answer","text":"Docker, CI/CD, networking, and monitoring for self-managed deployments."}},{"@type":"Question","name":"Do you support self-hosted AI infrastructure?","acceptedAnswer":{"@type":"Answer","text":"Yes. GPU provisioning, inference serving, and TTS pipelines."}},{"@type":"Question","name":"Can you take over an existing messy setup?","acceptedAnswer":{"@type":"Answer","text":"Yes. We audit, containerise, and stabilise legacy infrastructure."}}]})
     }
   ]
 })

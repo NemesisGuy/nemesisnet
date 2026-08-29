@@ -165,6 +165,10 @@ useHead({
           { '@type': 'ListItem', 'position': 3, 'name': 'Custom MCP & Agent Integrations', 'item': 'https://nemesisnet.co.za/services/mcp-integrations' }
         ]
       })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are MCP integrations?","acceptedAnswer":{"@type":"Answer","text":"Structured, auditable connections that let AI agents safely act on your live systems."}},{"@type":"Question","name":"Which systems can agents connect to?","acceptedAnswer":{"@type":"Answer","text":"Databases, WordPress, file stores, and custom internal APIs via MCP servers."}},{"@type":"Question","name":"Are MCP integrations secure?","acceptedAnswer":{"@type":"Answer","text":"Yes. Local-first servers with scoped, logged access and no broad credential exposure."}}]})
     }
   ]
 })

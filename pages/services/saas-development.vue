@@ -193,6 +193,10 @@ useHead({
           { '@type': 'ListItem', 'position': 3, 'name': 'SaaS Development', 'item': 'https://nemesisnet.co.za/services/saas-development' }
         ]
       })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What SaaS platforms do you build?","acceptedAnswer":{"@type":"Answer","text":"Multi-tenant SaaS with subscription billing, onboarding, and deployment pipelines."}},{"@type":"Question","name":"Which stack do you use for SaaS?","acceptedAnswer":{"@type":"Answer","text":"Spring Boot backend, Vue 3 frontend, JWT auth, and Stripe billing."}},{"@type":"Question","name":"Do you handle ongoing SaaS hosting?","acceptedAnswer":{"@type":"Answer","text":"Yes, via our Light Hosting and Infrastructure services."}}]})
     }
   ]
 })

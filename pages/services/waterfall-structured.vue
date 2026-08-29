@@ -171,6 +171,10 @@ useHead({
           { '@type': 'ListItem', 'position': 3, 'name': 'Waterfall & Structured', 'item': 'https://nemesisnet.co.za/services/waterfall-structured' }
         ]
       })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Waterfall and Structured delivery?","acceptedAnswer":{"@type":"Answer","text":"Fixed scope, fixed price, and fixed timeline for well-defined projects."}},{"@type":"Question","name":"When should I use waterfall?","acceptedAnswer":{"@type":"Answer","text":"When you know exactly what you need and want a predictable outcome."}},{"@type":"Question","name":"Can scope change mid-project?","acceptedAnswer":{"@type":"Answer","text":"Changes are handled via a defined change-request process to protect the fixed price."}}]})
     }
   ]
 })

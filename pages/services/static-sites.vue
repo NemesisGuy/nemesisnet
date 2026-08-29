@@ -177,6 +177,10 @@ useHead({
           { '@type': 'ListItem', 'position': 3, 'name': 'Static & Brochure Sites', 'item': 'https://nemesisnet.co.za/services/static-sites' }
         ]
       })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When should I choose a static site?","acceptedAnswer":{"@type":"Answer","text":"When you need a fast, clean brochure or marketing site without a backend."}},{"@type":"Question","name":"Are static sites SEO-friendly?","acceptedAnswer":{"@type":"Answer","text":"Yes. Prerendered HTML, fast load, and full metadata control."}},{"@type":"Question","name":"Can a static site grow later?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can later upgrade it to an App Starter or Custom Software build."}}]})
     }
   ]
 })

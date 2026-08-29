@@ -147,6 +147,10 @@ useHead({
           { '@type': 'ListItem', 'position': 3, 'name': 'Light Hosting', 'item': 'https://nemesisnet.co.za/services/light-hosting' }
         ]
       })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Light Hosting?","acceptedAnswer":{"@type":"Answer","text":"Managed hosting for Nuxt and static sites with SSL, backups, and monitoring."}},{"@type":"Question","name":"Where are sites hosted?","acceptedAnswer":{"@type":"Answer","text":"On our managed infrastructure in South Africa with global CDN delivery."}},{"@type":"Question","name":"Do you handle renewals and updates?","acceptedAnswer":{"@type":"Answer","text":"Yes. SSL, backups, and platform updates are managed for you."}}]})
     }
   ]
 })

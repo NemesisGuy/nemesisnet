@@ -210,6 +210,10 @@ useHead({
           { '@type': 'ListItem', 'position': 3, 'name': 'Backend & API Engineering', 'item': 'https://nemesisnet.co.za/services/custom-software' }
         ]
       })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What custom software do you build?","acceptedAnswer":{"@type":"Answer","text":"APIs, backends, data pipelines, and full applications built from first principles."}},{"@type":"Question","name":"Which languages and frameworks do you use?","acceptedAnswer":{"@type":"Answer","text":"Spring Boot, Vue 3, Node, Python, and PocketBase depending on the problem."}},{"@type":"Question","name":"Do you also deploy what you build?","acceptedAnswer":{"@type":"Answer","text":"Yes. We handle Docker, CI/CD, and hosting through our infrastructure services."}}]})
     }
   ]
 })

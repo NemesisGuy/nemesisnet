@@ -192,6 +192,10 @@ useHead({
           { '@type': 'ListItem', 'position': 3, 'name': 'AI Development', 'item': 'https://nemesisnet.co.za/services/ai-development' }
         ]
       })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What AI systems do you develop?","acceptedAnswer":{"@type":"Answer","text":"Custom AI agents, self-hosted LLM pipelines, and multi-agent coding harnesses."}},{"@type":"Question","name":"Can you deploy the AI on our own hardware?","acceptedAnswer":{"@type":"Answer","text":"Yes. We specialise in self-hosted inference for LLMs and TTS running on your GPUs."}},{"@type":"Question","name":"Which stacks do you use for AI development?","acceptedAnswer":{"@type":"Answer","text":"Python, ONNX Runtime, vLLM, and Nuxt or Vue frontends for agent interfaces."}}]})
     }
   ]
 })

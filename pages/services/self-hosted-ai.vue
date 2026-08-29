@@ -202,6 +202,10 @@ useHead({
           { '@type': 'ListItem', 'position': 3, 'name': 'Self-Hosted AI Infrastructure', 'item': 'https://nemesisnet.co.za/services/self-hosted-ai' }
         ]
       })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is self-hosted AI?","acceptedAnswer":{"@type":"Answer","text":"Running LLMs, TTS, and inference pipelines on your own hardware with no vendor lock-in."}},{"@type":"Question","name":"Which models can you deploy?","acceptedAnswer":{"@type":"Answer","text":"GGUF LLMs, Kokoro TTS, and ONNX models via vLLM or ONNX Runtime."}},{"@type":"Question","name":"Why self-host instead of a cloud API?","acceptedAnswer":{"@type":"Answer","text":"Privacy, predictable cost, and full control of your inference stack."}}]})
     }
   ]
 })
