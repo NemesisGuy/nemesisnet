@@ -171,6 +171,10 @@ useHead({
           { '@type': 'ListItem', 'position': 3, 'name': 'Agile & Iterative', 'item': 'https://nemesisnet.co.za/services/agile-iterative' }
         ]
       })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Agile and Iterative delivery?","acceptedAnswer":{"@type":"Answer","text":"Two-week cycles, working software, and continuous feedback."}},{"@type":"Question","name":"When is agile the right choice?","acceptedAnswer":{"@type":"Answer","text":"When requirements are unclear or expected to evolve during the build."}},{"@type":"Question","name":"How do you report progress?","acceptedAnswer":{"@type":"Answer","text":"Regular demos and a prioritised backlog visible to you each sprint."}}]})
     }
   ]
 })

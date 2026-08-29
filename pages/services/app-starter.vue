@@ -192,6 +192,10 @@ useHead({
           { '@type': 'ListItem', 'position': 3, 'name': 'App Starter', 'item': 'https://nemesisnet.co.za/services/app-starter' }
         ]
       })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the App Starter service?","acceptedAnswer":{"@type":"Answer","text":"A PocketBase-backed app with auth, storage, and a database as a fast foundation for new products."}},{"@type":"Question","name":"How quickly can an App Starter be delivered?","acceptedAnswer":{"@type":"Answer","text":"Typically within days, using a pre-built PocketBase and Vue scaffold."}},{"@type":"Question","name":"When should I choose App Starter over Custom Software?","acceptedAnswer":{"@type":"Answer","text":"When you need a working MVP fast and do not yet require bespoke architecture."}}]})
     }
   ]
 })

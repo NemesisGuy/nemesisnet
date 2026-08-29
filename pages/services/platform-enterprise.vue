@@ -181,6 +181,10 @@ useHead({
           { '@type': 'ListItem', 'position': 3, 'name': 'Platform / Enterprise', 'item': 'https://nemesisnet.co.za/services/platform-enterprise' }
         ]
       })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Platform or Enterprise development?","acceptedAnswer":{"@type":"Answer","text":"Multi-tenant platforms with RBAC, real-time data, and enterprise-grade infrastructure."}},{"@type":"Question","name":"Do you support high concurrency?","acceptedAnswer":{"@type":"Answer","text":"Yes. We design for caching, async pipelines, and horizontal scaling."}},{"@type":"Question","name":"How is data isolation handled?","acceptedAnswer":{"@type":"Answer","text":"Per-tenant isolation at both the database and application layers."}}]})
     }
   ]
 })

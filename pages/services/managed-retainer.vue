@@ -178,6 +178,10 @@ useHead({
           { '@type': 'ListItem', 'position': 3, 'name': 'Managed Retainer', 'item': 'https://nemesisnet.co.za/services/managed-retainer' }
         ]
       })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a managed retainer?","acceptedAnswer":{"@type":"Answer","text":"Dedicated engineering hours each month for maintenance, features, and technical decisions."}},{"@type":"Question","name":"How are retainer hours used?","acceptedAnswer":{"@type":"Answer","text":"Flexibly. Bug fixes, small features, or advisory as priorities shift."}},{"@type":"Question","name":"Is there a minimum commitment?","acceptedAnswer":{"@type":"Answer","text":"Retainers run monthly; specifics are confirmed during the initial scoping call."}}]})
     }
   ]
 })

@@ -160,6 +160,10 @@ useHead({
           { '@type': 'ListItem', 'position': 3, 'name': 'AI Architecture & Consulting', 'item': 'https://nemesisnet.co.za/services/ai-consulting' }
         ]
       })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does AI consulting with NemesisNet involve?","acceptedAnswer":{"@type":"Answer","text":"Architecture reviews, model selection, and self-hosted deployment strategy tailored to your stack."}},{"@type":"Question","name":"Do you only advise, or also build the AI system?","acceptedAnswer":{"@type":"Answer","text":"Both. We run advisory sessions and hands-on implementation of the recommended architecture."}},{"@type":"Question","name":"Is my data kept private during AI consulting?","acceptedAnswer":{"@type":"Answer","text":"Yes. We prefer self-hosted and on-prem deployments so your data never leaves your infrastructure."}}]})
     }
   ]
 })

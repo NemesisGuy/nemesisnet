@@ -181,6 +181,10 @@ useHead({
           { '@type': 'ListItem', 'position': 3, 'name': 'Business Systems', 'item': 'https://nemesisnet.co.za/services/business-systems' }
         ]
       })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are business systems?","acceptedAnswer":{"@type":"Answer","text":"Custom dashboards, CRMs, and internal tools that replace spreadsheets with software."}},{"@type":"Question","name":"Do you integrate with our existing data?","acceptedAnswer":{"@type":"Answer","text":"Yes. We connect to your databases, APIs, and files to surface the data you already have."}},{"@type":"Question","name":"Can business systems be used by a whole team?","acceptedAnswer":{"@type":"Answer","text":"Yes, with role-based access and multi-user support built in."}}]})
     }
   ]
 })
