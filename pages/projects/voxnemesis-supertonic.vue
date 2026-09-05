@@ -18,7 +18,7 @@
         <p>High-quality text-to-speech usually requires cloud APIs, sending user data to third-party servers. Users needed a private, fast, and truly local alternative that runs entirely in the browser without compromising on audio quality or latency.</p>
         
         <h2>The Solution</h2>
-        <p>VoxNemesis Supertonic is a Chrome Extension (Manifest V3) that runs the Kokoro TTS model directly in the browser using ONNX Runtime Web. It achieves sub-second synthesis times with WebGPU acceleration, while falling back gracefully to WASM for compatibility. No data ever leaves the user's machine.</p>
+        <p>VoxNemesis Supertonic is a Chrome Extension (Manifest V3) that runs Supertone's Supertonic ONNX TTS model directly in the browser using ONNX Runtime Web. It achieves sub-second synthesis times with WebGPU acceleration, while falling back gracefully to WASM for compatibility. No data ever leaves the user's machine.</p>
         
         <h2>Technical Implementation</h2>
         <p>The extension uses the Offscreen API to create a dedicated audio engine that persists even when the popup closes. It implements a watchdog pattern to handle race conditions between the popup and background worker during initial model download. The architecture includes intelligent backend switching — attempting WebGPU first, then gracefully degrading to WASM with SIMD for broader hardware compatibility.</p>
@@ -76,13 +76,13 @@ useHead({
   meta: [
     { name: 'description', content: 'VoxNemesis Supertonic is a GPU-aware local-first TTS Chrome Extension built using ONNX Runtime Web, WebGPU, WASM and Manifest V3.' },
     { property: 'og:title', content: 'VoxNemesis Supertonic | GPU-Aware Local-First TTS Browser Extension | NemesisNet' },
-    { property: 'og:description', content: 'Run high-fidelity Kokoro neural speech synthesis 100% privately in the browser with WebGPU hardware acceleration.' },
+    { property: 'og:description', content: 'Run high-fidelity Supertonic neural speech synthesis 100% privately in the browser with WebGPU hardware acceleration.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/projects/voxnemesis-supertonic' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/projects/voxnemesis-supertonic/optimized/hero.webp' },
     { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/projects/voxnemesis-supertonic/optimized/hero.webp' },
     { name: 'twitter:title', content: 'VoxNemesis SuperTonic | In-Browser Neural Speech Synthesis | NemesisNet' },
-    { name: 'twitter:description', content: 'Run high-fidelity Kokoro neural speech synthesis 100% privately in the browser with WebGPU hardware acceleration.' }
+    { name: 'twitter:description', content: 'Run high-fidelity Supertonic neural speech synthesis 100% privately in the browser with WebGPU hardware acceleration.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/projects/voxnemesis-supertonic' }
@@ -101,7 +101,7 @@ useHead({
           'price': '0',
           'priceCurrency': 'USD'
         },
-        'description': 'A GPU-aware local-first TTS Chrome Extension built using ONNX Runtime Web, WebGPU, WASM and Manifest V3.',
+        'description': 'A GPU-aware local-first TTS Chrome Extension running Supertone Supertonic ONNX models in-browser via ONNX Runtime Web, WebGPU, and WASM.',
         'author': {
           '@type': 'Person',
           'name': 'Peter Buckingham',
