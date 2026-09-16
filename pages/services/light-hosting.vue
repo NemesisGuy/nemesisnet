@@ -59,12 +59,13 @@
         </div>
 
         <h2>Pricing</h2>
-        <p><strong>R850/month</strong> — flat rate, no hidden fees. Covers up to 2 deployed systems. Additional systems quoted separately.</p>
-        <p>If your system needs grow beyond basic hosting, the Managed Retainer (R7,500/month) includes CI/CD management, bug fixes, application monitoring, and priority support.</p>
+        <p><strong>R850/month</strong> — flat rate, no hidden fees. Covers up to 2 deployed systems on shared/managed VPS infrastructure sized for the client's application and expected traffic. Dedicated resources or increased capacity are quoted separately.</p>
+        <p>Domain registration and renewal are charged at actual cost. The R850 covers hosting infrastructure only.</p>
+        <p>If your system needs grow beyond basic hosting, the Managed Retainer (R7,500/month) includes CI/CD management, monitoring, engineering hours, and priority support.</p>
 
         <ServiceFooter
           :exploring="[
-            { title: 'Managed Retainer', description: 'Dedicated engineering hours for maintenance, feature work, and technical decisions.', to: '/services/managed-retainer' },
+            { title: 'Managed Retainer', description: 'A monthly block of engineering capacity for production maintenance, operational support, and small improvements.', to: '/services/managed-retainer' },
             { title: 'Infrastructure & DevOps', description: 'Docker, CI/CD, and networking — when you need to own the infrastructure yourself.', to: '/services/infrastructure' }
           ]"
           exploring-note="Need more hands-on support or full infrastructure control? These services scale up from light hosting."
