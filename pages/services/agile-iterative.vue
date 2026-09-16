@@ -121,7 +121,7 @@ import { CheckCircle, XCircle } from 'lucide-vue-next'
 useHead({
   title: 'Agile & Iterative Delivery — Two-Week Sprints | NemesisNet',
   meta: [
-    { name: 'description', content: 'Agile and iterative software delivery with two-week sprints, continuous feedback, and CI/CD from day one. Built for MVPs and evolving products. Cape Town, South Africa.' },
+    { name: 'description', content: 'Agile and iterative software delivery with two-week sprints, continuous feedback, and CI/CD from day one. Built for MVPs and evolving products.' },
     { property: 'og:title', content: 'Agile & Iterative Delivery | NemesisNet' },
     { property: 'og:description', content: 'Two-week sprints, continuous feedback, and iterative delivery for projects where requirements evolve.' },
     { property: 'og:type', content: 'website' },

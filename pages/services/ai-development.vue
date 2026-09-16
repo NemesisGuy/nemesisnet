@@ -143,7 +143,7 @@
 useHead({
   title: 'Custom AI Development | NemesisNet — MCP Agents, STT & TTS, Agent Workflows',
   meta: [
-    { name: 'description', content: 'Custom AI development in South Africa: MCP agents, self-hosted speech-to-text (STT) and text-to-speech (TTS) pipelines, multi-agent coding harnesses, and AI integration for production systems. Cape Town.' },
+    { name: 'description', content: 'Custom AI development: MCP agents, self-hosted STT and TTS pipelines, multi-agent coding harnesses, and AI integration for production systems.' },
     { property: 'og:title', content: 'Custom AI Development | NemesisNet' },
     { property: 'og:description', content: 'MCP agents, self-hosted TTS pipelines, and AI integration. Based in Cape Town, South Africa.' },
     { property: 'og:type', content: 'website' },

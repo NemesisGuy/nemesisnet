@@ -150,7 +150,7 @@
 useHead({
   title: 'Infrastructure Engineering & DevOps | NemesisNet — Docker, CI/CD, Redis, Production Runtimes',
   meta: [
-    { name: 'description', content: 'Infrastructure engineering and DevOps in South Africa: Docker, CI/CD, Redis, Nginx, and production AI runtimes. High-performance backend for Cape Town businesses.' },
+    { name: 'description', content: 'Infrastructure engineering and DevOps: Docker, CI/CD, Redis, Nginx, and production AI runtimes. High-performance backend systems.' },
     { property: 'og:title', content: 'Infrastructure Engineering & DevOps | NemesisNet' },
     { property: 'og:description', content: 'Docker, CI/CD, Redis, Nginx, and production AI runtimes. Based in Cape Town, South Africa.' },
     { property: 'og:type', content: 'website' },
