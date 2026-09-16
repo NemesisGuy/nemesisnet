@@ -148,7 +148,7 @@
         <!-- Section 7 — International Client Advantage -->
         <h2>Why South African Development Costs Work Well for International Clients</h2>
 
-        <p><strong>ZAR advantage.</strong> Senior Cape Town engineering talent bills at R500–R1,500/hour locally. International clients paying in EUR or GBP get this at a significant cost advantage vs UK/EU agencies charging £100–£200/hour for equivalent seniority. A project that costs R350,000 in Cape Town would cost R1.2M+ at a London agency for the same scope.</p>
+        <p><strong>ZAR advantage.</strong> Senior Cape Town engineering talent bills at R1,000–R1,500/hour locally. International clients paying in EUR or GBP get this at a significant cost advantage vs UK/EU agencies charging £100–£200/hour for equivalent seniority. A project that costs R350,000 in Cape Town would cost R1.2M+ at a London agency for the same scope.</p>
 
         <p><strong>Time zone alignment.</strong> CAT (UTC+2) overlaps almost perfectly with CET. Real-time morning collaboration with European clients is practical, not theoretical. No 3am standups, no 12-hour feedback loops.</p>
 

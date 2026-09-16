@@ -40,34 +40,26 @@
 
         <h2>Pricing</h2>
         <div class="compare-grid">
-          <div class="compare-card">
-            <h3>Pay-As-You-Go</h3>
-            <div class="compare-price">R500/hour</div>
+          <div class="compare-card compare-card--featured">
+            <h3>Hourly</h3>
+            <div class="compare-price">From R1,500/hr</div>
             <ul class="compare-list">
               <li>No commitment required</li>
               <li>Billed per task or per hour</li>
-              <li>Ideal for occasional fixes</li>
-            </ul>
-          </div>
-          <div class="compare-card compare-card--featured">
-            <h3>Monthly Retainer</h3>
-            <div class="compare-price">R1,000/month</div>
-            <ul class="compare-list">
-              <li>Up to 2 hours included</li>
-              <li>Priority scheduling</li>
-              <li>Unused hours do not roll over</li>
+              <li>Ideal for occasional maintenance</li>
             </ul>
           </div>
           <div class="compare-card">
-            <h3>Custom Support</h3>
-            <div class="compare-price">Custom</div>
+            <h3>Support Retainer</h3>
+            <div class="compare-price">From R7,500/mo</div>
             <ul class="compare-list">
-              <li>Larger support requirements</li>
-              <li>Ongoing weekly/monthly blocks</li>
-              <li>Scoped after discovery call</li>
+              <li>Reserved monthly support hours</li>
+              <li>Defined response targets</li>
+              <li>Overage at hourly rate</li>
             </ul>
           </div>
         </div>
+        <p class="scope-note">The exact number of included hours and response targets are determined during scoping and specified in the applicable retainer agreement.</p>
 
         <h2>How It Works</h2>
         <div class="process-steps">
@@ -102,10 +94,10 @@
         <div class="sidebar-card">
           <h3>Service Details</h3>
           <ul class="sidebar-list">
-            <li><span>Pay-as-you-go:</span> <strong>R500/hour</strong></li>
-            <li><span>Retainer:</span> <strong>R1,000/month</strong></li>
-            <li><span>Includes:</span> <strong>Up to 2 hours</strong></li>
+            <li><span>Hourly:</span> <strong>From R1,500/hr</strong></li>
+            <li><span>Retainer:</span> <strong>From R7,500/mo</strong></li>
             <li><span>Billing:</span> <strong>Monthly</strong></li>
+            <li><span>Overage:</span> <strong>Hourly rate</strong></li>
           </ul>
         </div>
         <div class="sidebar-card">
@@ -126,17 +118,17 @@
 import { CheckCircle, XCircle } from 'lucide-vue-next'
 
 useHead({
-  title: 'Maintenance & Support — R500/hr or R1,000/month Retainer | NemesisNet',
+  title: 'Maintenance & Support — Routine Troubleshooting & Maintenance | NemesisNet',
   meta: [
-    { name: 'description', content: 'Website and application maintenance: WordPress updates, content changes, bug fixes, troubleshooting. R500/hour or R1,000/month retainer. Cape Town, South Africa.' },
+    { name: 'description', content: 'Routine troubleshooting and maintenance for websites and applications. From R1,500/hour or support retainer. Cape Town, South Africa.' },
     { property: 'og:title', content: 'Maintenance & Support | NemesisNet' },
-    { property: 'og:description', content: 'Website maintenance and technical support: updates, fixes, troubleshooting. R500/hour or R1,000/month.' },
+    { property: 'og:description', content: 'Routine troubleshooting, maintenance, and operational support. From R1,500/hour.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/maintenance' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:title', content: 'Maintenance & Support | NemesisNet' },
-    { name: 'twitter:description', content: 'Website maintenance and technical support: updates, fixes, troubleshooting. R500/hour or R1,000/month.' }
+    { name: 'twitter:description', content: 'Routine troubleshooting and maintenance. From R1,500/hour.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/services/maintenance' }
@@ -148,13 +140,10 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'Service',
         'name': 'Maintenance & Support',
-        'description': 'Website and application maintenance: WordPress updates, content changes, bug fixes, troubleshooting.',
+        'description': 'Routine troubleshooting and maintenance for websites and applications.',
         'provider': { '@type': 'Organization', 'name': 'NemesisNet', 'url': 'https://nemesisnet.co.za' },
         'areaServed': { '@type': 'Country', 'name': 'South Africa' },
-        'offers': [
-          { '@type': 'Offer', 'price': '500', 'priceCurrency': 'ZAR', 'description': 'Pay-as-you-go hourly rate' },
-          { '@type': 'Offer', 'price': '1000', 'priceCurrency': 'ZAR', 'billingDuration': 'P1M', 'description': 'Monthly retainer with up to 2 hours' }
-        ],
+        'offers': { '@type': 'Offer', 'price': '1500', 'priceCurrency': 'ZAR', 'description': 'Hourly rate, support retainer available' },
         'mainEntityOfPage': {
           '@type': 'WebPage',
           '@id': 'https://nemesisnet.co.za/services/maintenance'
@@ -175,7 +164,7 @@ useHead({
     },
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does maintenance cover?","acceptedAnswer":{"@type":"Answer","text":"WordPress and plugin updates, content changes, broken link fixes, minor configuration changes, routine troubleshooting, and small maintenance tasks."}},{"@type":"Question","name":"What is not included in maintenance?","acceptedAnswer":{"@type":"Answer","text":"New features, integrations, major changes, architecture work, CI/CD pipeline management, and third-party vendor management. These are scoped and quoted separately."}},{"@type":"Question","name":"How does the monthly retainer work?","acceptedAnswer":{"@type":"Answer","text":"R1,000/month covers up to 2 hours of maintenance work. Unused hours do not roll over. Larger requirements are quoted separately."}}]})
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does maintenance cover?","acceptedAnswer":{"@type":"Answer","text":"Troubleshooting and diagnostics, routine plugin and module updates, configuration changes, minor operational fixes, and basic maintenance tasks within the purchased allowance."}},{"@type":"Question","name":"What is not included in maintenance?","acceptedAnswer":{"@type":"Answer","text":"Major application bug fixes, feature development, architectural changes, framework migrations, significant dependency upgrades requiring code changes, new CI/CD systems, and full observability implementations. Work requiring substantial engineering is separately billable."}},{"@type":"Question","name":"How does the support retainer work?","acceptedAnswer":{"@type":"Answer","text":"A monthly retainer that reserves a defined number of support hours. The exact number of hours and response targets are specified in the applicable retainer agreement. Additional hours beyond the included capacity are billed at the hourly rate."}}]})
     }
   ]
 })
