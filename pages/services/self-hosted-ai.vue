@@ -153,7 +153,7 @@
 useHead({
   title: 'Self-Hosted AI Infrastructure | NemesisNet — GGUF, GPU, No Vendor Lock-in',
   meta: [
-    { name: 'description', content: 'Self-hosted AI infrastructure in South Africa: GGUF models, Docker, GPU, vector databases, and speech-to-text (STT) / text-to-speech (TTS) pipelines. Real AI — not API wrappers. Cape Town.' },
+    { name: 'description', content: 'Self-hosted AI infrastructure: GGUF models, Docker, GPU, vector databases, and STT/TTS pipelines. Real AI — not API wrappers.' },
     { property: 'og:title', content: 'Self-Hosted AI Infrastructure | NemesisNet' },
     { property: 'og:description', content: 'GGUF models, Docker, GPU deployment, and vector databases. No vendor lock-in. Based in Cape Town, South Africa.' },
     { property: 'og:type', content: 'website' },

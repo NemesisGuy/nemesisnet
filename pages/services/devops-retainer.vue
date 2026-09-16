@@ -127,7 +127,7 @@ import { CheckCircle, XCircle } from 'lucide-vue-next'
 useHead({
   title: 'DevOps Retainer — Infrastructure & CI/CD Management | NemesisNet',
   meta: [
-    { name: 'description', content: 'Monthly DevOps retainer for infrastructure management, CI/CD maintenance, container management, and operational automation. From R7,500/month. Cape Town, South Africa.' },
+    { name: 'description', content: 'Monthly DevOps retainer for infrastructure management, CI/CD maintenance, container management, and operational automation. From R7,500/month.' },
     { property: 'og:title', content: 'DevOps Retainer | NemesisNet' },
     { property: 'og:description', content: 'Reserved DevOps engineering capacity for CI/CD, deployments, and infrastructure management. From R7,500/month.' },
     { property: 'og:type', content: 'website' },
