@@ -1053,6 +1053,29 @@ html[data-theme="light"][data-nemesis="on"] .card .project-link:hover{
   width: 100%;
 }
 
+.footer-disclaimer {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-disclaimer p {
+  font-size: 0.72rem;
+  color: rgba(244,244,244,0.45);
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+[data-theme="light"] .footer-disclaimer {
+  border-top-color: rgba(0,0,0,0.08);
+}
+
+[data-theme="light"] .footer-disclaimer p {
+  color: rgba(26,26,26,0.45);
+}
+
 @media (max-width: 900px) {
   .footer-links-grid {
     grid-template-columns: 1fr;

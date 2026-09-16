@@ -28,7 +28,7 @@ export default defineNuxtConfig({
       '/sitemap': { redirect: { to: '/sitemap.xml', statusCode: 301 } },
       '/feed': { redirect: { to: 'https://blog.nemesisnet.co.za/feed/', statusCode: 301 } },
       '/projects/light-hosting': { redirect: { to: '/services/light-hosting', statusCode: 301 } },
-      '/projects/managed-retainer': { redirect: { to: '/services/managed-retainer', statusCode: 301 } },
+      '/projects/managed-retainer': { redirect: { to: '/services/support-retainer', statusCode: 301 } },
       '/**': {
         headers: {
           'Cache-Control': process.env.NUXT_PUBLIC_NO_INDEX === 'true' ? 'no-cache, no-store, must-revalidate' : 'public, s-maxage=86400, max-age=0, stale-while-revalidate=86400',

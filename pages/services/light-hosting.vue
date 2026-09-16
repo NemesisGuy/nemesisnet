@@ -21,23 +21,27 @@
 
         <h2>What's Included</h2>
         <ul class="feature-list">
-          <li><CheckCircle :size="18" /> Server hosting and SSL management</li>
-          <li><CheckCircle :size="18" /> OS and dependency security patching</li>
-          <li><CheckCircle :size="18" /> Uptime monitoring and alerts</li>
-          <li><CheckCircle :size="18" /> Automated backups (where applicable)</li>
-          <li><CheckCircle :size="18" /> DNS management support</li>
+          <li><CheckCircle :size="18" /> Containerised deployment and hosting</li>
+          <li><CheckCircle :size="18" /> Domain and SSL configuration assistance</li>
+          <li><CheckCircle :size="18" /> Client-owned Cloudflare/DNS configuration support</li>
+          <li><CheckCircle :size="18" /> Basic uptime monitoring and alerts</li>
+          <li><CheckCircle :size="18" /> Infrastructure-level OS security maintenance</li>
           <li><CheckCircle :size="18" /> Monthly status report</li>
         </ul>
 
         <h2>What's Not Included</h2>
         <ul class="feature-list feature-list--muted">
+          <li><XCircle :size="18" /> Application bug fixing or code changes</li>
           <li><XCircle :size="18" /> Feature development or new builds</li>
-          <li><XCircle :size="18" /> Bug fixes or code changes</li>
+          <li><XCircle :size="18" /> Application dependency upgrades requiring code changes</li>
+          <li><XCircle :size="18" /> Application rebuilds caused by dependency or framework changes</li>
           <li><XCircle :size="18" /> CI/CD pipeline management</li>
-          <li><XCircle :size="18" /> Application monitoring or APM</li>
-          <li><XCircle :size="18" /> Priority support or SLA coverage</li>
-          <li><XCircle :size="18" /> Database administration</li>
+          <li><XCircle :size="18" /> Full observability (see Observability service)</li>
+          <li><XCircle :size="18" /> Backup storage or disaster recovery (see Backup Management)</li>
+          <li><XCircle :size="18" /> Unlimited redeployment or reconfiguration work</li>
+          <li><XCircle :size="18" /> Uptime or SLA guarantees controlled by third-party providers</li>
         </ul>
+        <p class="scope-note">SSL certificates may be free through the client's Cloudflare configuration. The certificate being free does not mean the engineering or configuration work is free. Deployment and configuration are engineering/setup work.</p>
 
         <h2>What You Get Each Month</h2>
         <div class="process-steps">
@@ -61,19 +65,19 @@
         <h2>Pricing</h2>
         <p><strong>R850/month</strong> — flat rate, no hidden fees. Covers up to 2 deployed systems on shared/managed VPS infrastructure sized for the client's application and expected traffic. Dedicated resources or increased capacity are quoted separately.</p>
         <p>Domain registration and renewal are charged at actual cost. The R850 covers hosting infrastructure only.</p>
-        <p>If your system needs grow beyond basic hosting, the Managed Retainer (R7,500/month) includes CI/CD management, monitoring, engineering hours, and priority support.</p>
+        <p>If your system needs grow beyond basic hosting, the Support Retainer (from R7,500/month) provides reserved support capacity for troubleshooting and maintenance. The DevOps Retainer covers infrastructure and CI/CD management.</p>
 
         <ServiceFooter
           :exploring="[
-            { title: 'Managed Retainer', description: 'A monthly block of engineering capacity for production maintenance, operational support, and small improvements.', to: '/services/managed-retainer' },
-            { title: 'Infrastructure & DevOps', description: 'Docker, CI/CD, and networking — when you need to own the infrastructure yourself.', to: '/services/infrastructure' }
+            { title: 'Support Retainer', description: 'Reserved support capacity for troubleshooting and routine maintenance.', to: '/services/support-retainer' },
+            { title: 'Backup Management', description: 'Managed backup configuration, storage, and recovery.', to: '/services/backup-management' }
           ]"
-          exploring-note="Need more hands-on support or full infrastructure control? These services scale up from light hosting."
+          exploring-note="Need more hands-on support or managed backups? These services scale up from light hosting."
           :reading="[
             { label: 'Self-Hosted CI/CD on a Home Rack — GitHub, Gitea, Woodpecker & Portainer', href: 'https://blog.nemesisnet.co.za/self-hosted-ci-cd-on-a-home-rack-github-gitea-woodpecker-and-portainer/' },
             { label: 'Self-Hosted AI vs Cloud APIs — What South African Businesses Need to Know', href: 'https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/' }
           ]"
-          :cta="{ heading: 'Ready to get hosted?', description: 'Managed hosting for Nuxt and static sites — SSL, backups, and monitoring included.', buttonLabel: 'Choose Light Hosting', to: '/contact' }"
+          :cta="{ heading: 'Ready to get hosted?', description: 'Infrastructure hosting for deployed systems — SSL, monitoring, and security patches included.', buttonLabel: 'Choose Light Hosting', to: '/contact' }"
         />
       </div>
 
@@ -91,8 +95,8 @@
           <h3>Quick Links</h3>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
-            <NuxtLink to="/services/managed-retainer" class="btn-glass">Managed Retainer</NuxtLink>
-            <NuxtLink to="/services/infrastructure" class="btn-glass">Infrastructure</NuxtLink>
+            <NuxtLink to="/services/support-retainer" class="btn-glass">Support Retainer</NuxtLink>
+            <NuxtLink to="/services/backup-management" class="btn-glass">Backup Management</NuxtLink>
             <NuxtLink to="/projects" class="btn-glass">View Projects</NuxtLink>
           </div>
         </div>
