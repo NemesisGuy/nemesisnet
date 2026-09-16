@@ -197,7 +197,7 @@ useHead({
     },
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does systems design consulting cover?","acceptedAnswer":{"@type":"Answer","text":"Architecture reviews, technical roadmapping, and stack evaluation."}},{"@type":"Question","name":"When should I book a consulting session?","acceptedAnswer":{"@type":"Answer","text":"Before a build, when choosing a stack, or when rescuing a stalled project."}},{"@type":"Question","name":"Is consulting billed per session or as a retainer?","acceptedAnswer":{"@type":"Answer","text":"Both. Ad-hoc sessions or a managed retainer for ongoing technical decisions."}}]})
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does systems design consulting cover?","acceptedAnswer":{"@type":"Answer","text":"Architecture reviews, technical roadmapping, and stack evaluation."}},{"@type":"Question","name":"When should I book a consulting session?","acceptedAnswer":{"@type":"Answer","text":"Before a build, when choosing a stack, or when rescuing a stalled project."}},{"@type":"Question","name":"Is consulting billed per session or as a retainer?","acceptedAnswer":{"@type":"Answer","text":"Both. Ad-hoc sessions or a reserved capacity retainer for ongoing technical decisions."}}]})
     }
   ]
 })

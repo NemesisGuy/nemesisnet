@@ -110,7 +110,7 @@
             <p class="pricing-description">Hosting, SSL, uptime monitoring, and security patches for deployed systems.</p>
             <ul class="pricing-points">
               <li>Server hosting and SSL management</li>
-              <li>OS and dependency patching</li>
+              <li>OS and infrastructure security patching</li>
               <li>Uptime monitoring and alerts</li>
             </ul>
             <span class="btn-glass">See Details</span>

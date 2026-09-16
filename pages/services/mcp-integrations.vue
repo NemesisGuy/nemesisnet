@@ -33,7 +33,7 @@
         <ul class="feature-list feature-list--muted">
           <li><XCircle :size="18" /> AI model training or fine-tuning</li>
           <li><XCircle :size="18" /> Building the AI agents themselves (focus is on the integration layer)</li>
-          <li><XCircle :size="18" /> Ongoing infrastructure management (available via Managed Retainer)</li>
+          <li><XCircle :size="18" /> Ongoing infrastructure management (available via DevOps Retainer)</li>
           <li><XCircle :size="18" /> Third-party vendor API changes (handled through maintenance agreements)</li>
         </ul>
 
