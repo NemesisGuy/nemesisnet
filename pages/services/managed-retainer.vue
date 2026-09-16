@@ -62,7 +62,8 @@
         </div>
 
         <h2>Pricing</h2>
-        <p><strong>R7,500/month</strong> — flat rate, no hidden fees. Covers up to 3 production systems. Additional systems quoted separately.</p>
+        <p><strong>R7,500/month</strong> — flat rate, no hidden fees. Covers up to 3 production systems and includes up to 8 engineering hours per month for maintenance, operational support, and small improvements. Additional engineering time is billed at the applicable hourly rate.</p>
+        <p>Larger features, major changes, and work exceeding the included monthly hours are quoted separately.</p>
         <p>If you only need basic hosting and monitoring (no CI/CD, no bug fixes), the Light Hosting plan (R850/month) covers the basics.</p>
 
         <h2>How It Compares</h2>
@@ -87,6 +88,7 @@
               <li>Bug fixes &amp; improvements</li>
               <li>Application monitoring</li>
               <li>Priority support &amp; SLA</li>
+              <li>8 engineering hours/month</li>
             </ul>
             <NuxtLink to="/contact" class="btn-glass">Choose Managed</NuxtLink>
           </div>
@@ -103,7 +105,7 @@
             { label: 'WordPress MCP Automation — Cutting Publishing Time by 80%', href: 'https://blog.nemesisnet.co.za/wordpress-mcp-automation-cutting-publishing-time-by-80/' },
             { label: 'Self-Hosted AI vs Cloud APIs — What South African Businesses Need to Know', href: 'https://blog.nemesisnet.co.za/self-hosted-ai-vs-cloud-apis-what-south-african-businesses-need-to-know/' }
           ]"
-          :cta="{ heading: 'Ready for ongoing support?', description: 'Dedicated engineering hours for maintenance, feature work, and technical decisions.', buttonLabel: 'Choose Managed Retainer', to: '/contact' }"
+          :cta="{ heading: 'Ready for ongoing support?', description: 'A monthly block of engineering capacity for production maintenance, operational support, and small improvements.', buttonLabel: 'Choose Managed Retainer', to: '/contact' }"
         />
       </div>
 
@@ -114,6 +116,7 @@
             <li><span>Price:</span> <strong>R7,500/month</strong></li>
             <li><span>Billing:</span> <strong>Monthly</strong></li>
             <li><span>Systems:</span> <strong>Up to 3</strong></li>
+            <li><span>Hours:</span> <strong>8/month included</strong></li>
             <li><span>Response:</span> <strong>SLA-backed</strong></li>
           </ul>
         </div>
@@ -137,15 +140,15 @@ import { CheckCircle, XCircle } from 'lucide-vue-next'
 useHead({
   title: 'Managed Retainer — R7,500/mo Production Support | NemesisNet',
   meta: [
-    { name: 'description', content: 'Managed retainer for production systems: CI/CD management, monitoring, bug fixes, priority support. R7,500/month. Cape Town, South Africa.' },
+    { name: 'description', content: 'Managed retainer for production systems: CI/CD management, monitoring, bug fixes, priority support. R7,500/month with 8 engineering hours included. Cape Town, South Africa.' },
     { property: 'og:title', content: 'Managed Retainer | NemesisNet' },
-    { property: 'og:description', content: 'CI/CD management, monitoring, bug fixes, and continuous improvement. R7,500/month.' },
+    { property: 'og:description', content: 'CI/CD management, monitoring, bug fixes, and continuous improvement. R7,500/month with 8 engineering hours.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/managed-retainer' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:title', content: 'Managed Retainer | CI/CD, Monitoring & Bug Fixes | NemesisNet' },
-    { name: 'twitter:description', content: 'CI/CD management, monitoring, bug fixes, and continuous improvement. R7,500/month.' }
+    { name: 'twitter:description', content: 'CI/CD management, monitoring, bug fixes, and continuous improvement. R7,500/month with 8 engineering hours.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/services/managed-retainer' }
@@ -181,7 +184,7 @@ useHead({
     },
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a managed retainer?","acceptedAnswer":{"@type":"Answer","text":"Dedicated engineering hours each month for maintenance, features, and technical decisions."}},{"@type":"Question","name":"How are retainer hours used?","acceptedAnswer":{"@type":"Answer","text":"Flexibly. Bug fixes, small features, or advisory as priorities shift."}},{"@type":"Question","name":"Is there a minimum commitment?","acceptedAnswer":{"@type":"Answer","text":"Retainers run monthly; specifics are confirmed during the initial scoping call."}}]})
+      innerHTML: JSON.stringify(      {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a managed retainer?","acceptedAnswer":{"@type":"Answer","text":"A monthly block of engineering capacity for production maintenance, operational support, and small improvements. Covers CI/CD management, monitoring, security patches, and up to 8 engineering hours per month."}},{"@type":"Question","name":"How are retainer hours used?","acceptedAnswer":{"@type":"Answer","text":"Flexibly. Bug fixes, small features, or advisory as priorities shift. Additional hours beyond the 8 included are billed at the applicable hourly rate."}},{"@type":"Question","name":"Is there a minimum commitment?","acceptedAnswer":{"@type":"Answer","text":"Retainers run monthly; specifics are confirmed during the initial scoping call."}}]})
     }
   ]
 })

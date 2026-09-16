@@ -23,7 +23,7 @@
           <li><CheckCircle :size="18" /> Broken link fixes and redirects</li>
           <li><CheckCircle :size="18" /> Minor configuration changes</li>
           <li><CheckCircle :size="18" /> Routine troubleshooting and diagnostics</li>
-          <li><CheckCircle :size="18" /> Small maintenance tasks and bug fixes</li>
+          <li><CheckCircle :size="18" /> Minor fixes to existing functionality</li>
         </ul>
 
         <h2>What's Not Included</h2>

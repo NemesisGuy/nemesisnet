@@ -148,11 +148,11 @@
             <h3 class="pricing-title">Managed Retainer</h3>
             <div class="pricing-price">R7,500</div>
             <div class="pricing-unit">Monthly</div>
-            <p class="pricing-description">CI/CD pipeline management, monitoring, bug fixes, and continuous improvement for production systems.</p>
+            <p class="pricing-description">CI/CD pipeline management, monitoring, engineering hours, and continuous improvement for production systems.</p>
             <ul class="pricing-points">
               <li>CI/CD pipeline management and deployments</li>
               <li>Application monitoring and alerting</li>
-              <li>Bug fixes and continuous improvement</li>
+              <li>8 engineering hours/month included</li>
               <li>Priority support and SLA coverage</li>
             </ul>
             <span class="btn-glass">See Details</span>
