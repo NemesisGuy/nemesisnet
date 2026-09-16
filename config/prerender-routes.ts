@@ -31,6 +31,7 @@ export const PRERENDER_ROUTES = [
   '/services/agile-iterative',
   '/services/waterfall-structured',
   '/services/light-hosting',
+  '/services/maintenance',
   '/services/managed-retainer',
   '/software-development-cost-south-africa',
   '/about',
