@@ -17,7 +17,7 @@
         <p>No feature development, no bug fixes, no new integrations. Just reliable hosting with someone watching the dashboards so you do not have to.</p>
 
         <h2>Who It's For</h2>
-        <p><strong>Teams with deployed systems that need basic maintenance</strong> — static sites, brochure pages, simple apps with low traffic. <strong>Projects that are feature-complete</strong> and just need to stay online. <strong>Clients who want peace of mind</strong> without paying for a full managed retainer. <strong>Any system where uptime matters but active development is not needed.</strong></p>
+        <p><strong>Teams with deployed systems that need basic maintenance</strong> — static sites, brochure pages, simple apps with low traffic. <strong>Projects that are feature-complete</strong> and just need to stay online. <strong>Clients who want peace of mind</strong> without paying for a full support or DevOps retainer. <strong>Any system where uptime matters but active development is not needed.</strong></p>
 
         <h2>What's Included</h2>
         <ul class="feature-list">
@@ -53,7 +53,7 @@
           <div class="process-step">
             <span class="step-number">2</span>
             <h3>Security Patching</h3>
-            <p>Regular OS and dependency updates applied during maintenance windows. No surprises, no vulnerabilities left unpatched.</p>
+            <p>OS and infrastructure security updates applied during maintenance windows. Application dependency upgrades requiring code changes are separately billable engineering work.</p>
           </div>
           <div class="process-step">
             <span class="step-number">3</span>
@@ -155,7 +155,7 @@ useHead({
     },
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Light Hosting?","acceptedAnswer":{"@type":"Answer","text":"Managed hosting for Nuxt and static sites with SSL, backups, and monitoring."}},{"@type":"Question","name":"Where are sites hosted?","acceptedAnswer":{"@type":"Answer","text":"On our managed infrastructure in South Africa with global CDN delivery."}},{"@type":"Question","name":"Do you handle renewals and updates?","acceptedAnswer":{"@type":"Answer","text":"Yes. SSL, backups, and platform updates are managed for you."}}]})
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Light Hosting?","acceptedAnswer":{"@type":"Answer","text":"Containerised infrastructure hosting for deployed systems with SSL configuration, basic uptime monitoring, and OS security patches. R850/month."}},{"@type":"Question","name":"Where are sites hosted?","acceptedAnswer":{"@type":"Answer","text":"On managed infrastructure. Domain and SSL configuration assistance is included. Client-owned Cloudflare/DNS setup is supported."}},{"@type":"Question","name":"Do you handle application updates?","acceptedAnswer":{"@type":"Answer","text":"Light Hosting covers infrastructure-level security patching only. Application dependency upgrades, bug fixes, and feature development are not included and are available through separate engineering services."}}]})
     }
   ]
 })

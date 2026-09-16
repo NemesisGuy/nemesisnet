@@ -107,7 +107,7 @@
         <ServiceFooter
           :exploring="[
             { title: 'Self-Hosted AI Infrastructure', description: 'LLM deployment, TTS pipelines, and inference architecture — the AI-specific layer on top of your infra.', to: '/services/self-hosted-ai' },
-            { title: 'Light Hosting', description: 'Managed hosting for Nuxt and static sites — SSL, backups, and monitoring included.', to: '/services/light-hosting' }
+            { title: 'Light Hosting', description: 'Infrastructure hosting for deployed systems — SSL, monitoring, and security patches.', to: '/services/light-hosting' }
           ]"
           exploring-note="From DIY infrastructure to managed hosting — pick the level of control you need."
           :reading="[

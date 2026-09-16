@@ -32,7 +32,7 @@
         <h2>What's Not Included</h2>
         <ul class="feature-list feature-list--muted">
           <li><XCircle :size="18" /> Hands-on coding or implementation (available as a separate engagement)</li>
-          <li><XCircle :size="18" /> Ongoing advisory retainers (available via Managed Retainer)</li>
+          <li><XCircle :size="18" /> Ongoing advisory retainers (available via Support Retainer or DevOps Retainer)</li>
           <li><XCircle :size="18" /> Vendor-specific sales pitches — recommendations are stack-agnostic</li>
         </ul>
 
