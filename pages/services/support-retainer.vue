@@ -1,6 +1,6 @@
 <template>
   <div class="detail-page">
-    <PageHeader title="Maintenance & Support" subtitle="Keep your website or application running with ongoing maintenance and technical support." />
+    <PageHeader title="Support Retainer" subtitle="Reserved support capacity for troubleshooting, routine maintenance, and operational assistance — without a full engineering commitment." />
 
     <div class="detail-container">
       <div class="detail-main">
@@ -9,21 +9,24 @@
           <span>/</span>
           <NuxtLink to="/services">Services</NuxtLink>
           <span>/</span>
-          <span aria-current="page">Maintenance &amp; Support</span>
+          <span aria-current="page">Support Retainer</span>
         </div>
 
         <h2>What This Service Is</h2>
-        <p>Routine troubleshooting and maintenance that does not constitute substantial application development. Covers routine updates, configuration changes, minor operational fixes, and troubleshooting.</p>
-        <p>If work requires substantial engineering effort — framework upgrades, architectural changes, feature development — it moves to the Development Retainer or is billed separately.</p>
+        <p>A monthly retainer that reserves a defined number of support hours for troubleshooting, routine maintenance, configuration changes, and operational assistance. This is not unlimited support — you purchase a defined capacity each month.</p>
+        <p>The Support Retainer covers routine and predictable work that does not require substantial application development. If work requires meaningful code changes, it moves to the Development Retainer or is billed separately.</p>
+
+        <h2>Who It's For</h2>
+        <p><strong>Teams with deployed systems that need occasional help</strong> — not enough to justify a full-time hire, but more than ad-hoc hourly billing. <strong>Projects that are feature-complete</strong> but need ongoing operational support. <strong>Clients who want predictable monthly support costs</strong> without committing to large engineering retainers.</p>
 
         <h2>What You Get</h2>
         <ul class="feature-list">
           <li><CheckCircle :size="18" /> Troubleshooting and diagnostics</li>
-          <li><CheckCircle :size="18" /> Routine plugin and module updates</li>
+          <li><CheckCircle :size="18" /> Routine plugin/module updates</li>
           <li><CheckCircle :size="18" /> Configuration changes</li>
           <li><CheckCircle :size="18" /> Minor operational fixes</li>
           <li><CheckCircle :size="18" /> Assistance diagnosing service issues</li>
-          <li><CheckCircle :size="18" /> Basic maintenance tasks within purchased allowance</li>
+          <li><CheckCircle :size="18" /> Basic maintenance within purchased allowance</li>
         </ul>
 
         <h2>What's Not Included</h2>
@@ -33,68 +36,66 @@
           <li><XCircle :size="18" /> Architectural changes</li>
           <li><XCircle :size="18" /> Framework migrations</li>
           <li><XCircle :size="18" /> Significant dependency upgrades requiring code changes</li>
-          <li><XCircle :size="18" /> New CI/CD systems</li>
+          <li><XCircle :size="18" /> CI/CD pipeline implementation</li>
           <li><XCircle :size="18" /> Full observability implementations</li>
         </ul>
-        <p class="scope-note">If work requires substantial engineering effort, it becomes separately billable development or engineering work through the Development Retainer.</p>
+        <p class="scope-note">Work requiring substantial engineering effort is separately billable through the Development Retainer or hourly engineering.</p>
 
         <h2>Pricing</h2>
         <div class="compare-grid">
           <div class="compare-card">
-            <h3>Pay-As-You-Go</h3>
-            <div class="compare-price">R500/hour</div>
+            <h3>Hourly</h3>
+            <div class="compare-price">From R1,500/hr</div>
             <ul class="compare-list">
               <li>No commitment required</li>
               <li>Billed per task or per hour</li>
-              <li>Ideal for occasional fixes</li>
+              <li>Ideal for occasional support</li>
             </ul>
           </div>
           <div class="compare-card compare-card--featured">
             <h3>Monthly Retainer</h3>
-            <div class="compare-price">R1,000/month</div>
+            <div class="compare-price">From R7,500/month</div>
             <ul class="compare-list">
-              <li>Up to 2 hours included</li>
-              <li>Priority scheduling</li>
+              <li>Reserved support hours each month</li>
+              <li>Defined response target</li>
               <li>Unused hours do not roll over</li>
-            </ul>
-          </div>
-          <div class="compare-card">
-            <h3>Custom Support</h3>
-            <div class="compare-price">Custom</div>
-            <ul class="compare-list">
-              <li>Larger support requirements</li>
-              <li>Ongoing weekly/monthly blocks</li>
-              <li>Scoped after discovery call</li>
+              <li>Additional hours billed at hourly rate</li>
             </ul>
           </div>
         </div>
+        <p class="scope-note">The exact number of included hours is determined during scoping based on your support requirements and expected volume.</p>
 
         <h2>How It Works</h2>
         <div class="process-steps">
           <div class="process-step">
             <span class="step-number">1</span>
-            <h3>Request</h3>
-            <p>Email or message your maintenance request with a clear description of the issue or change needed.</p>
+            <h3>Scoping Call</h3>
+            <p>We assess your support needs, expected volume, and response requirements to define the right capacity level.</p>
           </div>
           <div class="process-step">
             <span class="step-number">2</span>
-            <h3>Quote</h3>
-            <p>For tasks under 30 minutes, we proceed directly. For larger work, you receive a time estimate before work begins.</p>
+            <h3>Monthly Capacity</h3>
+            <p>You receive a defined number of support hours each month, reserved for your use.</p>
           </div>
           <div class="process-step">
             <span class="step-number">3</span>
-            <h3>Deliver</h3>
-            <p>Maintenance is completed and you receive a summary of what was done. Retainer clients get a monthly report.</p>
+            <h3>Request &amp; Deliver</h3>
+            <p>Submit support requests as needed. Tasks within scope are handled within your allowance.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-number">4</span>
+            <h3>Overage &amp; Review</h3>
+            <p>If work exceeds the included hours, you are notified before additional billing. Monthly summary provided.</p>
           </div>
         </div>
 
         <ServiceFooter
           :exploring="[
-            { title: 'Support Retainer', description: 'Reserved support hours for ongoing troubleshooting and maintenance.', to: '/services/support-retainer' },
-            { title: 'Development Retainer', description: 'Reserved engineering capacity for features, fixes, and improvements.', to: '/services/dev-retainer' }
+            { title: 'Light Hosting', description: 'Infrastructure hosting for deployed systems — SSL, monitoring, and security patches.', to: '/services/light-hosting' },
+            { title: 'Development Retainer', description: 'Reserved application engineering capacity for features, fixes, and improvements.', to: '/services/dev-retainer' }
           ]"
-          exploring-note="From ad-hoc fixes to ongoing engineering capacity — choose the right level."
-          :cta="{ heading: 'Need ongoing support?', description: 'Routine maintenance and troubleshooting. Substantial engineering work is scoped separately.', buttonLabel: 'Get in Touch', to: '/contact' }"
+          exploring-note="From basic hosting to full engineering capacity — choose the right level."
+          :cta="{ heading: 'Need ongoing support?', description: 'A defined monthly support capacity for troubleshooting, maintenance, and operational assistance.', buttonLabel: 'Discuss Your Requirements', to: '/contact' }"
         />
       </div>
 
@@ -102,19 +103,19 @@
         <div class="sidebar-card">
           <h3>Service Details</h3>
           <ul class="sidebar-list">
-            <li><span>Pay-as-you-go:</span> <strong>R500/hour</strong></li>
-            <li><span>Retainer:</span> <strong>R1,000/month</strong></li>
-            <li><span>Includes:</span> <strong>Up to 2 hours</strong></li>
+            <li><span>Hourly:</span> <strong>From R1,500/hr</strong></li>
+            <li><span>Retainer:</span> <strong>From R7,500/mo</strong></li>
             <li><span>Billing:</span> <strong>Monthly</strong></li>
+            <li><span>Overage:</span> <strong>Hourly rate</strong></li>
           </ul>
         </div>
         <div class="sidebar-card">
           <h3>Quick Links</h3>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
-            <NuxtLink to="/services/support-retainer" class="btn-glass">Support Retainer</NuxtLink>
+            <NuxtLink to="/services/light-hosting" class="btn-glass">Light Hosting</NuxtLink>
             <NuxtLink to="/services/dev-retainer" class="btn-glass">Development Retainer</NuxtLink>
-            <NuxtLink to="/contact" class="btn-glass">Contact</NuxtLink>
+            <NuxtLink to="/services/devops-retainer" class="btn-glass">DevOps Retainer</NuxtLink>
           </div>
         </div>
       </div>
@@ -126,20 +127,20 @@
 import { CheckCircle, XCircle } from 'lucide-vue-next'
 
 useHead({
-  title: 'Maintenance & Support — R500/hr or R1,000/month Retainer | NemesisNet',
+  title: 'Support Retainer — Reserved Support Hours | NemesisNet',
   meta: [
-    { name: 'description', content: 'Website and application maintenance: WordPress updates, content changes, bug fixes, troubleshooting. R500/hour or R1,000/month retainer. Cape Town, South Africa.' },
-    { property: 'og:title', content: 'Maintenance & Support | NemesisNet' },
-    { property: 'og:description', content: 'Website maintenance and technical support: updates, fixes, troubleshooting. R500/hour or R1,000/month.' },
+    { name: 'description', content: 'Monthly support retainer for troubleshooting, maintenance, and operational assistance. From R7,500/month with defined capacity. Cape Town, South Africa.' },
+    { property: 'og:title', content: 'Support Retainer | NemesisNet' },
+    { property: 'og:description', content: 'Reserved support capacity for troubleshooting, maintenance, and operational assistance. From R7,500/month.' },
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://nemesisnet.co.za/services/maintenance' },
+    { property: 'og:url', content: 'https://nemesisnet.co.za/services/support-retainer' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
-    { name: 'twitter:title', content: 'Maintenance & Support | NemesisNet' },
-    { name: 'twitter:description', content: 'Website maintenance and technical support: updates, fixes, troubleshooting. R500/hour or R1,000/month.' }
+    { name: 'twitter:title', content: 'Support Retainer | Reserved Support Hours | NemesisNet' },
+    { name: 'twitter:description', content: 'Reserved support capacity for troubleshooting, maintenance, and operational assistance. From R7,500/month.' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://nemesisnet.co.za/services/maintenance' }
+    { rel: 'canonical', href: 'https://nemesisnet.co.za/services/support-retainer' }
   ],
   script: [
     {
@@ -147,17 +148,14 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Service',
-        'name': 'Maintenance & Support',
-        'description': 'Website and application maintenance: WordPress updates, content changes, bug fixes, troubleshooting.',
+        'name': 'Support Retainer',
+        'description': 'Reserved support capacity for troubleshooting, routine maintenance, and operational assistance.',
         'provider': { '@type': 'Organization', 'name': 'NemesisNet', 'url': 'https://nemesisnet.co.za' },
         'areaServed': { '@type': 'Country', 'name': 'South Africa' },
-        'offers': [
-          { '@type': 'Offer', 'price': '500', 'priceCurrency': 'ZAR', 'description': 'Pay-as-you-go hourly rate' },
-          { '@type': 'Offer', 'price': '1000', 'priceCurrency': 'ZAR', 'billingDuration': 'P1M', 'description': 'Monthly retainer with up to 2 hours' }
-        ],
+        'offers': { '@type': 'Offer', 'price': '7500', 'priceCurrency': 'ZAR', 'billingDuration': 'P1M', 'description': 'Monthly retainer with reserved support hours' },
         'mainEntityOfPage': {
           '@type': 'WebPage',
-          '@id': 'https://nemesisnet.co.za/services/maintenance'
+          '@id': 'https://nemesisnet.co.za/services/support-retainer'
         }
       })
     },
@@ -169,13 +167,13 @@ useHead({
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://nemesisnet.co.za/' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Services', 'item': 'https://nemesisnet.co.za/services' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Maintenance & Support', 'item': 'https://nemesisnet.co.za/services/maintenance' }
+          { '@type': 'ListItem', 'position': 3, 'name': 'Support Retainer', 'item': 'https://nemesisnet.co.za/services/support-retainer' }
         ]
       })
     },
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does maintenance cover?","acceptedAnswer":{"@type":"Answer","text":"WordPress and plugin updates, content changes, broken link fixes, minor configuration changes, routine troubleshooting, and small maintenance tasks."}},{"@type":"Question","name":"What is not included in maintenance?","acceptedAnswer":{"@type":"Answer","text":"New features, integrations, major changes, architecture work, CI/CD pipeline management, and third-party vendor management. These are scoped and quoted separately."}},{"@type":"Question","name":"How does the monthly retainer work?","acceptedAnswer":{"@type":"Answer","text":"R1,000/month covers up to 2 hours of maintenance work. Unused hours do not roll over. Larger requirements are quoted separately."}}]})
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a support retainer?","acceptedAnswer":{"@type":"Answer","text":"A monthly retainer that reserves a defined number of support hours for troubleshooting, routine maintenance, configuration changes, and operational assistance. It is not unlimited support — you purchase a defined capacity each month."}},{"@type":"Question","name":"What is not included in the support retainer?","acceptedAnswer":{"@type":"Answer","text":"Major application bug fixes, feature development, architectural changes, framework migrations, CI/CD pipeline implementation, and full observability implementations. Work requiring substantial engineering is separately billable."}},{"@type":"Question","name":"What happens if I exceed my included hours?","acceptedAnswer":{"@type":"Answer","text":"Additional work beyond the included capacity is billed at the applicable hourly rate. You are notified before additional billing occurs."}}]})
     }
   ]
 })
@@ -183,8 +181,8 @@ useHead({
 
 <style scoped>
 .detail-page { background: var(--bg-gradient); min-height: 100vh; }
-.detail-container { max-width: 1280px; margin: 0 0 40px; padding: 24px 20px; display: grid; grid-template-columns: 1fr 300px; gap: 60px; }
-.detail-main { text-align: left; line-height: 1.8; min-width: 0; overflow: hidden; }
+.detail-container { max-width: 1280px; margin: 0 auto; padding: 24px 20px 40px; display: grid; grid-template-columns: 1fr 300px; gap: 60px; }
+.detail-main { text-align: left; line-height: 1.8; }
 .detail-main h2 { font-size: 2rem; margin: 40px 0 20px; text-align: left; }
 .detail-main p { color: var(--text-muted); margin-bottom: 20px; }
 .breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
@@ -196,12 +194,12 @@ useHead({
 .feature-list li { padding: 8px 0; color: var(--text-muted); }
 .scope-note { font-size: 0.9rem; color: var(--text-muted); font-style: italic; margin-top: -8px; }
 .process-steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 24px 0; }
-.process-steps .process-step { flex: 0 1 calc(33% - 14px); min-width: 240px; max-width: 360px; }
+.process-steps .process-step { flex: 0 1 calc(50% - 10px); min-width: 280px; max-width: 360px; }
 .process-step { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; }
 .process-step .step-number { display: inline-block; background: var(--accent-color); color: #000; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; }
 .process-step h3 { color: var(--accent-color); font-size: 1rem; margin: 0 0 8px; }
 .process-step p { margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
-.compare-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
 .compare-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
 .compare-card--featured { border-color: var(--accent-color); }
 .compare-card h3 { color: var(--accent-color); font-size: 1rem; margin: 0; }
@@ -217,5 +215,5 @@ useHead({
 .sidebar-list li strong { color: var(--text-color); }
 .quick-links { display: flex; flex-direction: column; gap: 10px; }
 .quick-links .btn-glass { display: block; width: 100%; }
-@media (max-width: 900px) { .detail-container { grid-template-columns: 1fr; } .page-header h1 { font-size: 2.5rem; } .detail-sidebar { position: static; } .compare-grid { grid-template-columns: 1fr; } .process-steps { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .detail-container { grid-template-columns: 1fr; } .detail-sidebar { position: static; } .process-steps { grid-template-columns: 1fr; } .compare-grid { grid-template-columns: 1fr; } }
 </style>

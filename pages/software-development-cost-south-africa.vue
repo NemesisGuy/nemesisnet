@@ -115,17 +115,16 @@
             </ul>
             <span class="btn-glass">See Details</span>
           </NuxtLink>
-          <NuxtLink to="/services/managed-retainer" class="card pricing-card pricing-card--linked">
+          <NuxtLink to="/services/support-retainer" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Shield :size="24" /></ClientOnly></div>
-            <h4 class="pricing-title">Managed Retainer</h4>
-            <div class="pricing-price">R7,500</div>
+            <h4 class="pricing-title">Support Retainer</h4>
+            <div class="pricing-price">From R7,500</div>
             <div class="pricing-unit">Monthly</div>
-            <p class="pricing-description">CI/CD pipeline management, monitoring, bug fixes, and continuous improvement for production systems.</p>
+            <p class="pricing-description">Reserved support capacity for troubleshooting, maintenance, and operational assistance.</p>
             <ul class="pricing-points">
-              <li>CI/CD pipeline management and deployments</li>
-              <li>Application monitoring and alerting</li>
-              <li>Bug fixes and continuous improvement</li>
-              <li>Priority support and SLA coverage</li>
+              <li>Defined monthly support hours</li>
+              <li>Troubleshooting and routine maintenance</li>
+              <li>Overage billed at hourly rate</li>
             </ul>
             <span class="btn-glass">See Details</span>
           </NuxtLink>

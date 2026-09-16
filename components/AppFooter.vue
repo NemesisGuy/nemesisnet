@@ -23,6 +23,9 @@
         <a href="https://github.com/NemesisGuy" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in new tab)">GitHub</a>
       </div>
     </div>
+    <div class="footer-disclaimer">
+      <p>Service descriptions, indicative pricing, features, timelines, infrastructure arrangements, and availability shown on this website are general guidelines and may vary by project. The applicable proposal, statement of work, quotation, and/or signed agreement is the authoritative source for the actual scope, deliverables, pricing, responsibilities, support arrangements, infrastructure, SLAs, exclusions, and other engagement terms.</p>
+    </div>
 <div class="footer-line">
        <span>&copy; {{ currentYear }} NemesisNet</span>
        <span class="footer-divider">|</span>

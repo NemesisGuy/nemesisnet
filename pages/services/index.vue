@@ -2,7 +2,6 @@
   <div>
     <PageHeader title="Services" subtitle="Engineering platforms, systems, and infrastructure for real production workloads." />
 
-
     <div class="detail-container">
       <div class="detail-main">
         <div class="breadcrumbs" aria-label="Breadcrumb">
@@ -114,46 +113,115 @@
           </NuxtLink>
         </div>
 
-        <h3 class="pricing-group-label">Ongoing Support</h3>
-        <p class="pricing-group-desc">Maintenance, hosting, and production support for deployed systems.</p>
+        <h3 class="pricing-group-label">Hosting &amp; Infrastructure</h3>
+        <p class="pricing-group-desc">Infrastructure hosting, DevOps management, and operational services for production systems.</p>
         <div class="pricing-grid">
-          <NuxtLink to="/services/maintenance" class="card pricing-card pricing-card--linked">
-            <div class="pricing-icon"><ClientOnly><Wrench :size="24" /></ClientOnly></div>
-            <h3 class="pricing-title">Maintenance &amp; Support</h3>
-            <div class="pricing-price">R500/hr</div>
-            <div class="pricing-unit">or R1,000/month retainer</div>
-            <p class="pricing-description">WordPress updates, content changes, bug fixes, and troubleshooting. Pay-as-you-go or monthly retainer.</p>
-            <ul class="pricing-points">
-              <li>WordPress and plugin updates</li>
-              <li>Content changes and broken link fixes</li>
-              <li>Configuration and troubleshooting</li>
-            </ul>
-            <span class="btn-glass">See Details</span>
-          </NuxtLink>
           <NuxtLink to="/services/light-hosting" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Server :size="24" /></ClientOnly></div>
             <h3 class="pricing-title">Light Hosting</h3>
             <div class="pricing-price">R850</div>
             <div class="pricing-unit">Monthly</div>
-            <p class="pricing-description">Hosting, SSL, uptime monitoring, and security patches for deployed systems.</p>
+            <p class="pricing-description">Containerised deployment, SSL, uptime monitoring, and security patches for deployed systems.</p>
             <ul class="pricing-points">
               <li>Server hosting and SSL management</li>
-              <li>OS and dependency patching</li>
-              <li>Uptime monitoring and alerts</li>
+              <li>Basic uptime monitoring and alerts</li>
+              <li>OS and infrastructure security maintenance</li>
             </ul>
             <span class="btn-glass">See Details</span>
           </NuxtLink>
-          <NuxtLink to="/services/managed-retainer" class="card pricing-card pricing-card--linked">
+          <NuxtLink to="/services/devops-retainer" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Shield :size="24" /></ClientOnly></div>
-            <h3 class="pricing-title">Managed Retainer</h3>
-            <div class="pricing-price">R7,500</div>
+            <h3 class="pricing-title">DevOps Retainer</h3>
+            <div class="pricing-price">From R7,500</div>
             <div class="pricing-unit">Monthly</div>
-            <p class="pricing-description">CI/CD pipeline management, monitoring, engineering hours, and continuous improvement for production systems.</p>
+            <p class="pricing-description">Reserved infrastructure and DevOps engineering capacity — CI/CD, deployments, and operational automation.</p>
             <ul class="pricing-points">
-              <li>CI/CD pipeline management and deployments</li>
-              <li>Application monitoring and alerting</li>
-              <li>8 engineering hours/month included</li>
-              <li>Priority support and SLA coverage</li>
+              <li>CI/CD pipeline maintenance</li>
+              <li>Container and deployment management</li>
+              <li>Infrastructure improvements and automation</li>
+            </ul>
+            <span class="btn-glass">See Details</span>
+          </NuxtLink>
+          <NuxtLink to="/services/cicd-engineering" class="card pricing-card pricing-card--linked">
+            <div class="pricing-icon"><ClientOnly><GitBranch :size="24" /></ClientOnly></div>
+            <h3 class="pricing-title">CI/CD Engineering</h3>
+            <div class="pricing-price">From R1,500</div>
+            <div class="pricing-unit">Hourly / Project</div>
+            <p class="pricing-description">Pipeline architecture, implementation, and automation — GitHub Actions, Woodpecker, Docker builds.</p>
+            <ul class="pricing-points">
+              <li>New CI/CD pipeline implementation</li>
+              <li>Docker build pipelines and deployment automation</li>
+              <li>Pipeline architecture and security</li>
+            </ul>
+            <span class="btn-glass">See Details</span>
+          </NuxtLink>
+          <NuxtLink to="/services/observability" class="card pricing-card pricing-card--linked">
+            <div class="pricing-icon"><ClientOnly><Activity :size="24" /></ClientOnly></div>
+            <h3 class="pricing-title">Observability</h3>
+            <div class="pricing-price">Custom</div>
+            <div class="pricing-unit">Project-based</div>
+            <p class="pricing-description">Full visibility into production systems — Prometheus, Grafana, log aggregation, and alerting.</p>
+            <ul class="pricing-points">
+              <li>Metrics collection and dashboards</li>
+              <li>Log aggregation and centralisation</li>
+              <li>Alerting and retention configuration</li>
+            </ul>
+            <span class="btn-glass">See Details</span>
+          </NuxtLink>
+          <NuxtLink to="/services/backup-management" class="card pricing-card pricing-card--linked">
+            <div class="pricing-icon"><ClientOnly><Database :size="24" /></ClientOnly></div>
+            <h3 class="pricing-title">Backup Management</h3>
+            <div class="pricing-price">Custom</div>
+            <div class="pricing-unit">Project-based</div>
+            <p class="pricing-description">Managed backup configuration, storage, and recovery — defined by your data requirements.</p>
+            <ul class="pricing-points">
+              <li>Backup configuration and setup</li>
+              <li>Retention policy management</li>
+              <li>Recovery procedures</li>
+            </ul>
+            <span class="btn-glass">See Details</span>
+          </NuxtLink>
+        </div>
+
+        <h3 class="pricing-group-label">Support &amp; Maintenance</h3>
+        <p class="pricing-group-desc">Routine troubleshooting, maintenance, and ongoing support for production systems.</p>
+        <div class="pricing-grid">
+          <NuxtLink to="/services/maintenance" class="card pricing-card pricing-card--linked">
+            <div class="pricing-icon"><ClientOnly><Wrench :size="24" /></ClientOnly></div>
+            <h3 class="pricing-title">Maintenance &amp; Support</h3>
+            <div class="pricing-price">From R1,500</div>
+            <div class="pricing-unit">Hourly</div>
+            <p class="pricing-description">Routine troubleshooting, configuration changes, minor fixes, and maintenance tasks.</p>
+            <ul class="pricing-points">
+              <li>Troubleshooting and diagnostics</li>
+              <li>Routine plugin and module updates</li>
+              <li>Minor operational fixes</li>
+            </ul>
+            <span class="btn-glass">See Details</span>
+          </NuxtLink>
+          <NuxtLink to="/services/support-retainer" class="card pricing-card pricing-card--linked">
+            <div class="pricing-icon"><ClientOnly><Headphones :size="24" /></ClientOnly></div>
+            <h3 class="pricing-title">Support Retainer</h3>
+            <div class="pricing-price">From R7,500</div>
+            <div class="pricing-unit">Monthly</div>
+            <p class="pricing-description">Reserved support capacity for troubleshooting, maintenance, and operational assistance.</p>
+            <ul class="pricing-points">
+              <li>Defined monthly support hours</li>
+              <li>Troubleshooting and routine maintenance</li>
+              <li>Overage billed at hourly rate</li>
+            </ul>
+            <span class="btn-glass">See Details</span>
+          </NuxtLink>
+          <NuxtLink to="/services/dev-retainer" class="card pricing-card pricing-card--linked">
+            <div class="pricing-icon"><ClientOnly><Code :size="24" /></ClientOnly></div>
+            <h3 class="pricing-title">Development Retainer</h3>
+            <div class="pricing-price">From R7,500</div>
+            <div class="pricing-unit">Monthly</div>
+            <p class="pricing-description">Reserved application engineering capacity — features, fixes, refactoring, and improvements.</p>
+            <ul class="pricing-points">
+              <li>Feature development and bug fixes</li>
+              <li>Refactoring and technical debt reduction</li>
+              <li>Framework upgrades requiring code changes</li>
             </ul>
             <span class="btn-glass">See Details</span>
           </NuxtLink>
@@ -168,7 +236,6 @@
         <h2>Which build fits your project?</h2>
         <p class="section-intro">Not sure which tier you need? Use this to find your fit — then explore the detail page.</p>
         <div class="tier-selector">
-          <!-- Desktop table -->
           <table class="tier-table">
             <thead>
               <tr>
@@ -245,7 +312,6 @@
               </tr>
             </tbody>
           </table>
-          <!-- Mobile stacked cards -->
           <div class="tier-mobile-cards">
             <div class="tier-mobile-card">
               <h3>Static &amp; Brochure</h3>
@@ -375,31 +441,32 @@
 </template>
 
 <script setup>
-import { Globe, Layers, Briefcase, Cpu, Brain, Workflow, Server, Shield, ChevronDown, Wrench } from 'lucide-vue-next'
+import { Globe, Layers, Briefcase, Cpu, Brain, Workflow, Server, Shield, ChevronDown, Wrench, GitBranch, Activity, Database, Headphones, Code } from 'lucide-vue-next'
 
 const openFaq = ref(null)
 const toggleFaq = (i) => { openFaq.value = openFaq.value === i ? null : i }
 
 const faqs = [
   { q: 'What technologies does NemesisNet use?', a: 'NemesisNet works with Vue 3, React, Nuxt 4, Spring Boot, Python, PocketBase, Docker, PostgreSQL, Redis, and AI frameworks including MCP, GGUF models, and CUDA-accelerated inference.' },
-  { q: 'How does pricing work?', a: 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R7,000 for static sites to R350,000+ for platform and enterprise work. Specialist engagements start from R10,000. Maintenance starts at R500/hour or R1,000/month. Hosting starts at R850/month.' },
+  { q: 'How does pricing work?', a: 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R7,000 for static sites to R350,000+ for platform and enterprise work. Specialist engagements start from R10,000. Hosting starts at R850/month. Retainers start from R7,500/month with defined capacity.' },
   { q: 'Does NemesisNet work with clients outside Cape Town?', a: 'Yes. While based in Cape Town, South Africa, NemesisNet works with clients remotely across the country and internationally. Discovery calls and scoping sessions are conducted online.' },
   { q: 'What is the typical delivery timeline?', a: 'Static sites ship in 2–4 weeks. App starters typically take 4–8 weeks. Business systems range from 8–16 weeks. Platform and enterprise builds run 16–30+ weeks. All timelines are scoped during the discovery phase.' },
-  { q: 'Can NemesisNet integrate with existing systems?', a: 'Yes. NemesisNet builds API integrations, MCP servers, and data pipelines that connect to existing CMS, CRM, and database systems. Custom MCP agents can automate workflows across multiple platforms.' }
+  { q: 'Can NemesisNet integrate with existing systems?', a: 'Yes. NemesisNet builds API integrations, MCP servers, and data pipelines that connect to existing CMS, CRM, and database systems. Custom MCP agents can automate workflows across multiple platforms.' },
+  { q: 'Are retainers unlimited?', a: 'No. Retainers purchase reserved capacity — defined hours per month for a specific type of work. Additional hours beyond the included capacity are billed at the applicable hourly rate.' }
 ]
 
 useHead({
   title: 'IT Services Cape Town | NemesisNet',
   meta: [
-    { name: 'description', content: 'IT services in Cape Town, South Africa: Custom software, SaaS development, AI infrastructure, DevOps. ZAR pricing from R7,000. Cape Town-based engineering.' },
+    { name: 'description', content: 'IT services in Cape Town, South Africa: Custom software, SaaS development, AI infrastructure, DevOps, hosting, and support retainers. ZAR pricing from R7,000.' },
     { property: 'og:title', content: 'IT Services Cape Town | Software, SaaS, AI & Infrastructure' },
-    { property: 'og:description', content: 'Custom software, SaaS, and AI infrastructure services based in Cape Town, South Africa. Starting from R7,000.' },
+    { property: 'og:description', content: 'Custom software, SaaS, AI infrastructure, hosting, and support services based in Cape Town, South Africa. Starting from R7,000.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:title', content: 'IT Services Cape Town | NemesisNet' },
-    { name: 'twitter:description', content: 'IT services in Cape Town: Custom software, SaaS, AI infrastructure, DevOps. ZAR pricing from R7,000.' }
+    { name: 'twitter:description', content: 'IT services in Cape Town: Custom software, SaaS, AI infrastructure, DevOps, hosting, and support. ZAR pricing from R7,000.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/services' }
@@ -424,7 +491,7 @@ useHead({
             'name': 'How does pricing work?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R7,000 for static sites to R350,000+ for platform and enterprise work. App Starter projects range from R35,000–R80,000. Specialist engagements (consulting, MCP integrations) start from R10,000 and R55,000 respectively. Maintenance starts at R500/hour or R1,000/month retainer. Hosting starts at R850/month, managed retainers at R7,500/month.'
+              'text': 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R7,000 for static sites to R350,000+ for platform and enterprise work. App Starter projects range from R35,000 to R80,000. Specialist engagements start from R10,000 and R55,000 respectively. Hosting starts at R850/month. Retainers start from R7,500/month with defined capacity.'
             }
           },
           {
@@ -440,7 +507,7 @@ useHead({
             'name': 'What is the typical delivery timeline?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Static &amp; Brochure sites ship in 2–4 weeks. App Starter projects typically take 4–8 weeks. Business Systems range from 8–16 weeks. Platform and Enterprise builds run 16–30+ weeks. All timelines are scoped during the discovery phase.'
+              'text': 'Static and Brochure sites ship in 2 to 4 weeks. App Starter projects typically take 4 to 8 weeks. Business Systems range from 8 to 16 weeks. Platform and Enterprise builds run 16 to 30 plus weeks. All timelines are scoped during the discovery phase.'
             }
           },
           {
@@ -449,6 +516,14 @@ useHead({
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Yes. NemesisNet builds API integrations, MCP servers, and data pipelines that connect to existing CMS, CRM, and database systems. Custom MCP agents can automate workflows across multiple platforms.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Are retainers unlimited?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Retainers purchase reserved capacity — defined hours per month for a specific type of work. Additional hours beyond the included capacity are billed at the applicable hourly rate.'
             }
           }
         ]
@@ -485,7 +560,7 @@ useHead({
 .section-cta-sub { font-size: 0.85rem; color: var(--text-muted); margin-top: 10px; text-align: center; }
 .btn-glass { display: inline-block; }
 .sdlc-columns { grid-template-columns: repeat(2, 1fr) !important; justify-items: center; }
-.pricing-grid, .tiers-grid { /* pricing-grid now flexbox, centered via main.css */ }
+.pricing-grid, .tiers-grid { }
 .pricing-group-label { font-size: 1.1rem; color: var(--accent-color); margin: 32px 0 8px; padding-bottom: 8px; border-bottom: 1px solid var(--glass-border); }
 .pricing-group-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px; }
 

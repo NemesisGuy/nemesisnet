@@ -28,6 +28,7 @@ temp/
 # Business docs (contracts, SOPs, forms, proposals)
 nemesis-docs/
 content-clusters.md
+SERVICE-AUDIT-SPEC.md
 .gstack/
 
 # Local deploy/screenshot artifacts
