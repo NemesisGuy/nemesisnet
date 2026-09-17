@@ -205,7 +205,7 @@
       <div class="cta-buttons" style="margin-top: 24px;">
         <NuxtLink to="/contact" class="btn-glass">Send a Message →</NuxtLink>
       </div>
-      <p class="contact-subnote">Available for remote engagements globally. Also available for WordPress, WooCommerce, and CMS projects — enquire directly.</p>
+      <p class="contact-subnote">Available for remote engagements globally.</p>
     </div>
   </section>
 </div>

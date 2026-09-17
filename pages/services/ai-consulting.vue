@@ -56,7 +56,7 @@
         </div>
 
         <h2>Pricing</h2>
-        <p>Starting from <strong>R10,000</strong> for a half-day session. Full-day sessions available on request. Travel to Cape Town offices can be arranged for local clients.</p>
+        <p>Starting from <strong>R10,000 for a half-day (4 hours)</strong> or <strong>R17,000 for a full-day (8 hours)</strong>. Consulting sessions are priced as specialist advisory engagements and include pre-session review and a written deliverable. Travel to Cape Town offices can be arranged for local clients.</p>
         <p>If the session leads to a build engagement, the consulting fee is credited toward the project.</p>
 
         <h2>Real Examples</h2>
@@ -94,7 +94,7 @@
           <h3>Service Details</h3>
           <ul class="sidebar-list">
             <li><span>Duration:</span> <strong>Half-Day or Full-Day</strong></li>
-            <li><span>Price:</span> <strong>From R10,000</strong></li>
+            <li><span>Price:</span> <strong>R10,000 half-day / R17,000 full-day</strong></li>
             <li><span>Format:</span> <strong>Remote (Video Call)</strong></li>
             <li><span>Deliverable:</span> <strong>Written Summary</strong></li>
           </ul>

@@ -42,7 +42,7 @@
         <div class="compare-grid">
           <div class="compare-card compare-card--featured">
             <h3>Hourly</h3>
-            <div class="compare-price">From R1,500/hr</div>
+            <div class="compare-price">R850 – R1,100/hr</div>
             <ul class="compare-list">
               <li>No commitment required</li>
               <li>Billed per task or per hour</li>
@@ -94,7 +94,7 @@
         <div class="sidebar-card">
           <h3>Service Details</h3>
           <ul class="sidebar-list">
-            <li><span>Hourly:</span> <strong>From R1,500/hr</strong></li>
+            <li><span>Hourly:</span> <strong>R850 – R1,100/hr</strong></li>
             <li><span>Retainer:</span> <strong>From R7,500/mo</strong></li>
             <li><span>Billing:</span> <strong>Monthly</strong></li>
             <li><span>Overage:</span> <strong>Hourly rate</strong></li>
@@ -120,7 +120,7 @@ import { CheckCircle, XCircle } from 'lucide-vue-next'
 useHead({
   title: 'Maintenance & Support — Routine Troubleshooting & Maintenance | NemesisNet',
   meta: [
-    { name: 'description', content: 'Routine troubleshooting and maintenance for websites and applications. From R1,500/hour or support retainer. Cape Town, South Africa.' },
+    { name: 'description', content: 'Routine troubleshooting and maintenance for websites and applications. R850–R1,100/hour or support retainer. Cape Town, South Africa.' },
     { property: 'og:title', content: 'Maintenance & Support | NemesisNet' },
     { property: 'og:description', content: 'Routine troubleshooting, maintenance, and operational support. From R1,500/hour.' },
     { property: 'og:type', content: 'website' },

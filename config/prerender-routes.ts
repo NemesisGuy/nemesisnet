@@ -31,6 +31,7 @@ export const PRERENDER_ROUTES = [
   '/services/agile-iterative',
   '/services/waterfall-structured',
   '/services/light-hosting',
+  '/services/cms',
   '/services/maintenance',
   '/services/managed-retainer',
   '/services/support-retainer',

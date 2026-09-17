@@ -47,22 +47,105 @@
               </tr>
               <tr>
                 <td class="tier-question">Business Systems</td>
-                <td>From R150,000</td>
+                <td>R150,000 – R400,000</td>
                 <td>8–16 weeks</td>
                 <td>Full-stack products with Vue 3 + Spring Boot, RBAC, CI/CD</td>
               </tr>
               <tr>
                 <td class="tier-question">Platform / Enterprise</td>
-                <td>From R350,000</td>
+                <td>R350,000 – R900,000</td>
                 <td>16–30+ weeks</td>
                 <td>Multi-tenant SaaS, AI pipelines, MCP agents, self-hosted LLMs</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p class="pricing-note"><strong>Note:</strong> All prices are starting-from benchmarks. Final quotes are confirmed after a short discovery call and technical scoping session — no surprises.</p>
+        <p class="pricing-note"><strong>Note:</strong> All prices are starting-from benchmarks. Ranges reflect typical scope complexity — larger builds are quoted after discovery and scoping. Final quotes are confirmed after a short discovery call and technical scoping session — no surprises.</p>
 
         <p>To put this in context: most South African app development agencies quote R80,000–R250,000 for a basic MVP with login and a few screens. NemesisNet's App Starter tier covers this at R35,000–R80,000 because there's no agency overhead, account management layer, or discovery-phase invoice. You're paying for engineering.</p>
+
+        <!-- Section 3b — Hourly Rate Card -->
+        <h2>Hourly Rates — What Does Each Type of Work Actually Cost?</h2>
+        <p class="section-intro">NemesisNet's hourly rates vary by the type of work. A plugin update is not priced the same as an architecture review. This table shows what each band covers and why.</p>
+
+        <div class="pricing-comparison-table">
+          <table class="tier-table">
+            <thead>
+              <tr>
+                <th>Band</th>
+                <th>Rate</th>
+                <th>Covers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tier-question">Maintenance &amp; Support</td>
+                <td>R850 – R1,100/hr</td>
+                <td>Troubleshooting, plugin and module updates, config changes, minor fixes</td>
+              </tr>
+              <tr>
+                <td class="tier-question">Development &amp; DevOps</td>
+                <td>R1,200 – R1,400/hr</td>
+                <td>Feature work, refactoring, CI/CD implementation, deployment automation</td>
+              </tr>
+              <tr>
+                <td class="tier-question">Architecture &amp; AI</td>
+                <td>R1,600 – R2,000/hr</td>
+                <td>Architecture review, AI and MCP consulting, technical advisory, model selection</td>
+              </tr>
+              <tr>
+                <td class="tier-question">Rescue &amp; Urgent</td>
+                <td>From R2,200/hr</td>
+                <td>Legacy rescue, production incidents, compressed timelines</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="pricing-note"><strong>Note:</strong> Hourly billing applies to retainer work, standalone advisory, and any work outside a defined project scope. All project builds are scoped and quoted at a fixed price.</p>
+
+        <!-- Section 3c — SA Rate Context -->
+        <h2>Why Published South African Developer Rates Look Low</h2>
+        <p class="section-intro">Google may show you PayScale or Indeed figures that look nothing like agency rates. Here's why — and what the numbers actually represent.</p>
+
+        <div class="pricing-comparison-table">
+          <table class="tier-table">
+            <thead>
+              <tr>
+                <th>Benchmark</th>
+                <th>Rate</th>
+                <th>What It Measures</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tier-question">PayScale ZA, software dev</td>
+                <td>R58 – R256/hr</td>
+                <td>Salaried employee pay converted to hourly. 66 respondents. Not a billable rate.</td>
+              </tr>
+              <tr>
+                <td class="tier-question">Indeed, senior developer SA</td>
+                <td>~R298/hr</td>
+                <td>Permanent salary divided by working hours. Employer cost, not client price.</td>
+              </tr>
+              <tr>
+                <td class="tier-question">Senior SA contractor band</td>
+                <td>R600 – R1,200/hr</td>
+                <td>Contract pay, no benefits. 30–100% above permanent salaries.</td>
+              </tr>
+              <tr>
+                <td class="tier-question">SA agency blended rate</td>
+                <td>R900 – R1,800/hr</td>
+                <td>Contractor pay × 1.6–2.2× agency multiple. Includes overhead and account management.</td>
+              </tr>
+              <tr>
+                <td class="tier-question">NemesisNet</td>
+                <td>R850 – R2,200+/hr</td>
+                <td>Band-dependent. Top of range for specialist AI/architecture work. See rate card above.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="pricing-note"><strong>Key distinction:</strong> PayScale and Indeed report what employers pay staff. Agency and contractor rates are what clients pay for billable work — typically 2–4× higher. A salaried developer costing an employer R298/hr does not mean you can hire one for R298/hr on a project basis.</p>
 
         <!-- Section 4 — Specialist Engagements -->
         <h2>Specialist Engagements — AI Consulting &amp; MCP Integrations</h2>
@@ -137,7 +220,7 @@
 
         <p><strong>AI and LLM pipeline integration.</strong> Connecting to hosted LLMs (OpenAI, Anthropic) adds per-token operating cost on top of build cost. Self-hosted models (GGUF, Ollama) on local GPU/CPU infrastructure require infrastructure design upfront. Neither is a drop-in — both need monitoring, fallback logic, and cost forecasting.</p>
 
-        <p><strong>POPIA compliance.</strong> Not optional for SA systems handling personal data. Adds data residency decisions, consent management, audit logging, and breach notification architecture. retrofitting POPIA after launch costs 3–5× more than building it in from day one.</p>
+        <p><strong>POPIA compliance.</strong> Not optional for SA systems handling personal data. Adds data residency decisions, consent management, audit logging, and breach notification architecture. Retrofitting POPIA after launch costs 3–5× more than building it in from day one.</p>
 
         <p><strong>Third-party integrations.</strong> Each SA payment provider (PayFast, Paystack, Ozow) requires webhook handling, reconciliation logic, and failed-payment flows. Each adds 1–3 weeks. CRM, ERP, and messaging integrations follow the same pattern — the API exists, but the edge cases don't appear until you're live.</p>
 
@@ -199,7 +282,7 @@ const toggleFaq = (i) => { openFaq.value = openFaq.value === i ? null : i }
 const faqs = [
   {
     q: 'Do you charge hourly or fixed price?',
-    a: 'Fixed price after scoping for all project builds. Hourly (from R1,500/hour) only for retainer and ongoing work outside a defined scope. Every project build gets a fixed quote after a short discovery call and technical scoping session.'
+    a: 'Fixed price after scoping for all project builds. Hourly billing (band-dependent, see rate card) applies to retainer work, standalone advisory, and any work outside a defined project scope. Every project build gets a fixed quote after a short discovery call and technical scoping session.'
   },
   {
     q: 'What\'s included in a project quote?',
@@ -226,15 +309,15 @@ const faqs = [
 useHead({
   title: 'Software Development Cost South Africa 2026 | NemesisNet',
   meta: [
-    { name: 'description', content: 'Transparent ZAR pricing for custom software, SaaS, and AI systems in South Africa. R7,000 to R350,000+ — real numbers.' },
+    { name: 'description', content: 'Transparent ZAR pricing for custom software, SaaS, and AI systems in South Africa. R7,000 to R900,000+ — real numbers, not estimates.' },
     { property: 'og:title', content: 'Software Development Cost South Africa 2026 | NemesisNet' },
-    { property: 'og:description', content: 'Transparent ZAR pricing for custom software, SaaS platforms, and AI systems. Real numbers from R7,000 to R350,000+.' },
+    { property: 'og:description', content: 'Transparent ZAR pricing for custom software, SaaS platforms, and AI systems. Real numbers from R7,000 to R900,000+.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/software-development-cost-south-africa' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:title', content: 'Software Development Cost SA | NemesisNet' },
-    { name: 'twitter:description', content: 'Transparent ZAR pricing for custom software, SaaS, and AI systems in South Africa. R7,000 to R350,000+.' }
+    { name: 'twitter:description', content: 'Transparent ZAR pricing for custom software, SaaS, and AI systems in South Africa. R7,000 to R900,000+.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/software-development-cost-south-africa' }
@@ -251,7 +334,7 @@ useHead({
             'name': 'Do you charge hourly or fixed price?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Fixed price after scoping for all project builds. Hourly (R850–R1,500/hour depending on complexity) only for retainer and ongoing work outside a defined scope. Every project build gets a fixed quote after a short discovery call and technical scoping session.'
+              'text': 'Fixed price after scoping for all project builds. Hourly billing (band-dependent, see rate card) applies to retainer work, standalone advisory, and any work outside a defined project scope. Every project build gets a fixed quote after a short discovery call and technical scoping session.'
             }
           },
           {
