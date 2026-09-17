@@ -1,6 +1,6 @@
 <template>
   <div class="detail-page">
-    <PageHeader title="Self-Hosted AI Infrastructure" subtitle="Production-grade AI that runs on your own hardware — no API key dependency, no vendor lock-in, full data privacy." />
+    <PageHeader title="Self-Hosted AI Infrastructure" subtitle="Production-grade AI that runs on your own hardware — designed to minimize third-party API dependency, no vendor lock-in, full data privacy." />
 
     <div class="detail-container">
       <div class="detail-main">
@@ -28,13 +28,13 @@
         <p>Different workloads suit different infrastructure profiles. NemesisNet designs and deploys self-hosted AI across all three models:</p>
         <ul class="service-list">
           <li><strong>Cloud VPS</strong> — GPU-accelerated instances on Hetzner, AWS, or DigitalOcean for scalable, pay-as-you-go inference. Ideal for teams that need elastic capacity without managing physical hardware.</li>
-          <li><strong>On-Premise</strong> — Dedicated hardware for maximum data privacy, zero network latency, and unlimited inference at fixed cost. Perfect for regulated industries, defense, and organizations with strict data residency requirements.</li>
+          <li><strong>On-Premise</strong> — Dedicated hardware for maximum data privacy, zero network latency, and predictable infrastructure costs without per-request API charges. Perfect for regulated industries, defense, and organizations with strict data residency requirements.</li>
           <li><strong>Hybrid</strong> — Local inference for sensitive workloads, cloud fallback for peak load. Best of both worlds — keep PII on your hardware, burst to the cloud when demand spikes.</li>
         </ul>
 
         <h2>GPU Infrastructure &amp; Optimization</h2>
         <p>For speech-to-text (STT), text-to-speech (TTS), and LLM inference workloads, GPU acceleration significantly reduces generation time. NemesisNet configures CUDA environments, optimizes VRAM usage through quantization (GPTQ, AWQ, and GGUF formats), and implements batch processing for throughput optimization.</p>
-        <p>The infrastructure handles model loading, memory management, and hardware failover — keeping the system stable under variable load. We've benchmarked inference on hardware ranging from consumer-grade GPUs to multi-GPU server configurations, always optimizing for cost-per-token.</p>
+        <p>Where required, deployments include model lifecycle management, resource controls, and hardware failover — keeping the system stable under variable load. We've benchmarked inference on hardware ranging from consumer-grade GPUs to multi-GPU server configurations, always optimizing for cost-per-token.</p>
 
         <h2>Vector Databases &amp; Semantic Search</h2>
         <p>Production AI systems need more than raw model inference — they need retrieval-augmented generation (RAG) pipelines. NemesisNet integrates vector databases (Qdrant, Chroma, pgvector) for semantic search, document chunking strategies, and embedding pipelines that feed context into LLM inference.</p>
@@ -63,7 +63,7 @@
           <div class="process-step">
             <span class="step-number">4</span>
             <h3>Production Deployment</h3>
-            <p>Docker containers deployed with orchestration (Docker Compose or Kubernetes). Monitoring, alerting, and auto-scaling configured. Full runbook and handoff documentation provided.</p>
+            <p>Docker containers deployed with orchestration (Docker Compose or Kubernetes). Monitoring, alerting, and scaling configured as appropriate. Full runbook and handoff documentation provided.</p>
           </div>
         </div>
 

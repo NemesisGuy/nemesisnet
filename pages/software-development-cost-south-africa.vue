@@ -199,7 +199,7 @@ const toggleFaq = (i) => { openFaq.value = openFaq.value === i ? null : i }
 const faqs = [
   {
     q: 'Do you charge hourly or fixed price?',
-    a: 'Fixed price after scoping for all project builds. Hourly (R850–R1,500/hour depending on complexity) only for retainer and ongoing work outside a defined scope. Every project build gets a fixed quote after a short discovery call and technical scoping session.'
+    a: 'Fixed price after scoping for all project builds. Hourly (from R1,500/hour) only for retainer and ongoing work outside a defined scope. Every project build gets a fixed quote after a short discovery call and technical scoping session.'
   },
   {
     q: 'What\'s included in a project quote?',

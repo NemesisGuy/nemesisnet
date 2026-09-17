@@ -17,7 +17,7 @@
         <p>Without a clear technical strategy, every product decision becomes a gamble. Should we use microservices? Is our database the bottleneck? Can we handle 100x our current traffic? These aren't questions you want to answer after you've already built the thing. The cost of not planning is always higher than the cost of planning too much.</p>
 
         <h2>The Solution: Strategic Clarity Before a Single Line of Code</h2>
-        <p>NemesisNet provides high-level technical advisory to ensure your architecture is sound before development begins — or to rescue systems already in trouble. We bring decades of experience across startups, enterprises, and research environments to diagnose problems others miss and prescribe solutions that actually fit your constraints.</p>
+        <p>NemesisNet provides high-level technical advisory to ensure your architecture is sound before development begins — or to rescue systems already in trouble. We bring more than a decade of hands-on engineering experience across startups, enterprises, and research environments to diagnose problems others miss and prescribe solutions that actually fit your constraints.</p>
         <p>Whether you need a one-time architecture review, an ongoing technical advisory retainer, or hands-on restructuring of a legacy codebase, we work at the level that makes sense for your situation. Our goal is to make our own involvement unnecessary — we teach your team to fish.</p>
 
         <h2>Architecture Planning</h2>
