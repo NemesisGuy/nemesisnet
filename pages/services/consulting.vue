@@ -145,7 +145,7 @@
 useHead({
   title: 'System Design & Consulting | NemesisNet — Technical Roadmapping, Architecture',
   meta: [
-    { name: 'description', content: 'Technical consulting and system design in South Africa: architectural optimization, technical roadmapping, and strategic guidance for software teams. Cape Town.' },
+    { name: 'description', content: 'Technical consulting and system design: architectural optimization, roadmapping, and strategic guidance for software teams.' },
     { property: 'og:title', content: 'System Design & Consulting | NemesisNet' },
     { property: 'og:description', content: 'Technical roadmapping and architectural guidance. Based in Cape Town, South Africa.' },
     { property: 'og:type', content: 'website' },

@@ -17,7 +17,7 @@
     { "name": "AI Architecture / Consulting", "price": "From R10,000", "timeline": "Half-day or full-day", "description": "Working sessions for AI and platform decisions." },
     { "name": "Custom MCP & Agent Integrations", "price": "From R55,000", "timeline": "3–6 weeks", "description": "Custom MCP servers connecting AI agents to CMS, CRM, databases." },
     { "name": "Light Hosting", "price": "R850/month", "timeline": "Ongoing", "description": "Hosting, SSL, uptime monitoring, security patches." },
-    { "name": "Managed Retainer", "price": "R7,500/month", "timeline": "Ongoing", "description": "CI/CD management, monitoring, bug fixes, continuous improvement, priority support." }
+    { "name": "Support Retainer", "price": "R7,500/month", "timeline": "Ongoing", "description": "Reserved support capacity for troubleshooting, maintenance, and operational assistance. 8 hours included, overage at hourly rate." }
   ],
   "projects": [
     { "name": "VoxNemesis Supertonic", "category": "AI & TTS", "description": "Local-first, GPU-aware TTS browser extension using ONNX Runtime Web with WebGPU acceleration. Runs entirely in the browser.", "links": { "github": "https://github.com/NemesisGuy/voxnemesis-supertonic-extension" } },
