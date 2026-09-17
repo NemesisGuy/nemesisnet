@@ -111,6 +111,19 @@
             </ul>
             <span class="btn-glass">See Details</span>
           </NuxtLink>
+          <NuxtLink to="/services/consulting" class="card pricing-card pricing-card--linked">
+            <div class="pricing-icon"><ClientOnly><Search :size="24" /></ClientOnly></div>
+            <h3 class="pricing-title">Consulting &amp; Architecture</h3>
+            <div class="pricing-price">From R1,500</div>
+            <div class="pricing-unit">Hourly</div>
+            <p class="pricing-description">Architecture reviews, technical advisory, and legacy system restructuring.</p>
+            <p class="pricing-timeline">Scoped per engagement</p>
+            <ul class="pricing-points">
+              <li>One-time architecture reviews or ongoing technical advisory</li>
+              <li>Legacy codebase restructuring and rescue</li>
+            </ul>
+            <span class="btn-glass">See Details</span>
+          </NuxtLink>
         </div>
 
         <h3 class="pricing-group-label">Hosting &amp; Infrastructure</h3>
@@ -441,7 +454,7 @@
 </template>
 
 <script setup>
-import { Globe, Layers, Briefcase, Cpu, Brain, Workflow, Server, Shield, ChevronDown, Wrench, GitBranch, Activity, Database, Headphones, Code } from 'lucide-vue-next'
+import { Globe, Layers, Briefcase, Cpu, Brain, Workflow, Server, Shield, ChevronDown, Wrench, GitBranch, Activity, Database, Headphones, Code, Search } from 'lucide-vue-next'
 
 const openFaq = ref(null)
 const toggleFaq = (i) => { openFaq.value = openFaq.value === i ? null : i }

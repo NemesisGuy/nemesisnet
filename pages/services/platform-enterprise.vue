@@ -13,7 +13,7 @@
         </div>
 
         <h2>What It Is</h2>
-        <p>Platform and Enterprise builds are the highest-complexity systems NemesisNet delivers. Multi-tenant SaaS platforms, AI pipelines, self-hosted LLM/TTS infrastructure, MCP integrations, financial systems, and anything that requires DDD, microservices, full CI/CD, and compliance-grade architecture.</p>
+        <p>Platform and Enterprise builds are the highest-complexity systems NemesisNet delivers. Multi-tenant SaaS platforms, AI pipelines, self-hosted LLM/TTS infrastructure, MCP integrations, financial systems, and anything that requires advanced domain architecture, multi-tenant isolation, distributed workloads, or compliance-grade architecture.</p>
         <p>This is not a product you ship once and forget. These are living systems that run critical business operations — they need proper monitoring, scaling strategies, security hardening, and long-term maintainability. The architecture has to be right from day one.</p>
 
         <h2>Who It's For</h2>
@@ -26,8 +26,8 @@
           <li><CheckCircle :size="18" /> Vue 3 frontend with complex dashboards</li>
           <li><CheckCircle :size="18" /> PostgreSQL/MySQL with connection pooling and read replicas</li>
           <li><CheckCircle :size="18" /> Redis caching and message queue integration</li>
-          <li><CheckCircle :size="18" /> Full CI/CD pipeline (build, test, deploy, monitor)</li>
-          <li><CheckCircle :size="18" /> Docker + Kubernetes or Nomad orchestration</li>
+          <li><CheckCircle :size="18" /> CI/CD pipeline appropriate to project scope; advanced observability scoped separately</li>
+          <li><CheckCircle :size="18" /> Containerized orchestration from Docker Compose to Kubernetes/Nomad where justified</li>
           <li><CheckCircle :size="18" /> Comprehensive automated testing (unit, integration, E2E)</li>
           <li><CheckCircle :size="18" /> Security audit and hardening</li>
           <li><CheckCircle :size="18" /> Architecture documentation and runbooks</li>

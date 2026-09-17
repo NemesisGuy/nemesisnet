@@ -28,7 +28,7 @@
           <li><CheckCircle :size="18" /> REST API with documentation (OpenAPI/Swagger)</li>
           <li><CheckCircle :size="18" /> Automated testing (unit, integration)</li>
           <li><CheckCircle :size="18" /> Docker + Nginx deployment</li>
-          <li><CheckCircle :size="18" /> CI/CD pipeline setup</li>
+          <li><CheckCircle :size="18" /> Basic CI/CD pipeline appropriate to deployment architecture</li>
           <li><CheckCircle :size="18" /> Architecture, testing strategy, and documentation</li>
         </ul>
 
