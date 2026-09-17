@@ -65,7 +65,7 @@
         <p class="scope-note">The exact number of included hours is determined during scoping based on your development requirements and expected volume.</p>
 
         <div class="retainer-disclaimer">
-          <p><strong>Important:</strong> Retainer fees cover ongoing service availability and the specific services included in this package. They are not prepaid development hours or a bank of development credit. Unused retainer capacity does not accumulate or roll over into future development work. New features, enhancements, and work outside the included scope are quoted separately.</p>
+          <p><strong>Reserved development capacity.</strong> This retainer reserves the stated application development capacity for each billing period. Unused capacity does not accumulate or roll over into subsequent periods. Additional work beyond the included capacity is billed separately.</p>
           <NuxtLink to="/legal/retainer-terms" class="retainer-terms-link">View Retainer Terms &amp; Conditions →</NuxtLink>
         </div>
 

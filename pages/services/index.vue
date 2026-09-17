@@ -478,7 +478,7 @@ const faqs = [
   { q: 'Does NemesisNet work with clients outside Cape Town?', a: 'Yes. While based in Cape Town, South Africa, NemesisNet works with clients remotely across the country and internationally. Discovery calls and scoping sessions are conducted online.' },
   { q: 'What is the typical delivery timeline?', a: 'Static sites ship in 2–4 weeks. App starters typically take 4–8 weeks. Business systems range from 8–16 weeks. Platform and enterprise builds run 16–30+ weeks. All timelines are scoped during the discovery phase.' },
   { q: 'Can NemesisNet integrate with existing systems?', a: 'Yes. NemesisNet builds API integrations, MCP servers, and data pipelines that connect to existing CMS, CRM, and database systems. Custom MCP agents can automate workflows across multiple platforms.' },
-  { q: 'Are retainers unlimited?', a: 'No. Retainers purchase reserved capacity — defined hours per month for a specific type of work. Additional hours beyond the included capacity are billed at the applicable hourly rate.' }
+  { q: 'Are retainers unlimited?', a: 'No. Retainers reserve a defined amount of service capacity for each billing period. Capacity is specific to the retainer type and does not accumulate or roll over between billing periods. Additional work beyond the included capacity is billed at the applicable hourly rate.' }
 ]
 
 useHead({
@@ -549,7 +549,7 @@ useHead({
             'name': 'Are retainers unlimited?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No. Retainers purchase reserved capacity — defined hours per month for a specific type of work. Additional hours beyond the included capacity are billed at the applicable hourly rate.'
+              'text': 'No. Retainers reserve a defined amount of service capacity for each billing period. Capacity is specific to the retainer type and does not accumulate or roll over between billing periods. Additional work beyond the included capacity is billed at the applicable hourly rate.'
             }
           }
         ]
