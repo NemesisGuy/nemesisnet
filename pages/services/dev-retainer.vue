@@ -43,7 +43,7 @@
         <div class="compare-grid">
           <div class="compare-card">
             <h3>Hourly</h3>
-            <div class="compare-price">From R1,500/hr</div>
+            <div class="compare-price">R1,200 – R1,400/hr</div>
             <ul class="compare-list">
               <li>No commitment required</li>
               <li>Billed per task or per hour</li>
@@ -54,7 +54,8 @@
             <h3>Monthly Retainer</h3>
             <div class="compare-price">From R7,500/month</div>
             <ul class="compare-list">
-              <li>Reserved engineering hours each month</li>
+              <li>6 hours included per month</li>
+              <li>Effective rate: R1,250/hr (vs R1,400 ad hoc)</li>
               <li>Features, fixes, and improvements</li>
               <li>Unused hours do not roll over</li>
               <li>Additional hours billed at hourly rate</li>

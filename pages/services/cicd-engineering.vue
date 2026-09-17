@@ -43,7 +43,7 @@
         <div class="compare-grid">
           <div class="compare-card">
             <h3>Hourly</h3>
-            <div class="compare-price">From R1,500/hr</div>
+            <div class="compare-price">R1,200 – R1,400/hr</div>
             <ul class="compare-list">
               <li>No commitment required</li>
               <li>Billed per task or per hour</li>
@@ -100,7 +100,7 @@
         <div class="sidebar-card">
           <h3>Service Details</h3>
           <ul class="sidebar-list">
-            <li><span>Hourly:</span> <strong>From R1,500/hr</strong></li>
+            <li><span>Hourly:</span> <strong>R1,200 – R1,400/hr</strong></li>
             <li><span>Project:</span> <strong>Custom quote</strong></li>
             <li><span>Scope:</span> <strong>Implementation</strong></li>
             <li><span>Maintenance:</span> <strong>DevOps Retainer</strong></li>
@@ -126,15 +126,15 @@ import { CheckCircle, XCircle } from 'lucide-vue-next'
 useHead({
   title: 'CI/CD Engineering — Pipeline Implementation | NemesisNet',
   meta: [
-    { name: 'description', content: 'CI/CD pipeline architecture, implementation, and automation. GitHub Actions, Woodpecker, Docker build pipelines. From R1,500/hour. Cape Town, South Africa.' },
+    { name: 'description', content: 'CI/CD pipeline architecture, implementation, and automation. GitHub Actions, Woodpecker, Docker build pipelines. R1,200–R1,400/hour. Cape Town, South Africa.' },
     { property: 'og:title', content: 'CI/CD Engineering | NemesisNet' },
-    { property: 'og:description', content: 'Pipeline architecture, implementation, and automation for your tech stack. From R1,500/hour.' },
+    { property: 'og:description', content: 'Pipeline architecture, implementation, and automation for your tech stack. R1,200–R1,400/hour.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/cicd-engineering' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:title', content: 'CI/CD Engineering | Pipeline Implementation | NemesisNet' },
-    { name: 'twitter:description', content: 'Pipeline architecture, implementation, and automation. From R1,500/hour.' }
+    { name: 'twitter:description', content: 'Pipeline architecture, implementation, and automation. R1,200–R1,400/hour.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/services/cicd-engineering' }

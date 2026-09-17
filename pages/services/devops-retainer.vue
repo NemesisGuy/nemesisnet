@@ -44,7 +44,7 @@
         <div class="compare-grid">
           <div class="compare-card">
             <h3>Hourly</h3>
-            <div class="compare-price">From R1,500/hr</div>
+            <div class="compare-price">R1,200 – R1,400/hr</div>
             <ul class="compare-list">
               <li>No commitment required</li>
               <li>Billed per task or per hour</li>
@@ -55,7 +55,8 @@
             <h3>Monthly Retainer</h3>
             <div class="compare-price">From R7,500/month</div>
             <ul class="compare-list">
-              <li>Reserved DevOps engineering hours</li>
+              <li>6 hours included per month</li>
+              <li>Effective rate: R1,250/hr (vs R1,400 ad hoc)</li>
               <li>Infrastructure maintenance and improvements</li>
               <li>CI/CD pipeline management</li>
               <li>Additional hours billed at hourly rate</li>

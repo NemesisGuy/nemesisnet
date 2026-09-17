@@ -68,7 +68,7 @@
           <div class="card pricing-card">
             <div class="pricing-icon"><ClientOnly><Cpu :size="24" /></ClientOnly></div>
             <h3 class="pricing-title">Platform / Enterprise</h3>
-            <div class="pricing-price">R350,000</div>
+            <div class="pricing-price">R350,000 – R900,000</div>
             <div class="pricing-unit">Starting from</div>
             <p class="pricing-description">Multi-tenant SaaS, AI pipelines, self-hosted LLM/TTS systems, MCP integrations, and agent workflows.</p>
             <p class="pricing-timeline">Typically 16–30+ weeks, scoped after technical discovery</p>
@@ -80,6 +80,19 @@
               <NuxtLink class="btn-glass" to="/services/platform-enterprise">See Details</NuxtLink>
             </div>
           </div>
+          <NuxtLink to="/services/cms" class="card pricing-card pricing-card--linked">
+            <div class="pricing-icon"><ClientOnly><Layers :size="24" /></ClientOnly></div>
+            <h3 class="pricing-title">CMS Development</h3>
+            <div class="pricing-price">From R7,000</div>
+            <div class="pricing-unit">Project-based</div>
+            <p class="pricing-description">Custom WordPress, WooCommerce, and CMS projects — themes, plugins, and migration.</p>
+            <p class="pricing-timeline">Typically 2–4 weeks</p>
+            <ul class="pricing-points">
+              <li>Custom themes and plugin development</li>
+              <li>WooCommerce setup and payment integration</li>
+            </ul>
+            <span class="btn-glass">See Details</span>
+          </NuxtLink>
         </div>
 
         <h3 class="pricing-group-label">Specialist Engagements</h3>
@@ -88,8 +101,8 @@
           <NuxtLink to="/services/ai-consulting" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Brain :size="24" /></ClientOnly></div>
             <h3 class="pricing-title">AI Architecture / Consulting</h3>
-            <div class="pricing-price">R10,000</div>
-            <div class="pricing-unit">Starting from</div>
+            <div class="pricing-price">R10,000 / R17,000</div>
+            <div class="pricing-unit">Half-day / Full-day</div>
             <p class="pricing-description">Half-day to full-day working sessions for teams making serious AI or platform decisions.</p>
             <p class="pricing-timeline">Half-day or full-day sessions, booked in advance</p>
             <ul class="pricing-points">
@@ -114,7 +127,7 @@
           <NuxtLink to="/services/consulting" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Search :size="24" /></ClientOnly></div>
             <h3 class="pricing-title">Consulting &amp; Architecture</h3>
-            <div class="pricing-price">From R1,500</div>
+            <div class="pricing-price">R1,600 – R2,000</div>
             <div class="pricing-unit">Hourly</div>
             <p class="pricing-description">Architecture reviews, technical advisory, and legacy system restructuring.</p>
             <p class="pricing-timeline">Scoped per engagement</p>
@@ -158,8 +171,8 @@
           <NuxtLink to="/services/cicd-engineering" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><GitBranch :size="24" /></ClientOnly></div>
             <h3 class="pricing-title">CI/CD Engineering</h3>
-            <div class="pricing-price">From R1,500</div>
-            <div class="pricing-unit">Hourly / Project</div>
+            <div class="pricing-price">R1,200 – R1,400</div>
+            <div class="pricing-unit">Hourly</div>
             <p class="pricing-description">Pipeline architecture, implementation, and automation — GitHub Actions, Woodpecker, Docker builds.</p>
             <ul class="pricing-points">
               <li>New CI/CD pipeline implementation</li>
@@ -202,7 +215,7 @@
           <NuxtLink to="/services/maintenance" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Wrench :size="24" /></ClientOnly></div>
             <h3 class="pricing-title">Maintenance &amp; Support</h3>
-            <div class="pricing-price">From R1,500</div>
+            <div class="pricing-price">R850 – R1,100</div>
             <div class="pricing-unit">Hourly</div>
             <p class="pricing-description">Routine troubleshooting, configuration changes, minor fixes, and maintenance tasks.</p>
             <ul class="pricing-points">
@@ -423,7 +436,7 @@
           </div>
           <div class="local-card">
             <strong>ZAR Pricing</strong>
-            <span>Transparency from R7,000 to R350,000+ — no hidden fees</span>
+            <span>Transparency from R7,000 to R900,000+ — no hidden fees</span>
           </div>
         </div>
 
@@ -461,7 +474,7 @@ const toggleFaq = (i) => { openFaq.value = openFaq.value === i ? null : i }
 
 const faqs = [
   { q: 'What technologies does NemesisNet use?', a: 'NemesisNet works with Vue 3, React, Nuxt 4, Spring Boot, Python, PocketBase, Docker, PostgreSQL, Redis, and AI frameworks including MCP, GGUF models, and CUDA-accelerated inference.' },
-  { q: 'How does pricing work?', a: 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R7,000 for static sites to R350,000+ for platform and enterprise work. Specialist engagements start from R10,000. Hosting starts at R850/month. Retainers start from R7,500/month with defined capacity.' },
+  { q: 'How does pricing work?', a: 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R7,000 for static sites to R900,000+ for platform and enterprise work. Specialist engagements start from R10,000. Hosting starts at R850/month. Retainers start from R7,500/month with defined capacity.' },
   { q: 'Does NemesisNet work with clients outside Cape Town?', a: 'Yes. While based in Cape Town, South Africa, NemesisNet works with clients remotely across the country and internationally. Discovery calls and scoping sessions are conducted online.' },
   { q: 'What is the typical delivery timeline?', a: 'Static sites ship in 2–4 weeks. App starters typically take 4–8 weeks. Business systems range from 8–16 weeks. Platform and enterprise builds run 16–30+ weeks. All timelines are scoped during the discovery phase.' },
   { q: 'Can NemesisNet integrate with existing systems?', a: 'Yes. NemesisNet builds API integrations, MCP servers, and data pipelines that connect to existing CMS, CRM, and database systems. Custom MCP agents can automate workflows across multiple platforms.' },
@@ -504,7 +517,7 @@ useHead({
             'name': 'How does pricing work?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R7,000 for static sites to R350,000+ for platform and enterprise work. App Starter projects range from R35,000 to R80,000. Specialist engagements start from R10,000 and R55,000 respectively. Hosting starts at R850/month. Retainers start from R7,500/month with defined capacity.'
+              'text': 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R7,000 for static sites to R900,000+ for platform and enterprise work. App Starter projects range from R35,000 to R80,000. Specialist engagements start from R10,000 and R55,000 respectively. Hosting starts at R850/month. Retainers start from R7,500/month with defined capacity.'
             }
           },
           {

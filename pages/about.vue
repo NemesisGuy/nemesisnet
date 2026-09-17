@@ -18,7 +18,7 @@
         <div class="founder-grid">
           <div class="founder-photo">
             <img src="/images/about/founder.webp" alt="Peter Buckingham" class="founder-img" loading="lazy">
-            <p class="photo-caption">Self-taught systems architect &amp; founder of NemesisNet, based in Cape Town.</p>
+            <p class="photo-caption">Systems architect &amp; founder of NemesisNet, based in Cape Town.</p>
           </div>
           <div class="founder-bio">
             <p>NemesisNet is run by <strong>Peter Buckingham</strong> — a systems architect based in Cape Town, South Africa, with a <strong>BTech in Information Technology from CPUT</strong> (Cape Peninsula University of Technology). He pairs structured engineering education with years of hands-on, self-directed building — a combination that lets him bridge theory and production practice.</p>
@@ -79,8 +79,8 @@
           </div>
           <div class="stat-card">
             <div class="stat-icon"><ClientOnly><Clock :size="24" /></ClientOnly></div>
-            <strong class="stat-number">10+</strong>
-            <span class="stat-label">Years Engineering</span>
+            <strong class="stat-number">13</strong>
+            <span class="stat-label">Years in Speech Infrastructure</span>
           </div>
           <div class="stat-card">
             <div class="stat-icon"><ClientOnly><HardDrive :size="24" /></ClientOnly></div>

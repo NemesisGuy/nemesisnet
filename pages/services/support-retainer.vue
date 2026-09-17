@@ -45,7 +45,7 @@
         <div class="compare-grid">
           <div class="compare-card">
             <h3>Hourly</h3>
-            <div class="compare-price">From R1,500/hr</div>
+            <div class="compare-price">R850 – R1,100/hr</div>
             <ul class="compare-list">
               <li>No commitment required</li>
               <li>Billed per task or per hour</li>
@@ -56,7 +56,8 @@
             <h3>Monthly Retainer</h3>
             <div class="compare-price">From R7,500/month</div>
             <ul class="compare-list">
-              <li>Reserved support hours each month</li>
+              <li>8 hours included per month</li>
+              <li>Effective rate: R938/hr (vs R1,100 ad hoc)</li>
               <li>Defined response target</li>
               <li>Unused hours do not roll over</li>
               <li>Additional hours billed at hourly rate</li>
