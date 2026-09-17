@@ -44,6 +44,7 @@ export const PRERENDER_ROUTES = [
   '/about',
   '/contact',
   '/legal/refund',
+  '/legal/retainer-terms',
   '/legal/terms',
   '/legal/privacy'
 ]

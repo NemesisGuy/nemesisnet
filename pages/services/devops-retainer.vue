@@ -64,6 +64,11 @@
           </div>
         </div>
 
+        <div class="retainer-disclaimer">
+          <p><strong>Important:</strong> Retainer fees cover ongoing service availability and the specific services included in this package. They are not prepaid development hours or a bank of development credit. Unused retainer capacity does not accumulate or roll over into future development work. New features, enhancements, and work outside the included scope are quoted separately.</p>
+          <NuxtLink to="/legal/retainer-terms" class="retainer-terms-link">View Retainer Terms &amp; Conditions →</NuxtLink>
+        </div>
+
         <h2>How It Works</h2>
         <div class="process-steps">
           <div class="process-step">
@@ -214,5 +219,9 @@ useHead({
 .sidebar-list li strong { color: var(--text-color); }
 .quick-links { display: flex; flex-direction: column; gap: 10px; }
 .quick-links .btn-glass { display: block; width: 100%; }
+.retainer-disclaimer { background: var(--glass-bg); border: 1px solid var(--accent-color); border-radius: 14px; padding: 20px; margin: 24px 0; }
+.retainer-disclaimer p { margin: 0 0 10px; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+.retainer-terms-link { color: var(--accent-color); text-decoration: none; font-size: 0.9rem; }
+.retainer-terms-link:hover { text-decoration: underline; }
 @media (max-width: 900px) { .detail-container { grid-template-columns: 1fr; } .detail-sidebar { position: static; } .process-steps { grid-template-columns: 1fr; } .compare-grid { grid-template-columns: 1fr; } }
 </style>
