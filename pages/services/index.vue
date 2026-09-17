@@ -484,7 +484,7 @@ const faqs = [
 useHead({
   title: 'IT Services Cape Town | NemesisNet',
   meta: [
-    { name: 'description', content: 'IT services in Cape Town, South Africa: Custom software, SaaS development, AI infrastructure, DevOps, hosting, and support retainers. ZAR pricing from R7,000.' },
+    { name: 'description', content: 'IT services in Cape Town: Custom software, SaaS, AI infrastructure, DevOps, hosting, and support. ZAR pricing from R7,000.' },
     { property: 'og:title', content: 'IT Services Cape Town | Software, SaaS, AI & Infrastructure' },
     { property: 'og:description', content: 'Custom software, SaaS, AI infrastructure, hosting, and support services based in Cape Town, South Africa. Starting from R7,000.' },
     { property: 'og:type', content: 'website' },

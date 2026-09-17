@@ -122,13 +122,13 @@ useHead({
   meta: [
     { name: 'description', content: 'Routine troubleshooting and maintenance for websites and applications. R850–R1,100/hour or support retainer. Cape Town, South Africa.' },
     { property: 'og:title', content: 'Maintenance & Support | NemesisNet' },
-    { property: 'og:description', content: 'Routine troubleshooting, maintenance, and operational support. From R1,500/hour.' },
+    { property: 'og:description', content: 'Routine troubleshooting, maintenance, and operational support. R850–R1,100/hour.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/maintenance' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:title', content: 'Maintenance & Support | NemesisNet' },
-    { name: 'twitter:description', content: 'Routine troubleshooting and maintenance. From R1,500/hour.' }
+    { name: 'twitter:description', content: 'Routine troubleshooting and maintenance. R850–R1,100/hour.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/services/maintenance' }
@@ -143,7 +143,7 @@ useHead({
         'description': 'Routine troubleshooting and maintenance for websites and applications.',
         'provider': { '@type': 'Organization', 'name': 'NemesisNet', 'url': 'https://nemesisnet.co.za' },
         'areaServed': { '@type': 'Country', 'name': 'South Africa' },
-        'offers': { '@type': 'Offer', 'price': '1500', 'priceCurrency': 'ZAR', 'description': 'Hourly rate, support retainer available' },
+        'offers': { '@type': 'Offer', 'price': '850', 'priceCurrency': 'ZAR', 'description': 'Hourly rate from R850, support retainer available' },
         'mainEntityOfPage': {
           '@type': 'WebPage',
           '@id': 'https://nemesisnet.co.za/services/maintenance'

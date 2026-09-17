@@ -124,7 +124,7 @@ import { CheckCircle, XCircle } from 'lucide-vue-next'
 useHead({
   title: 'MCP & Agent Integrations | NemesisNet',
   meta: [
-    { name: 'description', content: 'Custom MCP servers connecting AI agents to CMS, CRM, databases, and internal tooling. Role-safe pipelines, audit logging. From R55,000. Cape Town, South Africa.' },
+    { name: 'description', content: 'Custom MCP servers connecting AI agents to CMS, CRM, databases, and internal tooling. Role-safe pipelines. From R55,000.' },
     { property: 'og:title', content: 'Custom MCP & Agent Integrations | NemesisNet' },
     { property: 'og:description', content: 'Custom MCP servers that connect AI agents to your systems. Role-safe, auditable, no fragile glue code. From R55,000.' },
     { property: 'og:type', content: 'website' },

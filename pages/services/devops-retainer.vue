@@ -102,7 +102,7 @@
         <div class="sidebar-card">
           <h3>Service Details</h3>
           <ul class="sidebar-list">
-            <li><span>Hourly:</span> <strong>From R1,500/hr</strong></li>
+            <li><span>Hourly:</span> <strong>R1,200 – R1,400/hr</strong></li>
             <li><span>Retainer:</span> <strong>From R7,500/mo</strong></li>
             <li><span>Billing:</span> <strong>Monthly</strong></li>
             <li><span>Overage:</span> <strong>Hourly rate</strong></li>

@@ -217,15 +217,15 @@ import { Server, Cloud, Brain, Cpu, Workflow, Briefcase } from 'lucide-vue-next'
 useHead({
   title: 'NemesisNet | Full-Stack Software, SaaS & AI Solutions | Cape Town',
   meta: [
-    { name: 'description', content: 'AI infrastructure, SaaS development, and self-hosted systems for production — including speech-to-text (STT) and text-to-speech (TTS) pipelines. Cape Town, South Africa. ZAR pricing, POPIA-aware.' },
+    { name: 'description', content: 'AI infrastructure, SaaS development, and self-hosted systems — including STT and TTS pipelines. Cape Town, ZAR pricing.' },
     { property: 'og:title', content: 'NemesisNet — AI Infrastructure & Platform Engineering in Cape Town' },
-    { property: 'og:description', content: 'Custom AI systems, self-hosted infrastructure, speech-to-text (STT) and text-to-speech (TTS) pipelines, and SaaS platforms built for production. Based in Cape Town, South Africa.' },
+    { property: 'og:description', content: 'Custom AI systems, self-hosted infrastructure, STT/TTS pipelines, and SaaS platforms. Cape Town, South Africa.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:title', content: 'AI Infrastructure & Platform Engineering | NemesisNet' },
-    { name: 'twitter:description', content: 'AI infrastructure, SaaS development, and self-hosted systems for production — including speech-to-text (STT) and text-to-speech (TTS) pipelines. Cape Town, South Africa.' }
+    { name: 'twitter:description', content: 'AI infrastructure, SaaS development, and self-hosted systems — STT/TTS pipelines. Cape Town, ZAR pricing.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/' }
@@ -250,7 +250,7 @@ useHead({
           'addressCountry': 'ZA'
         },
         'areaServed': 'ZA',
-        'priceRange': 'R7000-R350000+'
+        'priceRange': 'R7000-R900000+'
       })
     }
   ]

@@ -126,7 +126,7 @@ import { CheckCircle, XCircle } from 'lucide-vue-next'
 useHead({
   title: 'CI/CD Engineering — Pipeline Implementation | NemesisNet',
   meta: [
-    { name: 'description', content: 'CI/CD pipeline architecture, implementation, and automation. GitHub Actions, Woodpecker, Docker build pipelines. R1,200–R1,400/hour. Cape Town, South Africa.' },
+    { name: 'description', content: 'CI/CD pipeline architecture, implementation, and automation. GitHub Actions, Woodpecker, Docker. R1,200–R1,400/hr.' },
     { property: 'og:title', content: 'CI/CD Engineering | NemesisNet' },
     { property: 'og:description', content: 'Pipeline architecture, implementation, and automation for your tech stack. R1,200–R1,400/hour.' },
     { property: 'og:type', content: 'website' },
