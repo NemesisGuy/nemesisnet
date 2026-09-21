@@ -992,10 +992,10 @@ html[data-theme="light"][data-nemesis="on"] .card .project-link:hover{
 .footer-line .footer-divider { color: rgba(244,244,244,0.8); opacity:1; }
 
 .footer-links-grid {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto 18px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   text-align: center;
 }
