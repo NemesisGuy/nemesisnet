@@ -9,6 +9,9 @@
         <NuxtLink to="/software-development-cost-south-africa">Pricing Guide</NuxtLink>
         <a href="/#testimonials">Testimonials</a>
         <NuxtLink to="/contact">Contact</NuxtLink>
+      </div>
+      <div class="footer-group">
+        <strong class="footer-heading">Promotions</strong>
         <NuxtLink to="/promotions" class="footer-promo-link">Spring Special — 33% Off</NuxtLink>
       </div>
       <div class="footer-group">

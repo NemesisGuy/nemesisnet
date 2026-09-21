@@ -1,7 +1,5 @@
 <template>
   <div class="detail-page">
-    <PageHeader title="Spring Special — 33% Off" subtitle="33% off Static & Brochure, App Starter, and CMS projects. September–November 2026." />
-
     <div class="detail-container">
       <div class="detail-main">
         <div class="breadcrumbs" aria-label="Breadcrumb">
@@ -11,12 +9,10 @@
         </div>
 
         <div class="promo-hero">
-          <div class="promo-hero-badge">Limited Time</div>
-          <h2>33% Off Entry-Tier Projects</h2>
+          <div class="promo-hero-badge">Limited Time · Sep–Nov 2026</div>
+          <h1 class="promo-hero-title">33% Off Entry-Tier Projects</h1>
           <p class="promo-hero-sub">Build your website, app, or CMS project for a third less. Perfect for startups, small businesses, and side projects ready to go live.</p>
-          <div class="promo-hero-cta">
-            <NuxtLink to="/contact" class="btn--ignite">Book a Free Scoping Call →</NuxtLink>
-          </div>
+          <NuxtLink to="/contact" class="btn--ignite">Book a Free Scoping Call →</NuxtLink>
         </div>
 
         <h2>What's Included</h2>
@@ -26,8 +22,7 @@
           <div class="promo-service-card">
             <h3>Static &amp; Brochure</h3>
             <div class="promo-pricing">
-              <span class="promo-old">R7,000 – R25,000</span>
-              <span class="promo-new">R4,690 – R16,750</span>
+              <span class="promo-price-line"><span class="promo-old">R7,000 – R25,000</span> → <span class="promo-new">R4,690 – R16,750</span></span>
             </div>
             <p>Landing pages, portfolio sites, business websites, and simple internal tools. Fast loading, mobile-first, SEO-ready.</p>
             <ul>
@@ -42,8 +37,7 @@
           <div class="promo-service-card">
             <h3>App Starter</h3>
             <div class="promo-pricing">
-              <span class="promo-old">R35,000 – R80,000</span>
-              <span class="promo-new">R23,450 – R53,600</span>
+              <span class="promo-price-line"><span class="promo-old">R35,000 – R80,000</span> → <span class="promo-new">R23,450 – R53,600</span></span>
             </div>
             <p>PocketBase-backed apps with auth, roles, databases, and admin dashboards. MVPs, prototypes, internal tools.</p>
             <ul>
@@ -58,8 +52,7 @@
           <div class="promo-service-card">
             <h3>CMS Development</h3>
             <div class="promo-pricing">
-              <span class="promo-old">From R7,000</span>
-              <span class="promo-new">From R4,690</span>
+              <span class="promo-price-line"><span class="promo-old">From R7,000</span> → <span class="promo-new">From R4,690</span></span>
             </div>
             <p>Custom WordPress, WooCommerce, themes, plugins, and migrations. Get a CMS that actually fits your workflow.</p>
             <ul>
@@ -91,42 +84,54 @@
           </div>
         </div>
 
-        <h2>Terms &amp; Conditions</h2>
-        <div class="promo-terms">
-          <div class="promo-term">
-            <h3>Eligibility</h3>
-            <p>This promotion is available to new clients who begin a project engagement between 1 September 2026 and 30 November 2026.</p>
+        <div class="promo-terms-section">
+          <h2>Terms &amp; Conditions</h2>
+
+          <div class="promo-terms-summary">
+            <p><strong>In short:</strong> 33% off Static &amp; Brochure, App Starter, and CMS projects. New clients only. Book and sign before 30 November 2026. Excludes retainers, AI, enterprise, and third-party costs.</p>
           </div>
-          <div class="promo-term">
-            <h3>Discount Scope</h3>
-            <p>The 33% discount applies to the project build fee for Static &amp; Brochure, App Starter, and CMS Development projects only. It does not apply to:</p>
-            <ul>
-              <li>Business Systems or Platform/Enterprise projects</li>
-              <li>Retainer agreements (Support, DevOps, or Development)</li>
-              <li>AI Consulting, MCP Integrations, or specialist engagements</li>
-              <li>Hosting, maintenance, or ongoing support fees</li>
-              <li>Third-party costs (domains, APIs, hosting providers)</li>
-            </ul>
-          </div>
-          <div class="promo-term">
-            <h3>Booking Period</h3>
-            <p>The project must be scoped and a signed agreement submitted before 30 November 2026 to qualify for the discount. Projects started after this date are billed at standard rates.</p>
-          </div>
-          <div class="promo-term">
-            <h3>Payment Terms</h3>
-            <p>Standard milestone-based payments apply (40/40/20 unless otherwise agreed). The discounted rate is applied to the total project fee — not per milestone.</p>
-          </div>
-          <div class="promo-term">
-            <h3>Scope Changes</h3>
-            <p>If the project scope expands beyond the original agreement, additional work is billed at standard hourly rates (R850–R1,400/hr depending on band) without the spring discount.</p>
-          </div>
-          <div class="promo-term">
-            <h3>Combinability</h3>
-            <p>This promotion cannot be combined with other offers, discounts, or negotiated rates. The spring discount replaces any other applicable discount.</p>
-          </div>
-          <div class="promo-term">
-            <h3>General</h3>
-            <p>NemesisNet reserves the right to modify or withdraw this promotion at any time. Projects already under agreement at the time of withdrawal will honour the agreed discounted rate. This offer is subject to the <NuxtLink to="/legal/terms">Terms of Service</NuxtLink> and <NuxtLink to="/legal/refund">Refund Policy</NuxtLink>.</p>
+
+          <button class="promo-terms-toggle" @click="showFullTerms = !showFullTerms" :aria-expanded="showFullTerms">
+            {{ showFullTerms ? 'Hide full terms' : 'Read full terms & conditions' }}
+            <span class="toggle-arrow" :class="{ 'toggle-arrow--open': showFullTerms }">▾</span>
+          </button>
+
+          <div v-show="showFullTerms" class="promo-terms">
+            <div class="promo-term">
+              <h3>Eligibility</h3>
+              <p>This promotion is available to new clients who begin a project engagement between 1 September 2026 and 30 November 2026.</p>
+            </div>
+            <div class="promo-term">
+              <h3>Discount Scope</h3>
+              <p>The 33% discount applies to the project build fee for Static &amp; Brochure, App Starter, and CMS Development projects only. It does not apply to:</p>
+              <ul>
+                <li>Business Systems or Platform/Enterprise projects</li>
+                <li>Retainer agreements (Support, DevOps, or Development)</li>
+                <li>AI Consulting, MCP Integrations, or specialist engagements</li>
+                <li>Hosting, maintenance, or ongoing support fees</li>
+                <li>Third-party costs (domains, APIs, hosting providers)</li>
+              </ul>
+            </div>
+            <div class="promo-term">
+              <h3>Booking Period</h3>
+              <p>The project must be scoped and a signed agreement submitted before 30 November 2026 to qualify for the discount. Projects started after this date are billed at standard rates.</p>
+            </div>
+            <div class="promo-term">
+              <h3>Payment Terms</h3>
+              <p>Standard milestone-based payments apply (40/40/20 unless otherwise agreed). The discounted rate is applied to the total project fee — not per milestone.</p>
+            </div>
+            <div class="promo-term">
+              <h3>Scope Changes</h3>
+              <p>If the project scope expands beyond the original agreement, additional work is billed at standard hourly rates (R850–R1,400/hr depending on band) without the spring discount.</p>
+            </div>
+            <div class="promo-term">
+              <h3>Combinability</h3>
+              <p>This promotion cannot be combined with other offers, discounts, or negotiated rates. The spring discount replaces any other applicable discount.</p>
+            </div>
+            <div class="promo-term">
+              <h3>General</h3>
+              <p>NemesisNet reserves the right to modify or withdraw this promotion at any time. Projects already under agreement at the time of withdrawal will honour the agreed discounted rate. This offer is subject to the <NuxtLink to="/legal/terms">Terms of Service</NuxtLink> and <NuxtLink to="/legal/refund">Refund Policy</NuxtLink>.</p>
+            </div>
           </div>
         </div>
 
@@ -162,6 +167,8 @@
 </template>
 
 <script setup>
+const showFullTerms = ref(false)
+
 useHead({
   title: 'Spring Special — 33% Off Projects | NemesisNet',
   meta: [
@@ -202,33 +209,40 @@ useHead({
 .section-cta-sub { color: var(--text-muted); font-size: 0.9rem; margin-top: 10px; }
 
 /* Promo hero */
-.promo-hero { background: linear-gradient(135deg, rgba(0,255,255,0.08) 0%, rgba(255,0,80,0.05) 100%); border: 1px solid var(--glass-border); border-radius: 16px; padding: 40px 32px; margin: 30px 0; text-align: center; }
-.promo-hero-badge { display: inline-block; background: var(--accent-color); color: #000; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 4px 12px; border-radius: 4px; margin-bottom: 16px; }
-.promo-hero h2 { font-size: 2.2rem; margin: 0 0 12px; text-align: center; }
-.promo-hero-sub { color: var(--text-muted); font-size: 1.05rem; margin: 0 0 24px; max-width: 600px; margin-left: auto; margin-right: auto; }
-.promo-hero-cta { margin-top: 8px; }
+.promo-hero { background: linear-gradient(135deg, rgba(0,255,255,0.08) 0%, rgba(255,0,80,0.05) 100%); border: 1px solid var(--glass-border); border-radius: 16px; padding: 48px 32px; margin: 0 0 32px; text-align: center; }
+.promo-hero-badge { display: inline-block; background: var(--accent-color); color: #000; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 4px 14px; border-radius: 4px; margin-bottom: 20px; }
+.promo-hero-title { font-size: 2.4rem; margin: 0 0 16px; text-align: center; color: var(--text-color); }
+.promo-hero-sub { color: var(--text-muted); font-size: 1.05rem; margin: 0 auto 28px; max-width: 540px; }
 
 /* Promo service cards */
-.promo-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 20px 0 40px; }
-.promo-service-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 24px; }
-.promo-service-card h3 { margin: 0 0 12px; font-size: 1.2rem; }
-.promo-pricing { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.promo-services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 20px 0 40px; }
+.promo-service-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; }
+.promo-service-card h3 { margin: 0 0 12px; font-size: 1.15rem; }
+.promo-pricing { margin-bottom: 14px; }
+.promo-price-line { display: block; line-height: 1.6; }
 .promo-old { text-decoration: line-through; color: var(--text-muted); font-size: 0.9rem; }
 .promo-new { color: var(--accent-color); font-weight: 700; font-size: 1.1rem; }
 .promo-service-card p { font-size: 0.9rem; }
 .promo-service-card ul { padding-left: 18px; margin: 12px 0; }
 .promo-service-card li { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 6px; }
-.promo-service-card .btn-glass { display: inline-block; margin-top: 8px; }
+.promo-service-card .btn-glass { display: inline-block; margin-top: auto; padding-top: 12px; }
 
 /* Steps */
-.promo-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin: 20px 0 40px; }
+.promo-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 20px 0 40px; }
 .promo-step { text-align: center; }
 .promo-step-num { width: 40px; height: 40px; border-radius: 50%; background: var(--accent-color); color: #000; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
 .promo-step h3 { font-size: 1rem; margin: 0 0 8px; }
 .promo-step p { font-size: 0.9rem; margin: 0; }
 
 /* Terms */
-.promo-terms { margin: 20px 0; }
+.promo-terms-section { margin-top: 40px; }
+.promo-terms-summary { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; padding: 20px 24px; margin-bottom: 16px; }
+.promo-terms-summary p { margin: 0; font-size: 0.95rem; color: var(--text-muted); }
+.promo-terms-toggle { background: none; border: 1px solid var(--glass-border); border-radius: 8px; padding: 10px 20px; color: var(--accent-color); font-size: 0.9rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; margin-bottom: 20px; transition: background 0.2s; }
+.promo-terms-toggle:hover { background: rgba(0,255,255,0.06); }
+.toggle-arrow { transition: transform 0.2s; display: inline-block; }
+.toggle-arrow--open { transform: rotate(180deg); }
+.promo-terms { border-top: 1px solid var(--glass-border); padding-top: 20px; }
 .promo-term { margin-bottom: 24px; }
 .promo-term h3 { font-size: 1rem; color: var(--text-color); margin: 0 0 8px; }
 .promo-term p { font-size: 0.9rem; margin: 0 0 8px; }
@@ -238,8 +252,9 @@ useHead({
 
 @media (max-width: 900px) {
   .detail-container { grid-template-columns: 1fr; }
-  .page-header h1 { font-size: 2.5rem; }
   .detail-sidebar { position: static; }
-  .promo-hero h2 { font-size: 1.6rem; }
+  .promo-hero-title { font-size: 1.8rem; }
+  .promo-services { grid-template-columns: 1fr; }
+  .promo-steps { grid-template-columns: 1fr; gap: 32px; }
 }
 </style>
