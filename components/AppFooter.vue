@@ -15,6 +15,7 @@
         <NuxtLink to="/legal/refund">Refund Policy</NuxtLink>
         <NuxtLink to="/legal/terms">Terms of Service</NuxtLink>
         <NuxtLink to="/legal/privacy">Privacy Policy</NuxtLink>
+        <NuxtLink to="/legal/retainer-terms">Retainer Terms</NuxtLink>
       </div>
       <div class="footer-group">
         <strong class="footer-heading">Links</strong>
