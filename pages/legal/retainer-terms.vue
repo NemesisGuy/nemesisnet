@@ -35,37 +35,40 @@
           </article>
 
           <article class="policy-block">
-            <h2>3. What Is NOT Included</h2>
-            <p>Work outside the scope of the applicable retainer package is not included. The specific exclusions depend on the retainer type. For example:</p>
+            <h2>3. Work Outside the Included Retainer Scope</h2>
+            <p>The following types of work are outside the included capacity unless expressly included in the applicable retainer agreement or otherwise approved as additional work:</p>
             <ul>
-              <li><strong>Support Retainer:</strong> Feature development, new integrations, architectural changes, major upgrades</li>
-              <li><strong>DevOps Retainer:</strong> Application feature work, new product builds, UI development</li>
-              <li><strong>Development Retainer:</strong> Infrastructure provisioning, CI/CD pipeline creation, server management</li>
+              <li>New features or modules outside the agreed scope</li>
+              <li>Major UI redesigns or architectural changes</li>
+              <li>New integrations, migrations, or third-party system connections</li>
+              <li>New AI functionality, model deployments, or pipeline builds</li>
+              <li>Framework upgrades requiring significant code changes</li>
+              <li>Greenfield applications, platforms, or substantial projects</li>
             </ul>
-            <p>All work outside the included retainer scope requires separate quotation, written approval, and billing. See the <NuxtLink to="/software-development-cost-south-africa" style="color: var(--accent-color); text-decoration: none;">Pricing Guide</NuxtLink> for current rates.</p>
+            <p>The specific exclusions depend on the retainer type. The applicable retainer agreement, proposal, or statement of work defines what is included and what is not. All work outside the included scope requires separate quotation, written approval, and billing. See the <NuxtLink to="/software-development-cost-south-africa" style="color: var(--accent-color); text-decoration: none;">Pricing Guide</NuxtLink> for current rates.</p>
           </article>
 
           <article class="policy-block policy-block--highlight">
-            <h2>2. Capacity Belongs to the Billing Period</h2>
-            <p><strong>Retainer capacity is reserved for and belongs to the billing period in which it is made available.</strong> It is not an accumulating bank of credit, a stored asset, or a deposit against future work.</p>
-            <p><strong>Unused retainer capacity does not accumulate, roll over, or create an entitlement to equivalent work in a future billing period</strong> unless expressly agreed in writing.</p>
-            <p>For example: a Development Retainer reserving 10 hours per month does not mean the Client can bank unused hours across multiple months and claim them later. The 10 hours were reserved capacity made available during each respective billing period. If unused, that capacity expires at the end of the period.</p>
-            <p>The absence of requests during a billing period does not create a credit, entitlement, or obligation on the part of NemesisNet to provide additional services in future periods.</p>
+            <h2>4. Retainer Capacity Is Period-Specific</h2>
+            <p><strong>Retainer fees provide the Client with the defined service capacity specified in the applicable retainer package for each billing period.</strong> Where a package specifies a number of hours, those hours represent the maximum included service capacity available during that billing period.</p>
+            <p><strong>Included capacity is not an accumulating credit balance or deposit against future services.</strong> Unused capacity expires at the end of the applicable billing period and does not roll over, convert to cash, or create an entitlement to equivalent work in a future period unless expressly agreed otherwise in writing.</p>
+            <p>A Client's failure to submit requests during a billing period does not transfer unused capacity to a subsequent billing period.</p>
+            <p>For example: a Development Retainer providing 6 hours per month means the Client has 6 hours of reserved development capacity available during each respective billing period. If unused in a given month, those hours do not accumulate. The Client cannot bank unused hours across multiple months and claim them later.</p>
           </article>
 
           <article class="policy-block">
-            <h2>4. No Requirement to Request Work</h2>
+            <h2>5. No Requirement to Request Work</h2>
             <p>The retainer is valid regardless of whether the Client submits requests during a given billing period. The retainer fee pays for reserved capacity — the readiness and allocation of NemesisNet resources — not merely a counter that is decremented when work is performed.</p>
           </article>
 
           <article class="policy-block">
-            <h2>5. Separate Development Work</h2>
+            <h2>6. Separate Development Work</h2>
             <p>Development work outside the included retainer scope is subject to separate quotation, approval, and billing at the applicable rate. See the <NuxtLink to="/software-development-cost-south-africa" style="color: var(--accent-color); text-decoration: none;">Pricing Guide</NuxtLink> for current rates.</p>
             <p>The Client may request a quote for out-of-scope work at any time. Work will not commence until the Client has provided written approval of the quoted scope and price.</p>
           </article>
 
           <article class="policy-block">
-            <h2>6. Billing</h2>
+            <h2>7. Billing</h2>
             <ul>
               <li>Retainers are billed monthly in advance on the agreed billing date.</li>
               <li>Payment is due within 14 days of invoice unless otherwise agreed in writing.</li>
@@ -76,18 +79,18 @@
           </article>
 
           <article class="policy-block">
-            <h2>7. Changes to Scope</h2>
+            <h2>8. Changes to Scope</h2>
             <p>Changes to the retainer scope, service level, or included capacity take effect only when agreed in writing by both parties. Changes may result in adjusted pricing, which will be confirmed before the change takes effect.</p>
           </article>
 
           <article class="policy-block">
-            <h2>8. Cancellation &amp; Termination</h2>
+            <h2>9. Cancellation &amp; Termination</h2>
             <p>Either party may terminate a retainer agreement in writing with 30 days' notice. Outstanding invoices for services already rendered remain payable upon termination. Work in progress may be delivered in its current state or billed proportionally, depending on the agreement in place.</p>
             <p>For clients covered by the Consumer Protection Act (CPA), additional statutory rights may apply to fixed-term agreements, including cancellation and pro-rata refunds. Nothing in these terms limits any rights the Client may have under applicable consumer protection legislation.</p>
           </article>
 
           <article class="policy-block">
-            <h2>9. Client Responsibilities</h2>
+            <h2>10. Client Responsibilities</h2>
             <ul>
               <li>Provide timely access to required accounts, systems, and technical inputs.</li>
               <li>Review deliverables and provide feedback within agreed timelines.</li>
@@ -98,7 +101,7 @@
           </article>
 
           <article class="policy-block">
-            <h2>10. Third-Party Services</h2>
+            <h2>11. Third-Party Services</h2>
             <p>Retainer fees cover NemesisNet's services only. The following are Client costs and are not included in the retainer fee unless expressly stated otherwise:</p>
             <ul>
               <li>VPS, cloud hosting, and infrastructure providers</li>
@@ -113,12 +116,12 @@
           </article>
 
           <article class="policy-block">
-            <h2>11. Governing Law</h2>
+            <h2>12. Governing Law</h2>
             <p>These terms are governed by the laws of South Africa. Any dispute arising from these terms or a retainer agreement will be resolved in the courts of Cape Town, South Africa.</p>
           </article>
 
           <article class="policy-block">
-            <h2>12. Changes to Terms</h2>
+            <h2>13. Changes to Terms</h2>
             <p>NemesisNet may update these terms from time to time. Continued payment or acceptance of retainer services after changes constitutes acceptance of the revised terms. Clients will be notified of material changes via email or direct communication.</p>
           </article>
         </div>

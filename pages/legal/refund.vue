@@ -54,6 +54,15 @@
             </ul>
             <p>Subscription services can be cancelled at any time, but cancellations do not guarantee retroactive refunds.</p>
           </article>
+          <article class="policy-block">
+            <h2>7. Retainers</h2>
+            <p>Retainers are billed monthly in advance. As set out in the <NuxtLink to="/legal/retainer-terms" style="color: var(--accent-color); text-decoration: none;">Retainer Terms &amp; Conditions</NuxtLink>, retainer fees provide reserved service capacity for each billing period. Unused capacity does not accumulate or roll over.</p>
+            <ul>
+              <li>Monthly retainers may be cancelled with 30 days' written notice. The current billing period remains payable and services continue through the end of that period.</li>
+              <li>No retroactive refund is available for a billing period in which services were made available, regardless of whether the Client used the reserved capacity.</li>
+              <li>For clients covered by the Consumer Protection Act (CPA), additional statutory rights may apply. Nothing in this policy limits those rights.</li>
+            </ul>
+          </article>
         </div>
         <p class="pricing-note"><strong>Disputes:</strong> clients are encouraged to contact NemesisNet first to resolve concerns before initiating chargebacks or formal disputes.</p>
         <div class="back-link">
