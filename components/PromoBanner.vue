@@ -88,7 +88,10 @@ function dismiss() {
   color: var(--text-color);
 }
 @media (max-width: 600px) {
-  .promo-text { font-size: 0.82rem; }
-  .promo-banner-inner { gap: 8px; }
+  .promo-banner { padding: 8px 12px; }
+  .promo-text { font-size: 0.78rem; }
+  .promo-banner-inner { gap: 6px; }
+  .promo-badge { font-size: 0.65rem; padding: 2px 8px; }
+  .promo-link { display: block; margin-left: 0; margin-top: 2px; }
 }
 </style>

@@ -1836,13 +1836,18 @@ nav.scrolled {
 
 /* Promo banner — sits below fixed nav */
 body.promo-banner-visible #main {
-  padding-top: 42px;
+  padding-top: 52px;
 }
 body.promo-banner-visible .breadcrumbs {
-  margin-top: 112px;
+  margin-top: 122px;
 }
 body.promo-banner-visible #services {
-  padding-top: 122px !important;
+  padding-top: 132px !important;
+}
+@media (max-width: 600px) {
+  body.promo-banner-visible #main { padding-top: 60px; }
+  body.promo-banner-visible .breadcrumbs { margin-top: 130px; }
+  body.promo-banner-visible #services { padding-top: 140px !important; }
 }
 
 /* Ensure custom theme toggles (aurora/nemesis) do not force a dark nav in light mode.
