@@ -89,6 +89,7 @@ NemesisNet operates on the principle of digital sovereignty and architectural pu
 ## Company & Legal
 - [About](https://nemesisnet.co.za/about) — Founder, capabilities, and engineering signals.
 - [Contact](https://nemesisnet.co.za/contact) — Project scoping and engagement.
+- [Spring Special — 33% Off](https://nemesisnet.co.za/promotions) — 33% off Static & Brochure, App Starter, and CMS projects. Sep–Nov 2026.
 - [Software Development Cost Guide](https://nemesisnet.co.za/software-development-cost-south-africa) — SA pricing, rate bands, tiers, and market context.
 - [Retainer Terms & Conditions](https://nemesisnet.co.za/legal/retainer-terms) — Universal retainer rules: capacity is period-specific, no rollover, scope per agreement.
 - [Refund Policy](https://nemesisnet.co.za/legal/refund)
