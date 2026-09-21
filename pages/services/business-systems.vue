@@ -129,7 +129,7 @@
 import { CheckCircle, XCircle } from 'lucide-vue-next'
 
 useHead({
-  title: 'Business Systems — Spring Boot, Vue 3, Full-Stack | NemesisNet',
+  title: 'Business Systems | Spring Boot & Vue 3 | NemesisNet',
   meta: [
     { name: 'description', content: 'Full-stack business systems with Spring Boot, Vue 3, secure auth, and production infrastructure. From R150,000. Cape Town, South Africa.' },
     { property: 'og:title', content: 'Business Systems | NemesisNet' },
@@ -220,7 +220,7 @@ useHead({
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
 .sidebar-card h3 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 .sidebar-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
-.sidebar-list li { margin-bottom: 10px; color: var(--text-muted); display: flex; justify-content: space-between; }
+.sidebar-list li { margin-bottom: 10px; color: var(--text-muted); display: grid; grid-template-columns: 100px 1fr; gap: 8px; align-items: start; }
 .sidebar-list li strong { color: var(--text-color); }
 .quick-links { display: flex; flex-direction: column; gap: 10px; }
 .quick-links .btn-glass { display: block; width: 100%; }

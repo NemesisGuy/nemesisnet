@@ -48,7 +48,7 @@
 
       <div class="detail-sidebar">
         <div class="sidebar-card">
-          <h4>Project Details</h4>
+          <h3>Project Details</h3>
           <ul class="sidebar-list">
             <li><span>Timeline:</span> <strong>2 Weeks</strong></li>
             <li><span>Stack:</span> <strong>Node.js, WordPress</strong></li>
@@ -57,7 +57,7 @@
           </ul>
         </div>
         <div class="sidebar-card">
-          <h4>Quick Links</h4>
+          <h3>Quick Links</h3>
           <div class="quick-links">
             <NuxtLink to="/projects" class="btn-glass">← Back to Portfolio</NuxtLink>
             <a href="https://github.com/NemesisGuy/WordPress-MCP" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="View Source (opens in new tab)">View Source</a>
@@ -71,7 +71,7 @@
 
 <script setup>
 useHead({
-  title: 'WordPress MCP Server | Local-First AI Agent Content Tool | NemesisNet',
+  title: 'WordPress MCP Server | AI Agent Content Tool | NemesisNet',
   meta: [
     { name: 'description', content: 'WordPress MCP Server is a local-first Model Context Protocol bridge allowing AI agents to securely manage WordPress content, posts, and media.' },
     { property: 'og:title', content: 'WordPress MCP Server | Local-First AI Agent Content Tool | NemesisNet' },
@@ -201,7 +201,7 @@ useHead({
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
 }
 
-.sidebar-card h4 {
+.sidebar-card h3 {
   color: var(--accent-color);
   margin-bottom: 15px;
   font-size: 1rem;

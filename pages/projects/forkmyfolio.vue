@@ -66,7 +66,7 @@
 
       <div class="detail-sidebar">
         <div class="sidebar-card">
-          <h4>Project Details</h4>
+          <h3>Project Details</h3>
           <ul class="sidebar-list">
             <li><span>Timeline:</span> <strong>6 Weeks</strong></li>
             <li><span>Stack:</span> <strong>Vue 3, Spring Boot, Java, MySQL, Redis</strong></li>
@@ -75,7 +75,7 @@
           </ul>
         </div>
         <div class="sidebar-card">
-          <h4>Quick Links</h4>
+          <h3>Quick Links</h3>
           <div class="quick-links">
             <NuxtLink to="/projects" class="btn-glass">← Back to Portfolio</NuxtLink>
             <a href="https://github.com/NemesisGuy/ForkMyFolio-frontend" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="View Source (opens in new tab)">View Source</a>
@@ -112,7 +112,7 @@ onMounted(() => { startAuto() })
 onUnmounted(() => { clearInterval(autoTimer) })
 
 useHead({
-  title: 'ForkMyFolio | Dynamic Portfolio & CV CMS Platform | NemesisNet',
+  title: 'ForkMyFolio | Portfolio & CV CMS Platform | NemesisNet',
   meta: [
     { name: 'description', content: 'ForkMyFolio is a dynamic personal portfolio and resume content management system built with Spring Boot, Vue 3, MySQL, and Redis.' },
     { property: 'og:title', content: 'ForkMyFolio | Dynamic Portfolio & CV CMS Platform | NemesisNet' },
@@ -188,7 +188,7 @@ useHead({
 .carousel-dot:hover { background: rgba(255,255,255,0.5); }
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; }
-.sidebar-card h4 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; }
+.sidebar-card h3 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; }
 .sidebar-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
 .sidebar-list li { margin-bottom: 10px; color: var(--text-muted); display: grid; grid-template-columns: 90px 1fr; gap: 8px; align-items: start; }
 .sidebar-list li span { color: var(--text-muted); }

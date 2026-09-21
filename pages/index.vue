@@ -215,7 +215,7 @@
 import { Server, Cloud, Brain, Cpu, Workflow, Briefcase } from 'lucide-vue-next'
 
 useHead({
-  title: 'NemesisNet | Full-Stack Software, SaaS & AI Solutions | Cape Town',
+  title: 'NemesisNet | Full-Stack Software, SaaS & AI',
   meta: [
     { name: 'description', content: 'AI infrastructure, SaaS development, and self-hosted systems — including STT and TTS pipelines. Cape Town, ZAR pricing.' },
     { property: 'og:title', content: 'NemesisNet — AI Infrastructure & Platform Engineering in Cape Town' },

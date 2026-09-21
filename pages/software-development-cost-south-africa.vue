@@ -154,7 +154,7 @@
         <div class="pricing-grid">
           <NuxtLink to="/services/ai-consulting" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Brain :size="24" /></ClientOnly></div>
-            <h4 class="pricing-title">AI Architecture / Consulting</h4>
+            <h3 class="pricing-title">AI Architecture / Consulting</h3>
             <div class="pricing-price">R10,000</div>
             <div class="pricing-unit">Starting from</div>
             <p class="pricing-description">Review your AI stack, model selection, self-host vs cloud decision, or integration strategy. You leave with a written action plan, not a slide deck.</p>
@@ -167,7 +167,7 @@
           </NuxtLink>
           <NuxtLink to="/services/mcp-integrations" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Workflow :size="24" /></ClientOnly></div>
-            <h4 class="pricing-title">Custom MCP &amp; Agent Integrations</h4>
+            <h3 class="pricing-title">Custom MCP &amp; Agent Integrations</h3>
             <div class="pricing-price">R55,000</div>
             <div class="pricing-unit">Starting from</div>
             <p class="pricing-description">Connect AI agents to your CMS, CRM, or database via a structured MCP server. No fragile glue code — auditable, role-safe pipelines built to production standard.</p>
@@ -187,7 +187,7 @@
         <div class="pricing-grid">
           <NuxtLink to="/services/light-hosting" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Server :size="24" /></ClientOnly></div>
-            <h4 class="pricing-title">Light Hosting</h4>
+            <h3 class="pricing-title">Light Hosting</h3>
             <div class="pricing-price">R850</div>
             <div class="pricing-unit">Monthly</div>
             <p class="pricing-description">Hosting, SSL, uptime monitoring, and security patches for deployed systems.</p>
@@ -200,7 +200,7 @@
           </NuxtLink>
           <NuxtLink to="/services/support-retainer" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Shield :size="24" /></ClientOnly></div>
-            <h4 class="pricing-title">Support Retainer</h4>
+            <h3 class="pricing-title">Support Retainer</h3>
             <div class="pricing-price">From R7,500</div>
             <div class="pricing-unit">Monthly</div>
             <p class="pricing-description">Reserved support capacity for troubleshooting, maintenance, and operational assistance.</p>
