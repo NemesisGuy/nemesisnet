@@ -33,7 +33,6 @@ export const PRERENDER_ROUTES = [
   '/services/light-hosting',
   '/services/cms',
   '/services/maintenance',
-  '/services/managed-retainer',
   '/services/support-retainer',
   '/services/dev-retainer',
   '/services/devops-retainer',
