@@ -124,7 +124,7 @@
 import { CheckCircle, XCircle } from 'lucide-vue-next'
 
 useHead({
-  title: 'Static & Brochure Sites — Fast, Performant Websites | NemesisNet',
+  title: 'Static & Brochure Sites | Fast Websites | NemesisNet',
   meta: [
     { name: 'description', content: 'Static and brochure websites built with Nuxt, Vue, and React. Fast, SEO-optimised, no backend complexity. Starting from R7,000. Cape Town, South Africa.' },
     { property: 'og:title', content: 'Static & Brochure Sites | NemesisNet' },

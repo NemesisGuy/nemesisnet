@@ -151,7 +151,7 @@
 
 <script setup>
 useHead({
-  title: 'Self-Hosted AI Infrastructure | NemesisNet — GGUF, GPU, No Vendor Lock-in',
+  title: 'Self-Hosted AI Infrastructure | NemesisNet',
   meta: [
     { name: 'description', content: 'Self-hosted AI infrastructure: GGUF models, Docker, GPU, vector databases, and STT/TTS pipelines. Real AI — not API wrappers.' },
     { property: 'og:title', content: 'Self-Hosted AI Infrastructure | NemesisNet' },

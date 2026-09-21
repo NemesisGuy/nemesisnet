@@ -148,7 +148,7 @@
 
 <script setup>
 useHead({
-  title: 'Infrastructure Engineering & DevOps | NemesisNet — Docker, CI/CD, Redis, Production Runtimes',
+  title: 'Infrastructure & DevOps Engineering | NemesisNet',
   meta: [
     { name: 'description', content: 'Infrastructure engineering and DevOps: Docker, CI/CD, Redis, Nginx, and production AI runtimes. High-performance backend systems.' },
     { property: 'og:title', content: 'Infrastructure Engineering & DevOps | NemesisNet' },

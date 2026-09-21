@@ -129,7 +129,7 @@
 import { CheckCircle, XCircle } from 'lucide-vue-next'
 
 useHead({
-  title: 'Platform / Enterprise — Multi-Tenant SaaS, AI Pipelines | NemesisNet',
+  title: 'Platform / Enterprise | Multi-Tenant SaaS | NemesisNet',
   meta: [
     { name: 'description', content: 'Enterprise-grade platforms: multi-tenant SaaS, AI pipelines, self-hosted LLM/TTS, MCP integrations. From R350,000. Cape Town, South Africa.' },
     { property: 'og:title', content: 'Platform / Enterprise | NemesisNet' },

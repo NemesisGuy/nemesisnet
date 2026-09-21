@@ -131,7 +131,7 @@
 import { CheckCircle, XCircle } from 'lucide-vue-next'
 
 useHead({
-  title: 'Development Retainer — Reserved Engineering Hours | NemesisNet',
+  title: 'Development Retainer | Reserved Engineering | NemesisNet',
   meta: [
     { name: 'description', content: 'Monthly development retainer for features, bug fixes, refactoring, and technical improvements. From R7,500/month with defined engineering capacity.' },
     { property: 'og:title', content: 'Development Retainer | NemesisNet' },

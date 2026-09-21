@@ -131,7 +131,7 @@
 import { CheckCircle, XCircle } from 'lucide-vue-next'
 
 useHead({
-  title: 'DevOps Retainer — Infrastructure & CI/CD Management | NemesisNet',
+  title: 'DevOps Retainer | Infrastructure & CI/CD | NemesisNet',
   meta: [
     { name: 'description', content: 'Monthly DevOps retainer for infrastructure management, CI/CD maintenance, container management, and operational automation. From R7,500/month.' },
     { property: 'og:title', content: 'DevOps Retainer | NemesisNet' },

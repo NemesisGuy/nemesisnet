@@ -109,7 +109,7 @@
 import { CheckCircle, XCircle } from 'lucide-vue-next'
 
 useHead({
-  title: 'Light Hosting — R850/mo Server Hosting & Monitoring | NemesisNet',
+  title: 'Light Hosting | R850/mo Server Hosting | NemesisNet',
   meta: [
     { name: 'description', content: 'Light hosting for deployed systems: server hosting, SSL, uptime monitoring, security patches. R850/month. Cape Town, South Africa.' },
     { property: 'og:title', content: 'Light Hosting | NemesisNet' },

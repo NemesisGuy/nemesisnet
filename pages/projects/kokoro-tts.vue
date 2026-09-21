@@ -54,7 +54,7 @@
 
       <div class="detail-sidebar">
         <div class="sidebar-card">
-          <h4>Project Details</h4>
+          <h3>Project Details</h3>
           <ul class="sidebar-list">
             <li><span>Timeline:</span> <strong>4 Weeks</strong></li>
             <li><span>Stack:</span> <strong>Python, PyTorch, FastAPI, Vue</strong></li>
@@ -63,7 +63,7 @@
           </ul>
         </div>
         <div class="sidebar-card">
-          <h4>Quick Links</h4>
+          <h3>Quick Links</h3>
           <div class="quick-links">
             <NuxtLink to="/projects" class="btn-glass">← Back to Portfolio</NuxtLink>
             <a href="https://blog.nemesisnet.co.za/bringing-gpu-support-to-neutts-air-a-dev-diary/" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Read Dev Diary (opens in new tab)">Read Dev Diary</a>
@@ -85,7 +85,7 @@
 
 <script setup>
 useHead({
-  title: 'Kokoro TTS Service | Self-Hosted AI Text-To-Speech | NemesisNet',
+  title: 'Kokoro TTS Service | Self-Hosted Text-To-Speech | NemesisNet',
   meta: [
     { name: 'description', content: 'Self-hosted, high-fidelity AI text-to-speech API and web UI infrastructure built using Python, FastAPI, PyTorch, and Vue.' },
     { property: 'og:title', content: 'Kokoro TTS Service | Self-Hosted AI Text-To-Speech | NemesisNet' },
@@ -171,7 +171,7 @@ onMounted(() => {
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
-.sidebar-card h4 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+.sidebar-card h3 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 .sidebar-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
 .sidebar-list li { margin-bottom: 10px; color: var(--text-muted); display: grid; grid-template-columns: 90px 1fr; gap: 8px; align-items: start; }
 .sidebar-list li span { color: var(--text-muted); }

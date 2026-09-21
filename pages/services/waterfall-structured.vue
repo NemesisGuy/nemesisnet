@@ -119,7 +119,7 @@
 import { CheckCircle, XCircle } from 'lucide-vue-next'
 
 useHead({
-  title: 'Waterfall & Structured Delivery — Gated Milestones | NemesisNet',
+  title: 'Waterfall & Structured Delivery | NemesisNet',
   meta: [
     { name: 'description', content: 'Waterfall and structured software delivery with full scope definition, gated milestones, and change control for compliance projects.' },
     { property: 'og:title', content: 'Waterfall & Structured Delivery | NemesisNet' },

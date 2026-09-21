@@ -142,7 +142,7 @@
 
 <script setup>
 useHead({
-  title: 'SaaS Development | NemesisNet — Multi-Tenant Platforms, Spring Boot + Vue 3',
+  title: 'SaaS Development | Spring Boot + Vue 3 | NemesisNet',
   meta: [
     { name: 'description', content: 'Scalable multi-tenant SaaS development in South Africa with Spring Boot + Vue 3, authentication, billing, and API-first architecture. Cape Town.' },
     { property: 'og:title', content: 'SaaS Development | NemesisNet' },

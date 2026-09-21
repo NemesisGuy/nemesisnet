@@ -141,7 +141,7 @@
 
 <script setup>
 useHead({
-  title: 'Custom AI Development | NemesisNet — MCP Agents, STT & TTS, Agent Workflows',
+  title: 'Custom AI Development | NemesisNet',
   meta: [
     { name: 'description', content: 'Custom AI development: MCP agents, self-hosted STT and TTS pipelines, multi-agent coding harnesses, and AI integration for production systems.' },
     { property: 'og:title', content: 'Custom AI Development | NemesisNet' },

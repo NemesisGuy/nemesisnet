@@ -117,7 +117,7 @@
 import { CheckCircle, XCircle } from 'lucide-vue-next'
 
 useHead({
-  title: 'AI Architecture & Consulting — Half-Day Sessions | NemesisNet',
+  title: 'AI Architecture & Consulting | NemesisNet',
   meta: [
     { name: 'description', content: 'AI architecture consulting for teams making platform decisions. Reviews, roadmapping, cost modelling. From R10,000. Cape Town.' },
     { property: 'og:title', content: 'AI Architecture & Consulting | NemesisNet' },

@@ -129,7 +129,7 @@
 import { CheckCircle, XCircle } from 'lucide-vue-next'
 
 useHead({
-  title: 'Business Systems — Spring Boot, Vue 3, Full-Stack | NemesisNet',
+  title: 'Business Systems | Spring Boot & Vue 3 | NemesisNet',
   meta: [
     { name: 'description', content: 'Full-stack business systems with Spring Boot, Vue 3, secure auth, and production infrastructure. From R150,000. Cape Town, South Africa.' },
     { property: 'og:title', content: 'Business Systems | NemesisNet' },

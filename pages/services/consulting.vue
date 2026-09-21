@@ -143,7 +143,7 @@
 
 <script setup>
 useHead({
-  title: 'System Design & Consulting | NemesisNet — Technical Roadmapping, Architecture',
+  title: 'System Design & Consulting | NemesisNet',
   meta: [
     { name: 'description', content: 'Technical consulting and system design: architectural optimization, roadmapping, and strategic guidance for software teams.' },
     { property: 'og:title', content: 'System Design & Consulting | NemesisNet' },

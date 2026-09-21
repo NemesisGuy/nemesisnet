@@ -118,7 +118,7 @@
 import { CheckCircle, XCircle } from 'lucide-vue-next'
 
 useHead({
-  title: 'CMS Development — WordPress, WooCommerce & CMS Projects | NemesisNet',
+  title: 'CMS Development | WordPress & WooCommerce | NemesisNet',
   meta: [
     { name: 'description', content: 'Custom WordPress and CMS development: themes, plugins, WooCommerce, migration. From R7,000. Cape Town, South Africa.' },
     { property: 'og:title', content: 'CMS Development | NemesisNet' },

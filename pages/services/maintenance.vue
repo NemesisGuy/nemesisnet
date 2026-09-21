@@ -118,7 +118,7 @@
 import { CheckCircle, XCircle } from 'lucide-vue-next'
 
 useHead({
-  title: 'Maintenance & Support — Routine Troubleshooting & Maintenance | NemesisNet',
+  title: 'Maintenance & Support | NemesisNet',
   meta: [
     { name: 'description', content: 'Routine troubleshooting and maintenance for websites and applications. R850–R1,100/hour or support retainer. Cape Town, South Africa.' },
     { property: 'og:title', content: 'Maintenance & Support | NemesisNet' },

@@ -159,7 +159,7 @@
 import { CheckCircle, XCircle } from 'lucide-vue-next'
 
 useHead({
-  title: 'Backend & API Engineering | NemesisNet — APIs, Data Pipelines, System Integrations',
+  title: 'Backend & API Engineering | NemesisNet',
   meta: [
     { name: 'description', content: 'Backend and API engineering in South Africa: custom APIs, data pipelines, system integrations, and backend architecture with Spring Boot. Cape Town.' },
     { property: 'og:title', content: 'Backend & API Engineering | NemesisNet' },
