@@ -9,6 +9,7 @@
         <NuxtLink to="/software-development-cost-south-africa">Pricing Guide</NuxtLink>
         <a href="/#testimonials">Testimonials</a>
         <NuxtLink to="/contact">Contact</NuxtLink>
+        <NuxtLink to="/promotions" class="footer-promo-link">Spring Special — 33% Off</NuxtLink>
       </div>
       <div class="footer-group">
         <strong class="footer-heading">Legal</strong>
@@ -50,3 +51,10 @@ const config = useRuntimeConfig()
 const currentYear = new Date().toLocaleString('default', { month: 'long' }) + ' ' + new Date().getFullYear()
 const buildVersion = config.public.buildId
 </script>
+
+<style scoped>
+.footer-promo-link {
+  color: var(--accent-color) !important;
+  font-weight: 600;
+}
+</style>

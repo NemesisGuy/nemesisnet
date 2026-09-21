@@ -42,6 +42,7 @@ export const PRERENDER_ROUTES = [
   '/software-development-cost-south-africa',
   '/about',
   '/contact',
+  '/promotions',
   '/legal/refund',
   '/legal/retainer-terms',
   '/legal/terms',
