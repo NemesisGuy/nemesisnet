@@ -1834,6 +1834,17 @@ nav.scrolled {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
+/* Promo banner — sits below fixed nav */
+body.promo-banner-visible #main {
+  padding-top: 42px;
+}
+body.promo-banner-visible .breadcrumbs {
+  margin-top: 112px;
+}
+body.promo-banner-visible #services {
+  padding-top: 122px !important;
+}
+
 /* Ensure custom theme toggles (aurora/nemesis) do not force a dark nav in light mode.
    Some external theme CSS may set global surfaces which can conflict with our
    light-mode navigation; these overrides keep the nav readable when data-theme
