@@ -236,7 +236,7 @@ useHead({
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
 .sidebar-card h3 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 .sidebar-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
-.sidebar-list li { margin-bottom: 10px; color: var(--text-muted); display: grid; grid-template-columns: 90px 1fr; gap: 8px; align-items: start; }
+.sidebar-list li { margin-bottom: 10px; color: var(--text-muted); display: grid; grid-template-columns: 100px 1fr; gap: 8px; align-items: start; }
 .sidebar-list li span { color: var(--text-muted); }
 .sidebar-list li strong { color: var(--text-color); text-align: left; word-break: break-word; }
 .quick-links { display: flex; flex-direction: column; gap: 10px; }
