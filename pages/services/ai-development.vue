@@ -60,7 +60,7 @@
         </div>
 
         <h2>Why NemesisNet</h2>
-        <p>We've built production AI systems across fintech, healthcare, and media. Our approach is infrastructure-first: we care about what happens at 3 AM under load, not just what looks good in a demo. Based in Cape Town, South Africa, we work with clients across Africa, Europe, and beyond — with time zone overlap to EU markets.</p>
+        <p>NemesisNet builds production-grade AI infrastructure: MCP agents, self-hosted speech-to-text (STT) and text-to-speech (TTS) pipelines, multi-agent coding harnesses, and fine-tuned on-premise LLMs. Our approach is infrastructure-first: we care about what happens at 3 AM under load, not just what looks good in a demo. Based in Cape Town, South Africa, with time zone overlap to European markets.</p>
 
         <div class="tech-stack">
           <span class="pill pill-tools">FastMCP</span>

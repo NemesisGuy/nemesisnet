@@ -26,7 +26,7 @@
 
         <h2>Performance Optimization</h2>
         <p>Identifying bottlenecks in your existing stack and implementing high-impact fixes to reduce latency and server costs. We profile applications at every level — database queries, API response times, frontend rendering, and infrastructure resource utilization.</p>
-        <p>Many of our clients see 3–10x performance improvements from targeted optimizations rather than expensive hardware upgrades. We don't guess — we measure, identify the real bottleneck, and fix it.</p>
+        <p>We don't guess — we measure, identify the real bottleneck, and fix it. Targeted optimizations frequently deliver significant performance gains without expensive hardware upgrades.</p>
 
         <h2>Codebase Restructuring</h2>
         <p>Converting legacy "spaghetti code" into modular, testable, and scalable systems without interrupting production. Our approach uses the Strangler Fig pattern — incrementally replacing components while the system stays live.</p>
@@ -34,7 +34,7 @@
 
         <h2>Technical Advisory</h2>
         <p>Strategic guidance on tool selection, cloud migration, and AI integration strategies for your business. We stay vendor-neutral and evaluate options based on your specific requirements — not what's trending on Hacker News.</p>
-        <p>Advisory engagements range from a single architecture review to a monthly retainer with ongoing code review and strategic check-ins. We've served as fractional CTOs for startups that can't justify a full-time hire yet.</p>
+        <p>Advisory engagements range from a single architecture review to a monthly retainer with ongoing code review and strategic check-ins.</p>
 
         <h2>AI &amp; Platform Decisions</h2>
         <p>For teams evaluating AI adoption, we provide focused working sessions on model selection, self-hosted vs cloud trade-offs, MCP agent architecture, and TTS pipeline design. These are working sessions — not slide decks. You leave with a concrete integration plan, cost model, and implementation roadmap.</p>
@@ -68,7 +68,7 @@
         </div>
 
         <h2>Why NemesisNet</h2>
-        <p>We've built, broken, and rebuilt systems of every size and complexity. Our consulting comes from real implementation experience — we've personally dealt with the problems we advise on. Based in Cape Town, South Africa, with a track record across fintech, healthcare, media, and logistics domains.</p>
+        <p>NemesisNet brings hands-on engineering experience to diagnose problems others miss and prescribe solutions that actually fit your constraints. Our consulting comes from real implementation experience — we've personally dealt with the problems we advise on. Based in Cape Town, South Africa.</p>
 
         <div class="tech-stack">
           <span class="pill pill-tools">Domain-Driven Design</span>

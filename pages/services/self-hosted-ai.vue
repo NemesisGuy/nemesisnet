@@ -34,11 +34,11 @@
 
         <h2>GPU Infrastructure &amp; Optimization</h2>
         <p>For speech-to-text (STT), text-to-speech (TTS), and LLM inference workloads, GPU acceleration significantly reduces generation time. NemesisNet configures CUDA environments, optimizes VRAM usage through quantization (GPTQ, AWQ, and GGUF formats), and implements batch processing for throughput optimization.</p>
-        <p>Where required, deployments include model lifecycle management, resource controls, and hardware failover — keeping the system stable under variable load. We've benchmarked inference on hardware ranging from consumer-grade GPUs to multi-GPU server configurations, always optimizing for cost-per-token.</p>
+        <p>Where required, deployments include model lifecycle management, resource controls, and hardware failover — keeping the system stable under variable load. Inference is optimized for your specific hardware, whether consumer-grade GPUs or multi-GPU server configurations, always targeting cost-per-token efficiency.</p>
 
         <h2>Vector Databases &amp; Semantic Search</h2>
         <p>Production AI systems need more than raw model inference — they need retrieval-augmented generation (RAG) pipelines. NemesisNet integrates vector databases (Qdrant, Chroma, pgvector) for semantic search, document chunking strategies, and embedding pipelines that feed context into LLM inference.</p>
-        <p>The result is AI that has access to your specific data — not just generic training knowledge. We've built RAG systems that search across thousands of internal documents, codebases, and knowledge bases with sub-second response times.</p>
+        <p>The result is AI that has access to your specific data — not just generic training knowledge. RAG systems can search across internal documents, codebases, and knowledge bases with sub-second response times when properly configured.</p>
 
         <h2>Who This Is For</h2>
         <p><strong>Product teams building AI-powered features</strong> that need reliable inference without per-request API costs. <strong>Enterprises in regulated industries</strong> (finance, healthcare, legal) where data cannot leave your infrastructure. <strong>SaaS companies</strong> who want to offer AI features without handing margins to API providers. <strong>Government and defense organizations</strong> requiring air-gapped or sovereign AI capability.</p>
@@ -68,7 +68,7 @@
         </div>
 
         <h2>Why NemesisNet</h2>
-        <p>We've deployed self-hosted AI infrastructure across South Africa, the EU, and the UK. Our strength is making complex infrastructure reliable and maintainable — not just deploying it, but ensuring your team can operate and evolve it. Cape Town-based with time zone overlap to European markets, we provide hands-on support across the full deployment lifecycle.</p>
+        <p>NemesisNet makes complex AI infrastructure reliable and maintainable — not just deploying it, but ensuring your team can operate and evolve it. Cape Town-based with time zone overlap to European markets, we provide hands-on support across the full deployment lifecycle.</p>
 
         <div class="tech-stack">
           <span class="pill pill-tools">GGUF Models</span>
