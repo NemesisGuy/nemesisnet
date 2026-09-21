@@ -228,9 +228,9 @@ useHead({
 .promo-service-card .btn-glass { display: inline-block; margin-top: auto; padding-top: 12px; }
 
 /* Steps */
-.promo-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 20px 0 40px; }
-.promo-step { text-align: center; }
-.promo-step-num { width: 40px; height: 40px; border-radius: 50%; background: var(--accent-color); color: #000; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+.promo-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 20px 0 40px; }
+.promo-step { text-align: center; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 28px 20px; }
+.promo-step-num { width: 40px; height: 40px; border-radius: 50%; background: var(--accent-color); color: #000; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
 .promo-step h3 { font-size: 1rem; margin: 0 0 8px; }
 .promo-step p { font-size: 0.9rem; margin: 0; }
 
@@ -255,6 +255,9 @@ useHead({
   .detail-sidebar { position: static; }
   .promo-hero-title { font-size: 1.8rem; }
   .promo-services { grid-template-columns: 1fr; }
-  .promo-steps { grid-template-columns: 1fr; gap: 32px; }
+  .promo-steps { grid-template-columns: 1fr; gap: 16px; }
+  .promo-price-line { display: block; }
+  .promo-price-line .promo-old { display: block; }
+  .promo-price-line .promo-new { display: block; margin-top: 2px; }
 }
 </style>
