@@ -3,7 +3,7 @@
     <a href="#main" class="skip-link">Skip to content</a>
     <AppHeader />
     <PromoBanner />
-    <main id="main" style="padding-top: 0;">
+    <main id="main">
       <slot />
     </main>
     <AppFooter />

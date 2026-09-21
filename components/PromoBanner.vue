@@ -17,11 +17,14 @@ const visible = ref(true)
 onMounted(() => {
   if (localStorage.getItem('promo-dismissed') === '1') {
     visible.value = false
+  } else {
+    document.body.classList.add('promo-banner-visible')
   }
 })
 
 function dismiss() {
   visible.value = false
+  document.body.classList.remove('promo-banner-visible')
   localStorage.setItem('promo-dismissed', '1')
 }
 </script>
@@ -32,8 +35,11 @@ function dismiss() {
   border-bottom: 1px solid rgba(0,255,255,0.2);
   padding: 10px 20px;
   text-align: center;
-  position: relative;
-  z-index: 100;
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 }
 .promo-banner-inner {
   max-width: 1280px;
