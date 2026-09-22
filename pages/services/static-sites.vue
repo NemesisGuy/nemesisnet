@@ -76,9 +76,9 @@
             <NuxtLink to="/projects/bored-room-cafe" class="btn-glass">View Project</NuxtLink>
           </div>
           <div class="related-card">
-            <h3>NemesisNet WordPress Theme</h3>
-            <p>Custom WordPress theme with glassmorphic dark/light UI.</p>
-            <NuxtLink to="/projects/nemesisnet-wordpress-theme" class="btn-glass">View Project</NuxtLink>
+            <h3>NK Assessments</h3>
+            <p>Static brochure portal for a Cape Town psychometrist practice — HTML5, Bootstrap, Nginx, live in 48 hours.</p>
+            <a href="https://nkassessments.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Visit live site (opens in new tab)">Visit Live Site</a>
           </div>
         </div>
 
