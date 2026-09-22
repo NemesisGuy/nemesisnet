@@ -1834,20 +1834,15 @@ nav.scrolled {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Promo banner — sits below fixed nav */
+/* Promo banner — force content below fixed nav + banner (height measured at runtime) */
 body.promo-banner-visible #main {
-  padding-top: 52px;
+  padding-top: calc(69px + var(--banner-h, 43px));
 }
 body.promo-banner-visible .breadcrumbs {
-  margin-top: 122px;
+  margin-top: 16px;
 }
 body.promo-banner-visible #services {
-  padding-top: 132px !important;
-}
-@media (max-width: 600px) {
-  body.promo-banner-visible #main { padding-top: 70px; }
-  body.promo-banner-visible .breadcrumbs { margin-top: 140px; }
-  body.promo-banner-visible #services { padding-top: 150px !important; }
+  padding-top: 16px !important;
 }
 
 /* Ensure custom theme toggles (aurora/nemesis) do not force a dark nav in light mode.
