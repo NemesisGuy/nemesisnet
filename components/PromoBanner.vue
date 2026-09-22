@@ -31,8 +31,10 @@ function dismiss() {
 
 <style scoped>
 .promo-banner {
-  background: linear-gradient(135deg, rgba(0,255,255,0.12) 0%, rgba(255,0,80,0.08) 100%);
-  border-bottom: 1px solid rgba(0,255,255,0.2);
+  background: rgba(0, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.15);
   padding: 10px 20px;
   text-align: center;
   position: fixed;
