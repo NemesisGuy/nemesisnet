@@ -90,7 +90,7 @@
           <div class="related-card">
             <h3>NemesisNet Blog</h3>
             <p>Our WordPress blog — live content publishing on the platform.</p>
-            <a href="https://blog.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Visit live blog (opens in new tab)">Visit Live Site</a>
+            <a href="https://blog.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Visit live blog (opens in new tab)">Live Site</a>
           </div>
         </div>
 
