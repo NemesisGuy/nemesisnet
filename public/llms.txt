@@ -32,8 +32,15 @@ NemesisNet operates on the principle of digital sovereignty and architectural pu
 ### Pricing Tiers
 - [Static & Brochure (Tier 1)](https://nemesisnet.co.za/services/static-sites) — Nuxt static, Vue, React sites. No backend. R7K–R25K, 2–4 weeks.
 - [App Starter (Tier 2)](https://nemesisnet.co.za/services/app-starter) — PocketBase-backed apps with auth, roles, data. R35K–R80K, 4–8 weeks.
-- [Business Systems (Tier 3)](https://nemesisnet.co.za/services/business-systems) — Spring Boot + Vue 3 full-stack platforms. From R150K, 8–16 weeks.
-- [Platform / Enterprise (Tier 4)](https://nemesisnet.co.za/services/platform-enterprise) — Multi-tenant SaaS, AI pipelines, advanced domain architecture. From R350K, 16–30+ weeks.
+- [Business Systems (Tier 3)](https://nemesisnet.co.za/services/business-systems) — Spring Boot + Vue 3 full-stack platforms. R150K–R400K, 8–16 weeks.
+- [Platform / Enterprise (Tier 4)](https://nemesisnet.co.za/services/platform-enterprise) — Multi-tenant SaaS, AI pipelines, advanced domain architecture. R350K–R900K, 16–30+ weeks.
+
+### Rate Card (Hourly)
+- **Maintenance & Support:** R850–R1,100/hr
+- **Development & DevOps:** R1,200–R1,400/hr
+- **Architecture & AI:** R1,600–R2,000/hr
+- **Rescue & Emergency:** R2,200+/hr
+- [Full rate card & SA market context](https://nemesisnet.co.za/software-development-cost-south-africa)
 
 ### AI & Custom Software
 - [Custom AI Development](https://nemesisnet.co.za/services/ai-development) — MCP agents, self-hosted TTS, multi-agent coding harnesses.
@@ -44,7 +51,7 @@ NemesisNet operates on the principle of digital sovereignty and architectural pu
 - [System Design & Consulting](https://nemesisnet.co.za/services/consulting) — Architecture planning, performance, codebase restructuring.
 
 ### Specialist Engagements
-- [AI Architecture / Consulting](https://nemesisnet.co.za/services/ai-consulting) — Half-day to full-day working sessions for platform and AI decisions. From R10K.
+- [AI Architecture / Consulting](https://nemesisnet.co.za/services/ai-consulting) — Half-day (R10K) or full-day (R17K) working sessions for platform and AI decisions. Pre-session review and written deliverable included.
 - [Custom MCP & Agent Integrations](https://nemesisnet.co.za/services/mcp-integrations) — MCP servers connecting AI agents to CMS, CRM, databases. From R55K, 3–6 weeks.
 
 ### Delivery Methodology
