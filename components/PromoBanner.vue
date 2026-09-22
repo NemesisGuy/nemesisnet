@@ -1,5 +1,5 @@
 <template>
-  <div v-if="visible" class="promo-banner" role="complementary" aria-label="Spring promotion">
+  <div v-if="visible" ref="bannerEl" class="promo-banner" role="complementary" aria-label="Spring promotion">
     <div class="promo-banner-inner">
       <span class="promo-badge">Spring Special</span>
       <p class="promo-text">
@@ -13,18 +13,38 @@
 
 <script setup>
 const visible = ref(true)
+const bannerEl = ref(null)
+let observer = null
+
+function measure() {
+  if (bannerEl.value) {
+    document.documentElement.style.setProperty('--banner-h', bannerEl.value.offsetHeight + 'px')
+  }
+}
 
 onMounted(() => {
   if (localStorage.getItem('promo-dismissed') === '1') {
     visible.value = false
-  } else {
-    document.body.classList.add('promo-banner-visible')
+    return
   }
+  document.body.classList.add('promo-banner-visible')
+  nextTick(() => {
+    measure()
+    if (window.ResizeObserver && bannerEl.value) {
+      observer = new ResizeObserver(measure)
+      observer.observe(bannerEl.value)
+    }
+  })
+})
+
+onBeforeUnmount(() => {
+  if (observer) observer.disconnect()
 })
 
 function dismiss() {
   visible.value = false
   document.body.classList.remove('promo-banner-visible')
+  document.documentElement.style.removeProperty('--banner-h')
   localStorage.setItem('promo-dismissed', '1')
 }
 </script>
