@@ -12,6 +12,20 @@
 git add -A && git commit -m "your message" && git push origin dev
 ```
 
+## CRITICAL: Auto-Ship Completed Work (Do Not Ask)
+
+When a task is complete and verified (build passes), **commit, push to `dev`, merge to `master`, push `master`, and return to `dev` — without asking the user first.** The user has confirmed this is the standing workflow. Only ask before shipping if the build fails or files contain secrets/API keys.
+
+```bash
+# Standing ship flow (run automatically after verified work):
+git add -A && git commit -m "your message" && git push origin dev
+git checkout master && git merge dev && git push origin master && git checkout dev
+```
+
+- Use `NemesisGuy@users.noreply.github.com` as the git email.
+- Keep commits scoped to the task (don't sweep in unrelated untracked files — mention them instead).
+- Never commit `.env` or files containing secrets.
+
 ## CRITICAL: Docker Commands Must Run in WSL
 
 **Docker is NOT available in the Windows PowerShell environment.** All Docker commands MUST be executed inside WSL.
