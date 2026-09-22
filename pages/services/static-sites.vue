@@ -74,11 +74,13 @@
             <h3>Bored Room Cafe</h3>
             <p>Hospitality management system with a public-facing brochure site.</p>
             <NuxtLink to="/projects/bored-room-cafe" class="btn-glass">View Project</NuxtLink>
+            <a href="https://boredroomcafe.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Visit Bored Room Cafe live site (opens in new tab)">Live Site</a>
           </div>
           <div class="related-card">
             <h3>NK Assessments</h3>
             <p>Static brochure portal for a Cape Town psychometrist practice — HTML5, Bootstrap, Nginx, live in 48 hours.</p>
-            <a href="https://nkassessments.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Visit live site (opens in new tab)">Visit Live Site</a>
+            <NuxtLink to="/projects/nk-assessments" class="btn-glass">View Project</NuxtLink>
+            <a href="https://nkassessments.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" class="btn-glass" aria-label="Visit NK Assessments live site (opens in new tab)">Live Site</a>
           </div>
         </div>
 
