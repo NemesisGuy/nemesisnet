@@ -15,7 +15,7 @@
         <p>Most South African developers won't publish prices. We do. This guide covers what real custom software projects cost in 2026 — from a static marketing site to a multi-tenant SaaS platform with AI pipelines — based on NemesisNet's actual pricing, not industry averages or agency guesswork.</p>
 
         <!-- Section 2 — Market Context -->
-        <p>The SA market splits into two camps: sub-R20k WordPress template shops, and R500k+ agency retainers. Almost nothing exists in the middle with transparent pricing. The word "website" and the word "app" cover completely different things. A brochure site and a multi-tenant SaaS platform are both "software" but have nothing in common in terms of cost.</p>
+        <p>The market is highly fragmented: from low-cost template and brochure-site providers through to R500k+ agency projects, with comparatively little transparent pricing in the middle. The word "website" and the word "app" cover completely different things. A brochure site and a multi-tenant SaaS platform are both "software" but have nothing in common in terms of cost.</p>
         <p>This guide uses NemesisNet's live pricing (updated 2026) as the reference point — not aggregated estimates. If you're budgeting for custom software in South Africa, these are the real numbers.</p>
 
         <!-- Section 3 — Pricing Tiers Table -->
@@ -149,7 +149,7 @@
 
         <!-- Section 4 — Specialist Engagements -->
         <h2>Specialist Engagements — AI Consulting &amp; MCP Integrations</h2>
-        <p class="section-intro">These are fixed-scope engagements for teams with a specific technical decision to make or integration to build. Both are priced transparently — something no other South African provider currently does for AI-specific work.</p>
+        <p class="section-intro">These are fixed-scope engagements for teams with a specific technical decision to make or integration to build. Both are priced transparently — something still relatively uncommon for AI-specific engineering work in South Africa.</p>
 
         <div class="pricing-grid">
           <NuxtLink to="/services/ai-consulting" class="card pricing-card pricing-card--linked">
