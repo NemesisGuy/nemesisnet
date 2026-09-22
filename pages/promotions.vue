@@ -196,7 +196,7 @@ useHead({
 .detail-main h2 { font-size: 2rem; margin: 40px 0 20px; text-align: left; }
 .detail-main h3 { font-size: 1.15rem; margin: 20px 0 10px; color: var(--text-color); }
 .detail-main p { color: var(--text-muted); margin-bottom: 20px; }
-.detail-sidebar { position: sticky; top: 124px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
+.detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; backdrop-filter: blur(10px); }
 .sidebar-card h3 { color: var(--accent-color); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 .sidebar-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
