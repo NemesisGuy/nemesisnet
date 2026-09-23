@@ -4,7 +4,7 @@
       <span class="promo-badge">Spring Special</span>
       <p class="promo-text">
         <strong>33% off</strong> Static &amp; Brochure, App Starter, and CMS projects.
-        <NuxtLink to="/promotions" class="promo-link">View details →</NuxtLink>
+        <NuxtLink to="/promotions" class="promo-link" data-umami-event="promo-banner-click">View details →</NuxtLink>
       </p>
       <button class="promo-close" aria-label="Dismiss promotion banner" @click="dismiss">&times;</button>
     </div>
