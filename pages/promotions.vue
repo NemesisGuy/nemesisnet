@@ -12,7 +12,7 @@
           <div class="promo-hero-badge">Limited Time · Sep–Nov 2026</div>
           <h1 class="promo-hero-title">33% Off Entry-Tier Projects</h1>
           <p class="promo-hero-sub">Build your website, app, or CMS project for a third less. Perfect for startups, small businesses, and side projects ready to go live.</p>
-          <NuxtLink to="/contact" class="btn--ignite">Book a Free Scoping Call →</NuxtLink>
+          <NuxtLink to="/contact" class="btn--ignite" data-umami-event="promo-hero-cta">Book a Free Scoping Call →</NuxtLink>
         </div>
 
         <h2>What's Included</h2>
@@ -31,7 +31,7 @@
               <li>SEO meta tags and structured data</li>
               <li>Deployment and DNS assistance</li>
             </ul>
-            <NuxtLink to="/services/static-sites" class="btn-glass">See Details</NuxtLink>
+            <NuxtLink to="/services/static-sites" class="btn-glass" data-umami-event="promo-service-click" data-umami-event-service="static-sites">See Details</NuxtLink>
           </div>
 
           <div class="promo-service-card">
@@ -46,7 +46,7 @@
               <li>Role-based access control</li>
               <li>Docker deployment included</li>
             </ul>
-            <NuxtLink to="/services/app-starter" class="btn-glass">See Details</NuxtLink>
+            <NuxtLink to="/services/app-starter" class="btn-glass" data-umami-event="promo-service-click" data-umami-event-service="app-starter">See Details</NuxtLink>
           </div>
 
           <div class="promo-service-card">
@@ -61,7 +61,7 @@
               <li>WooCommerce and payment setup</li>
               <li>Performance optimisation</li>
             </ul>
-            <NuxtLink to="/services/cms" class="btn-glass">See Details</NuxtLink>
+            <NuxtLink to="/services/cms" class="btn-glass" data-umami-event="promo-service-click" data-umami-event-service="cms">See Details</NuxtLink>
           </div>
         </div>
 
@@ -136,7 +136,7 @@
         </div>
 
         <div class="section-cta section-cta--prominent">
-          <NuxtLink to="/contact" class="btn--ignite">Book a Free Scoping Call →</NuxtLink>
+          <NuxtLink to="/contact" class="btn--ignite" data-umami-event="promo-bottom-cta">Book a Free Scoping Call →</NuxtLink>
           <p class="section-cta-sub">No commitment. We'll tell you if the spring special applies to your project.</p>
         </div>
       </div>
