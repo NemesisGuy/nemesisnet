@@ -27,7 +27,7 @@
         <h2>Deployment Models: Cloud, On-Premise, and Hybrid</h2>
         <p>Different workloads suit different infrastructure profiles. NemesisNet designs and deploys self-hosted AI across all three models:</p>
         <ul class="service-list">
-          <li><strong>Cloud VPS</strong> — GPU-accelerated instances on Hetzner, AWS, or DigitalOcean for scalable, pay-as-you-go inference. Ideal for teams that need elastic capacity without managing physical hardware.</li>
+          <li><strong>Cloud VPS</strong> — GPU-accelerated instances on major cloud providers for scalable, pay-as-you-go inference. Ideal for teams that need elastic capacity without managing physical hardware.</li>
           <li><strong>On-Premise</strong> — Dedicated hardware for maximum data privacy, zero network latency, and predictable infrastructure costs without per-request API charges. Perfect for regulated industries, defense, and organizations with strict data residency requirements.</li>
           <li><strong>Hybrid</strong> — Local inference for sensitive workloads, cloud fallback for peak load. Best of both worlds — keep PII on your hardware, burst to the cloud when demand spikes.</li>
         </ul>
