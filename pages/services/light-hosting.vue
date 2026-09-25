@@ -14,7 +14,7 @@
 
         <h2>What It Is</h2>
         <p>Light Hosting is managed hosting billed monthly per project — pick the tier that matches the system: a static site, a small app, a CMS, or a full-stack business application. Every tier bundles hosting, SSL management, Cloudflare/DNS configuration, uptime monitoring, and OS security patches. You built it or we built it, either way it stays online without you thinking about infrastructure.</p>
-        <p>No feature development, no bug fixes, no new integrations. Just reliable hosting with someone watching the dashboards so you do not have to. You pay for managed hosting as a service — the underlying infrastructure is our implementation detail, not your line item.</p>
+        <p>No feature development, no bug fixes, no new integrations. Managed hosting with monitoring and routine infrastructure maintenance, so you do not have to think about infrastructure. You pay for managed hosting as a service — the underlying infrastructure is our implementation detail, not your line item.</p>
 
         <h2>Who It's For</h2>
         <p><strong>Static and brochure sites</strong> that need fast, boringly reliable hosting. <strong>Small apps and APIs</strong> (PocketBase, Node, small databases) that need Docker hosting without DevOps overhead. <strong>WordPress and WooCommerce sites</strong> that need application-plus-database hosting. <strong>Business systems</strong> (Spring Boot, full-stack apps) that need allocated resources and monitoring. <strong>Anyone who wants peace of mind</strong> without paying for a full support or DevOps retainer.</p>
@@ -73,7 +73,7 @@
               <li>Static and brochure websites</li>
               <li>Hosting + SSL management</li>
               <li>Cloudflare/DNS configuration</li>
-              <li>Basic uptime monitoring</li>
+              <li>24/7 automated uptime monitoring</li>
               <li>Best-effort availability (no SLA)</li>
             </ul>
           </div>
@@ -84,7 +84,7 @@
               <li>Small apps and APIs</li>
               <li>Docker hosting + SSL management</li>
               <li>Cloudflare/DNS configuration</li>
-              <li>Uptime monitoring</li>
+              <li>24/7 automated uptime monitoring</li>
               <li>Best-effort availability (no SLA)</li>
             </ul>
           </div>
@@ -95,7 +95,7 @@
               <li>WordPress / WooCommerce + database</li>
               <li>Application + database hosting</li>
               <li>SSL management + Cloudflare/DNS</li>
-              <li>Uptime monitoring</li>
+              <li>24/7 automated uptime monitoring</li>
               <li>Best-effort availability (no SLA)</li>
             </ul>
           </div>
@@ -107,6 +107,7 @@
               <li>Application + database + Docker</li>
               <li>Allocated resources + monitoring</li>
               <li>OS security maintenance</li>
+              <li>24/7 automated uptime monitoring</li>
               <li>Best-effort availability (no SLA)</li>
             </ul>
           </div>
@@ -117,6 +118,7 @@
               <li>High-traffic or complex systems</li>
               <li>Dedicated resources + redundancy</li>
               <li>Backup and recovery planning</li>
+              <li>24/7 automated uptime monitoring</li>
               <li>Formal SLA available</li>
               <li>Scoped per project</li>
             </ul>
@@ -135,7 +137,7 @@
 
         <h2>Availability &amp; Support Response</h2>
         <p>Light Hosting is a managed, best-effort hosting service. NemesisNet manages the hosting environment — infrastructure monitoring, availability monitoring, Docker and application services, and routine maintenance.</p>
-        <p>Hosting environments are continuously monitored for availability. Automated monitoring identifies failed checks and service interruptions, which are reviewed and investigated during normal business hours. NemesisNet will make reasonable efforts to restore affected services where possible: monitor → detect → investigate → restore, and communicate where necessary.</p>
+        <p>Hosting environments are continuously monitored for availability. Availability checks run continuously, with service interruptions flagged for investigation during normal business hours. Detected service interruptions are investigated during normal business hours, and reasonable efforts are made to restore affected services where possible.</p>
         <p>Hosting is provided on a best-effort basis and does not include a guaranteed uptime SLA unless a separate SLA is agreed in writing. Planned maintenance, upstream provider outages, network failures, DNS issues, client-side changes, third-party services, and circumstances outside NemesisNet's reasonable control may affect availability.</p>
         <p class="scope-note">Need a formal uptime SLA, redundancy, managed backups, or failover? These are available as additional managed services and can be specified per project — see the Custom tier and add-ons above.</p>
         <p>If your system needs grow beyond basic hosting, the Support Retainer (from R7,500/month) provides reserved support capacity for troubleshooting and maintenance. The DevOps Retainer covers infrastructure and CI/CD management.</p>
@@ -162,6 +164,7 @@
             <li><span>Billing:</span> <strong>Monthly</strong></li>
             <li><span>Tiers:</span> <strong>Static → Custom</strong></li>
             <li><span>Response:</span> <strong>Best-effort</strong></li>
+            <li><span>Support Hours:</span> <strong>Mon–Fri, 9AM–5PM SAST</strong></li>
           </ul>
         </div>
         <div class="sidebar-card">
