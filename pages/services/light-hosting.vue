@@ -13,11 +13,11 @@
         </div>
 
         <h2>What It Is</h2>
-        <p>Light Hosting is a monthly retainer that keeps your deployed systems running — server hosting, SSL certificates, uptime monitoring, and security patches. You built it or we built it, either way it needs to stay online. This covers the basics so you do not have to think about infrastructure maintenance.</p>
-        <p>No feature development, no bug fixes, no new integrations. Just reliable hosting with someone watching the dashboards so you do not have to.</p>
+        <p>Light Hosting is managed hosting billed monthly per project — pick the tier that matches the system: a static site, a small app, a CMS, or a full-stack business application. Every tier bundles hosting, SSL management, Cloudflare/DNS configuration, uptime monitoring, and OS security patches. You built it or we built it, either way it stays online without you thinking about infrastructure.</p>
+        <p>No feature development, no bug fixes, no new integrations. Just reliable hosting with someone watching the dashboards so you do not have to. You pay for managed hosting as a service — the underlying infrastructure is our implementation detail, not your line item.</p>
 
         <h2>Who It's For</h2>
-        <p><strong>Teams with deployed systems that need basic maintenance</strong> — static sites, brochure pages, simple apps with low traffic. <strong>Projects that are feature-complete</strong> and just need to stay online. <strong>Clients who want peace of mind</strong> without paying for a full support or DevOps retainer. <strong>Any system where uptime matters but active development is not needed.</strong></p>
+        <p><strong>Static and brochure sites</strong> that need fast, boringly reliable hosting. <strong>Small apps and APIs</strong> (PocketBase, Node, small databases) that need Docker hosting without DevOps overhead. <strong>WordPress and WooCommerce sites</strong> that need application-plus-database hosting. <strong>Business systems</strong> (Spring Boot, full-stack apps) that need allocated resources and monitoring. <strong>Anyone who wants peace of mind</strong> without paying for a full support or DevOps retainer.</p>
 
         <h2>What's Included</h2>
         <ul class="feature-list">
@@ -40,8 +40,9 @@
           <li><XCircle :size="18" /> Backup storage or disaster recovery (see Backup Management)</li>
           <li><XCircle :size="18" /> Unlimited redeployment or reconfiguration work</li>
           <li><XCircle :size="18" /> Uptime or SLA guarantees controlled by third-party providers</li>
+          <li><XCircle :size="18" /> Domain registration fees (paid directly to your registrar)</li>
         </ul>
-        <p class="scope-note">SSL certificates may be free through the client's Cloudflare configuration. The certificate being free does not mean the engineering or configuration work is free. Deployment and configuration are engineering/setup work.</p>
+        <p class="scope-note">SSL certificates issued through Let's Encrypt or Cloudflare carry no separate charge. Ongoing SSL configuration, renewal management, and monitoring are bundled into every hosting tier — they are part of the service, not itemized extras. Deployment and configuration work is engineering; the certificate itself is free.</p>
 
         <h2>What You Get Each Month</h2>
         <div class="process-steps">
@@ -62,9 +63,70 @@
           </div>
         </div>
 
-        <h2>Pricing</h2>
-        <p><strong>R850/month</strong> — flat rate, no hidden fees. Covers up to 2 deployed systems on shared/managed VPS infrastructure sized for the client's application and expected traffic. Dedicated resources or increased capacity are quoted separately.</p>
-        <p>Domain registration and renewal are charged at actual cost. The R850 covers hosting infrastructure only.</p>
+        <h2>Hosting Tiers</h2>
+        <p>One tier per project, billed monthly. Project builds include initial deployment and setup — ongoing hosting below is always billed separately.</p>
+        <div class="compare-grid">
+          <div class="compare-card">
+            <h3>Static</h3>
+            <div class="compare-price">R300/mo</div>
+            <ul class="compare-list">
+              <li>Static and brochure websites</li>
+              <li>Hosting + SSL management</li>
+              <li>Cloudflare/DNS configuration</li>
+              <li>Basic uptime monitoring</li>
+            </ul>
+          </div>
+          <div class="compare-card">
+            <h3>App</h3>
+            <div class="compare-price">R600/mo</div>
+            <ul class="compare-list">
+              <li>Small apps and APIs</li>
+              <li>Docker hosting + SSL management</li>
+              <li>Cloudflare/DNS configuration</li>
+              <li>Uptime monitoring</li>
+            </ul>
+          </div>
+          <div class="compare-card">
+            <h3>CMS</h3>
+            <div class="compare-price">R850/mo</div>
+            <ul class="compare-list">
+              <li>WordPress / WooCommerce + database</li>
+              <li>Application + database hosting</li>
+              <li>SSL management + Cloudflare/DNS</li>
+              <li>Uptime monitoring</li>
+            </ul>
+          </div>
+          <div class="compare-card">
+            <h3>Business</h3>
+            <div class="compare-price">From R1,200/mo</div>
+            <ul class="compare-list">
+              <li>Full-stack and business applications</li>
+              <li>Application + database + Docker</li>
+              <li>Allocated resources + monitoring</li>
+              <li>OS security maintenance</li>
+            </ul>
+          </div>
+          <div class="compare-card">
+            <h3>Custom / Production</h3>
+            <div class="compare-price">Quote</div>
+            <ul class="compare-list">
+              <li>High-traffic or complex systems</li>
+              <li>Dedicated resources + redundancy</li>
+              <li>Backup and recovery planning</li>
+              <li>Scoped per project</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2>Optional Add-Ons</h2>
+        <ul class="feature-list">
+          <li><CheckCircle :size="18" /> External/off-site backups — +R100–R200/month depending on storage (heavy needs quoted)</li>
+          <li><CheckCircle :size="18" /> Secondary/failover node — +R100–R200/month</li>
+          <li><CheckCircle :size="18" /> Priority support response — +R200–R500/month</li>
+          <li><CheckCircle :size="18" /> Additional storage — quoted (pass-through + management)</li>
+          <li><CheckCircle :size="18" /> Major migration or recovery work — quoted separately</li>
+        </ul>
+        <p class="scope-note">Domain registration and renewal are paid directly to your registrar — we handle the DNS configuration. Every tier already includes SSL management, Cloudflare/DNS setup, monitoring, and OS security patches; the add-ons above cover everything beyond that baseline.</p>
         <p>If your system needs grow beyond basic hosting, the Support Retainer (from R7,500/month) provides reserved support capacity for troubleshooting and maintenance. The DevOps Retainer covers infrastructure and CI/CD management.</p>
 
         <ServiceFooter
@@ -85,9 +147,9 @@
         <div class="sidebar-card">
           <h3>Service Details</h3>
           <ul class="sidebar-list">
-            <li><span>Price:</span> <strong>R850/month</strong></li>
+            <li><span>Price:</span> <strong>From R300/month</strong></li>
             <li><span>Billing:</span> <strong>Monthly</strong></li>
-            <li><span>Systems:</span> <strong>Up to 2</strong></li>
+            <li><span>Tiers:</span> <strong>Static → Custom</strong></li>
             <li><span>Response:</span> <strong>Best-effort</strong></li>
           </ul>
         </div>
@@ -109,17 +171,17 @@
 import { CheckCircle, XCircle } from 'lucide-vue-next'
 
 useHead({
-  title: 'Light Hosting | R850/mo Server Hosting | NemesisNet',
+  title: 'Managed Hosting | From R300/mo | NemesisNet',
   meta: [
-    { name: 'description', content: 'Light hosting for deployed systems: server hosting, SSL, uptime monitoring, security patches. R850/month. Cape Town, South Africa.' },
-    { property: 'og:title', content: 'Light Hosting | NemesisNet' },
-    { property: 'og:description', content: 'Hosting, SSL, uptime monitoring, and security patches. R850/month flat rate.' },
+    { name: 'description', content: 'Managed hosting tiers from R300/month: static, app, CMS, business hosting with SSL, monitoring, patches. South Africa.' },
+    { property: 'og:title', content: 'Managed Hosting | NemesisNet' },
+    { property: 'og:description', content: 'Hosting tiers from R300/month: static, app, CMS, business. SSL, monitoring, patches.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://nemesisnet.co.za/services/light-hosting' },
     { property: 'og:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
     { name: 'twitter:image', content: 'https://nemesisnet.co.za/images/brand/Nemesis_Logo_Icon.png' },
-    { name: 'twitter:title', content: 'Light Hosting | SSL, Uptime Monitoring | NemesisNet' },
-    { name: 'twitter:description', content: 'Hosting, SSL, uptime monitoring, and security patches. R850/month flat rate.' }
+    { name: 'twitter:title', content: 'Managed Hosting | From R300/mo | NemesisNet' },
+    { name: 'twitter:description', content: 'Hosting tiers from R300/month: static, app, CMS, business. SSL, monitoring, patches.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://nemesisnet.co.za/services/light-hosting' }
@@ -131,10 +193,10 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'Service',
         'name': 'Light Hosting',
-        'description': 'Server hosting, SSL, uptime monitoring, and security patches for deployed systems.',
+        'description': 'Managed hosting tiers from R300/month: static, app, CMS, and business hosting with SSL management, monitoring, and security patches.',
         'provider': { '@type': 'Organization', 'name': 'NemesisNet', 'url': 'https://nemesisnet.co.za' },
         'areaServed': { '@type': 'Country', 'name': 'South Africa' },
-        'offers': { '@type': 'Offer', 'price': '850', 'priceCurrency': 'ZAR', 'billingDuration': 'P1M' },
+        'offers': { '@type': 'Offer', 'price': '300', 'priceCurrency': 'ZAR', 'billingDuration': 'P1M', 'description': 'Starting price for managed hosting tiers' },
         'mainEntityOfPage': {
           '@type': 'WebPage',
           '@id': 'https://nemesisnet.co.za/services/light-hosting'
@@ -155,7 +217,7 @@ useHead({
     },
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Light Hosting?","acceptedAnswer":{"@type":"Answer","text":"Containerised infrastructure hosting for deployed systems with SSL configuration, basic uptime monitoring, and OS security patches. R850/month."}},{"@type":"Question","name":"Where are sites hosted?","acceptedAnswer":{"@type":"Answer","text":"On managed infrastructure. Domain and SSL configuration assistance is included. Client-owned Cloudflare/DNS setup is supported."}},{"@type":"Question","name":"Do you handle application updates?","acceptedAnswer":{"@type":"Answer","text":"Light Hosting covers infrastructure-level security patching only. Application dependency upgrades, bug fixes, and feature development are not included and are available through separate engineering services."}}]})
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Light Hosting?","acceptedAnswer":{"@type":"Answer","text":"Managed hosting billed monthly per project, from R300/month. Tiers cover static sites, small apps, CMS, business applications, and custom production systems. Every tier bundles hosting, SSL management, Cloudflare/DNS configuration, monitoring, and OS security patches."}},{"@type":"Question","name":"Where are sites hosted?","acceptedAnswer":{"@type":"Answer","text":"On managed infrastructure run by NemesisNet. Domain registration is paid directly to your registrar; DNS configuration is handled by us. SSL management is bundled, not itemized."}},{"@type":"Question","name":"Do you handle application updates?","acceptedAnswer":{"@type":"Answer","text":"Light Hosting covers infrastructure-level security patching only. Application dependency upgrades, bug fixes, and feature development are not included and are available through separate engineering services."}}]})
     }
   ]
 })
@@ -181,6 +243,13 @@ useHead({
 .process-step .step-number { display: inline-block; background: var(--accent-color); color: #000; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; }
 .process-step h3 { color: var(--accent-color); font-size: 1rem; margin: 0 0 8px; }
 .process-step p { margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+.compare-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 24px 0; }
+.compare-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+.compare-card h3 { color: var(--accent-color); font-size: 1rem; margin: 0; }
+.compare-price { font-size: 1.5rem; font-weight: 700; color: var(--text-color); }
+.compare-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; flex: 1; }
+.compare-list li { padding: 4px 0; color: var(--text-muted); }
+.compare-list li::before { content: '✓ '; color: #22c55e; }
 
 .detail-sidebar { position: sticky; top: 100px; height: fit-content; display: flex; flex-direction: column; gap: 20px; }
 .sidebar-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 24px; -webkit-backdrop-filter: blur(10px); }

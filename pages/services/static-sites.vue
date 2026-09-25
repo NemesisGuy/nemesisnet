@@ -25,7 +25,7 @@
           <li><CheckCircle :size="18" /> Docker + Nginx deployment included</li>
           <li><CheckCircle :size="18" /> Basic SEO setup (meta tags, Open Graph, sitemap)</li>
           <li><CheckCircle :size="18" /> Performance optimisation (lazy loading, compressed assets)</li>
-          <li><CheckCircle :size="18" /> SSL certificate and domain configuration</li>
+          <li><CheckCircle :size="18" /> Initial SSL certificate and domain configuration (ongoing hosting billed separately)</li>
           <li><CheckCircle :size="18" /> Contact form integration (if needed)</li>
           <li><CheckCircle :size="18" /> Analytics setup (optional)</li>
         </ul>
@@ -60,7 +60,7 @@
           <div class="process-step">
             <span class="step-number">4</span>
             <h3>Week 4 — Deploy &amp; Launch</h3>
-            <p>Docker deployment, SSL setup, domain configuration, and final testing. Your site goes live with monitoring in place.</p>
+            <p>Docker deployment, SSL setup, domain configuration, and final testing. Your site goes live with monitoring in place. The build covers initial setup — ongoing hosting is a separate monthly service (see Light Hosting).</p>
           </div>
         </div>
 

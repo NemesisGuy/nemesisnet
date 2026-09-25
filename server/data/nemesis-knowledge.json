@@ -16,7 +16,7 @@
     { "name": "Platform / Enterprise", "price": "From R350,000", "timeline": "16–30+ weeks", "description": "Multi-tenant SaaS, AI pipelines, self-hosted LLM/TTS, MCP integrations, agent workflows." },
     { "name": "AI Architecture / Consulting", "price": "From R10,000", "timeline": "Half-day or full-day", "description": "Working sessions for AI and platform decisions." },
     { "name": "Custom MCP & Agent Integrations", "price": "From R55,000", "timeline": "3–6 weeks", "description": "Custom MCP servers connecting AI agents to CMS, CRM, databases." },
-    { "name": "Light Hosting", "price": "R850/month", "timeline": "Ongoing", "description": "Hosting, SSL, uptime monitoring, security patches." },
+    { "name": "Light Hosting", "price": "From R300/month", "timeline": "Ongoing", "description": "Managed hosting tiers: static, app, CMS, business. SSL management, monitoring, patches." },
     { "name": "Support Retainer", "price": "R7,500/month", "timeline": "Ongoing", "description": "Reserved support capacity for troubleshooting, maintenance, and operational assistance. 8 hours included, overage at hourly rate." }
   ],
   "projects": [
