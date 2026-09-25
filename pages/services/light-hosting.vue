@@ -39,7 +39,7 @@
           <li><XCircle :size="18" /> Full observability (see Observability service)</li>
           <li><XCircle :size="18" /> Backup storage or disaster recovery (see Backup Management)</li>
           <li><XCircle :size="18" /> Unlimited redeployment or reconfiguration work</li>
-          <li><XCircle :size="18" /> Uptime or SLA guarantees controlled by third-party providers</li>
+          <li><XCircle :size="18" /> Guaranteed uptime SLA (hosting is best-effort unless a separate SLA is agreed in writing)</li>
           <li><XCircle :size="18" /> Domain registration fees (paid directly to your registrar)</li>
         </ul>
         <p class="scope-note">SSL certificates issued through Let's Encrypt or Cloudflare carry no separate charge. Ongoing SSL configuration, renewal management, and monitoring are bundled into every hosting tier — they are part of the service, not itemized extras. Deployment and configuration work is engineering; the certificate itself is free.</p>
@@ -74,6 +74,7 @@
               <li>Hosting + SSL management</li>
               <li>Cloudflare/DNS configuration</li>
               <li>Basic uptime monitoring</li>
+              <li>Best-effort availability (no SLA)</li>
             </ul>
           </div>
           <div class="compare-card">
@@ -84,6 +85,7 @@
               <li>Docker hosting + SSL management</li>
               <li>Cloudflare/DNS configuration</li>
               <li>Uptime monitoring</li>
+              <li>Best-effort availability (no SLA)</li>
             </ul>
           </div>
           <div class="compare-card">
@@ -94,6 +96,7 @@
               <li>Application + database hosting</li>
               <li>SSL management + Cloudflare/DNS</li>
               <li>Uptime monitoring</li>
+              <li>Best-effort availability (no SLA)</li>
             </ul>
           </div>
           <div class="compare-card">
@@ -104,6 +107,7 @@
               <li>Application + database + Docker</li>
               <li>Allocated resources + monitoring</li>
               <li>OS security maintenance</li>
+              <li>Best-effort availability (no SLA)</li>
             </ul>
           </div>
           <div class="compare-card">
@@ -113,6 +117,7 @@
               <li>High-traffic or complex systems</li>
               <li>Dedicated resources + redundancy</li>
               <li>Backup and recovery planning</li>
+              <li>Formal SLA available</li>
               <li>Scoped per project</li>
             </ul>
           </div>
@@ -127,6 +132,12 @@
           <li><CheckCircle :size="18" /> Major migration or recovery work — quoted separately</li>
         </ul>
         <p class="scope-note">Domain registration and renewal are paid directly to your registrar — we handle the DNS configuration. Every tier already includes SSL management, Cloudflare/DNS setup, monitoring, and OS security patches; the add-ons above cover everything beyond that baseline.</p>
+
+        <h2>Availability &amp; Support Response</h2>
+        <p>Light Hosting is a managed, best-effort hosting service. NemesisNet manages the hosting environment — infrastructure monitoring, availability monitoring, Docker and application services, and routine maintenance.</p>
+        <p>Uptime is monitored continuously, and interruptions are investigated when detected. Where an outage occurs, NemesisNet makes reasonable efforts to diagnose and restore service as quickly as practical: monitor → detect → investigate → restore, and communicate where necessary.</p>
+        <p>Hosting is provided on a best-effort basis and does not include a guaranteed uptime SLA unless a separate SLA is agreed in writing. Planned maintenance, upstream provider outages, network failures, DNS issues, client-side changes, third-party services, and circumstances outside NemesisNet's reasonable control may affect availability.</p>
+        <p class="scope-note">Need a formal uptime SLA, redundancy, managed backups, or failover? These are available as additional managed services and can be specified per project — see the Custom tier and add-ons above.</p>
         <p>If your system needs grow beyond basic hosting, the Support Retainer (from R7,500/month) provides reserved support capacity for troubleshooting and maintenance. The DevOps Retainer covers infrastructure and CI/CD management.</p>
 
         <ServiceFooter
@@ -217,7 +228,7 @@ useHead({
     },
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Light Hosting?","acceptedAnswer":{"@type":"Answer","text":"Managed hosting billed monthly per project, from R300/month. Tiers cover static sites, small apps, CMS, business applications, and custom production systems. Every tier bundles hosting, SSL management, Cloudflare/DNS configuration, monitoring, and OS security patches."}},{"@type":"Question","name":"Where are sites hosted?","acceptedAnswer":{"@type":"Answer","text":"On managed infrastructure run by NemesisNet. Domain registration is paid directly to your registrar; DNS configuration is handled by us. SSL management is bundled, not itemized."}},{"@type":"Question","name":"Do you handle application updates?","acceptedAnswer":{"@type":"Answer","text":"Light Hosting covers infrastructure-level security patching only. Application dependency upgrades, bug fixes, and feature development are not included and are available through separate engineering services."}}]})
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Light Hosting?","acceptedAnswer":{"@type":"Answer","text":"Managed hosting billed monthly per project, from R300/month. Tiers cover static sites, small apps, CMS, business applications, and custom production systems. Every tier bundles hosting, SSL management, Cloudflare/DNS configuration, monitoring, and OS security patches."}},{"@type":"Question","name":"Where are sites hosted?","acceptedAnswer":{"@type":"Answer","text":"On managed infrastructure run by NemesisNet. Domain registration is paid directly to your registrar; DNS configuration is handled by us. SSL management is bundled, not itemized."}},{"@type":"Question","name":"Do you handle application updates?","acceptedAnswer":{"@type":"Answer","text":"Light Hosting covers infrastructure-level security patching only. Application dependency upgrades, bug fixes, and feature development are not included and are available through separate engineering services."}},{"@type":"Question","name":"Do you guarantee uptime?","acceptedAnswer":{"@type":"Answer","text":"Hosting is managed on a best-effort basis: uptime is monitored continuously and outages are investigated and restored as quickly as practical. No numeric uptime SLA applies unless separately agreed in writing. Formal SLAs with redundancy and failover are available on Custom plans."}}]})
     }
   ]
 })
