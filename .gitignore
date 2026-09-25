@@ -25,6 +25,9 @@ lighthouse-report-*.json
 # Temporary artifacts
 temp/
 
+# Promo render farm (scenes, frames, clips, pipeline notes — gitignored by design)
+promo-creatives/
+
 # Business docs (contracts, SOPs, forms, proposals)
 nemesis-docs/
 content-clusters.md
