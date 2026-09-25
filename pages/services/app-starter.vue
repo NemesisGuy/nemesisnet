@@ -47,7 +47,7 @@
           <li><CheckCircle :size="18" /> System design — the right data model, the right schema, the right roles from day one</li>
           <li><CheckCircle :size="18" /> Backend architecture that handles auth, real-time, and storage without glue code</li>
           <li><CheckCircle :size="18" /> A frontend your team will actually use — clean, responsive, built for the workflow</li>
-          <li><CheckCircle :size="18" /> Production deployment — Docker, Nginx, SSL, domain, live and monitored</li>
+          <li><CheckCircle :size="18" /> Production deployment — Docker, Nginx, SSL, domain, live and monitored (initial setup; ongoing hosting billed separately)</li>
           <li><CheckCircle :size="18" /> Delivery speed — PocketBase eliminates months of backend boilerplate so you get to production faster</li>
         </ul>
 
@@ -66,7 +66,7 @@
           <div class="process-step">
             <span class="step-number">3</span>
             <h3>Deploy &amp; Launch</h3>
-            <p>Docker deployment, SSL, domain setup, and final testing. Your system goes live with monitoring in place and support available.</p>
+            <p>Docker deployment, SSL, domain setup, and final testing. Your system goes live with monitoring in place and support available. The build covers initial setup — ongoing hosting is a separate monthly service (see Light Hosting).</p>
           </div>
         </div>
 

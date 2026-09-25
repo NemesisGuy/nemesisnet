@@ -145,13 +145,13 @@
           <NuxtLink to="/services/light-hosting" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Server :size="24" /></ClientOnly></div>
             <h3 class="pricing-title">Light Hosting</h3>
-            <div class="pricing-price">R850</div>
+            <div class="pricing-price">From R300</div>
             <div class="pricing-unit">Monthly</div>
-            <p class="pricing-description">Containerised deployment, SSL, uptime monitoring, and security patches for deployed systems.</p>
+            <p class="pricing-description">Managed hosting tiers — static, app, CMS, and business systems with SSL, monitoring, and patches.</p>
             <ul class="pricing-points">
-              <li>Server hosting and SSL management</li>
-              <li>Basic uptime monitoring and alerts</li>
-              <li>OS and infrastructure security maintenance</li>
+              <li>Static R300 · App R600 · CMS R850</li>
+              <li>Business from R1,200 · Custom quoted</li>
+              <li>Uptime monitoring and alerts</li>
             </ul>
             <span class="btn-glass">See Details</span>
           </NuxtLink>
@@ -474,7 +474,7 @@ const toggleFaq = (i) => { openFaq.value = openFaq.value === i ? null : i }
 
 const faqs = [
   { q: 'What technologies does NemesisNet use?', a: 'NemesisNet works with Vue 3, React, Nuxt 4, Spring Boot, Python, PocketBase, Docker, PostgreSQL, Redis, and AI frameworks including MCP, GGUF models, and CUDA-accelerated inference.' },
-  { q: 'How does pricing work?', a: 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R7,000 for static sites to R900,000+ for platform and enterprise work. Specialist engagements start from R10,000. Hosting starts at R850/month. Retainers start from R7,500/month with defined capacity.' },
+  { q: 'How does pricing work?', a: 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R7,000 for static sites to R900,000+ for platform and enterprise work. Specialist engagements start from R10,000. Hosting starts at R300/month. Retainers start from R7,500/month with defined capacity.' },
   { q: 'Does NemesisNet work with clients outside Cape Town?', a: 'Yes. While based in Cape Town, South Africa, NemesisNet works with clients remotely across the country and internationally. Discovery calls and scoping sessions are conducted online.' },
   { q: 'What is the typical delivery timeline?', a: 'Static sites ship in 2–4 weeks. App starters typically take 4–8 weeks. Business systems range from 8–16 weeks. Platform and enterprise builds run 16–30+ weeks. All timelines are scoped during the discovery phase.' },
   { q: 'Can NemesisNet integrate with existing systems?', a: 'Yes. NemesisNet builds API integrations, MCP servers, and data pipelines that connect to existing CMS, CRM, and database systems. Custom MCP agents can automate workflows across multiple platforms.' },
@@ -517,7 +517,7 @@ useHead({
             'name': 'How does pricing work?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R7,000 for static sites to R900,000+ for platform and enterprise work. App Starter projects range from R35,000 to R80,000. Specialist engagements start from R10,000 and R55,000 respectively. Hosting starts at R850/month. Retainers start from R7,500/month with defined capacity.'
+              'text': 'Transparent starting-from pricing is provided for planning. Final quotes are confirmed after a discovery call and technical scoping session. Project builds range from R7,000 for static sites to R900,000+ for platform and enterprise work. App Starter projects range from R35,000 to R80,000. Specialist engagements start from R10,000 and R55,000 respectively. Hosting starts at R300/month. Retainers start from R7,500/month with defined capacity.'
             }
           },
           {

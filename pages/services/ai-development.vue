@@ -18,7 +18,7 @@
 
         <h2>The Solution: Production-Grade AI, Built for Your Constraints</h2>
         <p>NemesisNet builds custom AI infrastructure — MCP agents, self-hosted speech-to-text (STT) and text-to-speech (TTS) pipelines, multi-agent coding harnesses, and fine-tuned on-premise LLMs. Each system is designed for the operational constraints of the business it serves: latency budgets, hardware availability, security posture, and integration surface area.</p>
-        <p>Designed to minimize dependency on third-party API providers where self-hosting is appropriate. Architecture is portable across cloud providers, on-premise hardware, and hybrid deployments. You own the stack, you control the data, and the system works whether you're running on a Hetzner VPS or a rack of local GPUs.</p>
+        <p>Designed to minimize dependency on third-party API providers where self-hosting is appropriate. Architecture is portable across cloud providers, on-premise hardware, and hybrid deployments. You own the stack, you control the data, and the system works whether you're running on a cloud VPS or a rack of local GPUs.</p>
 
         <h2>MCP Agents &amp; Tool-Use Infrastructure</h2>
         <p>Model Context Protocol (MCP) servers let AI agents interact with real systems — databases, CMSs, CRMs, internal tooling — through structured, role-safe interfaces. Rather than generic API calls that the model hallucinates, MCP agents expose deterministic tools that agents can actually reason about.</p>

@@ -62,7 +62,7 @@ NemesisNet operates on the principle of digital sovereignty and architectural pu
 - [CMS Development](https://nemesisnet.co.za/services/cms) — Custom WordPress, WooCommerce, themes, plugins, and migrations. From R7K.
 
 ### Ongoing Support
-- [Light Hosting](https://nemesisnet.co.za/services/light-hosting) — Server hosting, SSL, uptime monitoring, security patches. R850/month.
+- [Light Hosting](https://nemesisnet.co.za/services/light-hosting) — Managed hosting tiers from R300/month: static, app, CMS, business. SSL management, monitoring, patches.
 - [Maintenance & Support](https://nemesisnet.co.za/services/maintenance) — Troubleshooting, plugin updates, config changes, minor fixes. R850–R1,100/hr.
 - [Support Retainer](https://nemesisnet.co.za/services/support-retainer) — Reserved support capacity: 8 hours/month, from R7,500 (R938/hr effective vs R1,100 ad hoc).
 - [DevOps Retainer](https://nemesisnet.co.za/services/devops-retainer) — Reserved DevOps capacity: 6 hours/month, from R7,500 (R1,250/hr effective vs R1,400 ad hoc).

@@ -38,7 +38,7 @@
           <li><XCircle :size="18" /> AI/ML pipelines or LLM integrations</li>
           <li><XCircle :size="18" /> Complex financial or compliance systems</li>
           <li><XCircle :size="18" /> Microservices architecture (monolith-first approach)</li>
-          <li><XCircle :size="18" /> Ongoing hosting management (available as retainer add-on)</li>
+          <li><XCircle :size="18" /> Ongoing hosting management (see Light Hosting)</li>
         </ul>
 
         <h2>Timeline Breakdown</h2>

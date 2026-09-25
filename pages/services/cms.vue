@@ -76,7 +76,7 @@
           <div class="process-step">
             <span class="step-number">3</span>
             <h3>Launch</h3>
-            <p>Deployment, DNS configuration, SSL setup, and handover documentation. Your team gets access credentials and a walkthrough of the admin interface.</p>
+            <p>Deployment, DNS configuration, SSL setup, and handover documentation. Your team gets access credentials and a walkthrough of the admin interface. The build covers initial setup — ongoing hosting is a separate monthly service (see Light Hosting).</p>
           </div>
         </div>
 

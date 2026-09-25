@@ -188,12 +188,12 @@
           <NuxtLink to="/services/light-hosting" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Server :size="24" /></ClientOnly></div>
             <h3 class="pricing-title">Light Hosting</h3>
-            <div class="pricing-price">R850</div>
+            <div class="pricing-price">From R300</div>
             <div class="pricing-unit">Monthly</div>
-            <p class="pricing-description">Hosting, SSL, uptime monitoring, and security patches for deployed systems.</p>
+            <p class="pricing-description">Managed hosting tiers — static, app, CMS, and business systems with SSL and monitoring.</p>
             <ul class="pricing-points">
-              <li>Server hosting and SSL management</li>
-              <li>OS and infrastructure security patching</li>
+              <li>Static R300 · App R600 · CMS R850</li>
+              <li>Business from R1,200 · Custom quoted</li>
               <li>Uptime monitoring and alerts</li>
             </ul>
             <span class="btn-glass">See Details</span>
@@ -286,7 +286,7 @@ const faqs = [
   },
   {
     q: 'What\'s included in a project quote?',
-    a: 'Discovery, architecture, build, testing, deployment, Docker configuration, and handover documentation. Hosting is a separate monthly cost (from R850/month). The quote covers everything from first commit to production deployment — no hidden line items.'
+    a: 'Discovery, architecture, build, testing, deployment, Docker configuration, and handover documentation. Hosting is a separate monthly cost (from R300/month). The quote covers everything from first commit to production deployment — no hidden line items.'
   },
   {
     q: 'Can you match a cheaper quote?',
@@ -342,7 +342,7 @@ useHead({
             'name': "What's included in a project quote?",
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Discovery, architecture, build, testing, deployment, Docker configuration, and handover documentation. Hosting is a separate monthly cost (from R850/month). The quote covers everything from first commit to production deployment — no hidden line items.'
+              'text': 'Discovery, architecture, build, testing, deployment, Docker configuration, and handover documentation. Hosting is a separate monthly cost (from R300/month). The quote covers everything from first commit to production deployment — no hidden line items.'
             }
           },
           {
