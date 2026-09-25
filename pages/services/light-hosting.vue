@@ -49,7 +49,7 @@
           <div class="process-step">
             <span class="step-number">1</span>
             <h3>Automated Uptime Checks</h3>
-            <p>24/7 automated uptime monitoring. Uptime Kuma performs automated availability checks around the clock with a live status view. Failed checks are flagged for review, with incidents investigated during normal business hours or as soon as reasonably practical where circumstances require.</p>
+            <p>24/7 automated uptime monitoring. Automated availability checks run around the clock with a live status view. Failed checks are flagged for review, with incidents investigated during normal business hours or as soon as reasonably practical where circumstances require.</p>
           </div>
           <div class="process-step">
             <span class="step-number">2</span>

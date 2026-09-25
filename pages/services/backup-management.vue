@@ -36,7 +36,7 @@
           <li><XCircle :size="18" /> Egress and recovery costs (third-party)</li>
           <li><XCircle :size="18" /> Application hosting (use Light Hosting)</li>
         </ul>
-        <p class="scope-note">Storage costs from providers like Backblaze B2 are passed through or separately billed. They are not silently absorbed into the hosting price.</p>
+        <p class="scope-note">External storage costs are passed through or separately billed. They are not silently absorbed into the hosting price.</p>
 
         <h2>Pricing</h2>
         <p><strong>Custom pricing</strong> — depends on:</p>
@@ -159,7 +159,7 @@ useHead({
     },
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why are backups not included in Light Hosting?","acceptedAnswer":{"@type":"Answer","text":"Backup requirements vary significantly between clients. A client needing 5 GB daily backups has fundamentally different needs from one requiring 500 GB hourly backups with 90-day retention. Backup pricing reflects those differences."}},{"@type":"Question","name":"What are the storage costs?","acceptedAnswer":{"@type":"Answer","text":"Storage costs from providers like Backblaze B2 are passed through or separately billed. They are not silently absorbed into the hosting price. Final pricing depends on your specific backup requirements."}},{"@type":"Question","name":"What is included in Backup Management?","acceptedAnswer":{"@type":"Answer","text":"Backup configuration, database backups, application and file backups, retention policy management, and recovery procedures. Storage costs are identified separately."}}]})
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why are backups not included in Light Hosting?","acceptedAnswer":{"@type":"Answer","text":"Backup requirements vary significantly between clients. A client needing 5 GB daily backups has fundamentally different needs from one requiring 500 GB hourly backups with 90-day retention. Backup pricing reflects those differences."}},{"@type":"Question","name":"What are the storage costs?","acceptedAnswer":{"@type":"Answer","text":"External storage costs are passed through or separately billed. They are not silently absorbed into the hosting price. Final pricing depends on your specific backup requirements."}},{"@type":"Question","name":"What is included in Backup Management?","acceptedAnswer":{"@type":"Answer","text":"Backup configuration, database backups, application and file backups, retention policy management, and recovery procedures. Storage costs are identified separately."}}]})
     }
   ]
 })
