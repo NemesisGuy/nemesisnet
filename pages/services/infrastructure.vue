@@ -18,7 +18,7 @@
         <p>For AI and data-intensive applications, infrastructure challenges multiply. Model serving has different resource profiles than web APIs. TTS pipelines need low-latency GPU access. Vector databases require careful memory management. A one-size-fits-all infrastructure approach doesn't work when you're running fundamentally different workloads on the same cluster.</p>
 
         <h2>The Solution: Reliable, Observable, Scalable Infrastructure</h2>
-        <p>NemesisNet builds infrastructure that's invisible when it works — and that's exactly how it should be. We design Docker-based ecosystems with clear service boundaries, implement caching and queue patterns that absorb traffic spikes, and set up monitoring so you see problems before your users do.</p>
+        <p>NemesisNet builds infrastructure that's invisible when it works — and that's exactly how it should be. We design Docker-based ecosystems with clear service boundaries, implement caching and queue patterns that absorb traffic spikes, and set up monitoring with alerts that surface problems early.</p>
         <p>Every deployment is reproducible through infrastructure-as-code. Every service has health checks and graceful degradation. Every pipeline is automated from commit to production.</p>
 
         <h2>Backend Performance &amp; Caching</h2>
