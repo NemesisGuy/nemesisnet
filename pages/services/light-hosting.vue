@@ -48,8 +48,8 @@
         <div class="process-steps">
           <div class="process-step">
             <span class="step-number">1</span>
-            <h3>Infrastructure Monitoring</h3>
-            <p>24/7 uptime monitoring with instant alerts. We know if your system goes down before your users do.</p>
+            <h3>Automated Uptime Checks</h3>
+            <p>Uptime Kuma runs automated checks on your systems with a live status view. Failed checks are flagged for investigation — reviewed as soon as practically possible. This is a solo-operated service: there is no 24/7 dispatch desk, so response happens around availability, not to a pager.</p>
           </div>
           <div class="process-step">
             <span class="step-number">2</span>
@@ -135,7 +135,7 @@
 
         <h2>Availability &amp; Support Response</h2>
         <p>Light Hosting is a managed, best-effort hosting service. NemesisNet manages the hosting environment — infrastructure monitoring, availability monitoring, Docker and application services, and routine maintenance.</p>
-        <p>Uptime is monitored continuously, and interruptions are investigated when detected. Where an outage occurs, NemesisNet makes reasonable efforts to diagnose and restore service as quickly as practical: monitor → detect → investigate → restore, and communicate where necessary.</p>
+        <p>Automated checks monitor uptime around the clock, and failures are flagged for investigation. This is a solo-operated service with no 24/7 dispatch desk — detected issues are investigated as soon as practically possible. Where an outage occurs, NemesisNet makes reasonable efforts to diagnose and restore service: monitor → detect → investigate → restore, and communicate where necessary.</p>
         <p>Hosting is provided on a best-effort basis and does not include a guaranteed uptime SLA unless a separate SLA is agreed in writing. Planned maintenance, upstream provider outages, network failures, DNS issues, client-side changes, third-party services, and circumstances outside NemesisNet's reasonable control may affect availability.</p>
         <p class="scope-note">Need a formal uptime SLA, redundancy, managed backups, or failover? These are available as additional managed services and can be specified per project — see the Custom tier and add-ons above.</p>
         <p>If your system needs grow beyond basic hosting, the Support Retainer (from R7,500/month) provides reserved support capacity for troubleshooting and maintenance. The DevOps Retainer covers infrastructure and CI/CD management.</p>
@@ -228,7 +228,7 @@ useHead({
     },
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Light Hosting?","acceptedAnswer":{"@type":"Answer","text":"Managed hosting billed monthly per project, from R300/month. Tiers cover static sites, small apps, CMS, business applications, and custom production systems. Every tier bundles hosting, SSL management, Cloudflare/DNS configuration, monitoring, and OS security patches."}},{"@type":"Question","name":"Where are sites hosted?","acceptedAnswer":{"@type":"Answer","text":"On managed infrastructure run by NemesisNet. Domain registration is paid directly to your registrar; DNS configuration is handled by us. SSL management is bundled, not itemized."}},{"@type":"Question","name":"Do you handle application updates?","acceptedAnswer":{"@type":"Answer","text":"Light Hosting covers infrastructure-level security patching only. Application dependency upgrades, bug fixes, and feature development are not included and are available through separate engineering services."}},{"@type":"Question","name":"Do you guarantee uptime?","acceptedAnswer":{"@type":"Answer","text":"Hosting is managed on a best-effort basis: uptime is monitored continuously and outages are investigated and restored as quickly as practical. No numeric uptime SLA applies unless separately agreed in writing. Formal SLAs with redundancy and failover are available on Custom plans."}}]})
+      innerHTML: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Light Hosting?","acceptedAnswer":{"@type":"Answer","text":"Managed hosting billed monthly per project, from R300/month. Tiers cover static sites, small apps, CMS, business applications, and custom production systems. Every tier bundles hosting, SSL management, Cloudflare/DNS configuration, monitoring, and OS security patches."}},{"@type":"Question","name":"Where are sites hosted?","acceptedAnswer":{"@type":"Answer","text":"On managed infrastructure run by NemesisNet. Domain registration is paid directly to your registrar; DNS configuration is handled by us. SSL management is bundled, not itemized."}},{"@type":"Question","name":"Do you handle application updates?","acceptedAnswer":{"@type":"Answer","text":"Light Hosting covers infrastructure-level security patching only. Application dependency upgrades, bug fixes, and feature development are not included and are available through separate engineering services."}},{"@type":"Question","name":"Do you guarantee uptime?","acceptedAnswer":{"@type":"Answer","text":"Hosting is managed on a best-effort basis by a solo operator: automated checks monitor uptime and flagged outages are investigated and restored as soon as practically possible. No numeric uptime SLA applies unless separately agreed in writing. Formal SLAs with redundancy and failover are available on Custom plans."}}]})
     }
   ]
 })
