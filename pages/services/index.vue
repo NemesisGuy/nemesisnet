@@ -151,7 +151,7 @@
             <ul class="pricing-points">
               <li>Static R300 · App R600 · CMS R850</li>
               <li>Business from R1,200 · Custom quoted</li>
-              <li>Uptime monitoring and alerts</li>
+              <li>Uptime monitoring</li>
             </ul>
             <span class="btn-glass">See Details</span>
           </NuxtLink>
