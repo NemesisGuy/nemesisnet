@@ -26,6 +26,7 @@
         <a href="https://blog.nemesisnet.co.za/" target="_blank" rel="noopener noreferrer" aria-label="Blog (opens in new tab)">Blog</a>
         <a href="https://brand.nemesisnet.co.za" target="_blank" rel="noopener noreferrer" aria-label="Brand Guide (opens in new tab)">Brand Guide</a>
         <a href="https://github.com/NemesisGuy" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in new tab)">GitHub</a>
+        <a href="https://www.facebook.com/profile.php?id=61595048964505" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in new tab)">Facebook</a>
       </div>
     </div>
     <div class="footer-disclaimer">
