@@ -97,6 +97,7 @@
 
         <ServiceFooter
           :exploring="[
+            { title: 'Emergency PHP & WordPress Support', description: 'Prioritised assessment, patching, and remediation when a PHP or WordPress site needs urgent attention.', to: '/services/emergency-php-wordpress-support' },
             { title: 'Light Hosting', description: 'Infrastructure hosting for deployed systems — SSL, monitoring, and security patches.', to: '/services/light-hosting' },
             { title: 'Development Retainer', description: 'Reserved application engineering capacity for features, fixes, and improvements.', to: '/services/dev-retainer' }
           ]"
@@ -119,6 +120,7 @@
           <h3>Quick Links</h3>
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
+            <NuxtLink to="/services/emergency-php-wordpress-support" class="btn-glass">Emergency PHP Support</NuxtLink>
             <NuxtLink to="/services/light-hosting" class="btn-glass">Light Hosting</NuxtLink>
             <NuxtLink to="/services/dev-retainer" class="btn-glass">Development Retainer</NuxtLink>
             <NuxtLink to="/services/devops-retainer" class="btn-glass">DevOps Retainer</NuxtLink>

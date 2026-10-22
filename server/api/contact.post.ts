@@ -1,10 +1,22 @@
 import { Resend } from 'resend'
 
+// Valid service categories. Anything else is discarded rather than echoed back,
+// so a submitted subject can never be used to inject content into the email.
+const SUBJECTS: Record<string, string> = {
+  'custom-software': 'Custom Software Development',
+  'saas-development': 'SaaS Platform Development',
+  'ai-development': 'AI/ML Development',
+  'infrastructure': 'Infrastructure & DevOps',
+  'consulting': 'Technical Consulting',
+  'emergency-php-wordpress-support': 'Emergency PHP & WordPress Support',
+  'other': 'Other'
+}
+
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const body = await readBody(event)
 
-  const { token, name, email, message } = body
+  const { token, name, email, message, subject, other_subject } = body
 
   if (!token) {
     throw createError({ statusCode: 400, message: 'Turnstile token required.' })
@@ -58,6 +70,21 @@ export default defineEventHandler(async (event) => {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
 
+  // Resolve the subject to a known label. "other" allows a short free-text
+  // line, which is sanitised and length-capped before use.
+  let sanitizedSubject = SUBJECTS[subject] || SUBJECTS.other
+  if (subject === 'other') {
+    const custom = (other_subject || '').trim()
+    if (custom) {
+      const safeCustom = custom
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .slice(0, 120)
+      sanitizedSubject = `Other — ${safeCustom}`
+    }
+  }
+
   try {
     const resendApiKey = process.env.RESEND_API_KEY || config.resendApiKey;
     if (!resendApiKey) {
@@ -68,11 +95,12 @@ export default defineEventHandler(async (event) => {
       from: 'contact@send.nemesisnet.co.za',
       to: 'reignbuckingham@gmail.com',
       subject: `New Contact: ${sanitizedName}`,
-      text: `Name: ${trimmedName}\nEmail: ${trimmedEmail}\n\n${trimmedMessage}`,
+      text: `Name: ${trimmedName}\nEmail: ${trimmedEmail}\nSubject: ${sanitizedSubject}\n\n${trimmedMessage}`,
       html: `
         <h2>New Contact from Website</h2>
         <p><strong>Name:</strong> ${sanitizedName}</p>
         <p><strong>Email:</strong> <a href="mailto:${sanitizedEmail}">${sanitizedEmail}</a></p>
+        <p><strong>Subject:</strong> ${sanitizedSubject}</p>
         <hr>
         <p><strong>Message:</strong></p>
         <p>${sanitizedMessage.replace(/\n/g, '<br>')}</p>
