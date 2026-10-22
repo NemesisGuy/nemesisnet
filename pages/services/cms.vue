@@ -97,6 +97,7 @@
         <ServiceFooter
           :exploring="[
             { title: 'Light Hosting', description: 'Hosting, SSL, and uptime monitoring for your CMS once it\'s live.', to: '/services/light-hosting' },
+            { title: 'Emergency PHP & WordPress Support', description: 'Prioritised assessment, security patching, and remediation for WordPress sites.', to: '/services/emergency-php-wordpress-support' },
             { title: 'Maintenance & Support', description: 'Ongoing troubleshooting, updates, and configuration changes.', to: '/services/maintenance' }
           ]"
           exploring-note="From build to hosting to ongoing support — we cover the full lifecycle."
@@ -119,6 +120,7 @@
           <div class="quick-links">
             <NuxtLink to="/services" class="btn-glass">← All Services</NuxtLink>
             <NuxtLink to="/services/light-hosting" class="btn-glass">Light Hosting</NuxtLink>
+            <NuxtLink to="/services/emergency-php-wordpress-support" class="btn-glass">Emergency PHP Support</NuxtLink>
             <NuxtLink to="/services/maintenance" class="btn-glass">Maintenance &amp; Support</NuxtLink>
             <NuxtLink to="/contact" class="btn-glass">Contact</NuxtLink>
           </div>

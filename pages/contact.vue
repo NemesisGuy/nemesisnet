@@ -54,7 +54,7 @@
               name="subject"
               v-model="form.subject"
               required
-              toolparamdescription="The service category the enquiry relates to. One of: custom-software, saas-development, ai-development, infrastructure, consulting, other."
+              toolparamdescription="The service category the enquiry relates to. One of: custom-software, saas-development, ai-development, infrastructure, consulting, emergency-php-wordpress-support, other."
             >
               <option value="" disabled>Select a subject</option>
               <option value="custom-software">Custom Software Development</option>
@@ -62,6 +62,7 @@
               <option value="ai-development">AI/ML Development</option>
               <option value="infrastructure">Infrastructure & DevOps</option>
               <option value="consulting">Technical Consulting</option>
+              <option value="emergency-php-wordpress-support">Emergency PHP &amp; WordPress Support</option>
               <option value="other">Other</option>
             </select>
           </div>
@@ -166,6 +167,34 @@ const form = reactive({
   otherSubject: '',
   message: ''
 })
+
+// Service pages deep-link here with ?subject=<value> to preselect the
+// enquiry type. Only known values are honoured.
+//
+// /contact is prerendered as a static file, so the query string is not
+// available during SSR. On the client the router settles on the real URL
+// only after hydration, so the query is watched rather than read once.
+const SUBJECT_VALUES = [
+  'custom-software',
+  'saas-development',
+  'ai-development',
+  'infrastructure',
+  'consulting',
+  'emergency-php-wordpress-support',
+  'other'
+]
+
+const route = useRoute()
+
+watch(
+  () => route.query.subject,
+  (value) => {
+    if (typeof value === 'string' && SUBJECT_VALUES.includes(value)) {
+      form.subject = value
+    }
+  },
+  { immediate: true }
+)
 
 const turnstileToken = ref('')
 const submitting = ref(false)

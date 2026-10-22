@@ -212,6 +212,19 @@
         <h3 class="pricing-group-label">Support &amp; Maintenance</h3>
         <p class="pricing-group-desc">Routine troubleshooting, maintenance, and ongoing support for production systems.</p>
         <div class="pricing-grid">
+          <NuxtLink to="/services/emergency-php-wordpress-support" class="card pricing-card pricing-card--linked">
+            <div class="pricing-icon"><ClientOnly><Siren :size="24" /></ClientOnly></div>
+            <h3 class="pricing-title">Emergency PHP &amp; WordPress Support</h3>
+            <div class="pricing-price">R850 – R1,100</div>
+            <div class="pricing-unit">Hourly</div>
+            <p class="pricing-description">Prioritised assessment, security patching, and remediation for PHP and WordPress sites — scoped, subject to availability.</p>
+            <ul class="pricing-points">
+              <li>PHP version and end-of-support assessments</li>
+              <li>Core, plugin, and theme security updates</li>
+              <li>Prioritised vulnerability remediation</li>
+            </ul>
+            <span class="btn-glass">See Details</span>
+          </NuxtLink>
           <NuxtLink to="/services/maintenance" class="card pricing-card pricing-card--linked">
             <div class="pricing-icon"><ClientOnly><Wrench :size="24" /></ClientOnly></div>
             <h3 class="pricing-title">Maintenance &amp; Support</h3>
@@ -467,7 +480,7 @@
 </template>
 
 <script setup>
-import { Globe, Layers, Briefcase, Cpu, Brain, Workflow, Server, Shield, ChevronDown, Wrench, GitBranch, Activity, Database, Headphones, Code, Search } from 'lucide-vue-next'
+import { Globe, Layers, Briefcase, Cpu, Brain, Workflow, Server, Shield, ChevronDown, Wrench, GitBranch, Activity, Database, Headphones, Code, Search, Siren } from 'lucide-vue-next'
 
 const openFaq = ref(null)
 const toggleFaq = (i) => { openFaq.value = openFaq.value === i ? null : i }
