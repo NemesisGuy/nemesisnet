@@ -1,7 +1,12 @@
 <template>
 <div>
   <!-- Hero Section -->
-  <header>
+  <header class="hero-header">
+    <div class="hero-3d-bg">
+      <ClientOnly>
+        <InfrastructureHero3D />
+      </ClientOnly>
+    </div>
     <div class="hero-top">
       <div class="avatar-wrap" aria-hidden="false">
         <img :src="'/images/brand/Nemesis_Logo_Icon.webp'" class="avatar-img" alt="NemesisNet logo" loading="eager" fetchpriority="high" decoding="async" width="256" height="256">
@@ -213,6 +218,7 @@
 
 <script setup>
 import { Server, Cloud, Brain, Cpu, Workflow, Briefcase } from 'lucide-vue-next'
+import InfrastructureHero3D from '~/components/InfrastructureHero3D.vue'
 
 useHead({
   title: 'NemesisNet | Full-Stack Software, SaaS & AI',
@@ -258,6 +264,11 @@ useHead({
 </script>
 
 <style scoped>
+.hero-header { position: relative; overflow: hidden; background: transparent !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+.hero-header::before { opacity: 0 !important; }
+.hero-3d-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.hero-header > *:not(.hero-3d-bg) { position: relative; z-index: 1; }
+
 .services-grid { display: flex !important; flex-wrap: wrap; gap: 20px; justify-content: center; }
 .services-grid .card { flex: 0 1 calc(25% - 20px); min-width: 250px; max-width: 300px; }
 @media (max-width: 1100px) { .services-grid .card { flex: 0 1 calc(50% - 20px); max-width: none; } }
