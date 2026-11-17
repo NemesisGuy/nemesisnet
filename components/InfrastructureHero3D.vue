@@ -1,5 +1,5 @@
 <template>
-  <div ref="container" class="infrastructure-3d" aria-hidden="true" role="presentation"></div>
+  <div ref="container" class="infrastructure-3d" aria-hidden="true" role="presentation" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none; margin:0; padding:0;"></div>
 </template>
 
 <script setup lang="ts">
@@ -24,6 +24,10 @@ let animationId: number | null = null
 let nodes: any[] = []
 let lines: any = null
 let globeMesh: any = null
+let globeMat: any = null
+let lineMat: any = null
+let nodeMats: any[] = []
+let themeObserver: MutationObserver | null = null
 let isVisible = true
 let prefersReducedMotion = false
 let resizeObserver: ResizeObserver | null = null
@@ -35,9 +39,15 @@ const nodeCount = computed(() => {
   }
   if (typeof window === 'undefined') return 20
   const w = window.innerWidth
-  if (w < 640) return 12
+  if (w < 640) return 10
   if (w < 1024) return 20
   return 28
+})
+
+// Device pixel ratio ceiling: 1.5 on mobile, 2 on desktop.
+const maxPixelRatio = computed(() => {
+  if (typeof window === 'undefined') return 2
+  return window.innerWidth < 768 ? 1.5 : 2
 })
 
 function getAccentColor() {
@@ -47,6 +57,28 @@ function getAccentColor() {
     if (cssAccent) return cssAccent
   } catch {}
   return props.accent === 'cyan' ? '#00ffff' : '#1E88E5'
+}
+
+// Hero visuals read --hero-line / --hero-node from CSS so dark and light
+// themes can use different accents. Applied live on theme toggle.
+function applyHeroColors() {
+  try {
+    const root = getComputedStyle(document.documentElement)
+    const line = root.getPropertyValue('--hero-line').trim()
+    const node = root.getPropertyValue('--hero-node').trim()
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light'
+    const lineColor = line || getAccentColor()
+    const nodeColor = node || lineColor
+    if (globeMat) {
+      globeMat.color.set(lineColor)
+      globeMat.opacity = isLight ? 0.6 : 0.12
+    }
+    if (lineMat) {
+      lineMat.color.set(lineColor)
+      lineMat.opacity = isLight ? 0.6 : 0.35
+    }
+    nodeMats.forEach(m => m.color.set(nodeColor))
+  } catch {}
 }
 
 onMounted(async () => {
@@ -77,11 +109,16 @@ function init(THREE: any) {
   if (!container.value) return
 
   scene = new THREE.Scene()
-  scene.position.set(0, 1.2, 0)
+  // Sphere is centred in the square hero-emblem: no scene offset so the
+  // globe's centre coincides exactly with the shield's centre.
+  scene.position.set(0, 0, 0)
+  nodeMats = []
   camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000)
-  camera.position.z = 18
+  // Globe radius 4.5 at z=11 → diameter ≈ 9 / (2·tan30°·11 = 12.7) ≈ 71% of
+  // the emblem; with the shield at 55% of the emblem that is ≈1.3× the shield.
+  camera.position.z = 11
 
-  const pixelRatio = Math.min(window.devicePixelRatio || 1, window.innerWidth < 768 ? 1.5 : 2)
+  const pixelRatio = Math.min(window.devicePixelRatio || 1, maxPixelRatio.value)
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' })
   renderer.setPixelRatio(pixelRatio)
   renderer.setSize(container.value.clientWidth, container.value.clientHeight)
@@ -118,30 +155,13 @@ function init(THREE: any) {
   const globeRadius = 4.5
   // Wireframe globe
   const globeGeo = new THREE.IcosahedronGeometry(globeRadius, 3)
-  const globeMat = new THREE.MeshBasicMaterial({ color: accent, wireframe: true, transparent: true, opacity: 0.12 })
+  globeMat = new THREE.MeshBasicMaterial({ color: accent, wireframe: true, transparent: true, opacity: 0.12 })
   globeMesh = new THREE.Mesh(globeGeo, globeMat)
   scene.add(globeMesh)
 
-  // Star constellations background
-  const starCount = 220
-  const starGeo = new THREE.BufferGeometry()
-  const starPositions = new Float32Array(starCount * 3)
-  for (let i = 0; i < starCount; i++) {
-    const r = globeRadius * (1.6 + Math.random() * 0.8)
-    const y = 1 - Math.random() * 2
-    const rad = Math.sqrt(1 - y*y)
-    const theta = Math.random() * Math.PI * 2
-    starPositions[i*3] = Math.cos(theta) * rad * r
-    starPositions[i*3+1] = y * r
-    starPositions[i*3+2] = Math.sin(theta) * rad * r
-  }
-  starGeo.setAttribute('position', new THREE.BufferAttribute(starPositions, 3))
-  const starMat = new THREE.PointsMaterial({ size: 0.07, color: accent, transparent: true, opacity: 0.85 })
-  const stars = new THREE.Points(starGeo, starMat)
-  scene.add(stars)
-
   for (let i = 0; i < count; i++) {
     const mesh = new THREE.Mesh(nodeGeom, nodeMat.clone())
+    nodeMats.push(mesh.material)
     // Fibonaccisphere distribution for even spread
     const y = 1 - (i / (count - 1)) * 2
     const radius = Math.sqrt(1 - y * y)
@@ -161,7 +181,8 @@ function init(THREE: any) {
   // Lines
   const lineGeom = new THREE.BufferGeometry()
   lineGeom.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3))
-  const lineMat = new THREE.LineBasicMaterial({ color: accent, transparent: true, opacity: 0.35 })
+  const lineMatLocal = new THREE.LineBasicMaterial({ color: accent, transparent: true, opacity: 0.35 })
+  lineMat = lineMatLocal
   lines = new THREE.LineSegments(
     new THREE.BufferGeometry(),
     lineMat
@@ -189,17 +210,26 @@ function init(THREE: any) {
   lines.geometry.setAttribute('position', new THREE.BufferAttribute(linePositions, 3))
   scene.add(lines)
 
-  // Resize handling
+  // Resize handling: the canvas lives in the square hero-emblem wrapper,
+  // so size comes from the wrapper via ResizeObserver (container size is
+  // what the renderer must match — not the window).
   const onResize = () => {
     if (!container.value || !renderer || !camera) return
-    const w = container.value.clientWidth || window.innerWidth
-    const h = container.value.clientHeight || window.innerHeight
+    const w = container.value.clientWidth
+    const h = container.value.clientHeight
     if (!w || !h) return
     camera.aspect = w / h
     camera.updateProjectionMatrix()
     renderer.setSize(w, h)
   }
-  window.addEventListener('resize', onResize)
+  resizeObserver = new ResizeObserver(onResize)
+  if (container.value) resizeObserver.observe(container.value)
+
+  // Live theme switching: re-read --hero-line / --hero-node when the
+  // data-theme attribute flips, no page reload needed.
+  applyHeroColors()
+  themeObserver = new MutationObserver(applyHeroColors)
+  themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
 
   // Intersection observer for pause
   intersectionObserver = new IntersectionObserver((entries) => {
@@ -248,10 +278,22 @@ function init(THREE: any) {
   onResize()
   animate()
 
+  // Fade canvas in once Three.js is ready so it never pops/layout-shifts
+  if (container.value) {
+    container.value.classList.add('canvas-loaded')
+  }
+
   // Cleanup refs
   ;(container.value as any).__cleanup = () => {
-    window.removeEventListener('resize', onResize)
+    if (resizeObserver) {
+      resizeObserver.disconnect()
+      resizeObserver = null
+    }
     document.removeEventListener('visibilitychange', onVisibility)
+    if (themeObserver) {
+      themeObserver.disconnect()
+      themeObserver = null
+    }
     if (intersectionObserver && container.value) intersectionObserver.disconnect()
     cancel()
     // Dispose
@@ -259,10 +301,12 @@ function init(THREE: any) {
       m.geometry.dispose()
       m.material.dispose()
     })
+    nodeMats = []
     if (lines) {
       lines.geometry.dispose()
       lines.material.dispose()
     }
+    if (globeMat) globeMat.dispose()
     renderer.dispose()
     if (renderer.domElement && container.value) {
       container.value.removeChild(renderer.domElement)
@@ -296,17 +340,31 @@ onBeforeUnmount(() => {
   z-index: 0;
   margin: 0;
   padding: 0;
+  contain: layout;
 }
 .infrastructure-3d canvas {
   display: block;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.infrastructure-3d.canvas-loaded canvas {
+  opacity: 0.7;
 }
 
 /* Reduce opacity further on mobile */
 @media (max-width: 768px) {
   .infrastructure-3d {
     opacity: 0.35;
+  }
+}
+
+/* Mobile: fade the bottom of the sphere so it doesn't visually touch the title */
+@media (max-width: 640px) {
+  .infrastructure-3d {
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent);
+    mask-image: linear-gradient(to bottom, black 85%, transparent);
   }
 }
 
