@@ -440,8 +440,14 @@ const sendMessage = async () => {
   cursor: not-allowed;
 }
 
+@media (max-width: 640px) {
+  /* Move the FAB clear of hero CTA buttons on short mobile screens */
+  .chat-widget { bottom: 80px; right: 12px; }
+  .chat-fab { width: 40px; height: 40px; }
+  .chat-fab svg { width: 18px; height: 18px; }
+}
 @media (max-width: 480px) {
-  .chat-widget { bottom: 16px; right: 16px; }
+  .chat-widget { bottom: 80px; right: 12px; }
   .chat-panel {
     position: fixed;
     bottom: 0;

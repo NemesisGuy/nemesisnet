@@ -1,5 +1,9 @@
 <template>
   <div>
+    <!-- Faint page-wide star field behind all content, persists on every route -->
+    <ClientOnly>
+      <PageStarField />
+    </ClientOnly>
     <a href="#main" class="skip-link">Skip to content</a>
     <AppHeader />
     <PromoBanner />

@@ -1,15 +1,22 @@
 <template>
 <div>
   <!-- Hero Section -->
-  <header class="hero-header">
-    <div class="hero-3d-bg">
+  <header class="hero-header" style="min-height:100vh; padding:0; margin:0; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; overflow:hidden;">
+    <div class="hero-3d-bg" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none; contain:layout;">
       <ClientOnly>
-        <InfrastructureHero3D />
+        <HeroStars />
       </ClientOnly>
     </div>
     <div class="hero-top">
-      <div class="avatar-wrap" aria-hidden="false">
-        <img :src="'/images/brand/Nemesis_Logo_Icon.webp'" class="avatar-img" alt="NemesisNet logo" loading="eager" fetchpriority="high" decoding="async" width="256" height="256">
+      <!-- Square emblem: shield + sphere canvas share one centered wrapper
+           so the network sphere is always centered on the shield. -->
+      <div class="hero-emblem">
+        <ClientOnly>
+          <InfrastructureHero3D />
+        </ClientOnly>
+        <div class="avatar-wrap" aria-hidden="false">
+          <img :src="'/images/brand/Nemesis_Logo_Icon.webp'" class="avatar-img" alt="NemesisNet logo" loading="eager" fetchpriority="high" decoding="async" width="256" height="256">
+        </div>
       </div>
       <div>
         <h1>AI Infrastructure &amp; Platform Engineering</h1>
@@ -264,9 +271,9 @@ useHead({
 </script>
 
 <style scoped>
-.hero-header { position: relative; overflow: hidden; background: transparent !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+.hero-header { position: relative; overflow: hidden; background: transparent !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; min-height: 100vh; padding: 0 !important; margin: 0 !important; display: flex; flex-direction: column; justify-content: center; align-items: center; }
 .hero-header::before { opacity: 0 !important; }
-.hero-3d-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.hero-3d-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; contain: layout; margin: 0; padding: 0; }
 .hero-header > *:not(.hero-3d-bg) { position: relative; z-index: 1; }
 
 .services-grid { display: flex !important; flex-wrap: wrap; gap: 20px; justify-content: center; }
@@ -279,8 +286,27 @@ useHead({
 @media (max-width: 768px) { .projects-grid { grid-template-columns: 1fr !important; gap: 14px; } }
 
 .hero-top { gap: 20px; margin-bottom: 24px; }
-.avatar-wrap { width: 320px !important; height: 320px !important; border-width: 3px !important; box-shadow: 0 8px 30px rgba(0,0,0,0.4), 0 0 40px var(--accent-glow) !important; padding: 12px; }
-.avatar-wrap .avatar-img { max-width: 100%; max-height: 100%; width: 100%; height: 100%; object-fit: contain; }
+/* Square emblem wrapper: shield + sphere share one centered box.
+   The canvas (infrastructure-3d) fills the wrapper; the shield sits at 55%,
+   so the sphere at ~71% of the wrapper is ≈1.3× the shield width. */
+.hero-emblem {
+  position: relative;
+  width: clamp(220px, 60vw, 460px);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+}
+.hero-emblem .avatar-wrap {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 55% !important;
+  height: 55% !important;
+  border-width: 3px !important;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4), 0 0 40px var(--accent-glow) !important;
+  padding: 10px;
+  z-index: 1;
+}
+.hero-emblem .avatar-wrap .avatar-img { width: 68%; height: 68%; object-fit: contain; }
 .hero-top h1 { font-size: 2.4rem; line-height: 1.2; margin-bottom: 4px; }
 .hero-subtitle { font-size: 1.3rem; color: var(--text-muted); margin-top: 8px; }
 .hero-location { font-size: 0.9rem; color: var(--accent-color); margin-top: 4px; opacity: 0.8; }
@@ -362,6 +388,38 @@ section#contact { min-height: auto; display: flex; flex-direction: column; justi
 .testimonial-project-link { color: var(--accent-color); text-decoration: none; font-weight: 600; }
 .testimonial-project-link:hover { text-decoration: underline; }
 .testimonial-sep { color: var(--text-muted); }
+
+@media (max-width: 640px) {
+  /* Hero must fit the visible viewport on mobile: no 100vh min-height */
+  .hero-header { min-height: auto !important; padding-bottom: 4px !important; }
+
+  /* Emblem: sphere wrapper shrinks; the shield (55% of it) stays ~112-143px.
+     The masked sphere bottom means the emblem never pushes the title. */
+  .hero-emblem { width: clamp(200px, 55vw, 260px); }
+
+  /* Title: clamp() so it stays on 2 lines max */
+  .hero-top h1 { font-size: clamp(1.5rem, 6.5vw, 2.1rem) !important; line-height: 1.15 !important; margin-bottom: 2px; }
+
+  /* Tighten hero rhythm so title + subtitle + both CTAs fit without scrolling */
+  .hero-header { padding-bottom: 12px !important; }
+  .hero-top { gap: 10px; margin-bottom: 6px; }
+  /* Sphere bottom fades out on mobile — let the title ride up into that
+     faint zone a little so the CTAs stay in the fold. */
+  .hero-emblem { width: clamp(200px, 55vw, 260px); margin-bottom: -22px; }
+  .hero-subtitle { margin-top: 2px; font-size: 0.95rem !important; }
+  .hero-intro { margin-bottom: 8px; font-size: 0.8rem; line-height: 1.35; }
+
+  /* Two-up tag grid instead of four stacked rows. Right padding reserves
+     clearance for the fixed chat FAB (raised to bottom:80px) at the top
+     fold so it never covers a tag chip. */
+  .hero-what-we-build { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin: 8px 0; padding-right: 52px; }
+  .hero-tag { padding: 5px 8px; font-size: 0.7rem; text-align: center; }
+
+  /* Buttons side by side instead of stacked. The right margin reserves
+     clearance for the fixed chat FAB so it never covers a CTA button. */
+  .hero-links { flex-direction: row; flex-wrap: nowrap; gap: 8px; margin-top: 10px; margin-bottom: 0; width: auto; max-width: none; padding-left: 10px; padding-right: 10px; margin-right: 48px; }
+  .hero-links a, .hero-links .nuxt-link { width: auto; min-width: unset; flex: 1 1 0; padding: 9px 8px; font-size: 0.78rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+}
 
 
 </style>

@@ -110,10 +110,14 @@ function dismiss() {
   color: var(--text-color);
 }
 @media (max-width: 600px) {
-  .promo-banner { padding: 8px 12px; }
-  .promo-text { font-size: 0.78rem; }
+  .promo-banner { padding: 6px 10px; }
+  .promo-text {
+    font-size: 0.75rem;
+    line-height: 1.3;
+    max-width: 100%;
+  }
   .promo-banner-inner { gap: 6px; }
-  .promo-badge { font-size: 0.65rem; padding: 2px 8px; }
-  .promo-link { display: block; margin-left: 0; margin-top: 2px; }
+  .promo-badge { font-size: 0.6rem; padding: 2px 6px; }
+  .promo-link { display: inline; margin-left: 4px; }
 }
 </style>
