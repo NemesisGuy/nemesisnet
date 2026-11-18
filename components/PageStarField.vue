@@ -28,7 +28,7 @@ function readColor() {
   try {
     const v = getComputedStyle(document.documentElement).getPropertyValue('--hero-node').trim()
     if (v) color = v
-  } catch {}
+  } catch { /* CSS var lookup is best-effort */ }
 }
 
 function applyTheme() {
