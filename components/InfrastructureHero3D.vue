@@ -4,6 +4,9 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
+import type * as THREE_NS from 'three'
+
+type WithCleanup = HTMLElement & { __cleanup?: () => void }
 
 const props = defineProps({
   density: {
@@ -17,16 +20,16 @@ const props = defineProps({
 })
 
 const container = ref<HTMLElement | null>(null)
-let renderer: any = null
-let scene: any = null
-let camera: any = null
+let renderer: THREE_NS.WebGLRenderer | null = null
+let scene: THREE_NS.Scene | null = null
+let camera: THREE_NS.PerspectiveCamera | null = null
 let animationId: number | null = null
-let nodes: any[] = []
-let lines: any = null
-let globeMesh: any = null
-let globeMat: any = null
-let lineMat: any = null
-let nodeMats: any[] = []
+const nodes: THREE_NS.Mesh[] = []
+let lines: THREE_NS.LineSegments | null = null
+let globeMesh: THREE_NS.Mesh | null = null
+let globeMat: THREE_NS.MeshBasicMaterial | null = null
+let lineMat: THREE_NS.LineBasicMaterial | null = null
+let nodeMats: THREE_NS.MeshBasicMaterial[] = []
 let themeObserver: MutationObserver | null = null
 let isVisible = true
 let prefersReducedMotion = false
@@ -55,7 +58,7 @@ function getAccentColor() {
     const root = getComputedStyle(document.documentElement)
     const cssAccent = root.getPropertyValue('--accent-color').trim()
     if (cssAccent) return cssAccent
-  } catch {}
+  } catch { /* CSS var lookup is best-effort */ }
   return props.accent === 'cyan' ? '#00ffff' : '#1E88E5'
 }
 
@@ -78,7 +81,7 @@ function applyHeroColors() {
       lineMat.opacity = isLight ? 0.6 : 0.35
     }
     nodeMats.forEach(m => m.color.set(nodeColor))
-  } catch {}
+  } catch { /* theme read is best-effort */ }
 }
 
 onMounted(async () => {
@@ -105,7 +108,7 @@ onMounted(async () => {
   }
 })
 
-function init(THREE: any) {
+function init(THREE: typeof import('three')) {
   if (!container.value) return
 
   scene = new THREE.Scene()
@@ -149,7 +152,7 @@ function init(THREE: any) {
 
   const count = Math.min(nodeCount.value, 60)
   const positions: number[] = []
-  const nodeInfos: { mesh: any; baseY: number; baseX: number; baseZ: number }[] = []
+  const nodeInfos: { mesh: THREE_NS.Mesh; baseY: number; baseX: number; baseZ: number }[] = []
 
   // Rotating wire globe with constellations
   const globeRadius = 4.5
@@ -284,7 +287,7 @@ function init(THREE: any) {
   }
 
   // Cleanup refs
-  ;(container.value as any).__cleanup = () => {
+  ;(container.value as WithCleanup).__cleanup = () => {
     if (resizeObserver) {
       resizeObserver.disconnect()
       resizeObserver = null
@@ -322,9 +325,8 @@ function cancel() {
 }
 
 onBeforeUnmount(() => {
-  if (container.value && (container.value as any).__cleanup) {
-    (container.value as any).__cleanup()
-  }
+  const el = container.value as WithCleanup | null
+  if (el && el.__cleanup) el.__cleanup()
   cancel()
 })
 </script>

@@ -4,14 +4,17 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
+import type * as THREE_NS from 'three'
+
+type WithCleanup = HTMLElement & { __cleanup?: () => void }
 
 const container = ref<HTMLElement | null>(null)
-let renderer: any = null
-let scene: any = null
-let camera: any = null
+let renderer: THREE_NS.WebGLRenderer | null = null
+let scene: THREE_NS.Scene | null = null
+let camera: THREE_NS.PerspectiveCamera | null = null
 let animationId: number | null = null
-let starGeo: any = null
-let starMat: any = null
+let starGeo: THREE_NS.BufferGeometry | null = null
+let starMat: THREE_NS.PointsMaterial | null = null
 let starPositions: Float32Array | null = null
 let isVisible = true
 let prefersReducedMotion = false
@@ -36,7 +39,7 @@ function starColor() {
   try {
     const node = getComputedStyle(document.documentElement).getPropertyValue('--hero-node').trim()
     if (node) return node
-  } catch {}
+  } catch { /* CSS var lookup is best-effort */ }
   return '#22d3ee'
 }
 
@@ -70,7 +73,8 @@ function respawnStars() {
     starPositions[i*3+1] = (Math.random() - 0.5) * visH * margin
     starPositions[i*3+2] = z
   }
-  ;(starGeo.attributes.position as any).needsUpdate = true
+  const posAttr = starGeo.getAttribute('position') as THREE_NS.BufferAttribute | undefined
+  if (posAttr) posAttr.needsUpdate = true
 }
 
 onMounted(async () => {
@@ -92,7 +96,7 @@ onMounted(async () => {
   }
 })
 
-function init(THREE: any) {
+function init(THREE: typeof import('three')) {
   if (!container.value) return
 
   scene = new THREE.Scene()
@@ -160,7 +164,7 @@ function init(THREE: any) {
   onResize()
   animate()
 
-  ;(container.value as any).__cleanup = () => {
+  ;(container.value as WithCleanup).__cleanup = () => {
     window.removeEventListener('resize', onResize)
     document.removeEventListener('visibilitychange', onVisibility)
     if (resizeObserver) { resizeObserver.disconnect(); resizeObserver = null }
@@ -183,9 +187,8 @@ function cancel() {
 }
 
 onBeforeUnmount(() => {
-  if (container.value && (container.value as any).__cleanup) {
-    (container.value as any).__cleanup()
-  }
+  const el = container.value as WithCleanup | null
+  if (el && el.__cleanup) el.__cleanup()
   cancel()
 })
 </script>
