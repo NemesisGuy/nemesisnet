@@ -4,9 +4,19 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
-import type * as THREE_NS from 'three'
 
 type WithCleanup = HTMLElement & { __cleanup?: () => void }
+
+// three.js types via import() type queries: they are erased together with the
+// annotations, so no static import statement is ever emitted and three.js
+// stays code-split behind the dynamic import() below.
+type ThreeRenderer = import('three').WebGLRenderer
+type ThreeScene = import('three').Scene
+type ThreeCamera = import('three').PerspectiveCamera
+type ThreeMesh = import('three').Mesh
+type ThreeLineSegments = import('three').LineSegments
+type ThreeMeshBasicMaterial = import('three').MeshBasicMaterial
+type ThreeLineBasicMaterial = import('three').LineBasicMaterial
 
 const props = defineProps({
   density: {
@@ -20,16 +30,16 @@ const props = defineProps({
 })
 
 const container = ref<HTMLElement | null>(null)
-let renderer: THREE_NS.WebGLRenderer | null = null
-let scene: THREE_NS.Scene | null = null
-let camera: THREE_NS.PerspectiveCamera | null = null
+let renderer: ThreeRenderer | null = null
+let scene: ThreeScene | null = null
+let camera: ThreeCamera | null = null
 let animationId: number | null = null
-const nodes: THREE_NS.Mesh[] = []
-let lines: THREE_NS.LineSegments | null = null
-let globeMesh: THREE_NS.Mesh | null = null
-let globeMat: THREE_NS.MeshBasicMaterial | null = null
-let lineMat: THREE_NS.LineBasicMaterial | null = null
-let nodeMats: THREE_NS.MeshBasicMaterial[] = []
+const nodes: ThreeMesh[] = []
+let lines: ThreeLineSegments | null = null
+let globeMesh: ThreeMesh | null = null
+let globeMat: ThreeMeshBasicMaterial | null = null
+let lineMat: ThreeLineBasicMaterial | null = null
+let nodeMats: ThreeMeshBasicMaterial[] = []
 let themeObserver: MutationObserver | null = null
 let isVisible = true
 let prefersReducedMotion = false
@@ -152,7 +162,7 @@ function init(THREE: typeof import('three')) {
 
   const count = Math.min(nodeCount.value, 60)
   const positions: number[] = []
-  const nodeInfos: { mesh: THREE_NS.Mesh; baseY: number; baseX: number; baseZ: number }[] = []
+  const nodeInfos: { mesh: ThreeMesh; baseY: number; baseX: number; baseZ: number }[] = []
 
   // Rotating wire globe with constellations
   const globeRadius = 4.5

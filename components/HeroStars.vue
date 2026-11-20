@@ -4,17 +4,26 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
-import type * as THREE_NS from 'three'
 
 type WithCleanup = HTMLElement & { __cleanup?: () => void }
 
+// three.js types via import() type queries: they are erased together with the
+// annotations, so no static import statement is ever emitted and three.js
+// stays code-split behind the dynamic import() below.
+type ThreeRenderer = import('three').WebGLRenderer
+type ThreeScene = import('three').Scene
+type ThreeCamera = import('three').PerspectiveCamera
+type ThreeGeometry = import('three').BufferGeometry
+type ThreeMaterial = import('three').PointsMaterial
+type ThreeAttribute = import('three').BufferAttribute
+
 const container = ref<HTMLElement | null>(null)
-let renderer: THREE_NS.WebGLRenderer | null = null
-let scene: THREE_NS.Scene | null = null
-let camera: THREE_NS.PerspectiveCamera | null = null
+let renderer: ThreeRenderer | null = null
+let scene: ThreeScene | null = null
+let camera: ThreeCamera | null = null
 let animationId: number | null = null
-let starGeo: THREE_NS.BufferGeometry | null = null
-let starMat: THREE_NS.PointsMaterial | null = null
+let starGeo: ThreeGeometry | null = null
+let starMat: ThreeMaterial | null = null
 let starPositions: Float32Array | null = null
 let isVisible = true
 let prefersReducedMotion = false
@@ -73,7 +82,7 @@ function respawnStars() {
     starPositions[i*3+1] = (Math.random() - 0.5) * visH * margin
     starPositions[i*3+2] = z
   }
-  const posAttr = starGeo.getAttribute('position') as THREE_NS.BufferAttribute | undefined
+  const posAttr = starGeo.getAttribute('position') as ThreeAttribute | undefined
   if (posAttr) posAttr.needsUpdate = true
 }
 
